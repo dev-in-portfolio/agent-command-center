@@ -1,0 +1,175 @@
+{
+  "batch": "015_024",
+  "families": [
+    {
+      "id": 15,
+      "name": "Manufacturing, Print & Physical Production",
+      "folder": "02_departments/015_manufacturing_print_and_physical_production",
+      "departments": [
+        {"id": "15.1", "name": "Print Production", "units": ["Print Specification Review", "Print File Preparation", "Print Output Verification"]},
+        {"id": "15.2", "name": "Manufacturing Planning", "units": ["Production Requirement Mapping", "Material Requirement Review", "Manufacturing Plan Summary"]},
+        {"id": "15.3", "name": "Physical Product Design", "units": ["Product Format Definition", "Physical Constraint Review", "Product Design QA"]},
+        {"id": "15.4", "name": "Packaging Production", "units": ["Packaging Format Selection", "Packaging Asset Assembly", "Packaging Readiness Review"]},
+        {"id": "15.5", "name": "Vendor Print Coordination", "units": ["Print Vendor Identification", "Vendor Requirement Handoff", "Vendor Proof Review"]},
+        {"id": "15.6", "name": "Proofing", "units": ["Proof Request Setup", "Proof Defect Review", "Proof Approval Record"]},
+        {"id": "15.7", "name": "Quality Control", "units": ["Physical Quality Criteria", "Defect Detection", "Quality Decision Summary"]},
+        {"id": "15.8", "name": "Inventory Preparation", "units": ["Inventory Need Forecast", "Stock Labeling Rules", "Inventory Readiness Check"]},
+        {"id": "15.9", "name": "Fulfillment Packaging", "units": ["Fulfillment Kit Mapping", "Packing Instruction Draft", "Shipment Prep Review"]},
+        {"id": "15.10", "name": "Production Costing", "units": ["Unit Cost Review", "Margin Impact Summary", "Cost Reduction Options"]}
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Facilities & Event Operations",
+      "folder": "02_departments/016_facilities_and_event_operations",
+      "departments": [
+        {"id": "16.1", "name": "Facility Planning", "units": ["Facility Need Assessment", "Space Use Mapping", "Facility Readiness Summary"]},
+        {"id": "16.2", "name": "Event Planning", "units": ["Event Objective Definition", "Event Run Sheet Draft", "Event Readiness Review"]},
+        {"id": "16.3", "name": "Venue Coordination", "units": ["Venue Requirement Mapping", "Venue Contact Follow-Up", "Venue Constraint Review"]},
+        {"id": "16.4", "name": "Setup And Breakdown", "units": ["Setup Checklist", "Breakdown Checklist", "Setup Issue Log"]},
+        {"id": "16.5", "name": "Equipment Management", "units": ["Equipment Inventory", "Equipment Assignment", "Equipment Return Check"]},
+        {"id": "16.6", "name": "On-Site Operations", "units": ["On-Site Role Assignment", "Live Issue Routing", "On-Site Status Summary"]},
+        {"id": "16.7", "name": "Guest Flow", "units": ["Arrival Flow Mapping", "Check-In Process Review", "Guest Movement Adjustment"]},
+        {"id": "16.8", "name": "Catering Logistics", "units": ["Food Service Timeline", "Catering Equipment Review", "Catering Issue Escalation"]},
+        {"id": "16.9", "name": "Safety And Access", "units": ["Access Point Review", "Safety Requirement Check", "Emergency Contact Mapping"]},
+        {"id": "16.10", "name": "Post-Event Review", "units": ["Event Outcome Capture", "Issue And Lesson Review", "Post-Event Report"]}
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Ethics & Safety",
+      "folder": "02_departments/017_ethics_and_safety",
+      "departments": [
+        {"id": "17.1", "name": "Ethical Review", "units": ["Ethical Issue Identification", "Stakeholder Impact Review", "Ethical Decision Summary"]},
+        {"id": "17.2", "name": "Harm Prevention", "units": ["Harm Scenario Mapping", "Prevention Control Review", "Harm Mitigation Notes"]},
+        {"id": "17.3", "name": "User Safety", "units": ["User Risk Detection", "Safety Guidance Review", "Escalation Recommendation"]},
+        {"id": "17.4", "name": "Content Safety", "units": ["Content Risk Classification", "Unsafe Request Review", "Safe Response Routing"]},
+        {"id": "17.5", "name": "Bias And Fairness", "units": ["Bias Risk Detection", "Fairness Impact Review", "Bias Mitigation Summary"]},
+        {"id": "17.6", "name": "Responsible AI", "units": ["AI Use Boundary Mapping", "Human Oversight Review", "Responsible Use Summary"]},
+        {"id": "17.7", "name": "Sensitive Topics", "units": ["Sensitive Topic Detection", "Careful Framing Review", "Sensitive Response QA"]},
+        {"id": "17.8", "name": "Consent And Autonomy", "units": ["Consent Requirement Review", "Autonomy Impact Check", "Consent Record Summary"]},
+        {"id": "17.9", "name": "Escalation Ethics", "units": ["Escalation Trigger Mapping", "Ethical Escalation Review", "Escalation Outcome Log"]},
+        {"id": "17.10", "name": "Safety Policy Memory", "units": ["Policy Rule Capture", "Policy Drift Detection", "Safety Lesson Update"]}
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Strategy, Innovation & R&D",
+      "folder": "02_departments/018_strategy_innovation_and_randd",
+      "departments": [
+        {"id": "18.1", "name": "Strategic Analysis", "units": ["Strategic Situation Review", "Strategic Option Mapping", "Strategic Recommendation Summary"]},
+        {"id": "18.2", "name": "Innovation Pipeline", "units": ["Idea Intake", "Innovation Fit Review", "Pipeline Prioritization"]},
+        {"id": "18.3", "name": "Research And Development", "units": ["R&D Question Definition", "Experiment Design", "Experiment Result Review"]},
+        {"id": "18.4", "name": "Opportunity Discovery", "units": ["Opportunity Signal Detection", "Opportunity Size Review", "Opportunity Decision Brief"]},
+        {"id": "18.5", "name": "Strategic Experiments", "units": ["Experiment Hypothesis", "Experiment Execution Plan", "Experiment Learning Summary"]},
+        {"id": "18.6", "name": "Future Scanning", "units": ["Future Signal Collection", "Trend Relevance Review", "Future Scenario Summary"]},
+        {"id": "18.7", "name": "Competitive Strategy", "units": ["Strategic Competitor Review", "Advantage Mapping", "Strategic Positioning Recommendation"]},
+        {"id": "18.8", "name": "Product Strategy", "units": ["Product Direction Review", "Feature Prioritization", "Product Roadmap Summary"]},
+        {"id": "18.9", "name": "Growth Strategy", "units": ["Growth Lever Mapping", "Expansion Option Review", "Growth Strategy Brief"]},
+        {"id": "18.10", "name": "Strategic Risk", "units": ["Risk Assumption Review", "Strategic Downside Mapping", "Risk Response Recommendation"]}
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Community & Ecosystem",
+      "folder": "02_departments/019_community_and_ecosystem",
+      "departments": [
+        {"id": "19.1", "name": "Community Management", "units": ["Community Need Review", "Community Interaction Planning", "Community Health Summary"]},
+        {"id": "19.2", "name": "Ecosystem Mapping", "units": ["Ecosystem Actor Identification", "Relationship Mapping", "Ecosystem Opportunity Summary"]},
+        {"id": "19.3", "name": "Member Engagement", "units": ["Engagement Signal Review", "Engagement Activity Planning", "Engagement Outcome Notes"]},
+        {"id": "19.4", "name": "Community Support", "units": ["Support Request Triage", "Support Response Draft", "Support Resolution Review"]},
+        {"id": "19.5", "name": "Feedback Loops", "units": ["Feedback Collection", "Feedback Pattern Review", "Feedback Action Summary"]},
+        {"id": "19.6", "name": "Contributor Programs", "units": ["Contributor Identification", "Contributor Role Mapping", "Contributor Recognition Notes"]},
+        {"id": "19.7", "name": "Partnerships Ecosystem", "units": ["Ecosystem Partner Mapping", "Mutual Value Review", "Partnership Next Step Summary"]},
+        {"id": "19.8", "name": "Community Events", "units": ["Community Event Concept", "Event Participation Plan", "Event Follow-Up Summary"]},
+        {"id": "19.9", "name": "Trust And Moderation", "units": ["Community Rule Review", "Moderation Issue Detection", "Trust Repair Recommendation"]},
+        {"id": "19.10", "name": "Community Knowledge Base", "units": ["Community Question Capture", "Answer Asset Creation", "Knowledge Base Update"]}
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Education & Instructional Systems",
+      "folder": "02_departments/020_education_and_instructional_systems",
+      "departments": [
+        {"id": "20.1", "name": "Curriculum Design", "units": ["Learning Path Mapping", "Curriculum Sequence Design", "Curriculum Gap Review"]},
+        {"id": "20.2", "name": "Lesson Planning", "units": ["Lesson Objective Definition", "Lesson Activity Design", "Lesson Readiness Review"]},
+        {"id": "20.3", "name": "Training Materials", "units": ["Material Requirement Mapping", "Training Asset Creation", "Material Quality Review"]},
+        {"id": "20.4", "name": "Assessment Design", "units": ["Assessment Criteria Setup", "Question And Rubric Drafting", "Assessment Validity Review"]},
+        {"id": "20.5", "name": "Instruction Writing", "units": ["Explanation Drafting", "Example Development", "Instruction Clarity Review"]},
+        {"id": "20.6", "name": "Learning Experience Design", "units": ["Learner Journey Mapping", "Engagement Design", "Learning Friction Review"]},
+        {"id": "20.7", "name": "Knowledge Checks", "units": ["Checkpoint Design", "Answer Key Review", "Knowledge Gap Summary"]},
+        {"id": "20.8", "name": "Workshop Design", "units": ["Workshop Goal Setting", "Workshop Agenda Draft", "Workshop Facilitation Notes"]},
+        {"id": "20.9", "name": "Educational Accessibility", "units": ["Accessibility Need Review", "Plain Language Adjustment", "Accessibility QA"]},
+        {"id": "20.10", "name": "Learning Analytics", "units": ["Learning Signal Collection", "Completion And Outcome Review", "Learning Improvement Recommendation"]}
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Media & Content Production",
+      "folder": "02_departments/021_media_and_content_production",
+      "departments": [
+        {"id": "21.1", "name": "Content Strategy", "units": ["Content Goal Mapping", "Audience And Channel Review", "Content Plan Summary"]},
+        {"id": "21.2", "name": "Video Production", "units": ["Video Concept Draft", "Script And Shot Planning", "Video Review Notes"]},
+        {"id": "21.3", "name": "Audio Production", "units": ["Audio Concept Planning", "Recording Prep", "Audio QA Notes"]},
+        {"id": "21.4", "name": "Social Media", "units": ["Social Post Drafting", "Platform Fit Review", "Social Engagement Summary"]},
+        {"id": "21.5", "name": "Blog And Article Production", "units": ["Article Outline", "Article Drafting", "Article Final Review"]},
+        {"id": "21.6", "name": "Newsletter Production", "units": ["Newsletter Topic Selection", "Newsletter Assembly", "Newsletter Send Review"]},
+        {"id": "21.7", "name": "Content Repurposing", "units": ["Source Asset Review", "Repurpose Format Mapping", "Repurposed Asset QA"]},
+        {"id": "21.8", "name": "Editorial Calendar", "units": ["Calendar Planning", "Publishing Schedule Review", "Calendar Update Summary"]},
+        {"id": "21.9", "name": "Media Asset Management", "units": ["Asset Inventory", "Asset Tagging", "Asset Retrieval Review"]},
+        {"id": "21.10", "name": "Content Performance", "units": ["Performance Signal Collection", "Content Result Review", "Content Improvement Notes"]}
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Localization & Accessibility",
+      "folder": "02_departments/022_localization_and_accessibility",
+      "departments": [
+        {"id": "22.1", "name": "Localization Planning", "units": ["Locale Requirement Mapping", "Localization Scope Review", "Localization Plan Summary"]},
+        {"id": "22.2", "name": "Translation", "units": ["Translation Draft", "Translation Accuracy Review", "Translation Final Check"]},
+        {"id": "22.3", "name": "Cultural Adaptation", "units": ["Cultural Context Review", "Local Expression Adjustment", "Cultural Fit Summary"]},
+        {"id": "22.4", "name": "Accessibility Review", "units": ["Accessibility Requirement Check", "Barrier Identification", "Accessibility Fix Summary"]},
+        {"id": "22.5", "name": "Plain Language", "units": ["Jargon Detection", "Plain Language Rewrite", "Plain Language QA"]},
+        {"id": "22.6", "name": "Visual Accessibility", "units": ["Contrast And Readability Review", "Alt Text Drafting", "Visual Access QA"]},
+        {"id": "22.7", "name": "Document Accessibility", "units": ["Heading Structure Review", "Reading Order Check", "Accessible Export Review"]},
+        {"id": "22.8", "name": "Multilingual Content QA", "units": ["Multilingual Consistency Check", "Terminology Review", "Language QA Summary"]},
+        {"id": "22.9", "name": "Assistive Technology Readiness", "units": ["Screen Reader Review", "Keyboard Navigation Check", "Assistive Tech Issue Log"]},
+        {"id": "22.10", "name": "Inclusive Design", "units": ["Inclusion Risk Review", "Inclusive Alternative Design", "Inclusive Design QA"]}
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Funding, Grants & Capital",
+      "folder": "02_departments/023_funding_grants_and_capital",
+      "departments": [
+        {"id": "23.1", "name": "Grant Research", "units": ["Grant Opportunity Search", "Eligibility Review", "Grant Fit Summary"]},
+        {"id": "23.2", "name": "Grant Writing", "units": ["Proposal Narrative Draft", "Budget Narrative Support", "Grant Submission Review"]},
+        {"id": "23.3", "name": "Fundraising Strategy", "units": ["Funding Need Definition", "Donor Or Funder Mapping", "Fundraising Plan Summary"]},
+        {"id": "23.4", "name": "Capital Planning", "units": ["Capital Need Assessment", "Funding Source Review", "Capital Plan Recommendation"]},
+        {"id": "23.5", "name": "Investor Materials", "units": ["Investor Story Draft", "Pitch Asset Assembly", "Investor Material QA"]},
+        {"id": "23.6", "name": "Sponsorships", "units": ["Sponsor Target Mapping", "Sponsorship Package Draft", "Sponsor Follow-Up Plan"]},
+        {"id": "23.7", "name": "Budget Justification", "units": ["Cost Category Review", "Justification Draft", "Budget Logic QA"]},
+        {"id": "23.8", "name": "Funding Compliance", "units": ["Funder Requirement Mapping", "Compliance Checklist", "Funding Risk Review"]},
+        {"id": "23.9", "name": "Financial Projections", "units": ["Projection Assumption Setup", "Scenario Forecasting", "Projection Risk Summary"]},
+        {"id": "23.10", "name": "Capital Reporting", "units": ["Funding Status Collection", "Capital Use Summary", "Funder Report Review"]}
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Government, Public Sector & Civic Operations",
+      "folder": "02_departments/024_government_public_sector_and_civic_operations",
+      "departments": [
+        {"id": "24.1", "name": "Public Sector Research", "units": ["Agency Landscape Review", "Public Requirement Collection", "Civic Context Summary"]},
+        {"id": "24.2", "name": "Government Programs", "units": ["Program Identification", "Eligibility Requirement Review", "Program Fit Summary"]},
+        {"id": "24.3", "name": "Civic Services", "units": ["Service Process Mapping", "Citizen Need Review", "Service Improvement Notes"]},
+        {"id": "24.4", "name": "Policy Analysis", "units": ["Policy Text Review", "Stakeholder Impact Analysis", "Policy Summary Brief"]},
+        {"id": "24.5", "name": "Public Communications", "units": ["Public Message Draft", "Plain Language Review", "Public Response Prep"]},
+        {"id": "24.6", "name": "Procurement And Contracts", "units": ["Solicitation Review", "Contract Requirement Mapping", "Procurement Risk Summary"]},
+        {"id": "24.7", "name": "Community Programs", "units": ["Community Need Mapping", "Program Design Support", "Program Outcome Review"]},
+        {"id": "24.8", "name": "Public Records", "units": ["Record Request Review", "Record Organization", "Disclosure Readiness Check"]},
+        {"id": "24.9", "name": "Civic Engagement", "units": ["Engagement Audience Mapping", "Participation Plan Draft", "Engagement Feedback Summary"]},
+        {"id": "24.10", "name": "Public Sector Compliance", "units": ["Compliance Requirement Review", "Documentation Checklist", "Compliance Status Summary"]}
+      ]
+    }
+  ]
+}
