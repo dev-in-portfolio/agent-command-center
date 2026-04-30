@@ -4,5 +4,546 @@
   "manager": "29.M",
   "scribe": "29.H",
   "auditor": "29.I",
-  "departments": []
+  "departments": [
+    {
+      "id": "29.1",
+      "name": "Sustainability Strategy",
+      "manager": "29.1.M",
+      "scribe": "29.1.H",
+      "auditor": "29.1.I",
+      "units": [
+        {
+          "id": "29.1.1",
+          "name": "Sustainability Goal Mapping",
+          "team": [
+            "29.1.1.1A Realist",
+            "29.1.1.1B Overachiever",
+            "29.1.1.1C Dreamer",
+            "29.1.1.1D Timid",
+            "29.1.1.1E Overprotective",
+            "29.1.1.1F Wildcard Intern",
+            "29.1.1.1G Team Lead / Manager",
+            "29.1.1.1H Scribe / Shower of Work",
+            "29.1.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.1.2",
+          "name": "Impact Area Review",
+          "team": [
+            "29.1.2.1A Realist",
+            "29.1.2.1B Overachiever",
+            "29.1.2.1C Dreamer",
+            "29.1.2.1D Timid",
+            "29.1.2.1E Overprotective",
+            "29.1.2.1F Wildcard Intern",
+            "29.1.2.1G Team Lead / Manager",
+            "29.1.2.1H Scribe / Shower of Work",
+            "29.1.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.1.3",
+          "name": "Sustainability Plan Summary",
+          "team": [
+            "29.1.3.1A Realist",
+            "29.1.3.1B Overachiever",
+            "29.1.3.1C Dreamer",
+            "29.1.3.1D Timid",
+            "29.1.3.1E Overprotective",
+            "29.1.3.1F Wildcard Intern",
+            "29.1.3.1G Team Lead / Manager",
+            "29.1.3.1H Scribe / Shower of Work",
+            "29.1.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29.2",
+      "name": "Environmental Research",
+      "manager": "29.2.M",
+      "scribe": "29.2.H",
+      "auditor": "29.2.I",
+      "units": [
+        {
+          "id": "29.2.1",
+          "name": "Environmental Topic Intake",
+          "team": [
+            "29.2.1.1A Realist",
+            "29.2.1.1B Overachiever",
+            "29.2.1.1C Dreamer",
+            "29.2.1.1D Timid",
+            "29.2.1.1E Overprotective",
+            "29.2.1.1F Wildcard Intern",
+            "29.2.1.1G Team Lead / Manager",
+            "29.2.1.1H Scribe / Shower of Work",
+            "29.2.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.2.2",
+          "name": "Source Evidence Review",
+          "team": [
+            "29.2.2.1A Realist",
+            "29.2.2.1B Overachiever",
+            "29.2.2.1C Dreamer",
+            "29.2.2.1D Timid",
+            "29.2.2.1E Overprotective",
+            "29.2.2.1F Wildcard Intern",
+            "29.2.2.1G Team Lead / Manager",
+            "29.2.2.1H Scribe / Shower of Work",
+            "29.2.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.2.3",
+          "name": "Environmental Findings Summary",
+          "team": [
+            "29.2.3.1A Realist",
+            "29.2.3.1B Overachiever",
+            "29.2.3.1C Dreamer",
+            "29.2.3.1D Timid",
+            "29.2.3.1E Overprotective",
+            "29.2.3.1F Wildcard Intern",
+            "29.2.3.1G Team Lead / Manager",
+            "29.2.3.1H Scribe / Shower of Work",
+            "29.2.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29.3",
+      "name": "Resource Efficiency",
+      "manager": "29.3.M",
+      "scribe": "29.3.H",
+      "auditor": "29.3.I",
+      "units": [
+        {
+          "id": "29.3.1",
+          "name": "Resource Use Mapping",
+          "team": [
+            "29.3.1.1A Realist",
+            "29.3.1.1B Overachiever",
+            "29.3.1.1C Dreamer",
+            "29.3.1.1D Timid",
+            "29.3.1.1E Overprotective",
+            "29.3.1.1F Wildcard Intern",
+            "29.3.1.1G Team Lead / Manager",
+            "29.3.1.1H Scribe / Shower of Work",
+            "29.3.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.3.2",
+          "name": "Waste Reduction Review",
+          "team": [
+            "29.3.2.1A Realist",
+            "29.3.2.1B Overachiever",
+            "29.3.2.1C Dreamer",
+            "29.3.2.1D Timid",
+            "29.3.2.1E Overprotective",
+            "29.3.2.1F Wildcard Intern",
+            "29.3.2.1G Team Lead / Manager",
+            "29.3.2.1H Scribe / Shower of Work",
+            "29.3.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.3.3",
+          "name": "Efficiency Recommendation",
+          "team": [
+            "29.3.3.1A Realist",
+            "29.3.3.1B Overachiever",
+            "29.3.3.1C Dreamer",
+            "29.3.3.1D Timid",
+            "29.3.3.1E Overprotective",
+            "29.3.3.1F Wildcard Intern",
+            "29.3.3.1G Team Lead / Manager",
+            "29.3.3.1H Scribe / Shower of Work",
+            "29.3.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29.4",
+      "name": "Waste Management",
+      "manager": "29.4.M",
+      "scribe": "29.4.H",
+      "auditor": "29.4.I",
+      "units": [
+        {
+          "id": "29.4.1",
+          "name": "Waste Stream Identification",
+          "team": [
+            "29.4.1.1A Realist",
+            "29.4.1.1B Overachiever",
+            "29.4.1.1C Dreamer",
+            "29.4.1.1D Timid",
+            "29.4.1.1E Overprotective",
+            "29.4.1.1F Wildcard Intern",
+            "29.4.1.1G Team Lead / Manager",
+            "29.4.1.1H Scribe / Shower of Work",
+            "29.4.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.4.2",
+          "name": "Disposal Requirement Review",
+          "team": [
+            "29.4.2.1A Realist",
+            "29.4.2.1B Overachiever",
+            "29.4.2.1C Dreamer",
+            "29.4.2.1D Timid",
+            "29.4.2.1E Overprotective",
+            "29.4.2.1F Wildcard Intern",
+            "29.4.2.1G Team Lead / Manager",
+            "29.4.2.1H Scribe / Shower of Work",
+            "29.4.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.4.3",
+          "name": "Waste Reduction Notes",
+          "team": [
+            "29.4.3.1A Realist",
+            "29.4.3.1B Overachiever",
+            "29.4.3.1C Dreamer",
+            "29.4.3.1D Timid",
+            "29.4.3.1E Overprotective",
+            "29.4.3.1F Wildcard Intern",
+            "29.4.3.1G Team Lead / Manager",
+            "29.4.3.1H Scribe / Shower of Work",
+            "29.4.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29.5",
+      "name": "Energy Management",
+      "manager": "29.5.M",
+      "scribe": "29.5.H",
+      "auditor": "29.5.I",
+      "units": [
+        {
+          "id": "29.5.1",
+          "name": "Energy Use Review",
+          "team": [
+            "29.5.1.1A Realist",
+            "29.5.1.1B Overachiever",
+            "29.5.1.1C Dreamer",
+            "29.5.1.1D Timid",
+            "29.5.1.1E Overprotective",
+            "29.5.1.1F Wildcard Intern",
+            "29.5.1.1G Team Lead / Manager",
+            "29.5.1.1H Scribe / Shower of Work",
+            "29.5.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.5.2",
+          "name": "Energy Savings Opportunity",
+          "team": [
+            "29.5.2.1A Realist",
+            "29.5.2.1B Overachiever",
+            "29.5.2.1C Dreamer",
+            "29.5.2.1D Timid",
+            "29.5.2.1E Overprotective",
+            "29.5.2.1F Wildcard Intern",
+            "29.5.2.1G Team Lead / Manager",
+            "29.5.2.1H Scribe / Shower of Work",
+            "29.5.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.5.3",
+          "name": "Energy Action Summary",
+          "team": [
+            "29.5.3.1A Realist",
+            "29.5.3.1B Overachiever",
+            "29.5.3.1C Dreamer",
+            "29.5.3.1D Timid",
+            "29.5.3.1E Overprotective",
+            "29.5.3.1F Wildcard Intern",
+            "29.5.3.1G Team Lead / Manager",
+            "29.5.3.1H Scribe / Shower of Work",
+            "29.5.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29.6",
+      "name": "Environmental Compliance",
+      "manager": "29.6.M",
+      "scribe": "29.6.H",
+      "auditor": "29.6.I",
+      "units": [
+        {
+          "id": "29.6.1",
+          "name": "Environmental Rule Mapping",
+          "team": [
+            "29.6.1.1A Realist",
+            "29.6.1.1B Overachiever",
+            "29.6.1.1C Dreamer",
+            "29.6.1.1D Timid",
+            "29.6.1.1E Overprotective",
+            "29.6.1.1F Wildcard Intern",
+            "29.6.1.1G Team Lead / Manager",
+            "29.6.1.1H Scribe / Shower of Work",
+            "29.6.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.6.2",
+          "name": "Compliance Gap Review",
+          "team": [
+            "29.6.2.1A Realist",
+            "29.6.2.1B Overachiever",
+            "29.6.2.1C Dreamer",
+            "29.6.2.1D Timid",
+            "29.6.2.1E Overprotective",
+            "29.6.2.1F Wildcard Intern",
+            "29.6.2.1G Team Lead / Manager",
+            "29.6.2.1H Scribe / Shower of Work",
+            "29.6.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.6.3",
+          "name": "Compliance Action Notes",
+          "team": [
+            "29.6.3.1A Realist",
+            "29.6.3.1B Overachiever",
+            "29.6.3.1C Dreamer",
+            "29.6.3.1D Timid",
+            "29.6.3.1E Overprotective",
+            "29.6.3.1F Wildcard Intern",
+            "29.6.3.1G Team Lead / Manager",
+            "29.6.3.1H Scribe / Shower of Work",
+            "29.6.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29.7",
+      "name": "Sustainable Procurement",
+      "manager": "29.7.M",
+      "scribe": "29.7.H",
+      "auditor": "29.7.I",
+      "units": [
+        {
+          "id": "29.7.1",
+          "name": "Supplier Sustainability Review",
+          "team": [
+            "29.7.1.1A Realist",
+            "29.7.1.1B Overachiever",
+            "29.7.1.1C Dreamer",
+            "29.7.1.1D Timid",
+            "29.7.1.1E Overprotective",
+            "29.7.1.1F Wildcard Intern",
+            "29.7.1.1G Team Lead / Manager",
+            "29.7.1.1H Scribe / Shower of Work",
+            "29.7.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.7.2",
+          "name": "Material Impact Review",
+          "team": [
+            "29.7.2.1A Realist",
+            "29.7.2.1B Overachiever",
+            "29.7.2.1C Dreamer",
+            "29.7.2.1D Timid",
+            "29.7.2.1E Overprotective",
+            "29.7.2.1F Wildcard Intern",
+            "29.7.2.1G Team Lead / Manager",
+            "29.7.2.1H Scribe / Shower of Work",
+            "29.7.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.7.3",
+          "name": "Sustainable Purchase Recommendation",
+          "team": [
+            "29.7.3.1A Realist",
+            "29.7.3.1B Overachiever",
+            "29.7.3.1C Dreamer",
+            "29.7.3.1D Timid",
+            "29.7.3.1E Overprotective",
+            "29.7.3.1F Wildcard Intern",
+            "29.7.3.1G Team Lead / Manager",
+            "29.7.3.1H Scribe / Shower of Work",
+            "29.7.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29.8",
+      "name": "Carbon & Impact Tracking",
+      "manager": "29.8.M",
+      "scribe": "29.8.H",
+      "auditor": "29.8.I",
+      "units": [
+        {
+          "id": "29.8.1",
+          "name": "Impact Metric Selection",
+          "team": [
+            "29.8.1.1A Realist",
+            "29.8.1.1B Overachiever",
+            "29.8.1.1C Dreamer",
+            "29.8.1.1D Timid",
+            "29.8.1.1E Overprotective",
+            "29.8.1.1F Wildcard Intern",
+            "29.8.1.1G Team Lead / Manager",
+            "29.8.1.1H Scribe / Shower of Work",
+            "29.8.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.8.2",
+          "name": "Emissions Input Collection",
+          "team": [
+            "29.8.2.1A Realist",
+            "29.8.2.1B Overachiever",
+            "29.8.2.1C Dreamer",
+            "29.8.2.1D Timid",
+            "29.8.2.1E Overprotective",
+            "29.8.2.1F Wildcard Intern",
+            "29.8.2.1G Team Lead / Manager",
+            "29.8.2.1H Scribe / Shower of Work",
+            "29.8.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.8.3",
+          "name": "Impact Summary",
+          "team": [
+            "29.8.3.1A Realist",
+            "29.8.3.1B Overachiever",
+            "29.8.3.1C Dreamer",
+            "29.8.3.1D Timid",
+            "29.8.3.1E Overprotective",
+            "29.8.3.1F Wildcard Intern",
+            "29.8.3.1G Team Lead / Manager",
+            "29.8.3.1H Scribe / Shower of Work",
+            "29.8.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29.9",
+      "name": "Circular Economy",
+      "manager": "29.9.M",
+      "scribe": "29.9.H",
+      "auditor": "29.9.I",
+      "units": [
+        {
+          "id": "29.9.1",
+          "name": "Reuse Opportunity Mapping",
+          "team": [
+            "29.9.1.1A Realist",
+            "29.9.1.1B Overachiever",
+            "29.9.1.1C Dreamer",
+            "29.9.1.1D Timid",
+            "29.9.1.1E Overprotective",
+            "29.9.1.1F Wildcard Intern",
+            "29.9.1.1G Team Lead / Manager",
+            "29.9.1.1H Scribe / Shower of Work",
+            "29.9.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.9.2",
+          "name": "Lifecycle Review",
+          "team": [
+            "29.9.2.1A Realist",
+            "29.9.2.1B Overachiever",
+            "29.9.2.1C Dreamer",
+            "29.9.2.1D Timid",
+            "29.9.2.1E Overprotective",
+            "29.9.2.1F Wildcard Intern",
+            "29.9.2.1G Team Lead / Manager",
+            "29.9.2.1H Scribe / Shower of Work",
+            "29.9.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.9.3",
+          "name": "Circular Option Summary",
+          "team": [
+            "29.9.3.1A Realist",
+            "29.9.3.1B Overachiever",
+            "29.9.3.1C Dreamer",
+            "29.9.3.1D Timid",
+            "29.9.3.1E Overprotective",
+            "29.9.3.1F Wildcard Intern",
+            "29.9.3.1G Team Lead / Manager",
+            "29.9.3.1H Scribe / Shower of Work",
+            "29.9.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29.10",
+      "name": "Sustainability Reporting",
+      "manager": "29.10.M",
+      "scribe": "29.10.H",
+      "auditor": "29.10.I",
+      "units": [
+        {
+          "id": "29.10.1",
+          "name": "Report Data Collection",
+          "team": [
+            "29.10.1.1A Realist",
+            "29.10.1.1B Overachiever",
+            "29.10.1.1C Dreamer",
+            "29.10.1.1D Timid",
+            "29.10.1.1E Overprotective",
+            "29.10.1.1F Wildcard Intern",
+            "29.10.1.1G Team Lead / Manager",
+            "29.10.1.1H Scribe / Shower of Work",
+            "29.10.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.10.2",
+          "name": "Sustainability Narrative Draft",
+          "team": [
+            "29.10.2.1A Realist",
+            "29.10.2.1B Overachiever",
+            "29.10.2.1C Dreamer",
+            "29.10.2.1D Timid",
+            "29.10.2.1E Overprotective",
+            "29.10.2.1F Wildcard Intern",
+            "29.10.2.1G Team Lead / Manager",
+            "29.10.2.1H Scribe / Shower of Work",
+            "29.10.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "29.10.3",
+          "name": "Report Accuracy Review",
+          "team": [
+            "29.10.3.1A Realist",
+            "29.10.3.1B Overachiever",
+            "29.10.3.1C Dreamer",
+            "29.10.3.1D Timid",
+            "29.10.3.1E Overprotective",
+            "29.10.3.1F Wildcard Intern",
+            "29.10.3.1G Team Lead / Manager",
+            "29.10.3.1H Scribe / Shower of Work",
+            "29.10.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    }
+  ]
 }

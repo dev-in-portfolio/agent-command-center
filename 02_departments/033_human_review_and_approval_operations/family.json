@@ -4,5 +4,546 @@
   "manager": "33.M",
   "scribe": "33.H",
   "auditor": "33.I",
-  "departments": []
+  "departments": [
+    {
+      "id": "33.1",
+      "name": "Review Queue Management",
+      "manager": "33.1.M",
+      "scribe": "33.1.H",
+      "auditor": "33.1.I",
+      "units": [
+        {
+          "id": "33.1.1",
+          "name": "Queue Intake",
+          "team": [
+            "33.1.1.1A Realist",
+            "33.1.1.1B Overachiever",
+            "33.1.1.1C Dreamer",
+            "33.1.1.1D Timid",
+            "33.1.1.1E Overprotective",
+            "33.1.1.1F Wildcard Intern",
+            "33.1.1.1G Team Lead / Manager",
+            "33.1.1.1H Scribe / Shower of Work",
+            "33.1.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.1.2",
+          "name": "Queue Prioritization",
+          "team": [
+            "33.1.2.1A Realist",
+            "33.1.2.1B Overachiever",
+            "33.1.2.1C Dreamer",
+            "33.1.2.1D Timid",
+            "33.1.2.1E Overprotective",
+            "33.1.2.1F Wildcard Intern",
+            "33.1.2.1G Team Lead / Manager",
+            "33.1.2.1H Scribe / Shower of Work",
+            "33.1.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.1.3",
+          "name": "Queue Status Summary",
+          "team": [
+            "33.1.3.1A Realist",
+            "33.1.3.1B Overachiever",
+            "33.1.3.1C Dreamer",
+            "33.1.3.1D Timid",
+            "33.1.3.1E Overprotective",
+            "33.1.3.1F Wildcard Intern",
+            "33.1.3.1G Team Lead / Manager",
+            "33.1.3.1H Scribe / Shower of Work",
+            "33.1.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33.2",
+      "name": "Approval Routing",
+      "manager": "33.2.M",
+      "scribe": "33.2.H",
+      "auditor": "33.2.I",
+      "units": [
+        {
+          "id": "33.2.1",
+          "name": "Approval Requirement Detection",
+          "team": [
+            "33.2.1.1A Realist",
+            "33.2.1.1B Overachiever",
+            "33.2.1.1C Dreamer",
+            "33.2.1.1D Timid",
+            "33.2.1.1E Overprotective",
+            "33.2.1.1F Wildcard Intern",
+            "33.2.1.1G Team Lead / Manager",
+            "33.2.1.1H Scribe / Shower of Work",
+            "33.2.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.2.2",
+          "name": "Reviewer Assignment",
+          "team": [
+            "33.2.2.1A Realist",
+            "33.2.2.1B Overachiever",
+            "33.2.2.1C Dreamer",
+            "33.2.2.1D Timid",
+            "33.2.2.1E Overprotective",
+            "33.2.2.1F Wildcard Intern",
+            "33.2.2.1G Team Lead / Manager",
+            "33.2.2.1H Scribe / Shower of Work",
+            "33.2.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.2.3",
+          "name": "Approval Follow-Up",
+          "team": [
+            "33.2.3.1A Realist",
+            "33.2.3.1B Overachiever",
+            "33.2.3.1C Dreamer",
+            "33.2.3.1D Timid",
+            "33.2.3.1E Overprotective",
+            "33.2.3.1F Wildcard Intern",
+            "33.2.3.1G Team Lead / Manager",
+            "33.2.3.1H Scribe / Shower of Work",
+            "33.2.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33.3",
+      "name": "Human-in-the-Loop Control",
+      "manager": "33.3.M",
+      "scribe": "33.3.H",
+      "auditor": "33.3.I",
+      "units": [
+        {
+          "id": "33.3.1",
+          "name": "Human Checkpoint Design",
+          "team": [
+            "33.3.1.1A Realist",
+            "33.3.1.1B Overachiever",
+            "33.3.1.1C Dreamer",
+            "33.3.1.1D Timid",
+            "33.3.1.1E Overprotective",
+            "33.3.1.1F Wildcard Intern",
+            "33.3.1.1G Team Lead / Manager",
+            "33.3.1.1H Scribe / Shower of Work",
+            "33.3.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.3.2",
+          "name": "Human Decision Capture",
+          "team": [
+            "33.3.2.1A Realist",
+            "33.3.2.1B Overachiever",
+            "33.3.2.1C Dreamer",
+            "33.3.2.1D Timid",
+            "33.3.2.1E Overprotective",
+            "33.3.2.1F Wildcard Intern",
+            "33.3.2.1G Team Lead / Manager",
+            "33.3.2.1H Scribe / Shower of Work",
+            "33.3.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.3.3",
+          "name": "Control Handoff Summary",
+          "team": [
+            "33.3.3.1A Realist",
+            "33.3.3.1B Overachiever",
+            "33.3.3.1C Dreamer",
+            "33.3.3.1D Timid",
+            "33.3.3.1E Overprotective",
+            "33.3.3.1F Wildcard Intern",
+            "33.3.3.1G Team Lead / Manager",
+            "33.3.3.1H Scribe / Shower of Work",
+            "33.3.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33.4",
+      "name": "Reviewer Instructions",
+      "manager": "33.4.M",
+      "scribe": "33.4.H",
+      "auditor": "33.4.I",
+      "units": [
+        {
+          "id": "33.4.1",
+          "name": "Review Criteria Drafting",
+          "team": [
+            "33.4.1.1A Realist",
+            "33.4.1.1B Overachiever",
+            "33.4.1.1C Dreamer",
+            "33.4.1.1D Timid",
+            "33.4.1.1E Overprotective",
+            "33.4.1.1F Wildcard Intern",
+            "33.4.1.1G Team Lead / Manager",
+            "33.4.1.1H Scribe / Shower of Work",
+            "33.4.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.4.2",
+          "name": "Reviewer Context Prep",
+          "team": [
+            "33.4.2.1A Realist",
+            "33.4.2.1B Overachiever",
+            "33.4.2.1C Dreamer",
+            "33.4.2.1D Timid",
+            "33.4.2.1E Overprotective",
+            "33.4.2.1F Wildcard Intern",
+            "33.4.2.1G Team Lead / Manager",
+            "33.4.2.1H Scribe / Shower of Work",
+            "33.4.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.4.3",
+          "name": "Instruction Clarity Review",
+          "team": [
+            "33.4.3.1A Realist",
+            "33.4.3.1B Overachiever",
+            "33.4.3.1C Dreamer",
+            "33.4.3.1D Timid",
+            "33.4.3.1E Overprotective",
+            "33.4.3.1F Wildcard Intern",
+            "33.4.3.1G Team Lead / Manager",
+            "33.4.3.1H Scribe / Shower of Work",
+            "33.4.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33.5",
+      "name": "Decision Records",
+      "manager": "33.5.M",
+      "scribe": "33.5.H",
+      "auditor": "33.5.I",
+      "units": [
+        {
+          "id": "33.5.1",
+          "name": "Decision Capture",
+          "team": [
+            "33.5.1.1A Realist",
+            "33.5.1.1B Overachiever",
+            "33.5.1.1C Dreamer",
+            "33.5.1.1D Timid",
+            "33.5.1.1E Overprotective",
+            "33.5.1.1F Wildcard Intern",
+            "33.5.1.1G Team Lead / Manager",
+            "33.5.1.1H Scribe / Shower of Work",
+            "33.5.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.5.2",
+          "name": "Rationale Summary",
+          "team": [
+            "33.5.2.1A Realist",
+            "33.5.2.1B Overachiever",
+            "33.5.2.1C Dreamer",
+            "33.5.2.1D Timid",
+            "33.5.2.1E Overprotective",
+            "33.5.2.1F Wildcard Intern",
+            "33.5.2.1G Team Lead / Manager",
+            "33.5.2.1H Scribe / Shower of Work",
+            "33.5.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.5.3",
+          "name": "Decision Log Update",
+          "team": [
+            "33.5.3.1A Realist",
+            "33.5.3.1B Overachiever",
+            "33.5.3.1C Dreamer",
+            "33.5.3.1D Timid",
+            "33.5.3.1E Overprotective",
+            "33.5.3.1F Wildcard Intern",
+            "33.5.3.1G Team Lead / Manager",
+            "33.5.3.1H Scribe / Shower of Work",
+            "33.5.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33.6",
+      "name": "Approval Evidence",
+      "manager": "33.6.M",
+      "scribe": "33.6.H",
+      "auditor": "33.6.I",
+      "units": [
+        {
+          "id": "33.6.1",
+          "name": "Evidence Requirement Mapping",
+          "team": [
+            "33.6.1.1A Realist",
+            "33.6.1.1B Overachiever",
+            "33.6.1.1C Dreamer",
+            "33.6.1.1D Timid",
+            "33.6.1.1E Overprotective",
+            "33.6.1.1F Wildcard Intern",
+            "33.6.1.1G Team Lead / Manager",
+            "33.6.1.1H Scribe / Shower of Work",
+            "33.6.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.6.2",
+          "name": "Evidence Package Assembly",
+          "team": [
+            "33.6.2.1A Realist",
+            "33.6.2.1B Overachiever",
+            "33.6.2.1C Dreamer",
+            "33.6.2.1D Timid",
+            "33.6.2.1E Overprotective",
+            "33.6.2.1F Wildcard Intern",
+            "33.6.2.1G Team Lead / Manager",
+            "33.6.2.1H Scribe / Shower of Work",
+            "33.6.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.6.3",
+          "name": "Evidence Completeness Review",
+          "team": [
+            "33.6.3.1A Realist",
+            "33.6.3.1B Overachiever",
+            "33.6.3.1C Dreamer",
+            "33.6.3.1D Timid",
+            "33.6.3.1E Overprotective",
+            "33.6.3.1F Wildcard Intern",
+            "33.6.3.1G Team Lead / Manager",
+            "33.6.3.1H Scribe / Shower of Work",
+            "33.6.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33.7",
+      "name": "Escalation Review",
+      "manager": "33.7.M",
+      "scribe": "33.7.H",
+      "auditor": "33.7.I",
+      "units": [
+        {
+          "id": "33.7.1",
+          "name": "Escalation Trigger Detection",
+          "team": [
+            "33.7.1.1A Realist",
+            "33.7.1.1B Overachiever",
+            "33.7.1.1C Dreamer",
+            "33.7.1.1D Timid",
+            "33.7.1.1E Overprotective",
+            "33.7.1.1F Wildcard Intern",
+            "33.7.1.1G Team Lead / Manager",
+            "33.7.1.1H Scribe / Shower of Work",
+            "33.7.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.7.2",
+          "name": "Escalation Path Selection",
+          "team": [
+            "33.7.2.1A Realist",
+            "33.7.2.1B Overachiever",
+            "33.7.2.1C Dreamer",
+            "33.7.2.1D Timid",
+            "33.7.2.1E Overprotective",
+            "33.7.2.1F Wildcard Intern",
+            "33.7.2.1G Team Lead / Manager",
+            "33.7.2.1H Scribe / Shower of Work",
+            "33.7.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.7.3",
+          "name": "Escalation Outcome Record",
+          "team": [
+            "33.7.3.1A Realist",
+            "33.7.3.1B Overachiever",
+            "33.7.3.1C Dreamer",
+            "33.7.3.1D Timid",
+            "33.7.3.1E Overprotective",
+            "33.7.3.1F Wildcard Intern",
+            "33.7.3.1G Team Lead / Manager",
+            "33.7.3.1H Scribe / Shower of Work",
+            "33.7.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33.8",
+      "name": "Rework Requests",
+      "manager": "33.8.M",
+      "scribe": "33.8.H",
+      "auditor": "33.8.I",
+      "units": [
+        {
+          "id": "33.8.1",
+          "name": "Rework Issue Capture",
+          "team": [
+            "33.8.1.1A Realist",
+            "33.8.1.1B Overachiever",
+            "33.8.1.1C Dreamer",
+            "33.8.1.1D Timid",
+            "33.8.1.1E Overprotective",
+            "33.8.1.1F Wildcard Intern",
+            "33.8.1.1G Team Lead / Manager",
+            "33.8.1.1H Scribe / Shower of Work",
+            "33.8.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.8.2",
+          "name": "Rework Instruction Draft",
+          "team": [
+            "33.8.2.1A Realist",
+            "33.8.2.1B Overachiever",
+            "33.8.2.1C Dreamer",
+            "33.8.2.1D Timid",
+            "33.8.2.1E Overprotective",
+            "33.8.2.1F Wildcard Intern",
+            "33.8.2.1G Team Lead / Manager",
+            "33.8.2.1H Scribe / Shower of Work",
+            "33.8.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.8.3",
+          "name": "Rework Completion Check",
+          "team": [
+            "33.8.3.1A Realist",
+            "33.8.3.1B Overachiever",
+            "33.8.3.1C Dreamer",
+            "33.8.3.1D Timid",
+            "33.8.3.1E Overprotective",
+            "33.8.3.1F Wildcard Intern",
+            "33.8.3.1G Team Lead / Manager",
+            "33.8.3.1H Scribe / Shower of Work",
+            "33.8.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33.9",
+      "name": "Final Signoff",
+      "manager": "33.9.M",
+      "scribe": "33.9.H",
+      "auditor": "33.9.I",
+      "units": [
+        {
+          "id": "33.9.1",
+          "name": "Final Criteria Review",
+          "team": [
+            "33.9.1.1A Realist",
+            "33.9.1.1B Overachiever",
+            "33.9.1.1C Dreamer",
+            "33.9.1.1D Timid",
+            "33.9.1.1E Overprotective",
+            "33.9.1.1F Wildcard Intern",
+            "33.9.1.1G Team Lead / Manager",
+            "33.9.1.1H Scribe / Shower of Work",
+            "33.9.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.9.2",
+          "name": "Signoff Decision Capture",
+          "team": [
+            "33.9.2.1A Realist",
+            "33.9.2.1B Overachiever",
+            "33.9.2.1C Dreamer",
+            "33.9.2.1D Timid",
+            "33.9.2.1E Overprotective",
+            "33.9.2.1F Wildcard Intern",
+            "33.9.2.1G Team Lead / Manager",
+            "33.9.2.1H Scribe / Shower of Work",
+            "33.9.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.9.3",
+          "name": "Signoff Record",
+          "team": [
+            "33.9.3.1A Realist",
+            "33.9.3.1B Overachiever",
+            "33.9.3.1C Dreamer",
+            "33.9.3.1D Timid",
+            "33.9.3.1E Overprotective",
+            "33.9.3.1F Wildcard Intern",
+            "33.9.3.1G Team Lead / Manager",
+            "33.9.3.1H Scribe / Shower of Work",
+            "33.9.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33.10",
+      "name": "Reviewer Feedback Loops",
+      "manager": "33.10.M",
+      "scribe": "33.10.H",
+      "auditor": "33.10.I",
+      "units": [
+        {
+          "id": "33.10.1",
+          "name": "Feedback Collection",
+          "team": [
+            "33.10.1.1A Realist",
+            "33.10.1.1B Overachiever",
+            "33.10.1.1C Dreamer",
+            "33.10.1.1D Timid",
+            "33.10.1.1E Overprotective",
+            "33.10.1.1F Wildcard Intern",
+            "33.10.1.1G Team Lead / Manager",
+            "33.10.1.1H Scribe / Shower of Work",
+            "33.10.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.10.2",
+          "name": "Feedback Pattern Review",
+          "team": [
+            "33.10.2.1A Realist",
+            "33.10.2.1B Overachiever",
+            "33.10.2.1C Dreamer",
+            "33.10.2.1D Timid",
+            "33.10.2.1E Overprotective",
+            "33.10.2.1F Wildcard Intern",
+            "33.10.2.1G Team Lead / Manager",
+            "33.10.2.1H Scribe / Shower of Work",
+            "33.10.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "33.10.3",
+          "name": "Review Process Improvement",
+          "team": [
+            "33.10.3.1A Realist",
+            "33.10.3.1B Overachiever",
+            "33.10.3.1C Dreamer",
+            "33.10.3.1D Timid",
+            "33.10.3.1E Overprotective",
+            "33.10.3.1F Wildcard Intern",
+            "33.10.3.1G Team Lead / Manager",
+            "33.10.3.1H Scribe / Shower of Work",
+            "33.10.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    }
+  ]
 }

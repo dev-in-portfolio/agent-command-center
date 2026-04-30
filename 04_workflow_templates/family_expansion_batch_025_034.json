@@ -1,0 +1,975 @@
+{
+  "batch": "025_034",
+  "families": [
+    {
+      "id": 25,
+      "name": "Healthcare & Wellness Division",
+      "folder": "02_departments/025_healthcare_and_wellness_division",
+      "departments": [
+        {
+          "id": "25.1",
+          "name": "Healthcare Research",
+          "units": [
+            "Healthcare Topic Intake",
+            "Clinical Context Review",
+            "Healthcare Findings Summary"
+          ]
+        },
+        {
+          "id": "25.2",
+          "name": "Benefits & Coverage Review",
+          "units": [
+            "Coverage Question Framing",
+            "Benefit Detail Mapping",
+            "Coverage Gap Summary"
+          ]
+        },
+        {
+          "id": "25.3",
+          "name": "Patient Journey Mapping",
+          "units": [
+            "Patient Scenario Capture",
+            "Care Step Mapping",
+            "Journey Friction Review"
+          ]
+        },
+        {
+          "id": "25.4",
+          "name": "Wellness Planning",
+          "units": [
+            "Wellness Goal Definition",
+            "Wellness Habit Mapping",
+            "Wellness Plan Review"
+          ]
+        },
+        {
+          "id": "25.5",
+          "name": "Care Navigation",
+          "units": [
+            "Care Option Identification",
+            "Provider Pathway Mapping",
+            "Navigation Summary"
+          ]
+        },
+        {
+          "id": "25.6",
+          "name": "Medical Content Review",
+          "units": [
+            "Medical Claim Identification",
+            "Source Quality Review",
+            "Plain-Language Health Summary"
+          ]
+        },
+        {
+          "id": "25.7",
+          "name": "Provider / Network Research",
+          "units": [
+            "Provider Identification",
+            "Network Fit Review",
+            "Provider Access Summary"
+          ]
+        },
+        {
+          "id": "25.8",
+          "name": "Claims & Billing Support",
+          "units": [
+            "Claim Issue Capture",
+            "Billing Detail Review",
+            "Claim Follow-Up Checklist"
+          ]
+        },
+        {
+          "id": "25.9",
+          "name": "Health Program Design",
+          "units": [
+            "Program Need Assessment",
+            "Program Structure Draft",
+            "Program Outcome Review"
+          ]
+        },
+        {
+          "id": "25.10",
+          "name": "Healthcare Compliance Support",
+          "units": [
+            "Healthcare Rule Mapping",
+            "Documentation Requirement Review",
+            "Compliance Support Summary"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Real Estate & Property Division",
+      "folder": "02_departments/026_real_estate_and_property_division",
+      "departments": [
+        {
+          "id": "26.1",
+          "name": "Property Research",
+          "units": [
+            "Property Data Collection",
+            "Neighborhood Context Review",
+            "Property Research Summary"
+          ]
+        },
+        {
+          "id": "26.2",
+          "name": "Listing Analysis",
+          "units": [
+            "Listing Detail Extraction",
+            "Comparable Feature Review",
+            "Listing Opportunity Summary"
+          ]
+        },
+        {
+          "id": "26.3",
+          "name": "Transaction Process Mapping",
+          "units": [
+            "Transaction Step Identification",
+            "Document Requirement Mapping",
+            "Transaction Checklist Review"
+          ]
+        },
+        {
+          "id": "26.4",
+          "name": "Property Valuation Support",
+          "units": [
+            "Valuation Input Collection",
+            "Comparable Review",
+            "Value Range Summary"
+          ]
+        },
+        {
+          "id": "26.5",
+          "name": "Buyer Support",
+          "units": [
+            "Buyer Need Intake",
+            "Property Match Review",
+            "Buyer Decision Brief"
+          ]
+        },
+        {
+          "id": "26.6",
+          "name": "Seller Support",
+          "units": [
+            "Seller Goal Capture",
+            "Listing Prep Checklist",
+            "Seller Strategy Summary"
+          ]
+        },
+        {
+          "id": "26.7",
+          "name": "Rental Operations",
+          "units": [
+            "Rental Requirement Mapping",
+            "Tenant Process Review",
+            "Rental Issue Summary"
+          ]
+        },
+        {
+          "id": "26.8",
+          "name": "Property Management",
+          "units": [
+            "Maintenance Request Review",
+            "Property Task Routing",
+            "Property Status Report"
+          ]
+        },
+        {
+          "id": "26.9",
+          "name": "Real Estate Document Review",
+          "units": [
+            "Document Intake",
+            "Key Term Extraction",
+            "Document Risk Notes"
+          ]
+        },
+        {
+          "id": "26.10",
+          "name": "Real Estate Market Tracking",
+          "units": [
+            "Market Signal Collection",
+            "Trend Comparison",
+            "Market Update Summary"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "E-Commerce & Retail Division",
+      "folder": "02_departments/027_e_commerce_and_retail_division",
+      "departments": [
+        {
+          "id": "27.1",
+          "name": "Product Listing Management",
+          "units": [
+            "Product Detail Collection",
+            "Listing Copy Draft",
+            "Listing QA Review"
+          ]
+        },
+        {
+          "id": "27.2",
+          "name": "Store Operations",
+          "units": [
+            "Store Task Intake",
+            "Store Workflow Review",
+            "Store Issue Summary"
+          ]
+        },
+        {
+          "id": "27.3",
+          "name": "Order Flow Support",
+          "units": [
+            "Order Status Review",
+            "Fulfillment Step Tracking",
+            "Order Exception Notes"
+          ]
+        },
+        {
+          "id": "27.4",
+          "name": "Product Research",
+          "units": [
+            "Product Category Mapping",
+            "Competitor Product Review",
+            "Product Fit Summary"
+          ]
+        },
+        {
+          "id": "27.5",
+          "name": "Pricing & Promotions",
+          "units": [
+            "Price Point Review",
+            "Promotion Concept Draft",
+            "Margin Impact Summary"
+          ]
+        },
+        {
+          "id": "27.6",
+          "name": "Customer Review Analysis",
+          "units": [
+            "Review Collection",
+            "Review Theme Detection",
+            "Review Insight Summary"
+          ]
+        },
+        {
+          "id": "27.7",
+          "name": "Retail Inventory",
+          "units": [
+            "Inventory Count Review",
+            "Reorder Signal Detection",
+            "Inventory Action Notes"
+          ]
+        },
+        {
+          "id": "27.8",
+          "name": "Marketplace Channel Management",
+          "units": [
+            "Marketplace Requirement Review",
+            "Channel Listing Fit",
+            "Channel Performance Notes"
+          ]
+        },
+        {
+          "id": "27.9",
+          "name": "Customer Support",
+          "units": [
+            "Support Request Intake",
+            "Response Drafting",
+            "Resolution Follow-Up"
+          ]
+        },
+        {
+          "id": "27.10",
+          "name": "Retail Analytics",
+          "units": [
+            "Sales Signal Collection",
+            "Product Performance Review",
+            "Retail Insight Summary"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Intellectual Property, Rights & Licensing",
+      "folder": "02_departments/028_intellectual_property_rights_and_licensing",
+      "departments": [
+        {
+          "id": "28.1",
+          "name": "Intellectual Property Inventory",
+          "units": [
+            "Asset Identification",
+            "Ownership Detail Capture",
+            "IP Inventory Update"
+          ]
+        },
+        {
+          "id": "28.2",
+          "name": "Copyright Support",
+          "units": [
+            "Copyrightable Asset Review",
+            "Copyright Record Prep",
+            "Copyright Risk Notes"
+          ]
+        },
+        {
+          "id": "28.3",
+          "name": "Trademark Support",
+          "units": [
+            "Mark Candidate Capture",
+            "Basic Conflict Screening",
+            "Trademark Prep Summary"
+          ]
+        },
+        {
+          "id": "28.4",
+          "name": "Licensing Strategy",
+          "units": [
+            "Licensing Opportunity Mapping",
+            "Rights Scope Definition",
+            "Licensing Recommendation Summary"
+          ]
+        },
+        {
+          "id": "28.5",
+          "name": "Rights Clearance",
+          "units": [
+            "Third-Party Asset Detection",
+            "Permission Requirement Mapping",
+            "Clearance Status Summary"
+          ]
+        },
+        {
+          "id": "28.6",
+          "name": "Usage Rules",
+          "units": [
+            "Allowed Use Definition",
+            "Restriction Mapping",
+            "Usage Rule Summary"
+          ]
+        },
+        {
+          "id": "28.7",
+          "name": "Contract Rights Review",
+          "units": [
+            "Rights Clause Extraction",
+            "Obligation Review",
+            "Rights Risk Notes"
+          ]
+        },
+        {
+          "id": "28.8",
+          "name": "Brand Asset Control",
+          "units": [
+            "Brand Asset Inventory",
+            "Brand Usage Review",
+            "Brand Control Summary"
+          ]
+        },
+        {
+          "id": "28.9",
+          "name": "Royalty Tracking",
+          "units": [
+            "Royalty Trigger Mapping",
+            "Payment Record Review",
+            "Royalty Status Summary"
+          ]
+        },
+        {
+          "id": "28.10",
+          "name": "IP Risk Management",
+          "units": [
+            "IP Risk Identification",
+            "Risk Severity Review",
+            "IP Escalation Notes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Sustainability & Environmental Operations",
+      "folder": "02_departments/029_sustainability_and_environmental_operations",
+      "departments": [
+        {
+          "id": "29.1",
+          "name": "Sustainability Strategy",
+          "units": [
+            "Sustainability Goal Mapping",
+            "Impact Area Review",
+            "Sustainability Plan Summary"
+          ]
+        },
+        {
+          "id": "29.2",
+          "name": "Environmental Research",
+          "units": [
+            "Environmental Topic Intake",
+            "Source Evidence Review",
+            "Environmental Findings Summary"
+          ]
+        },
+        {
+          "id": "29.3",
+          "name": "Resource Efficiency",
+          "units": [
+            "Resource Use Mapping",
+            "Waste Reduction Review",
+            "Efficiency Recommendation"
+          ]
+        },
+        {
+          "id": "29.4",
+          "name": "Waste Management",
+          "units": [
+            "Waste Stream Identification",
+            "Disposal Requirement Review",
+            "Waste Reduction Notes"
+          ]
+        },
+        {
+          "id": "29.5",
+          "name": "Energy Management",
+          "units": [
+            "Energy Use Review",
+            "Energy Savings Opportunity",
+            "Energy Action Summary"
+          ]
+        },
+        {
+          "id": "29.6",
+          "name": "Environmental Compliance",
+          "units": [
+            "Environmental Rule Mapping",
+            "Compliance Gap Review",
+            "Compliance Action Notes"
+          ]
+        },
+        {
+          "id": "29.7",
+          "name": "Sustainable Procurement",
+          "units": [
+            "Supplier Sustainability Review",
+            "Material Impact Review",
+            "Sustainable Purchase Recommendation"
+          ]
+        },
+        {
+          "id": "29.8",
+          "name": "Carbon & Impact Tracking",
+          "units": [
+            "Impact Metric Selection",
+            "Emissions Input Collection",
+            "Impact Summary"
+          ]
+        },
+        {
+          "id": "29.9",
+          "name": "Circular Economy",
+          "units": [
+            "Reuse Opportunity Mapping",
+            "Lifecycle Review",
+            "Circular Option Summary"
+          ]
+        },
+        {
+          "id": "29.10",
+          "name": "Sustainability Reporting",
+          "units": [
+            "Report Data Collection",
+            "Sustainability Narrative Draft",
+            "Report Accuracy Review"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Agent Lab & System Evolution",
+      "folder": "02_departments/030_agent_lab_and_system_evolution",
+      "departments": [
+        {
+          "id": "30.1",
+          "name": "Agent Experiment Design",
+          "units": [
+            "Experiment Question Definition",
+            "Agent Behavior Hypothesis",
+            "Experiment Plan Draft"
+          ]
+        },
+        {
+          "id": "30.2",
+          "name": "Prototype Agent Builds",
+          "units": [
+            "Prototype Role Definition",
+            "Prototype Workflow Setup",
+            "Prototype Behavior Check"
+          ]
+        },
+        {
+          "id": "30.3",
+          "name": "Agent Behavior Testing",
+          "units": [
+            "Behavior Scenario Design",
+            "Test Run Observation",
+            "Behavior Finding Summary"
+          ]
+        },
+        {
+          "id": "30.4",
+          "name": "Capability Expansion",
+          "units": [
+            "Capability Gap Detection",
+            "Expansion Option Mapping",
+            "Capability Upgrade Summary"
+          ]
+        },
+        {
+          "id": "30.5",
+          "name": "Agent Changelog",
+          "units": [
+            "Change Capture",
+            "Version Note Drafting",
+            "Evolution Record Update"
+          ]
+        },
+        {
+          "id": "30.6",
+          "name": "Experimental Protocols",
+          "units": [
+            "Protocol Drafting",
+            "Protocol Safety Review",
+            "Protocol Activation Notes"
+          ]
+        },
+        {
+          "id": "30.7",
+          "name": "Sandbox Testing",
+          "units": [
+            "Sandbox Boundary Definition",
+            "Sandbox Run Monitoring",
+            "Sandbox Exit Review"
+          ]
+        },
+        {
+          "id": "30.8",
+          "name": "Agent Personality Tuning",
+          "units": [
+            "Personality Signal Review",
+            "Tone Adjustment Test",
+            "Personality Drift Notes"
+          ]
+        },
+        {
+          "id": "30.9",
+          "name": "Agent Skill Library",
+          "units": [
+            "Skill Candidate Capture",
+            "Skill Pattern Documentation",
+            "Skill Reuse Summary"
+          ]
+        },
+        {
+          "id": "30.10",
+          "name": "System Evolution Review",
+          "units": [
+            "Evolution Signal Collection",
+            "Upgrade Decision Review",
+            "Evolution Roadmap Update"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Model Operations & AI Infrastructure",
+      "folder": "02_departments/031_model_operations_and_ai_infrastructure",
+      "departments": [
+        {
+          "id": "31.1",
+          "name": "Model Selection",
+          "units": [
+            "Model Requirement Mapping",
+            "Model Capability Review",
+            "Model Fit Recommendation"
+          ]
+        },
+        {
+          "id": "31.2",
+          "name": "Model Routing",
+          "units": [
+            "Task Type Detection",
+            "Model Assignment Rule",
+            "Routing Outcome Review"
+          ]
+        },
+        {
+          "id": "31.3",
+          "name": "Prompt Runtime Operations",
+          "units": [
+            "Runtime Input Prep",
+            "Execution Monitoring",
+            "Runtime Issue Notes"
+          ]
+        },
+        {
+          "id": "31.4",
+          "name": "Context Window Management",
+          "units": [
+            "Context Budget Review",
+            "Context Compression Plan",
+            "Context Overflow Handling"
+          ]
+        },
+        {
+          "id": "31.5",
+          "name": "Token & Cost Management",
+          "units": [
+            "Token Use Estimate",
+            "Cost Risk Review",
+            "Cost Optimization Notes"
+          ]
+        },
+        {
+          "id": "31.6",
+          "name": "Model Performance Monitoring",
+          "units": [
+            "Performance Signal Capture",
+            "Failure Pattern Review",
+            "Performance Summary"
+          ]
+        },
+        {
+          "id": "31.7",
+          "name": "Local Model Operations",
+          "units": [
+            "Local Model Inventory",
+            "Local Runtime Setup Review",
+            "Local Model Run Notes"
+          ]
+        },
+        {
+          "id": "31.8",
+          "name": "API Model Operations",
+          "units": [
+            "API Capability Mapping",
+            "API Limit Review",
+            "API Usage Summary"
+          ]
+        },
+        {
+          "id": "31.9",
+          "name": "Infrastructure Planning",
+          "units": [
+            "Compute Requirement Review",
+            "Hosting Option Mapping",
+            "Infrastructure Recommendation"
+          ]
+        },
+        {
+          "id": "31.10",
+          "name": "Model Incident Response",
+          "units": [
+            "Incident Detection",
+            "Model Failure Triage",
+            "Incident Resolution Notes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Evaluation & Benchmarking",
+      "folder": "02_departments/032_evaluation_and_benchmarking",
+      "departments": [
+        {
+          "id": "32.1",
+          "name": "Evaluation Design",
+          "units": [
+            "Evaluation Goal Definition",
+            "Test Criteria Mapping",
+            "Evaluation Plan Summary"
+          ]
+        },
+        {
+          "id": "32.2",
+          "name": "Benchmark Creation",
+          "units": [
+            "Benchmark Task Selection",
+            "Benchmark Input Drafting",
+            "Benchmark Answer Key Review"
+          ]
+        },
+        {
+          "id": "32.3",
+          "name": "Output Scoring",
+          "units": [
+            "Scoring Rubric Setup",
+            "Output Score Assignment",
+            "Scoring Consistency Review"
+          ]
+        },
+        {
+          "id": "32.4",
+          "name": "Regression Testing",
+          "units": [
+            "Regression Case Selection",
+            "Regression Run Review",
+            "Regression Difference Summary"
+          ]
+        },
+        {
+          "id": "32.5",
+          "name": "A/B Comparison",
+          "units": [
+            "Variant Setup",
+            "Comparison Criteria Review",
+            "Winner Recommendation"
+          ]
+        },
+        {
+          "id": "32.6",
+          "name": "Quality Metrics",
+          "units": [
+            "Metric Definition",
+            "Metric Collection",
+            "Metric Interpretation Notes"
+          ]
+        },
+        {
+          "id": "32.7",
+          "name": "Failure Analysis",
+          "units": [
+            "Failure Case Capture",
+            "Root Cause Review",
+            "Failure Prevention Notes"
+          ]
+        },
+        {
+          "id": "32.8",
+          "name": "Benchmark Reporting",
+          "units": [
+            "Result Table Assembly",
+            "Benchmark Narrative Draft",
+            "Report QA"
+          ]
+        },
+        {
+          "id": "32.9",
+          "name": "Human Preference Evaluation",
+          "units": [
+            "Preference Criteria Setup",
+            "Reviewer Signal Collection",
+            "Preference Summary"
+          ]
+        },
+        {
+          "id": "32.10",
+          "name": "Evaluation Archive",
+          "units": [
+            "Evaluation Record Capture",
+            "Historical Result Comparison",
+            "Evaluation Archive Update"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Human Review & Approval Operations",
+      "folder": "02_departments/033_human_review_and_approval_operations",
+      "departments": [
+        {
+          "id": "33.1",
+          "name": "Review Queue Management",
+          "units": [
+            "Queue Intake",
+            "Queue Prioritization",
+            "Queue Status Summary"
+          ]
+        },
+        {
+          "id": "33.2",
+          "name": "Approval Routing",
+          "units": [
+            "Approval Requirement Detection",
+            "Reviewer Assignment",
+            "Approval Follow-Up"
+          ]
+        },
+        {
+          "id": "33.3",
+          "name": "Human-in-the-Loop Control",
+          "units": [
+            "Human Checkpoint Design",
+            "Human Decision Capture",
+            "Control Handoff Summary"
+          ]
+        },
+        {
+          "id": "33.4",
+          "name": "Reviewer Instructions",
+          "units": [
+            "Review Criteria Drafting",
+            "Reviewer Context Prep",
+            "Instruction Clarity Review"
+          ]
+        },
+        {
+          "id": "33.5",
+          "name": "Decision Records",
+          "units": [
+            "Decision Capture",
+            "Rationale Summary",
+            "Decision Log Update"
+          ]
+        },
+        {
+          "id": "33.6",
+          "name": "Approval Evidence",
+          "units": [
+            "Evidence Requirement Mapping",
+            "Evidence Package Assembly",
+            "Evidence Completeness Review"
+          ]
+        },
+        {
+          "id": "33.7",
+          "name": "Escalation Review",
+          "units": [
+            "Escalation Trigger Detection",
+            "Escalation Path Selection",
+            "Escalation Outcome Record"
+          ]
+        },
+        {
+          "id": "33.8",
+          "name": "Rework Requests",
+          "units": [
+            "Rework Issue Capture",
+            "Rework Instruction Draft",
+            "Rework Completion Check"
+          ]
+        },
+        {
+          "id": "33.9",
+          "name": "Final Signoff",
+          "units": [
+            "Final Criteria Review",
+            "Signoff Decision Capture",
+            "Signoff Record"
+          ]
+        },
+        {
+          "id": "33.10",
+          "name": "Reviewer Feedback Loops",
+          "units": [
+            "Feedback Collection",
+            "Feedback Pattern Review",
+            "Review Process Improvement"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Standards, Templates & Methodology",
+      "folder": "02_departments/034_standards_templates_and_methodology",
+      "departments": [
+        {
+          "id": "34.1",
+          "name": "Standard Operating Standards",
+          "units": [
+            "Standard Definition",
+            "Standard Application Review",
+            "Standard Update Notes"
+          ]
+        },
+        {
+          "id": "34.2",
+          "name": "Template Design",
+          "units": [
+            "Template Requirement Mapping",
+            "Template Structure Draft",
+            "Template Usability Review"
+          ]
+        },
+        {
+          "id": "34.3",
+          "name": "Methodology Development",
+          "units": [
+            "Method Purpose Definition",
+            "Method Step Design",
+            "Method Validation Notes"
+          ]
+        },
+        {
+          "id": "34.4",
+          "name": "Style Guides",
+          "units": [
+            "Style Rule Capture",
+            "Style Example Drafting",
+            "Style Consistency Review"
+          ]
+        },
+        {
+          "id": "34.5",
+          "name": "Naming Conventions",
+          "units": [
+            "Naming Rule Definition",
+            "Name Consistency Check",
+            "Naming Exception Notes"
+          ]
+        },
+        {
+          "id": "34.6",
+          "name": "Documentation Standards",
+          "units": [
+            "Documentation Requirement Review",
+            "Documentation Pattern Draft",
+            "Documentation Quality Check"
+          ]
+        },
+        {
+          "id": "34.7",
+          "name": "Workflow Templates",
+          "units": [
+            "Workflow Pattern Capture",
+            "Workflow Template Draft",
+            "Workflow Template QA"
+          ]
+        },
+        {
+          "id": "34.8",
+          "name": "Quality Methodology",
+          "units": [
+            "Quality Method Definition",
+            "Quality Checklist Design",
+            "Quality Method Review"
+          ]
+        },
+        {
+          "id": "34.9",
+          "name": "Reusable Frameworks",
+          "units": [
+            "Framework Candidate Capture",
+            "Framework Structure Draft",
+            "Framework Reuse Review"
+          ]
+        },
+        {
+          "id": "34.10",
+          "name": "Standards Governance",
+          "units": [
+            "Standard Ownership Mapping",
+            "Standards Change Review",
+            "Standards Decision Record"
+          ]
+        }
+      ]
+    }
+  ]
+}

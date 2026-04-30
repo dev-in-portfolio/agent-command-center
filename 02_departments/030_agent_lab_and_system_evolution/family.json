@@ -4,5 +4,546 @@
   "manager": "30.M",
   "scribe": "30.H",
   "auditor": "30.I",
-  "departments": []
+  "departments": [
+    {
+      "id": "30.1",
+      "name": "Agent Experiment Design",
+      "manager": "30.1.M",
+      "scribe": "30.1.H",
+      "auditor": "30.1.I",
+      "units": [
+        {
+          "id": "30.1.1",
+          "name": "Experiment Question Definition",
+          "team": [
+            "30.1.1.1A Realist",
+            "30.1.1.1B Overachiever",
+            "30.1.1.1C Dreamer",
+            "30.1.1.1D Timid",
+            "30.1.1.1E Overprotective",
+            "30.1.1.1F Wildcard Intern",
+            "30.1.1.1G Team Lead / Manager",
+            "30.1.1.1H Scribe / Shower of Work",
+            "30.1.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.1.2",
+          "name": "Agent Behavior Hypothesis",
+          "team": [
+            "30.1.2.1A Realist",
+            "30.1.2.1B Overachiever",
+            "30.1.2.1C Dreamer",
+            "30.1.2.1D Timid",
+            "30.1.2.1E Overprotective",
+            "30.1.2.1F Wildcard Intern",
+            "30.1.2.1G Team Lead / Manager",
+            "30.1.2.1H Scribe / Shower of Work",
+            "30.1.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.1.3",
+          "name": "Experiment Plan Draft",
+          "team": [
+            "30.1.3.1A Realist",
+            "30.1.3.1B Overachiever",
+            "30.1.3.1C Dreamer",
+            "30.1.3.1D Timid",
+            "30.1.3.1E Overprotective",
+            "30.1.3.1F Wildcard Intern",
+            "30.1.3.1G Team Lead / Manager",
+            "30.1.3.1H Scribe / Shower of Work",
+            "30.1.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30.2",
+      "name": "Prototype Agent Builds",
+      "manager": "30.2.M",
+      "scribe": "30.2.H",
+      "auditor": "30.2.I",
+      "units": [
+        {
+          "id": "30.2.1",
+          "name": "Prototype Role Definition",
+          "team": [
+            "30.2.1.1A Realist",
+            "30.2.1.1B Overachiever",
+            "30.2.1.1C Dreamer",
+            "30.2.1.1D Timid",
+            "30.2.1.1E Overprotective",
+            "30.2.1.1F Wildcard Intern",
+            "30.2.1.1G Team Lead / Manager",
+            "30.2.1.1H Scribe / Shower of Work",
+            "30.2.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.2.2",
+          "name": "Prototype Workflow Setup",
+          "team": [
+            "30.2.2.1A Realist",
+            "30.2.2.1B Overachiever",
+            "30.2.2.1C Dreamer",
+            "30.2.2.1D Timid",
+            "30.2.2.1E Overprotective",
+            "30.2.2.1F Wildcard Intern",
+            "30.2.2.1G Team Lead / Manager",
+            "30.2.2.1H Scribe / Shower of Work",
+            "30.2.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.2.3",
+          "name": "Prototype Behavior Check",
+          "team": [
+            "30.2.3.1A Realist",
+            "30.2.3.1B Overachiever",
+            "30.2.3.1C Dreamer",
+            "30.2.3.1D Timid",
+            "30.2.3.1E Overprotective",
+            "30.2.3.1F Wildcard Intern",
+            "30.2.3.1G Team Lead / Manager",
+            "30.2.3.1H Scribe / Shower of Work",
+            "30.2.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30.3",
+      "name": "Agent Behavior Testing",
+      "manager": "30.3.M",
+      "scribe": "30.3.H",
+      "auditor": "30.3.I",
+      "units": [
+        {
+          "id": "30.3.1",
+          "name": "Behavior Scenario Design",
+          "team": [
+            "30.3.1.1A Realist",
+            "30.3.1.1B Overachiever",
+            "30.3.1.1C Dreamer",
+            "30.3.1.1D Timid",
+            "30.3.1.1E Overprotective",
+            "30.3.1.1F Wildcard Intern",
+            "30.3.1.1G Team Lead / Manager",
+            "30.3.1.1H Scribe / Shower of Work",
+            "30.3.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.3.2",
+          "name": "Test Run Observation",
+          "team": [
+            "30.3.2.1A Realist",
+            "30.3.2.1B Overachiever",
+            "30.3.2.1C Dreamer",
+            "30.3.2.1D Timid",
+            "30.3.2.1E Overprotective",
+            "30.3.2.1F Wildcard Intern",
+            "30.3.2.1G Team Lead / Manager",
+            "30.3.2.1H Scribe / Shower of Work",
+            "30.3.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.3.3",
+          "name": "Behavior Finding Summary",
+          "team": [
+            "30.3.3.1A Realist",
+            "30.3.3.1B Overachiever",
+            "30.3.3.1C Dreamer",
+            "30.3.3.1D Timid",
+            "30.3.3.1E Overprotective",
+            "30.3.3.1F Wildcard Intern",
+            "30.3.3.1G Team Lead / Manager",
+            "30.3.3.1H Scribe / Shower of Work",
+            "30.3.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30.4",
+      "name": "Capability Expansion",
+      "manager": "30.4.M",
+      "scribe": "30.4.H",
+      "auditor": "30.4.I",
+      "units": [
+        {
+          "id": "30.4.1",
+          "name": "Capability Gap Detection",
+          "team": [
+            "30.4.1.1A Realist",
+            "30.4.1.1B Overachiever",
+            "30.4.1.1C Dreamer",
+            "30.4.1.1D Timid",
+            "30.4.1.1E Overprotective",
+            "30.4.1.1F Wildcard Intern",
+            "30.4.1.1G Team Lead / Manager",
+            "30.4.1.1H Scribe / Shower of Work",
+            "30.4.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.4.2",
+          "name": "Expansion Option Mapping",
+          "team": [
+            "30.4.2.1A Realist",
+            "30.4.2.1B Overachiever",
+            "30.4.2.1C Dreamer",
+            "30.4.2.1D Timid",
+            "30.4.2.1E Overprotective",
+            "30.4.2.1F Wildcard Intern",
+            "30.4.2.1G Team Lead / Manager",
+            "30.4.2.1H Scribe / Shower of Work",
+            "30.4.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.4.3",
+          "name": "Capability Upgrade Summary",
+          "team": [
+            "30.4.3.1A Realist",
+            "30.4.3.1B Overachiever",
+            "30.4.3.1C Dreamer",
+            "30.4.3.1D Timid",
+            "30.4.3.1E Overprotective",
+            "30.4.3.1F Wildcard Intern",
+            "30.4.3.1G Team Lead / Manager",
+            "30.4.3.1H Scribe / Shower of Work",
+            "30.4.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30.5",
+      "name": "Agent Changelog",
+      "manager": "30.5.M",
+      "scribe": "30.5.H",
+      "auditor": "30.5.I",
+      "units": [
+        {
+          "id": "30.5.1",
+          "name": "Change Capture",
+          "team": [
+            "30.5.1.1A Realist",
+            "30.5.1.1B Overachiever",
+            "30.5.1.1C Dreamer",
+            "30.5.1.1D Timid",
+            "30.5.1.1E Overprotective",
+            "30.5.1.1F Wildcard Intern",
+            "30.5.1.1G Team Lead / Manager",
+            "30.5.1.1H Scribe / Shower of Work",
+            "30.5.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.5.2",
+          "name": "Version Note Drafting",
+          "team": [
+            "30.5.2.1A Realist",
+            "30.5.2.1B Overachiever",
+            "30.5.2.1C Dreamer",
+            "30.5.2.1D Timid",
+            "30.5.2.1E Overprotective",
+            "30.5.2.1F Wildcard Intern",
+            "30.5.2.1G Team Lead / Manager",
+            "30.5.2.1H Scribe / Shower of Work",
+            "30.5.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.5.3",
+          "name": "Evolution Record Update",
+          "team": [
+            "30.5.3.1A Realist",
+            "30.5.3.1B Overachiever",
+            "30.5.3.1C Dreamer",
+            "30.5.3.1D Timid",
+            "30.5.3.1E Overprotective",
+            "30.5.3.1F Wildcard Intern",
+            "30.5.3.1G Team Lead / Manager",
+            "30.5.3.1H Scribe / Shower of Work",
+            "30.5.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30.6",
+      "name": "Experimental Protocols",
+      "manager": "30.6.M",
+      "scribe": "30.6.H",
+      "auditor": "30.6.I",
+      "units": [
+        {
+          "id": "30.6.1",
+          "name": "Protocol Drafting",
+          "team": [
+            "30.6.1.1A Realist",
+            "30.6.1.1B Overachiever",
+            "30.6.1.1C Dreamer",
+            "30.6.1.1D Timid",
+            "30.6.1.1E Overprotective",
+            "30.6.1.1F Wildcard Intern",
+            "30.6.1.1G Team Lead / Manager",
+            "30.6.1.1H Scribe / Shower of Work",
+            "30.6.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.6.2",
+          "name": "Protocol Safety Review",
+          "team": [
+            "30.6.2.1A Realist",
+            "30.6.2.1B Overachiever",
+            "30.6.2.1C Dreamer",
+            "30.6.2.1D Timid",
+            "30.6.2.1E Overprotective",
+            "30.6.2.1F Wildcard Intern",
+            "30.6.2.1G Team Lead / Manager",
+            "30.6.2.1H Scribe / Shower of Work",
+            "30.6.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.6.3",
+          "name": "Protocol Activation Notes",
+          "team": [
+            "30.6.3.1A Realist",
+            "30.6.3.1B Overachiever",
+            "30.6.3.1C Dreamer",
+            "30.6.3.1D Timid",
+            "30.6.3.1E Overprotective",
+            "30.6.3.1F Wildcard Intern",
+            "30.6.3.1G Team Lead / Manager",
+            "30.6.3.1H Scribe / Shower of Work",
+            "30.6.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30.7",
+      "name": "Sandbox Testing",
+      "manager": "30.7.M",
+      "scribe": "30.7.H",
+      "auditor": "30.7.I",
+      "units": [
+        {
+          "id": "30.7.1",
+          "name": "Sandbox Boundary Definition",
+          "team": [
+            "30.7.1.1A Realist",
+            "30.7.1.1B Overachiever",
+            "30.7.1.1C Dreamer",
+            "30.7.1.1D Timid",
+            "30.7.1.1E Overprotective",
+            "30.7.1.1F Wildcard Intern",
+            "30.7.1.1G Team Lead / Manager",
+            "30.7.1.1H Scribe / Shower of Work",
+            "30.7.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.7.2",
+          "name": "Sandbox Run Monitoring",
+          "team": [
+            "30.7.2.1A Realist",
+            "30.7.2.1B Overachiever",
+            "30.7.2.1C Dreamer",
+            "30.7.2.1D Timid",
+            "30.7.2.1E Overprotective",
+            "30.7.2.1F Wildcard Intern",
+            "30.7.2.1G Team Lead / Manager",
+            "30.7.2.1H Scribe / Shower of Work",
+            "30.7.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.7.3",
+          "name": "Sandbox Exit Review",
+          "team": [
+            "30.7.3.1A Realist",
+            "30.7.3.1B Overachiever",
+            "30.7.3.1C Dreamer",
+            "30.7.3.1D Timid",
+            "30.7.3.1E Overprotective",
+            "30.7.3.1F Wildcard Intern",
+            "30.7.3.1G Team Lead / Manager",
+            "30.7.3.1H Scribe / Shower of Work",
+            "30.7.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30.8",
+      "name": "Agent Personality Tuning",
+      "manager": "30.8.M",
+      "scribe": "30.8.H",
+      "auditor": "30.8.I",
+      "units": [
+        {
+          "id": "30.8.1",
+          "name": "Personality Signal Review",
+          "team": [
+            "30.8.1.1A Realist",
+            "30.8.1.1B Overachiever",
+            "30.8.1.1C Dreamer",
+            "30.8.1.1D Timid",
+            "30.8.1.1E Overprotective",
+            "30.8.1.1F Wildcard Intern",
+            "30.8.1.1G Team Lead / Manager",
+            "30.8.1.1H Scribe / Shower of Work",
+            "30.8.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.8.2",
+          "name": "Tone Adjustment Test",
+          "team": [
+            "30.8.2.1A Realist",
+            "30.8.2.1B Overachiever",
+            "30.8.2.1C Dreamer",
+            "30.8.2.1D Timid",
+            "30.8.2.1E Overprotective",
+            "30.8.2.1F Wildcard Intern",
+            "30.8.2.1G Team Lead / Manager",
+            "30.8.2.1H Scribe / Shower of Work",
+            "30.8.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.8.3",
+          "name": "Personality Drift Notes",
+          "team": [
+            "30.8.3.1A Realist",
+            "30.8.3.1B Overachiever",
+            "30.8.3.1C Dreamer",
+            "30.8.3.1D Timid",
+            "30.8.3.1E Overprotective",
+            "30.8.3.1F Wildcard Intern",
+            "30.8.3.1G Team Lead / Manager",
+            "30.8.3.1H Scribe / Shower of Work",
+            "30.8.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30.9",
+      "name": "Agent Skill Library",
+      "manager": "30.9.M",
+      "scribe": "30.9.H",
+      "auditor": "30.9.I",
+      "units": [
+        {
+          "id": "30.9.1",
+          "name": "Skill Candidate Capture",
+          "team": [
+            "30.9.1.1A Realist",
+            "30.9.1.1B Overachiever",
+            "30.9.1.1C Dreamer",
+            "30.9.1.1D Timid",
+            "30.9.1.1E Overprotective",
+            "30.9.1.1F Wildcard Intern",
+            "30.9.1.1G Team Lead / Manager",
+            "30.9.1.1H Scribe / Shower of Work",
+            "30.9.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.9.2",
+          "name": "Skill Pattern Documentation",
+          "team": [
+            "30.9.2.1A Realist",
+            "30.9.2.1B Overachiever",
+            "30.9.2.1C Dreamer",
+            "30.9.2.1D Timid",
+            "30.9.2.1E Overprotective",
+            "30.9.2.1F Wildcard Intern",
+            "30.9.2.1G Team Lead / Manager",
+            "30.9.2.1H Scribe / Shower of Work",
+            "30.9.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.9.3",
+          "name": "Skill Reuse Summary",
+          "team": [
+            "30.9.3.1A Realist",
+            "30.9.3.1B Overachiever",
+            "30.9.3.1C Dreamer",
+            "30.9.3.1D Timid",
+            "30.9.3.1E Overprotective",
+            "30.9.3.1F Wildcard Intern",
+            "30.9.3.1G Team Lead / Manager",
+            "30.9.3.1H Scribe / Shower of Work",
+            "30.9.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30.10",
+      "name": "System Evolution Review",
+      "manager": "30.10.M",
+      "scribe": "30.10.H",
+      "auditor": "30.10.I",
+      "units": [
+        {
+          "id": "30.10.1",
+          "name": "Evolution Signal Collection",
+          "team": [
+            "30.10.1.1A Realist",
+            "30.10.1.1B Overachiever",
+            "30.10.1.1C Dreamer",
+            "30.10.1.1D Timid",
+            "30.10.1.1E Overprotective",
+            "30.10.1.1F Wildcard Intern",
+            "30.10.1.1G Team Lead / Manager",
+            "30.10.1.1H Scribe / Shower of Work",
+            "30.10.1.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.10.2",
+          "name": "Upgrade Decision Review",
+          "team": [
+            "30.10.2.1A Realist",
+            "30.10.2.1B Overachiever",
+            "30.10.2.1C Dreamer",
+            "30.10.2.1D Timid",
+            "30.10.2.1E Overprotective",
+            "30.10.2.1F Wildcard Intern",
+            "30.10.2.1G Team Lead / Manager",
+            "30.10.2.1H Scribe / Shower of Work",
+            "30.10.2.1I Auditor / Revision Director"
+          ]
+        },
+        {
+          "id": "30.10.3",
+          "name": "Evolution Roadmap Update",
+          "team": [
+            "30.10.3.1A Realist",
+            "30.10.3.1B Overachiever",
+            "30.10.3.1C Dreamer",
+            "30.10.3.1D Timid",
+            "30.10.3.1E Overprotective",
+            "30.10.3.1F Wildcard Intern",
+            "30.10.3.1G Team Lead / Manager",
+            "30.10.3.1H Scribe / Shower of Work",
+            "30.10.3.1I Auditor / Revision Director"
+          ]
+        }
+      ]
+    }
+  ]
 }
