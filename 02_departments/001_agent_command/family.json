@@ -1,0 +1,33 @@
+{
+  "id": 1,
+  "name": "Agent Command",
+  "manager": "1.M",
+  "scribe": "1.H",
+  "auditor": "1.I",
+  "departments": [
+    {
+      "id": "1.1",
+      "name": "Executive Command",
+      "manager": "1.1.M",
+      "scribe": "1.1.H",
+      "auditor": "1.1.I",
+      "units": [
+        {
+          "id": "1.1.1",
+          "name": "Mission Direction",
+          "team": [
+            { "id": "1.1.1.1A", "role": "Realist" },
+            { "id": "1.1.1.1B", "role": "Overachiever" },
+            { "id": "1.1.1.1C", "role": "Dreamer" },
+            { "id": "1.1.1.1D", "role": "Timid" },
+            { "id": "1.1.1.1E", "role": "Overprotective" },
+            { "id": "1.1.1.1F", "role": "Wildcard Intern" },
+            { "id": "1.1.1.1G", "role": "Team Lead / Manager" },
+            { "id": "1.1.1.1H", "role": "Scribe / Shower of Work" },
+            { "id": "1.1.1.1I", "role": "Auditor / Revision Director" }
+          ]
+        }
+      ]
+    }
+  ]
+}
