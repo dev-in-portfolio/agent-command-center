@@ -1,0 +1,575 @@
+{
+  "batch": "045_054",
+  "families": [
+    {
+      "id": 45,
+      "name": "Recruiting, Career & Professional Positioning",
+      "folder": "02_departments/045_recruiting_career_and_professional_positioning",
+      "departments": [
+        {
+          "id": "45.1",
+          "name": "Resume Strategy",
+          "units": ["Resume Goal Definition", "Experience Evidence Mapping", "Resume Positioning Review"]
+        },
+        {
+          "id": "45.2",
+          "name": "Cover Letter Production",
+          "units": ["Role Fit Analysis", "Cover Letter Draft", "Cover Letter Final Review"]
+        },
+        {
+          "id": "45.3",
+          "name": "LinkedIn Optimization",
+          "units": ["Profile Headline Review", "Experience Section Rewrite", "LinkedIn Search Fit Check"]
+        },
+        {
+          "id": "45.4",
+          "name": "Recruiter Outreach",
+          "units": ["Recruiter Target Mapping", "Outreach Message Draft", "Follow-Up Sequence"]
+        },
+        {
+          "id": "45.5",
+          "name": "Interview Preparation",
+          "units": ["Interview Question Mapping", "Answer Framework Draft", "Interview Practice Review"]
+        },
+        {
+          "id": "45.6",
+          "name": "Career Positioning",
+          "units": ["Career Narrative Design", "Skill Translation Review", "Positioning Statement Draft"]
+        },
+        {
+          "id": "45.7",
+          "name": "Job Search Operations",
+          "units": ["Job Target Filtering", "Application Tracker Update", "Job Search Priority Review"]
+        },
+        {
+          "id": "45.8",
+          "name": "Professional Proof Assets",
+          "units": ["Proof Asset Inventory", "Achievement Evidence Packaging", "Proof Asset QA"]
+        },
+        {
+          "id": "45.9",
+          "name": "Compensation & Offer Review",
+          "units": ["Offer Detail Extraction", "Compensation Comparison", "Offer Decision Notes"]
+        },
+        {
+          "id": "45.10",
+          "name": "Career Risk & Fit Review",
+          "units": ["Role Risk Detection", "Culture Fit Review", "Career Fit Recommendation"]
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Portfolio, Case Studies & Proof Assets",
+      "folder": "02_departments/046_portfolio_case_studies_and_proof_assets",
+      "departments": [
+        {
+          "id": "46.1",
+          "name": "Portfolio Architecture",
+          "units": ["Portfolio Goal Mapping", "Portfolio Section Design", "Portfolio Flow Review"]
+        },
+        {
+          "id": "46.2",
+          "name": "Case Study Writing",
+          "units": ["Case Study Intake", "Problem-Solution Narrative", "Case Study Proof Review"]
+        },
+        {
+          "id": "46.3",
+          "name": "Proof Asset Collection",
+          "units": ["Evidence Source Inventory", "Screenshot And Artifact Capture", "Proof Completeness Check"]
+        },
+        {
+          "id": "46.4",
+          "name": "Project Storytelling",
+          "units": ["Project Context Framing", "Build Journey Summary", "Outcome Narrative Review"]
+        },
+        {
+          "id": "46.5",
+          "name": "Capabilities Page Management",
+          "units": ["Capability Inventory", "Capability Grouping", "Capability Display QA"]
+        },
+        {
+          "id": "46.6",
+          "name": "Visual Portfolio Assets",
+          "units": ["Visual Asset Selection", "Visual Layout Planning", "Visual Consistency Review"]
+        },
+        {
+          "id": "46.7",
+          "name": "Demo Packaging",
+          "units": ["Demo Scope Definition", "Demo Walkthrough Script", "Demo Readiness Review"]
+        },
+        {
+          "id": "46.8",
+          "name": "Credibility Signals",
+          "units": ["Credential Capture", "Third-Party Validation Review", "Credibility Signal Placement"]
+        },
+        {
+          "id": "46.9",
+          "name": "Portfolio Maintenance",
+          "units": ["Portfolio Currency Review", "Broken Link Check", "Portfolio Update Log"]
+        },
+        {
+          "id": "46.10",
+          "name": "Recruiter-Facing Packaging",
+          "units": ["Recruiter Use Case Mapping", "Recruiter Summary Draft", "Recruiter Packet QA"]
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Personal Productivity & Time Management",
+      "folder": "02_departments/047_personal_productivity_and_time_management",
+      "departments": [
+        {
+          "id": "47.1",
+          "name": "Task Capture",
+          "units": ["Task Intake", "Task Clarification", "Task Parking Decision"]
+        },
+        {
+          "id": "47.2",
+          "name": "Priority Management",
+          "units": ["Priority Signal Review", "Priority Conflict Detection", "Priority Reset Recommendation"]
+        },
+        {
+          "id": "47.3",
+          "name": "Time Blocking",
+          "units": ["Time Window Inventory", "Block Assignment", "Time Block Adjustment"]
+        },
+        {
+          "id": "47.4",
+          "name": "Focus Management",
+          "units": ["Focus Session Setup", "Distraction Detection", "Focus Recovery Notes"]
+        },
+        {
+          "id": "47.5",
+          "name": "Habit Systems",
+          "units": ["Habit Goal Definition", "Habit Trigger Mapping", "Habit Progress Review"]
+        },
+        {
+          "id": "47.6",
+          "name": "Personal Workflow Design",
+          "units": ["Workflow Need Identification", "Workflow Step Drafting", "Workflow Friction Review"]
+        },
+        {
+          "id": "47.7",
+          "name": "Procrastination Recovery",
+          "units": ["Avoidance Pattern Detection", "Recovery Step Selection", "Restart Confirmation"]
+        },
+        {
+          "id": "47.8",
+          "name": "Energy Management",
+          "units": ["Energy Signal Review", "Workload Fit Mapping", "Energy-Aligned Plan"]
+        },
+        {
+          "id": "47.9",
+          "name": "Weekly Planning",
+          "units": ["Weekly Goal Capture", "Weekly Schedule Review", "Weekly Reset Summary"]
+        },
+        {
+          "id": "47.10",
+          "name": "Completion Rituals",
+          "units": ["Done Criteria Review", "Closeout Checklist", "Completion Log Update"]
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Life Administration",
+      "folder": "02_departments/048_life_administration",
+      "departments": [
+        {
+          "id": "48.1",
+          "name": "Personal Records",
+          "units": ["Record Intake", "Record Organization", "Record Retrieval Review"]
+        },
+        {
+          "id": "48.2",
+          "name": "Household Administration",
+          "units": ["Household Task Capture", "Household Schedule Review", "Household Follow-Up Notes"]
+        },
+        {
+          "id": "48.3",
+          "name": "Bills & Payments",
+          "units": ["Bill Inventory", "Payment Due Review", "Payment Tracking Update"]
+        },
+        {
+          "id": "48.4",
+          "name": "Appointments & Errands",
+          "units": ["Appointment Need Capture", "Errand Route Grouping", "Completion Confirmation"]
+        },
+        {
+          "id": "48.5",
+          "name": "Vehicle Administration",
+          "units": ["Vehicle Document Review", "Maintenance Reminder Setup", "Vehicle Task Follow-Up"]
+        },
+        {
+          "id": "48.6",
+          "name": "Insurance Administration",
+          "units": ["Policy Document Capture", "Renewal Date Review", "Coverage Admin Notes"]
+        },
+        {
+          "id": "48.7",
+          "name": "Legal Document Organization",
+          "units": ["Legal Document Intake", "Key Date Extraction", "Document Location Summary"]
+        },
+        {
+          "id": "48.8",
+          "name": "Subscription & Account Management",
+          "units": ["Account Inventory", "Subscription Use Review", "Cancellation Or Renewal Notes"]
+        },
+        {
+          "id": "48.9",
+          "name": "Emergency Information",
+          "units": ["Emergency Contact Capture", "Critical Info Checklist", "Emergency Packet Update"]
+        },
+        {
+          "id": "48.10",
+          "name": "Life Admin Dashboard",
+          "units": ["Admin Signal Collection", "Dashboard Summary", "Admin Queue Cleanup"]
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Personal Knowledge, Learning & Skill Building",
+      "folder": "02_departments/049_personal_knowledge_learning_and_skill_building",
+      "departments": [
+        {
+          "id": "49.1",
+          "name": "Learning Goals",
+          "units": ["Skill Goal Definition", "Learning Outcome Mapping", "Learning Priority Review"]
+        },
+        {
+          "id": "49.2",
+          "name": "Study Planning",
+          "units": ["Study Topic Breakdown", "Study Sequence Design", "Study Schedule Review"]
+        },
+        {
+          "id": "49.3",
+          "name": "Skill Practice",
+          "units": ["Practice Exercise Design", "Practice Session Review", "Skill Improvement Notes"]
+        },
+        {
+          "id": "49.4",
+          "name": "Knowledge Capture",
+          "units": ["Learning Note Intake", "Concept Extraction", "Knowledge Summary"]
+        },
+        {
+          "id": "49.5",
+          "name": "Knowledge Organization",
+          "units": ["Topic Shelf Selection", "Note Filing", "Knowledge Map Update"]
+        },
+        {
+          "id": "49.6",
+          "name": "Learning Feedback Loops",
+          "units": ["Weak Point Detection", "Feedback Pattern Review", "Learning Adjustment Notes"]
+        },
+        {
+          "id": "49.7",
+          "name": "Reference Library",
+          "units": ["Resource Inventory", "Resource Quality Review", "Reference Index Update"]
+        },
+        {
+          "id": "49.8",
+          "name": "Practice Testing",
+          "units": ["Test Question Draft", "Answer Review", "Gap Correction Plan"]
+        },
+        {
+          "id": "49.9",
+          "name": "Skill Transfer",
+          "units": ["Transfer Opportunity Detection", "Cross-Domain Mapping", "Transfer Insight Summary"]
+        },
+        {
+          "id": "49.10",
+          "name": "Learning Archive",
+          "units": ["Completed Learning Capture", "Lesson Learned Summary", "Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Creative Studio & Story Worlds",
+      "folder": "02_departments/050_creative_studio_and_story_worlds",
+      "departments": [
+        {
+          "id": "50.1",
+          "name": "Story Concept Development",
+          "units": ["Concept Seed Capture", "Story Premise Expansion", "Concept Fit Review"]
+        },
+        {
+          "id": "50.2",
+          "name": "Character Development",
+          "units": ["Character Trait Mapping", "Character Voice Notes", "Character Consistency Review"]
+        },
+        {
+          "id": "50.3",
+          "name": "Worldbuilding",
+          "units": ["World Rule Definition", "Setting Detail Expansion", "World Continuity Check"]
+        },
+        {
+          "id": "50.4",
+          "name": "Plot Architecture",
+          "units": ["Plot Beat Mapping", "Conflict Progression Review", "Plot Logic Check"]
+        },
+        {
+          "id": "50.5",
+          "name": "Scene Design",
+          "units": ["Scene Purpose Definition", "Scene Moment Draft", "Scene Continuity Review"]
+        },
+        {
+          "id": "50.6",
+          "name": "Visual Style Direction",
+          "units": ["Style Reference Capture", "Visual Language Definition", "Style Consistency QA"]
+        },
+        {
+          "id": "50.7",
+          "name": "Illustration Prompting",
+          "units": ["Image Prompt Draft", "Character Lock Integration", "Prompt Quality Review"]
+        },
+        {
+          "id": "50.8",
+          "name": "Series Bible Management",
+          "units": ["Canon Detail Capture", "Continuity Rule Update", "Series Bible QA"]
+        },
+        {
+          "id": "50.9",
+          "name": "Creative Asset Packaging",
+          "units": ["Asset Inventory", "Folder Structure Setup", "Package Completeness Review"]
+        },
+        {
+          "id": "50.10",
+          "name": "Creative Revision",
+          "units": ["Revision Need Detection", "Revision Pass", "Revision Acceptance Review"]
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Brand, Identity & Personal Mythology",
+      "folder": "02_departments/051_brand_identity_and_personal_mythology",
+      "departments": [
+        {
+          "id": "51.1",
+          "name": "Brand Identity",
+          "units": ["Brand Trait Mapping", "Identity Statement Draft", "Brand Fit Review"]
+        },
+        {
+          "id": "51.2",
+          "name": "Voice & Tone",
+          "units": ["Voice Pattern Capture", "Tone Rule Definition", "Voice Consistency Review"]
+        },
+        {
+          "id": "51.3",
+          "name": "Personal Mythology",
+          "units": ["Symbol Inventory", "Mythic Theme Mapping", "Story Motif Review"]
+        },
+        {
+          "id": "51.4",
+          "name": "Visual Identity",
+          "units": ["Visual Theme Definition", "Color And Symbol Mapping", "Visual Identity QA"]
+        },
+        {
+          "id": "51.5",
+          "name": "Naming Systems",
+          "units": ["Name Candidate Capture", "Name Meaning Review", "Naming Decision Notes"]
+        },
+        {
+          "id": "51.6",
+          "name": "Persona Systems",
+          "units": ["Persona Role Definition", "Persona Trigger Mapping", "Persona Consistency Review"]
+        },
+        {
+          "id": "51.7",
+          "name": "Signature Language",
+          "units": ["Phrase Capture", "Signature Line Draft", "Language Reuse Review"]
+        },
+        {
+          "id": "51.8",
+          "name": "Brand Lore Archive",
+          "units": ["Lore Event Capture", "Lore Category Filing", "Lore Retrieval Review"]
+        },
+        {
+          "id": "51.9",
+          "name": "Audience Perception",
+          "units": ["Audience Signal Review", "Perception Gap Detection", "Perception Adjustment Notes"]
+        },
+        {
+          "id": "51.10",
+          "name": "Identity Governance",
+          "units": ["Identity Rule Definition", "Identity Drift Review", "Identity Update Record"]
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Personal AI Companion Architecture",
+      "folder": "02_departments/052_personal_ai_companion_architecture",
+      "departments": [
+        {
+          "id": "52.1",
+          "name": "Companion Personality Design",
+          "units": ["Personality Trait Mapping", "Companion Voice Definition", "Personality Consistency Review"]
+        },
+        {
+          "id": "52.2",
+          "name": "Mode System",
+          "units": ["Mode Inventory", "Mode Trigger Mapping", "Mode Exit Review"]
+        },
+        {
+          "id": "52.3",
+          "name": "Emotional Interface",
+          "units": ["Emotional Signal Detection", "Response Tone Selection", "Emotional Feedback Notes"]
+        },
+        {
+          "id": "52.4",
+          "name": "Companion Memory",
+          "units": ["Memory Candidate Detection", "Memory Shelf Routing", "Memory Recall Review"]
+        },
+        {
+          "id": "52.5",
+          "name": "Companion Boundaries",
+          "units": ["Boundary Rule Definition", "Boundary Conflict Detection", "Boundary Repair Notes"]
+        },
+        {
+          "id": "52.6",
+          "name": "Companion Rituals",
+          "units": ["Ritual Trigger Capture", "Ritual Response Draft", "Ritual Consistency Check"]
+        },
+        {
+          "id": "52.7",
+          "name": "Companion Changelog",
+          "units": ["Companion Change Capture", "Upgrade Note Draft", "Changelog Update"]
+        },
+        {
+          "id": "52.8",
+          "name": "Companion Dashboard",
+          "units": ["Companion Signal Collection", "Dashboard Summary", "Dashboard Cleanup"]
+        },
+        {
+          "id": "52.9",
+          "name": "Companion Safety",
+          "units": ["Safety Boundary Review", "Risky Pattern Detection", "Safety Adjustment Notes"]
+        },
+        {
+          "id": "52.10",
+          "name": "Companion Evolution",
+          "units": ["Evolution Signal Capture", "Capability Growth Review", "Evolution Roadmap Update"]
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Prompt Systems & Instruction Architecture",
+      "folder": "02_departments/053_prompt_systems_and_instruction_architecture",
+      "departments": [
+        {
+          "id": "53.1",
+          "name": "Prompt Design",
+          "units": ["Prompt Objective Definition", "Instruction Structure Draft", "Prompt Clarity Review"]
+        },
+        {
+          "id": "53.2",
+          "name": "System Prompt Architecture",
+          "units": ["Role Layer Definition", "Behavioral Rule Mapping", "System Prompt QA"]
+        },
+        {
+          "id": "53.3",
+          "name": "Prompt Templates",
+          "units": ["Template Use Case Definition", "Template Field Design", "Template Reuse Review"]
+        },
+        {
+          "id": "53.4",
+          "name": "Instruction Hierarchy",
+          "units": ["Instruction Priority Mapping", "Conflict Rule Definition", "Hierarchy Consistency Check"]
+        },
+        {
+          "id": "53.5",
+          "name": "Prompt Testing",
+          "units": ["Test Scenario Design", "Output Behavior Review", "Prompt Adjustment Notes"]
+        },
+        {
+          "id": "53.6",
+          "name": "Prompt Debugging",
+          "units": ["Failure Pattern Detection", "Prompt Fault Isolation", "Debug Patch Draft"]
+        },
+        {
+          "id": "53.7",
+          "name": "Command Language",
+          "units": ["Command Phrase Capture", "Command Action Mapping", "Command Safety Review"]
+        },
+        {
+          "id": "53.8",
+          "name": "Prompt Libraries",
+          "units": ["Prompt Inventory", "Prompt Category Filing", "Prompt Library Update"]
+        },
+        {
+          "id": "53.9",
+          "name": "Prompt Governance",
+          "units": ["Prompt Rule Definition", "Prompt Drift Review", "Prompt Version Record"]
+        },
+        {
+          "id": "53.10",
+          "name": "Prompt Migration",
+          "units": ["Migration Need Detection", "Migration Packet Creation", "Migration Continuity Check"]
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Memory Engineering & Context Architecture",
+      "folder": "02_departments/054_memory_engineering_and_context_architecture",
+      "departments": [
+        {
+          "id": "54.1",
+          "name": "Memory Capture",
+          "units": ["Memory Signal Detection", "Memory Candidate Draft", "Memory Save Decision"]
+        },
+        {
+          "id": "54.2",
+          "name": "Memory Shelving",
+          "units": ["Shelf Selection", "Memory Filing", "Shelf Cleanup Review"]
+        },
+        {
+          "id": "54.3",
+          "name": "Context Retrieval",
+          "units": ["Retrieval Need Detection", "Context Source Lookup", "Retrieval Summary"]
+        },
+        {
+          "id": "54.4",
+          "name": "Context Compression",
+          "units": ["Context Inventory", "Compression Pass", "Compression Accuracy Review"]
+        },
+        {
+          "id": "54.5",
+          "name": "Context Restoration",
+          "units": ["Lost Context Detection", "Anchor Detail Recovery", "Status Summary"]
+        },
+        {
+          "id": "54.6",
+          "name": "Memory Conflict Resolution",
+          "units": ["Conflicting Memory Detection", "Source Priority Review", "Conflict Resolution Record"]
+        },
+        {
+          "id": "54.7",
+          "name": "Memory Freshness",
+          "units": ["Memory Age Review", "Staleness Detection", "Refresh Recommendation"]
+        },
+        {
+          "id": "54.8",
+          "name": "Recall Controls",
+          "units": ["Recall Trigger Mapping", "Recall Boundary Review", "Recall Decision Notes"]
+        },
+        {
+          "id": "54.9",
+          "name": "Cross-Thread Continuity",
+          "units": ["Thread State Capture", "Continuity Bridge Draft", "Thread Resumption Check"]
+        },
+        {
+          "id": "54.10",
+          "name": "Memory Governance",
+          "units": ["Memory Rule Definition", "Memory Change Review", "Memory Audit Summary"]
+        }
+      ]
+    }
+  ]
+}
