@@ -1,0 +1,33 @@
+{
+  "id": 0,
+  "name": "Template Family",
+  "manager": "0.M",
+  "scribe": "0.H",
+  "auditor": "0.I",
+  "departments": [
+    {
+      "id": "0.1",
+      "name": "Template Department",
+      "manager": "0.1.M",
+      "scribe": "0.1.H",
+      "auditor": "0.1.I",
+      "units": [
+        {
+          "id": "0.1.1",
+          "name": "Template Unit",
+          "team": [
+            { "id": "0.1.1.1A", "role": "Realist" },
+            { "id": "0.1.1.1B", "role": "Overachiever" },
+            { "id": "0.1.1.1C", "role": "Dreamer" },
+            { "id": "0.1.1.1D", "role": "Timid" },
+            { "id": "0.1.1.1E", "role": "Overprotective" },
+            { "id": "0.1.1.1F", "role": "Wildcard Intern" },
+            { "id": "0.1.1.1G", "role": "Team Lead / Manager" },
+            { "id": "0.1.1.1H", "role": "Scribe / Shower of Work" },
+            { "id": "0.1.1.1I", "role": "Auditor / Revision Director" }
+          ]
+        }
+      ]
+    }
+  ]
+}
