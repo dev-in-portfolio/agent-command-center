@@ -16,45 +16,126 @@
           "id": "25.1.1",
           "name": "Healthcare Topic Intake",
           "team": [
-            "25.1.1.1A Realist",
-            "25.1.1.1B Overachiever",
-            "25.1.1.1C Dreamer",
-            "25.1.1.1D Timid",
-            "25.1.1.1E Overprotective",
-            "25.1.1.1F Wildcard Intern",
-            "25.1.1.1G Team Lead / Manager",
-            "25.1.1.1H Scribe / Shower of Work",
-            "25.1.1.1I Auditor / Revision Director"
+            {
+              "id": "25.1.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.1.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.1.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.1.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.1.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.1.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.1.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.1.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.1.1.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.1.2",
           "name": "Clinical Context Review",
           "team": [
-            "25.1.2.1A Realist",
-            "25.1.2.1B Overachiever",
-            "25.1.2.1C Dreamer",
-            "25.1.2.1D Timid",
-            "25.1.2.1E Overprotective",
-            "25.1.2.1F Wildcard Intern",
-            "25.1.2.1G Team Lead / Manager",
-            "25.1.2.1H Scribe / Shower of Work",
-            "25.1.2.1I Auditor / Revision Director"
+            {
+              "id": "25.1.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.1.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.1.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.1.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.1.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.1.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.1.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.1.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.1.2.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.1.3",
           "name": "Healthcare Findings Summary",
           "team": [
-            "25.1.3.1A Realist",
-            "25.1.3.1B Overachiever",
-            "25.1.3.1C Dreamer",
-            "25.1.3.1D Timid",
-            "25.1.3.1E Overprotective",
-            "25.1.3.1F Wildcard Intern",
-            "25.1.3.1G Team Lead / Manager",
-            "25.1.3.1H Scribe / Shower of Work",
-            "25.1.3.1I Auditor / Revision Director"
+            {
+              "id": "25.1.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.1.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.1.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.1.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.1.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.1.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.1.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.1.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.1.3.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         }
       ]
@@ -70,45 +151,126 @@
           "id": "25.2.1",
           "name": "Coverage Question Framing",
           "team": [
-            "25.2.1.1A Realist",
-            "25.2.1.1B Overachiever",
-            "25.2.1.1C Dreamer",
-            "25.2.1.1D Timid",
-            "25.2.1.1E Overprotective",
-            "25.2.1.1F Wildcard Intern",
-            "25.2.1.1G Team Lead / Manager",
-            "25.2.1.1H Scribe / Shower of Work",
-            "25.2.1.1I Auditor / Revision Director"
+            {
+              "id": "25.2.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.2.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.2.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.2.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.2.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.2.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.2.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.2.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.2.1.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.2.2",
           "name": "Benefit Detail Mapping",
           "team": [
-            "25.2.2.1A Realist",
-            "25.2.2.1B Overachiever",
-            "25.2.2.1C Dreamer",
-            "25.2.2.1D Timid",
-            "25.2.2.1E Overprotective",
-            "25.2.2.1F Wildcard Intern",
-            "25.2.2.1G Team Lead / Manager",
-            "25.2.2.1H Scribe / Shower of Work",
-            "25.2.2.1I Auditor / Revision Director"
+            {
+              "id": "25.2.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.2.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.2.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.2.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.2.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.2.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.2.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.2.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.2.2.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.2.3",
           "name": "Coverage Gap Summary",
           "team": [
-            "25.2.3.1A Realist",
-            "25.2.3.1B Overachiever",
-            "25.2.3.1C Dreamer",
-            "25.2.3.1D Timid",
-            "25.2.3.1E Overprotective",
-            "25.2.3.1F Wildcard Intern",
-            "25.2.3.1G Team Lead / Manager",
-            "25.2.3.1H Scribe / Shower of Work",
-            "25.2.3.1I Auditor / Revision Director"
+            {
+              "id": "25.2.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.2.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.2.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.2.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.2.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.2.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.2.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.2.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.2.3.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         }
       ]
@@ -124,45 +286,126 @@
           "id": "25.3.1",
           "name": "Patient Scenario Capture",
           "team": [
-            "25.3.1.1A Realist",
-            "25.3.1.1B Overachiever",
-            "25.3.1.1C Dreamer",
-            "25.3.1.1D Timid",
-            "25.3.1.1E Overprotective",
-            "25.3.1.1F Wildcard Intern",
-            "25.3.1.1G Team Lead / Manager",
-            "25.3.1.1H Scribe / Shower of Work",
-            "25.3.1.1I Auditor / Revision Director"
+            {
+              "id": "25.3.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.3.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.3.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.3.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.3.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.3.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.3.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.3.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.3.1.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.3.2",
           "name": "Care Step Mapping",
           "team": [
-            "25.3.2.1A Realist",
-            "25.3.2.1B Overachiever",
-            "25.3.2.1C Dreamer",
-            "25.3.2.1D Timid",
-            "25.3.2.1E Overprotective",
-            "25.3.2.1F Wildcard Intern",
-            "25.3.2.1G Team Lead / Manager",
-            "25.3.2.1H Scribe / Shower of Work",
-            "25.3.2.1I Auditor / Revision Director"
+            {
+              "id": "25.3.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.3.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.3.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.3.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.3.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.3.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.3.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.3.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.3.2.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.3.3",
           "name": "Journey Friction Review",
           "team": [
-            "25.3.3.1A Realist",
-            "25.3.3.1B Overachiever",
-            "25.3.3.1C Dreamer",
-            "25.3.3.1D Timid",
-            "25.3.3.1E Overprotective",
-            "25.3.3.1F Wildcard Intern",
-            "25.3.3.1G Team Lead / Manager",
-            "25.3.3.1H Scribe / Shower of Work",
-            "25.3.3.1I Auditor / Revision Director"
+            {
+              "id": "25.3.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.3.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.3.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.3.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.3.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.3.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.3.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.3.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.3.3.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         }
       ]
@@ -178,45 +421,126 @@
           "id": "25.4.1",
           "name": "Wellness Goal Definition",
           "team": [
-            "25.4.1.1A Realist",
-            "25.4.1.1B Overachiever",
-            "25.4.1.1C Dreamer",
-            "25.4.1.1D Timid",
-            "25.4.1.1E Overprotective",
-            "25.4.1.1F Wildcard Intern",
-            "25.4.1.1G Team Lead / Manager",
-            "25.4.1.1H Scribe / Shower of Work",
-            "25.4.1.1I Auditor / Revision Director"
+            {
+              "id": "25.4.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.4.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.4.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.4.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.4.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.4.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.4.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.4.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.4.1.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.4.2",
           "name": "Wellness Habit Mapping",
           "team": [
-            "25.4.2.1A Realist",
-            "25.4.2.1B Overachiever",
-            "25.4.2.1C Dreamer",
-            "25.4.2.1D Timid",
-            "25.4.2.1E Overprotective",
-            "25.4.2.1F Wildcard Intern",
-            "25.4.2.1G Team Lead / Manager",
-            "25.4.2.1H Scribe / Shower of Work",
-            "25.4.2.1I Auditor / Revision Director"
+            {
+              "id": "25.4.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.4.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.4.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.4.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.4.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.4.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.4.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.4.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.4.2.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.4.3",
           "name": "Wellness Plan Review",
           "team": [
-            "25.4.3.1A Realist",
-            "25.4.3.1B Overachiever",
-            "25.4.3.1C Dreamer",
-            "25.4.3.1D Timid",
-            "25.4.3.1E Overprotective",
-            "25.4.3.1F Wildcard Intern",
-            "25.4.3.1G Team Lead / Manager",
-            "25.4.3.1H Scribe / Shower of Work",
-            "25.4.3.1I Auditor / Revision Director"
+            {
+              "id": "25.4.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.4.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.4.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.4.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.4.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.4.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.4.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.4.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.4.3.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         }
       ]
@@ -232,45 +556,126 @@
           "id": "25.5.1",
           "name": "Care Option Identification",
           "team": [
-            "25.5.1.1A Realist",
-            "25.5.1.1B Overachiever",
-            "25.5.1.1C Dreamer",
-            "25.5.1.1D Timid",
-            "25.5.1.1E Overprotective",
-            "25.5.1.1F Wildcard Intern",
-            "25.5.1.1G Team Lead / Manager",
-            "25.5.1.1H Scribe / Shower of Work",
-            "25.5.1.1I Auditor / Revision Director"
+            {
+              "id": "25.5.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.5.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.5.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.5.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.5.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.5.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.5.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.5.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.5.1.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.5.2",
           "name": "Provider Pathway Mapping",
           "team": [
-            "25.5.2.1A Realist",
-            "25.5.2.1B Overachiever",
-            "25.5.2.1C Dreamer",
-            "25.5.2.1D Timid",
-            "25.5.2.1E Overprotective",
-            "25.5.2.1F Wildcard Intern",
-            "25.5.2.1G Team Lead / Manager",
-            "25.5.2.1H Scribe / Shower of Work",
-            "25.5.2.1I Auditor / Revision Director"
+            {
+              "id": "25.5.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.5.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.5.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.5.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.5.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.5.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.5.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.5.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.5.2.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.5.3",
           "name": "Navigation Summary",
           "team": [
-            "25.5.3.1A Realist",
-            "25.5.3.1B Overachiever",
-            "25.5.3.1C Dreamer",
-            "25.5.3.1D Timid",
-            "25.5.3.1E Overprotective",
-            "25.5.3.1F Wildcard Intern",
-            "25.5.3.1G Team Lead / Manager",
-            "25.5.3.1H Scribe / Shower of Work",
-            "25.5.3.1I Auditor / Revision Director"
+            {
+              "id": "25.5.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.5.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.5.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.5.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.5.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.5.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.5.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.5.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.5.3.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         }
       ]
@@ -286,45 +691,126 @@
           "id": "25.6.1",
           "name": "Medical Claim Identification",
           "team": [
-            "25.6.1.1A Realist",
-            "25.6.1.1B Overachiever",
-            "25.6.1.1C Dreamer",
-            "25.6.1.1D Timid",
-            "25.6.1.1E Overprotective",
-            "25.6.1.1F Wildcard Intern",
-            "25.6.1.1G Team Lead / Manager",
-            "25.6.1.1H Scribe / Shower of Work",
-            "25.6.1.1I Auditor / Revision Director"
+            {
+              "id": "25.6.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.6.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.6.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.6.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.6.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.6.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.6.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.6.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.6.1.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.6.2",
           "name": "Source Quality Review",
           "team": [
-            "25.6.2.1A Realist",
-            "25.6.2.1B Overachiever",
-            "25.6.2.1C Dreamer",
-            "25.6.2.1D Timid",
-            "25.6.2.1E Overprotective",
-            "25.6.2.1F Wildcard Intern",
-            "25.6.2.1G Team Lead / Manager",
-            "25.6.2.1H Scribe / Shower of Work",
-            "25.6.2.1I Auditor / Revision Director"
+            {
+              "id": "25.6.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.6.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.6.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.6.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.6.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.6.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.6.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.6.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.6.2.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.6.3",
           "name": "Plain-Language Health Summary",
           "team": [
-            "25.6.3.1A Realist",
-            "25.6.3.1B Overachiever",
-            "25.6.3.1C Dreamer",
-            "25.6.3.1D Timid",
-            "25.6.3.1E Overprotective",
-            "25.6.3.1F Wildcard Intern",
-            "25.6.3.1G Team Lead / Manager",
-            "25.6.3.1H Scribe / Shower of Work",
-            "25.6.3.1I Auditor / Revision Director"
+            {
+              "id": "25.6.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.6.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.6.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.6.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.6.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.6.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.6.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.6.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.6.3.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         }
       ]
@@ -340,45 +826,126 @@
           "id": "25.7.1",
           "name": "Provider Identification",
           "team": [
-            "25.7.1.1A Realist",
-            "25.7.1.1B Overachiever",
-            "25.7.1.1C Dreamer",
-            "25.7.1.1D Timid",
-            "25.7.1.1E Overprotective",
-            "25.7.1.1F Wildcard Intern",
-            "25.7.1.1G Team Lead / Manager",
-            "25.7.1.1H Scribe / Shower of Work",
-            "25.7.1.1I Auditor / Revision Director"
+            {
+              "id": "25.7.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.7.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.7.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.7.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.7.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.7.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.7.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.7.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.7.1.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.7.2",
           "name": "Network Fit Review",
           "team": [
-            "25.7.2.1A Realist",
-            "25.7.2.1B Overachiever",
-            "25.7.2.1C Dreamer",
-            "25.7.2.1D Timid",
-            "25.7.2.1E Overprotective",
-            "25.7.2.1F Wildcard Intern",
-            "25.7.2.1G Team Lead / Manager",
-            "25.7.2.1H Scribe / Shower of Work",
-            "25.7.2.1I Auditor / Revision Director"
+            {
+              "id": "25.7.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.7.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.7.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.7.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.7.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.7.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.7.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.7.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.7.2.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.7.3",
           "name": "Provider Access Summary",
           "team": [
-            "25.7.3.1A Realist",
-            "25.7.3.1B Overachiever",
-            "25.7.3.1C Dreamer",
-            "25.7.3.1D Timid",
-            "25.7.3.1E Overprotective",
-            "25.7.3.1F Wildcard Intern",
-            "25.7.3.1G Team Lead / Manager",
-            "25.7.3.1H Scribe / Shower of Work",
-            "25.7.3.1I Auditor / Revision Director"
+            {
+              "id": "25.7.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.7.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.7.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.7.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.7.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.7.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.7.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.7.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.7.3.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         }
       ]
@@ -394,45 +961,126 @@
           "id": "25.8.1",
           "name": "Claim Issue Capture",
           "team": [
-            "25.8.1.1A Realist",
-            "25.8.1.1B Overachiever",
-            "25.8.1.1C Dreamer",
-            "25.8.1.1D Timid",
-            "25.8.1.1E Overprotective",
-            "25.8.1.1F Wildcard Intern",
-            "25.8.1.1G Team Lead / Manager",
-            "25.8.1.1H Scribe / Shower of Work",
-            "25.8.1.1I Auditor / Revision Director"
+            {
+              "id": "25.8.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.8.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.8.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.8.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.8.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.8.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.8.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.8.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.8.1.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.8.2",
           "name": "Billing Detail Review",
           "team": [
-            "25.8.2.1A Realist",
-            "25.8.2.1B Overachiever",
-            "25.8.2.1C Dreamer",
-            "25.8.2.1D Timid",
-            "25.8.2.1E Overprotective",
-            "25.8.2.1F Wildcard Intern",
-            "25.8.2.1G Team Lead / Manager",
-            "25.8.2.1H Scribe / Shower of Work",
-            "25.8.2.1I Auditor / Revision Director"
+            {
+              "id": "25.8.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.8.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.8.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.8.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.8.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.8.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.8.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.8.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.8.2.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.8.3",
           "name": "Claim Follow-Up Checklist",
           "team": [
-            "25.8.3.1A Realist",
-            "25.8.3.1B Overachiever",
-            "25.8.3.1C Dreamer",
-            "25.8.3.1D Timid",
-            "25.8.3.1E Overprotective",
-            "25.8.3.1F Wildcard Intern",
-            "25.8.3.1G Team Lead / Manager",
-            "25.8.3.1H Scribe / Shower of Work",
-            "25.8.3.1I Auditor / Revision Director"
+            {
+              "id": "25.8.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.8.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.8.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.8.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.8.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.8.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.8.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.8.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.8.3.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         }
       ]
@@ -448,45 +1096,126 @@
           "id": "25.9.1",
           "name": "Program Need Assessment",
           "team": [
-            "25.9.1.1A Realist",
-            "25.9.1.1B Overachiever",
-            "25.9.1.1C Dreamer",
-            "25.9.1.1D Timid",
-            "25.9.1.1E Overprotective",
-            "25.9.1.1F Wildcard Intern",
-            "25.9.1.1G Team Lead / Manager",
-            "25.9.1.1H Scribe / Shower of Work",
-            "25.9.1.1I Auditor / Revision Director"
+            {
+              "id": "25.9.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.9.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.9.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.9.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.9.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.9.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.9.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.9.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.9.1.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.9.2",
           "name": "Program Structure Draft",
           "team": [
-            "25.9.2.1A Realist",
-            "25.9.2.1B Overachiever",
-            "25.9.2.1C Dreamer",
-            "25.9.2.1D Timid",
-            "25.9.2.1E Overprotective",
-            "25.9.2.1F Wildcard Intern",
-            "25.9.2.1G Team Lead / Manager",
-            "25.9.2.1H Scribe / Shower of Work",
-            "25.9.2.1I Auditor / Revision Director"
+            {
+              "id": "25.9.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.9.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.9.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.9.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.9.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.9.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.9.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.9.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.9.2.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.9.3",
           "name": "Program Outcome Review",
           "team": [
-            "25.9.3.1A Realist",
-            "25.9.3.1B Overachiever",
-            "25.9.3.1C Dreamer",
-            "25.9.3.1D Timid",
-            "25.9.3.1E Overprotective",
-            "25.9.3.1F Wildcard Intern",
-            "25.9.3.1G Team Lead / Manager",
-            "25.9.3.1H Scribe / Shower of Work",
-            "25.9.3.1I Auditor / Revision Director"
+            {
+              "id": "25.9.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.9.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.9.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.9.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.9.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.9.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.9.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.9.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.9.3.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         }
       ]
@@ -502,45 +1231,126 @@
           "id": "25.10.1",
           "name": "Healthcare Rule Mapping",
           "team": [
-            "25.10.1.1A Realist",
-            "25.10.1.1B Overachiever",
-            "25.10.1.1C Dreamer",
-            "25.10.1.1D Timid",
-            "25.10.1.1E Overprotective",
-            "25.10.1.1F Wildcard Intern",
-            "25.10.1.1G Team Lead / Manager",
-            "25.10.1.1H Scribe / Shower of Work",
-            "25.10.1.1I Auditor / Revision Director"
+            {
+              "id": "25.10.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.10.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.10.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.10.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.10.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.10.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.10.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.10.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.10.1.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.10.2",
           "name": "Documentation Requirement Review",
           "team": [
-            "25.10.2.1A Realist",
-            "25.10.2.1B Overachiever",
-            "25.10.2.1C Dreamer",
-            "25.10.2.1D Timid",
-            "25.10.2.1E Overprotective",
-            "25.10.2.1F Wildcard Intern",
-            "25.10.2.1G Team Lead / Manager",
-            "25.10.2.1H Scribe / Shower of Work",
-            "25.10.2.1I Auditor / Revision Director"
+            {
+              "id": "25.10.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.10.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.10.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.10.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.10.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.10.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.10.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.10.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.10.2.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         },
         {
           "id": "25.10.3",
           "name": "Compliance Support Summary",
           "team": [
-            "25.10.3.1A Realist",
-            "25.10.3.1B Overachiever",
-            "25.10.3.1C Dreamer",
-            "25.10.3.1D Timid",
-            "25.10.3.1E Overprotective",
-            "25.10.3.1F Wildcard Intern",
-            "25.10.3.1G Team Lead / Manager",
-            "25.10.3.1H Scribe / Shower of Work",
-            "25.10.3.1I Auditor / Revision Director"
+            {
+              "id": "25.10.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "25.10.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "25.10.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "25.10.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "25.10.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "25.10.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "25.10.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "25.10.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "25.10.3.1I",
+              "role": "Auditor / Revision Director"
+            }
           ]
         }
       ]

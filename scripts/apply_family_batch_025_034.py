@@ -47,15 +47,15 @@ def main():
                     "id": uid,
                     "name": uname,
                     "team": [
-                        f"{uid}.1A Realist",
-                        f"{uid}.1B Overachiever",
-                        f"{uid}.1C Dreamer",
-                        f"{uid}.1D Timid",
-                        f"{uid}.1E Overprotective",
-                        f"{uid}.1F Wildcard Intern",
-                        f"{uid}.1G Team Lead / Manager",
-                        f"{uid}.1H Scribe / Shower of Work",
-                        f"{uid}.1I Auditor / Revision Director"
+                        {"id": f"{uid}.1A", "role": "Realist"},
+                        {"id": f"{uid}.1B", "role": "Overachiever"},
+                        {"id": f"{uid}.1C", "role": "Dreamer"},
+                        {"id": f"{uid}.1D", "role": "Timid"},
+                        {"id": f"{uid}.1E", "role": "Overprotective"},
+                        {"id": f"{uid}.1F", "role": "Wildcard Intern"},
+                        {"id": f"{uid}.1G", "role": "Team Lead / Manager"},
+                        {"id": f"{uid}.1H", "role": "Scribe / Shower of Work"},
+                        {"id": f"{uid}.1I", "role": "Auditor / Revision Director"}
                     ]
                 }
                 new_dept["units"].append(new_unit)

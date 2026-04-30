@@ -110,20 +110,24 @@ def main():
                 if len(team) != 9:
                     errors.append(f"Unit {uid} team size != 9")
                     
-                expected_team = [
-                    f"{uid}.1A Realist",
-                    f"{uid}.1B Overachiever",
-                    f"{uid}.1C Dreamer",
-                    f"{uid}.1D Timid",
-                    f"{uid}.1E Overprotective",
-                    f"{uid}.1F Wildcard Intern",
-                    f"{uid}.1G Team Lead / Manager",
-                    f"{uid}.1H Scribe / Shower of Work",
-                    f"{uid}.1I Auditor / Revision Director"
+                expected_roles = [
+                    "Realist", "Overachiever", "Dreamer", "Timid", "Overprotective",
+                    "Wildcard Intern", "Team Lead / Manager", "Scribe / Shower of Work", "Auditor / Revision Director"
                 ]
+                role_letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
                 
-                if team != expected_team:
-                    errors.append(f"Unit {uid} team mismatch")
+                for k, member in enumerate(team):
+                    if not isinstance(member, dict):
+                        errors.append(f"Team member at {uid} index {k} is not an object")
+                        continue
+                    
+                    expected_id = f"{uid}.1{role_letters[k]}"
+                    expected_role = expected_roles[k]
+                    
+                    if member.get("id") != expected_id:
+                        errors.append(f"Team ID mismatch at {uid}: expected {expected_id}, got {member.get('id')}")
+                    if member.get("role") != expected_role:
+                        errors.append(f"Team role mismatch at {uid}: expected {expected_role}, got {member.get('role')}")
                     
         # Validate README
         if not os.path.exists(readme_path):
