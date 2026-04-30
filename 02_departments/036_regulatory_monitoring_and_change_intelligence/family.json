@@ -4,5 +4,1356 @@
   "manager": "36.M",
   "scribe": "36.H",
   "auditor": "36.I",
-  "departments": []
+  "departments": [
+    {
+      "id": "36.1",
+      "name": "Regulatory Source Tracking",
+      "manager": "36.1.M",
+      "scribe": "36.1.H",
+      "auditor": "36.1.I",
+      "units": [
+        {
+          "id": "36.1.1",
+          "name": "Source Inventory",
+          "team": [
+            {
+              "id": "36.1.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.1.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.1.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.1.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.1.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.1.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.1.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.1.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.1.1.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.1.2",
+          "name": "Source Monitoring Schedule",
+          "team": [
+            {
+              "id": "36.1.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.1.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.1.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.1.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.1.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.1.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.1.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.1.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.1.2.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.1.3",
+          "name": "Source Reliability Review",
+          "team": [
+            {
+              "id": "36.1.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.1.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.1.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.1.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.1.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.1.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.1.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.1.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.1.3.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36.2",
+      "name": "Rule Change Detection",
+      "manager": "36.2.M",
+      "scribe": "36.2.H",
+      "auditor": "36.2.I",
+      "units": [
+        {
+          "id": "36.2.1",
+          "name": "Change Signal Capture",
+          "team": [
+            {
+              "id": "36.2.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.2.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.2.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.2.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.2.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.2.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.2.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.2.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.2.1.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.2.2",
+          "name": "Rule Text Comparison",
+          "team": [
+            {
+              "id": "36.2.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.2.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.2.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.2.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.2.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.2.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.2.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.2.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.2.2.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.2.3",
+          "name": "Change Confirmation Notes",
+          "team": [
+            {
+              "id": "36.2.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.2.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.2.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.2.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.2.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.2.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.2.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.2.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.2.3.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36.3",
+      "name": "Regulatory Impact Analysis",
+      "manager": "36.3.M",
+      "scribe": "36.3.H",
+      "auditor": "36.3.I",
+      "units": [
+        {
+          "id": "36.3.1",
+          "name": "Impact Area Identification",
+          "team": [
+            {
+              "id": "36.3.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.3.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.3.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.3.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.3.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.3.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.3.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.3.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.3.1.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.3.2",
+          "name": "Operational Effect Review",
+          "team": [
+            {
+              "id": "36.3.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.3.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.3.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.3.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.3.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.3.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.3.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.3.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.3.2.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.3.3",
+          "name": "Impact Summary Brief",
+          "team": [
+            {
+              "id": "36.3.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.3.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.3.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.3.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.3.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.3.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.3.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.3.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.3.3.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36.4",
+      "name": "Compliance Calendar",
+      "manager": "36.4.M",
+      "scribe": "36.4.H",
+      "auditor": "36.4.I",
+      "units": [
+        {
+          "id": "36.4.1",
+          "name": "Deadline Capture",
+          "team": [
+            {
+              "id": "36.4.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.4.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.4.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.4.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.4.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.4.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.4.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.4.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.4.1.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.4.2",
+          "name": "Filing Requirement Review",
+          "team": [
+            {
+              "id": "36.4.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.4.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.4.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.4.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.4.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.4.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.4.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.4.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.4.2.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.4.3",
+          "name": "Calendar Update Record",
+          "team": [
+            {
+              "id": "36.4.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.4.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.4.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.4.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.4.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.4.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.4.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.4.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.4.3.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36.5",
+      "name": "Policy Translation",
+      "manager": "36.5.M",
+      "scribe": "36.5.H",
+      "auditor": "36.5.I",
+      "units": [
+        {
+          "id": "36.5.1",
+          "name": "Technical Rule Breakdown",
+          "team": [
+            {
+              "id": "36.5.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.5.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.5.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.5.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.5.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.5.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.5.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.5.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.5.1.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.5.2",
+          "name": "Plain-Language Rule Summary",
+          "team": [
+            {
+              "id": "36.5.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.5.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.5.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.5.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.5.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.5.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.5.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.5.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.5.2.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.5.3",
+          "name": "Action Requirement Extraction",
+          "team": [
+            {
+              "id": "36.5.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.5.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.5.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.5.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.5.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.5.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.5.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.5.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.5.3.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36.6",
+      "name": "Regulatory Alerting",
+      "manager": "36.6.M",
+      "scribe": "36.6.H",
+      "auditor": "36.6.I",
+      "units": [
+        {
+          "id": "36.6.1",
+          "name": "Alert Criteria Setup",
+          "team": [
+            {
+              "id": "36.6.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.6.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.6.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.6.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.6.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.6.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.6.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.6.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.6.1.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.6.2",
+          "name": "Alert Drafting",
+          "team": [
+            {
+              "id": "36.6.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.6.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.6.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.6.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.6.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.6.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.6.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.6.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.6.2.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.6.3",
+          "name": "Alert Routing",
+          "team": [
+            {
+              "id": "36.6.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.6.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.6.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.6.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.6.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.6.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.6.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.6.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.6.3.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36.7",
+      "name": "Jurisdiction Mapping",
+      "manager": "36.7.M",
+      "scribe": "36.7.H",
+      "auditor": "36.7.I",
+      "units": [
+        {
+          "id": "36.7.1",
+          "name": "Jurisdiction Identification",
+          "team": [
+            {
+              "id": "36.7.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.7.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.7.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.7.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.7.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.7.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.7.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.7.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.7.1.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.7.2",
+          "name": "Rule Applicability Review",
+          "team": [
+            {
+              "id": "36.7.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.7.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.7.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.7.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.7.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.7.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.7.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.7.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.7.2.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.7.3",
+          "name": "Jurisdiction Impact Notes",
+          "team": [
+            {
+              "id": "36.7.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.7.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.7.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.7.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.7.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.7.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.7.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.7.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.7.3.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36.8",
+      "name": "Regulatory Evidence",
+      "manager": "36.8.M",
+      "scribe": "36.8.H",
+      "auditor": "36.8.I",
+      "units": [
+        {
+          "id": "36.8.1",
+          "name": "Evidence Requirement Mapping",
+          "team": [
+            {
+              "id": "36.8.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.8.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.8.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.8.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.8.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.8.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.8.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.8.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.8.1.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.8.2",
+          "name": "Supporting Document Collection",
+          "team": [
+            {
+              "id": "36.8.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.8.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.8.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.8.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.8.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.8.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.8.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.8.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.8.2.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.8.3",
+          "name": "Evidence Completeness Check",
+          "team": [
+            {
+              "id": "36.8.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.8.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.8.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.8.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.8.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.8.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.8.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.8.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.8.3.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36.9",
+      "name": "Regulatory Risk Register",
+      "manager": "36.9.M",
+      "scribe": "36.9.H",
+      "auditor": "36.9.I",
+      "units": [
+        {
+          "id": "36.9.1",
+          "name": "Regulatory Risk Capture",
+          "team": [
+            {
+              "id": "36.9.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.9.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.9.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.9.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.9.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.9.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.9.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.9.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.9.1.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.9.2",
+          "name": "Risk Severity Review",
+          "team": [
+            {
+              "id": "36.9.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.9.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.9.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.9.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.9.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.9.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.9.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.9.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.9.2.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.9.3",
+          "name": "Risk Response Tracking",
+          "team": [
+            {
+              "id": "36.9.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.9.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.9.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.9.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.9.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.9.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.9.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.9.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.9.3.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36.10",
+      "name": "Change Intelligence Reporting",
+      "manager": "36.10.M",
+      "scribe": "36.10.H",
+      "auditor": "36.10.I",
+      "units": [
+        {
+          "id": "36.10.1",
+          "name": "Change Summary Draft",
+          "team": [
+            {
+              "id": "36.10.1.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.10.1.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.10.1.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.10.1.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.10.1.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.10.1.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.10.1.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.10.1.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.10.1.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.10.2",
+          "name": "Decision Impact Notes",
+          "team": [
+            {
+              "id": "36.10.2.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.10.2.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.10.2.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.10.2.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.10.2.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.10.2.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.10.2.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.10.2.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.10.2.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        },
+        {
+          "id": "36.10.3",
+          "name": "Monitoring Report Update",
+          "team": [
+            {
+              "id": "36.10.3.1A",
+              "role": "Realist"
+            },
+            {
+              "id": "36.10.3.1B",
+              "role": "Overachiever"
+            },
+            {
+              "id": "36.10.3.1C",
+              "role": "Dreamer"
+            },
+            {
+              "id": "36.10.3.1D",
+              "role": "Timid"
+            },
+            {
+              "id": "36.10.3.1E",
+              "role": "Overprotective"
+            },
+            {
+              "id": "36.10.3.1F",
+              "role": "Wildcard Intern"
+            },
+            {
+              "id": "36.10.3.1G",
+              "role": "Team Lead / Manager"
+            },
+            {
+              "id": "36.10.3.1H",
+              "role": "Scribe / Shower of Work"
+            },
+            {
+              "id": "36.10.3.1I",
+              "role": "Auditor / Revision Director"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

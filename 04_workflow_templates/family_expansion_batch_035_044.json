@@ -1,0 +1,975 @@
+{
+  "batch": "035_044",
+  "families": [
+    {
+      "id": 35,
+      "name": "Workflow Control Tower",
+      "folder": "02_departments/035_workflow_control_tower",
+      "departments": [
+        {
+          "id": "35.1",
+          "name": "Central Intake & Dispatch",
+          "units": [
+            "Work Intake Review",
+            "Priority Assignment",
+            "Dispatch Confirmation"
+          ]
+        },
+        {
+          "id": "35.2",
+          "name": "Workflow Monitoring",
+          "units": [
+            "Active Workflow Tracking",
+            "Progress Signal Review",
+            "Workflow Status Summary"
+          ]
+        },
+        {
+          "id": "35.3",
+          "name": "Cross-Department Routing",
+          "units": [
+            "Routing Need Detection",
+            "Department Match Selection",
+            "Routing Handoff Record"
+          ]
+        },
+        {
+          "id": "35.4",
+          "name": "Bottleneck Management",
+          "units": [
+            "Bottleneck Detection",
+            "Constraint Diagnosis",
+            "Bottleneck Removal Plan"
+          ]
+        },
+        {
+          "id": "35.5",
+          "name": "Escalation Control",
+          "units": [
+            "Escalation Trigger Review",
+            "Escalation Path Selection",
+            "Escalation Outcome Tracking"
+          ]
+        },
+        {
+          "id": "35.6",
+          "name": "Handoff Management",
+          "units": [
+            "Handoff Requirement Mapping",
+            "Handoff Package Assembly",
+            "Handoff Completion Check"
+          ]
+        },
+        {
+          "id": "35.7",
+          "name": "Workload Balancing",
+          "units": [
+            "Workload Signal Collection",
+            "Capacity Conflict Review",
+            "Workload Adjustment Recommendation"
+          ]
+        },
+        {
+          "id": "35.8",
+          "name": "Deadline & SLA Tracking",
+          "units": [
+            "Deadline Inventory",
+            "SLA Risk Detection",
+            "Deadline Recovery Notes"
+          ]
+        },
+        {
+          "id": "35.9",
+          "name": "Completion Verification",
+          "units": [
+            "Completion Criteria Review",
+            "Output Presence Check",
+            "Completion Confirmation Record"
+          ]
+        },
+        {
+          "id": "35.10",
+          "name": "Control Tower Reporting",
+          "units": [
+            "Workflow Dashboard Summary",
+            "Exception Report",
+            "Executive Workflow Brief"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Regulatory Monitoring & Change Intelligence",
+      "folder": "02_departments/036_regulatory_monitoring_and_change_intelligence",
+      "departments": [
+        {
+          "id": "36.1",
+          "name": "Regulatory Source Tracking",
+          "units": [
+            "Source Inventory",
+            "Source Monitoring Schedule",
+            "Source Reliability Review"
+          ]
+        },
+        {
+          "id": "36.2",
+          "name": "Rule Change Detection",
+          "units": [
+            "Change Signal Capture",
+            "Rule Text Comparison",
+            "Change Confirmation Notes"
+          ]
+        },
+        {
+          "id": "36.3",
+          "name": "Regulatory Impact Analysis",
+          "units": [
+            "Impact Area Identification",
+            "Operational Effect Review",
+            "Impact Summary Brief"
+          ]
+        },
+        {
+          "id": "36.4",
+          "name": "Compliance Calendar",
+          "units": [
+            "Deadline Capture",
+            "Filing Requirement Review",
+            "Calendar Update Record"
+          ]
+        },
+        {
+          "id": "36.5",
+          "name": "Policy Translation",
+          "units": [
+            "Technical Rule Breakdown",
+            "Plain-Language Rule Summary",
+            "Action Requirement Extraction"
+          ]
+        },
+        {
+          "id": "36.6",
+          "name": "Regulatory Alerting",
+          "units": [
+            "Alert Criteria Setup",
+            "Alert Drafting",
+            "Alert Routing"
+          ]
+        },
+        {
+          "id": "36.7",
+          "name": "Jurisdiction Mapping",
+          "units": [
+            "Jurisdiction Identification",
+            "Rule Applicability Review",
+            "Jurisdiction Impact Notes"
+          ]
+        },
+        {
+          "id": "36.8",
+          "name": "Regulatory Evidence",
+          "units": [
+            "Evidence Requirement Mapping",
+            "Supporting Document Collection",
+            "Evidence Completeness Check"
+          ]
+        },
+        {
+          "id": "36.9",
+          "name": "Regulatory Risk Register",
+          "units": [
+            "Regulatory Risk Capture",
+            "Risk Severity Review",
+            "Risk Response Tracking"
+          ]
+        },
+        {
+          "id": "36.10",
+          "name": "Change Intelligence Reporting",
+          "units": [
+            "Change Summary Draft",
+            "Decision Impact Notes",
+            "Monitoring Report Update"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Knowledge Security & Information Classification",
+      "folder": "02_departments/037_knowledge_security_and_information_classification",
+      "departments": [
+        {
+          "id": "37.1",
+          "name": "Information Classification",
+          "units": [
+            "Data Sensitivity Review",
+            "Classification Label Assignment",
+            "Classification Record Update"
+          ]
+        },
+        {
+          "id": "37.2",
+          "name": "Access Control Review",
+          "units": [
+            "Access Need Assessment",
+            "Permission Scope Review",
+            "Access Decision Notes"
+          ]
+        },
+        {
+          "id": "37.3",
+          "name": "Confidentiality Management",
+          "units": [
+            "Confidential Material Detection",
+            "Sharing Boundary Mapping",
+            "Confidentiality Risk Summary"
+          ]
+        },
+        {
+          "id": "37.4",
+          "name": "Knowledge Compartmentalization",
+          "units": [
+            "Compartment Definition",
+            "Compartment Access Mapping",
+            "Compartment Boundary Review"
+          ]
+        },
+        {
+          "id": "37.5",
+          "name": "Sensitive Data Handling",
+          "units": [
+            "Sensitive Field Identification",
+            "Handling Rule Selection",
+            "Handling Compliance Check"
+          ]
+        },
+        {
+          "id": "37.6",
+          "name": "Redaction Operations",
+          "units": [
+            "Redaction Need Detection",
+            "Redaction Pass",
+            "Redaction QA Review"
+          ]
+        },
+        {
+          "id": "37.7",
+          "name": "Secure Knowledge Sharing",
+          "units": [
+            "Sharing Purpose Review",
+            "Safe Summary Preparation",
+            "Sharing Approval Record"
+          ]
+        },
+        {
+          "id": "37.8",
+          "name": "Data Leakage Prevention",
+          "units": [
+            "Leakage Scenario Mapping",
+            "Exposure Risk Review",
+            "Leakage Mitigation Notes"
+          ]
+        },
+        {
+          "id": "37.9",
+          "name": "Security Audit Trail",
+          "units": [
+            "Access Event Capture",
+            "Security Action Log",
+            "Audit Trail Review"
+          ]
+        },
+        {
+          "id": "37.10",
+          "name": "Information Lifecycle Security",
+          "units": [
+            "Secure Storage Review",
+            "Secure Retention Mapping",
+            "Secure Disposal Notes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Simulation, Forecasting & Decision Games",
+      "folder": "02_departments/038_simulation_forecasting_and_decision_games",
+      "departments": [
+        {
+          "id": "38.1",
+          "name": "Scenario Simulation",
+          "units": [
+            "Scenario Definition",
+            "Scenario Variable Mapping",
+            "Scenario Outcome Summary"
+          ]
+        },
+        {
+          "id": "38.2",
+          "name": "Forecast Modeling",
+          "units": [
+            "Forecast Assumption Capture",
+            "Projection Run",
+            "Forecast Confidence Notes"
+          ]
+        },
+        {
+          "id": "38.3",
+          "name": "Decision Games",
+          "units": [
+            "Decision Game Setup",
+            "Move And Countermove Mapping",
+            "Decision Game Debrief"
+          ]
+        },
+        {
+          "id": "38.4",
+          "name": "What-If Analysis",
+          "units": [
+            "What-If Question Framing",
+            "Alternative Path Modeling",
+            "What-If Result Summary"
+          ]
+        },
+        {
+          "id": "38.5",
+          "name": "Risk Simulation",
+          "units": [
+            "Risk Scenario Selection",
+            "Failure Mode Testing",
+            "Risk Response Notes"
+          ]
+        },
+        {
+          "id": "38.6",
+          "name": "Market Simulation",
+          "units": [
+            "Market Assumption Setup",
+            "Market Reaction Modeling",
+            "Market Scenario Brief"
+          ]
+        },
+        {
+          "id": "38.7",
+          "name": "Operational Simulation",
+          "units": [
+            "Operation Flow Modeling",
+            "Capacity Stress Test",
+            "Operational Finding Summary"
+          ]
+        },
+        {
+          "id": "38.8",
+          "name": "Monte Carlo Style Reasoning",
+          "units": [
+            "Variable Range Definition",
+            "Outcome Spread Review",
+            "Probability Insight Notes"
+          ]
+        },
+        {
+          "id": "38.9",
+          "name": "Strategic War-Gaming",
+          "units": [
+            "Actor Role Definition",
+            "Strategic Move Simulation",
+            "War-Game Lessons Summary"
+          ]
+        },
+        {
+          "id": "38.10",
+          "name": "Simulation Archive",
+          "units": [
+            "Simulation Record Capture",
+            "Historical Scenario Comparison",
+            "Simulation Library Update"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Negotiation & Deal Desk",
+      "folder": "02_departments/039_negotiation_and_deal_desk",
+      "departments": [
+        {
+          "id": "39.1",
+          "name": "Negotiation Strategy",
+          "units": [
+            "Negotiation Objective Definition",
+            "Leverage Mapping",
+            "Strategy Recommendation"
+          ]
+        },
+        {
+          "id": "39.2",
+          "name": "Deal Review",
+          "units": [
+            "Deal Term Extraction",
+            "Deal Value Review",
+            "Deal Risk Summary"
+          ]
+        },
+        {
+          "id": "39.3",
+          "name": "Counteroffer Design",
+          "units": [
+            "Counteroffer Goal Setting",
+            "Counteroffer Structure Draft",
+            "Counteroffer Risk Review"
+          ]
+        },
+        {
+          "id": "39.4",
+          "name": "Concession Planning",
+          "units": [
+            "Concession Inventory",
+            "Tradeoff Value Review",
+            "Concession Boundary Notes"
+          ]
+        },
+        {
+          "id": "39.5",
+          "name": "Contract Term Support",
+          "units": [
+            "Term Identification",
+            "Obligation Mapping",
+            "Term Negotiation Notes"
+          ]
+        },
+        {
+          "id": "39.6",
+          "name": "Pricing Negotiation",
+          "units": [
+            "Price Position Review",
+            "Discount Boundary Mapping",
+            "Price Defense Brief"
+          ]
+        },
+        {
+          "id": "39.7",
+          "name": "Vendor Deal Desk",
+          "units": [
+            "Vendor Offer Intake",
+            "Vendor Comparison Review",
+            "Vendor Decision Notes"
+          ]
+        },
+        {
+          "id": "39.8",
+          "name": "Client Deal Desk",
+          "units": [
+            "Client Proposal Review",
+            "Client Objection Mapping",
+            "Client Deal Recommendation"
+          ]
+        },
+        {
+          "id": "39.9",
+          "name": "Negotiation Red Team",
+          "units": [
+            "Weak Point Detection",
+            "Opposing Argument Simulation",
+            "Red Team Counterplan"
+          ]
+        },
+        {
+          "id": "39.10",
+          "name": "Deal Close Support",
+          "units": [
+            "Close Readiness Review",
+            "Final Terms Checklist",
+            "Close Confirmation Record"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Reputation, Trust & Brand Risk",
+      "folder": "02_departments/040_reputation_trust_and_brand_risk",
+      "departments": [
+        {
+          "id": "40.1",
+          "name": "Reputation Monitoring",
+          "units": [
+            "Reputation Signal Collection",
+            "Reputation Risk Detection",
+            "Reputation Summary Notes"
+          ]
+        },
+        {
+          "id": "40.2",
+          "name": "Trust Signal Review",
+          "units": [
+            "Trust Factor Identification",
+            "Trust Gap Review",
+            "Trust Improvement Notes"
+          ]
+        },
+        {
+          "id": "40.3",
+          "name": "Brand Risk Assessment",
+          "units": [
+            "Brand Exposure Mapping",
+            "Brand Misalignment Review",
+            "Brand Risk Summary"
+          ]
+        },
+        {
+          "id": "40.4",
+          "name": "Public Perception Analysis",
+          "units": [
+            "Audience Reaction Collection",
+            "Sentiment Pattern Review",
+            "Perception Brief"
+          ]
+        },
+        {
+          "id": "40.5",
+          "name": "Crisis Risk Detection",
+          "units": [
+            "Crisis Signal Detection",
+            "Escalation Probability Review",
+            "Crisis Prevention Notes"
+          ]
+        },
+        {
+          "id": "40.6",
+          "name": "Trust Repair",
+          "units": [
+            "Trust Damage Assessment",
+            "Repair Message Draft",
+            "Repair Follow-Up Plan"
+          ]
+        },
+        {
+          "id": "40.7",
+          "name": "Brand Consistency Review",
+          "units": [
+            "Brand Rule Comparison",
+            "Inconsistency Detection",
+            "Consistency Correction Notes"
+          ]
+        },
+        {
+          "id": "40.8",
+          "name": "Reputation Evidence",
+          "units": [
+            "Proof Asset Collection",
+            "Credibility Signal Review",
+            "Reputation Evidence Packet"
+          ]
+        },
+        {
+          "id": "40.9",
+          "name": "Stakeholder Trust Review",
+          "units": [
+            "Stakeholder Concern Mapping",
+            "Trust Expectation Review",
+            "Stakeholder Confidence Notes"
+          ]
+        },
+        {
+          "id": "40.10",
+          "name": "Reputation Reporting",
+          "units": [
+            "Reputation Status Summary",
+            "Trust Risk Report",
+            "Brand Risk Dashboard Update"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Customer Insight & Voice of Customer",
+      "folder": "02_departments/041_customer_insight_and_voice_of_customer",
+      "departments": [
+        {
+          "id": "41.1",
+          "name": "Customer Research",
+          "units": [
+            "Customer Segment Review",
+            "Customer Need Discovery",
+            "Customer Research Summary"
+          ]
+        },
+        {
+          "id": "41.2",
+          "name": "Voice of Customer Capture",
+          "units": [
+            "Customer Quote Collection",
+            "Feedback Channel Review",
+            "Voice Signal Summary"
+          ]
+        },
+        {
+          "id": "41.3",
+          "name": "Customer Pain Point Mapping",
+          "units": [
+            "Pain Point Detection",
+            "Pain Severity Review",
+            "Pain Point Priority Notes"
+          ]
+        },
+        {
+          "id": "41.4",
+          "name": "Customer Journey Analysis",
+          "units": [
+            "Journey Stage Mapping",
+            "Friction Point Review",
+            "Journey Improvement Notes"
+          ]
+        },
+        {
+          "id": "41.5",
+          "name": "Feedback Classification",
+          "units": [
+            "Feedback Type Labeling",
+            "Theme Grouping",
+            "Feedback Taxonomy Update"
+          ]
+        },
+        {
+          "id": "41.6",
+          "name": "Survey Design",
+          "units": [
+            "Survey Objective Definition",
+            "Question Drafting",
+            "Survey Quality Review"
+          ]
+        },
+        {
+          "id": "41.7",
+          "name": "Interview Synthesis",
+          "units": [
+            "Interview Note Collection",
+            "Pattern Extraction",
+            "Interview Insight Summary"
+          ]
+        },
+        {
+          "id": "41.8",
+          "name": "Customer Success Signals",
+          "units": [
+            "Success Signal Detection",
+            "Retention Risk Review",
+            "Success Opportunity Notes"
+          ]
+        },
+        {
+          "id": "41.9",
+          "name": "Objection Intelligence",
+          "units": [
+            "Objection Capture",
+            "Objection Pattern Review",
+            "Objection Response Insight"
+          ]
+        },
+        {
+          "id": "41.10",
+          "name": "Insight Reporting",
+          "units": [
+            "Insight Summary Draft",
+            "Evidence Trace Review",
+            "Customer Insight Report"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Offer Design & Productized Services",
+      "folder": "02_departments/042_offer_design_and_productized_services",
+      "departments": [
+        {
+          "id": "42.1",
+          "name": "Offer Strategy",
+          "units": [
+            "Offer Objective Definition",
+            "Buyer Need Alignment",
+            "Offer Strategy Brief"
+          ]
+        },
+        {
+          "id": "42.2",
+          "name": "Service Packaging",
+          "units": [
+            "Service Component Inventory",
+            "Package Structure Draft",
+            "Package Clarity Review"
+          ]
+        },
+        {
+          "id": "42.3",
+          "name": "Pricing Architecture",
+          "units": [
+            "Pricing Model Selection",
+            "Price Tier Design",
+            "Pricing Logic Review"
+          ]
+        },
+        {
+          "id": "42.4",
+          "name": "Value Proposition Design",
+          "units": [
+            "Value Driver Mapping",
+            "Benefit Statement Draft",
+            "Value Clarity Review"
+          ]
+        },
+        {
+          "id": "42.5",
+          "name": "Offer Ladder",
+          "units": [
+            "Entry Offer Definition",
+            "Core Offer Mapping",
+            "Premium Offer Path"
+          ]
+        },
+        {
+          "id": "42.6",
+          "name": "Productized Workflow",
+          "units": [
+            "Delivery Step Mapping",
+            "Repeatable Process Design",
+            "Workflow Scalability Review"
+          ]
+        },
+        {
+          "id": "42.7",
+          "name": "Offer Differentiation",
+          "units": [
+            "Competitive Difference Review",
+            "Unique Mechanism Draft",
+            "Differentiation Risk Notes"
+          ]
+        },
+        {
+          "id": "42.8",
+          "name": "Sales Asset Alignment",
+          "units": [
+            "Offer Asset Inventory",
+            "Sales Message Match",
+            "Asset Gap Summary"
+          ]
+        },
+        {
+          "id": "42.9",
+          "name": "Offer Validation",
+          "units": [
+            "Market Fit Hypothesis",
+            "Validation Signal Collection",
+            "Offer Adjustment Recommendation"
+          ]
+        },
+        {
+          "id": "42.10",
+          "name": "Offer Governance",
+          "units": [
+            "Offer Rule Definition",
+            "Offer Change Review",
+            "Offer Version Record"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Knowledge Products & Course Production",
+      "folder": "02_departments/043_knowledge_products_and_course_production",
+      "departments": [
+        {
+          "id": "43.1",
+          "name": "Knowledge Product Strategy",
+          "units": [
+            "Product Topic Selection",
+            "Audience Outcome Mapping",
+            "Knowledge Product Brief"
+          ]
+        },
+        {
+          "id": "43.2",
+          "name": "Course Architecture",
+          "units": [
+            "Course Outcome Definition",
+            "Module Sequence Design",
+            "Course Structure Review"
+          ]
+        },
+        {
+          "id": "43.3",
+          "name": "Lesson Production",
+          "units": [
+            "Lesson Outline",
+            "Lesson Draft",
+            "Lesson QA Review"
+          ]
+        },
+        {
+          "id": "43.4",
+          "name": "Workbook Production",
+          "units": [
+            "Workbook Exercise Design",
+            "Workbook Layout Draft",
+            "Workbook Usability Review"
+          ]
+        },
+        {
+          "id": "43.5",
+          "name": "Template Product Production",
+          "units": [
+            "Template Use Case Definition",
+            "Template Build",
+            "Template QA Review"
+          ]
+        },
+        {
+          "id": "43.6",
+          "name": "Digital Download Packaging",
+          "units": [
+            "Download Package Inventory",
+            "File Naming And Structure",
+            "Download Readiness Review"
+          ]
+        },
+        {
+          "id": "43.7",
+          "name": "Learning Asset Design",
+          "units": [
+            "Learning Aid Concept",
+            "Visual Learning Asset Draft",
+            "Learning Asset QA"
+          ]
+        },
+        {
+          "id": "43.8",
+          "name": "Course Launch Prep",
+          "units": [
+            "Launch Checklist",
+            "Sales Page Content Review",
+            "Launch Readiness Notes"
+          ]
+        },
+        {
+          "id": "43.9",
+          "name": "Student Feedback Review",
+          "units": [
+            "Feedback Collection",
+            "Learning Gap Detection",
+            "Course Improvement Notes"
+          ]
+        },
+        {
+          "id": "43.10",
+          "name": "Knowledge Product Maintenance",
+          "units": [
+            "Content Currency Review",
+            "Product Update Pass",
+            "Maintenance Log Update"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Talent Marketplace & Freelance Operations",
+      "folder": "02_departments/044_talent_marketplace_and_freelance_operations",
+      "departments": [
+        {
+          "id": "44.1",
+          "name": "Freelancer Sourcing",
+          "units": [
+            "Talent Need Definition",
+            "Freelancer Search Criteria",
+            "Candidate Shortlist"
+          ]
+        },
+        {
+          "id": "44.2",
+          "name": "Job Post Creation",
+          "units": [
+            "Role Scope Draft",
+            "Deliverable Definition",
+            "Job Post QA"
+          ]
+        },
+        {
+          "id": "44.3",
+          "name": "Proposal Review",
+          "units": [
+            "Proposal Intake",
+            "Proposal Fit Scoring",
+            "Proposal Shortlist Notes"
+          ]
+        },
+        {
+          "id": "44.4",
+          "name": "Freelancer Vetting",
+          "units": [
+            "Portfolio Review",
+            "Skills Evidence Check",
+            "Vetting Recommendation"
+          ]
+        },
+        {
+          "id": "44.5",
+          "name": "Contract Scope Management",
+          "units": [
+            "Scope Boundary Draft",
+            "Milestone Definition",
+            "Scope Risk Review"
+          ]
+        },
+        {
+          "id": "44.6",
+          "name": "Work Assignment",
+          "units": [
+            "Task Package Creation",
+            "Assignment Handoff",
+            "Assignment Confirmation"
+          ]
+        },
+        {
+          "id": "44.7",
+          "name": "Freelancer QA",
+          "units": [
+            "Delivered Work Review",
+            "Revision Request Draft",
+            "Acceptance Recommendation"
+          ]
+        },
+        {
+          "id": "44.8",
+          "name": "Marketplace Communication",
+          "units": [
+            "Message Drafting",
+            "Response Tracking",
+            "Communication Summary"
+          ]
+        },
+        {
+          "id": "44.9",
+          "name": "Payment & Milestone Review",
+          "units": [
+            "Milestone Completion Check",
+            "Payment Trigger Review",
+            "Payment Notes"
+          ]
+        },
+        {
+          "id": "44.10",
+          "name": "Talent Bench Management",
+          "units": [
+            "Talent Record Capture",
+            "Skill Tagging",
+            "Rehire Recommendation"
+          ]
+        }
+      ]
+    }
+  ]
+}
