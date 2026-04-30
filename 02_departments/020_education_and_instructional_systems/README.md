@@ -38,7 +38,7 @@ Reviews family-level output and marks items as keep, fix, remove, redo, or escal
 - 20.4.2 Question And Rubric Drafting
 - 20.4.3 Assessment Validity Review
 
-### 20.5 Instruction Writing
+### 20.5 Instructional Writing
 - 20.5.1 Explanation Drafting
 - 20.5.2 Example Development
 - 20.5.3 Instruction Clarity Review
