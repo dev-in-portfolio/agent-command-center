@@ -8,11 +8,8 @@ import re
 def slugify(text):
     text = text.lower()
     text = text.replace("&", "and")
-    text = text.replace(",", "")
-    text = text.replace("/", "")
-    text = text.replace("'", "")
-    text = text.replace("(", "")
-    text = text.replace(")", "")
+    for char in [",", "/", "'", "(", ")", ":", ";", ".", "!", "?", '"', "`", "[", "]", "{", "}", "|", "\\"]:
+        text = text.replace(char, "")
     text = text.replace("-", "_")
     text = text.replace(" ", "_")
     text = re.sub(r'_+', '_', text)
