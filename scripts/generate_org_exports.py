@@ -80,8 +80,18 @@ def main():
         
         if not os.path.isdir(folder_abs_path):
             missing_folders.append(folder_rel_path)
+            
+        departments_data = []
         if not os.path.isfile(family_file_abs):
             missing_family_files.append(family_file_rel)
+        else:
+            try:
+                with open(family_file_abs, 'r', encoding='utf-8') as f:
+                    fam_json = json.load(f)
+                    departments_data = fam_json.get("departments", [])
+            except Exception as e:
+                pass
+                
         if not os.path.isfile(readme_abs):
             missing_readmes.append(readme_rel)
             
@@ -94,14 +104,15 @@ def main():
             "folder": folder_rel_path,
             "family_file": family_file_rel,
             "readme": readme_rel,
-            "departments": []
+            "departments": departments_data
         })
         
+        status = "expanded" if departments_data else "shell_created"
         dashboard_seed["families"].append({
             "id": fid,
             "label": fname,
             "folder": folder_rel_path,
-            "status": "shell_created"
+            "status": status
         })
         
         md_list.append(f"{fid}. {fname}")

@@ -22,6 +22,7 @@ def main():
         errors.append(f"Failed to read registry: {e}")
         registry_names = {}
 
+    org_chart = None
     # A. Validate org_chart_export.json
     try:
         with open(org_chart_file, 'r', encoding='utf-8') as f:
@@ -70,10 +71,11 @@ def main():
                     if not readme.endswith("/README.md"):
                         errors.append(f"org_chart_export.json family {fid} readme '{readme}' does not end with '/README.md'.")
                         
-                    if not isinstance(family.get("departments"), list):
+                    departments = family.get("departments")
+                    if not isinstance(departments, list):
                         errors.append(f"org_chart_export.json family {fid} departments is not a list.")
                         
-                    # D. File existence
+                    # D. File existence and department matching
                     if folder:
                         folder_path = os.path.join(base_dir, folder)
                         if not os.path.isdir(folder_path):
@@ -82,6 +84,16 @@ def main():
                         file_path = os.path.join(base_dir, family_file)
                         if not os.path.isfile(file_path):
                             errors.append(f"family_file does not exist: {file_path}")
+                        else:
+                            try:
+                                with open(file_path, 'r', encoding='utf-8') as f:
+                                    actual_fam = json.load(f)
+                                    actual_departments = actual_fam.get("departments", [])
+                                    if departments != actual_departments:
+                                        errors.append(f"org_chart_export.json family {fid} departments do not match {family_file}.")
+                            except Exception as e:
+                                errors.append(f"Error reading {file_path}: {e}")
+                                
                     if readme:
                         readme_path = os.path.join(base_dir, readme)
                         if not os.path.isfile(readme_path):
@@ -105,6 +117,7 @@ def main():
             if not isinstance(families, list) or len(families) != 175:
                 errors.append(f"dashboard_seed.json families is not a list of exactly 175 (found {len(families) if isinstance(families, list) else type(families)}).")
             else:
+                agent_command_expanded = False
                 for idx, family in enumerate(families, 1):
                     fid = family.get("id")
                     if type(fid) is not int or fid != idx:
@@ -118,14 +131,34 @@ def main():
                     folder = family.get("folder")
                     # lookup corresponding folder in org_chart
                     try:
-                        org_folder = org_chart["families"][idx-1]["folder"]
-                        if folder != org_folder:
-                            errors.append(f"dashboard_seed.json family {fid} folder '{folder}' does not match org_chart_export '{org_folder}'.")
+                        if org_chart:
+                            org_folder = org_chart["families"][idx-1]["folder"]
+                            if folder != org_folder:
+                                errors.append(f"dashboard_seed.json family {fid} folder '{folder}' does not match org_chart_export '{org_folder}'.")
                     except Exception:
                         pass # handled by org_chart validation
                         
-                    if family.get("status") != "shell_created":
-                        errors.append(f"dashboard_seed.json family {fid} status is not 'shell_created'.")
+                    status = family.get("status")
+                    if status not in ["shell_created", "expanded"]:
+                        errors.append(f"dashboard_seed.json family {fid} status '{status}' is invalid.")
+                    
+                    # Verify status matches source family.json
+                    family_file_path = os.path.join(base_dir, folder, "family.json") if folder else None
+                    if family_file_path and os.path.isfile(family_file_path):
+                        try:
+                            with open(family_file_path, 'r', encoding='utf-8') as f:
+                                actual_fam = json.load(f)
+                                actual_departments = actual_fam.get("departments", [])
+                                expected_status = "expanded" if actual_departments else "shell_created"
+                                if status != expected_status:
+                                    errors.append(f"dashboard_seed.json family {fid} status '{status}' should be '{expected_status}'.")
+                                if fid == 1 and status == "expanded":
+                                    agent_command_expanded = True
+                        except Exception as e:
+                            errors.append(f"Error reading {family_file_path}: {e}")
+                            
+                if not agent_command_expanded:
+                    errors.append("Agent Command status is not 'expanded' or was not found correctly.")
                         
     except Exception as e:
         errors.append(f"Failed to read/validate dashboard_seed.json: {e}")
