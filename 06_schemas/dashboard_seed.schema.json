@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "const": "Agent Command Center"
+    },
+    "families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "label": {
+            "type": "string"
+          },
+          "folder": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "const": "shell_created"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "folder",
+          "status"
+        ]
+      }
+    }
+  },
+  "required": [
+    "title",
+    "families"
+  ]
+}
