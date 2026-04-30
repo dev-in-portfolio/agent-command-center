@@ -27,4 +27,4 @@ Reviews family-level output and marks items as keep, fix, remove, redo, or escal
 ### 14.7 Stakeholder Updates- 14.7.1 Stakeholder Audience Mapping- 14.7.2 Update Drafting- 14.7.3 Stakeholder Follow-Up Notes
 ### 14.8 Public Relations- 14.8.1 PR Angle Review- 14.8.2 Media Message Draft- 14.8.3 PR Risk Review
 ### 14.9 Community Relations- 14.9.1 Community Message Planning- 14.9.2 Community Feedback Review- 14.9.3 Community Response Summary
-### 14.10 Message Approval- 14.10.1 Message Approval- 14.10.2 Approval Routing- 14.10.3 Approval Record
+### 14.10 Message Approval- 14.10.1 Message Criteria Check- 14.10.2 Approval Routing- 14.10.3 Approval Record
