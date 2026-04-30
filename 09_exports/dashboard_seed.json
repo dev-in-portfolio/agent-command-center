@@ -1,0 +1,1055 @@
+{
+  "title": "Agent Command Center",
+  "families": [
+    {
+      "id": 1,
+      "label": "Agent Command",
+      "folder": "02_departments/001_agent_command",
+      "status": "shell_created"
+    },
+    {
+      "id": 2,
+      "label": "Planning & Project Control",
+      "folder": "02_departments/002_planning_and_project_control",
+      "status": "shell_created"
+    },
+    {
+      "id": 3,
+      "label": "Operations",
+      "folder": "02_departments/003_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 4,
+      "label": "Research & Intelligence",
+      "folder": "02_departments/004_research_and_intelligence",
+      "status": "shell_created"
+    },
+    {
+      "id": 5,
+      "label": "Data & Knowledge",
+      "folder": "02_departments/005_data_and_knowledge",
+      "status": "shell_created"
+    },
+    {
+      "id": 6,
+      "label": "Creation & Production",
+      "folder": "02_departments/006_creation_and_production",
+      "status": "shell_created"
+    },
+    {
+      "id": 7,
+      "label": "Engineering & Automation",
+      "folder": "02_departments/007_engineering_and_automation",
+      "status": "shell_created"
+    },
+    {
+      "id": 8,
+      "label": "Quality, Risk & Compliance",
+      "folder": "02_departments/008_quality_risk_and_compliance",
+      "status": "shell_created"
+    },
+    {
+      "id": 9,
+      "label": "Business Growth",
+      "folder": "02_departments/009_business_growth",
+      "status": "shell_created"
+    },
+    {
+      "id": 10,
+      "label": "Finance & Administration",
+      "folder": "02_departments/010_finance_and_administration",
+      "status": "shell_created"
+    },
+    {
+      "id": 11,
+      "label": "Industry Divisions",
+      "folder": "02_departments/011_industry_divisions",
+      "status": "shell_created"
+    },
+    {
+      "id": 12,
+      "label": "Personal Operating System",
+      "folder": "02_departments/012_personal_operating_system",
+      "status": "shell_created"
+    },
+    {
+      "id": 13,
+      "label": "HR, Training & Enablement",
+      "folder": "02_departments/013_hr_training_and_enablement",
+      "status": "shell_created"
+    },
+    {
+      "id": 14,
+      "label": "Communications & Public Relations",
+      "folder": "02_departments/014_communications_and_public_relations",
+      "status": "shell_created"
+    },
+    {
+      "id": 15,
+      "label": "Manufacturing, Print & Physical Production",
+      "folder": "02_departments/015_manufacturing_print_and_physical_production",
+      "status": "shell_created"
+    },
+    {
+      "id": 16,
+      "label": "Facilities & Event Operations",
+      "folder": "02_departments/016_facilities_and_event_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 17,
+      "label": "Ethics & Safety",
+      "folder": "02_departments/017_ethics_and_safety",
+      "status": "shell_created"
+    },
+    {
+      "id": 18,
+      "label": "Strategy, Innovation & R&D",
+      "folder": "02_departments/018_strategy_innovation_and_randd",
+      "status": "shell_created"
+    },
+    {
+      "id": 19,
+      "label": "Community & Ecosystem",
+      "folder": "02_departments/019_community_and_ecosystem",
+      "status": "shell_created"
+    },
+    {
+      "id": 20,
+      "label": "Education & Instructional Systems",
+      "folder": "02_departments/020_education_and_instructional_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 21,
+      "label": "Media & Content Production",
+      "folder": "02_departments/021_media_and_content_production",
+      "status": "shell_created"
+    },
+    {
+      "id": 22,
+      "label": "Localization & Accessibility",
+      "folder": "02_departments/022_localization_and_accessibility",
+      "status": "shell_created"
+    },
+    {
+      "id": 23,
+      "label": "Funding, Grants & Capital",
+      "folder": "02_departments/023_funding_grants_and_capital",
+      "status": "shell_created"
+    },
+    {
+      "id": 24,
+      "label": "Government, Public Sector & Civic Operations",
+      "folder": "02_departments/024_government_public_sector_and_civic_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 25,
+      "label": "Healthcare & Wellness Division",
+      "folder": "02_departments/025_healthcare_and_wellness_division",
+      "status": "shell_created"
+    },
+    {
+      "id": 26,
+      "label": "Real Estate & Property Division",
+      "folder": "02_departments/026_real_estate_and_property_division",
+      "status": "shell_created"
+    },
+    {
+      "id": 27,
+      "label": "E-Commerce & Retail Division",
+      "folder": "02_departments/027_e_commerce_and_retail_division",
+      "status": "shell_created"
+    },
+    {
+      "id": 28,
+      "label": "Intellectual Property, Rights & Licensing",
+      "folder": "02_departments/028_intellectual_property_rights_and_licensing",
+      "status": "shell_created"
+    },
+    {
+      "id": 29,
+      "label": "Sustainability & Environmental Operations",
+      "folder": "02_departments/029_sustainability_and_environmental_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 30,
+      "label": "Agent Lab & System Evolution",
+      "folder": "02_departments/030_agent_lab_and_system_evolution",
+      "status": "shell_created"
+    },
+    {
+      "id": 31,
+      "label": "Model Operations & AI Infrastructure",
+      "folder": "02_departments/031_model_operations_and_ai_infrastructure",
+      "status": "shell_created"
+    },
+    {
+      "id": 32,
+      "label": "Evaluation & Benchmarking",
+      "folder": "02_departments/032_evaluation_and_benchmarking",
+      "status": "shell_created"
+    },
+    {
+      "id": 33,
+      "label": "Human Review & Approval Operations",
+      "folder": "02_departments/033_human_review_and_approval_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 34,
+      "label": "Standards, Templates & Methodology",
+      "folder": "02_departments/034_standards_templates_and_methodology",
+      "status": "shell_created"
+    },
+    {
+      "id": 35,
+      "label": "Workflow Control Tower",
+      "folder": "02_departments/035_workflow_control_tower",
+      "status": "shell_created"
+    },
+    {
+      "id": 36,
+      "label": "Regulatory Monitoring & Change Intelligence",
+      "folder": "02_departments/036_regulatory_monitoring_and_change_intelligence",
+      "status": "shell_created"
+    },
+    {
+      "id": 37,
+      "label": "Knowledge Security & Information Classification",
+      "folder": "02_departments/037_knowledge_security_and_information_classification",
+      "status": "shell_created"
+    },
+    {
+      "id": 38,
+      "label": "Simulation, Forecasting & Decision Games",
+      "folder": "02_departments/038_simulation_forecasting_and_decision_games",
+      "status": "shell_created"
+    },
+    {
+      "id": 39,
+      "label": "Negotiation & Deal Desk",
+      "folder": "02_departments/039_negotiation_and_deal_desk",
+      "status": "shell_created"
+    },
+    {
+      "id": 40,
+      "label": "Reputation, Trust & Brand Risk",
+      "folder": "02_departments/040_reputation_trust_and_brand_risk",
+      "status": "shell_created"
+    },
+    {
+      "id": 41,
+      "label": "Customer Insight & Voice of Customer",
+      "folder": "02_departments/041_customer_insight_and_voice_of_customer",
+      "status": "shell_created"
+    },
+    {
+      "id": 42,
+      "label": "Offer Design & Productized Services",
+      "folder": "02_departments/042_offer_design_and_productized_services",
+      "status": "shell_created"
+    },
+    {
+      "id": 43,
+      "label": "Knowledge Products & Course Production",
+      "folder": "02_departments/043_knowledge_products_and_course_production",
+      "status": "shell_created"
+    },
+    {
+      "id": 44,
+      "label": "Talent Marketplace & Freelance Operations",
+      "folder": "02_departments/044_talent_marketplace_and_freelance_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 45,
+      "label": "Recruiting, Career & Professional Positioning",
+      "folder": "02_departments/045_recruiting_career_and_professional_positioning",
+      "status": "shell_created"
+    },
+    {
+      "id": 46,
+      "label": "Portfolio, Case Studies & Proof Assets",
+      "folder": "02_departments/046_portfolio_case_studies_and_proof_assets",
+      "status": "shell_created"
+    },
+    {
+      "id": 47,
+      "label": "Personal Productivity & Time Management",
+      "folder": "02_departments/047_personal_productivity_and_time_management",
+      "status": "shell_created"
+    },
+    {
+      "id": 48,
+      "label": "Life Administration",
+      "folder": "02_departments/048_life_administration",
+      "status": "shell_created"
+    },
+    {
+      "id": 49,
+      "label": "Personal Knowledge, Learning & Skill Building",
+      "folder": "02_departments/049_personal_knowledge_learning_and_skill_building",
+      "status": "shell_created"
+    },
+    {
+      "id": 50,
+      "label": "Creative Studio & Story Worlds",
+      "folder": "02_departments/050_creative_studio_and_story_worlds",
+      "status": "shell_created"
+    },
+    {
+      "id": 51,
+      "label": "Brand, Identity & Personal Mythology",
+      "folder": "02_departments/051_brand_identity_and_personal_mythology",
+      "status": "shell_created"
+    },
+    {
+      "id": 52,
+      "label": "Personal AI Companion Architecture",
+      "folder": "02_departments/052_personal_ai_companion_architecture",
+      "status": "shell_created"
+    },
+    {
+      "id": 53,
+      "label": "Prompt Systems & Instruction Architecture",
+      "folder": "02_departments/053_prompt_systems_and_instruction_architecture",
+      "status": "shell_created"
+    },
+    {
+      "id": 54,
+      "label": "Memory Engineering & Context Architecture",
+      "folder": "02_departments/054_memory_engineering_and_context_architecture",
+      "status": "shell_created"
+    },
+    {
+      "id": 55,
+      "label": "Agent Society & Internal Culture",
+      "folder": "02_departments/055_agent_society_and_internal_culture",
+      "status": "shell_created"
+    },
+    {
+      "id": 56,
+      "label": "Autonomous Operations Control",
+      "folder": "02_departments/056_autonomous_operations_control",
+      "status": "shell_created"
+    },
+    {
+      "id": 57,
+      "label": "Multi-Agent Orchestration & Swarm Control",
+      "folder": "02_departments/057_multi_agent_orchestration_and_swarm_control",
+      "status": "shell_created"
+    },
+    {
+      "id": 58,
+      "label": "Tool Operations & External Access",
+      "folder": "02_departments/058_tool_operations_and_external_access",
+      "status": "shell_created"
+    },
+    {
+      "id": 59,
+      "label": "Interface, Dashboard & Control Panels",
+      "folder": "02_departments/059_interface_dashboard_and_control_panels",
+      "status": "shell_created"
+    },
+    {
+      "id": 60,
+      "label": "Experimental Systems & Weird Lab",
+      "folder": "02_departments/060_experimental_systems_and_weird_lab",
+      "status": "shell_created"
+    },
+    {
+      "id": 61,
+      "label": "Archives, Museums & Collection Management",
+      "folder": "02_departments/061_archives_museums_and_collection_management",
+      "status": "shell_created"
+    },
+    {
+      "id": 62,
+      "label": "Scientific Research & Lab Operations",
+      "folder": "02_departments/062_scientific_research_and_lab_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 63,
+      "label": "Investor Research & Market Intelligence",
+      "folder": "02_departments/063_investor_research_and_market_intelligence",
+      "status": "shell_created"
+    },
+    {
+      "id": 64,
+      "label": "Relationship Intelligence & Network Management",
+      "folder": "02_departments/064_relationship_intelligence_and_network_management",
+      "status": "shell_created"
+    },
+    {
+      "id": 65,
+      "label": "Legal Operations & Case Management",
+      "folder": "02_departments/065_legal_operations_and_case_management",
+      "status": "shell_created"
+    },
+    {
+      "id": 66,
+      "label": "Investigations & Due Diligence",
+      "folder": "02_departments/066_investigations_and_due_diligence",
+      "status": "shell_created"
+    },
+    {
+      "id": 67,
+      "label": "Personal Finance, Tax & Household Economy",
+      "folder": "02_departments/067_personal_finance_tax_and_household_economy",
+      "status": "shell_created"
+    },
+    {
+      "id": 68,
+      "label": "Travel, Field Work & Mobility Operations",
+      "folder": "02_departments/068_travel_field_work_and_mobility_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 69,
+      "label": "Home, Workshop & Physical Project Builds",
+      "folder": "02_departments/069_home_workshop_and_physical_project_builds",
+      "status": "shell_created"
+    },
+    {
+      "id": 70,
+      "label": "Humor, Entertainment & Engagement Systems",
+      "folder": "02_departments/070_humor_entertainment_and_engagement_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 71,
+      "label": "Spiritual, Philosophical & Meaning Systems",
+      "folder": "02_departments/071_spiritual_philosophical_and_meaning_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 72,
+      "label": "Emotional Intelligence & Self-Regulation Systems",
+      "folder": "02_departments/072_emotional_intelligence_and_self_regulation_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 73,
+      "label": "Negotiation, Conflict & Mediation Systems",
+      "folder": "02_departments/073_negotiation_conflict_and_mediation_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 74,
+      "label": "Debate, Argument & Critical Thinking Systems",
+      "folder": "02_departments/074_debate_argument_and_critical_thinking_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 75,
+      "label": "Creativity, Ideation & Concept Generation",
+      "folder": "02_departments/075_creativity_ideation_and_concept_generation",
+      "status": "shell_created"
+    },
+    {
+      "id": 76,
+      "label": "Decision Memory & Lessons Learned",
+      "folder": "02_departments/076_decision_memory_and_lessons_learned",
+      "status": "shell_created"
+    },
+    {
+      "id": 77,
+      "label": "Environmental Scanning & Opportunity Radar",
+      "folder": "02_departments/077_environmental_scanning_and_opportunity_radar",
+      "status": "shell_created"
+    },
+    {
+      "id": 78,
+      "label": "Standards of Evidence & Source Hierarchy",
+      "folder": "02_departments/078_standards_of_evidence_and_source_hierarchy",
+      "status": "shell_created"
+    },
+    {
+      "id": 79,
+      "label": "User Experience Research & Human Factors",
+      "folder": "02_departments/079_user_experience_research_and_human_factors",
+      "status": "shell_created"
+    },
+    {
+      "id": 80,
+      "label": "Experimental Governance & Sandbox Control",
+      "folder": "02_departments/080_experimental_governance_and_sandbox_control",
+      "status": "shell_created"
+    },
+    {
+      "id": 81,
+      "label": "Agent Memory Governance & Recall Control",
+      "folder": "02_departments/081_agent_memory_governance_and_recall_control",
+      "status": "shell_created"
+    },
+    {
+      "id": 82,
+      "label": "Version Control, Releases & Change Management",
+      "folder": "02_departments/082_version_control_releases_and_change_management",
+      "status": "shell_created"
+    },
+    {
+      "id": 83,
+      "label": "API Economy, Platform Access & Usage Limits",
+      "folder": "02_departments/083_api_economy_platform_access_and_usage_limits",
+      "status": "shell_created"
+    },
+    {
+      "id": 84,
+      "label": "Infrastructure Economics & Compute Planning",
+      "folder": "02_departments/084_infrastructure_economics_and_compute_planning",
+      "status": "shell_created"
+    },
+    {
+      "id": 85,
+      "label": "Agent Procurement, Hiring & Role Marketplace",
+      "folder": "02_departments/085_agent_procurement_hiring_and_role_marketplace",
+      "status": "shell_created"
+    },
+    {
+      "id": 86,
+      "label": "Agent Labor Relations & Internal Governance",
+      "folder": "02_departments/086_agent_labor_relations_and_internal_governance",
+      "status": "shell_created"
+    },
+    {
+      "id": 87,
+      "label": "Emotional Brand Experience & Client Perception",
+      "folder": "02_departments/087_emotional_brand_experience_and_client_perception",
+      "status": "shell_created"
+    },
+    {
+      "id": 88,
+      "label": "Strategic Memory, Institutional Knowledge & Lore",
+      "folder": "02_departments/088_strategic_memory_institutional_knowledge_and_lore",
+      "status": "shell_created"
+    },
+    {
+      "id": 89,
+      "label": "Narrative Intelligence & Explanation Design",
+      "folder": "02_departments/089_narrative_intelligence_and_explanation_design",
+      "status": "shell_created"
+    },
+    {
+      "id": 90,
+      "label": "Meta-Reasoning & Cognitive Control",
+      "folder": "02_departments/090_meta_reasoning_and_cognitive_control",
+      "status": "shell_created"
+    },
+    {
+      "id": 91,
+      "label": "Multi-Modal Intelligence & Artifact Understanding",
+      "folder": "02_departments/091_multi_modal_intelligence_and_artifact_understanding",
+      "status": "shell_created"
+    },
+    {
+      "id": 92,
+      "label": "Data Visualization & Information Design",
+      "folder": "02_departments/092_data_visualization_and_information_design",
+      "status": "shell_created"
+    },
+    {
+      "id": 93,
+      "label": "Conversation Design & Dialogue Systems",
+      "folder": "02_departments/093_conversation_design_and_dialogue_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 94,
+      "label": "Trust, Transparency & Explainability",
+      "folder": "02_departments/094_trust_transparency_and_explainability",
+      "status": "shell_created"
+    },
+    {
+      "id": 95,
+      "label": "Compliance Evidence, Attestation & Regulated Deliverables",
+      "folder": "02_departments/095_compliance_evidence_attestation_and_regulated_deliverables",
+      "status": "shell_created"
+    },
+    {
+      "id": 96,
+      "label": "Digital Asset Management & Creative Libraries",
+      "folder": "02_departments/096_digital_asset_management_and_creative_libraries",
+      "status": "shell_created"
+    },
+    {
+      "id": 97,
+      "label": "Forms, Intake & Structured Data Collection",
+      "folder": "02_departments/097_forms_intake_and_structured_data_collection",
+      "status": "shell_created"
+    },
+    {
+      "id": 98,
+      "label": "Inbox, Notifications & Signal Management",
+      "folder": "02_departments/098_inbox_notifications_and_signal_management",
+      "status": "shell_created"
+    },
+    {
+      "id": 99,
+      "label": "Calendar, Scheduling & Time Intelligence",
+      "folder": "02_departments/099_calendar_scheduling_and_time_intelligence",
+      "status": "shell_created"
+    },
+    {
+      "id": 100,
+      "label": "Master Control, Meta-Architecture & System Constitution",
+      "folder": "02_departments/100_master_control_meta_architecture_and_system_constitution",
+      "status": "shell_created"
+    },
+    {
+      "id": 101,
+      "label": "Cross-Project Intelligence & Pattern Transfer",
+      "folder": "02_departments/101_cross_project_intelligence_and_pattern_transfer",
+      "status": "shell_created"
+    },
+    {
+      "id": 102,
+      "label": "Error Recovery, Apology & Repair Systems",
+      "folder": "02_departments/102_error_recovery_apology_and_repair_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 103,
+      "label": "Attention Management & Cognitive Workspace",
+      "folder": "02_departments/103_attention_management_and_cognitive_workspace",
+      "status": "shell_created"
+    },
+    {
+      "id": 104,
+      "label": "User Intent Forensics",
+      "folder": "02_departments/104_user_intent_forensics",
+      "status": "shell_created"
+    },
+    {
+      "id": 105,
+      "label": "User Preference Engine",
+      "folder": "02_departments/105_user_preference_engine",
+      "status": "shell_created"
+    },
+    {
+      "id": 106,
+      "label": "Command Language & Shortcut Systems",
+      "folder": "02_departments/106_command_language_and_shortcut_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 107,
+      "label": "Personal Archive, Vaults & Shelving Systems",
+      "folder": "02_departments/107_personal_archive_vaults_and_shelving_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 108,
+      "label": "Client-Facing Asset Factory",
+      "folder": "02_departments/108_client_facing_asset_factory",
+      "status": "shell_created"
+    },
+    {
+      "id": 109,
+      "label": "Agent-Based Business Process Outsourcing",
+      "folder": "02_departments/109_agent_based_business_process_outsourcing",
+      "status": "shell_created"
+    },
+    {
+      "id": 110,
+      "label": "System Map, Visualization & Architecture Diagrams",
+      "folder": "02_departments/110_system_map_visualization_and_architecture_diagrams",
+      "status": "shell_created"
+    },
+    {
+      "id": 111,
+      "label": "Knowledge Monetization & Asset Commercialization",
+      "folder": "02_departments/111_knowledge_monetization_and_asset_commercialization",
+      "status": "shell_created"
+    },
+    {
+      "id": 112,
+      "label": "Enterprise Knowledge Base & Internal Wiki",
+      "folder": "02_departments/112_enterprise_knowledge_base_and_internal_wiki",
+      "status": "shell_created"
+    },
+    {
+      "id": 113,
+      "label": "Scenario Library & Playbook Systems",
+      "folder": "02_departments/113_scenario_library_and_playbook_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 114,
+      "label": "Marketplace Intelligence & Commercial Positioning",
+      "folder": "02_departments/114_marketplace_intelligence_and_commercial_positioning",
+      "status": "shell_created"
+    },
+    {
+      "id": 115,
+      "label": "Platform Strategy & Distribution Channels",
+      "folder": "02_departments/115_platform_strategy_and_distribution_channels",
+      "status": "shell_created"
+    },
+    {
+      "id": 116,
+      "label": "Business Rules Engine",
+      "folder": "02_departments/116_business_rules_engine",
+      "status": "shell_created"
+    },
+    {
+      "id": 117,
+      "label": "Ontology, Taxonomy & Semantic Systems",
+      "folder": "02_departments/117_ontology_taxonomy_and_semantic_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 118,
+      "label": "Knowledge Graph & Relationship Mapping",
+      "folder": "02_departments/118_knowledge_graph_and_relationship_mapping",
+      "status": "shell_created"
+    },
+    {
+      "id": 119,
+      "label": "Data Pipelines & ETL Operations",
+      "folder": "02_departments/119_data_pipelines_and_etl_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 120,
+      "label": "Search, Discovery & Retrieval Operations",
+      "folder": "02_departments/120_search_discovery_and_retrieval_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 121,
+      "label": "Data Labeling, Annotation & Training Sets",
+      "folder": "02_departments/121_data_labeling_annotation_and_training_sets",
+      "status": "shell_created"
+    },
+    {
+      "id": 122,
+      "label": "Personal Data Rooms & Secure Project Spaces",
+      "folder": "02_departments/122_personal_data_rooms_and_secure_project_spaces",
+      "status": "shell_created"
+    },
+    {
+      "id": 123,
+      "label": "Identity, Access & Permission Architecture",
+      "folder": "02_departments/123_identity_access_and_permission_architecture",
+      "status": "shell_created"
+    },
+    {
+      "id": 124,
+      "label": "Data Privacy, Consent & Retention Operations",
+      "folder": "02_departments/124_data_privacy_consent_and_retention_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 125,
+      "label": "Integration Testing & End-to-End Validation",
+      "folder": "02_departments/125_integration_testing_and_end_to_end_validation",
+      "status": "shell_created"
+    },
+    {
+      "id": 126,
+      "label": "Agent Observability, Telemetry & Run Analytics",
+      "folder": "02_departments/126_agent_observability_telemetry_and_run_analytics",
+      "status": "shell_created"
+    },
+    {
+      "id": 127,
+      "label": "State Management & Workflow Memory",
+      "folder": "02_departments/127_state_management_and_workflow_memory",
+      "status": "shell_created"
+    },
+    {
+      "id": 128,
+      "label": "Work Product Governance & Deliverable Standards",
+      "folder": "02_departments/128_work_product_governance_and_deliverable_standards",
+      "status": "shell_created"
+    },
+    {
+      "id": 129,
+      "label": "Knowledge Quality, Currency & Source Freshness",
+      "folder": "02_departments/129_knowledge_quality_currency_and_source_freshness",
+      "status": "shell_created"
+    },
+    {
+      "id": 130,
+      "label": "Agent Economy, Internal Costing & Resource Allocation",
+      "folder": "02_departments/130_agent_economy_internal_costing_and_resource_allocation",
+      "status": "shell_created"
+    },
+    {
+      "id": 131,
+      "label": "Approval UX, Review Queues & Human Control",
+      "folder": "02_departments/131_approval_ux_review_queues_and_human_control",
+      "status": "shell_created"
+    },
+    {
+      "id": 132,
+      "label": "Agent Marketplace, Templates & Reusable Crews",
+      "folder": "02_departments/132_agent_marketplace_templates_and_reusable_crews",
+      "status": "shell_created"
+    },
+    {
+      "id": 133,
+      "label": "Agent Conversation Memory & Internal Messaging",
+      "folder": "02_departments/133_agent_conversation_memory_and_internal_messaging",
+      "status": "shell_created"
+    },
+    {
+      "id": 134,
+      "label": "External Action Governance",
+      "folder": "02_departments/134_external_action_governance",
+      "status": "shell_created"
+    },
+    {
+      "id": 135,
+      "label": "Work Intake, Scoping & Triage",
+      "folder": "02_departments/135_work_intake_scoping_and_triage",
+      "status": "shell_created"
+    },
+    {
+      "id": 136,
+      "label": "Task Decomposition & Work Package Design",
+      "folder": "02_departments/136_task_decomposition_and_work_package_design",
+      "status": "shell_created"
+    },
+    {
+      "id": 137,
+      "label": "Department Dependency Graph & Routing Matrix",
+      "folder": "02_departments/137_department_dependency_graph_and_routing_matrix",
+      "status": "shell_created"
+    },
+    {
+      "id": 138,
+      "label": "Output Assembly, Synthesis & Final Answer Design",
+      "folder": "02_departments/138_output_assembly_synthesis_and_final_answer_design",
+      "status": "shell_created"
+    },
+    {
+      "id": 139,
+      "label": "Long-Running Work, Checkpointing & Resumability",
+      "folder": "02_departments/139_long_running_work_checkpointing_and_resumability",
+      "status": "shell_created"
+    },
+    {
+      "id": 140,
+      "label": "Final Boss Layer: System-of-Systems Governance",
+      "folder": "02_departments/140_final_boss_layer_system_of_systems_governance",
+      "status": "shell_created"
+    },
+    {
+      "id": 141,
+      "label": "Agent Governance Testing & Constitutional Simulation",
+      "folder": "02_departments/141_agent_governance_testing_and_constitutional_simulation",
+      "status": "shell_created"
+    },
+    {
+      "id": 142,
+      "label": "Agent Identity, Role Clarity & Persona Control",
+      "folder": "02_departments/142_agent_identity_role_clarity_and_persona_control",
+      "status": "shell_created"
+    },
+    {
+      "id": 143,
+      "label": "Agent Contracting & Service-Level Agreements",
+      "folder": "02_departments/143_agent_contracting_and_service_level_agreements",
+      "status": "shell_created"
+    },
+    {
+      "id": 144,
+      "label": "Agent Tool Safety, Sandboxing & Permission Firewalls",
+      "folder": "02_departments/144_agent_tool_safety_sandboxing_and_permission_firewalls",
+      "status": "shell_created"
+    },
+    {
+      "id": 145,
+      "label": "Agent Ethics Board & Value Alignment Office",
+      "folder": "02_departments/145_agent_ethics_board_and_value_alignment_office",
+      "status": "shell_created"
+    },
+    {
+      "id": 146,
+      "label": "Agent Procurement Stack & Vendor Ecosystem",
+      "folder": "02_departments/146_agent_procurement_stack_and_vendor_ecosystem",
+      "status": "shell_created"
+    },
+    {
+      "id": 147,
+      "label": "Agent Learning Loops & Continuous Improvement",
+      "folder": "02_departments/147_agent_learning_loops_and_continuous_improvement",
+      "status": "shell_created"
+    },
+    {
+      "id": 148,
+      "label": "Multi-Tenant, Multi-Client & Workspace Management",
+      "folder": "02_departments/148_multi_tenant_multi_client_and_workspace_management",
+      "status": "shell_created"
+    },
+    {
+      "id": 149,
+      "label": "Agent Reputation, Reliability & Trust Scoring",
+      "folder": "02_departments/149_agent_reputation_reliability_and_trust_scoring",
+      "status": "shell_created"
+    },
+    {
+      "id": 150,
+      "label": "Completion Architecture & Definition of Done",
+      "folder": "02_departments/150_completion_architecture_and_definition_of_done",
+      "status": "shell_created"
+    },
+    {
+      "id": 151,
+      "label": "Legal Evidence Exhibit Production",
+      "folder": "02_departments/151_legal_evidence_exhibit_production",
+      "status": "shell_created"
+    },
+    {
+      "id": 152,
+      "label": "Compliance Training Academy",
+      "folder": "02_departments/152_compliance_training_academy",
+      "status": "shell_created"
+    },
+    {
+      "id": 153,
+      "label": "Disaster Simulation Lab",
+      "folder": "02_departments/153_disaster_simulation_lab",
+      "status": "shell_created"
+    },
+    {
+      "id": 154,
+      "label": "Public Launch Command Center",
+      "folder": "02_departments/154_public_launch_command_center",
+      "status": "shell_created"
+    },
+    {
+      "id": 155,
+      "label": "Franchise, Replication & Scaling Systems",
+      "folder": "02_departments/155_franchise_replication_and_scaling_systems",
+      "status": "shell_created"
+    },
+    {
+      "id": 156,
+      "label": "Licensing & White-Label Operations",
+      "folder": "02_departments/156_licensing_and_white_label_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 157,
+      "label": "Agent App Store & Plugin Ecosystem",
+      "folder": "02_departments/157_agent_app_store_and_plugin_ecosystem",
+      "status": "shell_created"
+    },
+    {
+      "id": 158,
+      "label": "Client Portal Operations",
+      "folder": "02_departments/158_client_portal_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 159,
+      "label": "Knowledge Graph Visualization Studio",
+      "folder": "02_departments/159_knowledge_graph_visualization_studio",
+      "status": "shell_created"
+    },
+    {
+      "id": 160,
+      "label": "AI Safety Red-Team Lab",
+      "folder": "02_departments/160_ai_safety_red_team_lab",
+      "status": "shell_created"
+    },
+    {
+      "id": 161,
+      "label": "Prompt Injection Defense Office",
+      "folder": "02_departments/161_prompt_injection_defense_office",
+      "status": "shell_created"
+    },
+    {
+      "id": 162,
+      "label": "Data Backup & Cold Storage",
+      "folder": "02_departments/162_data_backup_and_cold_storage",
+      "status": "shell_created"
+    },
+    {
+      "id": 163,
+      "label": "Digital Legacy Planning",
+      "folder": "02_departments/163_digital_legacy_planning",
+      "status": "shell_created"
+    },
+    {
+      "id": 164,
+      "label": "Reputation Fire Drill Team",
+      "folder": "02_departments/164_reputation_fire_drill_team",
+      "status": "shell_created"
+    },
+    {
+      "id": 165,
+      "label": "Systems Migration Office",
+      "folder": "02_departments/165_systems_migration_office",
+      "status": "shell_created"
+    },
+    {
+      "id": 166,
+      "label": "Mobile App Operations",
+      "folder": "02_departments/166_mobile_app_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 167,
+      "label": "Voice, Phone & Conversational Agent Operations",
+      "folder": "02_departments/167_voice_phone_and_conversational_agent_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 168,
+      "label": "Physical Mail & Print Outreach",
+      "folder": "02_departments/168_physical_mail_and_print_outreach",
+      "status": "shell_created"
+    },
+    {
+      "id": 169,
+      "label": "CRM Operations",
+      "folder": "02_departments/169_crm_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 170,
+      "label": "Lead Nurture Factory",
+      "folder": "02_departments/170_lead_nurture_factory",
+      "status": "shell_created"
+    },
+    {
+      "id": 171,
+      "label": "Revenue Operations",
+      "folder": "02_departments/171_revenue_operations",
+      "status": "shell_created"
+    },
+    {
+      "id": 172,
+      "label": "Customer Education Academy",
+      "folder": "02_departments/172_customer_education_academy",
+      "status": "shell_created"
+    },
+    {
+      "id": 173,
+      "label": "Workflow Certification Office",
+      "folder": "02_departments/173_workflow_certification_office",
+      "status": "shell_created"
+    },
+    {
+      "id": 174,
+      "label": "Agent Incident Court",
+      "folder": "02_departments/174_agent_incident_court",
+      "status": "shell_created"
+    },
+    {
+      "id": 175,
+      "label": "Master Archive / Library of Alexandria",
+      "folder": "02_departments/175_master_archive_library_of_alexandria",
+      "status": "shell_created"
+    }
+  ]
+}

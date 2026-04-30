@@ -1,4 +1,4 @@
-# Master Department List
+# Master Department Family List
 
 1. Agent Command
 2. Planning & Project Control
