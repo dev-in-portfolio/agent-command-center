@@ -33,7 +33,7 @@
 ### 54.5 Context Restoration
 - 54.5.1 Lost Context Detection
 - 54.5.2 Anchor Detail Recovery
-- 54.5.3 Status Summary
+- 54.5.3 Restoration Summary
 
 ### 54.6 Memory Conflict Resolution
 - 54.6.1 Conflicting Memory Detection
