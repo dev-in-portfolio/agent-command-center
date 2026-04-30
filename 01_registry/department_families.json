@@ -1,0 +1,1402 @@
+[
+  {
+    "id": 1,
+    "name": "Agent Command",
+    "manager": "1.M",
+    "scribe": "1.H",
+    "auditor": "1.I",
+    "departments": []
+  },
+  {
+    "id": 2,
+    "name": "Planning & Project Control",
+    "manager": "2.M",
+    "scribe": "2.H",
+    "auditor": "2.I",
+    "departments": []
+  },
+  {
+    "id": 3,
+    "name": "Operations",
+    "manager": "3.M",
+    "scribe": "3.H",
+    "auditor": "3.I",
+    "departments": []
+  },
+  {
+    "id": 4,
+    "name": "Research & Intelligence",
+    "manager": "4.M",
+    "scribe": "4.H",
+    "auditor": "4.I",
+    "departments": []
+  },
+  {
+    "id": 5,
+    "name": "Data & Knowledge",
+    "manager": "5.M",
+    "scribe": "5.H",
+    "auditor": "5.I",
+    "departments": []
+  },
+  {
+    "id": 6,
+    "name": "Creation & Production",
+    "manager": "6.M",
+    "scribe": "6.H",
+    "auditor": "6.I",
+    "departments": []
+  },
+  {
+    "id": 7,
+    "name": "Engineering & Automation",
+    "manager": "7.M",
+    "scribe": "7.H",
+    "auditor": "7.I",
+    "departments": []
+  },
+  {
+    "id": 8,
+    "name": "Quality, Risk & Compliance",
+    "manager": "8.M",
+    "scribe": "8.H",
+    "auditor": "8.I",
+    "departments": []
+  },
+  {
+    "id": 9,
+    "name": "Business Growth",
+    "manager": "9.M",
+    "scribe": "9.H",
+    "auditor": "9.I",
+    "departments": []
+  },
+  {
+    "id": 10,
+    "name": "Finance & Administration",
+    "manager": "10.M",
+    "scribe": "10.H",
+    "auditor": "10.I",
+    "departments": []
+  },
+  {
+    "id": 11,
+    "name": "Industry Divisions",
+    "manager": "11.M",
+    "scribe": "11.H",
+    "auditor": "11.I",
+    "departments": []
+  },
+  {
+    "id": 12,
+    "name": "Personal Operating System",
+    "manager": "12.M",
+    "scribe": "12.H",
+    "auditor": "12.I",
+    "departments": []
+  },
+  {
+    "id": 13,
+    "name": "HR, Training & Enablement",
+    "manager": "13.M",
+    "scribe": "13.H",
+    "auditor": "13.I",
+    "departments": []
+  },
+  {
+    "id": 14,
+    "name": "Communications & Public Relations",
+    "manager": "14.M",
+    "scribe": "14.H",
+    "auditor": "14.I",
+    "departments": []
+  },
+  {
+    "id": 15,
+    "name": "Manufacturing, Print & Physical Production",
+    "manager": "15.M",
+    "scribe": "15.H",
+    "auditor": "15.I",
+    "departments": []
+  },
+  {
+    "id": 16,
+    "name": "Facilities & Event Operations",
+    "manager": "16.M",
+    "scribe": "16.H",
+    "auditor": "16.I",
+    "departments": []
+  },
+  {
+    "id": 17,
+    "name": "Ethics & Safety",
+    "manager": "17.M",
+    "scribe": "17.H",
+    "auditor": "17.I",
+    "departments": []
+  },
+  {
+    "id": 18,
+    "name": "Strategy, Innovation & R&D",
+    "manager": "18.M",
+    "scribe": "18.H",
+    "auditor": "18.I",
+    "departments": []
+  },
+  {
+    "id": 19,
+    "name": "Community & Ecosystem",
+    "manager": "19.M",
+    "scribe": "19.H",
+    "auditor": "19.I",
+    "departments": []
+  },
+  {
+    "id": 20,
+    "name": "Education & Instructional Systems",
+    "manager": "20.M",
+    "scribe": "20.H",
+    "auditor": "20.I",
+    "departments": []
+  },
+  {
+    "id": 21,
+    "name": "Media & Content Production",
+    "manager": "21.M",
+    "scribe": "21.H",
+    "auditor": "21.I",
+    "departments": []
+  },
+  {
+    "id": 22,
+    "name": "Localization & Accessibility",
+    "manager": "22.M",
+    "scribe": "22.H",
+    "auditor": "22.I",
+    "departments": []
+  },
+  {
+    "id": 23,
+    "name": "Funding, Grants & Capital",
+    "manager": "23.M",
+    "scribe": "23.H",
+    "auditor": "23.I",
+    "departments": []
+  },
+  {
+    "id": 24,
+    "name": "Government, Public Sector & Civic Operations",
+    "manager": "24.M",
+    "scribe": "24.H",
+    "auditor": "24.I",
+    "departments": []
+  },
+  {
+    "id": 25,
+    "name": "Healthcare & Wellness Division",
+    "manager": "25.M",
+    "scribe": "25.H",
+    "auditor": "25.I",
+    "departments": []
+  },
+  {
+    "id": 26,
+    "name": "Real Estate & Property Division",
+    "manager": "26.M",
+    "scribe": "26.H",
+    "auditor": "26.I",
+    "departments": []
+  },
+  {
+    "id": 27,
+    "name": "E-Commerce & Retail Division",
+    "manager": "27.M",
+    "scribe": "27.H",
+    "auditor": "27.I",
+    "departments": []
+  },
+  {
+    "id": 28,
+    "name": "Intellectual Property, Rights & Licensing",
+    "manager": "28.M",
+    "scribe": "28.H",
+    "auditor": "28.I",
+    "departments": []
+  },
+  {
+    "id": 29,
+    "name": "Sustainability & Environmental Operations",
+    "manager": "29.M",
+    "scribe": "29.H",
+    "auditor": "29.I",
+    "departments": []
+  },
+  {
+    "id": 30,
+    "name": "Agent Lab & System Evolution",
+    "manager": "30.M",
+    "scribe": "30.H",
+    "auditor": "30.I",
+    "departments": []
+  },
+  {
+    "id": 31,
+    "name": "Model Operations & AI Infrastructure",
+    "manager": "31.M",
+    "scribe": "31.H",
+    "auditor": "31.I",
+    "departments": []
+  },
+  {
+    "id": 32,
+    "name": "Evaluation & Benchmarking",
+    "manager": "32.M",
+    "scribe": "32.H",
+    "auditor": "32.I",
+    "departments": []
+  },
+  {
+    "id": 33,
+    "name": "Human Review & Approval Operations",
+    "manager": "33.M",
+    "scribe": "33.H",
+    "auditor": "33.I",
+    "departments": []
+  },
+  {
+    "id": 34,
+    "name": "Standards, Templates & Methodology",
+    "manager": "34.M",
+    "scribe": "34.H",
+    "auditor": "34.I",
+    "departments": []
+  },
+  {
+    "id": 35,
+    "name": "Workflow Control Tower",
+    "manager": "35.M",
+    "scribe": "35.H",
+    "auditor": "35.I",
+    "departments": []
+  },
+  {
+    "id": 36,
+    "name": "Regulatory Monitoring & Change Intelligence",
+    "manager": "36.M",
+    "scribe": "36.H",
+    "auditor": "36.I",
+    "departments": []
+  },
+  {
+    "id": 37,
+    "name": "Knowledge Security & Information Classification",
+    "manager": "37.M",
+    "scribe": "37.H",
+    "auditor": "37.I",
+    "departments": []
+  },
+  {
+    "id": 38,
+    "name": "Simulation, Forecasting & Decision Games",
+    "manager": "38.M",
+    "scribe": "38.H",
+    "auditor": "38.I",
+    "departments": []
+  },
+  {
+    "id": 39,
+    "name": "Negotiation & Deal Desk",
+    "manager": "39.M",
+    "scribe": "39.H",
+    "auditor": "39.I",
+    "departments": []
+  },
+  {
+    "id": 40,
+    "name": "Reputation, Trust & Brand Risk",
+    "manager": "40.M",
+    "scribe": "40.H",
+    "auditor": "40.I",
+    "departments": []
+  },
+  {
+    "id": 41,
+    "name": "Customer Insight & Voice of Customer",
+    "manager": "41.M",
+    "scribe": "41.H",
+    "auditor": "41.I",
+    "departments": []
+  },
+  {
+    "id": 42,
+    "name": "Offer Design & Productized Services",
+    "manager": "42.M",
+    "scribe": "42.H",
+    "auditor": "42.I",
+    "departments": []
+  },
+  {
+    "id": 43,
+    "name": "Knowledge Products & Course Production",
+    "manager": "43.M",
+    "scribe": "43.H",
+    "auditor": "43.I",
+    "departments": []
+  },
+  {
+    "id": 44,
+    "name": "Talent Marketplace & Freelance Operations",
+    "manager": "44.M",
+    "scribe": "44.H",
+    "auditor": "44.I",
+    "departments": []
+  },
+  {
+    "id": 45,
+    "name": "Recruiting, Career & Professional Positioning",
+    "manager": "45.M",
+    "scribe": "45.H",
+    "auditor": "45.I",
+    "departments": []
+  },
+  {
+    "id": 46,
+    "name": "Portfolio, Case Studies & Proof Assets",
+    "manager": "46.M",
+    "scribe": "46.H",
+    "auditor": "46.I",
+    "departments": []
+  },
+  {
+    "id": 47,
+    "name": "Personal Productivity & Time Management",
+    "manager": "47.M",
+    "scribe": "47.H",
+    "auditor": "47.I",
+    "departments": []
+  },
+  {
+    "id": 48,
+    "name": "Life Administration",
+    "manager": "48.M",
+    "scribe": "48.H",
+    "auditor": "48.I",
+    "departments": []
+  },
+  {
+    "id": 49,
+    "name": "Personal Knowledge, Learning & Skill Building",
+    "manager": "49.M",
+    "scribe": "49.H",
+    "auditor": "49.I",
+    "departments": []
+  },
+  {
+    "id": 50,
+    "name": "Creative Studio & Story Worlds",
+    "manager": "50.M",
+    "scribe": "50.H",
+    "auditor": "50.I",
+    "departments": []
+  },
+  {
+    "id": 51,
+    "name": "Brand, Identity & Personal Mythology",
+    "manager": "51.M",
+    "scribe": "51.H",
+    "auditor": "51.I",
+    "departments": []
+  },
+  {
+    "id": 52,
+    "name": "Personal AI Companion Architecture",
+    "manager": "52.M",
+    "scribe": "52.H",
+    "auditor": "52.I",
+    "departments": []
+  },
+  {
+    "id": 53,
+    "name": "Prompt Systems & Instruction Architecture",
+    "manager": "53.M",
+    "scribe": "53.H",
+    "auditor": "53.I",
+    "departments": []
+  },
+  {
+    "id": 54,
+    "name": "Memory Engineering & Context Architecture",
+    "manager": "54.M",
+    "scribe": "54.H",
+    "auditor": "54.I",
+    "departments": []
+  },
+  {
+    "id": 55,
+    "name": "Agent Society & Internal Culture",
+    "manager": "55.M",
+    "scribe": "55.H",
+    "auditor": "55.I",
+    "departments": []
+  },
+  {
+    "id": 56,
+    "name": "Autonomous Operations Control",
+    "manager": "56.M",
+    "scribe": "56.H",
+    "auditor": "56.I",
+    "departments": []
+  },
+  {
+    "id": 57,
+    "name": "Multi-Agent Orchestration & Swarm Control",
+    "manager": "57.M",
+    "scribe": "57.H",
+    "auditor": "57.I",
+    "departments": []
+  },
+  {
+    "id": 58,
+    "name": "Tool Operations & External Access",
+    "manager": "58.M",
+    "scribe": "58.H",
+    "auditor": "58.I",
+    "departments": []
+  },
+  {
+    "id": 59,
+    "name": "Interface, Dashboard & Control Panels",
+    "manager": "59.M",
+    "scribe": "59.H",
+    "auditor": "59.I",
+    "departments": []
+  },
+  {
+    "id": 60,
+    "name": "Experimental Systems & Weird Lab",
+    "manager": "60.M",
+    "scribe": "60.H",
+    "auditor": "60.I",
+    "departments": []
+  },
+  {
+    "id": 61,
+    "name": "Archives, Museums & Collection Management",
+    "manager": "61.M",
+    "scribe": "61.H",
+    "auditor": "61.I",
+    "departments": []
+  },
+  {
+    "id": 62,
+    "name": "Scientific Research & Lab Operations",
+    "manager": "62.M",
+    "scribe": "62.H",
+    "auditor": "62.I",
+    "departments": []
+  },
+  {
+    "id": 63,
+    "name": "Investor Research & Market Intelligence",
+    "manager": "63.M",
+    "scribe": "63.H",
+    "auditor": "63.I",
+    "departments": []
+  },
+  {
+    "id": 64,
+    "name": "Relationship Intelligence & Network Management",
+    "manager": "64.M",
+    "scribe": "64.H",
+    "auditor": "64.I",
+    "departments": []
+  },
+  {
+    "id": 65,
+    "name": "Legal Operations & Case Management",
+    "manager": "65.M",
+    "scribe": "65.H",
+    "auditor": "65.I",
+    "departments": []
+  },
+  {
+    "id": 66,
+    "name": "Investigations & Due Diligence",
+    "manager": "66.M",
+    "scribe": "66.H",
+    "auditor": "66.I",
+    "departments": []
+  },
+  {
+    "id": 67,
+    "name": "Personal Finance, Tax & Household Economy",
+    "manager": "67.M",
+    "scribe": "67.H",
+    "auditor": "67.I",
+    "departments": []
+  },
+  {
+    "id": 68,
+    "name": "Travel, Field Work & Mobility Operations",
+    "manager": "68.M",
+    "scribe": "68.H",
+    "auditor": "68.I",
+    "departments": []
+  },
+  {
+    "id": 69,
+    "name": "Home, Workshop & Physical Project Builds",
+    "manager": "69.M",
+    "scribe": "69.H",
+    "auditor": "69.I",
+    "departments": []
+  },
+  {
+    "id": 70,
+    "name": "Humor, Entertainment & Engagement Systems",
+    "manager": "70.M",
+    "scribe": "70.H",
+    "auditor": "70.I",
+    "departments": []
+  },
+  {
+    "id": 71,
+    "name": "Spiritual, Philosophical & Meaning Systems",
+    "manager": "71.M",
+    "scribe": "71.H",
+    "auditor": "71.I",
+    "departments": []
+  },
+  {
+    "id": 72,
+    "name": "Emotional Intelligence & Self-Regulation Systems",
+    "manager": "72.M",
+    "scribe": "72.H",
+    "auditor": "72.I",
+    "departments": []
+  },
+  {
+    "id": 73,
+    "name": "Negotiation, Conflict & Mediation Systems",
+    "manager": "73.M",
+    "scribe": "73.H",
+    "auditor": "73.I",
+    "departments": []
+  },
+  {
+    "id": 74,
+    "name": "Debate, Argument & Critical Thinking Systems",
+    "manager": "74.M",
+    "scribe": "74.H",
+    "auditor": "74.I",
+    "departments": []
+  },
+  {
+    "id": 75,
+    "name": "Creativity, Ideation & Concept Generation",
+    "manager": "75.M",
+    "scribe": "75.H",
+    "auditor": "75.I",
+    "departments": []
+  },
+  {
+    "id": 76,
+    "name": "Decision Memory & Lessons Learned",
+    "manager": "76.M",
+    "scribe": "76.H",
+    "auditor": "76.I",
+    "departments": []
+  },
+  {
+    "id": 77,
+    "name": "Environmental Scanning & Opportunity Radar",
+    "manager": "77.M",
+    "scribe": "77.H",
+    "auditor": "77.I",
+    "departments": []
+  },
+  {
+    "id": 78,
+    "name": "Standards of Evidence & Source Hierarchy",
+    "manager": "78.M",
+    "scribe": "78.H",
+    "auditor": "78.I",
+    "departments": []
+  },
+  {
+    "id": 79,
+    "name": "User Experience Research & Human Factors",
+    "manager": "79.M",
+    "scribe": "79.H",
+    "auditor": "79.I",
+    "departments": []
+  },
+  {
+    "id": 80,
+    "name": "Experimental Governance & Sandbox Control",
+    "manager": "80.M",
+    "scribe": "80.H",
+    "auditor": "80.I",
+    "departments": []
+  },
+  {
+    "id": 81,
+    "name": "Agent Memory Governance & Recall Control",
+    "manager": "81.M",
+    "scribe": "81.H",
+    "auditor": "81.I",
+    "departments": []
+  },
+  {
+    "id": 82,
+    "name": "Version Control, Releases & Change Management",
+    "manager": "82.M",
+    "scribe": "82.H",
+    "auditor": "82.I",
+    "departments": []
+  },
+  {
+    "id": 83,
+    "name": "API Economy, Platform Access & Usage Limits",
+    "manager": "83.M",
+    "scribe": "83.H",
+    "auditor": "83.I",
+    "departments": []
+  },
+  {
+    "id": 84,
+    "name": "Infrastructure Economics & Compute Planning",
+    "manager": "84.M",
+    "scribe": "84.H",
+    "auditor": "84.I",
+    "departments": []
+  },
+  {
+    "id": 85,
+    "name": "Agent Procurement, Hiring & Role Marketplace",
+    "manager": "85.M",
+    "scribe": "85.H",
+    "auditor": "85.I",
+    "departments": []
+  },
+  {
+    "id": 86,
+    "name": "Agent Labor Relations & Internal Governance",
+    "manager": "86.M",
+    "scribe": "86.H",
+    "auditor": "86.I",
+    "departments": []
+  },
+  {
+    "id": 87,
+    "name": "Emotional Brand Experience & Client Perception",
+    "manager": "87.M",
+    "scribe": "87.H",
+    "auditor": "87.I",
+    "departments": []
+  },
+  {
+    "id": 88,
+    "name": "Strategic Memory, Institutional Knowledge & Lore",
+    "manager": "88.M",
+    "scribe": "88.H",
+    "auditor": "88.I",
+    "departments": []
+  },
+  {
+    "id": 89,
+    "name": "Narrative Intelligence & Explanation Design",
+    "manager": "89.M",
+    "scribe": "89.H",
+    "auditor": "89.I",
+    "departments": []
+  },
+  {
+    "id": 90,
+    "name": "Meta-Reasoning & Cognitive Control",
+    "manager": "90.M",
+    "scribe": "90.H",
+    "auditor": "90.I",
+    "departments": []
+  },
+  {
+    "id": 91,
+    "name": "Multi-Modal Intelligence & Artifact Understanding",
+    "manager": "91.M",
+    "scribe": "91.H",
+    "auditor": "91.I",
+    "departments": []
+  },
+  {
+    "id": 92,
+    "name": "Data Visualization & Information Design",
+    "manager": "92.M",
+    "scribe": "92.H",
+    "auditor": "92.I",
+    "departments": []
+  },
+  {
+    "id": 93,
+    "name": "Conversation Design & Dialogue Systems",
+    "manager": "93.M",
+    "scribe": "93.H",
+    "auditor": "93.I",
+    "departments": []
+  },
+  {
+    "id": 94,
+    "name": "Trust, Transparency & Explainability",
+    "manager": "94.M",
+    "scribe": "94.H",
+    "auditor": "94.I",
+    "departments": []
+  },
+  {
+    "id": 95,
+    "name": "Compliance Evidence, Attestation & Regulated Deliverables",
+    "manager": "95.M",
+    "scribe": "95.H",
+    "auditor": "95.I",
+    "departments": []
+  },
+  {
+    "id": 96,
+    "name": "Digital Asset Management & Creative Libraries",
+    "manager": "96.M",
+    "scribe": "96.H",
+    "auditor": "96.I",
+    "departments": []
+  },
+  {
+    "id": 97,
+    "name": "Forms, Intake & Structured Data Collection",
+    "manager": "97.M",
+    "scribe": "97.H",
+    "auditor": "97.I",
+    "departments": []
+  },
+  {
+    "id": 98,
+    "name": "Inbox, Notifications & Signal Management",
+    "manager": "98.M",
+    "scribe": "98.H",
+    "auditor": "98.I",
+    "departments": []
+  },
+  {
+    "id": 99,
+    "name": "Calendar, Scheduling & Time Intelligence",
+    "manager": "99.M",
+    "scribe": "99.H",
+    "auditor": "99.I",
+    "departments": []
+  },
+  {
+    "id": 100,
+    "name": "Master Control, Meta-Architecture & System Constitution",
+    "manager": "100.M",
+    "scribe": "100.H",
+    "auditor": "100.I",
+    "departments": []
+  },
+  {
+    "id": 101,
+    "name": "Cross-Project Intelligence & Pattern Transfer",
+    "manager": "101.M",
+    "scribe": "101.H",
+    "auditor": "101.I",
+    "departments": []
+  },
+  {
+    "id": 102,
+    "name": "Error Recovery, Apology & Repair Systems",
+    "manager": "102.M",
+    "scribe": "102.H",
+    "auditor": "102.I",
+    "departments": []
+  },
+  {
+    "id": 103,
+    "name": "Attention Management & Cognitive Workspace",
+    "manager": "103.M",
+    "scribe": "103.H",
+    "auditor": "103.I",
+    "departments": []
+  },
+  {
+    "id": 104,
+    "name": "User Intent Forensics",
+    "manager": "104.M",
+    "scribe": "104.H",
+    "auditor": "104.I",
+    "departments": []
+  },
+  {
+    "id": 105,
+    "name": "User Preference Engine",
+    "manager": "105.M",
+    "scribe": "105.H",
+    "auditor": "105.I",
+    "departments": []
+  },
+  {
+    "id": 106,
+    "name": "Command Language & Shortcut Systems",
+    "manager": "106.M",
+    "scribe": "106.H",
+    "auditor": "106.I",
+    "departments": []
+  },
+  {
+    "id": 107,
+    "name": "Personal Archive, Vaults & Shelving Systems",
+    "manager": "107.M",
+    "scribe": "107.H",
+    "auditor": "107.I",
+    "departments": []
+  },
+  {
+    "id": 108,
+    "name": "Client-Facing Asset Factory",
+    "manager": "108.M",
+    "scribe": "108.H",
+    "auditor": "108.I",
+    "departments": []
+  },
+  {
+    "id": 109,
+    "name": "Agent-Based Business Process Outsourcing",
+    "manager": "109.M",
+    "scribe": "109.H",
+    "auditor": "109.I",
+    "departments": []
+  },
+  {
+    "id": 110,
+    "name": "System Map, Visualization & Architecture Diagrams",
+    "manager": "110.M",
+    "scribe": "110.H",
+    "auditor": "110.I",
+    "departments": []
+  },
+  {
+    "id": 111,
+    "name": "Knowledge Monetization & Asset Commercialization",
+    "manager": "111.M",
+    "scribe": "111.H",
+    "auditor": "111.I",
+    "departments": []
+  },
+  {
+    "id": 112,
+    "name": "Enterprise Knowledge Base & Internal Wiki",
+    "manager": "112.M",
+    "scribe": "112.H",
+    "auditor": "112.I",
+    "departments": []
+  },
+  {
+    "id": 113,
+    "name": "Scenario Library & Playbook Systems",
+    "manager": "113.M",
+    "scribe": "113.H",
+    "auditor": "113.I",
+    "departments": []
+  },
+  {
+    "id": 114,
+    "name": "Marketplace Intelligence & Commercial Positioning",
+    "manager": "114.M",
+    "scribe": "114.H",
+    "auditor": "114.I",
+    "departments": []
+  },
+  {
+    "id": 115,
+    "name": "Platform Strategy & Distribution Channels",
+    "manager": "115.M",
+    "scribe": "115.H",
+    "auditor": "115.I",
+    "departments": []
+  },
+  {
+    "id": 116,
+    "name": "Business Rules Engine",
+    "manager": "116.M",
+    "scribe": "116.H",
+    "auditor": "116.I",
+    "departments": []
+  },
+  {
+    "id": 117,
+    "name": "Ontology, Taxonomy & Semantic Systems",
+    "manager": "117.M",
+    "scribe": "117.H",
+    "auditor": "117.I",
+    "departments": []
+  },
+  {
+    "id": 118,
+    "name": "Knowledge Graph & Relationship Mapping",
+    "manager": "118.M",
+    "scribe": "118.H",
+    "auditor": "118.I",
+    "departments": []
+  },
+  {
+    "id": 119,
+    "name": "Data Pipelines & ETL Operations",
+    "manager": "119.M",
+    "scribe": "119.H",
+    "auditor": "119.I",
+    "departments": []
+  },
+  {
+    "id": 120,
+    "name": "Search, Discovery & Retrieval Operations",
+    "manager": "120.M",
+    "scribe": "120.H",
+    "auditor": "120.I",
+    "departments": []
+  },
+  {
+    "id": 121,
+    "name": "Data Labeling, Annotation & Training Sets",
+    "manager": "121.M",
+    "scribe": "121.H",
+    "auditor": "121.I",
+    "departments": []
+  },
+  {
+    "id": 122,
+    "name": "Personal Data Rooms & Secure Project Spaces",
+    "manager": "122.M",
+    "scribe": "122.H",
+    "auditor": "122.I",
+    "departments": []
+  },
+  {
+    "id": 123,
+    "name": "Identity, Access & Permission Architecture",
+    "manager": "123.M",
+    "scribe": "123.H",
+    "auditor": "123.I",
+    "departments": []
+  },
+  {
+    "id": 124,
+    "name": "Data Privacy, Consent & Retention Operations",
+    "manager": "124.M",
+    "scribe": "124.H",
+    "auditor": "124.I",
+    "departments": []
+  },
+  {
+    "id": 125,
+    "name": "Integration Testing & End-to-End Validation",
+    "manager": "125.M",
+    "scribe": "125.H",
+    "auditor": "125.I",
+    "departments": []
+  },
+  {
+    "id": 126,
+    "name": "Agent Observability, Telemetry & Run Analytics",
+    "manager": "126.M",
+    "scribe": "126.H",
+    "auditor": "126.I",
+    "departments": []
+  },
+  {
+    "id": 127,
+    "name": "State Management & Workflow Memory",
+    "manager": "127.M",
+    "scribe": "127.H",
+    "auditor": "127.I",
+    "departments": []
+  },
+  {
+    "id": 128,
+    "name": "Work Product Governance & Deliverable Standards",
+    "manager": "128.M",
+    "scribe": "128.H",
+    "auditor": "128.I",
+    "departments": []
+  },
+  {
+    "id": 129,
+    "name": "Knowledge Quality, Currency & Source Freshness",
+    "manager": "129.M",
+    "scribe": "129.H",
+    "auditor": "129.I",
+    "departments": []
+  },
+  {
+    "id": 130,
+    "name": "Agent Economy, Internal Costing & Resource Allocation",
+    "manager": "130.M",
+    "scribe": "130.H",
+    "auditor": "130.I",
+    "departments": []
+  },
+  {
+    "id": 131,
+    "name": "Approval UX, Review Queues & Human Control",
+    "manager": "131.M",
+    "scribe": "131.H",
+    "auditor": "131.I",
+    "departments": []
+  },
+  {
+    "id": 132,
+    "name": "Agent Marketplace, Templates & Reusable Crews",
+    "manager": "132.M",
+    "scribe": "132.H",
+    "auditor": "132.I",
+    "departments": []
+  },
+  {
+    "id": 133,
+    "name": "Agent Conversation Memory & Internal Messaging",
+    "manager": "133.M",
+    "scribe": "133.H",
+    "auditor": "133.I",
+    "departments": []
+  },
+  {
+    "id": 134,
+    "name": "External Action Governance",
+    "manager": "134.M",
+    "scribe": "134.H",
+    "auditor": "134.I",
+    "departments": []
+  },
+  {
+    "id": 135,
+    "name": "Work Intake, Scoping & Triage",
+    "manager": "135.M",
+    "scribe": "135.H",
+    "auditor": "135.I",
+    "departments": []
+  },
+  {
+    "id": 136,
+    "name": "Task Decomposition & Work Package Design",
+    "manager": "136.M",
+    "scribe": "136.H",
+    "auditor": "136.I",
+    "departments": []
+  },
+  {
+    "id": 137,
+    "name": "Department Dependency Graph & Routing Matrix",
+    "manager": "137.M",
+    "scribe": "137.H",
+    "auditor": "137.I",
+    "departments": []
+  },
+  {
+    "id": 138,
+    "name": "Output Assembly, Synthesis & Final Answer Design",
+    "manager": "138.M",
+    "scribe": "138.H",
+    "auditor": "138.I",
+    "departments": []
+  },
+  {
+    "id": 139,
+    "name": "Long-Running Work, Checkpointing & Resumability",
+    "manager": "139.M",
+    "scribe": "139.H",
+    "auditor": "139.I",
+    "departments": []
+  },
+  {
+    "id": 140,
+    "name": "Final Boss Layer: System-of-Systems Governance",
+    "manager": "140.M",
+    "scribe": "140.H",
+    "auditor": "140.I",
+    "departments": []
+  },
+  {
+    "id": 141,
+    "name": "Agent Governance Testing & Constitutional Simulation",
+    "manager": "141.M",
+    "scribe": "141.H",
+    "auditor": "141.I",
+    "departments": []
+  },
+  {
+    "id": 142,
+    "name": "Agent Identity, Role Clarity & Persona Control",
+    "manager": "142.M",
+    "scribe": "142.H",
+    "auditor": "142.I",
+    "departments": []
+  },
+  {
+    "id": 143,
+    "name": "Agent Contracting & Service-Level Agreements",
+    "manager": "143.M",
+    "scribe": "143.H",
+    "auditor": "143.I",
+    "departments": []
+  },
+  {
+    "id": 144,
+    "name": "Agent Tool Safety, Sandboxing & Permission Firewalls",
+    "manager": "144.M",
+    "scribe": "144.H",
+    "auditor": "144.I",
+    "departments": []
+  },
+  {
+    "id": 145,
+    "name": "Agent Ethics Board & Value Alignment Office",
+    "manager": "145.M",
+    "scribe": "145.H",
+    "auditor": "145.I",
+    "departments": []
+  },
+  {
+    "id": 146,
+    "name": "Agent Procurement Stack & Vendor Ecosystem",
+    "manager": "146.M",
+    "scribe": "146.H",
+    "auditor": "146.I",
+    "departments": []
+  },
+  {
+    "id": 147,
+    "name": "Agent Learning Loops & Continuous Improvement",
+    "manager": "147.M",
+    "scribe": "147.H",
+    "auditor": "147.I",
+    "departments": []
+  },
+  {
+    "id": 148,
+    "name": "Multi-Tenant, Multi-Client & Workspace Management",
+    "manager": "148.M",
+    "scribe": "148.H",
+    "auditor": "148.I",
+    "departments": []
+  },
+  {
+    "id": 149,
+    "name": "Agent Reputation, Reliability & Trust Scoring",
+    "manager": "149.M",
+    "scribe": "149.H",
+    "auditor": "149.I",
+    "departments": []
+  },
+  {
+    "id": 150,
+    "name": "Completion Architecture & Definition of Done",
+    "manager": "150.M",
+    "scribe": "150.H",
+    "auditor": "150.I",
+    "departments": []
+  },
+  {
+    "id": 151,
+    "name": "Legal Evidence Exhibit Production",
+    "manager": "151.M",
+    "scribe": "151.H",
+    "auditor": "151.I",
+    "departments": []
+  },
+  {
+    "id": 152,
+    "name": "Compliance Training Academy",
+    "manager": "152.M",
+    "scribe": "152.H",
+    "auditor": "152.I",
+    "departments": []
+  },
+  {
+    "id": 153,
+    "name": "Disaster Simulation Lab",
+    "manager": "153.M",
+    "scribe": "153.H",
+    "auditor": "153.I",
+    "departments": []
+  },
+  {
+    "id": 154,
+    "name": "Public Launch Command Center",
+    "manager": "154.M",
+    "scribe": "154.H",
+    "auditor": "154.I",
+    "departments": []
+  },
+  {
+    "id": 155,
+    "name": "Franchise, Replication & Scaling Systems",
+    "manager": "155.M",
+    "scribe": "155.H",
+    "auditor": "155.I",
+    "departments": []
+  },
+  {
+    "id": 156,
+    "name": "Licensing & White-Label Operations",
+    "manager": "156.M",
+    "scribe": "156.H",
+    "auditor": "156.I",
+    "departments": []
+  },
+  {
+    "id": 157,
+    "name": "Agent App Store & Plugin Ecosystem",
+    "manager": "157.M",
+    "scribe": "157.H",
+    "auditor": "157.I",
+    "departments": []
+  },
+  {
+    "id": 158,
+    "name": "Client Portal Operations",
+    "manager": "158.M",
+    "scribe": "158.H",
+    "auditor": "158.I",
+    "departments": []
+  },
+  {
+    "id": 159,
+    "name": "Knowledge Graph Visualization Studio",
+    "manager": "159.M",
+    "scribe": "159.H",
+    "auditor": "159.I",
+    "departments": []
+  },
+  {
+    "id": 160,
+    "name": "AI Safety Red-Team Lab",
+    "manager": "160.M",
+    "scribe": "160.H",
+    "auditor": "160.I",
+    "departments": []
+  },
+  {
+    "id": 161,
+    "name": "Prompt Injection Defense Office",
+    "manager": "161.M",
+    "scribe": "161.H",
+    "auditor": "161.I",
+    "departments": []
+  },
+  {
+    "id": 162,
+    "name": "Data Backup & Cold Storage",
+    "manager": "162.M",
+    "scribe": "162.H",
+    "auditor": "162.I",
+    "departments": []
+  },
+  {
+    "id": 163,
+    "name": "Digital Legacy Planning",
+    "manager": "163.M",
+    "scribe": "163.H",
+    "auditor": "163.I",
+    "departments": []
+  },
+  {
+    "id": 164,
+    "name": "Reputation Fire Drill Team",
+    "manager": "164.M",
+    "scribe": "164.H",
+    "auditor": "164.I",
+    "departments": []
+  },
+  {
+    "id": 165,
+    "name": "Systems Migration Office",
+    "manager": "165.M",
+    "scribe": "165.H",
+    "auditor": "165.I",
+    "departments": []
+  },
+  {
+    "id": 166,
+    "name": "Mobile App Operations",
+    "manager": "166.M",
+    "scribe": "166.H",
+    "auditor": "166.I",
+    "departments": []
+  },
+  {
+    "id": 167,
+    "name": "Voice, Phone & Conversational Agent Operations",
+    "manager": "167.M",
+    "scribe": "167.H",
+    "auditor": "167.I",
+    "departments": []
+  },
+  {
+    "id": 168,
+    "name": "Physical Mail & Print Outreach",
+    "manager": "168.M",
+    "scribe": "168.H",
+    "auditor": "168.I",
+    "departments": []
+  },
+  {
+    "id": 169,
+    "name": "CRM Operations",
+    "manager": "169.M",
+    "scribe": "169.H",
+    "auditor": "169.I",
+    "departments": []
+  },
+  {
+    "id": 170,
+    "name": "Lead Nurture Factory",
+    "manager": "170.M",
+    "scribe": "170.H",
+    "auditor": "170.I",
+    "departments": []
+  },
+  {
+    "id": 171,
+    "name": "Revenue Operations",
+    "manager": "171.M",
+    "scribe": "171.H",
+    "auditor": "171.I",
+    "departments": []
+  },
+  {
+    "id": 172,
+    "name": "Customer Education Academy",
+    "manager": "172.M",
+    "scribe": "172.H",
+    "auditor": "172.I",
+    "departments": []
+  },
+  {
+    "id": 173,
+    "name": "Workflow Certification Office",
+    "manager": "173.M",
+    "scribe": "173.H",
+    "auditor": "173.I",
+    "departments": []
+  },
+  {
+    "id": 174,
+    "name": "Agent Incident Court",
+    "manager": "174.M",
+    "scribe": "174.H",
+    "auditor": "174.I",
+    "departments": []
+  },
+  {
+    "id": 175,
+    "name": "Master Archive / Library of Alexandria",
+    "manager": "175.M",
+    "scribe": "175.H",
+    "auditor": "175.I",
+    "departments": []
+  }
+]
