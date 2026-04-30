@@ -58,7 +58,7 @@ def main():
                 "units": []
             }
             
-            readme_depts.append(f"\n### {did} {dname}")
+            readme_depts.append(f"\n### {did} {dname}\n")
             
             for u_idx, uname in enumerate(dept_spec['units'], 1):
                 uid = f"{did}.{u_idx}"
@@ -68,7 +68,7 @@ def main():
                     "team": []
                 }
                 
-                readme_depts.append(f"- {uid} {uname}")
+                readme_depts.append(f"- {uid} {uname}\n")
                 
                 for r_letter, r_name in roles:
                     unit_obj["team"].append({
