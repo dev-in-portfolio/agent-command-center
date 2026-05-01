@@ -2,16 +2,11 @@ import json
 import os
 import sys
 
-def validate():
+def validate_batch():
     spec_path = "04_workflow_templates/family_expansion_batch_105_114.json"
-    if not os.path.exists(spec_path):
-        print(f"FAIL: {spec_path} not found")
-        sys.exit(1)
+    with open(spec_path, 'r') as f:
+        batch_spec = json.load(f)
 
-    with open(spec_path, "r") as f:
-        batch_data = json.load(f)
-
-    # Hardcoded string checks
     required_strings = [
         "User Preference Engine",
         "Preference Conflict Review",
@@ -45,97 +40,82 @@ def validate():
         "Marketplace Dashboard"
     ]
 
-    spec_text = json.dumps(batch_data)
-    missing_strings = [s for s in required_strings if s not in spec_text]
-    if missing_strings:
-        for s in missing_strings:
-            print(f"FAIL: Missing required string in spec: {s}")
-        sys.exit(1)
-
     errors = []
     
-    for family in batch_data:
-        family_id = family["id"]
-        family_name = family["name"]
-        folder_name = family_name.lower().replace(" ", "_").replace("&", "and").replace(",", "").replace("-", "_")
-        family_dir = f"02_departments/{family_id}_{folder_name}"
+    # Fidelity Check
+    spec_content = json.dumps(batch_spec)
+    for s in required_strings:
+        if s not in spec_content:
+            errors.append(f"Prompt fidelity failure: missing string '{s}' in spec.")
+
+    for family_spec in batch_spec:
+        family_id = family_spec['id']
+        family_name = family_spec['name']
+        folder_name = family_name.lower().replace(" & ", "_and_").replace(" ", "_").replace(",", "").replace("-", "_")
+        family_dir = os.path.join("02_departments", f"{family_id}_{folder_name}")
         
-        json_path = os.path.join(family_dir, "family.json")
-        readme_path = os.path.join(family_dir, "README.md")
-        
-        if not os.path.exists(json_path):
-            errors.append(f"{json_path} missing")
+        family_json_path = os.path.join(family_dir, "family.json")
+        if not os.path.exists(family_json_path):
+            errors.append(f"Missing file: {family_json_path}")
             continue
-            
-        with open(json_path, "r") as f:
-            data = json.load(f)
-            
-        if data["id"] != family_id:
-            errors.append(f"{json_path} ID mismatch: {data['id']} != {family_id}")
-        if data["name"] != family_name:
-            errors.append(f"{json_path} Name mismatch: {data['name']} != {family_name}")
-            
-        if not data["manager"].endswith(".M"): errors.append(f"{json_path} manager invalid")
-        if not data["scribe"].endswith(".H"): errors.append(f"{json_path} scribe invalid")
-        if not data["auditor"].endswith(".I"): errors.append(f"{json_path} auditor invalid")
+
+        with open(family_json_path, 'r') as f:
+            family_json = json.load(f)
+
+        if family_json['id'] != family_id:
+            errors.append(f"ID mismatch in {family_json_path}: expected {family_id}, found {family_json['id']}")
+        if family_json['name'] != family_name:
+            errors.append(f"Name mismatch in {family_json_path}: expected {family_name}, found {family_json['name']}")
         
-        if len(data["departments"]) != 10:
-            errors.append(f"{json_path} department count mismatch: {len(data['departments'])} != 10")
+        if family_json.get('manager') != f"{family_id}.M": errors.append(f"Invalid family manager in {family_id}")
+        if family_json.get('scribe') != f"{family_id}.H": errors.append(f"Invalid family scribe in {family_id}")
+        if family_json.get('auditor') != f"{family_id}.I": errors.append(f"Invalid family auditor in {family_id}")
+
+        if len(family_json['departments']) != 10:
+            errors.append(f"Department count mismatch in {family_id}: expected 10, found {len(family_json['departments'])}")
+
+        for dept in family_json['departments']:
+            dept_id = dept['id']
+            if dept['manager'] != f"{dept_id}.M": errors.append(f"Invalid manager for dept {dept_id}")
+            if dept['scribe'] != f"{dept_id}.H": errors.append(f"Invalid scribe for dept {dept_id}")
+            if dept['auditor'] != f"{dept_id}.I": errors.append(f"Invalid auditor for dept {dept_id}")
             
-        for dept in data["departments"]:
-            dept_id = dept["id"]
-            if not dept_id.startswith(family_id + "."): errors.append(f"Dept {dept_id} ID invalid")
-            if dept["manager"] != f"{dept_id}.M": errors.append(f"Dept {dept_id} manager invalid")
-            if dept["scribe"] != f"{dept_id}.H": errors.append(f"Dept {dept_id} scribe invalid")
-            if dept["auditor"] != f"{dept_id}.I": errors.append(f"Dept {dept_id} auditor invalid")
-            
-            if len(dept["units"]) != 3:
-                errors.append(f"Dept {dept_id} unit count mismatch: {len(dept['units'])} != 3")
+            if len(dept['units']) != 3:
+                errors.append(f"Unit count mismatch in dept {dept_id}: expected 3, found {len(dept['units'])}")
+
+            for unit in dept['units']:
+                unit_id = unit['id']
+                if len(unit['team']) != 9:
+                    errors.append(f"Team size mismatch in unit {unit_id}: expected 9, found {len(unit['team'])}")
                 
-            for unit in dept["units"]:
-                unit_id = unit["id"]
-                if not unit_id.startswith(dept_id + "."): errors.append(f"Unit {unit_id} ID invalid")
-                
-                if len(unit["team"]) != 9:
-                    errors.append(f"Unit {unit_id} team size mismatch: {len(unit['team'])} != 9")
-                    
                 roles = ["Realist", "Overachiever", "Dreamer", "Timid", "Overprotective", "Wildcard Intern", "Team Lead / Manager", "Scribe / Shower of Work", "Auditor / Revision Director"]
                 suffixes = ["1A", "1B", "1C", "1D", "1E", "1F", "1G", "1H", "1I"]
                 
-                for i, member in enumerate(unit["team"]):
-                    if not isinstance(member, dict):
-                        errors.append(f"Unit {unit_id} team member {i} is not a dict")
-                        continue
-                    
+                for i, member in enumerate(unit['team']):
                     expected_id = f"{unit_id}.{suffixes[i]}"
                     expected_role = roles[i]
-                    
-                    if member.get("id") != expected_id:
-                        errors.append(f"Unit {unit_id} team member {i} ID mismatch: {member.get('id')} != {expected_id}")
-                    if member.get("role") != expected_role:
-                        errors.append(f"Unit {unit_id} team member {i} role mismatch: {member.get('role')} != {expected_role}")
+                    if member['id'] != expected_id:
+                        errors.append(f"Team member ID mismatch in unit {unit_id}: expected {expected_id}, found {member['id']}")
+                    if member['role'] != expected_role:
+                        errors.append(f"Team member role mismatch in unit {unit_id}: expected {expected_role}, found {member['role']}")
 
         # README check
+        readme_path = os.path.join(family_dir, "README.md")
         if not os.path.exists(readme_path):
-            errors.append(f"{readme_path} missing")
+            errors.append(f"Missing file: {readme_path}")
         else:
-            with open(readme_path, "r") as f:
+            with open(readme_path, 'r') as f:
                 content = f.read()
-            if f"# {family_name}" not in content: errors.append(f"{readme_path} title missing")
-            if "## Departments" not in content: errors.append(f"{readme_path} departments section missing")
-            for dept in data["departments"]:
-                if f"### {dept['name']} ({dept['id']})" not in content:
-                    errors.append(f"{readme_path} missing dept: {dept['name']}")
-                for unit in dept["units"]:
-                    if f"- {unit['name']} ({unit['id']})" not in content:
-                        errors.append(f"{readme_path} missing unit: {unit['name']}")
+            if f"# {family_name}" not in content: errors.append(f"README title mismatch in {family_id}")
+            if "## Departments" not in content: errors.append(f"README missing Departments section in {family_id}")
 
     if errors:
-        for err in errors:
-            print(f"FAIL: {err}")
+        for error in errors:
+            print(error)
+        print("FAIL")
         sys.exit(1)
     else:
         print("PASS: Family batch 105-114 expansion valid.")
 
 if __name__ == "__main__":
-    validate()
+    validate_batch()

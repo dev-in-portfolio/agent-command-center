@@ -3,53 +3,44 @@ import os
 
 def apply_batch():
     spec_path = "04_workflow_templates/family_expansion_batch_105_114.json"
-    with open(spec_path, "r") as f:
-        batch_data = json.load(f)
+    with open(spec_path, 'r') as f:
+        batch_spec = json.load(f)
 
-    for family in batch_data:
-        family_id = family["id"]
-        family_name = family["name"]
+    for family_spec in batch_spec:
+        family_id = family_spec['id']
+        family_name = family_spec['name']
+        folder_name = family_name.lower().replace(" & ", "_and_").replace(" ", "_").replace(",", "").replace("-", "_")
+        family_dir = os.path.join("02_departments", f"{family_id}_{folder_name}")
         
-        # Determine folder name
-        folder_name = family_name.lower().replace(" ", "_").replace("&", "and").replace(",", "").replace("-", "_")
-        family_dir = f"02_departments/{family_id}_{folder_name}"
-        
-        json_path = os.path.join(family_dir, "family.json")
-        readme_path = os.path.join(family_dir, "README.md")
-        
-        if not os.path.exists(json_path):
-            print(f"Skipping {family_id} - {json_path} not found")
-            continue
+        family_json_path = os.path.join(family_dir, "family.json")
+        with open(family_json_path, 'r') as f:
+            family_json = json.load(f)
 
-        with open(json_path, "r") as f:
-            existing_family = json.load(f)
-            
         # Preserve top-level
-        new_family = {
-            "id": str(existing_family["id"]),
-            "name": existing_family["name"],
-            "manager": existing_family.get("manager", f"{family_id}.M"),
-            "scribe": existing_family.get("scribe", f"{family_id}.H"),
-            "auditor": existing_family.get("auditor", f"{family_id}.I"),
+        new_family_json = {
+            "id": family_json['id'],
+            "name": family_json['name'],
+            "manager": family_json.get('manager', f"{family_id}.M"),
+            "scribe": family_json.get('scribe', f"{family_id}.H"),
+            "auditor": family_json.get('auditor', f"{family_id}.I"),
             "departments": []
         }
-        
-        for dept in family["departments"]:
-            dept_id = dept["id"]
+
+        for dept_spec in family_spec['departments']:
+            dept_id = dept_spec['id']
             new_dept = {
                 "id": dept_id,
-                "name": dept["name"],
+                "name": dept_spec['name'],
                 "manager": f"{dept_id}.M",
                 "scribe": f"{dept_id}.H",
                 "auditor": f"{dept_id}.I",
                 "units": []
             }
-            
-            for unit in dept["units"]:
-                unit_id = unit["id"]
+            for unit_spec in dept_spec['units']:
+                unit_id = unit_spec['id']
                 new_unit = {
                     "id": unit_id,
-                    "name": unit["name"],
+                    "name": unit_spec['name'],
                     "team": [
                         { "id": f"{unit_id}.1A", "role": "Realist" },
                         { "id": f"{unit_id}.1B", "role": "Overachiever" },
@@ -62,28 +53,28 @@ def apply_batch():
                         { "id": f"{unit_id}.1I", "role": "Auditor / Revision Director" }
                     ]
                 }
-                new_dept["units"].append(new_unit)
-            
-            new_family["departments"].append(new_dept)
-            
-        with open(json_path, "w") as f:
-            json.dump(new_family, f, indent=2)
-        print(f"Wrote {json_path}")
-        
+                new_dept['units'].append(new_unit)
+            new_family_json['departments'].append(new_dept)
+
+        with open(family_json_path, 'w') as f:
+            json.dump(new_family_json, f, indent=2)
+        print(f"Wrote {family_json_path}")
+
         # Write README.md
+        readme_path = os.path.join(family_dir, "README.md")
         readme_content = f"# {family_name}\n\n"
         readme_content += "## Purpose\n\n"
-        readme_content += f"## Family Manager ({new_family['manager']})\n\n"
-        readme_content += f"## Family Scribe ({new_family['scribe']})\n\n"
-        readme_content += f"## Family Auditor ({new_family['auditor']})\n\n"
+        readme_content += f"## Family Manager ({new_family_json['manager']})\n\n"
+        readme_content += f"## Family Scribe ({new_family_json['scribe']})\n\n"
+        readme_content += f"## Family Auditor ({new_family_json['auditor']})\n\n"
         readme_content += "## Departments\n"
         
-        for dept in new_family["departments"]:
+        for dept in new_family_json['departments']:
             readme_content += f"\n### {dept['name']} ({dept['id']})\n"
-            for unit in dept["units"]:
+            for unit in dept['units']:
                 readme_content += f"- {unit['name']} ({unit['id']})\n"
         
-        with open(readme_path, "w") as f:
+        with open(readme_path, 'w') as f:
             f.write(readme_content)
         print(f"Wrote {readme_path}")
 
