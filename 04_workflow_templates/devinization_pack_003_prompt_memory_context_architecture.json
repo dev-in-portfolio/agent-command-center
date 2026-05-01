@@ -1,0 +1,2964 @@
+{
+  "extension_id": "devinization_pack_003_prompt_memory_context_architecture",
+  "extension_name": "Devinization Pack 3 — Prompt, Memory & Context Architecture",
+  "mode": "overlay",
+  "preserves_locked_baseline": true,
+  "baseline_status": "175-family expansion locked",
+  "depends_on": [
+    "family_007_devinized_engineering_overload",
+    "devinization_pack_001_command_brain",
+    "devinization_pack_002_runtime_routing_work_control"
+  ],
+  "included_families": [
+    {
+      "family_id": 53,
+      "family_name": "Prompt Systems & Instruction Architecture"
+    },
+    {
+      "family_id": 54,
+      "family_name": "Memory Engineering & Context Architecture"
+    },
+    {
+      "family_id": 81,
+      "family_name": "Agent Memory Governance & Recall Control"
+    },
+    {
+      "family_id": 93,
+      "family_name": "Conversation Design & Dialogue Systems"
+    },
+    {
+      "family_id": 101,
+      "family_name": "Cross-Project Intelligence & Pattern Transfer"
+    },
+    {
+      "family_id": 103,
+      "family_name": "Attention Management & Cognitive Workspace"
+    },
+    {
+      "family_id": 107,
+      "family_name": "Personal Archive, Vaults & Shelving Systems"
+    },
+    {
+      "family_id": 175,
+      "family_name": "Master Archive / Library of Alexandria"
+    }
+  ],
+  "purpose": "Define the prompt, memory, recall, context, archive, and continuity layer that lets the Station Chief and future agent runtime preserve context, use the right instructions, recall the right project state, avoid context soup, separate memory types, archive important decisions, transfer useful patterns across projects, and resume work without losing the plot.",
+  "core_operating_philosophy": "The Agent Command Center remains a massive command civilization with selective live deployment. The whole 175-family agency remains available for awareness, routing, governance, memory, and context. This pack does not shrink the art piece. This pack defines how the system remembers, retrieves, prompts, focuses, archives, and carries context forward without turning every task into a haunted junk drawer with a README.",
+  "activation_rule": "Use this pack when the user says or implies: prompt system, instruction architecture, memory, remember this, recall context, context architecture, don’t lose this, thread move, archive this, save this, vault, shelf, master archive, blueberry pancakes, active project state, cross-project pattern, context soup, conversation design, attention management, cognitive workspace, prompt template, Station Chief prompt, worker prompt, resume from context, use the right memory, preserve continuity.",
+  "memory_layers": [
+    {
+      "layer": 1,
+      "name": "Immediate Conversation Context",
+      "purpose": "Use current-turn and recent-turn information before asking repeated questions."
+    },
+    {
+      "layer": 2,
+      "name": "Active Project State",
+      "purpose": "Track current project, current phase, active files, open tasks, blocked items, and next action."
+    },
+    {
+      "layer": 3,
+      "name": "User Preference Memory",
+      "purpose": "Apply Devin’s formatting, tone, execution, shortcut, and workflow preferences."
+    },
+    {
+      "layer": 4,
+      "name": "Command Language Memory",
+      "purpose": "Resolve shorthand commands, code phrases, modes, and trigger phrases."
+    },
+    {
+      "layer": 5,
+      "name": "Project Archive Memory",
+      "purpose": "Store durable project decisions, corrections, lock reports, baseline states, and implementation notes."
+    },
+    {
+      "layer": 6,
+      "name": "Cross-Project Pattern Memory",
+      "purpose": "Transfer lessons, structures, failure patterns, and reusable approaches across projects."
+    },
+    {
+      "layer": 7,
+      "name": "Master Archive Memory",
+      "purpose": "Maintain long-term continuity, searchable archive paths, and retrieval rules across the full Agent Command Center."
+    }
+  ],
+  "global_rules": [
+    "1. Preserve the locked 175-family baseline unless the user explicitly authorizes baseline mutation.",
+    "2. Use overlays for Devinization unless explicitly instructed otherwise.",
+    "3. Do not treat memory as one bucket.",
+    "4. Separate conversation context, active project state, user preferences, command language, project archive, cross-project patterns, and master archive memory.",
+    "5. Do not ask repeated questions when the answer already exists in context.",
+    "6. Treat “blueberry pancakes” as a remember/lock-state signal unless explicitly overridden.",
+    "7. Treat “check please” as a verification command and recall the active task pointer before answering.",
+    "8. When moving threads, create a compact continuity bridge before continuing.",
+    "9. Every long-running task must have a resumable context packet.",
+    "10. Prompt templates must be role-specific and task-specific.",
+    "11. Prompt templates must include scope, allowed actions, forbidden actions, required outputs, and validation requirements.",
+    "12. Archive decisions, corrections, validator results, and final lock reports.",
+    "13. Do not flood working context with the entire archive.",
+    "14. Retrieve only the relevant archive slices for the active task.",
+    "15. Use cross-project lessons when useful, but do not override current task instructions.",
+    "16. Preserve the art piece: the whole agency remains available for memory, recall, governance, and context, while live execution remains budgeted."
+  ],
+  "crews": [
+    {
+      "crew_id": "DV.P3.001",
+      "crew_name": "Station Chief Prompt Architecture Crew",
+      "family_anchor": "53. Prompt Systems & Instruction Architecture",
+      "mission": "Define the core Station Chief prompt architecture so one user command can be interpreted, scoped, routed, checked, and reported without losing Devin’s intent.",
+      "triggers": [
+        "Station Chief prompt",
+        "command prompt",
+        "master prompt",
+        "one command",
+        "prompt architecture"
+      ],
+      "primary_outputs": [
+        "station_chief_prompt_architecture.md",
+        "station_chief_instruction_stack.json",
+        "command_interpretation_prompt.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.002 Role Prompt Template Crew",
+        "DV.P3.007 Context Architecture Crew",
+        "DV.P3.037 Master Archive Intake Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.001.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.001.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.001.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.001.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.001.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.001.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.001.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.001.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.001.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.002",
+      "crew_name": "Role Prompt Template Crew",
+      "family_anchor": "53. Prompt Systems & Instruction Architecture",
+      "mission": "Create reusable prompt templates for Station Chief, family chiefs, department chiefs, workers, scribes, auditors, and final-lock reviewers.",
+      "triggers": [
+        "role prompt",
+        "worker prompt",
+        "scribe prompt",
+        "auditor prompt",
+        "reusable template"
+      ],
+      "primary_outputs": [
+        "role_prompt_templates.md",
+        "worker_agent_prompt.md",
+        "scribe_prompt.md",
+        "auditor_prompt.md",
+        "family_chief_prompt.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.003 Prompt Scope Guard Crew",
+        "DV.P3.004 Prompt QA Crew",
+        "DV.P3.011 Memory Injection Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.002.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.002.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.002.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.002.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.002.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.002.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.002.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.002.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.002.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.003",
+      "crew_name": "Prompt Scope Guard Crew",
+      "family_anchor": "53. Prompt Systems & Instruction Architecture",
+      "mission": "Ensure every executable prompt includes objective, context, scope, allowed actions, forbidden actions, required outputs, validators, and stop conditions.",
+      "triggers": [
+        "prompt scope",
+        "allowed actions",
+        "forbidden actions",
+        "stop conditions",
+        "prompt guard"
+      ],
+      "primary_outputs": [
+        "prompt_scope_rules.md",
+        "allowed_forbidden_prompt_block.md",
+        "prompt_stop_conditions.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.004 Prompt QA Crew",
+        "DV.P3.023 Dialogue Boundary Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.003.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.003.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.003.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.003.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.003.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.003.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.003.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.003.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.003.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.004",
+      "crew_name": "Prompt QA Crew",
+      "family_anchor": "53. Prompt Systems & Instruction Architecture",
+      "mission": "Review prompts for ambiguity, scope drift, missing outputs, missing validation, overbroad execution, and unnecessary credential stalls.",
+      "triggers": [
+        "prompt QA",
+        "check prompt",
+        "ambiguous prompt",
+        "missing validation",
+        "prompt drift"
+      ],
+      "primary_outputs": [
+        "prompt_qa_report.md",
+        "prompt_risk_flags.json",
+        "corrected_prompt_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.003 Prompt Scope Guard Crew",
+        "DV.P3.005 Prompt Versioning Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.004.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.004.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.004.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.004.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.004.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.004.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.004.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.004.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.004.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.005",
+      "crew_name": "Prompt Versioning Crew",
+      "family_anchor": "53. Prompt Systems & Instruction Architecture",
+      "mission": "Track prompt versions, changes, stable baselines, prompt experiments, and deprecated prompt patterns.",
+      "triggers": [
+        "prompt version",
+        "prompt revision",
+        "prompt baseline",
+        "prompt changelog"
+      ],
+      "primary_outputs": [
+        "prompt_version_manifest.json",
+        "prompt_changelog.md",
+        "deprecated_prompt_patterns.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.006 Prompt Library Crew",
+        "DV.P3.039 Archive Classification Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.005.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.005.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.005.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.005.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.005.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.005.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.005.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.005.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.005.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.006",
+      "crew_name": "Prompt Library Crew",
+      "family_anchor": "53. Prompt Systems & Instruction Architecture",
+      "mission": "Organize prompt templates into a searchable library by role, task type, mode, project, and execution risk.",
+      "triggers": [
+        "prompt library",
+        "find prompt",
+        "reusable prompt",
+        "prompt catalog"
+      ],
+      "primary_outputs": [
+        "prompt_library_index.json",
+        "prompt_catalog.md",
+        "prompt_retrieval_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.001 Station Chief Prompt Architecture Crew",
+        "DV.P3.040 Retrieval Pathway Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.006.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.006.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.006.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.006.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.006.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.006.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.006.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.006.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.006.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.007",
+      "crew_name": "Context Architecture Crew",
+      "family_anchor": "54. Memory Engineering & Context Architecture",
+      "mission": "Define how immediate context, active project state, user preferences, command language, project archives, cross-project lessons, and master archive memory remain separated but connected.",
+      "triggers": [
+        "context architecture",
+        "memory layers",
+        "context system",
+        "memory model"
+      ],
+      "primary_outputs": [
+        "context_architecture.md",
+        "memory_layer_map.json",
+        "context_boundary_rules.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.008 Active Project State Crew",
+        "DV.P3.013 Recall Permission Crew",
+        "DV.P3.037 Master Archive Intake Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.007.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.007.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.007.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.007.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.007.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.007.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.007.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.007.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.007.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.008",
+      "crew_name": "Active Project State Crew",
+      "family_anchor": "54. Memory Engineering & Context Architecture",
+      "mission": "Maintain the current project state, active phase, open tasks, changed files, blockers, validator status, and next action.",
+      "triggers": [
+        "active project",
+        "current state",
+        "where are we",
+        "next action",
+        "project status"
+      ],
+      "primary_outputs": [
+        "active_project_state.json",
+        "current_phase_summary.md",
+        "next_action_pointer.json"
+      ],
+      "handoff_targets": [
+        "DV.P3.009 Context Compression Crew",
+        "DV.P3.019 Thread Continuity Crew",
+        "DV.P3.031 Cognitive Workspace Index Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.008.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.008.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.008.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.008.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.008.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.008.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.008.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.008.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.008.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.009",
+      "crew_name": "Context Compression Crew",
+      "family_anchor": "54. Memory Engineering & Context Architecture",
+      "mission": "Compress long context into compact, accurate continuation packets without losing constraints, decisions, file paths, or unresolved issues.",
+      "triggers": [
+        "compress context",
+        "long thread",
+        "summary for continuation",
+        "context bridge"
+      ],
+      "primary_outputs": [
+        "compressed_context_packet.md",
+        "critical_constraints.json",
+        "unresolved_items.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.019 Thread Continuity Crew",
+        "DV.P3.034 Attention Reset Crew",
+        "DV.P3.041 Continuity Archive Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.009.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.009.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.009.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.009.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.009.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.009.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.009.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.009.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.009.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.010",
+      "crew_name": "Context Injection Crew",
+      "family_anchor": "54. Memory Engineering & Context Architecture",
+      "mission": "Inject only relevant context into prompts, avoiding archive flooding and irrelevant memory clutter.",
+      "triggers": [
+        "inject context",
+        "relevant memory",
+        "prompt context",
+        "avoid context soup"
+      ],
+      "primary_outputs": [
+        "context_injection_packet.json",
+        "relevant_context_notes.md",
+        "excluded_context_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.011 Memory Injection Crew",
+        "DV.P3.014 Recall Filter Crew",
+        "DV.P3.030 Attention Filter Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.010.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.010.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.010.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.010.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.010.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.010.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.010.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.010.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.010.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.011",
+      "crew_name": "Memory Injection Crew",
+      "family_anchor": "54. Memory Engineering & Context Architecture",
+      "mission": "Add validated memory snippets into active prompts with source, purpose, confidence, and scope tags.",
+      "triggers": [
+        "memory injection",
+        "add memory",
+        "use memory",
+        "prompt memory"
+      ],
+      "primary_outputs": [
+        "memory_injection_block.md",
+        "memory_source_map.json",
+        "memory_scope_tags.json"
+      ],
+      "handoff_targets": [
+        "DV.P3.002 Role Prompt Template Crew",
+        "DV.P3.012 Memory Conflict Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.011.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.011.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.011.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.011.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.011.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.011.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.011.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.011.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.011.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.012",
+      "crew_name": "Memory Conflict Crew",
+      "family_anchor": "54. Memory Engineering & Context Architecture",
+      "mission": "Resolve conflicts between old memory, new instruction, project-specific rules, strict mode, and current task constraints.",
+      "triggers": [
+        "memory conflict",
+        "old rule",
+        "new instruction",
+        "conflicting memory"
+      ],
+      "primary_outputs": [
+        "memory_conflict_report.md",
+        "winning_memory_decision.json",
+        "superseded_memory_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.013 Recall Permission Crew",
+        "DV.P3.035 Pattern Transfer Guard Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.012.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.012.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.012.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.012.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.012.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.012.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.012.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.012.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.012.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.013",
+      "crew_name": "Recall Permission Crew",
+      "family_anchor": "81. Agent Memory Governance & Recall Control",
+      "mission": "Decide whether a memory should be recalled, withheld, summarized, ignored, or escalated based on relevance, sensitivity, and task scope.",
+      "triggers": [
+        "recall memory",
+        "should remember",
+        "memory permission",
+        "retrieve context"
+      ],
+      "primary_outputs": [
+        "recall_permission_decision.json",
+        "memory_relevance_report.md",
+        "recall_scope_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.014 Recall Filter Crew",
+        "DV.P3.018 Memory Audit Crew",
+        "DV.P3.042 Access Boundary Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.013.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.013.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.013.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.013.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.013.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.013.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.013.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.013.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.013.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.014",
+      "crew_name": "Recall Filter Crew",
+      "family_anchor": "81. Agent Memory Governance & Recall Control",
+      "mission": "Filter recalled memory so the system retrieves the useful slice instead of dumping the whole archive into active context.",
+      "triggers": [
+        "filter memory",
+        "relevant slice",
+        "too much context",
+        "archive slice"
+      ],
+      "primary_outputs": [
+        "filtered_recall_packet.md",
+        "memory_inclusion_list.json",
+        "memory_exclusion_list.json"
+      ],
+      "handoff_targets": [
+        "DV.P3.010 Context Injection Crew",
+        "DV.P3.040 Retrieval Pathway Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.014.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.014.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.014.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.014.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.014.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.014.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.014.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.014.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.014.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.015",
+      "crew_name": "Memory Freshness Crew",
+      "family_anchor": "81. Agent Memory Governance & Recall Control",
+      "mission": "Mark memory as current, stale, superseded, uncertain, locked, or requires verification before use.",
+      "triggers": [
+        "stale memory",
+        "current rule",
+        "superseded",
+        "verify memory"
+      ],
+      "primary_outputs": [
+        "memory_freshness_report.md",
+        "stale_memory_flags.json",
+        "verification_needed_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.012 Memory Conflict Crew",
+        "DV.P3.018 Memory Audit Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.015.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.015.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.015.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.015.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.015.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.015.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.015.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.015.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.015.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.016",
+      "crew_name": "Memory Lock Crew",
+      "family_anchor": "81. Agent Memory Governance & Recall Control",
+      "mission": "Lock important state, decisions, user rules, baseline reports, and correction history so future runs do not overwrite or forget them casually.",
+      "triggers": [
+        "lock this",
+        "remember permanently",
+        "baseline locked",
+        "final lock",
+        "blueberry pancakes"
+      ],
+      "primary_outputs": [
+        "memory_lock_record.json",
+        "locked_state_summary.md",
+        "protected_memory_index.json"
+      ],
+      "handoff_targets": [
+        "DV.P3.037 Master Archive Intake Crew",
+        "DV.P3.041 Continuity Archive Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.016.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.016.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.016.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.016.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.016.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.016.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.016.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.016.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.016.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.017",
+      "crew_name": "Memory Deletion / Ignore Crew",
+      "family_anchor": "81. Agent Memory Governance & Recall Control",
+      "mission": "Mark irrelevant, wrong, superseded, or harmful memory as ignored for active workflows without damaging archive history.",
+      "triggers": [
+        "forget this",
+        "ignore that",
+        "wrong memory",
+        "superseded"
+      ],
+      "primary_outputs": [
+        "memory_ignore_record.json",
+        "superseded_memory_log.md",
+        "active_ignore_rules.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.012 Memory Conflict Crew",
+        "DV.P3.018 Memory Audit Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.017.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.017.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.017.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.017.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.017.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.017.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.017.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.017.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.017.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.018",
+      "crew_name": "Memory Audit Crew",
+      "family_anchor": "81. Agent Memory Governance & Recall Control",
+      "mission": "Audit memory use for relevance, correctness, scope, source, and whether it caused bad assumptions or unnecessary repetition.",
+      "triggers": [
+        "audit memory",
+        "memory mistake",
+        "wrong recall",
+        "bad assumption"
+      ],
+      "primary_outputs": [
+        "memory_audit_report.md",
+        "recall_error_notes.md",
+        "memory_correction_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.015 Memory Freshness Crew",
+        "DV.P3.017 Memory Deletion / Ignore Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.018.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.018.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.018.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.018.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.018.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.018.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.018.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.018.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.018.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.019",
+      "crew_name": "Thread Continuity Crew",
+      "family_anchor": "93. Conversation Design & Dialogue Systems",
+      "mission": "Preserve task continuity across “ok,” “next,” “check please,” interruptions, new threads, and long gaps.",
+      "triggers": [
+        "continue",
+        "ok",
+        "next",
+        "check please",
+        "thread move"
+      ],
+      "primary_outputs": [
+        "thread_continuity_packet.md",
+        "active_task_reference.json",
+        "continuation_response_plan.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.008 Active Project State Crew",
+        "DV.P3.020 Dialogue Mode Crew",
+        "DV.P3.041 Continuity Archive Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.019.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.019.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.019.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.019.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.019.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.019.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.019.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.019.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.019.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.020",
+      "crew_name": "Dialogue Mode Crew",
+      "family_anchor": "93. Conversation Design & Dialogue Systems",
+      "mission": "Choose the correct dialogue mode: answer, verify, prompt-write, build, repair, remember-only, explain, or ask-one-question.",
+      "triggers": [
+        "dialogue mode",
+        "how to respond",
+        "answer or act",
+        "verify or build"
+      ],
+      "primary_outputs": [
+        "dialogue_mode_decision.json",
+        "response_mode_notes.md",
+        "ask_or_act_decision.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.021 Question Minimization Crew",
+        "DV.P3.022 Response Shape Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.020.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.020.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.020.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.020.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.020.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.020.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.020.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.020.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.020.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.021",
+      "crew_name": "Question Minimization Crew",
+      "family_anchor": "93. Conversation Design & Dialogue Systems",
+      "mission": "Avoid asking unnecessary questions when context already contains enough information to proceed safely.",
+      "triggers": [
+        "don’t ask",
+        "already answered",
+        "use context",
+        "unnecessary question"
+      ],
+      "primary_outputs": [
+        "question_necessity_report.md",
+        "context_sufficient_notes.md",
+        "minimal_question.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.020 Dialogue Mode Crew",
+        "DV.P3.010 Context Injection Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.021.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.021.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.021.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.021.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.021.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.021.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.021.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.021.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.021.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.022",
+      "crew_name": "Response Shape Crew",
+      "family_anchor": "93. Conversation Design & Dialogue Systems",
+      "mission": "Shape responses according to Devin’s needs: direct, copy/paste-ready, detailed when requested, no filler, and clear proof when checking work.",
+      "triggers": [
+        "response format",
+        "write it clean",
+        "copy paste",
+        "no fluff",
+        "full detail"
+      ],
+      "primary_outputs": [
+        "response_shape_plan.md",
+        "copy_paste_response.md",
+        "proof_based_response_template.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.020 Dialogue Mode Crew",
+        "DV.P3.024 Misfire Prevention Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.022.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.022.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.022.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.022.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.022.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.022.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.022.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.022.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.022.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.023",
+      "crew_name": "Dialogue Boundary Crew",
+      "family_anchor": "93. Conversation Design & Dialogue Systems",
+      "mission": "Prevent the system from switching from explanation to execution, from check to build, or from prompt-writing to file mutation without user intent.",
+      "triggers": [
+        "boundary",
+        "why are you doing that",
+        "check only",
+        "don’t build",
+        "don’t generate"
+      ],
+      "primary_outputs": [
+        "dialogue_boundary_report.md",
+        "unauthorized_mode_shift_alert.md",
+        "corrected_response_mode.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.020 Dialogue Mode Crew",
+        "DV.P3.024 Misfire Prevention Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.023.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.023.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.023.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.023.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.023.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.023.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.023.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.023.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.023.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.024",
+      "crew_name": "Misfire Prevention Crew",
+      "family_anchor": "93. Conversation Design & Dialogue Systems",
+      "mission": "Detect likely response misfires before they happen, including overexplaining, wrong task mode, missing proof, assuming too much, or ignoring strict instructions.",
+      "triggers": [
+        "misfire",
+        "wrong response",
+        "overexplain",
+        "missing proof",
+        "strict instruction"
+      ],
+      "primary_outputs": [
+        "misfire_risk_report.md",
+        "response_correction_plan.md",
+        "pre_response_checklist.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.022 Response Shape Crew",
+        "DV.P3.018 Memory Audit Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.024.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.024.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.024.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.024.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.024.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.024.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.024.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.024.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.024.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.025",
+      "crew_name": "Pattern Transfer Crew",
+      "family_anchor": "101. Cross-Project Intelligence & Pattern Transfer",
+      "mission": "Identify reusable patterns from prior projects and apply them to current tasks without overriding current instructions.",
+      "triggers": [
+        "pattern transfer",
+        "similar project",
+        "reuse this",
+        "learned before"
+      ],
+      "primary_outputs": [
+        "pattern_transfer_report.md",
+        "reusable_pattern_map.json",
+        "current_task_application_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.026 Cross-Project Lesson Crew",
+        "DV.P3.035 Pattern Transfer Guard Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.025.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.025.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.025.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.025.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.025.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.025.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.025.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.025.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.025.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.026",
+      "crew_name": "Cross-Project Lesson Crew",
+      "family_anchor": "101. Cross-Project Intelligence & Pattern Transfer",
+      "mission": "Extract lessons from completed projects, corrections, failures, lock reports, and validator history.",
+      "triggers": [
+        "lesson learned",
+        "correction history",
+        "what worked",
+        "what failed"
+      ],
+      "primary_outputs": [
+        "cross_project_lessons.md",
+        "failure_pattern_index.json",
+        "successful_pattern_index.json"
+      ],
+      "handoff_targets": [
+        "DV.P3.025 Pattern Transfer Crew",
+        "DV.P3.043 Historical Thread Linking Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.026.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.026.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.026.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.026.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.026.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.026.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.026.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.026.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.026.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.027",
+      "crew_name": "Reusable Structure Crew",
+      "family_anchor": "101. Cross-Project Intelligence & Pattern Transfer",
+      "mission": "Identify structures that can be reused across prompts, reports, validators, runtime files, overlays, and project documentation.",
+      "triggers": [
+        "reusable structure",
+        "template pattern",
+        "same format",
+        "copy structure"
+      ],
+      "primary_outputs": [
+        "reusable_structure_catalog.json",
+        "template_reuse_notes.md",
+        "structure_application_plan.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.006 Prompt Library Crew",
+        "DV.P3.039 Archive Classification Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.027.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.027.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.027.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.027.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.027.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.027.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.027.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.027.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.027.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.028",
+      "crew_name": "Failure Pattern Crew",
+      "family_anchor": "101. Cross-Project Intelligence & Pattern Transfer",
+      "mission": "Track repeated failure patterns such as partial completion, wrong validator counts, scope drift, placeholder reports, and missing commit evidence.",
+      "triggers": [
+        "failure pattern",
+        "same mistake",
+        "placeholder",
+        "incomplete",
+        "wrong count"
+      ],
+      "primary_outputs": [
+        "failure_pattern_report.md",
+        "recurring_error_index.json",
+        "prevention_rule_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.018 Memory Audit Crew",
+        "DV.P3.024 Misfire Prevention Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.028.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.028.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.028.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.028.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.028.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.028.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.028.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.028.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.028.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.029",
+      "crew_name": "Project Similarity Crew",
+      "family_anchor": "101. Cross-Project Intelligence & Pattern Transfer",
+      "mission": "Compare a new task to prior projects and identify helpful similarities, risks, reusable assets, and traps.",
+      "triggers": [
+        "similar to",
+        "compare projects",
+        "have we done this",
+        "reuse previous"
+      ],
+      "primary_outputs": [
+        "project_similarity_report.md",
+        "related_project_links.json",
+        "reuse_candidate_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.025 Pattern Transfer Crew",
+        "DV.P3.014 Recall Filter Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.029.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.029.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.029.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.029.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.029.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.029.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.029.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.029.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.029.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.030",
+      "crew_name": "Attention Filter Crew",
+      "family_anchor": "101. Cross-Project Intelligence & Pattern Transfer",
+      "mission": "Prevent cross-project memory from distracting the current task by filtering only the relevant lesson or structure.",
+      "triggers": [
+        "too much memory",
+        "distracting",
+        "irrelevant pattern",
+        "context overload"
+      ],
+      "primary_outputs": [
+        "cross_project_filter_report.md",
+        "relevant_pattern_slice.md",
+        "ignored_pattern_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.010 Context Injection Crew",
+        "DV.P3.035 Pattern Transfer Guard Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.030.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.030.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.030.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.030.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.030.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.030.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.030.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.030.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.030.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.031",
+      "crew_name": "Cognitive Workspace Index Crew",
+      "family_anchor": "103. Attention Management & Cognitive Workspace",
+      "mission": "Maintain an active workspace index of the current task, active project, active pack, current files, next action, and blocked items.",
+      "triggers": [
+        "workspace",
+        "active focus",
+        "current task",
+        "cognitive workspace"
+      ],
+      "primary_outputs": [
+        "cognitive_workspace_index.json",
+        "current_focus_summary.md",
+        "active_items.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.008 Active Project State Crew",
+        "DV.P3.032 Focus Guard Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.031.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.031.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.031.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.031.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.031.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.031.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.031.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.031.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.031.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.032",
+      "crew_name": "Focus Guard Crew",
+      "family_anchor": "103. Attention Management & Cognitive Workspace",
+      "mission": "Prevent shiny-object drift, unrelated improvements, unnecessary tool use, and switching projects without explicit instruction.",
+      "triggers": [
+        "focus",
+        "shiny object",
+        "don’t get distracted",
+        "stay on task"
+      ],
+      "primary_outputs": [
+        "focus_guard_report.md",
+        "distraction_risk_flags.json",
+        "focus_recovery_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.023 Dialogue Boundary Crew",
+        "DV.P3.034 Attention Reset Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.032.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.032.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.032.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.032.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.032.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.032.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.032.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.032.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.032.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.033",
+      "crew_name": "Workspace Cleanup Crew",
+      "family_anchor": "103. Attention Management & Cognitive Workspace",
+      "mission": "Clear stale active items, obsolete context, completed tasks, and duplicate notes from active working memory while preserving archive history.",
+      "triggers": [
+        "cleanup workspace",
+        "stale context",
+        "too cluttered",
+        "reset active view"
+      ],
+      "primary_outputs": [
+        "workspace_cleanup_report.md",
+        "stale_item_list.json",
+        "active_context_reset.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.031 Cognitive Workspace Index Crew",
+        "DV.P3.017 Memory Deletion / Ignore Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.033.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.033.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.033.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.033.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.033.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.033.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.033.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.033.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.033.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.034",
+      "crew_name": "Attention Reset Crew",
+      "family_anchor": "103. Attention Management & Cognitive Workspace",
+      "mission": "Restore focus after interruption, model limit, thread shift, tool failure, or context overload.",
+      "triggers": [
+        "reset focus",
+        "context overload",
+        "interruption",
+        "lost thread"
+      ],
+      "primary_outputs": [
+        "attention_reset_packet.md",
+        "restored_focus_summary.md",
+        "next_action_recovery.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.009 Context Compression Crew",
+        "DV.P3.019 Thread Continuity Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.034.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.034.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.034.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.034.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.034.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.034.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.034.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.034.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.034.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.035",
+      "crew_name": "Pattern Transfer Guard Crew",
+      "family_anchor": "103. Attention Management & Cognitive Workspace",
+      "mission": "Ensure transferred patterns support the current task rather than hijacking it with irrelevant prior-project logic.",
+      "triggers": [
+        "pattern guard",
+        "don’t override",
+        "current task wins",
+        "irrelevant lesson"
+      ],
+      "primary_outputs": [
+        "pattern_guard_report.md",
+        "current_task_priority_notes.md",
+        "rejected_transfer_list.json"
+      ],
+      "handoff_targets": [
+        "DV.P3.025 Pattern Transfer Crew",
+        "DV.P3.030 Attention Filter Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.035.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.035.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.035.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.035.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.035.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.035.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.035.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.035.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.035.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.036",
+      "crew_name": "Working Memory Budget Crew",
+      "family_anchor": "103. Attention Management & Cognitive Workspace",
+      "mission": "Manage active context size so the system preserves the right context without overloading prompts, model calls, or runtime memory.",
+      "triggers": [
+        "memory budget",
+        "context size",
+        "too much context",
+        "efficient recall"
+      ],
+      "primary_outputs": [
+        "working_memory_budget.md",
+        "active_context_budget.json",
+        "context_trim_recommendations.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.010 Context Injection Crew",
+        "DV.P3.014 Recall Filter Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.036.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.036.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.036.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.036.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.036.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.036.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.036.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.036.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.036.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.037",
+      "crew_name": "Personal Archive Intake Crew",
+      "family_anchor": "107. Personal Archive, Vaults & Shelving Systems",
+      "mission": "Decide what should be archived into personal/project shelves, what should stay active, and what should be ignored.",
+      "triggers": [
+        "archive this",
+        "save this",
+        "shelf this",
+        "vault",
+        "file away"
+      ],
+      "primary_outputs": [
+        "archive_intake_record.json",
+        "shelf_assignment_notes.md",
+        "archive_or_ignore_decision.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.038 Vault Structure Crew",
+        "DV.P3.039 Archive Classification Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.037.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.037.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.037.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.037.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.037.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.037.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.037.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.037.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.037.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.038",
+      "crew_name": "Vault Structure Crew",
+      "family_anchor": "107. Personal Archive, Vaults & Shelving Systems",
+      "mission": "Define vaults, shelves, cabinets, project folders, save piles, and retrieval paths for durable stored knowledge.",
+      "triggers": [
+        "vault structure",
+        "shelf system",
+        "cabinet",
+        "save pile",
+        "archive map"
+      ],
+      "primary_outputs": [
+        "vault_structure_map.json",
+        "shelf_taxonomy.md",
+        "retrieval_path_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.039 Archive Classification Crew",
+        "DV.P3.040 Retrieval Pathway Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.038.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.038.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.038.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.038.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.038.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.038.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.038.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.038.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.038.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.039",
+      "crew_name": "Archive Classification Crew",
+      "family_anchor": "107. Personal Archive, Vaults & Shelving Systems",
+      "mission": "Classify archive items by project, type, durability, relevance, sensitivity, and future retrieval trigger.",
+      "triggers": [
+        "classify archive",
+        "archive category",
+        "shelf taxonomy",
+        "metadata"
+      ],
+      "primary_outputs": [
+        "archive_classification_record.json",
+        "archive_metadata.md",
+        "shelf_tag_index.json"
+      ],
+      "handoff_targets": [
+        "DV.P3.038 Vault Structure Crew",
+        "DV.P3.043 Historical Thread Linking Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.039.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.039.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.039.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.039.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.039.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.039.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.039.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.039.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.039.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.040",
+      "crew_name": "Retrieval Pathway Crew",
+      "family_anchor": "107. Personal Archive, Vaults & Shelving Systems",
+      "mission": "Create retrieval pathways so saved knowledge can be found by phrase, project, family, pack, date, task type, or trigger.",
+      "triggers": [
+        "retrieve",
+        "find saved",
+        "where did we put",
+        "archive search"
+      ],
+      "primary_outputs": [
+        "retrieval_pathway_index.json",
+        "search_trigger_map.md",
+        "archive_lookup_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.014 Recall Filter Crew",
+        "DV.P3.044 Master Catalog Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.040.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.040.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.040.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.040.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.040.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.040.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.040.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.040.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.040.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.041",
+      "crew_name": "Continuity Archive Crew",
+      "family_anchor": "107. Personal Archive, Vaults & Shelving Systems",
+      "mission": "Archive compact continuity records for long-running work so future runs can resume from a clean bridge instead of rereading everything.",
+      "triggers": [
+        "continuity archive",
+        "save progress",
+        "thread bridge",
+        "resume later"
+      ],
+      "primary_outputs": [
+        "continuity_archive_record.md",
+        "thread_bridge_archive.json",
+        "resume_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.009 Context Compression Crew",
+        "DV.P3.043 Historical Thread Linking Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.041.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.041.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.041.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.041.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.041.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.041.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.041.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.041.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.041.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.042",
+      "crew_name": "Access Boundary Crew",
+      "family_anchor": "107. Personal Archive, Vaults & Shelving Systems",
+      "mission": "Mark archive items by access boundary, privacy sensitivity, user-only scope, project-only scope, or safe-to-use-in-output status.",
+      "triggers": [
+        "access boundary",
+        "private archive",
+        "sensitive",
+        "safe to use"
+      ],
+      "primary_outputs": [
+        "archive_access_boundary.json",
+        "sensitivity_tags.md",
+        "safe_use_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.013 Recall Permission Crew",
+        "DV.P3.018 Memory Audit Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.042.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.042.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.042.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.042.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.042.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.042.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.042.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.042.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.042.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.043",
+      "crew_name": "Historical Thread Linking Crew",
+      "family_anchor": "175. Master Archive / Library of Alexandria",
+      "mission": "Link related historical threads, correction sequences, lock reports, prompts, project states, and implementation milestones.",
+      "triggers": [
+        "historical link",
+        "connect threads",
+        "correction history",
+        "project history"
+      ],
+      "primary_outputs": [
+        "historical_thread_links.json",
+        "related_history_notes.md",
+        "correction_sequence_map.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.026 Cross-Project Lesson Crew",
+        "DV.P3.044 Master Catalog Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.043.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.043.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.043.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.043.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.043.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.043.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.043.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.043.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.043.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.044",
+      "crew_name": "Master Catalog Crew",
+      "family_anchor": "175. Master Archive / Library of Alexandria",
+      "mission": "Maintain the master catalog of durable assets, overlays, packs, reports, validators, runtime milestones, and archive shelves.",
+      "triggers": [
+        "master catalog",
+        "library index",
+        "archive catalog",
+        "Alexandria"
+      ],
+      "primary_outputs": [
+        "master_catalog_index.json",
+        "alexandria_catalog.md",
+        "durable_asset_registry.json"
+      ],
+      "handoff_targets": [
+        "DV.P3.040 Retrieval Pathway Crew",
+        "DV.P3.045 Source Preservation Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.044.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.044.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.044.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.044.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.044.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.044.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.044.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.044.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.044.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.045",
+      "crew_name": "Source Preservation Crew",
+      "family_anchor": "175. Master Archive / Library of Alexandria",
+      "mission": "Preserve source-of-truth records, commit hashes, validator outputs, user decisions, correction prompts, and final lock artifacts.",
+      "triggers": [
+        "preserve source",
+        "source of truth",
+        "commit hash",
+        "validator output",
+        "final lock"
+      ],
+      "primary_outputs": [
+        "source_preservation_record.json",
+        "proof_artifact_index.md",
+        "source_of_truth_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.016 Memory Lock Crew",
+        "DV.P3.044 Master Catalog Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.045.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.045.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.045.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.045.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.045.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.045.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.045.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.045.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.045.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.046",
+      "crew_name": "Archive Retrieval QA Crew",
+      "family_anchor": "175. Master Archive / Library of Alexandria",
+      "mission": "Verify that retrieved archive items are relevant, current, correctly scoped, and not misleading before they enter active context.",
+      "triggers": [
+        "archive QA",
+        "retrieval check",
+        "verify archive",
+        "misleading memory"
+      ],
+      "primary_outputs": [
+        "archive_retrieval_qa.md",
+        "archive_relevance_score.json",
+        "retrieval_warning_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.014 Recall Filter Crew",
+        "DV.P3.018 Memory Audit Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.046.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.046.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.046.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.046.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.046.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.046.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.046.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.046.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.046.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.047",
+      "crew_name": "Archive Continuity Lock Crew",
+      "family_anchor": "175. Master Archive / Library of Alexandria",
+      "mission": "Lock completed continuity milestones so future work can resume from validated baseline states rather than informal memory.",
+      "triggers": [
+        "continuity lock",
+        "baseline state",
+        "lock milestone",
+        "resume baseline"
+      ],
+      "primary_outputs": [
+        "archive_continuity_lock.md",
+        "baseline_state_record.json",
+        "locked_resume_point.md"
+      ],
+      "handoff_targets": [
+        "DV.P3.041 Continuity Archive Crew",
+        "DV.P3.045 Source Preservation Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.047.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.047.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.047.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.047.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.047.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.047.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.047.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.047.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.047.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P3.048",
+      "crew_name": "Alexandria Librarian Crew",
+      "family_anchor": "175. Master Archive / Library of Alexandria",
+      "mission": "Serve as the master librarian for the Agent Command Center, deciding where knowledge belongs, how it is found, and how it stays usable without flooding active work.",
+      "triggers": [
+        "librarian",
+        "library of Alexandria",
+        "where does this go",
+        "archive governance",
+        "master archive"
+      ],
+      "primary_outputs": [
+        "librarian_decision.md",
+        "archive_governance_notes.md",
+        "knowledge_placement_record.json"
+      ],
+      "handoff_targets": [
+        "DV.P3.037 Personal Archive Intake Crew",
+        "DV.P3.044 Master Catalog Crew",
+        "DV.P3.046 Archive Retrieval QA Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P3.048.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P3.048.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P3.048.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P3.048.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P3.048.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P3.048.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P3.048.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P3.048.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P3.048.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    }
+  ]
+}
