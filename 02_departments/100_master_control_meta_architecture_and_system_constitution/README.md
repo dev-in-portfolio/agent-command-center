@@ -47,7 +47,7 @@
 
 ### 100.8 System Integrity Review
 - 100.8.1 Integrity Signal Collection
-- 100.8.2 Drift and Conflict Review
+- 100.8.2 Drift And Conflict Review
 - 100.8.3 Integrity Correction Plan
 
 ### 100.9 Constitutional Changelog
