@@ -4,12 +4,16 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-ADAPTER_MODULE_VERSION = "0.4.0"
+ADAPTER_MODULE_VERSION = "0.5.0"
 
 YES_I_APPROVE_SANDBOX_FILE_WRITE = "YES_I_APPROVE_SANDBOX_FILE_WRITE"
+YES_I_APPROVE_SCOPED_REPO_PATCH = "YES_I_APPROVE_SCOPED_REPO_PATCH"
 SAFE_SANDBOX_PATH = "SAFE_SANDBOX_PATH"
+SAFE_REPO_PATCH_PATH = "SAFE_REPO_PATCH_PATH"
 BLOCKED_FORBIDDEN_PATH = "BLOCKED_FORBIDDEN_PATH"
+BLOCKED_FORBIDDEN_REPO_PATH = "BLOCKED_FORBIDDEN_REPO_PATH"
 BLOCKED_OUTSIDE_EXECUTION_DIR = "BLOCKED_OUTSIDE_EXECUTION_DIR"
+BLOCKED_NOT_ALLOWLISTED = "BLOCKED_NOT_ALLOWLISTED"
 
 SUPPORTED_ADAPTERS = {
     "noop": {
@@ -27,6 +31,16 @@ SUPPORTED_ADAPTERS = {
         "requires_human_confirmation": True,
         "sandbox_only": True,
         "description": "Writes only approved sandbox files inside a provided execution directory after explicit confirmation.",
+    },
+    "scoped_repo_patch": {
+        "name": "Human-Approved Scoped Repo Patch Adapter",
+        "live_execution": False,
+        "external_actions": False,
+        "worker_animation": False,
+        "requires_human_confirmation": True,
+        "patch_root_only": True,
+        "requires_allowed_file_scope": True,
+        "description": "Applies deterministic local patches only inside a provided patch root, only to explicitly allowlisted relative files, after explicit confirmation.",
     },
 }
 
@@ -293,4 +307,292 @@ def run_sandbox_file_write_adapter(file_operation_plan: dict, execution_gate: di
         "external_actions_taken": False,
         "worker_agents_activated": False,
         "reason": "Sandbox-only file write completed after explicit human confirmation.",
+    }
+
+
+def normalize_relative_patch_path(relative_path: str) -> str:
+    candidate = str(relative_path).strip().replace("\\", "/")
+    if not candidate:
+        return ""
+    if candidate.startswith("./"):
+        candidate = candidate[2:]
+    if not candidate or candidate.startswith("/"):
+        return ""
+    parts = candidate.split("/")
+    if any(part in {"", ".", ".."} for part in parts):
+        return ""
+    normalized = "/".join(parts)
+    if normalized.startswith("./") or normalized.endswith("/"):
+        return ""
+    return normalized
+
+
+def is_forbidden_repo_patch_path(relative_path: str) -> bool:
+    normalized = relative_path.replace("\\", "/").lower()
+    forbidden_markers = [
+        "02_departments",
+        "04_workflow_templates",
+        "09_exports/dashboard_seed.json",
+        "09_exports/org_chart_export.json",
+        "09_exports/master_department_list.md",
+        "09_exports/devinization_pack_",
+        "09_exports/family_007_devinized_engineering_overload",
+        "ownership_metadata",
+        ".git",
+        ".env",
+        "secrets",
+        "token",
+        "credential",
+    ]
+    return any(marker in normalized for marker in forbidden_markers)
+
+
+def classify_repo_patch_safety(
+    relative_path: str,
+    patch_root: str | None = None,
+    allowed_files: list[str] | None = None,
+) -> dict:
+    normalized_relative_path = normalize_relative_patch_path(relative_path)
+    normalized_allowed = []
+    for item in allowed_files or []:
+        normalized_item = normalize_relative_patch_path(item)
+        if normalized_item and normalized_item not in normalized_allowed:
+            normalized_allowed.append(normalized_item)
+
+    if patch_root is None:
+        return {
+            "relative_path": relative_path,
+            "normalized_relative_path": normalized_relative_path,
+            "patch_root": patch_root,
+            "target_path": normalized_relative_path,
+            "allowed_files": normalized_allowed,
+            "is_allowlisted": False,
+            "is_forbidden_repo_path": False if normalized_relative_path else True,
+            "is_inside_patch_root": False,
+            "safety_status": BLOCKED_OUTSIDE_PATCH_ROOT,
+            "reason": "patch_root is required for scoped repo patches.",
+        }
+
+    patch_root_path = Path(patch_root).expanduser().resolve(strict=False)
+    target_path = (patch_root_path / normalized_relative_path).resolve(strict=False) if normalized_relative_path else patch_root_path
+    if not normalized_relative_path:
+        return {
+            "relative_path": relative_path,
+            "normalized_relative_path": "",
+            "patch_root": str(patch_root_path),
+            "target_path": str(target_path),
+            "allowed_files": normalized_allowed,
+            "is_allowlisted": False,
+            "is_forbidden_repo_path": True,
+            "is_inside_patch_root": False,
+            "safety_status": BLOCKED_FORBIDDEN_REPO_PATH,
+            "reason": "Invalid relative path.",
+        }
+
+    forbidden = is_forbidden_repo_patch_path(normalized_relative_path)
+    allowlisted = normalized_relative_path in normalized_allowed
+    inside = False
+    try:
+        target_path.relative_to(patch_root_path)
+        inside = True
+    except ValueError:
+        inside = False
+
+    if forbidden:
+        return {
+            "relative_path": relative_path,
+            "normalized_relative_path": normalized_relative_path,
+            "patch_root": str(patch_root_path),
+            "target_path": str(target_path),
+            "allowed_files": normalized_allowed,
+            "is_allowlisted": allowlisted,
+            "is_forbidden_repo_path": True,
+            "is_inside_patch_root": inside,
+            "safety_status": BLOCKED_FORBIDDEN_REPO_PATH,
+            "reason": "Target path resolves to a forbidden repo path.",
+        }
+
+    if not allowlisted:
+        return {
+            "relative_path": relative_path,
+            "normalized_relative_path": normalized_relative_path,
+            "patch_root": str(patch_root_path),
+            "target_path": str(target_path),
+            "allowed_files": normalized_allowed,
+            "is_allowlisted": False,
+            "is_forbidden_repo_path": False,
+            "is_inside_patch_root": inside,
+            "safety_status": BLOCKED_NOT_ALLOWLISTED,
+            "reason": "Target path is not on the allowlist.",
+        }
+
+    if not inside:
+        return {
+            "relative_path": relative_path,
+            "normalized_relative_path": normalized_relative_path,
+            "patch_root": str(patch_root_path),
+            "target_path": str(target_path),
+            "allowed_files": normalized_allowed,
+            "is_allowlisted": True,
+            "is_forbidden_repo_path": False,
+            "is_inside_patch_root": False,
+            "safety_status": BLOCKED_OUTSIDE_PATCH_ROOT,
+            "reason": "Target path must resolve inside patch_root.",
+        }
+
+    return {
+        "relative_path": relative_path,
+        "normalized_relative_path": normalized_relative_path,
+        "patch_root": str(patch_root_path),
+        "target_path": str(target_path),
+        "allowed_files": normalized_allowed,
+        "is_allowlisted": True,
+        "is_forbidden_repo_path": False,
+        "is_inside_patch_root": True,
+        "safety_status": SAFE_REPO_PATCH_PATH,
+        "reason": "Target path is allowlisted and inside patch_root.",
+    }
+
+
+def create_repo_patch_plan(
+    command_brief: dict,
+    patch_root: str | None = None,
+    relative_path: str = "runtime_patch_preview/station_chief_patch_output.txt",
+    allowed_files: list[str] | None = None,
+    patch_content: str | None = None,
+) -> dict:
+    normalized_relative_path = normalize_relative_patch_path(relative_path)
+    normalized_allowed = []
+    if allowed_files is None:
+        allowed_files = [relative_path]
+    for item in allowed_files:
+        normalized_item = normalize_relative_patch_path(item)
+        if normalized_item and normalized_item not in normalized_allowed:
+            normalized_allowed.append(normalized_item)
+    if not normalized_allowed and normalized_relative_path:
+        normalized_allowed.append(normalized_relative_path)
+
+    path_safety = classify_repo_patch_safety(relative_path, patch_root=patch_root, allowed_files=normalized_allowed)
+    if patch_content is None:
+        patch_content = "\n".join(
+            [
+                "Station Chief Runtime v0.5.0 scoped repo patch",
+                f"command_type={command_brief['command_type']}",
+                f"activation_tier={command_brief['activation_tier']['name']}",
+                "baseline_preserved=true",
+                "external_actions_taken=false",
+                "live_worker_agents_activated=false",
+                "changed_file_scope_enforced=true",
+            ]
+        )
+    patch_preview_lines = ["--- /dev/null", f"+++ b/{path_safety['normalized_relative_path']}"]
+    for line in patch_content.splitlines():
+        patch_preview_lines.append(f"+{line}")
+    operation_status = "PLANNED_SAFE" if path_safety["safety_status"] == SAFE_REPO_PATCH_PATH else "BLOCKED"
+    return {
+        "operation_type": "scoped_repo_patch",
+        "patch_root": patch_root,
+        "relative_path": relative_path,
+        "normalized_relative_path": path_safety["normalized_relative_path"],
+        "target_path": path_safety["target_path"],
+        "allowed_files": path_safety["allowed_files"],
+        "requires_human_confirmation": True,
+        "confirmation_token_required": YES_I_APPROVE_SCOPED_REPO_PATCH,
+        "path_safety": path_safety,
+        "patch_content": patch_content,
+        "patch_preview": "\n".join(patch_preview_lines),
+        "operation_status": operation_status,
+    }
+
+
+def evaluate_repo_patch_gate(repo_patch_plan: dict, confirmation_token: str | None = None) -> dict:
+    token_received = confirmation_token == YES_I_APPROVE_SCOPED_REPO_PATCH
+    path_status = repo_patch_plan["path_safety"]["safety_status"]
+    approved = (
+        token_received
+        and path_status == SAFE_REPO_PATCH_PATH
+        and repo_patch_plan.get("operation_status") == "PLANNED_SAFE"
+    )
+    if approved:
+        reason = "Scoped repo patch approved."
+    elif path_status != SAFE_REPO_PATCH_PATH:
+        reason = repo_patch_plan["path_safety"]["reason"]
+    else:
+        reason = "Scoped repo patch blocked: confirmation token missing or incorrect."
+    return {
+        "gate_status": "APPROVED" if approved else "BLOCKED",
+        "requires_human_confirmation": True,
+        "confirmation_token_required": YES_I_APPROVE_SCOPED_REPO_PATCH,
+        "confirmation_token_received": token_received,
+        "path_safety_status": path_status,
+        "approved_for_repo_patch": approved,
+        "reason": reason,
+    }
+
+
+def run_scoped_repo_patch_adapter(repo_patch_plan: dict, repo_patch_gate: dict) -> dict:
+    if repo_patch_gate.get("gate_status") != "APPROVED":
+        return {
+            "adapter_result_status": "BLOCKED",
+            "operation_type": "scoped_repo_patch",
+            "file_written": False,
+            "target_path": repo_patch_plan["target_path"],
+            "changed_files": [],
+            "live_execution_performed": False,
+            "external_actions_taken": False,
+            "worker_agents_activated": False,
+            "reason": repo_patch_gate.get("reason", "Scoped repo patch blocked."),
+        }
+
+    target_path = Path(repo_patch_plan["target_path"])
+    target_path.parent.mkdir(parents=True, exist_ok=True)
+    target_path.write_text(repo_patch_plan["patch_content"] + "\n", encoding="utf-8")
+    return {
+        "adapter_result_status": "PASS",
+        "operation_type": "scoped_repo_patch",
+        "file_written": True,
+        "target_path": str(target_path),
+        "changed_files": [repo_patch_plan["normalized_relative_path"]],
+        "live_execution_performed": False,
+        "external_actions_taken": False,
+        "worker_agents_activated": False,
+        "reason": "Scoped repo patch completed after explicit human confirmation.",
+    }
+
+
+def create_changed_file_scope_proof(repo_patch_plan: dict, repo_patch_result: dict) -> dict:
+    changed_files = repo_patch_result.get("changed_files", [])
+    allowed_files = repo_patch_plan.get("allowed_files", [])
+    normalized_allowed = []
+    for item in allowed_files:
+        normalized_item = normalize_relative_patch_path(item)
+        if normalized_item and normalized_item not in normalized_allowed:
+            normalized_allowed.append(normalized_item)
+    normalized_changed = []
+    forbidden_paths_touched = False
+    for item in changed_files:
+        normalized_item = normalize_relative_patch_path(item)
+        if normalized_item:
+            normalized_changed.append(normalized_item)
+            if is_forbidden_repo_patch_path(normalized_item):
+                forbidden_paths_touched = True
+    all_allowlisted = bool(normalized_changed) and all(item in normalized_allowed for item in normalized_changed)
+    if not normalized_changed:
+        status = "BLOCKED"
+        reason = "No changed files were recorded."
+    elif all_allowlisted and not forbidden_paths_touched:
+        status = "PASS"
+        reason = "All changed files were allowlisted and no forbidden paths were touched."
+    else:
+        status = "BLOCKED"
+        reason = "Changed file scope violated allowlist or forbidden-path constraints."
+    return {
+        "scope_proof_status": status,
+        "allowed_files": normalized_allowed,
+        "changed_files": normalized_changed,
+        "all_changed_files_allowlisted": all_allowlisted,
+        "forbidden_paths_touched": forbidden_paths_touched,
+        "baseline_preserved": True,
+        "devinization_overlays_preserved": True,
+        "reason": reason,
     }

@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v0.4.0. Locked 175-family baseline preserved.
+Station Chief Runtime upgraded to v0.5.0. Locked 175-family baseline preserved.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -9,7 +9,7 @@ Project owner, system architect, and operating-doctrine author: Devin O’Rourke
 This attribution applies to the Agent Command Center Station Chief runtime skeleton. The locked 175-family baseline remains preserved.
 
 ## Purpose
-This report documents the first runnable Station Chief runtime skeleton after the Devinization stack lock and its v0.4.0 enhancement for controlled file-operation adapters and human-confirmed execution gates.
+This report documents the first runnable Station Chief runtime skeleton after the Devinization stack lock and its v0.5.0 enhancement for human-approved scoped repo patch planning and changed-file scope enforcement.
 
 ## Files Created / Modified
 - 10_runtime/station_chief_runtime.py
@@ -21,10 +21,12 @@ This report documents the first runnable Station Chief runtime skeleton after th
 - 09_exports/station_chief_runtime_v0_2_report.md
 - 09_exports/station_chief_runtime_v0_3_report.md
 - 09_exports/station_chief_runtime_v0_4_report.md
+- 09_exports/station_chief_runtime_v0_5_report.md
 - scripts/validate_station_chief_runtime_skeleton.py
 - scripts/validate_station_chief_runtime_v0_2.py
 - scripts/validate_station_chief_runtime_v0_3.py
 - scripts/validate_station_chief_runtime_v0_4.py
+- scripts/validate_station_chief_runtime_v0_5.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -45,6 +47,10 @@ This report documents the first runnable Station Chief runtime skeleton after th
 - controlled sandbox file-operation planning
 - human-confirmed sandbox file writes
 - unsafe path blocking
+- human-approved scoped repo patch planning
+- changed-file scope enforcement
+- patch preview artifacts
+- forbidden repo path blocking
 - deterministic fixture tests
 - proof-backed JSON output
 - baseline preservation
@@ -71,6 +77,7 @@ This report documents the first runnable Station Chief runtime skeleton after th
 - Tier 4 — Audit / Archive
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v0_5.py
 python3 scripts/validate_station_chief_runtime_v0_4.py
 python3 scripts/validate_station_chief_runtime_v0_3.py
 python3 scripts/validate_station_chief_runtime_v0_2.py
@@ -90,10 +97,10 @@ python3 scripts/validate_full_expansion_completion.py
 ## What This Does Not Do
 - Does not modify the 175-family baseline
 - Does not hire or animate worker agents yet
-- Does not execute real repo work orders yet
+- Does not execute uncontrolled repo work orders
 - Does not build UI yet
 - Does not connect live APIs yet
 - Does not authorize uncontrolled live execution
 
 ## Next Recommended Build Step
-Next recommended build step: add human-approved repo patch adapters with changed-file scope enforcement.
+Next recommended build step: add validator-selected execution profiles and repo patch dry-run bundles.
