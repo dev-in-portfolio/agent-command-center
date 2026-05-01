@@ -1,0 +1,3009 @@
+{
+  "extension_id": "devinization_pack_005_quality_standards_human_review",
+  "extension_name": "Devinization Pack 5 — Quality, Standards & Human Review",
+  "mode": "overlay",
+  "preserves_locked_baseline": true,
+  "baseline_status": "175-family expansion locked",
+  "depends_on": [
+    "family_007_devinized_engineering_overload",
+    "devinization_pack_001_command_brain",
+    "devinization_pack_002_runtime_routing_work_control",
+    "devinization_pack_003_prompt_memory_context_architecture",
+    "devinization_pack_004_execution_safety_tools_recovery"
+  ],
+  "included_families": [
+    {
+      "family_id": 8,
+      "family_name": "Quality, Risk & Compliance"
+    },
+    {
+      "family_id": 32,
+      "family_name": "Evaluation & Benchmarking"
+    },
+    {
+      "family_id": 33,
+      "family_name": "Human Review & Approval Operations"
+    },
+    {
+      "family_id": 34,
+      "family_name": "Standards, Templates & Methodology"
+    },
+    {
+      "family_id": 95,
+      "family_name": "Compliance Evidence, Attestation & Regulated Deliverables"
+    },
+    {
+      "family_id": 128,
+      "family_name": "Work Product Governance & Deliverable Standards"
+    },
+    {
+      "family_id": 129,
+      "family_name": "Knowledge Quality, Currency & Source Freshness"
+    },
+    {
+      "family_id": 131,
+      "family_name": "Approval UX, Review Queues & Human Control"
+    }
+  ],
+  "purpose": "Define the quality-control layer that prevents the Station Chief runtime and future agent workforce from shipping sloppy outputs, stale information, weak evidence, missing review gates, bad templates, unclear approvals, unverified claims, incomplete deliverables, or good enough work that is not actually usable.",
+  "core_operating_philosophy": "The Agent Command Center remains a massive command civilization with selective live deployment. The whole 175-family agency remains available for awareness, routing, governance, memory, standards, review, and quality control. This pack does not shrink the art piece. This pack defines how work becomes trustworthy, reviewable, standards-compliant, evidence-backed, approval-ready, and actually useful. Created is not quality checked, and human-control boundaries remain explicit.",
+  "activation_rule": "Use this pack when the user says or implies: quality check, review this, standards, template, benchmark, evaluate, compliance, evidence, source freshness, citation check, human review, approval queue, final review, deliverable standard, is this good enough, make it professional, make it usable, check for stale info, verify sources, risk review, QA gate, approval needed, ready to ship, client-ready, portfolio-ready, regulated deliverable, attestation, no fake quality, no sloppy output.",
+  "quality_review_layers": [
+    {
+      "layer": 1,
+      "name": "Quality Gate",
+      "purpose": "Check whether the work satisfies the objective, avoids obvious defects, and meets the expected standard before review."
+    },
+    {
+      "layer": 2,
+      "name": "Standards & Template Gate",
+      "purpose": "Ensure outputs follow the correct format, template, naming convention, structure, tone, and methodology."
+    },
+    {
+      "layer": 3,
+      "name": "Evidence & Source Gate",
+      "purpose": "Verify that factual claims, citations, source freshness, proof artifacts, and regulated evidence are adequate."
+    },
+    {
+      "layer": 4,
+      "name": "Risk & Compliance Gate",
+      "purpose": "Identify compliance, safety, legal, privacy, reputation, and business risks before delivery."
+    },
+    {
+      "layer": 5,
+      "name": "Human Review Gate",
+      "purpose": "Route work to human review when judgment, approval, sensitive action, or final signoff is required."
+    },
+    {
+      "layer": 6,
+      "name": "Benchmark & Evaluation Gate",
+      "purpose": "Compare outputs against rubrics, benchmarks, prior versions, known-good examples, and measurable criteria."
+    },
+    {
+      "layer": 7,
+      "name": "Deliverable Governance Gate",
+      "purpose": "Confirm the work product is complete, usable, labeled, versioned, and ready for the intended audience."
+    },
+    {
+      "layer": 8,
+      "name": "Approval UX Gate",
+      "purpose": "Present review decisions, approval choices, change requests, and final control points clearly to the human operator."
+    }
+  ],
+  "global_rules": [
+    "1. Preserve the locked 175-family baseline unless the user explicitly authorizes baseline mutation.",
+    "2. Use overlays for Devinization unless explicitly instructed otherwise.",
+    "3. Do not treat created as quality checked.",
+    "4. Quality review must check objective fit, completeness, accuracy, formatting, evidence, and usability.",
+    "5. Standards must be explicit before judging compliance.",
+    "6. Templates are contracts when strict execution mode is active.",
+    "7. Human review is required for risky, regulated, irreversible, sensitive, or ambiguous final actions.",
+    "8. Source freshness must be checked for time-sensitive facts.",
+    "9. Evidence must be attached or cited when claims require proof.",
+    "10. Deliverables must be audience-ready, not just internally complete.",
+    "11. Approval queues must show what needs review, what passed, what failed, and what is blocked.",
+    "12. Review comments must be specific, actionable, and tied to the exact issue.",
+    "13. Benchmarks must compare against a defined rubric or known-good example.",
+    "14. Compliance evidence must preserve source, date, scope, and attestation notes.",
+    "15. Do not bury critical quality failures under mostly done.",
+    "16. Ready to ship requires quality gate, scope gate, evidence gate, and human-control gate when applicable.",
+    "17. Preserve the art piece: quality controls protect the full agency without shrinking the command civilization."
+  ],
+  "crews": [
+    {
+      "crew_id": "DV.P5.001",
+      "crew_name": "Quality Gate Crew",
+      "family_anchor": "8. Quality, Risk & Compliance",
+      "mission": "Check whether work satisfies the objective, meets expected quality, avoids obvious defects, and is ready for deeper review.",
+      "triggers": [
+        "quality gate",
+        "QA",
+        "check quality",
+        "is this good enough",
+        "review quality"
+      ],
+      "primary_outputs": [
+        "quality_gate_report.md",
+        "defect_list.json",
+        "pass_fail_quality_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.002 Risk Review Crew",
+        "DV.P5.005 Quality Failure Repair Crew",
+        "DV.P5.037 Deliverable Readiness Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.001.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.001.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.001.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.001.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.001.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.001.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.001.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.001.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.001.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.002",
+      "crew_name": "Risk Review Crew",
+      "family_anchor": "8. Quality, Risk & Compliance",
+      "mission": "Identify operational, compliance, privacy, legal, reputation, workflow, and user-trust risks in a task or deliverable.",
+      "triggers": [
+        "risk review",
+        "risk",
+        "compliance risk",
+        "user trust",
+        "privacy risk"
+      ],
+      "primary_outputs": [
+        "risk_review_report.md",
+        "risk_register.json",
+        "mitigation_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.003 Compliance Screen Crew",
+        "DV.P5.025 Evidence Requirement Crew",
+        "DV.P5.044 Approval Risk Flag Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.002.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.002.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.002.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.002.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.002.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.002.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.002.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.002.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.002.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.003",
+      "crew_name": "Compliance Screen Crew",
+      "family_anchor": "8. Quality, Risk & Compliance",
+      "mission": "Screen outputs for compliance issues, regulated claims, missing disclaimers, evidence gaps, and audience-sensitive delivery concerns.",
+      "triggers": [
+        "compliance",
+        "regulated",
+        "disclaimer",
+        "evidence gap",
+        "sensitive deliverable"
+      ],
+      "primary_outputs": [
+        "compliance_screen.md",
+        "regulated_claim_flags.json",
+        "disclaimer_recommendations.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.025 Evidence Requirement Crew",
+        "DV.P5.027 Attestation Crew",
+        "DV.P5.030 Regulated Deliverable Review Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.003.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.003.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.003.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.003.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.003.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.003.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.003.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.003.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.003.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.004",
+      "crew_name": "Accuracy Review Crew",
+      "family_anchor": "8. Quality, Risk & Compliance",
+      "mission": "Review factual accuracy, internal consistency, source support, and whether claims are framed with the correct level of certainty.",
+      "triggers": [
+        "accuracy",
+        "factual check",
+        "are you sure",
+        "verify claims",
+        "consistency"
+      ],
+      "primary_outputs": [
+        "accuracy_review.md",
+        "unsupported_claims.json",
+        "confidence_adjustment_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.031 Source Freshness Crew",
+        "DV.P5.033 Citation Integrity Crew",
+        "DV.P5.034 Knowledge Confidence Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.004.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.004.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.004.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.004.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.004.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.004.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.004.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.004.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.004.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.005",
+      "crew_name": "Quality Failure Repair Crew",
+      "family_anchor": "8. Quality, Risk & Compliance",
+      "mission": "Convert quality failures into precise repair instructions, preserving valid work and fixing only the defective areas.",
+      "triggers": [
+        "quality failed",
+        "fix quality",
+        "repair deliverable",
+        "failed review"
+      ],
+      "primary_outputs": [
+        "quality_repair_plan.md",
+        "repair_scope.json",
+        "corrected_quality_requirements.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.001 Quality Gate Crew",
+        "DV.P5.023 Template Compliance Crew",
+        "DV.P5.042 Review Comment Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.005.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.005.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.005.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.005.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.005.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.005.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.005.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.005.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.005.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.006",
+      "crew_name": "Final Quality Signoff Crew",
+      "family_anchor": "8. Quality, Risk & Compliance",
+      "mission": "Decide whether a work product is ready for final delivery, human review, revision, or blocking.",
+      "triggers": [
+        "final quality",
+        "signoff",
+        "ready to ship",
+        "approve quality"
+      ],
+      "primary_outputs": [
+        "final_quality_signoff.md",
+        "ready_or_blocked_decision.json",
+        "final_quality_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.037 Deliverable Readiness Crew",
+        "DV.P5.045 Approval Decision Crew",
+        "DV.P5.048 Human Control Lock Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.006.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.006.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.006.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.006.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.006.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.006.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.006.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.006.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.006.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.007",
+      "crew_name": "Evaluation Rubric Crew",
+      "family_anchor": "32. Evaluation & Benchmarking",
+      "mission": "Define evaluation rubrics for outputs, prompts, runtime behavior, deliverables, reports, and agent performance.",
+      "triggers": [
+        "rubric",
+        "evaluation criteria",
+        "score this",
+        "benchmark criteria"
+      ],
+      "primary_outputs": [
+        "evaluation_rubric.md",
+        "scoring_criteria.json",
+        "rubric_application_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.008 Benchmark Comparison Crew",
+        "DV.P5.010 Evaluation Evidence Crew",
+        "DV.P5.037 Deliverable Readiness Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.007.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.007.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.007.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.007.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.007.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.007.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.007.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.007.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.007.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.008",
+      "crew_name": "Benchmark Comparison Crew",
+      "family_anchor": "32. Evaluation & Benchmarking",
+      "mission": "Compare outputs against known-good examples, prior versions, locked standards, templates, or expected performance levels.",
+      "triggers": [
+        "benchmark",
+        "compare",
+        "known-good",
+        "previous version",
+        "standard example"
+      ],
+      "primary_outputs": [
+        "benchmark_comparison.md",
+        "benchmark_score.json",
+        "comparison_findings.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.007 Evaluation Rubric Crew",
+        "DV.P5.009 Regression Benchmark Crew",
+        "DV.P5.005 Quality Failure Repair Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.008.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.008.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.008.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.008.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.008.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.008.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.008.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.008.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.008.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.009",
+      "crew_name": "Regression Benchmark Crew",
+      "family_anchor": "32. Evaluation & Benchmarking",
+      "mission": "Check whether new outputs or system changes reduced quality, broke prior standards, or drifted from locked behavior.",
+      "triggers": [
+        "regression benchmark",
+        "quality regression",
+        "did it get worse",
+        "compare previous"
+      ],
+      "primary_outputs": [
+        "regression_benchmark_report.md",
+        "quality_regression_flags.json",
+        "baseline_comparison_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.008 Benchmark Comparison Crew",
+        "DV.P5.016 Methodology Drift Crew",
+        "DV.P5.037 Deliverable Readiness Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.009.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.009.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.009.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.009.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.009.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.009.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.009.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.009.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.009.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.010",
+      "crew_name": "Evaluation Evidence Crew",
+      "family_anchor": "32. Evaluation & Benchmarking",
+      "mission": "Preserve scoring evidence, evaluation notes, benchmark references, pass/fail reasons, and review artifacts.",
+      "triggers": [
+        "evaluation evidence",
+        "scoring evidence",
+        "benchmark proof",
+        "evaluation notes"
+      ],
+      "primary_outputs": [
+        "evaluation_evidence_packet.md",
+        "scoring_evidence.json",
+        "benchmark_reference_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.025 Evidence Requirement Crew",
+        "DV.P5.027 Attestation Crew",
+        "DV.P5.041 Review Queue Intake Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.010.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.010.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.010.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.010.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.010.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.010.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.010.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.010.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.010.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.011",
+      "crew_name": "Agent Performance Review Crew",
+      "family_anchor": "32. Evaluation & Benchmarking",
+      "mission": "Evaluate agent behavior for usefulness, scope discipline, output quality, tool efficiency, and ability to follow Devin-specific operating rules.",
+      "triggers": [
+        "agent performance",
+        "evaluate agent",
+        "did agent behave",
+        "tool efficiency"
+      ],
+      "primary_outputs": [
+        "agent_performance_review.md",
+        "behavior_scorecard.json",
+        "improvement_recommendations.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.012 Evaluation Failure Crew",
+        "DV.P5.040 Governance Feedback Crew",
+        "DV.P5.044 Approval Risk Flag Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.011.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.011.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.011.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.011.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.011.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.011.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.011.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.011.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.011.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.012",
+      "crew_name": "Evaluation Failure Crew",
+      "family_anchor": "32. Evaluation & Benchmarking",
+      "mission": "Convert failed evaluations into precise corrective action, benchmark changes, prompt repairs, or human review routing.",
+      "triggers": [
+        "failed evaluation",
+        "failed benchmark",
+        "poor score",
+        "needs improvement"
+      ],
+      "primary_outputs": [
+        "evaluation_failure_report.md",
+        "corrective_action_plan.md",
+        "reevaluation_requirements.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.005 Quality Failure Repair Crew",
+        "DV.P5.042 Review Comment Crew",
+        "DV.P5.045 Approval Decision Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.012.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.012.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.012.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.012.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.012.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.012.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.012.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.012.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.012.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.013",
+      "crew_name": "Human Review Routing Crew",
+      "family_anchor": "33. Human Review & Approval Operations",
+      "mission": "Route tasks, outputs, external actions, and deliverables to human review when judgment, sensitivity, approval, or risk requires it.",
+      "triggers": [
+        "human review",
+        "needs approval",
+        "review required",
+        "route to Devin"
+      ],
+      "primary_outputs": [
+        "human_review_route.md",
+        "review_required_flag.json",
+        "review_reason_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.041 Review Queue Intake Crew",
+        "DV.P5.044 Approval Risk Flag Crew",
+        "DV.P5.045 Approval Decision Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.013.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.013.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.013.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.013.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.013.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.013.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.013.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.013.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.013.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.014",
+      "crew_name": "Review Packet Assembly Crew",
+      "family_anchor": "33. Human Review & Approval Operations",
+      "mission": "Assemble review packets with objective, output, changes, evidence, risks, unresolved questions, and recommended decision.",
+      "triggers": [
+        "review packet",
+        "send to review",
+        "approval packet",
+        "final review packet"
+      ],
+      "primary_outputs": [
+        "review_packet.md",
+        "review_evidence_bundle.json",
+        "recommended_decision.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.041 Review Queue Intake Crew",
+        "DV.P5.043 Change Request Crew",
+        "DV.P5.046 Approval Record Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.014.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.014.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.014.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.014.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.014.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.014.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.014.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.014.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.014.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.015",
+      "crew_name": "Human Feedback Capture Crew",
+      "family_anchor": "33. Human Review & Approval Operations",
+      "mission": "Capture human feedback, approvals, requested changes, objections, corrections, and final decision notes.",
+      "triggers": [
+        "feedback",
+        "change request",
+        "approved",
+        "rejected",
+        "revise"
+      ],
+      "primary_outputs": [
+        "human_feedback_record.json",
+        "requested_changes.md",
+        "approval_feedback_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.043 Change Request Crew",
+        "DV.P5.046 Approval Record Crew",
+        "DV.P5.005 Quality Failure Repair Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.015.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.015.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.015.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.015.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.015.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.015.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.015.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.015.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.015.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.016",
+      "crew_name": "Review Escalation Crew",
+      "family_anchor": "33. Human Review & Approval Operations",
+      "mission": "Escalate unclear, high-risk, disputed, or blocked review items to the correct governance or approval layer.",
+      "triggers": [
+        "escalate review",
+        "disputed",
+        "high risk",
+        "unclear approval"
+      ],
+      "primary_outputs": [
+        "review_escalation.md",
+        "escalation_reason.json",
+        "escalation_target_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.013 Human Review Routing Crew",
+        "DV.P5.044 Approval Risk Flag Crew",
+        "DV.P5.048 Human Control Lock Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.016.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.016.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.016.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.016.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.016.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.016.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.016.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.016.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.016.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.017",
+      "crew_name": "Approval Boundary Crew",
+      "family_anchor": "33. Human Review & Approval Operations",
+      "mission": "Define what the system may approve automatically and what must remain under human control.",
+      "triggers": [
+        "approval boundary",
+        "auto approve",
+        "human control",
+        "approval rule"
+      ],
+      "primary_outputs": [
+        "approval_boundary_policy.md",
+        "auto_approval_rules.json",
+        "human_required_rules.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.045 Approval Decision Crew",
+        "DV.P5.048 Human Control Lock Crew",
+        "DV.P5.044 Approval Risk Flag Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.017.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.017.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.017.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.017.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.017.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.017.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.017.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.017.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.017.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.018",
+      "crew_name": "Review Closure Crew",
+      "family_anchor": "33. Human Review & Approval Operations",
+      "mission": "Close review loops by recording decisions, final changes, unresolved items, and whether the deliverable is approved, blocked, or revision-ready.",
+      "triggers": [
+        "close review",
+        "review complete",
+        "approval complete",
+        "final decision"
+      ],
+      "primary_outputs": [
+        "review_closure_record.md",
+        "final_review_status.json",
+        "unresolved_review_items.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.046 Approval Record Crew",
+        "DV.P5.006 Final Quality Signoff Crew",
+        "DV.P5.037 Deliverable Readiness Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.018.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.018.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.018.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.018.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.018.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.018.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.018.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.018.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.018.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.019",
+      "crew_name": "Standards Registry Crew",
+      "family_anchor": "34. Standards, Templates & Methodology",
+      "mission": "Maintain standards for format, naming, tone, structure, evidence, versioning, output type, and project-specific methodology.",
+      "triggers": [
+        "standards",
+        "style guide",
+        "method",
+        "naming convention",
+        "output standard"
+      ],
+      "primary_outputs": [
+        "standards_registry.json",
+        "methodology_notes.md",
+        "output_standard_index.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.020 Template Contract Crew",
+        "DV.P5.023 Template Compliance Crew",
+        "DV.P5.038 Version / Label Governance Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.019.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.019.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.019.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.019.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.019.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.019.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.019.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.019.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.019.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.020",
+      "crew_name": "Template Contract Crew",
+      "family_anchor": "34. Standards, Templates & Methodology",
+      "mission": "Treat templates as contracts when required, preserving section order, labels, placeholders, and exact user-specified format.",
+      "triggers": [
+        "template contract",
+        "exact template",
+        "Square Block Square Hole",
+        "do not rearrange"
+      ],
+      "primary_outputs": [
+        "template_contract_rules.md",
+        "required_section_map.json",
+        "forbidden_template_changes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.023 Template Compliance Crew",
+        "DV.P5.021 Methodology Selection Crew",
+        "DV.P5.005 Quality Failure Repair Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.020.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.020.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.020.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.020.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.020.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.020.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.020.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.020.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.020.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.021",
+      "crew_name": "Methodology Selection Crew",
+      "family_anchor": "34. Standards, Templates & Methodology",
+      "mission": "Choose the correct methodology for the task: audit, build, repair, research, validation, documentation, report, or prompt-writing.",
+      "triggers": [
+        "methodology",
+        "how should we do this",
+        "process",
+        "workflow type"
+      ],
+      "primary_outputs": [
+        "methodology_selection.md",
+        "selected_method.json",
+        "methodology_rationale.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.019 Standards Registry Crew",
+        "DV.P5.022 Methodology QA Crew",
+        "DV.P5.007 Evaluation Rubric Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.021.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.021.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.021.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.021.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.021.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.021.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.021.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.021.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.021.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.022",
+      "crew_name": "Methodology QA Crew",
+      "family_anchor": "34. Standards, Templates & Methodology",
+      "mission": "Check whether the chosen method fits the task and whether the system skipped necessary steps.",
+      "triggers": [
+        "methodology QA",
+        "wrong method",
+        "skipped step",
+        "process check"
+      ],
+      "primary_outputs": [
+        "methodology_qa_report.md",
+        "skipped_step_flags.json",
+        "method_correction_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.021 Methodology Selection Crew",
+        "DV.P5.012 Evaluation Failure Crew",
+        "DV.P5.001 Quality Gate Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.022.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.022.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.022.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.022.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.022.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.022.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.022.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.022.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.022.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.023",
+      "crew_name": "Template Compliance Crew",
+      "family_anchor": "34. Standards, Templates & Methodology",
+      "mission": "Verify outputs match required templates, formatting rules, table structures, headings, naming conventions, and exact prompt/report patterns.",
+      "triggers": [
+        "template compliance",
+        "format check",
+        "heading check",
+        "naming check"
+      ],
+      "primary_outputs": [
+        "template_compliance_report.md",
+        "format_deviation_list.json",
+        "corrected_template_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.020 Template Contract Crew",
+        "DV.P5.037 Deliverable Readiness Crew",
+        "DV.P5.005 Quality Failure Repair Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.023.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.023.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.023.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.023.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.023.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.023.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.023.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.023.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.023.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.024",
+      "crew_name": "Reusable Standard Crew",
+      "family_anchor": "34. Standards, Templates & Methodology",
+      "mission": "Identify reusable standards, templates, rubrics, validation patterns, review forms, and delivery formats for future work.",
+      "triggers": [
+        "reusable standard",
+        "save template",
+        "standardize this",
+        "repeatable format"
+      ],
+      "primary_outputs": [
+        "reusable_standard_record.json",
+        "standard_template_notes.md",
+        "future_reuse_index.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.019 Standards Registry Crew",
+        "DV.P5.010 Evaluation Evidence Crew",
+        "DV.P5.038 Version / Label Governance Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.024.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.024.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.024.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.024.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.024.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.024.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.024.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.024.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.024.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.025",
+      "crew_name": "Evidence Requirement Crew",
+      "family_anchor": "95. Compliance Evidence, Attestation & Regulated Deliverables",
+      "mission": "Define what evidence is required for claims, compliance-sensitive content, regulated deliverables, and final reports.",
+      "triggers": [
+        "evidence required",
+        "proof required",
+        "compliance evidence",
+        "citation needed"
+      ],
+      "primary_outputs": [
+        "evidence_requirements.md",
+        "required_proof_map.json",
+        "evidence_gap_report.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.026 Evidence Collection Crew",
+        "DV.P5.027 Attestation Crew",
+        "DV.P5.030 Regulated Deliverable Review Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.025.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.025.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.025.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.025.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.025.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.025.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.025.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.025.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.025.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.026",
+      "crew_name": "Evidence Collection Crew",
+      "family_anchor": "95. Compliance Evidence, Attestation & Regulated Deliverables",
+      "mission": "Collect or reference evidence artifacts, citations, validator output, screenshots, source files, commit hashes, and proof notes.",
+      "triggers": [
+        "collect evidence",
+        "proof artifact",
+        "citation",
+        "validator output",
+        "commit proof"
+      ],
+      "primary_outputs": [
+        "evidence_collection_packet.md",
+        "proof_artifact_manifest.json",
+        "citation_source_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.027 Attestation Crew",
+        "DV.P5.033 Citation Integrity Crew",
+        "DV.P5.046 Approval Record Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.026.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.026.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.026.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.026.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.026.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.026.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.026.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.026.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.026.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.027",
+      "crew_name": "Attestation Crew",
+      "family_anchor": "95. Compliance Evidence, Attestation & Regulated Deliverables",
+      "mission": "Create attestation notes that state what was checked, what evidence supports it, what remains uncertain, and what the system can honestly claim.",
+      "triggers": [
+        "attestation",
+        "certify",
+        "what was checked",
+        "evidence statement"
+      ],
+      "primary_outputs": [
+        "attestation_note.md",
+        "checked_items.json",
+        "uncertainty_statement.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.030 Regulated Deliverable Review Crew",
+        "DV.P5.006 Final Quality Signoff Crew",
+        "DV.P5.041 Review Queue Intake Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.027.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.027.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.027.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.027.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.027.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.027.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.027.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.027.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.027.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.028",
+      "crew_name": "Regulated Language Crew",
+      "family_anchor": "95. Compliance Evidence, Attestation & Regulated Deliverables",
+      "mission": "Review regulated, insurance, financial, legal, medical, safety, or compliance-sensitive wording for unsupported claims or risky phrasing.",
+      "triggers": [
+        "regulated language",
+        "insurance",
+        "financial",
+        "legal",
+        "risky wording"
+      ],
+      "primary_outputs": [
+        "regulated_language_review.md",
+        "risky_phrase_flags.json",
+        "safer_language_suggestions.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.003 Compliance Screen Crew",
+        "DV.P5.030 Regulated Deliverable Review Crew",
+        "DV.P5.044 Approval Risk Flag Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.028.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.028.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.028.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.028.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.028.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.028.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.028.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.028.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.028.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.029",
+      "crew_name": "Disclaimer & Scope Note Crew",
+      "family_anchor": "95. Compliance Evidence, Attestation & Regulated Deliverables",
+      "mission": "Add or recommend disclaimers, scope notes, uncertainty statements, review-needed flags, and audience-appropriate boundaries.",
+      "triggers": [
+        "disclaimer",
+        "scope note",
+        "uncertainty",
+        "not legal advice",
+        "review needed"
+      ],
+      "primary_outputs": [
+        "disclaimer_recommendations.md",
+        "scope_note_text.md",
+        "uncertainty_flags.json"
+      ],
+      "handoff_targets": [
+        "DV.P5.028 Regulated Language Crew",
+        "DV.P5.037 Deliverable Readiness Crew",
+        "DV.P5.045 Approval Decision Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.029.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.029.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.029.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.029.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.029.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.029.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.029.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.029.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.029.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.030",
+      "crew_name": "Regulated Deliverable Review Crew",
+      "family_anchor": "95. Compliance Evidence, Attestation & Regulated Deliverables",
+      "mission": "Review deliverables that may be used externally, professionally, commercially, or in regulated settings before they are marked ready.",
+      "triggers": [
+        "regulated deliverable",
+        "client-facing",
+        "professional use",
+        "compliance review"
+      ],
+      "primary_outputs": [
+        "regulated_deliverable_review.md",
+        "external_use_risk_notes.md",
+        "approval_required_flags.json"
+      ],
+      "handoff_targets": [
+        "DV.P5.013 Human Review Routing Crew",
+        "DV.P5.027 Attestation Crew",
+        "DV.P5.006 Final Quality Signoff Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.030.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.030.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.030.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.030.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.030.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.030.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.030.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.030.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.030.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.031",
+      "crew_name": "Source Freshness Crew",
+      "family_anchor": "129. Knowledge Quality, Currency & Source Freshness",
+      "mission": "Determine whether information requires fresh verification and flag stale, time-sensitive, or source-dependent claims.",
+      "triggers": [
+        "source freshness",
+        "stale info",
+        "current info",
+        "latest",
+        "verify date"
+      ],
+      "primary_outputs": [
+        "source_freshness_report.md",
+        "stale_claim_flags.json",
+        "freshness_verification_plan.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.032 Knowledge Currency Crew",
+        "DV.P5.033 Citation Integrity Crew",
+        "DV.P5.004 Accuracy Review Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.031.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.031.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.031.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.031.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.031.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.031.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.031.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.031.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.031.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.032",
+      "crew_name": "Knowledge Currency Crew",
+      "family_anchor": "129. Knowledge Quality, Currency & Source Freshness",
+      "mission": "Track whether knowledge is current, outdated, uncertain, evergreen, or requires online/source verification before use.",
+      "triggers": [
+        "knowledge currency",
+        "outdated",
+        "evergreen",
+        "changed recently"
+      ],
+      "primary_outputs": [
+        "knowledge_currency_record.json",
+        "current_or_stale_notes.md",
+        "verification_needed_list.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.031 Source Freshness Crew",
+        "DV.P5.034 Knowledge Confidence Crew",
+        "DV.P5.026 Evidence Collection Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.032.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.032.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.032.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.032.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.032.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.032.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.032.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.032.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.032.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.033",
+      "crew_name": "Citation Integrity Crew",
+      "family_anchor": "129. Knowledge Quality, Currency & Source Freshness",
+      "mission": "Verify that citations, file references, source notes, or evidence links actually support the claims they are attached to.",
+      "triggers": [
+        "citation check",
+        "source support",
+        "verify citation",
+        "evidence link"
+      ],
+      "primary_outputs": [
+        "citation_integrity_report.md",
+        "unsupported_citation_flags.json",
+        "citation_fix_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.004 Accuracy Review Crew",
+        "DV.P5.026 Evidence Collection Crew",
+        "DV.P5.027 Attestation Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.033.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.033.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.033.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.033.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.033.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.033.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.033.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.033.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.033.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.034",
+      "crew_name": "Knowledge Confidence Crew",
+      "family_anchor": "129. Knowledge Quality, Currency & Source Freshness",
+      "mission": "Assign confidence levels to claims based on evidence strength, source quality, freshness, and uncertainty.",
+      "triggers": [
+        "confidence",
+        "how sure",
+        "claim strength",
+        "uncertainty"
+      ],
+      "primary_outputs": [
+        "knowledge_confidence_report.md",
+        "confidence_scores.json",
+        "uncertainty_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.004 Accuracy Review Crew",
+        "DV.P5.027 Attestation Crew",
+        "DV.P5.037 Deliverable Readiness Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.034.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.034.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.034.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.034.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.034.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.034.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.034.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.034.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.034.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.035",
+      "crew_name": "Source Gap Crew",
+      "family_anchor": "129. Knowledge Quality, Currency & Source Freshness",
+      "mission": "Identify missing sources, weak sources, stale references, unsupported details, and facts that require verification before delivery.",
+      "triggers": [
+        "source gap",
+        "missing source",
+        "weak source",
+        "unsupported"
+      ],
+      "primary_outputs": [
+        "source_gap_report.md",
+        "missing_source_list.json",
+        "verification_request_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.025 Evidence Requirement Crew",
+        "DV.P5.031 Source Freshness Crew",
+        "DV.P5.042 Review Comment Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.035.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.035.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.035.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.035.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.035.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.035.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.035.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.035.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.035.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.036",
+      "crew_name": "Freshness Lock Crew",
+      "family_anchor": "129. Knowledge Quality, Currency & Source Freshness",
+      "mission": "Record when knowledge was verified, what source supported it, and when it should be rechecked.",
+      "triggers": [
+        "freshness lock",
+        "verified date",
+        "recheck date",
+        "source lock"
+      ],
+      "primary_outputs": [
+        "freshness_lock_record.json",
+        "verified_source_summary.md",
+        "recheck_schedule_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.026 Evidence Collection Crew",
+        "DV.P5.027 Attestation Crew",
+        "DV.P5.038 Version / Label Governance Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.036.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.036.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.036.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.036.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.036.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.036.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.036.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.036.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.036.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.037",
+      "crew_name": "Deliverable Readiness Crew",
+      "family_anchor": "128. Work Product Governance & Deliverable Standards",
+      "mission": "Check whether a deliverable is complete, usable, audience-ready, labeled, formatted, versioned, and supported by proof.",
+      "triggers": [
+        "deliverable ready",
+        "ready to ship",
+        "client-ready",
+        "portfolio-ready",
+        "final deliverable"
+      ],
+      "primary_outputs": [
+        "deliverable_readiness_report.md",
+        "readiness_checklist.json",
+        "final_delivery_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.006 Final Quality Signoff Crew",
+        "DV.P5.039 Packaging Standard Crew",
+        "DV.P5.045 Approval Decision Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.037.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.037.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.037.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.037.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.037.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.037.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.037.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.037.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.037.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.038",
+      "crew_name": "Version / Label Governance Crew",
+      "family_anchor": "128. Work Product Governance & Deliverable Standards",
+      "mission": "Ensure files, reports, packs, artifacts, and deliverables use clear versioning, labels, commit references, and naming conventions.",
+      "triggers": [
+        "version",
+        "label",
+        "naming",
+        "file name",
+        "release label"
+      ],
+      "primary_outputs": [
+        "version_label_report.md",
+        "naming_convention_check.json",
+        "version_manifest_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.019 Standards Registry Crew",
+        "DV.P5.037 Deliverable Readiness Crew",
+        "DV.P5.046 Approval Record Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.038.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.038.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.038.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.038.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.038.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.038.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.038.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.038.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.038.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.039",
+      "crew_name": "Packaging Standard Crew",
+      "family_anchor": "128. Work Product Governance & Deliverable Standards",
+      "mission": "Define how deliverables should be packaged for internal use, client use, portfolio use, handoff, or future runtime integration.",
+      "triggers": [
+        "package deliverable",
+        "handoff",
+        "portfolio packaging",
+        "client package"
+      ],
+      "primary_outputs": [
+        "packaging_standard.md",
+        "deliverable_package_manifest.json",
+        "handoff_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.037 Deliverable Readiness Crew",
+        "DV.P5.041 Review Queue Intake Crew",
+        "DV.P5.045 Approval Decision Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.039.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.039.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.039.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.039.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.039.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.039.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.039.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.039.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.039.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.040",
+      "crew_name": "Governance Feedback Crew",
+      "family_anchor": "128. Work Product Governance & Deliverable Standards",
+      "mission": "Feed review results, failure patterns, approval outcomes, and standards changes back into future deliverable governance.",
+      "triggers": [
+        "governance feedback",
+        "lessons learned",
+        "standards update",
+        "review outcome"
+      ],
+      "primary_outputs": [
+        "governance_feedback_report.md",
+        "standards_update_recommendations.json",
+        "future_quality_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.019 Standards Registry Crew",
+        "DV.P5.011 Agent Performance Review Crew",
+        "DV.P5.024 Reusable Standard Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.040.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.040.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.040.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.040.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.040.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.040.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.040.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.040.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.040.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.041",
+      "crew_name": "Work Product Archive Crew",
+      "family_anchor": "128. Work Product Governance & Deliverable Standards",
+      "mission": "Archive completed deliverables, review records, proof artifacts, version notes, and approval records for future reuse and audit.",
+      "triggers": [
+        "archive deliverable",
+        "completed work product",
+        "final package",
+        "proof archive"
+      ],
+      "primary_outputs": [
+        "work_product_archive_record.json",
+        "deliverable_archive_notes.md",
+        "proof_archive_manifest.json"
+      ],
+      "handoff_targets": [
+        "DV.P5.026 Evidence Collection Crew",
+        "DV.P5.046 Approval Record Crew",
+        "DV.P5.037 Deliverable Readiness Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.041.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.041.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.041.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.041.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.041.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.041.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.041.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.041.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.041.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.042",
+      "crew_name": "Deliverable Defect Crew",
+      "family_anchor": "128. Work Product Governance & Deliverable Standards",
+      "mission": "Identify defects in deliverables such as missing sections, broken formatting, weak explanation, unsupported claims, wrong audience fit, or unusable structure.",
+      "triggers": [
+        "deliverable defect",
+        "missing section",
+        "bad format",
+        "unusable",
+        "weak output"
+      ],
+      "primary_outputs": [
+        "deliverable_defect_report.md",
+        "defect_to_fix_map.json",
+        "revised_deliverable_requirements.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.005 Quality Failure Repair Crew",
+        "DV.P5.023 Template Compliance Crew",
+        "DV.P5.037 Deliverable Readiness Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.042.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.042.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.042.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.042.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.042.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.042.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.042.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.042.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.042.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.043",
+      "crew_name": "Review Queue Intake Crew",
+      "family_anchor": "131. Approval UX, Review Queues & Human Control",
+      "mission": "Add work items to review queues with context, reason, priority, evidence, risk level, and requested human decision.",
+      "triggers": [
+        "review queue",
+        "add to review",
+        "approval queue",
+        "pending review"
+      ],
+      "primary_outputs": [
+        "review_queue_item.json",
+        "review_queue_summary.md",
+        "priority_review_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.014 Review Packet Assembly Crew",
+        "DV.P5.044 Approval Risk Flag Crew",
+        "DV.P5.045 Approval Decision Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.043.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.043.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.043.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.043.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.043.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.043.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.043.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.043.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.043.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.044",
+      "crew_name": "Approval Risk Flag Crew",
+      "family_anchor": "131. Approval UX, Review Queues & Human Control",
+      "mission": "Flag approvals that involve risk, external action, regulated output, baseline mutation, public release, or irreversible change.",
+      "triggers": [
+        "approval risk",
+        "risky approval",
+        "external release",
+        "baseline mutation"
+      ],
+      "primary_outputs": [
+        "approval_risk_flags.json",
+        "risk_explanation.md",
+        "human_control_requirement.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.013 Human Review Routing Crew",
+        "DV.P5.016 Review Escalation Crew",
+        "DV.P5.048 Human Control Lock Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.044.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.044.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.044.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.044.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.044.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.044.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.044.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.044.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.044.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.045",
+      "crew_name": "Approval Decision Crew",
+      "family_anchor": "131. Approval UX, Review Queues & Human Control",
+      "mission": "Present approval choices clearly: approve, reject, revise, block, escalate, archive, or request more evidence.",
+      "triggers": [
+        "approval decision",
+        "approve",
+        "reject",
+        "revise",
+        "block"
+      ],
+      "primary_outputs": [
+        "approval_decision_options.md",
+        "approval_decision_record.json",
+        "requested_next_action.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.046 Approval Record Crew",
+        "DV.P5.018 Review Closure Crew",
+        "DV.P5.006 Final Quality Signoff Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.045.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.045.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.045.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.045.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.045.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.045.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.045.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.045.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.045.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.046",
+      "crew_name": "Approval Record Crew",
+      "family_anchor": "131. Approval UX, Review Queues & Human Control",
+      "mission": "Record approval history, reviewer notes, decision rationale, artifacts reviewed, and whether the decision is final or conditional.",
+      "triggers": [
+        "approval record",
+        "decision history",
+        "reviewer notes",
+        "record approval"
+      ],
+      "primary_outputs": [
+        "approval_record.json",
+        "reviewer_notes.md",
+        "approval_history.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.018 Review Closure Crew",
+        "DV.P5.041 Work Product Archive Crew",
+        "DV.P5.027 Attestation Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.046.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.046.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.046.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.046.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.046.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.046.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.046.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.046.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.046.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.047",
+      "crew_name": "Change Request Crew",
+      "family_anchor": "131. Approval UX, Review Queues & Human Control",
+      "mission": "Convert human review feedback into specific, scoped, testable change requests with owner, affected area, and success criteria.",
+      "triggers": [
+        "change request",
+        "revise this",
+        "requested changes",
+        "edit needed"
+      ],
+      "primary_outputs": [
+        "change_request.md",
+        "scoped_revision_task.json",
+        "change_success_criteria.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.015 Human Feedback Capture Crew",
+        "DV.P5.005 Quality Failure Repair Crew",
+        "DV.P5.018 Review Closure Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.047.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.047.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.047.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.047.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.047.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.047.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.047.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.047.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.047.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P5.048",
+      "crew_name": "Human Control Lock Crew",
+      "family_anchor": "131. Approval UX, Review Queues & Human Control",
+      "mission": "Lock human-control boundaries so sensitive, risky, irreversible, external, or high-impact decisions cannot be silently automated.",
+      "triggers": [
+        "human control",
+        "lock approval",
+        "do not automate",
+        "final human say"
+      ],
+      "primary_outputs": [
+        "human_control_lock.md",
+        "non_automated_decision_list.json",
+        "final_human_authority_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P5.017 Approval Boundary Crew",
+        "DV.P5.044 Approval Risk Flag Crew",
+        "DV.P5.006 Final Quality Signoff Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P5.048.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P5.048.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P5.048.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P5.048.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P5.048.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P5.048.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P5.048.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P5.048.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P5.048.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    }
+  ]
+}
