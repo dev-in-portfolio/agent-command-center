@@ -1,0 +1,1036 @@
+{
+  "extension_id": "family_007_devinized_engineering_overload",
+  "extension_name": "Family 7 Devinized Engineering Overload Pack",
+  "base_family_id": 7,
+  "base_family_name": "Engineering & Automation",
+  "mode": "overlay",
+  "purpose": "Turn Engineering & Automation into the build engine for the runnable Station Chief system, agent runtime, tool wiring, command routing, deployment, testing, and developer workflow.",
+  "station_chief_relevance": "This pack defines the engineering crews that will build the runtime layer allowing one command to the Station Chief to route work through department chiefs and worker agents.",
+  "activation_rule": "Use this pack when the user says things like: build the runtime, make it runnable, wire the agents, build Station Chief, add tool calls, make the dashboard work, connect APIs, deploy it, fix the repo, build the app, create the execution layer, Devinize engineering.",
+  "preserves_locked_baseline": true,
+  "crews": [
+    {
+      "crew_id": "7.DV.001",
+      "crew_name": "Station Chief Runtime Core Crew",
+      "baseline_anchor": "7.6 Agent Engineering",
+      "mission": "Build the runnable Station Chief command agent that receives one user instruction and routes it to the correct family, department, unit, and worker layer.",
+      "triggers": [
+        "station chief",
+        "one command",
+        "master command agent",
+        "runtime router",
+        "command center brain"
+      ],
+      "primary_outputs": [
+        "station_chief.py",
+        "routing decision schema",
+        "command interpretation logs",
+        "master dispatch packet"
+      ],
+      "handoff_targets": [
+        "7.DV.002 Agent Router & Dispatcher Crew",
+        "7.DV.005 Runtime State & Memory Crew",
+        "7.DV.013 QA Harness Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.001.1A", "role": "Realist" },
+        { "id": "7.DV.001.1B", "role": "Overachiever" },
+        { "id": "7.DV.001.1C", "role": "Dreamer" },
+        { "id": "7.DV.001.1D", "role": "Timid" },
+        { "id": "7.DV.001.1E", "role": "Overprotective" },
+        { "id": "7.DV.001.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.001.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.001.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.001.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.002",
+      "crew_name": "Agent Router & Dispatcher Crew",
+      "baseline_anchor": "7.6 Agent Engineering",
+      "mission": "Route tasks from Station Chief into the correct family/department/unit chain.",
+      "triggers": [
+        "route this task",
+        "choose department",
+        "agent dispatch",
+        "work assignment"
+      ],
+      "primary_outputs": [
+        "routing table",
+        "dispatch plan",
+        "target family list",
+        "department handoff packet"
+      ],
+      "handoff_targets": [
+        "7.DV.003 Work Order Schema Crew",
+        "7.DV.004 Prompt Template Engineering Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.002.1A", "role": "Realist" },
+        { "id": "7.DV.002.1B", "role": "Overachiever" },
+        { "id": "7.DV.002.1C", "role": "Dreamer" },
+        { "id": "7.DV.002.1D", "role": "Timid" },
+        { "id": "7.DV.002.1E", "role": "Overprotective" },
+        { "id": "7.DV.002.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.002.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.002.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.002.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.003",
+      "crew_name": "Work Order Schema Crew",
+      "baseline_anchor": "7.1 Software Engineering",
+      "mission": "Define the JSON/Markdown structures that represent work orders, assignments, handoffs, status, and results.",
+      "triggers": [
+        "work order",
+        "assignment schema",
+        "handoff packet",
+        "status schema"
+      ],
+      "primary_outputs": [
+        "work_order.schema.json",
+        "run_packet.schema.json",
+        "handoff_packet.schema.json",
+        "result_packet.schema.json"
+      ],
+      "handoff_targets": [
+        "7.DV.005 Runtime State & Memory Crew",
+        "7.DV.013 QA Harness Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.003.1A", "role": "Realist" },
+        { "id": "7.DV.003.1B", "role": "Overachiever" },
+        { "id": "7.DV.003.1C", "role": "Dreamer" },
+        { "id": "7.DV.003.1D", "role": "Timid" },
+        { "id": "7.DV.003.1E", "role": "Overprotective" },
+        { "id": "7.DV.003.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.003.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.003.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.003.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.004",
+      "crew_name": "Prompt Template Engineering Crew",
+      "baseline_anchor": "7.6 Agent Engineering",
+      "mission": "Create reusable executable prompts for Station Chief, family chiefs, department chiefs, scribes, auditors, and worker agents.",
+      "triggers": [
+        "prompt template",
+        "agent instructions",
+        "role prompt",
+        "worker prompt"
+      ],
+      "primary_outputs": [
+        "station_chief_prompt.md",
+        "department_chief_prompt.md",
+        "scribe_prompt.md",
+        "auditor_prompt.md",
+        "worker_agent_prompt.md"
+      ],
+      "handoff_targets": [
+        "7.DV.001 Station Chief Runtime Core Crew",
+        "7.DV.013 QA Harness Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.004.1A", "role": "Realist" },
+        { "id": "7.DV.004.1B", "role": "Overachiever" },
+        { "id": "7.DV.004.1C", "role": "Dreamer" },
+        { "id": "7.DV.004.1D", "role": "Timid" },
+        { "id": "7.DV.004.1E", "role": "Overprotective" },
+        { "id": "7.DV.004.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.004.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.004.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.004.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.005",
+      "crew_name": "Runtime State & Memory Crew",
+      "baseline_anchor": "7.3 Backend Engineering",
+      "mission": "Build the folder/file-based memory layer for runs, logs, checkpoints, outputs, and resumability.",
+      "triggers": [
+        "memory",
+        "state",
+        "logs",
+        "checkpoint",
+        "resume"
+      ],
+      "primary_outputs": [
+        "runtime/runs/",
+        "runtime/logs/",
+        "runtime/checkpoints/",
+        "runtime/outputs/",
+        "runtime/state_index.json"
+      ],
+      "handoff_targets": [
+        "7.DV.001 Station Chief Runtime Core Crew",
+        "7.DV.006 Execution Engine Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.005.1A", "role": "Realist" },
+        { "id": "7.DV.005.1B", "role": "Overachiever" },
+        { "id": "7.DV.005.1C", "role": "Dreamer" },
+        { "id": "7.DV.005.1D", "role": "Timid" },
+        { "id": "7.DV.005.1E", "role": "Overprotective" },
+        { "id": "7.DV.005.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.005.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.005.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.005.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.006",
+      "crew_name": "Execution Engine Crew",
+      "baseline_anchor": "7.1 Software Engineering",
+      "mission": "Build the core execution loop that receives work orders, runs agent prompts, collects outputs, and returns results.",
+      "triggers": [
+        "execute",
+        "run agent",
+        "process work order",
+        "runtime loop"
+      ],
+      "primary_outputs": [
+        "execution_engine.py",
+        "agent_runner.py",
+        "result_collector.py",
+        "execution_log.md"
+      ],
+      "handoff_targets": [
+        "7.DV.013 QA Harness Crew",
+        "7.DV.014 Error Recovery Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.006.1A", "role": "Realist" },
+        { "id": "7.DV.006.1B", "role": "Overachiever" },
+        { "id": "7.DV.006.1C", "role": "Dreamer" },
+        { "id": "7.DV.006.1D", "role": "Timid" },
+        { "id": "7.DV.006.1E", "role": "Overprotective" },
+        { "id": "7.DV.006.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.006.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.006.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.006.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.007",
+      "crew_name": "Tool Adapter Crew",
+      "baseline_anchor": "7.8 Tool Integration",
+      "mission": "Create adapters for tools, APIs, local scripts, file operations, GitHub operations, browser/search operations, and future MCP connectors.",
+      "triggers": [
+        "connect tool",
+        "adapter",
+        "api hook",
+        "mcp",
+        "external action"
+      ],
+      "primary_outputs": [
+        "tools/adapters/",
+        "tool_manifest.json",
+        "adapter_interface.py",
+        "tool_permission_notes.md"
+      ],
+      "handoff_targets": [
+        "7.DV.010 API Integration Crew",
+        "7.DV.015 Security & Permission Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.007.1A", "role": "Realist" },
+        { "id": "7.DV.007.1B", "role": "Overachiever" },
+        { "id": "7.DV.007.1C", "role": "Dreamer" },
+        { "id": "7.DV.007.1D", "role": "Timid" },
+        { "id": "7.DV.007.1E", "role": "Overprotective" },
+        { "id": "7.DV.007.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.007.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.007.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.007.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.008",
+      "crew_name": "Git Operations Crew",
+      "baseline_anchor": "7.5 DevOps",
+      "mission": "Handle repo commits, diffs, branch checks, validation runs, rollback prompts, GitHub issue/PR workflows, and “check Gemini’s work” workflows.",
+      "triggers": [
+        "check git",
+        "verify commit",
+        "compare commits",
+        "rollback",
+        "github"
+      ],
+      "primary_outputs": [
+        "git_checklist.md",
+        "commit_audit_report.md",
+        "rollback_plan.md",
+        "validation_summary.md"
+      ],
+      "handoff_targets": [
+        "7.DV.013 QA Harness Crew",
+        "7.DV.016 Release Management Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.008.1A", "role": "Realist" },
+        { "id": "7.DV.008.1B", "role": "Overachiever" },
+        { "id": "7.DV.008.1C", "role": "Dreamer" },
+        { "id": "7.DV.008.1D", "role": "Timid" },
+        { "id": "7.DV.008.1E", "role": "Overprotective" },
+        { "id": "7.DV.008.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.008.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.008.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.008.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.009",
+      "crew_name": "Android / Termux Runtime Crew",
+      "baseline_anchor": "7.10 Developer Experience",
+      "mission": "Support Android-first Termux/Debian development workflows, local scripts, shell helpers, Codex/Gemini CLI usage, and lightweight local runtime patterns.",
+      "triggers": [
+        "termux",
+        "android",
+        "debian",
+        "local shell",
+        "codex",
+        "gemini cli"
+      ],
+      "primary_outputs": [
+        "termux_setup.md",
+        "debian_runtime_notes.md",
+        "local_agent_launcher.sh",
+        "android_dev_workflow.md"
+      ],
+      "handoff_targets": [
+        "7.DV.017 Local Model Runtime Crew",
+        "7.DV.016 Release Management Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.009.1A", "role": "Realist" },
+        { "id": "7.DV.009.1B", "role": "Overachiever" },
+        { "id": "7.DV.009.1C", "role": "Dreamer" },
+        { "id": "7.DV.009.1D", "role": "Timid" },
+        { "id": "7.DV.009.1E", "role": "Overprotective" },
+        { "id": "7.DV.009.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.009.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.009.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.009.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.010",
+      "crew_name": "API Integration Crew",
+      "baseline_anchor": "7.4 API Engineering",
+      "mission": "Design and wire API contracts for external tools, internal endpoints, OpenAI-style model calls, storage APIs, and future service integrations.",
+      "triggers": [
+        "api",
+        "endpoint",
+        "integration",
+        "request schema",
+        "response schema"
+      ],
+      "primary_outputs": [
+        "api_contracts.md",
+        "endpoint_map.json",
+        "request_response_examples.md",
+        "integration_test_plan.md"
+      ],
+      "handoff_targets": [
+        "7.DV.007 Tool Adapter Crew",
+        "7.DV.013 QA Harness Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.010.1A", "role": "Realist" },
+        { "id": "7.DV.010.1B", "role": "Overachiever" },
+        { "id": "7.DV.010.1C", "role": "Dreamer" },
+        { "id": "7.DV.010.1D", "role": "Timid" },
+        { "id": "7.DV.010.1E", "role": "Overprotective" },
+        { "id": "7.DV.010.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.010.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.010.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.010.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.011",
+      "crew_name": "Frontend Control Room Crew",
+      "baseline_anchor": "7.2 Frontend Engineering",
+      "mission": "Build the optional dashboard/control-room interface for viewing families, dispatching tasks, monitoring runs, and reviewing outputs.",
+      "triggers": [
+        "dashboard",
+        "ui",
+        "control room",
+        "visual interface",
+        "front end"
+      ],
+      "primary_outputs": [
+        "dashboard_wireframe.md",
+        "react_component_plan.md",
+        "control_room_routes.json",
+        "ui_state_model.json"
+      ],
+      "handoff_targets": [
+        "7.DV.012 Backend Service Crew",
+        "7.DV.020 Portfolio Packaging Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.011.1A", "role": "Realist" },
+        { "id": "7.DV.011.1B", "role": "Overachiever" },
+        { "id": "7.DV.011.1C", "role": "Dreamer" },
+        { "id": "7.DV.011.1D", "role": "Timid" },
+        { "id": "7.DV.011.1E", "role": "Overprotective" },
+        { "id": "7.DV.011.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.011.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.011.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.011.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.012",
+      "crew_name": "Backend Service Crew",
+      "baseline_anchor": "7.3 Backend Engineering",
+      "mission": "Build backend service routes, local server patterns, storage interfaces, queue handlers, and runtime APIs.",
+      "triggers": [
+        "backend",
+        "server",
+        "route",
+        "storage",
+        "queue"
+      ],
+      "primary_outputs": [
+        "backend_service_plan.md",
+        "route_map.json",
+        "storage_interface.py",
+        "queue_handler.py"
+      ],
+      "handoff_targets": [
+        "7.DV.006 Execution Engine Crew",
+        "7.DV.011 Frontend Control Room Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.012.1A", "role": "Realist" },
+        { "id": "7.DV.012.1B", "role": "Overachiever" },
+        { "id": "7.DV.012.1C", "role": "Dreamer" },
+        { "id": "7.DV.012.1D", "role": "Timid" },
+        { "id": "7.DV.012.1E", "role": "Overprotective" },
+        { "id": "7.DV.012.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.012.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.012.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.012.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.013",
+      "crew_name": "QA Harness Crew",
+      "baseline_anchor": "7.1 Software Engineering",
+      "mission": "Build tests, validators, smoke checks, regression checks, fake-run tests, and deterministic demo validation.",
+      "triggers": [
+        "test",
+        "validator",
+        "smoke test",
+        "regression",
+        "fake run"
+      ],
+      "primary_outputs": [
+        "test_plan.md",
+        "smoke_test.py",
+        "regression_checklist.md",
+        "demo_run_validation.md"
+      ],
+      "handoff_targets": [
+        "7.DV.014 Error Recovery Crew",
+        "7.DV.016 Release Management Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.013.1A", "role": "Realist" },
+        { "id": "7.DV.013.1B", "role": "Overachiever" },
+        { "id": "7.DV.013.1C", "role": "Dreamer" },
+        { "id": "7.DV.013.1D", "role": "Timid" },
+        { "id": "7.DV.013.1E", "role": "Overprotective" },
+        { "id": "7.DV.013.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.013.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.013.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.013.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.014",
+      "crew_name": "Error Recovery Crew",
+      "baseline_anchor": "7.1 Software Engineering",
+      "mission": "Detect failures, propose fixes, create rollback paths, preserve logs, and recover broken runs without losing context.",
+      "triggers": [
+        "error",
+        "failed run",
+        "broken",
+        "rollback",
+        "recovery"
+      ],
+      "primary_outputs": [
+        "error_report.md",
+        "recovery_plan.md",
+        "rollback_command_notes.md",
+        "failure_pattern_log.md"
+      ],
+      "handoff_targets": [
+        "7.DV.008 Git Operations Crew",
+        "7.DV.013 QA Harness Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.014.1A", "role": "Realist" },
+        { "id": "7.DV.014.1B", "role": "Overachiever" },
+        { "id": "7.DV.014.1C", "role": "Dreamer" },
+        { "id": "7.DV.014.1D", "role": "Timid" },
+        { "id": "7.DV.014.1E", "role": "Overprotective" },
+        { "id": "7.DV.014.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.014.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.014.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.014.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.015",
+      "crew_name": "Security & Permission Crew",
+      "baseline_anchor": "7.8 Tool Integration",
+      "mission": "Define permission boundaries, sandbox rules, external-action gates, secret-handling rules, and human confirmation requirements.",
+      "triggers": [
+        "permission",
+        "safety",
+        "sandbox",
+        "secret",
+        "external action"
+      ],
+      "primary_outputs": [
+        "permission_model.md",
+        "sandbox_policy.md",
+        "secret_handling_rules.md",
+        "human_confirmation_gates.md"
+      ],
+      "handoff_targets": [
+        "7.DV.007 Tool Adapter Crew",
+        "7.DV.010 API Integration Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.015.1A", "role": "Realist" },
+        { "id": "7.DV.015.1B", "role": "Overachiever" },
+        { "id": "7.DV.015.1C", "role": "Dreamer" },
+        { "id": "7.DV.015.1D", "role": "Timid" },
+        { "id": "7.DV.015.1E", "role": "Overprotective" },
+        { "id": "7.DV.015.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.015.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.015.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.015.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.016",
+      "crew_name": "Release Management Crew",
+      "baseline_anchor": "7.5 DevOps",
+      "mission": "Package releases, create version notes, coordinate deployment checks, tag stable baselines, and prepare production handoffs.",
+      "triggers": [
+        "release",
+        "version",
+        "deploy",
+        "production",
+        "stable baseline"
+      ],
+      "primary_outputs": [
+        "release_notes.md",
+        "version_manifest.json",
+        "deployment_checklist.md",
+        "release_audit.md"
+      ],
+      "handoff_targets": [
+        "7.DV.008 Git Operations Crew",
+        "7.DV.020 Portfolio Packaging Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.016.1A", "role": "Realist" },
+        { "id": "7.DV.016.1B", "role": "Overachiever" },
+        { "id": "7.DV.016.1C", "role": "Dreamer" },
+        { "id": "7.DV.016.1D", "role": "Timid" },
+        { "id": "7.DV.016.1E", "role": "Overprotective" },
+        { "id": "7.DV.016.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.016.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.016.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.016.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.017",
+      "crew_name": "Local Model Runtime Crew",
+      "baseline_anchor": "7.9 Infrastructure Engineering",
+      "mission": "Support local model runtime planning for llama.cpp, small coder models, offline fallback, and resource-aware execution.",
+      "triggers": [
+        "local model",
+        "llama.cpp",
+        "offline",
+        "qwen",
+        "mistral",
+        "deepseek"
+      ],
+      "primary_outputs": [
+        "local_model_runtime_plan.md",
+        "model_inventory.md",
+        "launch_commands.md",
+        "resource_limits_notes.md"
+      ],
+      "handoff_targets": [
+        "7.DV.009 Android / Termux Runtime Crew",
+        "7.DV.006 Execution Engine Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.017.1A", "role": "Realist" },
+        { "id": "7.DV.017.1B", "role": "Overachiever" },
+        { "id": "7.DV.017.1C", "role": "Dreamer" },
+        { "id": "7.DV.017.1D", "role": "Timid" },
+        { "id": "7.DV.017.1E", "role": "Overprotective" },
+        { "id": "7.DV.017.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.017.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.017.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.017.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.018",
+      "crew_name": "Data / RAG Engineering Crew",
+      "baseline_anchor": "7.3 Backend Engineering",
+      "mission": "Build retrieval, file indexing, knowledge lookup, vector/RAG planning, source tracking, and evidence-backed output support.",
+      "triggers": [
+        "rag",
+        "retrieval",
+        "knowledge base",
+        "source lookup",
+        "evidence"
+      ],
+      "primary_outputs": [
+        "retrieval_plan.md",
+        "source_index_schema.json",
+        "rag_pipeline_notes.md",
+        "evidence_trace_format.md"
+      ],
+      "handoff_targets": [
+        "7.DV.005 Runtime State & Memory Crew",
+        "7.DV.010 API Integration Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.018.1A", "role": "Realist" },
+        { "id": "7.DV.018.1B", "role": "Overachiever" },
+        { "id": "7.DV.018.1C", "role": "Dreamer" },
+        { "id": "7.DV.018.1D", "role": "Timid" },
+        { "id": "7.DV.018.1E", "role": "Overprotective" },
+        { "id": "7.DV.018.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.018.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.018.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.018.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.019",
+      "crew_name": "Documentation & Developer Manual Crew",
+      "baseline_anchor": "7.10 Developer Experience",
+      "mission": "Write developer docs, operator manuals, setup guides, command references, and plain-English explanation pages.",
+      "triggers": [
+        "docs",
+        "readme",
+        "instructions",
+        "manual",
+        "explain setup"
+      ],
+      "primary_outputs": [
+        "developer_manual.md",
+        "operator_manual.md",
+        "command_reference.md",
+        "setup_guide.md"
+      ],
+      "handoff_targets": [
+        "7.DV.020 Portfolio Packaging Crew",
+        "7.DV.016 Release Management Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.019.1A", "role": "Realist" },
+        { "id": "7.DV.019.1B", "role": "Overachiever" },
+        { "id": "7.DV.019.1C", "role": "Dreamer" },
+        { "id": "7.DV.019.1D", "role": "Timid" },
+        { "id": "7.DV.019.1E", "role": "Overprotective" },
+        { "id": "7.DV.019.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.019.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.019.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.019.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.020",
+      "crew_name": "Portfolio Packaging Crew",
+      "baseline_anchor": "7.10 Developer Experience",
+      "mission": "Package the system into portfolio-facing explanations, architecture diagrams, proof assets, demos, and recruiter/client-friendly summaries.",
+      "triggers": [
+        "portfolio",
+        "case study",
+        "showcase",
+        "recruiter",
+        "demo"
+      ],
+      "primary_outputs": [
+        "case_study.md",
+        "architecture_summary.md",
+        "demo_script.md",
+        "recruiter_friendly_explanation.md"
+      ],
+      "handoff_targets": [
+        "7.DV.011 Frontend Control Room Crew",
+        "7.DV.019 Documentation & Developer Manual Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.020.1A", "role": "Realist" },
+        { "id": "7.DV.020.1B", "role": "Overachiever" },
+        { "id": "7.DV.020.1C", "role": "Dreamer" },
+        { "id": "7.DV.020.1D", "role": "Timid" },
+        { "id": "7.DV.020.1E", "role": "Overprotective" },
+        { "id": "7.DV.020.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.020.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.020.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.020.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.021",
+      "crew_name": "App Factory Crew",
+      "baseline_anchor": "7.1 Software Engineering",
+      "mission": "Turn ideas into scoped app builds with requirements, file structure, MVP plan, testing plan, and deployment plan.",
+      "triggers": [
+        "build app",
+        "app idea",
+        "mvp",
+        "scaffold",
+        "product build"
+      ],
+      "primary_outputs": [
+        "app_blueprint.md",
+        "file_tree_plan.md",
+        "mvp_scope.md",
+        "build_sequence.md"
+      ],
+      "handoff_targets": [
+        "7.DV.011 Frontend Control Room Crew",
+        "7.DV.012 Backend Service Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.021.1A", "role": "Realist" },
+        { "id": "7.DV.021.1B", "role": "Overachiever" },
+        { "id": "7.DV.021.1C", "role": "Dreamer" },
+        { "id": "7.DV.021.1D", "role": "Timid" },
+        { "id": "7.DV.021.1E", "role": "Overprotective" },
+        { "id": "7.DV.021.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.021.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.021.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.021.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.022",
+      "crew_name": "Refactor & Cleanup Crew",
+      "baseline_anchor": "7.1 Software Engineering",
+      "mission": "Clean messy code, reduce duplication, improve naming, separate concerns, and stabilize fragile files without rewriting everything.",
+      "triggers": [
+        "refactor",
+        "clean up",
+        "simplify code",
+        "stabilize",
+        "organize files"
+      ],
+      "primary_outputs": [
+        "refactor_plan.md",
+        "changed_file_risk_map.md",
+        "cleanup_patch_notes.md",
+        "before_after_summary.md"
+      ],
+      "handoff_targets": [
+        "7.DV.013 QA Harness Crew",
+        "7.DV.008 Git Operations Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.022.1A", "role": "Realist" },
+        { "id": "7.DV.022.1B", "role": "Overachiever" },
+        { "id": "7.DV.022.1C", "role": "Dreamer" },
+        { "id": "7.DV.022.1D", "role": "Timid" },
+        { "id": "7.DV.022.1E", "role": "Overprotective" },
+        { "id": "7.DV.022.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.022.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.022.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.022.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.023",
+      "crew_name": "Bug Hunt Crew",
+      "baseline_anchor": "7.1 Software Engineering",
+      "mission": "Diagnose bugs, trace causes, isolate failing code paths, and propose minimal safe fixes.",
+      "triggers": [
+        "bug",
+        "broken",
+        "error message",
+        "not working",
+        "debug"
+      ],
+      "primary_outputs": [
+        "bug_report.md",
+        "root_cause_notes.md",
+        "minimal_fix_plan.md",
+        "verification_steps.md"
+      ],
+      "handoff_targets": [
+        "7.DV.014 Error Recovery Crew",
+        "7.DV.013 QA Harness Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.023.1A", "role": "Realist" },
+        { "id": "7.DV.023.1B", "role": "Overachiever" },
+        { "id": "7.DV.023.1C", "role": "Dreamer" },
+        { "id": "7.DV.023.1D", "role": "Timid" },
+        { "id": "7.DV.023.1E", "role": "Overprotective" },
+        { "id": "7.DV.023.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.023.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.023.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.023.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.024",
+      "crew_name": "Database & Schema Crew",
+      "baseline_anchor": "7.3 Backend Engineering",
+      "mission": "Design local JSON, SQLite, Postgres, Supabase, or future database schemas for runtime state and app data.",
+      "triggers": [
+        "database",
+        "schema",
+        "supabase",
+        "sqlite",
+        "data model"
+      ],
+      "primary_outputs": [
+        "data_schema.json",
+        "table_plan.md",
+        "migration_notes.md",
+        "schema_validation_plan.md"
+      ],
+      "handoff_targets": [
+        "7.DV.012 Backend Service Crew",
+        "7.DV.018 Data / RAG Engineering Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.024.1A", "role": "Realist" },
+        { "id": "7.DV.024.1B", "role": "Overachiever" },
+        { "id": "7.DV.024.1C", "role": "Dreamer" },
+        { "id": "7.DV.024.1D", "role": "Timid" },
+        { "id": "7.DV.024.1E", "role": "Overprotective" },
+        { "id": "7.DV.024.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.024.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.024.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.024.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.025",
+      "crew_name": "Deployment & Hosting Crew",
+      "baseline_anchor": "7.5 DevOps",
+      "mission": "Prepare deployment paths for Netlify, GitHub Pages, local servers, Android-hosted workflows, or other hosting targets.",
+      "triggers": [
+        "deploy",
+        "hosting",
+        "netlify",
+        "github pages",
+        "production"
+      ],
+      "primary_outputs": [
+        "deployment_target_plan.md",
+        "hosting_config_notes.md",
+        "env_var_checklist.md",
+        "post_deploy_test_plan.md"
+      ],
+      "handoff_targets": [
+        "7.DV.016 Release Management Crew",
+        "7.DV.008 Git Operations Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.025.1A", "role": "Realist" },
+        { "id": "7.DV.025.1B", "role": "Overachiever" },
+        { "id": "7.DV.025.1C", "role": "Dreamer" },
+        { "id": "7.DV.025.1D", "role": "Timid" },
+        { "id": "7.DV.025.1E", "role": "Overprotective" },
+        { "id": "7.DV.025.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.025.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.025.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.025.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.026",
+      "crew_name": "Command-Line Tooling Crew",
+      "baseline_anchor": "7.10 Developer Experience",
+      "mission": "Build CLI commands, shell scripts, aliases, launcher commands, and developer shortcuts for running the system quickly.",
+      "triggers": [
+        "cli",
+        "command",
+        "alias",
+        "shortcut",
+        "launcher"
+      ],
+      "primary_outputs": [
+        "cli_command_map.md",
+        "launcher_script.sh",
+        "alias_notes.md",
+        "command_examples.md"
+      ],
+      "handoff_targets": [
+        "7.DV.009 Android / Termux Runtime Crew",
+        "7.DV.006 Execution Engine Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.026.1A", "role": "Realist" },
+        { "id": "7.DV.026.1B", "role": "Overachiever" },
+        { "id": "7.DV.026.1C", "role": "Dreamer" },
+        { "id": "7.DV.026.1D", "role": "Timid" },
+        { "id": "7.DV.026.1E", "role": "Overprotective" },
+        { "id": "7.DV.026.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.026.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.026.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.026.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.027",
+      "crew_name": "Demo Mode Crew",
+      "baseline_anchor": "7.1 Software Engineering",
+      "mission": "Build deterministic demo mode so the system can be tested without paid API keys, external credentials, or live integrations.",
+      "triggers": [
+        "demo mode",
+        "no api key",
+        "fake run",
+        "deterministic",
+        "offline demo"
+      ],
+      "primary_outputs": [
+        "demo_mode_plan.md",
+        "fake_agent_outputs.json",
+        "demo_run_script.py",
+        "demo_validation_notes.md"
+      ],
+      "handoff_targets": [
+        "7.DV.013 QA Harness Crew",
+        "7.DV.020 Portfolio Packaging Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.027.1A", "role": "Realist" },
+        { "id": "7.DV.027.1B", "role": "Overachiever" },
+        { "id": "7.DV.027.1C", "role": "Dreamer" },
+        { "id": "7.DV.027.1D", "role": "Timid" },
+        { "id": "7.DV.027.1E", "role": "Overprotective" },
+        { "id": "7.DV.027.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.027.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.027.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.027.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.028",
+      "crew_name": "Configuration & Environment Crew",
+      "baseline_anchor": "7.5 DevOps",
+      "mission": "Manage config files, environment variables, local paths, safe defaults, and no-key fallback behavior.",
+      "triggers": [
+        "config",
+        "env",
+        "environment",
+        "setup error",
+        "path issue"
+      ],
+      "primary_outputs": [
+        "config_schema.json",
+        "env_example.md",
+        "safe_defaults.md",
+        "path_resolution_notes.md"
+      ],
+      "handoff_targets": [
+        "7.DV.009 Android / Termux Runtime Crew",
+        "7.DV.025 Deployment & Hosting Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.028.1A", "role": "Realist" },
+        { "id": "7.DV.028.1B", "role": "Overachiever" },
+        { "id": "7.DV.028.1C", "role": "Dreamer" },
+        { "id": "7.DV.028.1D", "role": "Timid" },
+        { "id": "7.DV.028.1E", "role": "Overprotective" },
+        { "id": "7.DV.028.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.028.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.028.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.028.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.029",
+      "crew_name": "Architecture Diagram Crew",
+      "baseline_anchor": "7.2 Frontend Engineering",
+      "mission": "Turn the system architecture into diagrams, maps, command-flow visuals, and explanation graphics.",
+      "triggers": [
+        "diagram",
+        "architecture map",
+        "visual",
+        "flowchart",
+        "explain system"
+      ],
+      "primary_outputs": [
+        "architecture_diagram_spec.md",
+        "station_chief_flow.md",
+        "command_routing_map.md",
+        "portfolio_visual_notes.md"
+      ],
+      "handoff_targets": [
+        "7.DV.020 Portfolio Packaging Crew",
+        "7.DV.019 Documentation & Developer Manual Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.029.1A", "role": "Realist" },
+        { "id": "7.DV.029.1B", "role": "Overachiever" },
+        { "id": "7.DV.029.1C", "role": "Dreamer" },
+        { "id": "7.DV.029.1D", "role": "Timid" },
+        { "id": "7.DV.029.1E", "role": "Overprotective" },
+        { "id": "7.DV.029.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.029.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.029.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.029.1I", "role": "Auditor / Revision Director" }
+      ]
+    },
+    {
+      "crew_id": "7.DV.030",
+      "crew_name": "Devin Override / Speed Racer Crew",
+      "baseline_anchor": "7.6 Agent Engineering",
+      "mission": "Encode Devin-specific operating preferences for fast execution: minimize repeated explanations, use deterministic demo mode, avoid credential stalls, and drive execution.",
+      "triggers": [
+        "speed racer",
+        "stop explaining",
+        "just build",
+        "no keys",
+        "keep moving",
+        "devinize"
+      ],
+      "primary_outputs": [
+        "devin_execution_rules.md",
+        "speed_racer_mode.md",
+        "credential_fallback_rules.md",
+        "minimal_question_policy.md"
+      ],
+      "handoff_targets": [
+        "7.DV.001 Station Chief Runtime Core Crew",
+        "7.DV.004 Prompt Template Engineering Crew",
+        "7.DV.019 Documentation & Developer Manual Crew"
+      ],
+      "roles": [
+        { "id": "7.DV.030.1A", "role": "Realist" },
+        { "id": "7.DV.030.1B", "role": "Overachiever" },
+        { "id": "7.DV.030.1C", "role": "Dreamer" },
+        { "id": "7.DV.030.1D", "role": "Timid" },
+        { "id": "7.DV.030.1E", "role": "Overprotective" },
+        { "id": "7.DV.030.1F", "role": "Wildcard Intern" },
+        { "id": "7.DV.030.1G", "role": "Team Lead / Manager" },
+        { "id": "7.DV.030.1H", "role": "Scribe / Shower of Work" },
+        { "id": "7.DV.030.1I", "role": "Auditor / Revision Director" }
+      ]
+    }
+  ]
+}
