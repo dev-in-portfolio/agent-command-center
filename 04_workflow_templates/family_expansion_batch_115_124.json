@@ -1,0 +1,962 @@
+[
+  {
+    "id": "115",
+    "name": "Platform Strategy & Distribution Channels",
+    "departments": [
+      {
+        "id": "115.1",
+        "name": "Platform Selection",
+        "units": [
+          { "id": "115.1.1", "name": "Platform Candidate Capture" },
+          { "id": "115.1.2", "name": "Platform Fit Review" },
+          { "id": "115.1.3", "name": "Platform Recommendation" }
+        ]
+      },
+      {
+        "id": "115.2",
+        "name": "Distribution Channel Mapping",
+        "units": [
+          { "id": "115.2.1", "name": "Channel Candidate Identification" },
+          { "id": "115.2.2", "name": "Channel Reach Review" },
+          { "id": "115.2.3", "name": "Channel Map Summary" }
+        ]
+      },
+      {
+        "id": "115.3",
+        "name": "Platform Policy Review",
+        "units": [
+          { "id": "115.3.1", "name": "Platform Rule Capture" },
+          { "id": "115.3.2", "name": "Policy Constraint Review" },
+          { "id": "115.3.3", "name": "Policy Risk Notes" }
+        ]
+      },
+      {
+        "id": "115.4",
+        "name": "Channel Launch Planning",
+        "units": [
+          { "id": "115.4.1", "name": "Launch Requirement Mapping" },
+          { "id": "115.4.2", "name": "Channel Launch Sequence" },
+          { "id": "115.4.3", "name": "Launch Readiness Check" }
+        ]
+      },
+      {
+        "id": "115.5",
+        "name": "Platform Optimization",
+        "units": [
+          { "id": "115.5.1", "name": "Platform Performance Signal" },
+          { "id": "115.5.2", "name": "Optimization Opportunity Review" },
+          { "id": "115.5.3", "name": "Platform Improvement Notes" }
+        ]
+      },
+      {
+        "id": "115.6",
+        "name": "Multi-Channel Coordination",
+        "units": [
+          { "id": "115.6.1", "name": "Channel Dependency Mapping" },
+          { "id": "115.6.2", "name": "Timing And Message Review" },
+          { "id": "115.6.3", "name": "Coordination Plan Update" }
+        ]
+      },
+      {
+        "id": "115.7",
+        "name": "Audience Channel Fit",
+        "units": [
+          { "id": "115.7.1", "name": "Audience Behavior Review" },
+          { "id": "115.7.2", "name": "Channel Match Scoring" },
+          { "id": "115.7.3", "name": "Channel Fit Recommendation" }
+        ]
+      },
+      {
+        "id": "115.8",
+        "name": "Distribution Risk Review",
+        "units": [
+          { "id": "115.8.1", "name": "Distribution Failure Signal" },
+          { "id": "115.8.2", "name": "Channel Dependency Risk" },
+          { "id": "115.8.3", "name": "Risk Mitigation Notes" }
+        ]
+      },
+      {
+        "id": "115.9",
+        "name": "Platform Analytics Review",
+        "units": [
+          { "id": "115.9.1", "name": "Platform Metric Collection" },
+          { "id": "115.9.2", "name": "Channel Performance Review" },
+          { "id": "115.9.3", "name": "Analytics Summary" }
+        ]
+      },
+      {
+        "id": "115.10",
+        "name": "Platform Dashboard",
+        "units": [
+          { "id": "115.10.1", "name": "Channel Signal Collection" },
+          { "id": "115.10.2", "name": "Platform Status Summary" },
+          { "id": "115.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "116",
+    "name": "Business Rules Engine",
+    "departments": [
+      {
+        "id": "116.1",
+        "name": "Rule Intake",
+        "units": [
+          { "id": "116.1.1", "name": "Rule Candidate Capture" },
+          { "id": "116.1.2", "name": "Rule Purpose Review" },
+          { "id": "116.1.3", "name": "Rule Intake Summary" }
+        ]
+      },
+      {
+        "id": "116.2",
+        "name": "Rule Definition",
+        "units": [
+          { "id": "116.2.1", "name": "Condition Definition" },
+          { "id": "116.2.2", "name": "Outcome Definition" },
+          { "id": "116.2.3", "name": "Rule Statement Draft" }
+        ]
+      },
+      {
+        "id": "116.3",
+        "name": "Rule Priority",
+        "units": [
+          { "id": "116.3.1", "name": "Rule Priority Assignment" },
+          { "id": "116.3.2", "name": "Conflict Priority Review" },
+          { "id": "116.3.3", "name": "Priority Decision Notes" }
+        ]
+      },
+      {
+        "id": "116.4",
+        "name": "Rule Conflict Detection",
+        "units": [
+          { "id": "116.4.1", "name": "Conflict Candidate Detection" },
+          { "id": "116.4.2", "name": "Rule Comparison" },
+          { "id": "116.4.3", "name": "Conflict Resolution Notes" }
+        ]
+      },
+      {
+        "id": "116.5",
+        "name": "Rule Testing",
+        "units": [
+          { "id": "116.5.1", "name": "Test Scenario Creation" },
+          { "id": "116.5.2", "name": "Rule Outcome Review" },
+          { "id": "116.5.3", "name": "Rule Test Summary" }
+        ]
+      },
+      {
+        "id": "116.6",
+        "name": "Rule Versioning",
+        "units": [
+          { "id": "116.6.1", "name": "Rule Change Capture" },
+          { "id": "116.6.2", "name": "Version Difference Review" },
+          { "id": "116.6.3", "name": "Rule Version Record" }
+        ]
+      },
+      {
+        "id": "116.7",
+        "name": "Rule Exception Handling",
+        "units": [
+          { "id": "116.7.1", "name": "Exception Case Capture" },
+          { "id": "116.7.2", "name": "Exception Criteria Review" },
+          { "id": "116.7.3", "name": "Exception Decision Notes" }
+        ]
+      },
+      {
+        "id": "116.8",
+        "name": "Rule Documentation",
+        "units": [
+          { "id": "116.8.1", "name": "Rule Explanation Draft" },
+          { "id": "116.8.2", "name": "Usage Example Creation" },
+          { "id": "116.8.3", "name": "Rule Documentation Update" }
+        ]
+      },
+      {
+        "id": "116.9",
+        "name": "Rule Governance",
+        "units": [
+          { "id": "116.9.1", "name": "Rule Approval Review" },
+          { "id": "116.9.2", "name": "Rule Ownership Mapping" },
+          { "id": "116.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "116.10",
+        "name": "Rules Dashboard",
+        "units": [
+          { "id": "116.10.1", "name": "Rule Signal Collection" },
+          { "id": "116.10.2", "name": "Rule Status Summary" },
+          { "id": "116.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "117",
+    "name": "Ontology, Taxonomy & Semantic Systems",
+    "departments": [
+      {
+        "id": "117.1",
+        "name": "Ontology Design",
+        "units": [
+          { "id": "117.1.1", "name": "Concept Class Identification" },
+          { "id": "117.1.2", "name": "Relationship Type Mapping" },
+          { "id": "117.1.3", "name": "Ontology Draft Review" }
+        ]
+      },
+      {
+        "id": "117.2",
+        "name": "Taxonomy Structure",
+        "units": [
+          { "id": "117.2.1", "name": "Category Set Definition" },
+          { "id": "117.2.2", "name": "Hierarchy Mapping" },
+          { "id": "117.2.3", "name": "Taxonomy Structure QA" }
+        ]
+      },
+      {
+        "id": "117.3",
+        "name": "Semantic Labeling",
+        "units": [
+          { "id": "117.3.1", "name": "Term Capture" },
+          { "id": "117.3.2", "name": "Semantic Meaning Review" },
+          { "id": "117.3.3", "name": "Label Update Notes" }
+        ]
+      },
+      {
+        "id": "117.4",
+        "name": "Concept Relationship Mapping",
+        "units": [
+          { "id": "117.4.1", "name": "Relationship Candidate Detection" },
+          { "id": "117.4.2", "name": "Relationship Direction Review" },
+          { "id": "117.4.3", "name": "Relationship Map Update" }
+        ]
+      },
+      {
+        "id": "117.5",
+        "name": "Synonym And Variant Control",
+        "units": [
+          { "id": "117.5.1", "name": "Variant Term Detection" },
+          { "id": "117.5.2", "name": "Synonym Group Review" },
+          { "id": "117.5.3", "name": "Variant Control Record" }
+        ]
+      },
+      {
+        "id": "117.6",
+        "name": "Category Governance",
+        "units": [
+          { "id": "117.6.1", "name": "Category Rule Definition" },
+          { "id": "117.6.2", "name": "Category Change Review" },
+          { "id": "117.6.3", "name": "Governance Update Notes" }
+        ]
+      },
+      {
+        "id": "117.7",
+        "name": "Semantic Conflict Review",
+        "units": [
+          { "id": "117.7.1", "name": "Ambiguous Term Detection" },
+          { "id": "117.7.2", "name": "Meaning Conflict Review" },
+          { "id": "117.7.3", "name": "Semantic Resolution Notes" }
+        ]
+      },
+      {
+        "id": "117.8",
+        "name": "Controlled Vocabulary",
+        "units": [
+          { "id": "117.8.1", "name": "Vocabulary Term Selection" },
+          { "id": "117.8.2", "name": "Definition Draft" },
+          { "id": "117.8.3", "name": "Vocabulary Update" }
+        ]
+      },
+      {
+        "id": "117.9",
+        "name": "Taxonomy Migration",
+        "units": [
+          { "id": "117.9.1", "name": "Existing Category Inventory" },
+          { "id": "117.9.2", "name": "Migration Mapping" },
+          { "id": "117.9.3", "name": "Migration QA Notes" }
+        ]
+      },
+      {
+        "id": "117.10",
+        "name": "Semantic Dashboard",
+        "units": [
+          { "id": "117.10.1", "name": "Semantic Signal Collection" },
+          { "id": "117.10.2", "name": "Taxonomy Status Summary" },
+          { "id": "117.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "118",
+    "name": "Knowledge Graph & Relationship Mapping",
+    "departments": [
+      {
+        "id": "118.1",
+        "name": "Graph Node Design",
+        "units": [
+          { "id": "118.1.1", "name": "Node Type Definition" },
+          { "id": "118.1.2", "name": "Node Attribute Mapping" },
+          { "id": "118.1.3", "name": "Node Design QA" }
+        ]
+      },
+      {
+        "id": "118.2",
+        "name": "Edge Relationship Design",
+        "units": [
+          { "id": "118.2.1", "name": "Edge Type Definition" },
+          { "id": "118.2.2", "name": "Relationship Direction Mapping" },
+          { "id": "118.2.3", "name": "Edge Rule Review" }
+        ]
+      },
+      {
+        "id": "118.3",
+        "name": "Graph Data Intake",
+        "units": [
+          { "id": "118.3.1", "name": "Entity Capture" },
+          { "id": "118.3.2", "name": "Relationship Capture" },
+          { "id": "118.3.3", "name": "Graph Intake Summary" }
+        ]
+      },
+      {
+        "id": "118.4",
+        "name": "Relationship Validation",
+        "units": [
+          { "id": "118.4.1", "name": "Relationship Evidence Review" },
+          { "id": "118.4.2", "name": "Link Confidence Scoring" },
+          { "id": "118.4.3", "name": "Validation Decision Notes" }
+        ]
+      },
+      {
+        "id": "118.5",
+        "name": "Graph Query Planning",
+        "units": [
+          { "id": "118.5.1", "name": "Query Question Capture" },
+          { "id": "118.5.2", "name": "Traversal Path Review" },
+          { "id": "118.5.3", "name": "Query Plan Summary" }
+        ]
+      },
+      {
+        "id": "118.6",
+        "name": "Graph Visualization",
+        "units": [
+          { "id": "118.6.1", "name": "Graph Layout Selection" },
+          { "id": "118.6.2", "name": "Node Cluster Review" },
+          { "id": "118.6.3", "name": "Visualization QA" }
+        ]
+      },
+      {
+        "id": "118.7",
+        "name": "Graph Maintenance",
+        "units": [
+          { "id": "118.7.1", "name": "Stale Node Detection" },
+          { "id": "118.7.2", "name": "Broken Edge Review" },
+          { "id": "118.7.3", "name": "Maintenance Update Notes" }
+        ]
+      },
+      {
+        "id": "118.8",
+        "name": "Relationship Inference",
+        "units": [
+          { "id": "118.8.1", "name": "Inference Candidate Detection" },
+          { "id": "118.8.2", "name": "Evidence Strength Review" },
+          { "id": "118.8.3", "name": "Inference Record Update" }
+        ]
+      },
+      {
+        "id": "118.9",
+        "name": "Graph Governance",
+        "units": [
+          { "id": "118.9.1", "name": "Graph Rule Definition" },
+          { "id": "118.9.2", "name": "Edit Permission Review" },
+          { "id": "118.9.3", "name": "Governance Decision Record" }
+        ]
+      },
+      {
+        "id": "118.10",
+        "name": "Knowledge Graph Dashboard",
+        "units": [
+          { "id": "118.10.1", "name": "Graph Signal Collection" },
+          { "id": "118.10.2", "name": "Relationship Status Summary" },
+          { "id": "118.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "119",
+    "name": "Data Pipelines & ETL Operations",
+    "departments": [
+      {
+        "id": "119.1",
+        "name": "Pipeline Intake",
+        "units": [
+          { "id": "119.1.1", "name": "Data Source Capture" },
+          { "id": "119.1.2", "name": "Pipeline Purpose Review" },
+          { "id": "119.1.3", "name": "Pipeline Intake Summary" }
+        ]
+      },
+      {
+        "id": "119.2",
+        "name": "Extract Operations",
+        "units": [
+          { "id": "119.2.1", "name": "Source Access Review" },
+          { "id": "119.2.2", "name": "Extraction Method Selection" },
+          { "id": "119.2.3", "name": "Extract Result QA" }
+        ]
+      },
+      {
+        "id": "119.3",
+        "name": "Transform Operations",
+        "units": [
+          { "id": "119.3.1", "name": "Transformation Requirement Mapping" },
+          { "id": "119.3.2", "name": "Data Cleaning Rule Draft" },
+          { "id": "119.3.3", "name": "Transform QA Review" }
+        ]
+      },
+      {
+        "id": "119.4",
+        "name": "Load Operations",
+        "units": [
+          { "id": "119.4.1", "name": "Destination Mapping" },
+          { "id": "119.4.2", "name": "Load Format Review" },
+          { "id": "119.4.3", "name": "Load Completion Check" }
+        ]
+      },
+      {
+        "id": "119.5",
+        "name": "Pipeline Scheduling",
+        "units": [
+          { "id": "119.5.1", "name": "Run Frequency Definition" },
+          { "id": "119.5.2", "name": "Schedule Dependency Review" },
+          { "id": "119.5.3", "name": "Schedule Update Notes" }
+        ]
+      },
+      {
+        "id": "119.6",
+        "name": "Data Quality Checks",
+        "units": [
+          { "id": "119.6.1", "name": "Quality Rule Definition" },
+          { "id": "119.6.2", "name": "Quality Failure Detection" },
+          { "id": "119.6.3", "name": "Data Quality Summary" }
+        ]
+      },
+      {
+        "id": "119.7",
+        "name": "Pipeline Failure Recovery",
+        "units": [
+          { "id": "119.7.1", "name": "Failure Signal Capture" },
+          { "id": "119.7.2", "name": "Recovery Step Selection" },
+          { "id": "119.7.3", "name": "Recovery Verification Notes" }
+        ]
+      },
+      {
+        "id": "119.8",
+        "name": "Pipeline Documentation",
+        "units": [
+          { "id": "119.8.1", "name": "Pipeline Step Capture" },
+          { "id": "119.8.2", "name": "Dependency Documentation" },
+          { "id": "119.8.3", "name": "Documentation Update" }
+        ]
+      },
+      {
+        "id": "119.9",
+        "name": "Pipeline Governance",
+        "units": [
+          { "id": "119.9.1", "name": "Pipeline Ownership Review" },
+          { "id": "119.9.2", "name": "Change Control Mapping" },
+          { "id": "119.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "119.10",
+        "name": "Pipeline Dashboard",
+        "units": [
+          { "id": "119.10.1", "name": "Pipeline Signal Collection" },
+          { "id": "119.10.2", "name": "Run Status Summary" },
+          { "id": "119.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "120",
+    "name": "Search, Discovery & Retrieval Operations",
+    "departments": [
+      {
+        "id": "120.1",
+        "name": "Search Strategy",
+        "units": [
+          { "id": "120.1.1", "name": "Search Goal Definition" },
+          { "id": "120.1.2", "name": "Query Strategy Draft" },
+          { "id": "120.1.3", "name": "Search Plan Summary" }
+        ]
+      },
+      {
+        "id": "120.2",
+        "name": "Retrieval Source Selection",
+        "units": [
+          { "id": "120.2.1", "name": "Source Candidate Review" },
+          { "id": "120.2.2", "name": "Source Fit Scoring" },
+          { "id": "120.2.3", "name": "Source Selection Notes" }
+        ]
+      },
+      {
+        "id": "120.3",
+        "name": "Query Construction",
+        "units": [
+          { "id": "120.3.1", "name": "Query Term Capture" },
+          { "id": "120.3.2", "name": "Boolean And Semantic Review" },
+          { "id": "120.3.3", "name": "Query QA" }
+        ]
+      },
+      {
+        "id": "120.4",
+        "name": "Search Result Review",
+        "units": [
+          { "id": "120.4.1", "name": "Result Set Capture" },
+          { "id": "120.4.2", "name": "Relevance Review" },
+          { "id": "120.4.3", "name": "Result Summary Notes" }
+        ]
+      },
+      {
+        "id": "120.5",
+        "name": "Ranking And Relevance",
+        "units": [
+          { "id": "120.5.1", "name": "Ranking Signal Review" },
+          { "id": "120.5.2", "name": "Relevance Score Assignment" },
+          { "id": "120.5.3", "name": "Ranking Adjustment Notes" }
+        ]
+      },
+      {
+        "id": "120.6",
+        "name": "Retrieval Augmentation",
+        "units": [
+          { "id": "120.6.1", "name": "Context Need Detection" },
+          { "id": "120.6.2", "name": "Supporting Chunk Selection" },
+          { "id": "120.6.3", "name": "Retrieval Context Summary" }
+        ]
+      },
+      {
+        "id": "120.7",
+        "name": "Search Failure Recovery",
+        "units": [
+          { "id": "120.7.1", "name": "No-Result Signal Detection" },
+          { "id": "120.7.2", "name": "Query Expansion Draft" },
+          { "id": "120.7.3", "name": "Recovery Search Notes" }
+        ]
+      },
+      {
+        "id": "120.8",
+        "name": "Discovery Workflows",
+        "units": [
+          { "id": "120.8.1", "name": "Discovery Objective Capture" },
+          { "id": "120.8.2", "name": "Exploration Path Mapping" },
+          { "id": "120.8.3", "name": "Discovery Finding Summary" }
+        ]
+      },
+      {
+        "id": "120.9",
+        "name": "Search Governance",
+        "units": [
+          { "id": "120.9.1", "name": "Search Rule Definition" },
+          { "id": "120.9.2", "name": "Source Boundary Review" },
+          { "id": "120.9.3", "name": "Search Governance Notes" }
+        ]
+      },
+      {
+        "id": "120.10",
+        "name": "Retrieval Dashboard",
+        "units": [
+          { "id": "120.10.1", "name": "Search Signal Collection" },
+          { "id": "120.10.2", "name": "Retrieval Status Summary" },
+          { "id": "120.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "121",
+    "name": "Data Labeling, Annotation & Training Sets",
+    "departments": [
+      {
+        "id": "121.1",
+        "name": "Labeling Project Intake",
+        "units": [
+          { "id": "121.1.1", "name": "Labeling Goal Capture" },
+          { "id": "121.1.2", "name": "Dataset Scope Review" },
+          { "id": "121.1.3", "name": "Labeling Project Brief" }
+        ]
+      },
+      {
+        "id": "121.2",
+        "name": "Label Schema Design",
+        "units": [
+          { "id": "121.2.1", "name": "Label Category Definition" },
+          { "id": "121.2.2", "name": "Label Boundary Mapping" },
+          { "id": "121.2.3", "name": "Schema QA Review" }
+        ]
+      },
+      {
+        "id": "121.3",
+        "name": "Annotation Guidelines",
+        "units": [
+          { "id": "121.3.1", "name": "Guideline Drafting" },
+          { "id": "121.3.2", "name": "Edge Case Review" },
+          { "id": "121.3.3", "name": "Guideline Update" }
+        ]
+      },
+      {
+        "id": "121.4",
+        "name": "Labeling Workflow",
+        "units": [
+          { "id": "121.4.1", "name": "Annotation Step Mapping" },
+          { "id": "121.4.2", "name": "Reviewer Routing" },
+          { "id": "121.4.3", "name": "Workflow QA" }
+        ]
+      },
+      {
+        "id": "121.5",
+        "name": "Quality Sampling",
+        "units": [
+          { "id": "121.5.1", "name": "Sample Selection" },
+          { "id": "121.5.2", "name": "Label Quality Review" },
+          { "id": "121.5.3", "name": "Sampling Result Notes" }
+        ]
+      },
+      {
+        "id": "121.6",
+        "name": "Disagreement Resolution",
+        "units": [
+          { "id": "121.6.1", "name": "Label Disagreement Capture" },
+          { "id": "121.6.2", "name": "Adjudication Rule Review" },
+          { "id": "121.6.3", "name": "Resolution Record Update" }
+        ]
+      },
+      {
+        "id": "121.7",
+        "name": "Training Set Assembly",
+        "units": [
+          { "id": "121.7.1", "name": "Data Split Planning" },
+          { "id": "121.7.2", "name": "Training Example Selection" },
+          { "id": "121.7.3", "name": "Training Set QA" }
+        ]
+      },
+      {
+        "id": "121.8",
+        "name": "Bias And Coverage Review",
+        "units": [
+          { "id": "121.8.1", "name": "Coverage Gap Detection" },
+          { "id": "121.8.2", "name": "Bias Pattern Review" },
+          { "id": "121.8.3", "name": "Dataset Improvement Notes" }
+        ]
+      },
+      {
+        "id": "121.9",
+        "name": "Annotation Governance",
+        "units": [
+          { "id": "121.9.1", "name": "Labeling Rule Definition" },
+          { "id": "121.9.2", "name": "Annotator Permission Review" },
+          { "id": "121.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "121.10",
+        "name": "Training Set Dashboard",
+        "units": [
+          { "id": "121.10.1", "name": "Labeling Signal Collection" },
+          { "id": "121.10.2", "name": "Dataset Status Summary" },
+          { "id": "121.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "122",
+    "name": "Personal Data Rooms & Secure Project Spaces",
+    "departments": [
+      {
+        "id": "122.1",
+        "name": "Data Room Intake",
+        "units": [
+          { "id": "122.1.1", "name": "Data Room Purpose Capture" },
+          { "id": "122.1.2", "name": "Access Requirement Review" },
+          { "id": "122.1.3", "name": "Data Room Brief" }
+        ]
+      },
+      {
+        "id": "122.2",
+        "name": "Secure Folder Structure",
+        "units": [
+          { "id": "122.2.1", "name": "Folder Category Design" },
+          { "id": "122.2.2", "name": "Permission Boundary Mapping" },
+          { "id": "122.2.3", "name": "Structure QA Review" }
+        ]
+      },
+      {
+        "id": "122.3",
+        "name": "Data Room Access Control",
+        "units": [
+          { "id": "122.3.1", "name": "Access Request Capture" },
+          { "id": "122.3.2", "name": "Permission Level Review" },
+          { "id": "122.3.3", "name": "Access Decision Record" }
+        ]
+      },
+      {
+        "id": "122.4",
+        "name": "Sensitive File Classification",
+        "units": [
+          { "id": "122.4.1", "name": "Sensitive File Detection" },
+          { "id": "122.4.2", "name": "Classification Label Selection" },
+          { "id": "122.4.3", "name": "Classification Record Update" }
+        ]
+      },
+      {
+        "id": "122.5",
+        "name": "Secure Sharing Workflow",
+        "units": [
+          { "id": "122.5.1", "name": "Share Need Detection" },
+          { "id": "122.5.2", "name": "Safe Sharing Route Selection" },
+          { "id": "122.5.3", "name": "Sharing Confirmation Notes" }
+        ]
+      },
+      {
+        "id": "122.6",
+        "name": "Data Room Audit Trail",
+        "units": [
+          { "id": "122.6.1", "name": "Access Event Capture" },
+          { "id": "122.6.2", "name": "Activity Review" },
+          { "id": "122.6.3", "name": "Audit Trail Update" }
+        ]
+      },
+      {
+        "id": "122.7",
+        "name": "Project Space Setup",
+        "units": [
+          { "id": "122.7.1", "name": "Project Space Need Capture" },
+          { "id": "122.7.2", "name": "Workspace Structure Draft" },
+          { "id": "122.7.3", "name": "Project Space QA" }
+        ]
+      },
+      {
+        "id": "122.8",
+        "name": "Secure Archive",
+        "units": [
+          { "id": "122.8.1", "name": "Archive Candidate Review" },
+          { "id": "122.8.2", "name": "Retention Requirement Mapping" },
+          { "id": "122.8.3", "name": "Archive Placement Notes" }
+        ]
+      },
+      {
+        "id": "122.9",
+        "name": "Data Room Cleanup",
+        "units": [
+          { "id": "122.9.1", "name": "Obsolete File Detection" },
+          { "id": "122.9.2", "name": "Access Cleanup Review" },
+          { "id": "122.9.3", "name": "Cleanup Decision Notes" }
+        ]
+      },
+      {
+        "id": "122.10",
+        "name": "Secure Space Dashboard",
+        "units": [
+          { "id": "122.10.1", "name": "Access Signal Collection" },
+          { "id": "122.10.2", "name": "Security Status Summary" },
+          { "id": "122.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "123",
+    "name": "Identity, Access & Permission Architecture",
+    "departments": [
+      {
+        "id": "123.1",
+        "name": "Identity Model Design",
+        "units": [
+          { "id": "123.1.1", "name": "Identity Type Definition" },
+          { "id": "123.1.2", "name": "Identity Attribute Mapping" },
+          { "id": "123.1.3", "name": "Identity Model Review" }
+        ]
+      },
+      {
+        "id": "123.2",
+        "name": "Permission Model",
+        "units": [
+          { "id": "123.2.1", "name": "Permission Type Definition" },
+          { "id": "123.2.2", "name": "Permission Scope Mapping" },
+          { "id": "123.2.3", "name": "Permission Model QA" }
+        ]
+      },
+      {
+        "id": "123.3",
+        "name": "Role-Based Access Control",
+        "units": [
+          { "id": "123.3.1", "name": "Role Inventory" },
+          { "id": "123.3.2", "name": "Role Permission Mapping" },
+          { "id": "123.3.3", "name": "RBAC Review Notes" }
+        ]
+      },
+      {
+        "id": "123.4",
+        "name": "Access Request Workflow",
+        "units": [
+          { "id": "123.4.1", "name": "Access Request Capture" },
+          { "id": "123.4.2", "name": "Approval Route Mapping" },
+          { "id": "123.4.3", "name": "Access Workflow Update" }
+        ]
+      },
+      {
+        "id": "123.5",
+        "name": "Least Privilege Review",
+        "units": [
+          { "id": "123.5.1", "name": "Permission Exposure Detection" },
+          { "id": "123.5.2", "name": "Privilege Reduction Review" },
+          { "id": "123.5.3", "name": "Least Privilege Notes" }
+        ]
+      },
+      {
+        "id": "123.6",
+        "name": "Access Revocation",
+        "units": [
+          { "id": "123.6.1", "name": "Revocation Trigger Detection" },
+          { "id": "123.6.2", "name": "Access Removal Plan" },
+          { "id": "123.6.3", "name": "Revocation Confirmation" }
+        ]
+      },
+      {
+        "id": "123.7",
+        "name": "Permission Audit",
+        "units": [
+          { "id": "123.7.1", "name": "Permission Inventory Capture" },
+          { "id": "123.7.2", "name": "Access Pattern Review" },
+          { "id": "123.7.3", "name": "Audit Finding Summary" }
+        ]
+      },
+      {
+        "id": "123.8",
+        "name": "Identity Risk Review",
+        "units": [
+          { "id": "123.8.1", "name": "Identity Risk Signal" },
+          { "id": "123.8.2", "name": "Impersonation Risk Review" },
+          { "id": "123.8.3", "name": "Identity Risk Notes" }
+        ]
+      },
+      {
+        "id": "123.9",
+        "name": "Access Governance",
+        "units": [
+          { "id": "123.9.1", "name": "Access Rule Definition" },
+          { "id": "123.9.2", "name": "Governance Exception Review" },
+          { "id": "123.9.3", "name": "Governance Decision Record" }
+        ]
+      },
+      {
+        "id": "123.10",
+        "name": "Access Dashboard",
+        "units": [
+          { "id": "123.10.1", "name": "Access Signal Collection" },
+          { "id": "123.10.2", "name": "Permission Status Summary" },
+          { "id": "123.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "124",
+    "name": "Data Privacy, Consent & Retention Operations",
+    "departments": [
+      {
+        "id": "124.1",
+        "name": "Privacy Requirement Intake",
+        "units": [
+          { "id": "124.1.1", "name": "Privacy Rule Capture" },
+          { "id": "124.1.2", "name": "Data Category Review" },
+          { "id": "124.1.3", "name": "Privacy Intake Summary" }
+        ]
+      },
+      {
+        "id": "124.2",
+        "name": "Consent Management",
+        "units": [
+          { "id": "124.2.1", "name": "Consent Requirement Mapping" },
+          { "id": "124.2.2", "name": "Consent Language Review" },
+          { "id": "124.2.3", "name": "Consent Status Record" }
+        ]
+      },
+      {
+        "id": "124.3",
+        "name": "Data Minimization",
+        "units": [
+          { "id": "124.3.1", "name": "Data Need Review" },
+          { "id": "124.3.2", "name": "Minimization Opportunity Detection" },
+          { "id": "124.3.3", "name": "Minimization Notes" }
+        ]
+      },
+      {
+        "id": "124.4",
+        "name": "Retention Policy",
+        "units": [
+          { "id": "124.4.1", "name": "Retention Requirement Capture" },
+          { "id": "124.4.2", "name": "Retention Period Mapping" },
+          { "id": "124.4.3", "name": "Retention Policy Update" }
+        ]
+      },
+      {
+        "id": "124.5",
+        "name": "Deletion Workflow",
+        "units": [
+          { "id": "124.5.1", "name": "Deletion Request Capture" },
+          { "id": "124.5.2", "name": "Deletion Scope Review" },
+          { "id": "124.5.3", "name": "Deletion Confirmation Record" }
+        ]
+      },
+      {
+        "id": "124.6",
+        "name": "Privacy Risk Review",
+        "units": [
+          { "id": "124.6.1", "name": "Privacy Risk Signal" },
+          { "id": "124.6.2", "name": "Exposure Impact Review" },
+          { "id": "124.6.3", "name": "Privacy Risk Summary" }
+        ]
+      },
+      {
+        "id": "124.7",
+        "name": "Data Subject Request Support",
+        "units": [
+          { "id": "124.7.1", "name": "Request Type Classification" },
+          { "id": "124.7.2", "name": "Response Requirement Review" },
+          { "id": "124.7.3", "name": "Request Handling Notes" }
+        ]
+      },
+      {
+        "id": "124.8",
+        "name": "Privacy Notice Review",
+        "units": [
+          { "id": "124.8.1", "name": "Notice Requirement Review" },
+          { "id": "124.8.2", "name": "Notice Language Draft" },
+          { "id": "124.8.3", "name": "Notice QA Review" }
+        ]
+      },
+      {
+        "id": "124.9",
+        "name": "Privacy Governance",
+        "units": [
+          { "id": "124.9.1", "name": "Privacy Rule Definition" },
+          { "id": "124.9.2", "name": "Exception Review" },
+          { "id": "124.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "124.10",
+        "name": "Privacy Dashboard",
+        "units": [
+          { "id": "124.10.1", "name": "Privacy Signal Collection" },
+          { "id": "124.10.2", "name": "Consent And Retention Summary" },
+          { "id": "124.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  }
+]
