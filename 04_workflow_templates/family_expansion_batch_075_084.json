@@ -1,0 +1,575 @@
+{
+  "batch": "075_084",
+  "families": [
+    {
+      "id": 75,
+      "name": "Creativity, Ideation & Concept Generation",
+      "folder": "02_departments/075_creativity_ideation_and_concept_generation",
+      "departments": [
+        {
+          "id": "75.1",
+          "name": "Idea Intake",
+          "units": ["Idea Signal Capture", "Idea Context Framing", "Idea Intake Summary"]
+        },
+        {
+          "id": "75.2",
+          "name": "Brainstorming",
+          "units": ["Prompt Seed Creation", "Option Generation", "Idea Cluster Review"]
+        },
+        {
+          "id": "75.3",
+          "name": "Concept Development",
+          "units": ["Concept Premise Draft", "Concept Expansion", "Concept Clarity Review"]
+        },
+        {
+          "id": "75.4",
+          "name": "Creative Constraints",
+          "units": ["Constraint Definition", "Constraint-Based Variation", "Constraint Fit Review"]
+        },
+        {
+          "id": "75.5",
+          "name": "Divergent Thinking",
+          "units": ["Unusual Angle Search", "Alternative Path Generation", "Divergent Option Summary"]
+        },
+        {
+          "id": "75.6",
+          "name": "Convergent Selection",
+          "units": ["Selection Criteria Setup", "Best Option Shortlist", "Final Concept Recommendation"]
+        },
+        {
+          "id": "75.7",
+          "name": "Cross-Domain Inspiration",
+          "units": ["Source Domain Selection", "Pattern Transfer Mapping", "Cross-Domain Concept Summary"]
+        },
+        {
+          "id": "75.8",
+          "name": "Creative Risk Review",
+          "units": ["Novelty Risk Detection", "Audience Fit Review", "Risk-Adjusted Concept Notes"]
+        },
+        {
+          "id": "75.9",
+          "name": "Idea Incubation",
+          "units": ["Idea Parking Decision", "Incubation Prompt Setup", "Idea Maturity Review"]
+        },
+        {
+          "id": "75.10",
+          "name": "Concept Archive",
+          "units": ["Concept Record Capture", "Concept Category Filing", "Reusable Idea Update"]
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "name": "Decision Memory & Lessons Learned",
+      "folder": "02_departments/076_decision_memory_and_lessons_learned",
+      "departments": [
+        {
+          "id": "76.1",
+          "name": "Decision Capture",
+          "units": ["Decision Event Recording", "Decision Context Summary", "Decision Record Update"]
+        },
+        {
+          "id": "76.2",
+          "name": "Rationale Tracking",
+          "units": ["Reason Capture", "Evidence Link Mapping", "Rationale Quality Review"]
+        },
+        {
+          "id": "76.3",
+          "name": "Assumption Logging",
+          "units": ["Assumption Identification", "Assumption Risk Review", "Assumption Log Update"]
+        },
+        {
+          "id": "76.4",
+          "name": "Outcome Tracking",
+          "units": ["Outcome Signal Collection", "Expected Versus Actual Review", "Outcome Summary Notes"]
+        },
+        {
+          "id": "76.5",
+          "name": "Lessons Learned",
+          "units": ["Lesson Candidate Detection", "Lesson Pattern Review", "Lesson Learned Record"]
+        },
+        {
+          "id": "76.6",
+          "name": "Decision Replay",
+          "units": ["Prior Decision Retrieval", "Context Reconstruction", "Replay Insight Summary"]
+        },
+        {
+          "id": "76.7",
+          "name": "Regret And Error Review",
+          "units": ["Error Signal Capture", "Regret Pattern Review", "Future Prevention Notes"]
+        },
+        {
+          "id": "76.8",
+          "name": "Decision Pattern Library",
+          "units": ["Pattern Candidate Capture", "Decision Type Classification", "Pattern Library Update"]
+        },
+        {
+          "id": "76.9",
+          "name": "Decision Quality Scoring",
+          "units": ["Quality Criteria Setup", "Decision Score Review", "Improvement Recommendation"]
+        },
+        {
+          "id": "76.10",
+          "name": "Lessons Archive",
+          "units": ["Lesson Filing", "Historical Lesson Comparison", "Lessons Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "name": "Environmental Scanning & Opportunity Radar",
+      "folder": "02_departments/077_environmental_scanning_and_opportunity_radar",
+      "departments": [
+        {
+          "id": "77.1",
+          "name": "Signal Scanning",
+          "units": ["Signal Source Selection", "Weak Signal Capture", "Signal Relevance Review"]
+        },
+        {
+          "id": "77.2",
+          "name": "Trend Detection",
+          "units": ["Trend Candidate Identification", "Trend Momentum Review", "Trend Summary Brief"]
+        },
+        {
+          "id": "77.3",
+          "name": "Opportunity Radar",
+          "units": ["Opportunity Signal Detection", "Opportunity Fit Review", "Opportunity Alert Notes"]
+        },
+        {
+          "id": "77.4",
+          "name": "Threat Monitoring",
+          "units": ["Threat Indicator Capture", "Exposure Impact Review", "Threat Response Notes"]
+        },
+        {
+          "id": "77.5",
+          "name": "Market Watching",
+          "units": ["Market Topic Selection", "Market Change Review", "Market Watch Summary"]
+        },
+        {
+          "id": "77.6",
+          "name": "Technology Scouting",
+          "units": ["Technology Signal Collection", "Capability Relevance Review", "Technology Scout Brief"]
+        },
+        {
+          "id": "77.7",
+          "name": "Competitor Awareness",
+          "units": ["Competitor Activity Capture", "Strategic Impact Review", "Competitor Update Notes"]
+        },
+        {
+          "id": "77.8",
+          "name": "Regulatory Horizon Scan",
+          "units": ["Regulatory Signal Capture", "Rule Change Probability Review", "Regulatory Watch Notes"]
+        },
+        {
+          "id": "77.9",
+          "name": "Opportunity Prioritization",
+          "units": ["Opportunity Comparison", "Timing And Effort Review", "Priority Recommendation"]
+        },
+        {
+          "id": "77.10",
+          "name": "Radar Archive",
+          "units": ["Scan Record Capture", "Signal Category Filing", "Radar Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "name": "Standards of Evidence & Source Hierarchy",
+      "folder": "02_departments/078_standards_of_evidence_and_source_hierarchy",
+      "departments": [
+        {
+          "id": "78.1",
+          "name": "Evidence Standards",
+          "units": ["Evidence Requirement Definition", "Evidence Threshold Review", "Evidence Standard Update"]
+        },
+        {
+          "id": "78.2",
+          "name": "Source Hierarchy",
+          "units": ["Source Type Classification", "Authority Level Assignment", "Source Hierarchy Review"]
+        },
+        {
+          "id": "78.3",
+          "name": "Citation Requirements",
+          "units": ["Citation Need Detection", "Citation Placement Review", "Citation Completeness Check"]
+        },
+        {
+          "id": "78.4",
+          "name": "Source Reliability Review",
+          "units": ["Source Origin Analysis", "Credibility Signal Review", "Reliability Decision Notes"]
+        },
+        {
+          "id": "78.5",
+          "name": "Conflicting Evidence Review",
+          "units": ["Conflict Detection", "Evidence Comparison", "Conflict Resolution Summary"]
+        },
+        {
+          "id": "78.6",
+          "name": "Primary Source Preference",
+          "units": ["Primary Source Search", "Secondary Source Limitation Review", "Primary Evidence Summary"]
+        },
+        {
+          "id": "78.7",
+          "name": "Evidence Traceability",
+          "units": ["Claim Evidence Mapping", "Trace Link Review", "Traceability Record Update"]
+        },
+        {
+          "id": "78.8",
+          "name": "Claim Confidence Scoring",
+          "units": ["Claim Strength Review", "Confidence Score Assignment", "Confidence Explanation Notes"]
+        },
+        {
+          "id": "78.9",
+          "name": "Source Freshness Review",
+          "units": ["Publication Date Check", "Freshness Requirement Review", "Staleness Warning Notes"]
+        },
+        {
+          "id": "78.10",
+          "name": "Evidence Governance",
+          "units": ["Evidence Rule Definition", "Standard Compliance Review", "Evidence Governance Update"]
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "name": "User Experience Research & Human Factors",
+      "folder": "02_departments/079_user_experience_research_and_human_factors",
+      "departments": [
+        {
+          "id": "79.1",
+          "name": "User Research Planning",
+          "units": ["Research Objective Definition", "Participant Criteria Mapping", "Research Plan Summary"]
+        },
+        {
+          "id": "79.2",
+          "name": "User Interview Design",
+          "units": ["Interview Question Draft", "Interview Flow Review", "Interview Readiness Check"]
+        },
+        {
+          "id": "79.3",
+          "name": "Usability Testing",
+          "units": ["Test Task Definition", "Usability Observation Capture", "Usability Finding Summary"]
+        },
+        {
+          "id": "79.4",
+          "name": "Human Factors Review",
+          "units": ["Human Constraint Identification", "Cognitive Load Review", "Human Factors Recommendation"]
+        },
+        {
+          "id": "79.5",
+          "name": "Journey Mapping",
+          "units": ["User Step Capture", "Friction Point Review", "Journey Map Update"]
+        },
+        {
+          "id": "79.6",
+          "name": "Accessibility Research",
+          "units": ["Access Need Identification", "Barrier Review", "Accessibility Research Notes"]
+        },
+        {
+          "id": "79.7",
+          "name": "Persona Research",
+          "units": ["Persona Evidence Collection", "Persona Trait Mapping", "Persona Validation Review"]
+        },
+        {
+          "id": "79.8",
+          "name": "Interaction Analysis",
+          "units": ["Interaction Pattern Capture", "Behavior Signal Review", "Interaction Improvement Notes"]
+        },
+        {
+          "id": "79.9",
+          "name": "UX Insight Synthesis",
+          "units": ["Research Theme Extraction", "Insight Prioritization", "UX Insight Brief"]
+        },
+        {
+          "id": "79.10",
+          "name": "UX Research Archive",
+          "units": ["Research Record Capture", "Finding Category Filing", "UX Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "name": "Experimental Governance & Sandbox Control",
+      "folder": "02_departments/080_experimental_governance_and_sandbox_control",
+      "departments": [
+        {
+          "id": "80.1",
+          "name": "Sandbox Boundary Design",
+          "units": ["Sandbox Scope Definition", "Boundary Rule Mapping", "Sandbox Limit Review"]
+        },
+        {
+          "id": "80.2",
+          "name": "Experiment Approval",
+          "units": ["Experiment Request Intake", "Approval Criteria Review", "Experiment Approval Record"]
+        },
+        {
+          "id": "80.3",
+          "name": "Risk Containment",
+          "units": ["Risk Scenario Identification", "Containment Control Selection", "Risk Containment Notes"]
+        },
+        {
+          "id": "80.4",
+          "name": "Experiment Monitoring",
+          "units": ["Monitoring Signal Selection", "Run Observation", "Monitoring Summary"]
+        },
+        {
+          "id": "80.5",
+          "name": "Stop Conditions",
+          "units": ["Stop Trigger Definition", "Threshold Review", "Stop Decision Record"]
+        },
+        {
+          "id": "80.6",
+          "name": "Sandbox Exit Review",
+          "units": ["Exit Criteria Check", "Result Safety Review", "Exit Summary Notes"]
+        },
+        {
+          "id": "80.7",
+          "name": "Experimental Audit Trail",
+          "units": ["Experiment Event Logging", "Change Trace Review", "Audit Trail Update"]
+        },
+        {
+          "id": "80.8",
+          "name": "Governance Exceptions",
+          "units": ["Exception Request Capture", "Exception Risk Review", "Exception Decision Notes"]
+        },
+        {
+          "id": "80.9",
+          "name": "Sandbox Lessons",
+          "units": ["Lesson Signal Capture", "Experiment Learning Review", "Sandbox Lesson Update"]
+        },
+        {
+          "id": "80.10",
+          "name": "Experimental Governance Board",
+          "units": ["Governance Issue Intake", "Board Decision Support", "Governance Decision Record"]
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "name": "Agent Memory Governance & Recall Control",
+      "folder": "02_departments/081_agent_memory_governance_and_recall_control",
+      "departments": [
+        {
+          "id": "81.1",
+          "name": "Memory Policy",
+          "units": ["Memory Rule Definition", "Recall Permission Review", "Memory Policy Update"]
+        },
+        {
+          "id": "81.2",
+          "name": "Recall Authorization",
+          "units": ["Recall Request Detection", "Authorization Criteria Review", "Recall Decision Record"]
+        },
+        {
+          "id": "81.3",
+          "name": "Memory Scope Control",
+          "units": ["Scope Boundary Mapping", "Context Inclusion Review", "Scope Adjustment Notes"]
+        },
+        {
+          "id": "81.4",
+          "name": "Sensitive Memory Review",
+          "units": ["Sensitive Memory Detection", "Exposure Risk Review", "Sensitive Recall Decision"]
+        },
+        {
+          "id": "81.5",
+          "name": "Memory Conflict Governance",
+          "units": ["Conflict Candidate Capture", "Authority Source Review", "Conflict Governance Record"]
+        },
+        {
+          "id": "81.6",
+          "name": "Recall Audit Trail",
+          "units": ["Recall Event Capture", "Recall Reason Logging", "Recall Audit Update"]
+        },
+        {
+          "id": "81.7",
+          "name": "Memory Expiration",
+          "units": ["Expiration Rule Mapping", "Stale Memory Review", "Expiration Recommendation"]
+        },
+        {
+          "id": "81.8",
+          "name": "Memory Correction",
+          "units": ["Correction Request Capture", "Correction Evidence Review", "Memory Correction Record"]
+        },
+        {
+          "id": "81.9",
+          "name": "Cross-Thread Recall Control",
+          "units": ["Thread Context Review", "Recall Boundary Selection", "Cross-Thread Decision Notes"]
+        },
+        {
+          "id": "81.10",
+          "name": "Memory Governance Dashboard",
+          "units": ["Memory Signal Collection", "Governance Status Summary", "Memory Dashboard Update"]
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "name": "Version Control, Releases & Change Management",
+      "folder": "02_departments/082_version_control_releases_and_change_management",
+      "departments": [
+        {
+          "id": "82.1",
+          "name": "Version Planning",
+          "units": ["Version Goal Definition", "Change Scope Mapping", "Version Plan Summary"]
+        },
+        {
+          "id": "82.2",
+          "name": "Change Request Intake",
+          "units": ["Change Request Capture", "Change Category Assignment", "Change Intake Record"]
+        },
+        {
+          "id": "82.3",
+          "name": "Release Notes",
+          "units": ["Change Summary Collection", "Release Note Draft", "Release Note QA"]
+        },
+        {
+          "id": "82.4",
+          "name": "Changelog Management",
+          "units": ["Change Event Capture", "Changelog Entry Draft", "Changelog Update"]
+        },
+        {
+          "id": "82.5",
+          "name": "Branch And Merge Review",
+          "units": ["Branch Purpose Review", "Merge Risk Detection", "Merge Readiness Notes"]
+        },
+        {
+          "id": "82.6",
+          "name": "Regression Risk Review",
+          "units": ["Regression Area Identification", "Impact Review", "Regression Risk Summary"]
+        },
+        {
+          "id": "82.7",
+          "name": "Release Readiness",
+          "units": ["Release Checklist Review", "Blocker Detection", "Release Decision Notes"]
+        },
+        {
+          "id": "82.8",
+          "name": "Rollback Planning",
+          "units": ["Rollback Trigger Definition", "Restore Path Mapping", "Rollback Plan Summary"]
+        },
+        {
+          "id": "82.9",
+          "name": "Change Communication",
+          "units": ["Change Audience Mapping", "Change Message Draft", "Communication Timing Review"]
+        },
+        {
+          "id": "82.10",
+          "name": "Release Archive",
+          "units": ["Release Record Capture", "Version Artifact Filing", "Release Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "name": "API Economy, Platform Access & Usage Limits",
+      "folder": "02_departments/083_api_economy_platform_access_and_usage_limits",
+      "departments": [
+        {
+          "id": "83.1",
+          "name": "API Inventory",
+          "units": ["API Source Capture", "Access Status Review", "API Inventory Update"]
+        },
+        {
+          "id": "83.2",
+          "name": "Usage Limit Tracking",
+          "units": ["Limit Rule Capture", "Usage Signal Review", "Limit Risk Notes"]
+        },
+        {
+          "id": "83.3",
+          "name": "Platform Access Planning",
+          "units": ["Platform Requirement Mapping", "Access Path Review", "Platform Access Plan"]
+        },
+        {
+          "id": "83.4",
+          "name": "API Cost Review",
+          "units": ["Pricing Model Capture", "Cost Scenario Review", "API Cost Summary"]
+        },
+        {
+          "id": "83.5",
+          "name": "Rate Limit Management",
+          "units": ["Rate Limit Detection", "Request Timing Review", "Rate Limit Mitigation Notes"]
+        },
+        {
+          "id": "83.6",
+          "name": "API Dependency Risk",
+          "units": ["Dependency Identification", "Vendor Lock-In Review", "Dependency Risk Summary"]
+        },
+        {
+          "id": "83.7",
+          "name": "API Fallback Planning",
+          "units": ["Fallback Need Detection", "Alternative Source Mapping", "Fallback Plan Update"]
+        },
+        {
+          "id": "83.8",
+          "name": "Free Tier Optimization",
+          "units": ["Free Tier Rule Review", "Usage Allocation Planning", "Free Tier Efficiency Notes"]
+        },
+        {
+          "id": "83.9",
+          "name": "API Policy Monitoring",
+          "units": ["Policy Change Detection", "Access Rule Review", "API Policy Alert"]
+        },
+        {
+          "id": "83.10",
+          "name": "API Economy Dashboard",
+          "units": ["Cost And Limit Signal Collection", "Platform Summary", "API Dashboard Update"]
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "name": "Infrastructure Economics & Compute Planning",
+      "folder": "02_departments/084_infrastructure_economics_and_compute_planning",
+      "departments": [
+        {
+          "id": "84.1",
+          "name": "Compute Requirement Planning",
+          "units": ["Workload Requirement Capture", "Compute Sizing Review", "Compute Plan Summary"]
+        },
+        {
+          "id": "84.2",
+          "name": "Hosting Cost Analysis",
+          "units": ["Hosting Option Collection", "Monthly Cost Comparison", "Hosting Cost Recommendation"]
+        },
+        {
+          "id": "84.3",
+          "name": "Storage Economics",
+          "units": ["Storage Need Estimate", "Storage Provider Comparison", "Storage Cost Summary"]
+        },
+        {
+          "id": "84.4",
+          "name": "Bandwidth Planning",
+          "units": ["Bandwidth Demand Estimate", "Transfer Cost Review", "Bandwidth Risk Notes"]
+        },
+        {
+          "id": "84.5",
+          "name": "Local Versus Cloud Compute",
+          "units": ["Local Capability Review", "Cloud Option Review", "Local-Cloud Tradeoff Summary"]
+        },
+        {
+          "id": "84.6",
+          "name": "Scaling Strategy",
+          "units": ["Scaling Trigger Definition", "Capacity Growth Mapping", "Scaling Plan Notes"]
+        },
+        {
+          "id": "84.7",
+          "name": "Infrastructure Budgeting",
+          "units": ["Infrastructure Cost Inventory", "Budget Constraint Review", "Budget Recommendation"]
+        },
+        {
+          "id": "84.8",
+          "name": "Reliability And Uptime Planning",
+          "units": ["Reliability Requirement Capture", "Uptime Risk Review", "Reliability Plan Summary"]
+        },
+        {
+          "id": "84.9",
+          "name": "Compute Vendor Comparison",
+          "units": ["Vendor Option Inventory", "Feature And Cost Review", "Vendor Recommendation Notes"]
+        },
+        {
+          "id": "84.10",
+          "name": "Infrastructure Economics Dashboard",
+          "units": ["Cost Signal Collection", "Compute Summary", "Infrastructure Dashboard Update"]
+        }
+      ]
+    }
+  ]
+}
