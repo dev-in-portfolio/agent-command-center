@@ -6,23 +6,96 @@
       "name": "Data & Knowledge",
       "folder": "02_departments/005_data_and_knowledge",
       "departments": [
-        {"id": "5.1", "name": "Data Entry", "units": ["Input Capture", "Record Creation", "Entry Verification"]},
-        {"id": "5.2", "name": "Data Cleaning", "units": ["Duplicate Detection", "Field Normalization", "Error Correction"]},
-        {"id": "5.3", "name": "Data Extraction", "units": ["Source Identification", "Extraction Mapping", "Extract Validation"]},
-        {"id": "5.4", "name": "Data Engineering", "units": ["Data Model Design", "Pipeline Support", "Data Structure Review"]},
-        {"id": "5.5", "name": "Data Analysis", "units": ["Analysis Question Framing", "Pattern Detection", "Insight Summary"]},
-        {"id": "5.6", "name": "Business Intelligence", "units": ["Metric Definition", "Dashboard Data Prep", "BI Summary"]},
-        {"id": "5.7", "name": "Reporting", "units": ["Report Requirements", "Report Assembly", "Report Accuracy Review"]},
-        {"id": "5.8", "name": "Forecasting", "units": ["Forecast Assumption Setup", "Projection Modeling", "Forecast Risk Review"]},
-        {"id": "5.9", "name": "Data Governance", "units": ["Data Ownership Mapping", "Data Rule Definition", "Governance Compliance Review"]},
-        {"id": "5.10", "name": "Data Quality", "units": ["Quality Criteria Definition", "Quality Issue Detection", "Quality Correction Tracking"]},
-        {"id": "5.11", "name": "Database Administration", "units": ["Database Inventory", "Access And Structure Review", "Database Maintenance Notes"]},
-        {"id": "5.12", "name": "Metadata Management", "units": ["Metadata Capture", "Metadata Standardization", "Metadata Completeness Review"]},
-        {"id": "5.13", "name": "Taxonomy Management", "units": ["Category Design", "Tagging Rules", "Taxonomy Drift Review"]},
-        {"id": "5.14", "name": "Knowledge Graph Management", "units": ["Entity Mapping", "Relationship Mapping", "Graph Integrity Review"]},
-        {"id": "5.15", "name": "Retrieval / RAG Management", "units": ["Retrieval Source Mapping", "Chunk And Index Review", "Retrieval Quality Testing"]},
-        {"id": "5.16", "name": "Data Privacy", "units": ["Sensitive Data Detection", "Privacy Rule Mapping", "Privacy Risk Review"]},
-        {"id": "5.17", "name": "Data Retention", "units": ["Retention Rule Mapping", "Archive Decision", "Deletion Review"]}
+        {
+          "id": "5.1",
+          "name": "Data Entry",
+          "units": [
+            "Input Capture",
+            "Record Creation",
+            "Entry Verification"
+          ]
+        },
+        {
+          "id": "5.2",
+          "name": "Data Cleaning",
+          "units": [
+            "Duplicate Detection",
+            "Field Normalization",
+            "Error Correction"
+          ]
+        },
+        {
+          "id": "5.3",
+          "name": "Data Extraction",
+          "units": [
+            "Source Identification",
+            "Extraction Mapping",
+            "Extract Validation"
+          ]
+        },
+        {
+          "id": "5.4",
+          "name": "Data Engineering",
+          "units": [
+            "Data Model Design",
+            "Pipeline Support",
+            "Data Structure Review"
+          ]
+        },
+        {
+          "id": "5.5",
+          "name": "Data Analysis",
+          "units": [
+            "Analysis Question Framing",
+            "Pattern Detection",
+            "Insight Summary"
+          ]
+        },
+        {
+          "id": "5.6",
+          "name": "Business Intelligence",
+          "units": [
+            "Metric Definition",
+            "Dashboard Data Prep",
+            "BI Summary"
+          ]
+        },
+        {
+          "id": "5.7",
+          "name": "Reporting",
+          "units": [
+            "Report Requirements",
+            "Report Assembly",
+            "Report Accuracy Review"
+          ]
+        },
+        {
+          "id": "5.8",
+          "name": "Forecasting",
+          "units": [
+            "Forecast Assumption Setup",
+            "Projection Modeling",
+            "Forecast Risk Review"
+          ]
+        },
+        {
+          "id": "5.9",
+          "name": "Data Governance",
+          "units": [
+            "Data Ownership Mapping",
+            "Data Rule Definition",
+            "Governance Compliance Review"
+          ]
+        },
+        {
+          "id": "5.10",
+          "name": "Data Quality",
+          "units": [
+            "Quality Criteria Definition",
+            "Quality Issue Detection",
+            "Quality Correction Tracking"
+          ]
+        }
       ]
     },
     {
@@ -30,16 +103,96 @@
       "name": "Creation & Production",
       "folder": "02_departments/006_creation_and_production",
       "departments": [
-        {"id": "6.1", "name": "Writing", "units": ["Draft Creation", "Voice And Tone Alignment", "Draft Completion Review"]},
-        {"id": "6.2", "name": "Editorial", "units": ["Structural Edit", "Line Edit", "Final Proof Review"]},
-        {"id": "6.3", "name": "Design", "units": ["Layout Direction", "Visual Hierarchy", "Design QA"]},
-        {"id": "6.4", "name": "Visual Production", "units": ["Image Concepting", "Visual Asset Assembly", "Visual Consistency Review"]},
-        {"id": "6.5", "name": "Document Production", "units": ["Document Structure", "Formatting Pass", "Export Readiness Review"]},
-        {"id": "6.6", "name": "Packaging", "units": ["Package Structure", "Asset Bundling", "Package QA"]},
-        {"id": "6.7", "name": "Presentation Production", "units": ["Slide Outline", "Slide Build", "Presentation Polish"]},
-        {"id": "6.8", "name": "Report Production", "units": ["Report Outline", "Report Build", "Report Final Review"]},
-        {"id": "6.9", "name": "Client Asset Production", "units": ["Client Asset Planning", "Client Asset Build", "Client Asset QA"]},
-        {"id": "6.10", "name": "Print Production Prep", "units": ["Print Format Setup", "Print Safety Review", "Print Export Check"]}
+        {
+          "id": "6.1",
+          "name": "Writing",
+          "units": [
+            "Draft Creation",
+            "Voice And Tone Alignment",
+            "Draft Completion Review"
+          ]
+        },
+        {
+          "id": "6.2",
+          "name": "Editorial",
+          "units": [
+            "Structural Edit",
+            "Line Edit",
+            "Final Proof Review"
+          ]
+        },
+        {
+          "id": "6.3",
+          "name": "Design",
+          "units": [
+            "Layout Direction",
+            "Visual Hierarchy",
+            "Design QA"
+          ]
+        },
+        {
+          "id": "6.4",
+          "name": "Visual Production",
+          "units": [
+            "Image Concepting",
+            "Visual Asset Assembly",
+            "Visual Consistency Review"
+          ]
+        },
+        {
+          "id": "6.5",
+          "name": "Document Production",
+          "units": [
+            "Document Structure",
+            "Formatting Pass",
+            "Export Readiness Review"
+          ]
+        },
+        {
+          "id": "6.6",
+          "name": "Packaging",
+          "units": [
+            "Package Structure",
+            "Asset Bundling",
+            "Package QA"
+          ]
+        },
+        {
+          "id": "6.7",
+          "name": "Presentation Production",
+          "units": [
+            "Slide Outline",
+            "Slide Build",
+            "Presentation Polish"
+          ]
+        },
+        {
+          "id": "6.8",
+          "name": "Report Production",
+          "units": [
+            "Report Outline",
+            "Report Build",
+            "Report Final Review"
+          ]
+        },
+        {
+          "id": "6.9",
+          "name": "Client Asset Production",
+          "units": [
+            "Client Asset Planning",
+            "Client Asset Build",
+            "Client Asset QA"
+          ]
+        },
+        {
+          "id": "6.10",
+          "name": "Print Production Prep",
+          "units": [
+            "Print Format Setup",
+            "Print Safety Review",
+            "Print Export Check"
+          ]
+        }
       ]
     },
     {
@@ -47,16 +200,96 @@
       "name": "Engineering & Automation",
       "folder": "02_departments/007_engineering_and_automation",
       "departments": [
-        {"id": "7.1", "name": "Software Engineering", "units": ["Requirements Review", "Code Implementation", "Code Review"]},
-        {"id": "7.2", "name": "Frontend Engineering", "units": ["UI Structure", "Component Build", "Frontend QA"]},
-        {"id": "7.3", "name": "Backend Engineering", "units": ["Service Design", "Backend Implementation", "Backend Validation"]},
-        {"id": "7.4", "name": "API Engineering", "units": ["API Contract Design", "API Integration", "API Error Handling Review"]},
-        {"id": "7.5", "name": "DevOps", "units": ["Deployment Setup", "Environment Configuration", "Release Verification"]},
-        {"id": "7.6", "name": "Agent Engineering", "units": ["Agent Role Design", "Agent Workflow Wiring", "Agent Behavior Testing"]},
-        {"id": "7.7", "name": "Automation", "units": ["Automation Opportunity Mapping", "Automation Script Build", "Automation Run Review"]},
-        {"id": "7.8", "name": "Tool Integration", "units": ["Tool Capability Mapping", "Integration Setup", "Integration Failure Testing"]},
-        {"id": "7.9", "name": "Infrastructure Engineering", "units": ["Infrastructure Requirements", "Hosting Configuration", "Infrastructure Health Review"]},
-        {"id": "7.10", "name": "Developer Experience", "units": ["Setup Instructions", "Developer Workflow Review", "Documentation Improvement"]}
+        {
+          "id": "7.1",
+          "name": "Software Engineering",
+          "units": [
+            "Requirements Review",
+            "Code Implementation",
+            "Code Review"
+          ]
+        },
+        {
+          "id": "7.2",
+          "name": "Frontend Engineering",
+          "units": [
+            "UI Structure",
+            "Component Build",
+            "Frontend QA"
+          ]
+        },
+        {
+          "id": "7.3",
+          "name": "Backend Engineering",
+          "units": [
+            "Service Design",
+            "Backend Implementation",
+            "Backend Validation"
+          ]
+        },
+        {
+          "id": "7.4",
+          "name": "API Engineering",
+          "units": [
+            "API Contract Design",
+            "API Integration",
+            "API Error Handling Review"
+          ]
+        },
+        {
+          "id": "7.5",
+          "name": "DevOps",
+          "units": [
+            "Deployment Setup",
+            "Environment Configuration",
+            "Release Verification"
+          ]
+        },
+        {
+          "id": "7.6",
+          "name": "Agent Engineering",
+          "units": [
+            "Agent Role Design",
+            "Agent Workflow Wiring",
+            "Agent Behavior Testing"
+          ]
+        },
+        {
+          "id": "7.7",
+          "name": "Automation",
+          "units": [
+            "Automation Opportunity Mapping",
+            "Automation Script Build",
+            "Automation Run Review"
+          ]
+        },
+        {
+          "id": "7.8",
+          "name": "Tool Integration",
+          "units": [
+            "Tool Capability Mapping",
+            "Integration Setup",
+            "Integration Failure Testing"
+          ]
+        },
+        {
+          "id": "7.9",
+          "name": "Infrastructure Engineering",
+          "units": [
+            "Infrastructure Requirements",
+            "Hosting Configuration",
+            "Infrastructure Health Review"
+          ]
+        },
+        {
+          "id": "7.10",
+          "name": "Developer Experience",
+          "units": [
+            "Setup Instructions",
+            "Developer Workflow Review",
+            "Documentation Improvement"
+          ]
+        }
       ]
     },
     {
@@ -64,16 +297,96 @@
       "name": "Quality, Risk & Compliance",
       "folder": "02_departments/008_quality_risk_and_compliance",
       "departments": [
-        {"id": "8.1", "name": "Quality Assurance", "units": ["Quality Criteria Setup", "Output Inspection", "QA Decision Record"]},
-        {"id": "8.2", "name": "Testing", "units": ["Test Case Design", "Test Execution", "Test Result Summary"]},
-        {"id": "8.3", "name": "Compliance", "units": ["Requirement Mapping", "Compliance Gap Review", "Compliance Signoff Prep"]},
-        {"id": "8.4", "name": "Legal", "units": ["Legal Issue Spotting", "Legal Risk Summary", "Legal Escalation Review"]},
-        {"id": "8.5", "name": "Risk Management", "units": ["Risk Identification", "Risk Scoring", "Mitigation Plan Review"]},
-        {"id": "8.6", "name": "Security", "units": ["Security Boundary Review", "Access Risk Review", "Security Issue Escalation"]},
-        {"id": "8.7", "name": "Audit", "units": ["Audit Trail Review", "Control Check", "Audit Finding Summary"]},
-        {"id": "8.8", "name": "Safety Review", "units": ["Safety Risk Identification", "Harm Scenario Review", "Safety Decision Record"]},
-        {"id": "8.9", "name": "Privacy Review", "units": ["Privacy Exposure Review", "Sensitive Data Handling", "Privacy Approval Check"]},
-        {"id": "8.10", "name": "Final Approval Review", "units": ["Final Criteria Check", "Release Readiness Decision", "Approval Record"]}
+        {
+          "id": "8.1",
+          "name": "Quality Assurance",
+          "units": [
+            "Quality Criteria Setup",
+            "Output Inspection",
+            "QA Decision Record"
+          ]
+        },
+        {
+          "id": "8.2",
+          "name": "Testing",
+          "units": [
+            "Test Case Design",
+            "Test Execution",
+            "Test Result Summary"
+          ]
+        },
+        {
+          "id": "8.3",
+          "name": "Compliance",
+          "units": [
+            "Requirement Mapping",
+            "Compliance Gap Review",
+            "Compliance Signoff Prep"
+          ]
+        },
+        {
+          "id": "8.4",
+          "name": "Legal",
+          "units": [
+            "Legal Issue Spotting",
+            "Legal Risk Summary",
+            "Legal Escalation Review"
+          ]
+        },
+        {
+          "id": "8.5",
+          "name": "Risk Management",
+          "units": [
+            "Risk Identification",
+            "Risk Scoring",
+            "Mitigation Plan Review"
+          ]
+        },
+        {
+          "id": "8.6",
+          "name": "Security",
+          "units": [
+            "Security Boundary Review",
+            "Access Risk Review",
+            "Security Issue Escalation"
+          ]
+        },
+        {
+          "id": "8.7",
+          "name": "Audit",
+          "units": [
+            "Audit Trail Review",
+            "Control Check",
+            "Audit Finding Summary"
+          ]
+        },
+        {
+          "id": "8.8",
+          "name": "Safety Review",
+          "units": [
+            "Safety Risk Identification",
+            "Harm Scenario Review",
+            "Safety Decision Record"
+          ]
+        },
+        {
+          "id": "8.9",
+          "name": "Privacy Review",
+          "units": [
+            "Privacy Exposure Review",
+            "Sensitive Data Handling",
+            "Privacy Approval Check"
+          ]
+        },
+        {
+          "id": "8.10",
+          "name": "Final Approval Review",
+          "units": [
+            "Final Criteria Check",
+            "Release Readiness Decision",
+            "Approval Record"
+          ]
+        }
       ]
     },
     {
@@ -81,16 +394,96 @@
       "name": "Business Growth",
       "folder": "02_departments/009_business_growth",
       "departments": [
-        {"id": "9.1", "name": "Sales", "units": ["Sales Opportunity Review", "Sales Message Draft", "Sales Follow-Up Plan"]},
-        {"id": "9.2", "name": "Marketing", "units": ["Campaign Idea Development", "Audience Message Fit", "Marketing Asset Review"]},
-        {"id": "9.3", "name": "Partnerships", "units": ["Partner Identification", "Partner Fit Review", "Partnership Proposal Prep"]},
-        {"id": "9.4", "name": "Business Development", "units": ["Opportunity Mapping", "Outreach Strategy", "BD Pipeline Update"]},
-        {"id": "9.5", "name": "Client Success", "units": ["Client Need Review", "Client Outcome Tracking", "Client Retention Action"]},
-        {"id": "9.6", "name": "Lead Generation", "units": ["Lead Source Mapping", "Lead Qualification", "Lead Routing"]},
-        {"id": "9.7", "name": "Revenue Strategy", "units": ["Revenue Model Review", "Pricing Opportunity Review", "Revenue Risk Summary"]},
-        {"id": "9.8", "name": "Campaign Strategy", "units": ["Campaign Goal Setting", "Channel Selection", "Campaign Performance Review"]},
-        {"id": "9.9", "name": "Market Positioning", "units": ["Positioning Audit", "Differentiation Statement", "Positioning Risk Review"]},
-        {"id": "9.10", "name": "Commercial Messaging", "units": ["Message Angle Drafting", "Objection Alignment", "Commercial Clarity Review"]}
+        {
+          "id": "9.1",
+          "name": "Sales",
+          "units": [
+            "Sales Opportunity Review",
+            "Sales Message Draft",
+            "Sales Follow-Up Plan"
+          ]
+        },
+        {
+          "id": "9.2",
+          "name": "Marketing",
+          "units": [
+            "Campaign Idea Development",
+            "Audience Message Fit",
+            "Marketing Asset Review"
+          ]
+        },
+        {
+          "id": "9.3",
+          "name": "Partnerships",
+          "units": [
+            "Partner Identification",
+            "Partner Fit Review",
+            "Partnership Proposal Prep"
+          ]
+        },
+        {
+          "id": "9.4",
+          "name": "Business Development",
+          "units": [
+            "Opportunity Mapping",
+            "Outreach Strategy",
+            "BD Pipeline Update"
+          ]
+        },
+        {
+          "id": "9.5",
+          "name": "Client Success",
+          "units": [
+            "Client Need Review",
+            "Client Outcome Tracking",
+            "Client Retention Action"
+          ]
+        },
+        {
+          "id": "9.6",
+          "name": "Lead Generation",
+          "units": [
+            "Lead Source Mapping",
+            "Lead Qualification",
+            "Lead Routing"
+          ]
+        },
+        {
+          "id": "9.7",
+          "name": "Revenue Strategy",
+          "units": [
+            "Revenue Model Review",
+            "Pricing Opportunity Review",
+            "Revenue Risk Summary"
+          ]
+        },
+        {
+          "id": "9.8",
+          "name": "Campaign Strategy",
+          "units": [
+            "Campaign Goal Setting",
+            "Channel Selection",
+            "Campaign Performance Review"
+          ]
+        },
+        {
+          "id": "9.9",
+          "name": "Market Positioning",
+          "units": [
+            "Positioning Audit",
+            "Differentiation Statement",
+            "Positioning Risk Review"
+          ]
+        },
+        {
+          "id": "9.10",
+          "name": "Commercial Messaging",
+          "units": [
+            "Message Angle Drafting",
+            "Objection Alignment",
+            "Commercial Clarity Review"
+          ]
+        }
       ]
     },
     {
@@ -98,16 +491,96 @@
       "name": "Finance & Administration",
       "folder": "02_departments/010_finance_and_administration",
       "departments": [
-        {"id": "10.1", "name": "Finance", "units": ["Financial Snapshot", "Cash Flow Review", "Financial Decision Support"]},
-        {"id": "10.2", "name": "Accounting", "units": ["Transaction Categorization", "Reconciliation Support", "Accounting Record Review"]},
-        {"id": "10.3", "name": "Procurement", "units": ["Purchase Need Review", "Vendor Quote Comparison", "Purchase Approval Prep"]},
-        {"id": "10.4", "name": "Administration", "units": ["Admin Task Intake", "Document Handling", "Admin Follow-Up"]},
-        {"id": "10.5", "name": "Records", "units": ["Record Creation", "Record Organization", "Record Retrieval Review"]},
-        {"id": "10.6", "name": "Budgeting", "units": ["Budget Category Setup", "Budget Variance Review", "Budget Adjustment Recommendation"]},
-        {"id": "10.7", "name": "Pricing", "units": ["Cost Basis Review", "Price Structure Draft", "Pricing Risk Review"]},
-        {"id": "10.8", "name": "Payroll", "units": ["Payroll Data Review", "Compensation Record Check", "Payroll Issue Escalation"]},
-        {"id": "10.9", "name": "Tax Prep", "units": ["Tax Document Collection", "Deduction Category Review", "Tax Prep Checklist"]},
-        {"id": "10.10", "name": "Subscription Management", "units": ["Subscription Inventory", "Cost And Use Review", "Cancellation Recommendation"]}
+        {
+          "id": "10.1",
+          "name": "Finance",
+          "units": [
+            "Financial Snapshot",
+            "Cash Flow Review",
+            "Financial Decision Support"
+          ]
+        },
+        {
+          "id": "10.2",
+          "name": "Accounting",
+          "units": [
+            "Transaction Categorization",
+            "Reconciliation Support",
+            "Accounting Record Review"
+          ]
+        },
+        {
+          "id": "10.3",
+          "name": "Procurement",
+          "units": [
+            "Purchase Need Review",
+            "Vendor Quote Comparison",
+            "Purchase Approval Prep"
+          ]
+        },
+        {
+          "id": "10.4",
+          "name": "Administration",
+          "units": [
+            "Admin Task Intake",
+            "Document Handling",
+            "Admin Follow-Up"
+          ]
+        },
+        {
+          "id": "10.5",
+          "name": "Records",
+          "units": [
+            "Record Creation",
+            "Record Organization",
+            "Record Retrieval Review"
+          ]
+        },
+        {
+          "id": "10.6",
+          "name": "Budgeting",
+          "units": [
+            "Budget Category Setup",
+            "Budget Variance Review",
+            "Budget Adjustment Recommendation"
+          ]
+        },
+        {
+          "id": "10.7",
+          "name": "Pricing",
+          "units": [
+            "Cost Basis Review",
+            "Price Structure Draft",
+            "Pricing Risk Review"
+          ]
+        },
+        {
+          "id": "10.8",
+          "name": "Payroll",
+          "units": [
+            "Payroll Data Review",
+            "Compensation Record Check",
+            "Payroll Issue Escalation"
+          ]
+        },
+        {
+          "id": "10.9",
+          "name": "Tax Prep",
+          "units": [
+            "Tax Document Collection",
+            "Deduction Category Review",
+            "Tax Prep Checklist"
+          ]
+        },
+        {
+          "id": "10.10",
+          "name": "Subscription Management",
+          "units": [
+            "Subscription Inventory",
+            "Cost And Use Review",
+            "Cancellation Recommendation"
+          ]
+        }
       ]
     },
     {
@@ -115,16 +588,96 @@
       "name": "Industry Divisions",
       "folder": "02_departments/011_industry_divisions",
       "departments": [
-        {"id": "11.1", "name": "Insurance Division", "units": ["Product Line Mapping", "Carrier Detail Review", "Insurance Asset Prep"]},
-        {"id": "11.2", "name": "Publishing Division", "units": ["Manuscript Asset Mapping", "Publishing Requirement Review", "Submission Package Prep"]},
-        {"id": "11.3", "name": "Food / Catering Division", "units": ["Menu Concept Planning", "Event Service Mapping", "Catering Operations Review"]},
-        {"id": "11.4", "name": "App Factory Division", "units": ["App Idea Intake", "Build Scope Mapping", "App Release Prep"]},
-        {"id": "11.5", "name": "Routing / Logistics Division", "units": ["Stop Data Review", "Route Optimization Support", "Route Export QA"]},
-        {"id": "11.6", "name": "Healthcare Division", "units": ["Healthcare Topic Intake", "Benefits Research Support", "Healthcare Explanation Review"]},
-        {"id": "11.7", "name": "Real Estate Division", "units": ["Property Topic Intake", "Property Process Mapping", "Real Estate Document Review"]},
-        {"id": "11.8", "name": "E-Commerce Division", "units": ["Product Listing Prep", "Store Operations Review", "Order Flow Support"]},
-        {"id": "11.9", "name": "Investor Research Division", "units": ["Ticker Intake", "Market Data Review", "Risk And Catalyst Summary"]},
-        {"id": "11.10", "name": "Legal Operations Division", "units": ["Matter Intake", "Evidence Organization", "Legal Support Packet"]}
+        {
+          "id": "11.1",
+          "name": "Insurance Division",
+          "units": [
+            "Product Line Mapping",
+            "Carrier Detail Review",
+            "Insurance Asset Prep"
+          ]
+        },
+        {
+          "id": "11.2",
+          "name": "Publishing Division",
+          "units": [
+            "Manuscript Asset Mapping",
+            "Publishing Requirement Review",
+            "Submission Package Prep"
+          ]
+        },
+        {
+          "id": "11.3",
+          "name": "Food / Catering Division",
+          "units": [
+            "Menu Concept Planning",
+            "Event Service Mapping",
+            "Catering Operations Review"
+          ]
+        },
+        {
+          "id": "11.4",
+          "name": "App Factory Division",
+          "units": [
+            "App Idea Intake",
+            "Build Scope Mapping",
+            "App Release Prep"
+          ]
+        },
+        {
+          "id": "11.5",
+          "name": "Routing / Logistics Division",
+          "units": [
+            "Stop Data Review",
+            "Route Optimization Support",
+            "Route Export QA"
+          ]
+        },
+        {
+          "id": "11.6",
+          "name": "Healthcare Division",
+          "units": [
+            "Healthcare Topic Intake",
+            "Benefits Research Support",
+            "Healthcare Explanation Review"
+          ]
+        },
+        {
+          "id": "11.7",
+          "name": "Real Estate Division",
+          "units": [
+            "Property Topic Intake",
+            "Property Process Mapping",
+            "Real Estate Document Review"
+          ]
+        },
+        {
+          "id": "11.8",
+          "name": "E-Commerce Division",
+          "units": [
+            "Product Listing Prep",
+            "Store Operations Review",
+            "Order Flow Support"
+          ]
+        },
+        {
+          "id": "11.9",
+          "name": "Investor Research Division",
+          "units": [
+            "Ticker Intake",
+            "Market Data Review",
+            "Risk And Catalyst Summary"
+          ]
+        },
+        {
+          "id": "11.10",
+          "name": "Legal Operations Division",
+          "units": [
+            "Matter Intake",
+            "Evidence Organization",
+            "Legal Support Packet"
+          ]
+        }
       ]
     },
     {
@@ -132,23 +685,96 @@
       "name": "Personal Operating System",
       "folder": "02_departments/012_personal_operating_system",
       "departments": [
-        {"id": "12.1", "name": "Memory Shelf Management", "units": ["Shelf Creation", "Shelf Routing", "Shelf Cleanup"]},
-        {"id": "12.2", "name": "Save Pile", "units": ["Save Candidate Detection", "Save Item Labeling", "Save Pile Review"]},
-        {"id": "12.3", "name": "Tangent Parking Lot", "units": ["Tangent Capture", "Tangent Classification", "Tangent Return Prompt"]},
-        {"id": "12.4", "name": "Mode Controller", "units": ["Mode Detection", "Mode Switch Handling", "Mode Exit Review"]},
-        {"id": "12.5", "name": "Context Recovery", "units": ["Lost Context Detection", "Context Anchor Retrieval", "Recovery Summary"]},
-        {"id": "12.6", "name": "Project Queue", "units": ["Queue Intake", "Queue Prioritization", "Queue Status Review"]},
-        {"id": "12.7", "name": "Idea Incubator", "units": ["Idea Capture", "Idea Expansion", "Idea Maturity Review"]},
-        {"id": "12.8", "name": "Daily Briefing", "units": ["Briefing Input Collection", "Briefing Assembly", "Briefing Delivery Check"]},
-        {"id": "12.9", "name": "Priority Reset", "units": ["Current Priority Review", "Priority Conflict Detection", "Reset Recommendation"]},
-        {"id": "12.10", "name": "Command Queue", "units": ["Command Capture", "Command Sequencing", "Command Completion Review"]},
-        {"id": "12.11", "name": "Active Timeline", "units": ["Timeline Event Capture", "Timeline Continuity Review", "Timeline Update Summary"]},
-        {"id": "12.12", "name": "Cabinet", "units": ["Cabinet Category Mapping", "Cabinet Filing", "Cabinet Retrieval Review"]},
-        {"id": "12.13", "name": "Anchor Words", "units": ["Anchor Word Detection", "Anchor Meaning Lookup", "Anchor Action Routing"]},
-        {"id": "12.14", "name": "Override Phrases", "units": ["Override Detection", "Override Rule Application", "Override Safety Review"]},
-        {"id": "12.15", "name": "Project Resumption", "units": ["Project State Retrieval", "Resumption Plan", "Restart Confirmation"]},
-        {"id": "12.16", "name": "Thread Migration", "units": ["Migration Need Detection", "Migration Packet Creation", "Migration Continuity Check"]},
-        {"id": "12.17", "name": "Personal Dashboard", "units": ["Dashboard Signal Collection", "Dashboard Summary", "Dashboard Cleanup"]}
+        {
+          "id": "12.1",
+          "name": "Memory Shelf Management",
+          "units": [
+            "Shelf Creation",
+            "Shelf Routing",
+            "Shelf Cleanup"
+          ]
+        },
+        {
+          "id": "12.2",
+          "name": "Save Pile",
+          "units": [
+            "Save Candidate Detection",
+            "Save Item Labeling",
+            "Save Pile Review"
+          ]
+        },
+        {
+          "id": "12.3",
+          "name": "Tangent Parking Lot",
+          "units": [
+            "Tangent Capture",
+            "Tangent Classification",
+            "Tangent Return Prompt"
+          ]
+        },
+        {
+          "id": "12.4",
+          "name": "Mode Controller",
+          "units": [
+            "Mode Detection",
+            "Mode Switch Handling",
+            "Mode Exit Review"
+          ]
+        },
+        {
+          "id": "12.5",
+          "name": "Context Recovery",
+          "units": [
+            "Lost Context Detection",
+            "Context Anchor Retrieval",
+            "Recovery Summary"
+          ]
+        },
+        {
+          "id": "12.6",
+          "name": "Project Queue",
+          "units": [
+            "Queue Intake",
+            "Queue Prioritization",
+            "Queue Status Review"
+          ]
+        },
+        {
+          "id": "12.7",
+          "name": "Idea Incubator",
+          "units": [
+            "Idea Capture",
+            "Idea Expansion",
+            "Idea Maturity Review"
+          ]
+        },
+        {
+          "id": "12.8",
+          "name": "Daily Briefing",
+          "units": [
+            "Briefing Input Collection",
+            "Briefing Assembly",
+            "Briefing Delivery Check"
+          ]
+        },
+        {
+          "id": "12.9",
+          "name": "Priority Reset",
+          "units": [
+            "Current Priority Review",
+            "Priority Conflict Detection",
+            "Reset Recommendation"
+          ]
+        },
+        {
+          "id": "12.10",
+          "name": "Command Queue",
+          "units": [
+            "Command Capture",
+            "Command Sequencing",
+            "Command Completion Review"
+          ]
+        }
       ]
     },
     {
@@ -156,16 +782,96 @@
       "name": "HR, Training & Enablement",
       "folder": "02_departments/013_hr_training_and_enablement",
       "departments": [
-        {"id": "13.1", "name": "Recruiting", "units": ["Role Need Review", "Candidate Criteria Draft", "Recruiting Message Prep"]},
-        {"id": "13.2", "name": "Onboarding", "units": ["Onboarding Checklist", "Access And Orientation", "Onboarding Completion Review"]},
-        {"id": "13.3", "name": "Training", "units": ["Training Need Assessment", "Training Material Creation", "Training Completion Check"]},
-        {"id": "13.4", "name": "Performance Review", "units": ["Performance Criteria Setup", "Performance Evidence Review", "Feedback Summary"]},
-        {"id": "13.5", "name": "Role Design", "units": ["Role Purpose Definition", "Responsibility Mapping", "Role Boundary Review"]},
-        {"id": "13.6", "name": "Policy Training", "units": ["Policy Topic Mapping", "Policy Lesson Draft", "Policy Understanding Check"]},
-        {"id": "13.7", "name": "Workforce Planning", "units": ["Capacity Need Review", "Role Gap Detection", "Staffing Recommendation"]},
-        {"id": "13.8", "name": "Credential Tracking", "units": ["Credential Inventory", "Expiration Tracking", "Credential Renewal Prompt"]},
-        {"id": "13.9", "name": "Sales Enablement", "units": ["Sales Skill Mapping", "Enablement Asset Prep", "Sales Readiness Review"]},
-        {"id": "13.10", "name": "Learning Design", "units": ["Learning Objective Definition", "Lesson Structure Design", "Learning Outcome Review"]}
+        {
+          "id": "13.1",
+          "name": "Recruiting",
+          "units": [
+            "Role Need Review",
+            "Candidate Criteria Draft",
+            "Recruiting Message Prep"
+          ]
+        },
+        {
+          "id": "13.2",
+          "name": "Onboarding",
+          "units": [
+            "Onboarding Checklist",
+            "Access And Orientation",
+            "Onboarding Completion Review"
+          ]
+        },
+        {
+          "id": "13.3",
+          "name": "Training",
+          "units": [
+            "Training Need Assessment",
+            "Training Material Creation",
+            "Training Completion Check"
+          ]
+        },
+        {
+          "id": "13.4",
+          "name": "Performance Review",
+          "units": [
+            "Performance Criteria Setup",
+            "Performance Evidence Review",
+            "Feedback Summary"
+          ]
+        },
+        {
+          "id": "13.5",
+          "name": "Role Design",
+          "units": [
+            "Role Purpose Definition",
+            "Responsibility Mapping",
+            "Role Boundary Review"
+          ]
+        },
+        {
+          "id": "13.6",
+          "name": "Policy Training",
+          "units": [
+            "Policy Topic Mapping",
+            "Policy Lesson Draft",
+            "Policy Understanding Check"
+          ]
+        },
+        {
+          "id": "13.7",
+          "name": "Workforce Planning",
+          "units": [
+            "Capacity Need Review",
+            "Role Gap Detection",
+            "Staffing Recommendation"
+          ]
+        },
+        {
+          "id": "13.8",
+          "name": "Credential Tracking",
+          "units": [
+            "Credential Inventory",
+            "Expiration Tracking",
+            "Credential Renewal Prompt"
+          ]
+        },
+        {
+          "id": "13.9",
+          "name": "Sales Enablement",
+          "units": [
+            "Sales Skill Mapping",
+            "Enablement Asset Prep",
+            "Sales Readiness Review"
+          ]
+        },
+        {
+          "id": "13.10",
+          "name": "Learning Design",
+          "units": [
+            "Learning Objective Definition",
+            "Lesson Structure Design",
+            "Learning Outcome Review"
+          ]
+        }
       ]
     },
     {
@@ -173,16 +879,96 @@
       "name": "Communications & Public Relations",
       "folder": "02_departments/014_communications_and_public_relations",
       "departments": [
-        {"id": "14.1", "name": "Internal Communications", "units": ["Internal Message Draft", "Internal Audience Fit", "Internal Update Review"]},
-        {"id": "14.2", "name": "External Communications", "units": ["External Message Draft", "Public Clarity Review", "External Response Prep"]},
-        {"id": "14.3", "name": "Executive Communications", "units": ["Executive Brief Draft", "Executive Tone Alignment", "Executive Message Approval Prep"]},
-        {"id": "14.4", "name": "Crisis Communications", "units": ["Crisis Situation Summary", "Holding Statement Draft", "Crisis Response Review"]},
-        {"id": "14.5", "name": "Email Correspondence", "units": ["Email Intent Review", "Email Drafting", "Email Final Check"]},
-        {"id": "14.6", "name": "Meeting Notes", "units": ["Meeting Capture", "Action Item Extraction", "Meeting Summary Delivery"]},
-        {"id": "14.7", "name": "Stakeholder Updates", "units": ["Stakeholder Audience Mapping", "Update Drafting", "Stakeholder Follow-Up Notes"]},
-        {"id": "14.8", "name": "Public Relations", "units": ["PR Angle Review", "Media Message Draft", "PR Risk Review"]},
-        {"id": "14.9", "name": "Community Relations", "units": ["Community Message Planning", "Community Feedback Review", "Community Response Summary"]},
-        {"id": "14.10", "name": "Message Approval", "units": ["Message Criteria Check", "Approval Routing", "Approval Record"]}
+        {
+          "id": "14.1",
+          "name": "Internal Communications",
+          "units": [
+            "Internal Message Draft",
+            "Internal Audience Fit",
+            "Internal Update Review"
+          ]
+        },
+        {
+          "id": "14.2",
+          "name": "External Communications",
+          "units": [
+            "External Message Draft",
+            "Public Clarity Review",
+            "External Response Prep"
+          ]
+        },
+        {
+          "id": "14.3",
+          "name": "Executive Communications",
+          "units": [
+            "Executive Brief Draft",
+            "Executive Tone Alignment",
+            "Executive Message Approval Prep"
+          ]
+        },
+        {
+          "id": "14.4",
+          "name": "Crisis Communications",
+          "units": [
+            "Crisis Situation Summary",
+            "Holding Statement Draft",
+            "Crisis Response Review"
+          ]
+        },
+        {
+          "id": "14.5",
+          "name": "Email Correspondence",
+          "units": [
+            "Email Intent Review",
+            "Email Drafting",
+            "Email Final Check"
+          ]
+        },
+        {
+          "id": "14.6",
+          "name": "Meeting Notes",
+          "units": [
+            "Meeting Capture",
+            "Action Item Extraction",
+            "Meeting Summary Delivery"
+          ]
+        },
+        {
+          "id": "14.7",
+          "name": "Stakeholder Updates",
+          "units": [
+            "Stakeholder Audience Mapping",
+            "Update Drafting",
+            "Stakeholder Follow-Up Notes"
+          ]
+        },
+        {
+          "id": "14.8",
+          "name": "Public Relations",
+          "units": [
+            "PR Angle Review",
+            "Media Message Draft",
+            "PR Risk Review"
+          ]
+        },
+        {
+          "id": "14.9",
+          "name": "Community Relations",
+          "units": [
+            "Community Message Planning",
+            "Community Feedback Review",
+            "Community Response Summary"
+          ]
+        },
+        {
+          "id": "14.10",
+          "name": "Message Approval",
+          "units": [
+            "Message Criteria Check",
+            "Approval Routing",
+            "Approval Record"
+          ]
+        }
       ]
     }
   ]

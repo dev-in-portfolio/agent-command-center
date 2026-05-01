@@ -18,6 +18,12 @@ def validate_full_completion():
         if len(families) != 175:
             errors.append(f"Dashboard count mismatch: expected 175, found {len(families)}")
             
+        # GAP 1: Verify family IDs are exactly 1 through 175
+        dashboard_ids = sorted(entry.get("id") for entry in families)
+        expected_ids = list(range(1, 176))
+        if dashboard_ids != expected_ids:
+            errors.append(f"Dashboard family IDs mismatch: expected 1 through 175, found {dashboard_ids}")
+
         for entry in families:
             fid = entry.get("id")
             status = entry.get("status")
@@ -77,8 +83,9 @@ def validate_full_completion():
                 depts = fjson.get("departments", [])
                 if not depts:
                     errors.append(f"Departments array empty or missing in {fjson_path}")
-                elif len(depts) < 10:
-                    errors.append(f"Department count for family {fid} is {len(depts)}, expected at least 10")
+                # GAP 2: Exactly 10 departments
+                elif len(depts) != 10:
+                    errors.append(f"Department count for family {fid} is {len(depts)}, expected exactly 10")
                     
                 for dept in depts:
                     did = dept.get("id")

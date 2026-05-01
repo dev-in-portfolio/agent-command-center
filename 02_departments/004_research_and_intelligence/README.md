@@ -1,16 +1,12 @@
 # Research & Intelligence
 
 ## Purpose
-Research & Intelligence conducts systematic investigation, gathers evidence, and synthesizes insights to inform decision-making.
 
 ## Family Manager (4.M)
-Routes family-level work, resolves escalations, and coordinates subordinate departments.
 
 ## Family Scribe (4.H)
-Records family-level decisions, assumptions, handoffs, and work trails.
 
 ## Family Auditor (4.I)
-Reviews family-level output and marks items as keep, fix, remove, redo, or escalate.
 
 ## Departments
 
@@ -63,28 +59,3 @@ Reviews family-level output and marks items as keep, fix, remove, redo, or escal
 - 4.10.1 Vendor Identification
 - 4.10.2 Vendor Capability Review
 - 4.10.3 Vendor Risk Summary
-
-### 4.11 Investment Research
-- 4.11.1 Company Research
-- 4.11.2 Sector Research
-- 4.11.3 Catalyst And Risk Summary
-
-### 4.12 Industry Trend Research
-- 4.12.1 Trend Detection
-- 4.12.2 Signal Strength Review
-- 4.12.3 Trend Implication Summary
-
-### 4.13 Source Verification
-- 4.13.1 Source Credibility Review
-- 4.13.2 Claim Cross-Check
-- 4.13.3 Verification Decision
-
-### 4.14 Citation Management
-- 4.14.1 Citation Capture
-- 4.14.2 Citation Formatting
-- 4.14.3 Citation Completeness Review
-
-### 4.15 Evidence Review
-- 4.15.1 Evidence Inventory
-- 4.15.2 Evidence Strength Grading
-- 4.15.3 Evidence Gap Report

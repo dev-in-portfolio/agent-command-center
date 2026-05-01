@@ -2,19 +2,11 @@
 
 ## Purpose
 
-Placeholder purpose for Personal Operating System.
-
 ## Family Manager (12.M)
-
-Routes family-level work, resolves escalations, and coordinates subordinate departments.
 
 ## Family Scribe (12.H)
 
-Records family-level decisions, assumptions, handoffs, and work trails.
-
 ## Family Auditor (12.I)
-
-Reviews family-level output and marks items as keep, fix, remove, redo, or escalate.
 
 ## Departments
 
@@ -67,39 +59,3 @@ Reviews family-level output and marks items as keep, fix, remove, redo, or escal
 - 12.10.1 Command Capture
 - 12.10.2 Command Sequencing
 - 12.10.3 Command Completion Review
-
-### 12.11 Active Timeline
-- 12.11.1 Timeline Event Capture
-- 12.11.2 Timeline Continuity Review
-- 12.11.3 Timeline Update Summary
-
-### 12.12 Cabinet
-- 12.12.1 Cabinet Category Mapping
-- 12.12.2 Cabinet Filing
-- 12.12.3 Cabinet Retrieval Review
-
-### 12.13 Anchor Words
-- 12.13.1 Anchor Word Detection
-- 12.13.2 Anchor Meaning Lookup
-- 12.13.3 Anchor Action Routing
-
-### 12.14 Override Phrases
-- 12.14.1 Override Detection
-- 12.14.2 Override Rule Application
-- 12.14.3 Override Safety Review
-
-### 12.15 Project Resumption
-- 12.15.1 Project State Retrieval
-- 12.15.2 Resumption Plan
-- 12.15.3 Restart Confirmation
-
-### 12.16 Thread Migration
-- 12.16.1 Migration Need Detection
-- 12.16.2 Migration Packet Creation
-- 12.16.3 Migration Continuity Check
-
-### 12.17 Personal Dashboard
-- 12.17.1 Dashboard Signal Collection
-- 12.17.2 Dashboard Summary
-- 12.17.3 Dashboard Cleanup
-

@@ -2,19 +2,11 @@
 
 ## Purpose
 
-Placeholder purpose for Data & Knowledge.
-
 ## Family Manager (5.M)
-
-Routes family-level work, resolves escalations, and coordinates subordinate departments.
 
 ## Family Scribe (5.H)
 
-Records family-level decisions, assumptions, handoffs, and work trails.
-
 ## Family Auditor (5.I)
-
-Reviews family-level output and marks items as keep, fix, remove, redo, or escalate.
 
 ## Departments
 
@@ -67,39 +59,3 @@ Reviews family-level output and marks items as keep, fix, remove, redo, or escal
 - 5.10.1 Quality Criteria Definition
 - 5.10.2 Quality Issue Detection
 - 5.10.3 Quality Correction Tracking
-
-### 5.11 Database Administration
-- 5.11.1 Database Inventory
-- 5.11.2 Access And Structure Review
-- 5.11.3 Database Maintenance Notes
-
-### 5.12 Metadata Management
-- 5.12.1 Metadata Capture
-- 5.12.2 Metadata Standardization
-- 5.12.3 Metadata Completeness Review
-
-### 5.13 Taxonomy Management
-- 5.13.1 Category Design
-- 5.13.2 Tagging Rules
-- 5.13.3 Taxonomy Drift Review
-
-### 5.14 Knowledge Graph Management
-- 5.14.1 Entity Mapping
-- 5.14.2 Relationship Mapping
-- 5.14.3 Graph Integrity Review
-
-### 5.15 Retrieval / RAG Management
-- 5.15.1 Retrieval Source Mapping
-- 5.15.2 Chunk And Index Review
-- 5.15.3 Retrieval Quality Testing
-
-### 5.16 Data Privacy
-- 5.16.1 Sensitive Data Detection
-- 5.16.2 Privacy Rule Mapping
-- 5.16.3 Privacy Risk Review
-
-### 5.17 Data Retention
-- 5.17.1 Retention Rule Mapping
-- 5.17.2 Archive Decision
-- 5.17.3 Deletion Review
-
