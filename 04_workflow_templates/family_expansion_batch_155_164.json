@@ -1,0 +1,962 @@
+[
+  {
+    "id": "155",
+    "name": "Franchise, Replication & Scaling Systems",
+    "departments": [
+      {
+        "id": "155.1",
+        "name": "Franchise Model Design",
+        "units": [
+          { "id": "155.1.1", "name": "Franchise Concept Capture" },
+          { "id": "155.1.2", "name": "Replication Boundary Review" },
+          { "id": "155.1.3", "name": "Franchise Model Summary" }
+        ]
+      },
+      {
+        "id": "155.2",
+        "name": "Replication Playbook",
+        "units": [
+          { "id": "155.2.1", "name": "Core Process Extraction" },
+          { "id": "155.2.2", "name": "Step-by-Step Playbook Draft" },
+          { "id": "155.2.3", "name": "Replication Playbook QA" }
+        ]
+      },
+      {
+        "id": "155.3",
+        "name": "Scaling Readiness Review",
+        "units": [
+          { "id": "155.3.1", "name": "Scaling Requirement Capture" },
+          { "id": "155.3.2", "name": "Bottleneck Detection" },
+          { "id": "155.3.3", "name": "Readiness Recommendation" }
+        ]
+      },
+      {
+        "id": "155.4",
+        "name": "Operator Training System",
+        "units": [
+          { "id": "155.4.1", "name": "Operator Role Definition" },
+          { "id": "155.4.2", "name": "Training Module Mapping" },
+          { "id": "155.4.3", "name": "Operator Training Notes" }
+        ]
+      },
+      {
+        "id": "155.5",
+        "name": "Franchise Standards Control",
+        "units": [
+          { "id": "155.5.1", "name": "Standard Requirement Definition" },
+          { "id": "155.5.2", "name": "Compliance Pattern Review" },
+          { "id": "155.5.3", "name": "Standard Control Update" }
+        ]
+      },
+      {
+        "id": "155.6",
+        "name": "Replication Package Assembly",
+        "units": [
+          { "id": "155.6.1", "name": "Package Component Inventory" },
+          { "id": "155.6.2", "name": "Setup Instruction Draft" },
+          { "id": "155.6.3", "name": "Replication Package QA" }
+        ]
+      },
+      {
+        "id": "155.7",
+        "name": "Multi-Location Coordination",
+        "units": [
+          { "id": "155.7.1", "name": "Location Requirement Capture" },
+          { "id": "155.7.2", "name": "Cross-Location Dependency Review" },
+          { "id": "155.7.3", "name": "Coordination Plan Update" }
+        ]
+      },
+      {
+        "id": "155.8",
+        "name": "Scaling Risk Review",
+        "units": [
+          { "id": "155.8.1", "name": "Scaling Risk Signal" },
+          { "id": "155.8.2", "name": "Operational Impact Review" },
+          { "id": "155.8.3", "name": "Scaling Risk Notes" }
+        ]
+      },
+      {
+        "id": "155.9",
+        "name": "Franchise Governance",
+        "units": [
+          { "id": "155.9.1", "name": "Franchise Rule Definition" },
+          { "id": "155.9.2", "name": "Exception Review" },
+          { "id": "155.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "155.10",
+        "name": "Scaling Dashboard",
+        "units": [
+          { "id": "155.10.1", "name": "Scaling Signal Collection" },
+          { "id": "155.10.2", "name": "Replication Status Summary" },
+          { "id": "155.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "156",
+    "name": "Licensing & White-Label Operations",
+    "departments": [
+      {
+        "id": "156.1",
+        "name": "Licensing Opportunity Intake",
+        "units": [
+          { "id": "156.1.1", "name": "Licensing Candidate Capture" },
+          { "id": "156.1.2", "name": "Commercial Fit Review" },
+          { "id": "156.1.3", "name": "Opportunity Intake Summary" }
+        ]
+      },
+      {
+        "id": "156.2",
+        "name": "License Package Design",
+        "units": [
+          { "id": "156.2.1", "name": "License Asset Inventory" },
+          { "id": "156.2.2", "name": "Usage Boundary Mapping" },
+          { "id": "156.2.3", "name": "License Package Summary" }
+        ]
+      },
+      {
+        "id": "156.3",
+        "name": "White-Label Configuration",
+        "units": [
+          { "id": "156.3.1", "name": "Brand Replacement Requirement" },
+          { "id": "156.3.2", "name": "Client Customization Mapping" },
+          { "id": "156.3.3", "name": "White-Label Setup Notes" }
+        ]
+      },
+      {
+        "id": "156.4",
+        "name": "Licensing Terms Review",
+        "units": [
+          { "id": "156.4.1", "name": "Term Requirement Capture" },
+          { "id": "156.4.2", "name": "Restriction Review" },
+          { "id": "156.4.3", "name": "Licensing Terms Notes" }
+        ]
+      },
+      {
+        "id": "156.5",
+        "name": "Brand Control Review",
+        "units": [
+          { "id": "156.5.1", "name": "Brand Usage Rule Definition" },
+          { "id": "156.5.2", "name": "Brand Risk Detection" },
+          { "id": "156.5.3", "name": "Brand Control Notes" }
+        ]
+      },
+      {
+        "id": "156.6",
+        "name": "Licensee Onboarding",
+        "units": [
+          { "id": "156.6.1", "name": "Licensee Requirement Capture" },
+          { "id": "156.6.2", "name": "Onboarding Packet Assembly" },
+          { "id": "156.6.3", "name": "Onboarding Completion Notes" }
+        ]
+      },
+      {
+        "id": "156.7",
+        "name": "White-Label QA",
+        "units": [
+          { "id": "156.7.1", "name": "Branding Consistency Review" },
+          { "id": "156.7.2", "name": "Configuration Defect Detection" },
+          { "id": "156.7.3", "name": "White-Label QA Summary" }
+        ]
+      },
+      {
+        "id": "156.8",
+        "name": "Licensing Revenue Tracking",
+        "units": [
+          { "id": "156.8.1", "name": "License Revenue Capture" },
+          { "id": "156.8.2", "name": "Payment Status Review" },
+          { "id": "156.8.3", "name": "Revenue Tracking Update" }
+        ]
+      },
+      {
+        "id": "156.9",
+        "name": "Licensing Governance",
+        "units": [
+          { "id": "156.9.1", "name": "Licensing Rule Definition" },
+          { "id": "156.9.2", "name": "License Exception Review" },
+          { "id": "156.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "156.10",
+        "name": "Licensing Dashboard",
+        "units": [
+          { "id": "156.10.1", "name": "Licensing Signal Collection" },
+          { "id": "156.10.2", "name": "White-Label Status Summary" },
+          { "id": "156.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "157",
+    "name": "Agent App Store & Plugin Ecosystem",
+    "departments": [
+      {
+        "id": "157.1",
+        "name": "App Store Inventory",
+        "units": [
+          { "id": "157.1.1", "name": "Agent App Listing Capture" },
+          { "id": "157.1.2", "name": "Plugin Category Assignment" },
+          { "id": "157.1.3", "name": "App Store Inventory Update" }
+        ]
+      },
+      {
+        "id": "157.2",
+        "name": "Plugin Submission Review",
+        "units": [
+          { "id": "157.2.1", "name": "Submission Intake" },
+          { "id": "157.2.2", "name": "Plugin Requirement Review" },
+          { "id": "157.2.3", "name": "Submission Decision Notes" }
+        ]
+      },
+      {
+        "id": "157.3",
+        "name": "Plugin Compatibility Testing",
+        "units": [
+          { "id": "157.3.1", "name": "Compatibility Requirement Mapping" },
+          { "id": "157.3.2", "name": "Integration Test Review" },
+          { "id": "157.3.3", "name": "Plugin Compatibility Testing" }
+        ]
+      },
+      {
+        "id": "157.4",
+        "name": "App Store Listing Design",
+        "units": [
+          { "id": "157.4.1", "name": "Listing Copy Draft" },
+          { "id": "157.4.2", "name": "Feature Summary Review" },
+          { "id": "157.4.3", "name": "Listing QA" }
+        ]
+      },
+      {
+        "id": "157.5",
+        "name": "Plugin Security Review",
+        "units": [
+          { "id": "157.5.1", "name": "Plugin Risk Signal Capture" },
+          { "id": "157.5.2", "name": "Permission Scope Review" },
+          { "id": "157.5.3", "name": "Plugin Security Review" }
+        ]
+      },
+      {
+        "id": "157.6",
+        "name": "Ecosystem Partner Management",
+        "units": [
+          { "id": "157.6.1", "name": "Partner Candidate Capture" },
+          { "id": "157.6.2", "name": "Ecosystem Fit Review" },
+          { "id": "157.6.3", "name": "Partner Record Update" }
+        ]
+      },
+      {
+        "id": "157.7",
+        "name": "Plugin Versioning",
+        "units": [
+          { "id": "157.7.1", "name": "Version Change Capture" },
+          { "id": "157.7.2", "name": "Compatibility Impact Review" },
+          { "id": "157.7.3", "name": "Version Record Update" }
+        ]
+      },
+      {
+        "id": "157.8",
+        "name": "App Store Quality Governance",
+        "units": [
+          { "id": "157.8.1", "name": "Quality Rule Definition" },
+          { "id": "157.8.2", "name": "Listing Exception Review" },
+          { "id": "157.8.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "157.9",
+        "name": "Plugin Adoption Analytics",
+        "units": [
+          { "id": "157.9.1", "name": "Adoption Signal Collection" },
+          { "id": "157.9.2", "name": "Usage Pattern Review" },
+          { "id": "157.9.3", "name": "Adoption Analytics Notes" }
+        ]
+      },
+      {
+        "id": "157.10",
+        "name": "App Store Dashboard",
+        "units": [
+          { "id": "157.10.1", "name": "Plugin Signal Collection" },
+          { "id": "157.10.2", "name": "Ecosystem Status Summary" },
+          { "id": "157.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "158",
+    "name": "Client Portal Operations",
+    "departments": [
+      {
+        "id": "158.1",
+        "name": "Client Portal Intake",
+        "units": [
+          { "id": "158.1.1", "name": "Portal Need Capture" },
+          { "id": "158.1.2", "name": "Client Access Requirement Review" },
+          { "id": "158.1.3", "name": "Portal Intake Summary" }
+        ]
+      },
+      {
+        "id": "158.2",
+        "name": "Portal User Management",
+        "units": [
+          { "id": "158.2.1", "name": "User Account Capture" },
+          { "id": "158.2.2", "name": "Access Role Review" },
+          { "id": "158.2.3", "name": "User Status Update" }
+        ]
+      },
+      {
+        "id": "158.3",
+        "name": "Portal Content Publishing",
+        "units": [
+          { "id": "158.3.1", "name": "Content Requirement Capture" },
+          { "id": "158.3.2", "name": "Publishing Readiness Review" },
+          { "id": "158.3.3", "name": "Portal Content Update" }
+        ]
+      },
+      {
+        "id": "158.4",
+        "name": "Client Document Delivery",
+        "units": [
+          { "id": "158.4.1", "name": "Delivery Package Assembly" },
+          { "id": "158.4.2", "name": "Client Visibility Review" },
+          { "id": "158.4.3", "name": "Client Document Delivery" }
+        ]
+      },
+      {
+        "id": "158.5",
+        "name": "Portal Support Queue",
+        "units": [
+          { "id": "158.5.1", "name": "Support Request Capture" },
+          { "id": "158.5.2", "name": "Issue Priority Review" },
+          { "id": "158.5.3", "name": "Support Queue Update" }
+        ]
+      },
+      {
+        "id": "158.6",
+        "name": "Client Portal Notifications",
+        "units": [
+          { "id": "158.6.1", "name": "Notification Trigger Definition" },
+          { "id": "158.6.2", "name": "Message Draft Review" },
+          { "id": "158.6.3", "name": "Notification Record Update" }
+        ]
+      },
+      {
+        "id": "158.7",
+        "name": "Portal Experience Review",
+        "units": [
+          { "id": "158.7.1", "name": "User Friction Capture" },
+          { "id": "158.7.2", "name": "Navigation Clarity Review" },
+          { "id": "158.7.3", "name": "Experience Improvement Notes" }
+        ]
+      },
+      {
+        "id": "158.8",
+        "name": "Portal Security Review",
+        "units": [
+          { "id": "158.8.1", "name": "Access Risk Detection" },
+          { "id": "158.8.2", "name": "Sensitive Content Review" },
+          { "id": "158.8.3", "name": "Portal Security Review" }
+        ]
+      },
+      {
+        "id": "158.9",
+        "name": "Portal Governance",
+        "units": [
+          { "id": "158.9.1", "name": "Portal Rule Definition" },
+          { "id": "158.9.2", "name": "Client Exception Review" },
+          { "id": "158.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "158.10",
+        "name": "Portal Dashboard",
+        "units": [
+          { "id": "158.10.1", "name": "Portal Signal Collection" },
+          { "id": "158.10.2", "name": "Client Access Summary" },
+          { "id": "158.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "159",
+    "name": "Knowledge Graph Visualization Studio",
+    "departments": [
+      {
+        "id": "159.1",
+        "name": "Graph Visualization Intake",
+        "units": [
+          { "id": "159.1.1", "name": "Visualization Request Capture" },
+          { "id": "159.1.2", "name": "Graph Purpose Review" },
+          { "id": "159.1.3", "name": "Visualization Brief Draft" }
+        ]
+      },
+      {
+        "id": "159.2",
+        "name": "Node Layout Design",
+        "units": [
+          { "id": "159.2.1", "name": "Node Group Capture" },
+          { "id": "159.2.2", "name": "Layout Pattern Selection" },
+          { "id": "159.2.3", "name": "Node Layout QA" }
+        ]
+      },
+      {
+        "id": "159.3",
+        "name": "Edge Styling",
+        "units": [
+          { "id": "159.3.1", "name": "Relationship Type Capture" },
+          { "id": "159.3.2", "name": "Edge Style Mapping" },
+          { "id": "159.3.3", "name": "Edge Styling Notes" }
+        ]
+      },
+      {
+        "id": "159.4",
+        "name": "Cluster Visualization",
+        "units": [
+          { "id": "159.4.1", "name": "Cluster Candidate Detection" },
+          { "id": "159.4.2", "name": "Cluster Boundary Review" },
+          { "id": "159.4.3", "name": "Cluster View Update" }
+        ]
+      },
+      {
+        "id": "159.5",
+        "name": "Graph Interaction Design",
+        "units": [
+          { "id": "159.5.1", "name": "Interaction Requirement Capture" },
+          { "id": "159.5.2", "name": "Zoom And Filter Review" },
+          { "id": "159.5.3", "name": "Graph Interaction Design" }
+        ]
+      },
+      {
+        "id": "159.6",
+        "name": "Graph Legend Design",
+        "units": [
+          { "id": "159.6.1", "name": "Symbol Meaning Definition" },
+          { "id": "159.6.2", "name": "Legend Label Draft" },
+          { "id": "159.6.3", "name": "Legend QA" }
+        ]
+      },
+      {
+        "id": "159.7",
+        "name": "Graph Insight Extraction",
+        "units": [
+          { "id": "159.7.1", "name": "Pattern Signal Detection" },
+          { "id": "159.7.2", "name": "Relationship Insight Review" },
+          { "id": "159.7.3", "name": "Insight Summary Notes" }
+        ]
+      },
+      {
+        "id": "159.8",
+        "name": "Visualization Export",
+        "units": [
+          { "id": "159.8.1", "name": "Export Format Selection" },
+          { "id": "159.8.2", "name": "Visual File Assembly" },
+          { "id": "159.8.3", "name": "Export QA" }
+        ]
+      },
+      {
+        "id": "159.9",
+        "name": "Graph Visualization Governance",
+        "units": [
+          { "id": "159.9.1", "name": "Visualization Rule Definition" },
+          { "id": "159.9.2", "name": "Interpretation Risk Review" },
+          { "id": "159.9.3", "name": "Graph Visualization Governance" }
+        ]
+      },
+      {
+        "id": "159.10",
+        "name": "Graph Studio Dashboard",
+        "units": [
+          { "id": "159.10.1", "name": "Graph Signal Collection" },
+          { "id": "159.10.2", "name": "Visualization Status Summary" },
+          { "id": "159.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "160",
+    "name": "AI Safety Red-Team Lab",
+    "departments": [
+      {
+        "id": "160.1",
+        "name": "Red-Team Scenario Intake",
+        "units": [
+          { "id": "160.1.1", "name": "Safety Threat Capture" },
+          { "id": "160.1.2", "name": "Scenario Scope Review" },
+          { "id": "160.1.3", "name": "Red-Team Intake Summary" }
+        ]
+      },
+      {
+        "id": "160.2",
+        "name": "Attack Path Design",
+        "units": [
+          { "id": "160.2.1", "name": "Attack Objective Definition" },
+          { "id": "160.2.2", "name": "Exploit Path Mapping" },
+          { "id": "160.2.3", "name": "Attack Path QA" }
+        ]
+      },
+      {
+        "id": "160.3",
+        "name": "Safety Stress Testing",
+        "units": [
+          { "id": "160.3.1", "name": "Stress Condition Setup" },
+          { "id": "160.3.2", "name": "Model Behavior Observation" },
+          { "id": "160.3.3", "name": "Stress Test Findings" }
+        ]
+      },
+      {
+        "id": "160.4",
+        "name": "Harmful Output Detection",
+        "units": [
+          { "id": "160.4.1", "name": "Harm Signal Capture" },
+          { "id": "160.4.2", "name": "Output Severity Review" },
+          { "id": "160.4.3", "name": "Harm Finding Notes" }
+        ]
+      },
+      {
+        "id": "160.5",
+        "name": "Refusal Boundary Testing",
+        "units": [
+          { "id": "160.5.1", "name": "Boundary Case Selection" },
+          { "id": "160.5.2", "name": "Refusal Behavior Review" },
+          { "id": "160.5.3", "name": "Refusal Boundary Testing" }
+        ]
+      },
+      {
+        "id": "160.6",
+        "name": "Safety Mitigation Design",
+        "units": [
+          { "id": "160.6.1", "name": "Mitigation Need Capture" },
+          { "id": "160.6.2", "name": "Control Option Review" },
+          { "id": "160.6.3", "name": "Mitigation Recommendation" }
+        ]
+      },
+      {
+        "id": "160.7",
+        "name": "Red-Team Evidence Archive",
+        "units": [
+          { "id": "160.7.1", "name": "Test Evidence Filing" },
+          { "id": "160.7.2", "name": "Finding Trace Review" },
+          { "id": "160.7.3", "name": "Evidence Archive Update" }
+        ]
+      },
+      {
+        "id": "160.8",
+        "name": "Safety Regression Testing",
+        "units": [
+          { "id": "160.8.1", "name": "Regression Case Selection" },
+          { "id": "160.8.2", "name": "Control Change Impact Review" },
+          { "id": "160.8.3", "name": "Safety Regression Testing" }
+        ]
+      },
+      {
+        "id": "160.9",
+        "name": "Red-Team Governance",
+        "units": [
+          { "id": "160.9.1", "name": "Red-Team Rule Definition" },
+          { "id": "160.9.2", "name": "Test Boundary Review" },
+          { "id": "160.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "160.10",
+        "name": "Safety Lab Dashboard",
+        "units": [
+          { "id": "160.10.1", "name": "Safety Signal Collection" },
+          { "id": "160.10.2", "name": "Red-Team Status Summary" },
+          { "id": "160.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "161",
+    "name": "Prompt Injection Defense Office",
+    "departments": [
+      {
+        "id": "161.1",
+        "name": "Injection Threat Intake",
+        "units": [
+          { "id": "161.1.1", "name": "Injection Signal Capture" },
+          { "id": "161.1.2", "name": "Threat Vector Review" },
+          { "id": "161.1.3", "name": "Injection Intake Summary" }
+        ]
+      },
+      {
+        "id": "161.2",
+        "name": "Prompt Boundary Design",
+        "units": [
+          { "id": "161.2.1", "name": "Boundary Rule Definition" },
+          { "id": "161.2.2", "name": "Instruction Hierarchy Review" },
+          { "id": "161.2.3", "name": "Boundary Design Notes" }
+        ]
+      },
+      {
+        "id": "161.3",
+        "name": "Injection Pattern Detection",
+        "units": [
+          { "id": "161.3.1", "name": "Pattern Candidate Capture" },
+          { "id": "161.3.2", "name": "Malicious Instruction Review" },
+          { "id": "161.3.3", "name": "Detection Pattern Update" }
+        ]
+      },
+      {
+        "id": "161.4",
+        "name": "Defense Test Cases",
+        "units": [
+          { "id": "161.4.1", "name": "Test Case Draft" },
+          { "id": "161.4.2", "name": "Attack Prompt Review" },
+          { "id": "161.4.3", "name": "Defense Test Notes" }
+        ]
+      },
+      {
+        "id": "161.5",
+        "name": "Tool-Use Injection Defense",
+        "units": [
+          { "id": "161.5.1", "name": "Tool Attack Path Capture" },
+          { "id": "161.5.2", "name": "Permission Boundary Review" },
+          { "id": "161.5.3", "name": "Tool-Use Injection Defense" }
+        ]
+      },
+      {
+        "id": "161.6",
+        "name": "Data Exfiltration Prevention",
+        "units": [
+          { "id": "161.6.1", "name": "Exfiltration Signal Detection" },
+          { "id": "161.6.2", "name": "Sensitive Data Boundary Review" },
+          { "id": "161.6.3", "name": "Data Exfiltration Prevention" }
+        ]
+      },
+      {
+        "id": "161.7",
+        "name": "Injection Incident Response",
+        "units": [
+          { "id": "161.7.1", "name": "Incident Signal Capture" },
+          { "id": "161.7.2", "name": "Containment Path Review" },
+          { "id": "161.7.3", "name": "Incident Response Notes" }
+        ]
+      },
+      {
+        "id": "161.8",
+        "name": "Defense Rule Updating",
+        "units": [
+          { "id": "161.8.1", "name": "Rule Gap Detection" },
+          { "id": "161.8.2", "name": "Rule Patch Draft" },
+          { "id": "161.8.3", "name": "Defense Rule Update" }
+        ]
+      },
+      {
+        "id": "161.9",
+        "name": "Prompt Defense Governance",
+        "units": [
+          { "id": "161.9.1", "name": "Defense Rule Definition" },
+          { "id": "161.9.2", "name": "Exception Review" },
+          { "id": "161.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "161.10",
+        "name": "Injection Defense Dashboard",
+        "units": [
+          { "id": "161.10.1", "name": "Injection Signal Collection" },
+          { "id": "161.10.2", "name": "Defense Status Summary" },
+          { "id": "161.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "162",
+    "name": "Data Backup & Cold Storage",
+    "departments": [
+      {
+        "id": "162.1",
+        "name": "Backup Requirement Intake",
+        "units": [
+          { "id": "162.1.1", "name": "Backup Need Capture" },
+          { "id": "162.1.2", "name": "Data Criticality Review" },
+          { "id": "162.1.3", "name": "Backup Requirement Summary" }
+        ]
+      },
+      {
+        "id": "162.2",
+        "name": "Backup Schedule Design",
+        "units": [
+          { "id": "162.2.1", "name": "Backup Frequency Definition" },
+          { "id": "162.2.2", "name": "Dependency Review" },
+          { "id": "162.2.3", "name": "Schedule Update Notes" }
+        ]
+      },
+      {
+        "id": "162.3",
+        "name": "Cold Storage Classification",
+        "units": [
+          { "id": "162.3.1", "name": "Cold Storage Candidate Capture" },
+          { "id": "162.3.2", "name": "Access Frequency Review" },
+          { "id": "162.3.3", "name": "Cold Storage Classification" }
+        ]
+      },
+      {
+        "id": "162.4",
+        "name": "Backup Execution Monitoring",
+        "units": [
+          { "id": "162.4.1", "name": "Backup Run Signal Collection" },
+          { "id": "162.4.2", "name": "Completion Status Review" },
+          { "id": "162.4.3", "name": "Backup Run Notes" }
+        ]
+      },
+      {
+        "id": "162.5",
+        "name": "Restore Testing",
+        "units": [
+          { "id": "162.5.1", "name": "Restore Scenario Selection" },
+          { "id": "162.5.2", "name": "Recovery Execution Review" },
+          { "id": "162.5.3", "name": "Restore Testing" }
+        ]
+      },
+      {
+        "id": "162.6",
+        "name": "Archive Integrity Review",
+        "units": [
+          { "id": "162.6.1", "name": "Integrity Signal Capture" },
+          { "id": "162.6.2", "name": "Corruption Risk Review" },
+          { "id": "162.6.3", "name": "Integrity Finding Notes" }
+        ]
+      },
+      {
+        "id": "162.7",
+        "name": "Retention And Rotation",
+        "units": [
+          { "id": "162.7.1", "name": "Retention Rule Definition" },
+          { "id": "162.7.2", "name": "Rotation Schedule Review" },
+          { "id": "162.7.3", "name": "Retention Update Notes" }
+        ]
+      },
+      {
+        "id": "162.8",
+        "name": "Backup Failure Recovery",
+        "units": [
+          { "id": "162.8.1", "name": "Failure Event Capture" },
+          { "id": "162.8.2", "name": "Recovery Path Selection" },
+          { "id": "162.8.3", "name": "Recovery Verification Notes" }
+        ]
+      },
+      {
+        "id": "162.9",
+        "name": "Backup Governance",
+        "units": [
+          { "id": "162.9.1", "name": "Backup Rule Definition" },
+          { "id": "162.9.2", "name": "Storage Exception Review" },
+          { "id": "162.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "162.10",
+        "name": "Backup Dashboard",
+        "units": [
+          { "id": "162.10.1", "name": "Backup Signal Collection" },
+          { "id": "162.10.2", "name": "Cold Storage Status Summary" },
+          { "id": "162.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "163",
+    "name": "Digital Legacy Planning",
+    "departments": [
+      {
+        "id": "163.1",
+        "name": "Legacy Asset Intake",
+        "units": [
+          { "id": "163.1.1", "name": "Legacy Asset Capture" },
+          { "id": "163.1.2", "name": "Asset Importance Review" },
+          { "id": "163.1.3", "name": "Legacy Intake Summary" }
+        ]
+      },
+      {
+        "id": "163.2",
+        "name": "Digital Estate Inventory",
+        "units": [
+          { "id": "163.2.1", "name": "Account Inventory Capture" },
+          { "id": "163.2.2", "name": "Ownership Status Review" },
+          { "id": "163.2.3", "name": "Digital Estate Inventory" }
+        ]
+      },
+      {
+        "id": "163.3",
+        "name": "Legacy Access Planning",
+        "units": [
+          { "id": "163.3.1", "name": "Access Need Definition" },
+          { "id": "163.3.2", "name": "Trusted Party Mapping" },
+          { "id": "163.3.3", "name": "Access Plan Notes" }
+        ]
+      },
+      {
+        "id": "163.4",
+        "name": "Succession Instructions",
+        "units": [
+          { "id": "163.4.1", "name": "Instruction Requirement Capture" },
+          { "id": "163.4.2", "name": "Succession Step Draft" },
+          { "id": "163.4.3", "name": "Instruction QA" }
+        ]
+      },
+      {
+        "id": "163.5",
+        "name": "Memorial Content Planning",
+        "units": [
+          { "id": "163.5.1", "name": "Memorial Asset Selection" },
+          { "id": "163.5.2", "name": "Presentation Format Review" },
+          { "id": "163.5.3", "name": "Memorial Content Notes" }
+        ]
+      },
+      {
+        "id": "163.6",
+        "name": "Digital Account Closure",
+        "units": [
+          { "id": "163.6.1", "name": "Closure Requirement Review" },
+          { "id": "163.6.2", "name": "Account Action Mapping" },
+          { "id": "163.6.3", "name": "Closure Plan Update" }
+        ]
+      },
+      {
+        "id": "163.7",
+        "name": "Legacy Privacy Review",
+        "units": [
+          { "id": "163.7.1", "name": "Sensitive Legacy Data Detection" },
+          { "id": "163.7.2", "name": "Privacy Boundary Review" },
+          { "id": "163.7.3", "name": "Legacy Privacy Review" }
+        ]
+      },
+      {
+        "id": "163.8",
+        "name": "Legacy Archive Packaging",
+        "units": [
+          { "id": "163.8.1", "name": "Archive Package Assembly" },
+          { "id": "163.8.2", "name": "File Structure Review" },
+          { "id": "163.8.3", "name": "Legacy Package QA" }
+        ]
+      },
+      {
+        "id": "163.9",
+        "name": "Legacy Governance",
+        "units": [
+          { "id": "163.9.1", "name": "Legacy Rule Definition" },
+          { "id": "163.9.2", "name": "Instruction Exception Review" },
+          { "id": "163.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "163.10",
+        "name": "Legacy Dashboard",
+        "units": [
+          { "id": "163.10.1", "name": "Legacy Signal Collection" },
+          { "id": "163.10.2", "name": "Digital Estate Summary" },
+          { "id": "163.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "164",
+    "name": "Reputation Fire Drill Team",
+    "departments": [
+      {
+        "id": "164.1",
+        "name": "Reputation Incident Intake",
+        "units": [
+          { "id": "164.1.1", "name": "Incident Signal Capture" },
+          { "id": "164.1.2", "name": "Reputation Impact Review" },
+          { "id": "164.1.3", "name": "Incident Intake Summary" }
+        ]
+      },
+      {
+        "id": "164.2",
+        "name": "Fire Drill Scenario Design",
+        "units": [
+          { "id": "164.2.1", "name": "Scenario Threat Definition" },
+          { "id": "164.2.2", "name": "Stakeholder Reaction Mapping" },
+          { "id": "164.2.3", "name": "Drill Scenario QA" }
+        ]
+      },
+      {
+        "id": "164.3",
+        "name": "Crisis Message Drafting",
+        "units": [
+          { "id": "164.3.1", "name": "Message Objective Capture" },
+          { "id": "164.3.2", "name": "Public Response Draft" },
+          { "id": "164.3.3", "name": "Crisis Message Drafting" }
+        ]
+      },
+      {
+        "id": "164.4",
+        "name": "Stakeholder Response Routing",
+        "units": [
+          { "id": "164.4.1", "name": "Stakeholder Group Identification" },
+          { "id": "164.4.2", "name": "Response Channel Review" },
+          { "id": "164.4.3", "name": "Routing Plan Update" }
+        ]
+      },
+      {
+        "id": "164.5",
+        "name": "Reputation Damage Assessment",
+        "units": [
+          { "id": "164.5.1", "name": "Damage Signal Collection" },
+          { "id": "164.5.2", "name": "Severity Review" },
+          { "id": "164.5.3", "name": "Damage Assessment Notes" }
+        ]
+      },
+      {
+        "id": "164.6",
+        "name": "Recovery Plan Design",
+        "units": [
+          { "id": "164.6.1", "name": "Recovery Objective Capture" },
+          { "id": "164.6.2", "name": "Trust Repair Path Mapping" },
+          { "id": "164.6.3", "name": "Recovery Plan Summary" }
+        ]
+      },
+      {
+        "id": "164.7",
+        "name": "Media And Public Monitoring",
+        "units": [
+          { "id": "164.7.1", "name": "Public Signal Collection" },
+          { "id": "164.7.2", "name": "Narrative Shift Review" },
+          { "id": "164.7.3", "name": "Monitoring Summary" }
+        ]
+      },
+      {
+        "id": "164.8",
+        "name": "Fire Drill Execution",
+        "units": [
+          { "id": "164.8.1", "name": "Drill Role Assignment" },
+          { "id": "164.8.2", "name": "Simulation Run Review" },
+          { "id": "164.8.3", "name": "Fire Drill Execution" }
+        ]
+      },
+      {
+        "id": "164.9",
+        "name": "Reputation Governance",
+        "units": [
+          { "id": "164.9.1", "name": "Reputation Rule Definition" },
+          { "id": "164.9.2", "name": "Crisis Exception Review" },
+          { "id": "164.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "164.10",
+        "name": "Fire Drill Dashboard",
+        "units": [
+          { "id": "164.10.1", "name": "Reputation Signal Collection" },
+          { "id": "164.10.2", "name": "Crisis Readiness Summary" },
+          { "id": "164.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  }
+]
