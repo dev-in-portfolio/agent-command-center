@@ -1,0 +1,962 @@
+[
+  {
+    "id": "165",
+    "name": "Systems Migration Office",
+    "departments": [
+      {
+        "id": "165.1",
+        "name": "Migration Intake",
+        "units": [
+          { "id": "165.1.1", "name": "Migration Request Capture" },
+          { "id": "165.1.2", "name": "Source System Review" },
+          { "id": "165.1.3", "name": "Migration Intake Summary" }
+        ]
+      },
+      {
+        "id": "165.2",
+        "name": "Migration Scope Mapping",
+        "units": [
+          { "id": "165.2.1", "name": "System Boundary Definition" },
+          { "id": "165.2.2", "name": "Data And Workflow Inventory" },
+          { "id": "165.2.3", "name": "Scope Map Update" }
+        ]
+      },
+      {
+        "id": "165.3",
+        "name": "Source System Assessment",
+        "units": [
+          { "id": "165.3.1", "name": "Legacy System Inventory" },
+          { "id": "165.3.2", "name": "Dependency Risk Review" },
+          { "id": "165.3.3", "name": "Source Readiness Notes" }
+        ]
+      },
+      {
+        "id": "165.4",
+        "name": "Target System Design",
+        "units": [
+          { "id": "165.4.1", "name": "Target Requirement Capture" },
+          { "id": "165.4.2", "name": "Future State Mapping" },
+          { "id": "165.4.3", "name": "Target Design Summary" }
+        ]
+      },
+      {
+        "id": "165.5",
+        "name": "Migration Plan Development",
+        "units": [
+          { "id": "165.5.1", "name": "Migration Step Sequencing" },
+          { "id": "165.5.2", "name": "Cutover Strategy Draft" },
+          { "id": "165.5.3", "name": "Migration Plan QA" }
+        ]
+      },
+      {
+        "id": "165.6",
+        "name": "Data Migration Operations",
+        "units": [
+          { "id": "165.6.1", "name": "Data Extract Review" },
+          { "id": "165.6.2", "name": "Transformation Mapping" },
+          { "id": "165.6.3", "name": "Load Verification Notes" }
+        ]
+      },
+      {
+        "id": "165.7",
+        "name": "Migration Testing",
+        "units": [
+          { "id": "165.7.1", "name": "Test Case Selection" },
+          { "id": "165.7.2", "name": "Migration Result Review" },
+          { "id": "165.7.3", "name": "Migration Test Summary" }
+        ]
+      },
+      {
+        "id": "165.8",
+        "name": "Cutover Management",
+        "units": [
+          { "id": "165.8.1", "name": "Cutover Window Planning" },
+          { "id": "165.8.2", "name": "Go-Live Checklist Review" },
+          { "id": "165.8.3", "name": "Cutover Decision Record" }
+        ]
+      },
+      {
+        "id": "165.9",
+        "name": "Migration Risk Governance",
+        "units": [
+          { "id": "165.9.1", "name": "Migration Risk Detection" },
+          { "id": "165.9.2", "name": "Rollback Path Review" },
+          { "id": "165.9.3", "name": "Risk Governance Notes" }
+        ]
+      },
+      {
+        "id": "165.10",
+        "name": "Migration Dashboard",
+        "units": [
+          { "id": "165.10.1", "name": "Migration Signal Collection" },
+          { "id": "165.10.2", "name": "Cutover Status Summary" },
+          { "id": "165.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "166",
+    "name": "Mobile App Operations",
+    "departments": [
+      {
+        "id": "166.1",
+        "name": "Mobile App Intake",
+        "units": [
+          { "id": "166.1.1", "name": "App Request Capture" },
+          { "id": "166.1.2", "name": "Platform Requirement Review" },
+          { "id": "166.1.3", "name": "Mobile Intake Summary" }
+        ]
+      },
+      {
+        "id": "166.2",
+        "name": "Mobile Feature Planning",
+        "units": [
+          { "id": "166.2.1", "name": "Feature Candidate Capture" },
+          { "id": "166.2.2", "name": "User Flow Review" },
+          { "id": "166.2.3", "name": "Feature Plan Update" }
+        ]
+      },
+      {
+        "id": "166.3",
+        "name": "Mobile UX Review",
+        "units": [
+          { "id": "166.3.1", "name": "Screen Flow Capture" },
+          { "id": "166.3.2", "name": "Touch Interaction Review" },
+          { "id": "166.3.3", "name": "Mobile UX Notes" }
+        ]
+      },
+      {
+        "id": "166.4",
+        "name": "App Build Coordination",
+        "units": [
+          { "id": "166.4.1", "name": "Build Requirement Mapping" },
+          { "id": "166.4.2", "name": "Release Branch Review" },
+          { "id": "166.4.3", "name": "Build Coordination Notes" }
+        ]
+      },
+      {
+        "id": "166.5",
+        "name": "Device Compatibility Testing",
+        "units": [
+          { "id": "166.5.1", "name": "Device Matrix Definition" },
+          { "id": "166.5.2", "name": "Compatibility Test Review" },
+          { "id": "166.5.3", "name": "Compatibility Findings" }
+        ]
+      },
+      {
+        "id": "166.6",
+        "name": "App Store Submission",
+        "units": [
+          { "id": "166.6.1", "name": "Store Requirement Capture" },
+          { "id": "166.6.2", "name": "Listing Asset Review" },
+          { "id": "166.6.3", "name": "Submission Status Update" }
+        ]
+      },
+      {
+        "id": "166.7",
+        "name": "Mobile Analytics Review",
+        "units": [
+          { "id": "166.7.1", "name": "Mobile Metric Collection" },
+          { "id": "166.7.2", "name": "User Behavior Review" },
+          { "id": "166.7.3", "name": "Analytics Recommendation" }
+        ]
+      },
+      {
+        "id": "166.8",
+        "name": "Crash And Bug Monitoring",
+        "units": [
+          { "id": "166.8.1", "name": "Crash Signal Capture" },
+          { "id": "166.8.2", "name": "Bug Severity Review" },
+          { "id": "166.8.3", "name": "Fix Priority Notes" }
+        ]
+      },
+      {
+        "id": "166.9",
+        "name": "Mobile Governance",
+        "units": [
+          { "id": "166.9.1", "name": "Mobile Rule Definition" },
+          { "id": "166.9.2", "name": "Platform Exception Review" },
+          { "id": "166.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "166.10",
+        "name": "Mobile Dashboard",
+        "units": [
+          { "id": "166.10.1", "name": "Mobile Signal Collection" },
+          { "id": "166.10.2", "name": "App Status Summary" },
+          { "id": "166.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "167",
+    "name": "Voice, Phone & Conversational Agent Operations",
+    "departments": [
+      {
+        "id": "167.1",
+        "name": "Voice Channel Intake",
+        "units": [
+          { "id": "167.1.1", "name": "Voice Use Case Capture" },
+          { "id": "167.1.2", "name": "Call Flow Requirement Review" },
+          { "id": "167.1.3", "name": "Voice Intake Summary" }
+        ]
+      },
+      {
+        "id": "167.2",
+        "name": "Call Flow Design",
+        "units": [
+          { "id": "167.2.1", "name": "Caller Journey Mapping" },
+          { "id": "167.2.2", "name": "Branch Logic Draft" },
+          { "id": "167.2.3", "name": "Call Flow QA" }
+        ]
+      },
+      {
+        "id": "167.3",
+        "name": "Conversational Agent Script",
+        "units": [
+          { "id": "167.3.1", "name": "Script Objective Capture" },
+          { "id": "167.3.2", "name": "Dialogue Turn Draft" },
+          { "id": "167.3.3", "name": "Script Clarity Review" }
+        ]
+      },
+      {
+        "id": "167.4",
+        "name": "Voice Experience Testing",
+        "units": [
+          { "id": "167.4.1", "name": "Voice Test Scenario Selection" },
+          { "id": "167.4.2", "name": "Audio Interaction Review" },
+          { "id": "167.4.3", "name": "Voice Test Findings" }
+        ]
+      },
+      {
+        "id": "167.5",
+        "name": "Phone Routing Operations",
+        "units": [
+          { "id": "167.5.1", "name": "Routing Rule Definition" },
+          { "id": "167.5.2", "name": "Escalation Path Review" },
+          { "id": "167.5.3", "name": "Routing Update Notes" }
+        ]
+      },
+      {
+        "id": "167.6",
+        "name": "Call Recording Review",
+        "units": [
+          { "id": "167.6.1", "name": "Recording Signal Capture" },
+          { "id": "167.6.2", "name": "Quality Pattern Review" },
+          { "id": "167.6.3", "name": "Recording Review Notes" }
+        ]
+      },
+      {
+        "id": "167.7",
+        "name": "Voice Compliance Review",
+        "units": [
+          { "id": "167.7.1", "name": "Disclosure Requirement Capture" },
+          { "id": "167.7.2", "name": "Consent Boundary Review" },
+          { "id": "167.7.3", "name": "Voice Compliance Notes" }
+        ]
+      },
+      {
+        "id": "167.8",
+        "name": "Live Agent Handoff",
+        "units": [
+          { "id": "167.8.1", "name": "Handoff Trigger Definition" },
+          { "id": "167.8.2", "name": "Context Transfer Review" },
+          { "id": "167.8.3", "name": "Handoff Confirmation Notes" }
+        ]
+      },
+      {
+        "id": "167.9",
+        "name": "Voice Governance",
+        "units": [
+          { "id": "167.9.1", "name": "Voice Rule Definition" },
+          { "id": "167.9.2", "name": "Call Exception Review" },
+          { "id": "167.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "167.10",
+        "name": "Voice Dashboard",
+        "units": [
+          { "id": "167.10.1", "name": "Voice Signal Collection" },
+          { "id": "167.10.2", "name": "Conversation Status Summary" },
+          { "id": "167.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "168",
+    "name": "Physical Mail & Print Outreach",
+    "departments": [
+      {
+        "id": "168.1",
+        "name": "Mail Campaign Intake",
+        "units": [
+          { "id": "168.1.1", "name": "Campaign Objective Capture" },
+          { "id": "168.1.2", "name": "Audience List Review" },
+          { "id": "168.1.3", "name": "Mail Intake Summary" }
+        ]
+      },
+      {
+        "id": "168.2",
+        "name": "Print Piece Design",
+        "units": [
+          { "id": "168.2.1", "name": "Format Requirement Capture" },
+          { "id": "168.2.2", "name": "Copy And Layout Draft" },
+          { "id": "168.2.3", "name": "Print Piece QA" }
+        ]
+      },
+      {
+        "id": "168.3",
+        "name": "Mailing List Preparation",
+        "units": [
+          { "id": "168.3.1", "name": "Address List Capture" },
+          { "id": "168.3.2", "name": "List Hygiene Review" },
+          { "id": "168.3.3", "name": "Mailing List Update" }
+        ]
+      },
+      {
+        "id": "168.4",
+        "name": "Print Vendor Coordination",
+        "units": [
+          { "id": "168.4.1", "name": "Vendor Requirement Review" },
+          { "id": "168.4.2", "name": "Print Quote Capture" },
+          { "id": "168.4.3", "name": "Vendor Coordination Notes" }
+        ]
+      },
+      {
+        "id": "168.5",
+        "name": "Postal Compliance Review",
+        "units": [
+          { "id": "168.5.1", "name": "Postal Rule Capture" },
+          { "id": "168.5.2", "name": "Mail Class Review" },
+          { "id": "168.5.3", "name": "Postal Compliance Notes" }
+        ]
+      },
+      {
+        "id": "168.6",
+        "name": "Mail Drop Scheduling",
+        "units": [
+          { "id": "168.6.1", "name": "Drop Date Planning" },
+          { "id": "168.6.2", "name": "Delivery Window Review" },
+          { "id": "168.6.3", "name": "Schedule Confirmation Notes" }
+        ]
+      },
+      {
+        "id": "168.7",
+        "name": "Response Tracking",
+        "units": [
+          { "id": "168.7.1", "name": "Response Signal Capture" },
+          { "id": "168.7.2", "name": "Campaign Attribution Review" },
+          { "id": "168.7.3", "name": "Response Tracking Update" }
+        ]
+      },
+      {
+        "id": "168.8",
+        "name": "Print Quality Control",
+        "units": [
+          { "id": "168.8.1", "name": "Proof Review" },
+          { "id": "168.8.2", "name": "Defect Detection" },
+          { "id": "168.8.3", "name": "Print Approval Notes" }
+        ]
+      },
+      {
+        "id": "168.9",
+        "name": "Mail Governance",
+        "units": [
+          { "id": "168.9.1", "name": "Outreach Rule Definition" },
+          { "id": "168.9.2", "name": "Suppression Exception Review" },
+          { "id": "168.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "168.10",
+        "name": "Mail Dashboard",
+        "units": [
+          { "id": "168.10.1", "name": "Mail Signal Collection" },
+          { "id": "168.10.2", "name": "Outreach Status Summary" },
+          { "id": "168.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "169",
+    "name": "CRM Operations",
+    "departments": [
+      {
+        "id": "169.1",
+        "name": "CRM Intake",
+        "units": [
+          { "id": "169.1.1", "name": "CRM Request Capture" },
+          { "id": "169.1.2", "name": "Object Requirement Review" },
+          { "id": "169.1.3", "name": "CRM Intake Summary" }
+        ]
+      },
+      {
+        "id": "169.2",
+        "name": "Contact Record Management",
+        "units": [
+          { "id": "169.2.1", "name": "Contact Data Capture" },
+          { "id": "169.2.2", "name": "Duplicate Review" },
+          { "id": "169.2.3", "name": "Contact Record Update" }
+        ]
+      },
+      {
+        "id": "169.3",
+        "name": "Pipeline Configuration",
+        "units": [
+          { "id": "169.3.1", "name": "Pipeline Stage Definition" },
+          { "id": "169.3.2", "name": "Deal Flow Mapping" },
+          { "id": "169.3.3", "name": "Pipeline Setup Notes" }
+        ]
+      },
+      {
+        "id": "169.4",
+        "name": "CRM Field Management",
+        "units": [
+          { "id": "169.4.1", "name": "Field Requirement Capture" },
+          { "id": "169.4.2", "name": "Field Type Review" },
+          { "id": "169.4.3", "name": "Field Configuration Update" }
+        ]
+      },
+      {
+        "id": "169.5",
+        "name": "CRM Automation Rules",
+        "units": [
+          { "id": "169.5.1", "name": "Automation Trigger Capture" },
+          { "id": "169.5.2", "name": "Workflow Action Review" },
+          { "id": "169.5.3", "name": "Automation Rule Update" }
+        ]
+      },
+      {
+        "id": "169.6",
+        "name": "CRM Data Hygiene",
+        "units": [
+          { "id": "169.6.1", "name": "Dirty Data Detection" },
+          { "id": "169.6.2", "name": "Correction Rule Review" },
+          { "id": "169.6.3", "name": "Hygiene Action Notes" }
+        ]
+      },
+      {
+        "id": "169.7",
+        "name": "CRM Reporting",
+        "units": [
+          { "id": "169.7.1", "name": "Report Requirement Capture" },
+          { "id": "169.7.2", "name": "Metric Definition Review" },
+          { "id": "169.7.3", "name": "CRM Report Update" }
+        ]
+      },
+      {
+        "id": "169.8",
+        "name": "CRM Integration Review",
+        "units": [
+          { "id": "169.8.1", "name": "Integration Candidate Capture" },
+          { "id": "169.8.2", "name": "Sync Requirement Review" },
+          { "id": "169.8.3", "name": "Integration Notes" }
+        ]
+      },
+      {
+        "id": "169.9",
+        "name": "CRM Governance",
+        "units": [
+          { "id": "169.9.1", "name": "CRM Rule Definition" },
+          { "id": "169.9.2", "name": "Access Exception Review" },
+          { "id": "169.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "169.10",
+        "name": "CRM Dashboard",
+        "units": [
+          { "id": "169.10.1", "name": "CRM Signal Collection" },
+          { "id": "169.10.2", "name": "Pipeline Status Summary" },
+          { "id": "169.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "170",
+    "name": "Lead Nurture Factory",
+    "departments": [
+      {
+        "id": "170.1",
+        "name": "Lead Nurture Intake",
+        "units": [
+          { "id": "170.1.1", "name": "Lead Source Capture" },
+          { "id": "170.1.2", "name": "Nurture Goal Review" },
+          { "id": "170.1.3", "name": "Lead Intake Summary" }
+        ]
+      },
+      {
+        "id": "170.2",
+        "name": "Segment Design",
+        "units": [
+          { "id": "170.2.1", "name": "Segment Criteria Definition" },
+          { "id": "170.2.2", "name": "Audience Fit Review" },
+          { "id": "170.2.3", "name": "Segment Map Update" }
+        ]
+      },
+      {
+        "id": "170.3",
+        "name": "Nurture Sequence Design",
+        "units": [
+          { "id": "170.3.1", "name": "Sequence Objective Capture" },
+          { "id": "170.3.2", "name": "Message Step Mapping" },
+          { "id": "170.3.3", "name": "Sequence QA" }
+        ]
+      },
+      {
+        "id": "170.4",
+        "name": "Follow-Up Copy Production",
+        "units": [
+          { "id": "170.4.1", "name": "Message Purpose Capture" },
+          { "id": "170.4.2", "name": "Follow-Up Copy Draft" },
+          { "id": "170.4.3", "name": "Copy Quality Review" }
+        ]
+      },
+      {
+        "id": "170.5",
+        "name": "Lead Scoring",
+        "units": [
+          { "id": "170.5.1", "name": "Scoring Factor Definition" },
+          { "id": "170.5.2", "name": "Behavior Signal Review" },
+          { "id": "170.5.3", "name": "Lead Score Update" }
+        ]
+      },
+      {
+        "id": "170.6",
+        "name": "Nurture Automation Setup",
+        "units": [
+          { "id": "170.6.1", "name": "Automation Trigger Definition" },
+          { "id": "170.6.2", "name": "Delay Rule Review" },
+          { "id": "170.6.3", "name": "Automation Setup Notes" }
+        ]
+      },
+      {
+        "id": "170.7",
+        "name": "Engagement Monitoring",
+        "units": [
+          { "id": "170.7.1", "name": "Engagement Signal Collection" },
+          { "id": "170.7.2", "name": "Response Pattern Review" },
+          { "id": "170.7.3", "name": "Engagement Summary" }
+        ]
+      },
+      {
+        "id": "170.8",
+        "name": "Re-Engagement Campaigns",
+        "units": [
+          { "id": "170.8.1", "name": "Dormant Lead Detection" },
+          { "id": "170.8.2", "name": "Re-Engagement Offer Review" },
+          { "id": "170.8.3", "name": "Campaign Recommendation" }
+        ]
+      },
+      {
+        "id": "170.9",
+        "name": "Nurture Governance",
+        "units": [
+          { "id": "170.9.1", "name": "Nurture Rule Definition" },
+          { "id": "170.9.2", "name": "Contact Frequency Review" },
+          { "id": "170.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "170.10",
+        "name": "Nurture Dashboard",
+        "units": [
+          { "id": "170.10.1", "name": "Lead Signal Collection" },
+          { "id": "170.10.2", "name": "Nurture Status Summary" },
+          { "id": "170.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "171",
+    "name": "Revenue Operations",
+    "departments": [
+      {
+        "id": "171.1",
+        "name": "Revenue Operations Intake",
+        "units": [
+          { "id": "171.1.1", "name": "Revenue Request Capture" },
+          { "id": "171.1.2", "name": "Revenue Process Review" },
+          { "id": "171.1.3", "name": "RevOps Intake Summary" }
+        ]
+      },
+      {
+        "id": "171.2",
+        "name": "Funnel Metrics",
+        "units": [
+          { "id": "171.2.1", "name": "Funnel Stage Definition" },
+          { "id": "171.2.2", "name": "Conversion Metric Review" },
+          { "id": "171.2.3", "name": "Funnel Metric Update" }
+        ]
+      },
+      {
+        "id": "171.3",
+        "name": "Sales Process Alignment",
+        "units": [
+          { "id": "171.3.1", "name": "Sales Step Capture" },
+          { "id": "171.3.2", "name": "Handoff Alignment Review" },
+          { "id": "171.3.3", "name": "Process Alignment Notes" }
+        ]
+      },
+      {
+        "id": "171.4",
+        "name": "Revenue Forecasting",
+        "units": [
+          { "id": "171.4.1", "name": "Forecast Input Capture" },
+          { "id": "171.4.2", "name": "Probability Review" },
+          { "id": "171.4.3", "name": "Forecast Summary" }
+        ]
+      },
+      {
+        "id": "171.5",
+        "name": "Pricing Operations",
+        "units": [
+          { "id": "171.5.1", "name": "Pricing Rule Capture" },
+          { "id": "171.5.2", "name": "Discount Boundary Review" },
+          { "id": "171.5.3", "name": "Pricing Operations Notes" }
+        ]
+      },
+      {
+        "id": "171.6",
+        "name": "Revenue Reporting",
+        "units": [
+          { "id": "171.6.1", "name": "Revenue Data Collection" },
+          { "id": "171.6.2", "name": "Report Accuracy Review" },
+          { "id": "171.6.3", "name": "Revenue Report Update" }
+        ]
+      },
+      {
+        "id": "171.7",
+        "name": "Sales Enablement Operations",
+        "units": [
+          { "id": "171.7.1", "name": "Enablement Need Capture" },
+          { "id": "171.7.2", "name": "Asset Fit Review" },
+          { "id": "171.7.3", "name": "Enablement Notes" }
+        ]
+      },
+      {
+        "id": "171.8",
+        "name": "Revenue Leakage Review",
+        "units": [
+          { "id": "171.8.1", "name": "Leakage Signal Detection" },
+          { "id": "171.8.2", "name": "Process Gap Review" },
+          { "id": "171.8.3", "name": "Leakage Reduction Notes" }
+        ]
+      },
+      {
+        "id": "171.9",
+        "name": "RevOps Governance",
+        "units": [
+          { "id": "171.9.1", "name": "Revenue Rule Definition" },
+          { "id": "171.9.2", "name": "Exception Review" },
+          { "id": "171.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "171.10",
+        "name": "Revenue Dashboard",
+        "units": [
+          { "id": "171.10.1", "name": "Revenue Signal Collection" },
+          { "id": "171.10.2", "name": "Forecast Status Summary" },
+          { "id": "171.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "172",
+    "name": "Customer Education Academy",
+    "departments": [
+      {
+        "id": "172.1",
+        "name": "Education Program Intake",
+        "units": [
+          { "id": "172.1.1", "name": "Learning Need Capture" },
+          { "id": "172.1.2", "name": "Customer Audience Review" },
+          { "id": "172.1.3", "name": "Education Intake Summary" }
+        ]
+      },
+      {
+        "id": "172.2",
+        "name": "Curriculum Path Design",
+        "units": [
+          { "id": "172.2.1", "name": "Learning Path Definition" },
+          { "id": "172.2.2", "name": "Module Sequence Review" },
+          { "id": "172.2.3", "name": "Curriculum Path Update" }
+        ]
+      },
+      {
+        "id": "172.3",
+        "name": "Customer Lesson Production",
+        "units": [
+          { "id": "172.3.1", "name": "Lesson Objective Capture" },
+          { "id": "172.3.2", "name": "Lesson Content Draft" },
+          { "id": "172.3.3", "name": "Lesson QA" }
+        ]
+      },
+      {
+        "id": "172.4",
+        "name": "Tutorial Asset Creation",
+        "units": [
+          { "id": "172.4.1", "name": "Tutorial Topic Selection" },
+          { "id": "172.4.2", "name": "Step Instruction Draft" },
+          { "id": "172.4.3", "name": "Tutorial Asset Review" }
+        ]
+      },
+      {
+        "id": "172.5",
+        "name": "Knowledge Check Design",
+        "units": [
+          { "id": "172.5.1", "name": "Checkpoint Criteria Capture" },
+          { "id": "172.5.2", "name": "Question Draft Review" },
+          { "id": "172.5.3", "name": "Knowledge Check Update" }
+        ]
+      },
+      {
+        "id": "172.6",
+        "name": "Education Delivery Operations",
+        "units": [
+          { "id": "172.6.1", "name": "Delivery Channel Selection" },
+          { "id": "172.6.2", "name": "Schedule And Access Review" },
+          { "id": "172.6.3", "name": "Delivery Plan Notes" }
+        ]
+      },
+      {
+        "id": "172.7",
+        "name": "Learner Progress Tracking",
+        "units": [
+          { "id": "172.7.1", "name": "Progress Signal Capture" },
+          { "id": "172.7.2", "name": "Completion Review" },
+          { "id": "172.7.3", "name": "Progress Record Update" }
+        ]
+      },
+      {
+        "id": "172.8",
+        "name": "Education Feedback Loop",
+        "units": [
+          { "id": "172.8.1", "name": "Feedback Signal Collection" },
+          { "id": "172.8.2", "name": "Learning Gap Review" },
+          { "id": "172.8.3", "name": "Feedback Action Notes" }
+        ]
+      },
+      {
+        "id": "172.9",
+        "name": "Education Governance",
+        "units": [
+          { "id": "172.9.1", "name": "Education Rule Definition" },
+          { "id": "172.9.2", "name": "Curriculum Exception Review" },
+          { "id": "172.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "172.10",
+        "name": "Education Dashboard",
+        "units": [
+          { "id": "172.10.1", "name": "Education Signal Collection" },
+          { "id": "172.10.2", "name": "Learner Status Summary" },
+          { "id": "172.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "173",
+    "name": "Workflow Certification Office",
+    "departments": [
+      {
+        "id": "173.1",
+        "name": "Certification Intake",
+        "units": [
+          { "id": "173.1.1", "name": "Certification Request Capture" },
+          { "id": "173.1.2", "name": "Workflow Candidate Review" },
+          { "id": "173.1.3", "name": "Certification Intake Summary" }
+        ]
+      },
+      {
+        "id": "173.2",
+        "name": "Certification Standard Design",
+        "units": [
+          { "id": "173.2.1", "name": "Standard Criteria Definition" },
+          { "id": "173.2.2", "name": "Evidence Requirement Mapping" },
+          { "id": "173.2.3", "name": "Standard Design Notes" }
+        ]
+      },
+      {
+        "id": "173.3",
+        "name": "Workflow Assessment",
+        "units": [
+          { "id": "173.3.1", "name": "Workflow Evidence Collection" },
+          { "id": "173.3.2", "name": "Standard Fit Review" },
+          { "id": "173.3.3", "name": "Assessment Finding Summary" }
+        ]
+      },
+      {
+        "id": "173.4",
+        "name": "Certification Testing",
+        "units": [
+          { "id": "173.4.1", "name": "Test Case Selection" },
+          { "id": "173.4.2", "name": "Workflow Test Review" },
+          { "id": "173.4.3", "name": "Certification Test Summary" }
+        ]
+      },
+      {
+        "id": "173.5",
+        "name": "Certification Decisioning",
+        "units": [
+          { "id": "173.5.1", "name": "Decision Criteria Review" },
+          { "id": "173.5.2", "name": "Certification Status Selection" },
+          { "id": "173.5.3", "name": "Decision Record Update" }
+        ]
+      },
+      {
+        "id": "173.6",
+        "name": "Renewal Review",
+        "units": [
+          { "id": "173.6.1", "name": "Renewal Trigger Detection" },
+          { "id": "173.6.2", "name": "Continued Fit Review" },
+          { "id": "173.6.3", "name": "Renewal Recommendation" }
+        ]
+      },
+      {
+        "id": "173.7",
+        "name": "Certification Registry",
+        "units": [
+          { "id": "173.7.1", "name": "Certified Workflow Capture" },
+          { "id": "173.7.2", "name": "Registry Metadata Review" },
+          { "id": "173.7.3", "name": "Registry Update" }
+        ]
+      },
+      {
+        "id": "173.8",
+        "name": "Nonconformance Handling",
+        "units": [
+          { "id": "173.8.1", "name": "Nonconformance Detection" },
+          { "id": "173.8.2", "name": "Correction Path Review" },
+          { "id": "173.8.3", "name": "Nonconformance Record" }
+        ]
+      },
+      {
+        "id": "173.9",
+        "name": "Certification Governance",
+        "units": [
+          { "id": "173.9.1", "name": "Certification Rule Definition" },
+          { "id": "173.9.2", "name": "Exception Review" },
+          { "id": "173.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "173.10",
+        "name": "Certification Dashboard",
+        "units": [
+          { "id": "173.10.1", "name": "Certification Signal Collection" },
+          { "id": "173.10.2", "name": "Workflow Status Summary" },
+          { "id": "173.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "174",
+    "name": "Agent Incident Court",
+    "departments": [
+      {
+        "id": "174.1",
+        "name": "Incident Case Intake",
+        "units": [
+          { "id": "174.1.1", "name": "Incident Claim Capture" },
+          { "id": "174.1.2", "name": "Case Scope Review" },
+          { "id": "174.1.3", "name": "Incident Case Summary" }
+        ]
+      },
+      {
+        "id": "174.2",
+        "name": "Evidence Docket",
+        "units": [
+          { "id": "174.2.1", "name": "Evidence Item Filing" },
+          { "id": "174.2.2", "name": "Docket Sequence Review" },
+          { "id": "174.2.3", "name": "Evidence Docket Update" }
+        ]
+      },
+      {
+        "id": "174.3",
+        "name": "Agent Testimony Review",
+        "units": [
+          { "id": "174.3.1", "name": "Agent Statement Capture" },
+          { "id": "174.3.2", "name": "Testimony Consistency Review" },
+          { "id": "174.3.3", "name": "Testimony Finding Notes" }
+        ]
+      },
+      {
+        "id": "174.4",
+        "name": "Incident Argument Mapping",
+        "units": [
+          { "id": "174.4.1", "name": "Claim Argument Capture" },
+          { "id": "174.4.2", "name": "Counterargument Review" },
+          { "id": "174.4.3", "name": "Argument Map Update" }
+        ]
+      },
+      {
+        "id": "174.5",
+        "name": "Responsibility Assessment",
+        "units": [
+          { "id": "174.5.1", "name": "Responsibility Candidate Review" },
+          { "id": "174.5.2", "name": "Causal Path Analysis" },
+          { "id": "174.5.3", "name": "Responsibility Finding" }
+        ]
+      },
+      {
+        "id": "174.6",
+        "name": "Remediation Order Drafting",
+        "units": [
+          { "id": "174.6.1", "name": "Remedy Requirement Capture" },
+          { "id": "174.6.2", "name": "Corrective Action Draft" },
+          { "id": "174.6.3", "name": "Remediation Order Notes" }
+        ]
+      },
+      {
+        "id": "174.7",
+        "name": "Appeals Review",
+        "units": [
+          { "id": "174.7.1", "name": "Appeal Request Capture" },
+          { "id": "174.7.2", "name": "Appeal Evidence Review" },
+          { "id": "174.7.3", "name": "Appeal Decision Notes" }
+        ]
+      },
+      {
+        "id": "174.8",
+        "name": "Precedent Management",
+        "units": [
+          { "id": "174.8.1", "name": "Precedent Case Capture" },
+          { "id": "174.8.2", "name": "Similarity Review" },
+          { "id": "174.8.3", "name": "Precedent Record Update" }
+        ]
+      },
+      {
+        "id": "174.9",
+        "name": "Incident Court Governance",
+        "units": [
+          { "id": "174.9.1", "name": "Court Rule Definition" },
+          { "id": "174.9.2", "name": "Exception Review" },
+          { "id": "174.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "174.10",
+        "name": "Incident Court Dashboard",
+        "units": [
+          { "id": "174.10.1", "name": "Incident Signal Collection" },
+          { "id": "174.10.2", "name": "Case Status Summary" },
+          { "id": "174.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  }
+]
