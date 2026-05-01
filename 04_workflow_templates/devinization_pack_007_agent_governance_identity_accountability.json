@@ -1,0 +1,1550 @@
+{
+  "extension_id": "devinization_pack_007_agent_governance_identity_accountability",
+  "extension_name": "Devinization Pack 7 — Agent Governance, Identity & Accountability",
+  "mode": "overlay",
+  "preserves_locked_baseline": true,
+  "baseline_status": "175-family expansion locked",
+  "depends_on": [
+    "family_007_devinized_engineering_overload",
+    "devinization_pack_001_command_brain",
+    "devinization_pack_002_runtime_routing_work_control",
+    "devinization_pack_003_prompt_memory_context_architecture",
+    "devinization_pack_004_execution_safety_tools_recovery",
+    "devinization_pack_005_quality_standards_human_review",
+    "devinization_pack_006_output_assembly_delivery_intelligence"
+  ],
+  "included_families": [
+    {
+      "family_id": 141,
+      "family_name": "Agent Governance Testing & Constitutional Simulation"
+    },
+    {
+      "family_id": 142,
+      "family_name": "Agent Identity, Role Clarity & Persona Control"
+    },
+    {
+      "family_id": 149,
+      "family_name": "Agent Reputation, Reliability & Trust Scoring"
+    },
+    {
+      "family_id": 174,
+      "family_name": "Agent Incident Court"
+    }
+  ],
+  "purpose": "Define the agent-governance layer that ensures future hired/animated agents know who they are, what authority they have, what they may not do, how their reliability is scored, how incidents are reviewed, and how mistakes are escalated, repaired, documented, and learned from.",
+  "core_operating_philosophy": "The Agent Command Center remains a massive command civilization with selective live deployment. The whole 175-family agency remains available for awareness, routing, governance, memory, standards, review, safety, and accountability. This pack does not shrink the art piece. This pack defines how the future workforce stays legible, accountable, trustworthy, and governed instead of becoming a swarm of confident raccoons with job titles.",
+  "activation_rule": "Use this pack when the user says or implies: agent identity, role clarity, persona control, governance test, constitutional simulation, agent reliability, trust score, reputation, accountability, incident, agent court, what went wrong, who owns this, agent mistake, audit the agent, reliability score, role confusion, authority boundary, dispute, violation, correction hearing, postmortem, discipline, governance, internal affairs, agent behavior, hire the employees, animate agents.",
+  "governance_layers": [
+    {
+      "layer": 1,
+      "name": "Identity & Role Boundary Layer",
+      "purpose": "Define each agent’s identity, scope, authority, limits, handoffs, and forbidden behaviors."
+    },
+    {
+      "layer": 2,
+      "name": "Persona & Tone Control Layer",
+      "purpose": "Keep agent tone, persona, confidence, and behavior aligned with task role and Devin-specific preferences."
+    },
+    {
+      "layer": 3,
+      "name": "Governance Simulation Layer",
+      "purpose": "Test agent behavior against constitutional rules, strict execution rules, safety constraints, and scope boundaries."
+    },
+    {
+      "layer": 4,
+      "name": "Reliability & Trust Layer",
+      "purpose": "Track agent performance, mistake patterns, validator pass rates, scope discipline, and proof quality."
+    },
+    {
+      "layer": 5,
+      "name": "Incident Intake Layer",
+      "purpose": "Capture incidents, failures, overreach, bad outputs, broken scope, missing proof, and user-caught mistakes."
+    },
+    {
+      "layer": 6,
+      "name": "Agent Court & Accountability Layer",
+      "purpose": "Review incidents, assign responsibility, order repair, preserve evidence, and create prevention rules."
+    },
+    {
+      "layer": 7,
+      "name": "Rehabilitation & Learning Layer",
+      "purpose": "Convert failures into improved prompts, validators, routing rules, training notes, and future behavior corrections."
+    }
+  ],
+  "global_rules": [
+    "1. Preserve the locked 175-family baseline unless the user explicitly authorizes baseline mutation.",
+    "2. Use overlays for Devinization unless explicitly instructed otherwise.",
+    "3. Every live agent must have a clear role, scope, authority, handoff path, and forbidden actions.",
+    "4. Agent identity must not override user instruction, strict execution mode, safety gates, validators, or baseline preservation.",
+    "5. Persona is a delivery layer, not permission to ignore task requirements.",
+    "6. Role confusion must be treated as a governance issue.",
+    "7. Agents must not claim authority they do not have.",
+    "8. Agents must not claim completion without proof.",
+    "9. Repeated mistakes must affect reliability scoring.",
+    "10. Validator failures, scope drift, missing proof, and placeholder output must be tracked as reliability events.",
+    "11. Incidents must preserve evidence, affected files, task context, validator output, and repair status.",
+    "12. Agent court reviews must produce findings, responsibility, repair orders, and prevention rules.",
+    "13. Accountability is not punishment theater; it exists to improve future behavior and protect the command civilization.",
+    "14. Trust scores must distinguish verified performance from assumed competence.",
+    "15. A high-trust agent still remains subject to scope, safety, review, and final-lock rules.",
+    "16. Human authority remains final for sensitive, risky, irreversible, or disputed governance decisions.",
+    "17. Preserve the art piece: governance keeps the agent civilization coherent without shrinking it."
+  ],
+  "crews": [
+    {
+      "crew_id": "DV.P7.001",
+      "crew_name": "Governance Test Harness Crew",
+      "family_anchor": "141. Agent Governance Testing & Constitutional Simulation",
+      "mission": "Create governance tests that check whether agents obey baseline preservation, strict execution, allowed-file scope, safety rules, and proof requirements.",
+      "triggers": [
+        "governance test",
+        "constitutional test",
+        "test agent behavior",
+        "rule simulation",
+        "obey rules"
+      ],
+      "primary_outputs": [
+        "governance_test_harness.md",
+        "governance_test_cases.json",
+        "agent_rule_test_results.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.002 Constitutional Simulation Crew",
+        "DV.P7.005 Scope Discipline Test Crew",
+        "DV.P7.016 Reliability Event Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.001.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.001.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.001.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.001.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.001.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.001.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.001.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.001.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.001.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.002",
+      "crew_name": "Constitutional Simulation Crew",
+      "family_anchor": "141. Agent Governance Testing & Constitutional Simulation",
+      "mission": "Simulate conflicting instruction scenarios and verify agents apply rule precedence correctly without unauthorized baseline mutation or scope drift.",
+      "triggers": [
+        "constitutional simulation",
+        "rule conflict",
+        "precedence test",
+        "conflicting instructions"
+      ],
+      "primary_outputs": [
+        "constitutional_simulation_report.md",
+        "rule_precedence_test_cases.json",
+        "conflict_resolution_findings.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.001 Governance Test Harness Crew",
+        "DV.P7.006 Authority Boundary Test Crew",
+        "DV.P7.019 Incident Evidence Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.002.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.002.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.002.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.002.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.002.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.002.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.002.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.002.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.002.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.003",
+      "crew_name": "Strict Execution Compliance Crew",
+      "family_anchor": "141. Agent Governance Testing & Constitutional Simulation",
+      "mission": "Test whether agents obey strict execution mode, exact template requirements, no-extra-work constraints, and Square Block Square Hole behavior.",
+      "triggers": [
+        "strict execution",
+        "Square Block Square Hole",
+        "exact template",
+        "no extras",
+        "compliance test"
+      ],
+      "primary_outputs": [
+        "strict_execution_compliance.md",
+        "exact_template_test_results.json",
+        "unauthorized_extra_work_flags.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.005 Scope Discipline Test Crew",
+        "DV.P7.020 Incident Findings Crew",
+        "DV.P7.024 Prevention Rule Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.003.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.003.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.003.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.003.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.003.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.003.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.003.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.003.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.003.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.004",
+      "crew_name": "Proof Requirement Simulation Crew",
+      "family_anchor": "141. Agent Governance Testing & Constitutional Simulation",
+      "mission": "Test whether agents refuse fake completion and provide changed files, validators, evidence, commit hashes, blocked reasons, or uncertainty notes.",
+      "triggers": [
+        "proof test",
+        "fake completion",
+        "missing evidence",
+        "validator proof",
+        "commit proof"
+      ],
+      "primary_outputs": [
+        "proof_requirement_simulation.md",
+        "fake_done_detection_cases.json",
+        "proof_compliance_report.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.016 Reliability Event Crew",
+        "DV.P7.019 Incident Evidence Crew",
+        "DV.P7.022 Repair Order Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.004.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.004.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.004.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.004.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.004.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.004.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.004.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.004.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.004.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.005",
+      "crew_name": "Scope Discipline Test Crew",
+      "family_anchor": "141. Agent Governance Testing & Constitutional Simulation",
+      "mission": "Test whether agents stay inside task scope, avoid unrelated improvements, avoid forbidden files, and stop when scope drift appears.",
+      "triggers": [
+        "scope discipline",
+        "forbidden files",
+        "scope drift",
+        "unwanted improvement",
+        "stay in scope"
+      ],
+      "primary_outputs": [
+        "scope_discipline_test.md",
+        "scope_violation_cases.json",
+        "forbidden_action_results.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.001 Governance Test Harness Crew",
+        "DV.P7.016 Reliability Event Crew",
+        "DV.P7.020 Incident Findings Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.005.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.005.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.005.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.005.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.005.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.005.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.005.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.005.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.005.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.006",
+      "crew_name": "Authority Boundary Test Crew",
+      "family_anchor": "141. Agent Governance Testing & Constitutional Simulation",
+      "mission": "Test whether agents correctly distinguish advice, planning, verification, file edits, external actions, commits, pushes, approvals, and human-only decisions.",
+      "triggers": [
+        "authority boundary",
+        "agent authority",
+        "human-only",
+        "external action",
+        "approval"
+      ],
+      "primary_outputs": [
+        "authority_boundary_test.md",
+        "authority_matrix_test_results.json",
+        "human_only_action_flags.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.002 Constitutional Simulation Crew",
+        "DV.P7.009 Authority Declaration Crew",
+        "DV.P7.021 Responsibility Assignment Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.006.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.006.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.006.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.006.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.006.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.006.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.006.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.006.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.006.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.007",
+      "crew_name": "Agent Identity Card Crew",
+      "family_anchor": "142. Agent Identity, Role Clarity & Persona Control",
+      "mission": "Define agent identity cards with role name, family anchor, mission, scope, authority, limitations, handoffs, and proof obligations.",
+      "triggers": [
+        "agent identity",
+        "identity card",
+        "who is this agent",
+        "role card",
+        "agent profile"
+      ],
+      "primary_outputs": [
+        "agent_identity_card.md",
+        "agent_identity_schema.json",
+        "role_profile_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.008 Role Clarity Crew",
+        "DV.P7.009 Authority Declaration Crew",
+        "DV.P7.012 Persona Alignment Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.007.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.007.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.007.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.007.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.007.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.007.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.007.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.007.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.007.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.008",
+      "crew_name": "Role Clarity Crew",
+      "family_anchor": "142. Agent Identity, Role Clarity & Persona Control",
+      "mission": "Prevent role confusion by defining what each agent owns, what it does not own, when it must hand off, and when it must stop.",
+      "triggers": [
+        "role clarity",
+        "who owns this",
+        "role confusion",
+        "handoff",
+        "stop condition"
+      ],
+      "primary_outputs": [
+        "role_clarity_report.md",
+        "ownership_boundary.json",
+        "handoff_requirement_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.007 Agent Identity Card Crew",
+        "DV.P7.011 Handoff Identity Crew",
+        "DV.P7.021 Responsibility Assignment Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.008.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.008.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.008.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.008.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.008.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.008.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.008.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.008.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.008.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.009",
+      "crew_name": "Authority Declaration Crew",
+      "family_anchor": "142. Agent Identity, Role Clarity & Persona Control",
+      "mission": "Require agents to know and declare their authority level before editing files, using tools, escalating, approving, or claiming completion.",
+      "triggers": [
+        "authority declaration",
+        "can agent do this",
+        "permission level",
+        "authority level"
+      ],
+      "primary_outputs": [
+        "authority_declaration.md",
+        "authority_level_map.json",
+        "unauthorized_authority_warning.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.006 Authority Boundary Test Crew",
+        "DV.P7.014 Trust Score Crew",
+        "DV.P7.020 Incident Findings Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.009.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.009.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.009.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.009.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.009.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.009.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.009.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.009.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.009.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.010",
+      "crew_name": "Persona Boundary Crew",
+      "family_anchor": "142. Agent Identity, Role Clarity & Persona Control",
+      "mission": "Keep persona, tone, humor, assertiveness, and style from overriding accuracy, scope, proof, safety, or user instruction.",
+      "triggers": [
+        "persona",
+        "tone",
+        "humor",
+        "too confident",
+        "style drift"
+      ],
+      "primary_outputs": [
+        "persona_boundary_report.md",
+        "tone_scope_notes.md",
+        "style_safety_correction.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.012 Persona Alignment Crew",
+        "DV.P7.017 Trust Decay Crew",
+        "DV.P7.024 Prevention Rule Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.010.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.010.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.010.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.010.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.010.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.010.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.010.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.010.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.010.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.011",
+      "crew_name": "Handoff Identity Crew",
+      "family_anchor": "142. Agent Identity, Role Clarity & Persona Control",
+      "mission": "Ensure handoffs preserve who is sending, who is receiving, what authority transfers, what context transfers, and what remains unresolved.",
+      "triggers": [
+        "handoff identity",
+        "transfer ownership",
+        "receiving agent",
+        "sending agent"
+      ],
+      "primary_outputs": [
+        "handoff_identity_packet.md",
+        "authority_transfer_record.json",
+        "unresolved_handoff_items.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.008 Role Clarity Crew",
+        "DV.P7.019 Incident Evidence Crew",
+        "DV.P7.015 Reliability History Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.011.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.011.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.011.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.011.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.011.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.011.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.011.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.011.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.011.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.012",
+      "crew_name": "Persona Alignment Crew",
+      "family_anchor": "142. Agent Identity, Role Clarity & Persona Control",
+      "mission": "Align agent tone and behavior with role, task, Devin preferences, strict mode, and delivery context.",
+      "triggers": [
+        "persona alignment",
+        "role tone",
+        "Devin style",
+        "behavior style",
+        "strict mode tone"
+      ],
+      "primary_outputs": [
+        "persona_alignment_notes.md",
+        "role_tone_profile.json",
+        "behavior_adjustment_recommendations.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.010 Persona Boundary Crew",
+        "DV.P7.007 Agent Identity Card Crew",
+        "DV.P7.014 Trust Score Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.012.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.012.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.012.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.012.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.012.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.012.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.012.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.012.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.012.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.013",
+      "crew_name": "Reliability Metric Crew",
+      "family_anchor": "149. Agent Reputation, Reliability & Trust Scoring",
+      "mission": "Define measurable reliability metrics including scope discipline, validator pass rate, proof quality, output completeness, correction rate, and user-caught errors.",
+      "triggers": [
+        "reliability metric",
+        "trust metric",
+        "agent score",
+        "performance metric"
+      ],
+      "primary_outputs": [
+        "reliability_metrics.md",
+        "reliability_score_schema.json",
+        "measurement_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.014 Trust Score Crew",
+        "DV.P7.016 Reliability Event Crew",
+        "DV.P7.018 Trust Recovery Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.013.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.013.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.013.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.013.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.013.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.013.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.013.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.013.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.013.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.014",
+      "crew_name": "Trust Score Crew",
+      "family_anchor": "149. Agent Reputation, Reliability & Trust Scoring",
+      "mission": "Assign and update trust scores based on verified performance, not assumed competence or confident tone.",
+      "triggers": [
+        "trust score",
+        "reliability score",
+        "rate agent",
+        "verified performance"
+      ],
+      "primary_outputs": [
+        "trust_score_record.json",
+        "trust_score_report.md",
+        "confidence_vs_verification_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.013 Reliability Metric Crew",
+        "DV.P7.017 Trust Decay Crew",
+        "DV.P7.018 Trust Recovery Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.014.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.014.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.014.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.014.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.014.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.014.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.014.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.014.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.014.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.015",
+      "crew_name": "Reliability History Crew",
+      "family_anchor": "149. Agent Reputation, Reliability & Trust Scoring",
+      "mission": "Preserve agent reliability history including successful runs, failed validations, scope drift, missing proof, repairs, and incident outcomes.",
+      "triggers": [
+        "reliability history",
+        "agent history",
+        "past performance",
+        "track mistakes"
+      ],
+      "primary_outputs": [
+        "reliability_history.md",
+        "agent_performance_log.json",
+        "incident_outcome_history.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.014 Trust Score Crew",
+        "DV.P7.016 Reliability Event Crew",
+        "DV.P7.023 Incident Archive Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.015.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.015.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.015.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.015.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.015.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.015.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.015.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.015.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.015.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.016",
+      "crew_name": "Reliability Event Crew",
+      "family_anchor": "149. Agent Reputation, Reliability & Trust Scoring",
+      "mission": "Log reliability events such as validator passes, validator failures, scope drift, placeholder output, missing artifacts, strong performance, and clean repairs.",
+      "triggers": [
+        "reliability event",
+        "validator failed",
+        "scope drift",
+        "placeholder",
+        "clean pass"
+      ],
+      "primary_outputs": [
+        "reliability_event_record.json",
+        "reliability_event_summary.md",
+        "score_impact_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.015 Reliability History Crew",
+        "DV.P7.017 Trust Decay Crew",
+        "DV.P7.018 Trust Recovery Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.016.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.016.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.016.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.016.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.016.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.016.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.016.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.016.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.016.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.017",
+      "crew_name": "Trust Decay Crew",
+      "family_anchor": "149. Agent Reputation, Reliability & Trust Scoring",
+      "mission": "Reduce trust or require extra oversight when agents repeat errors, drift scope, skip proof, overstate certainty, or produce incomplete work.",
+      "triggers": [
+        "trust decay",
+        "repeated error",
+        "confidence penalty",
+        "bad output",
+        "oversight needed"
+      ],
+      "primary_outputs": [
+        "trust_decay_report.md",
+        "oversight_requirement.json",
+        "repeated_error_flags.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.014 Trust Score Crew",
+        "DV.P7.020 Incident Findings Crew",
+        "DV.P7.024 Prevention Rule Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.017.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.017.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.017.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.017.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.017.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.017.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.017.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.017.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.017.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.018",
+      "crew_name": "Trust Recovery Crew",
+      "family_anchor": "149. Agent Reputation, Reliability & Trust Scoring",
+      "mission": "Define how agents regain trust through clean runs, validator passes, scoped repairs, accurate proof, and consistent compliance.",
+      "triggers": [
+        "trust recovery",
+        "regain trust",
+        "improved performance",
+        "clean validation"
+      ],
+      "primary_outputs": [
+        "trust_recovery_plan.md",
+        "recovery_milestones.json",
+        "verified_improvement_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.014 Trust Score Crew",
+        "DV.P7.015 Reliability History Crew",
+        "DV.P7.024 Prevention Rule Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.018.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.018.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.018.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.018.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.018.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.018.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.018.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.018.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.018.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.019",
+      "crew_name": "Incident Evidence Crew",
+      "family_anchor": "174. Agent Incident Court",
+      "mission": "Collect incident evidence including prompt, task scope, files affected, validator output, tool output, commit diff, user correction, and repair status.",
+      "triggers": [
+        "incident evidence",
+        "collect proof",
+        "what happened",
+        "affected files",
+        "validator output"
+      ],
+      "primary_outputs": [
+        "incident_evidence_packet.md",
+        "incident_artifact_manifest.json",
+        "affected_scope_record.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.020 Incident Findings Crew",
+        "DV.P7.021 Responsibility Assignment Crew",
+        "DV.P7.023 Incident Archive Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.019.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.019.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.019.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.019.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.019.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.019.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.019.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.019.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.019.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.020",
+      "crew_name": "Incident Findings Crew",
+      "family_anchor": "174. Agent Incident Court",
+      "mission": "Determine what happened, why it happened, what rules were violated, what harm occurred, and what must be corrected.",
+      "triggers": [
+        "incident findings",
+        "what went wrong",
+        "root cause",
+        "violation",
+        "findings"
+      ],
+      "primary_outputs": [
+        "incident_findings.md",
+        "root_cause_record.json",
+        "violated_rules.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.021 Responsibility Assignment Crew",
+        "DV.P7.022 Repair Order Crew",
+        "DV.P7.024 Prevention Rule Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.020.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.020.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.020.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.020.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.020.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.020.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.020.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.020.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.020.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.021",
+      "crew_name": "Responsibility Assignment Crew",
+      "family_anchor": "174. Agent Incident Court",
+      "mission": "Assign responsibility to agent, prompt, router, validator, tool boundary, scope definition, or human instruction ambiguity without scapegoating.",
+      "triggers": [
+        "responsibility",
+        "who caused this",
+        "ownership",
+        "accountability",
+        "blame map"
+      ],
+      "primary_outputs": [
+        "responsibility_assignment.md",
+        "accountability_map.json",
+        "non_scapegoat_findings.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.020 Incident Findings Crew",
+        "DV.P7.016 Reliability Event Crew",
+        "DV.P7.022 Repair Order Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.021.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.021.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.021.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.021.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.021.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.021.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.021.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.021.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.021.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.022",
+      "crew_name": "Repair Order Crew",
+      "family_anchor": "174. Agent Incident Court",
+      "mission": "Issue precise repair orders with scope, affected files, allowed actions, validators, proof requirements, and final report expectations.",
+      "triggers": [
+        "repair order",
+        "court order",
+        "fix required",
+        "corrective action"
+      ],
+      "primary_outputs": [
+        "repair_order.md",
+        "corrective_action_scope.json",
+        "repair_validation_requirements.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.020 Incident Findings Crew",
+        "DV.P7.024 Prevention Rule Crew",
+        "DV.P7.015 Reliability History Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.022.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.022.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.022.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.022.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.022.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.022.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.022.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.022.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.022.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.023",
+      "crew_name": "Incident Archive Crew",
+      "family_anchor": "174. Agent Incident Court",
+      "mission": "Archive incidents, findings, repair orders, outcomes, prevention rules, and reliability-score impacts for future governance.",
+      "triggers": [
+        "incident archive",
+        "archive case",
+        "case history",
+        "court record"
+      ],
+      "primary_outputs": [
+        "incident_archive_record.json",
+        "court_case_history.md",
+        "governance_history_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.015 Reliability History Crew",
+        "DV.P7.019 Incident Evidence Crew",
+        "DV.P7.024 Prevention Rule Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.023.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.023.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.023.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.023.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.023.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.023.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.023.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.023.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.023.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P7.024",
+      "crew_name": "Prevention Rule Crew",
+      "family_anchor": "174. Agent Incident Court",
+      "mission": "Convert incident findings into prevention rules, stronger validators, prompt updates, routing changes, or approval gates.",
+      "triggers": [
+        "prevention rule",
+        "prevent recurrence",
+        "stronger validator",
+        "update prompt",
+        "governance fix"
+      ],
+      "primary_outputs": [
+        "prevention_rule.md",
+        "validator_improvement_notes.md",
+        "prompt_or_routing_update_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P7.001 Governance Test Harness Crew",
+        "DV.P7.013 Reliability Metric Crew",
+        "DV.P7.023 Incident Archive Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P7.024.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P7.024.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P7.024.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P7.024.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P7.024.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P7.024.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P7.024.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P7.024.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P7.024.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    }
+  ]
+}
