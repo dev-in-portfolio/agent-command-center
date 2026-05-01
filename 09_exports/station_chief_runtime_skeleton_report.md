@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v0.7.0. Locked 175-family baseline preserved.
+Station Chief Runtime upgraded to v0.8.0. Locked 175-family baseline preserved.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -9,7 +9,7 @@ Project owner, system architect, and operating-doctrine author: Devin O’Rourke
 This attribution applies to the Agent Command Center Station Chief runtime skeleton. The locked 175-family baseline remains preserved.
 
 ## Purpose
-This report documents the first runnable Station Chief runtime skeleton after the Devinization stack lock and its v0.7.0 enhancement for dry-run bundle comparison and approval UX handoff packets.
+This report documents the first runnable Station Chief runtime skeleton after the Devinization stack lock and its v0.8.0 enhancement for approval handoff review UI schema and signed approval records.
 
 ## Files Created / Modified
 - 10_runtime/station_chief_runtime.py
@@ -19,6 +19,7 @@ This report documents the first runnable Station Chief runtime skeleton after th
 - 10_runtime/station_chief_adapters.py
 - 10_runtime/station_chief_execution_profiles.py
 - 10_runtime/station_chief_approval_handoff.py
+- 10_runtime/station_chief_approval_records.py
 - 09_exports/station_chief_runtime_skeleton_report.md
 - 09_exports/station_chief_runtime_v0_2_report.md
 - 09_exports/station_chief_runtime_v0_3_report.md
@@ -26,6 +27,7 @@ This report documents the first runnable Station Chief runtime skeleton after th
 - 09_exports/station_chief_runtime_v0_5_report.md
 - 09_exports/station_chief_runtime_v0_6_report.md
 - 09_exports/station_chief_runtime_v0_7_report.md
+- 09_exports/station_chief_runtime_v0_8_report.md
 - scripts/validate_station_chief_runtime_skeleton.py
 - scripts/validate_station_chief_runtime_v0_2.py
 - scripts/validate_station_chief_runtime_v0_3.py
@@ -33,6 +35,7 @@ This report documents the first runnable Station Chief runtime skeleton after th
 - scripts/validate_station_chief_runtime_v0_5.py
 - scripts/validate_station_chief_runtime_v0_6.py
 - scripts/validate_station_chief_runtime_v0_7.py
+- scripts/validate_station_chief_runtime_v0_8.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -64,6 +67,10 @@ This report documents the first runnable Station Chief runtime skeleton after th
 - human approval summaries
 - risk summary artifacts
 - next-action recommendations
+- approval review UI schema
+- deterministic signed approval records
+- approval record verification
+- approval audit manifests
 - deterministic fixture tests
 - proof-backed JSON output
 - baseline preservation
@@ -96,6 +103,7 @@ This report documents the first runnable Station Chief runtime skeleton after th
 - Tier 4 — Audit / Archive
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v0_8.py
 python3 scripts/validate_station_chief_runtime_v0_7.py
 python3 scripts/validate_station_chief_runtime_v0_6.py
 python3 scripts/validate_station_chief_runtime_v0_5.py
@@ -119,9 +127,10 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not modify the 175-family baseline
 - Does not hire or animate worker agents yet
 - Does not execute uncontrolled repo work orders
+- Does not treat signed approval records as automatic execution permission
 - Does not build UI yet
 - Does not connect live APIs yet
 - Does not authorize uncontrolled live execution
 
 ## Next Recommended Build Step
-Next recommended build step: add approval handoff review UI schema and signed approval records.
+Next recommended build step: add approval ledger indexing and signed approval comparison.

@@ -1,10 +1,10 @@
 # Station Chief Runtime Skeleton
 
 ## Status
-Station Chief Runtime upgraded to v0.7.0. Locked 175-family baseline preserved.
+Station Chief Runtime upgraded to v0.8.0. Locked 175-family baseline preserved.
 
 ## Purpose
-The Station Chief runtime receives one command, classifies it, loads the locked Devinization overlay stack, selects an activation tier, creates a command brief, creates non-executing work orders, optionally writes runtime artifacts, optionally updates a persistent run registry, supports resume-by-run-id lookup, supports controlled no-op adapter simulation, supports human-confirmed sandbox file-operation gates, supports human-approved scoped repo patch planning with changed-file scope enforcement, supports validator-selected execution profiles with repo patch dry-run bundles, and supports approval UX handoff packets with dry-run bundle comparison.
+The Station Chief runtime receives one command, classifies it, loads the locked Devinization overlay stack, selects an activation tier, creates a command brief, creates non-executing work orders, optionally writes runtime artifacts, optionally updates a persistent run registry, supports resume-by-run-id lookup, supports controlled no-op adapter simulation, supports human-confirmed sandbox file-operation gates, supports human-approved scoped repo patch planning with changed-file scope enforcement, supports validator-selected execution profiles with repo patch dry-run bundles, supports approval UX handoff packets with dry-run bundle comparison, and supports signed approval records that document human review without executing patches.
 
 ## What This Does
 - Loads Family 7 and Devinization Packs 1 through 7
@@ -33,6 +33,10 @@ The Station Chief runtime receives one command, classifies it, loads the locked 
 - Supports human approval summaries
 - Supports risk summary artifacts
 - Supports next-action recommendations
+- Supports approval review UI schema
+- Supports deterministic signed approval records
+- Supports approval record verification
+- Supports approval audit manifests
 - Blocks unsafe, unconfirmed, non-allowlisted, or forbidden repo patch operations
 - Runs deterministic fixture tests
 - Supports check please, blueberry pancakes, Square Block Square Hole, Speed Racer, build, route, repair, governance, and final output command types
@@ -44,6 +48,7 @@ The Station Chief runtime receives one command, classifies it, loads the locked 
 - Does not animate all 47,250 worker agents
 - Does not execute uncontrolled repo work orders
 - Does not write to protected baseline or overlay paths
+- Does not treat signed approval records as automatic execution permission
 - Does not build UI yet
 - Does not claim production readiness
 
@@ -55,14 +60,13 @@ python3 10_runtime/station_chief_runtime.py --command "build Station Chief runti
 python3 10_runtime/station_chief_runtime.py --list-overlays
 python3 10_runtime/station_chief_runtime.py --list-adapters
 python3 10_runtime/station_chief_runtime.py --list-execution-profiles
-python3 10_runtime/station_chief_runtime.py --command "check please" --dry-run-bundle
+python3 10_runtime/station_chief_runtime.py --approval-review-ui-schema
 python3 10_runtime/station_chief_runtime.py --command "check please" --approval-handoff
-python3 10_runtime/station_chief_runtime.py --command "check please" --plan-repo-patch --patch-root /tmp/station_chief_patch_root --allowed-patch-file runtime_patch_preview/station_chief_patch_output.txt --dry-run-bundle
-python3 10_runtime/station_chief_runtime.py --command "check please" --plan-repo-patch --patch-root /tmp/station_chief_patch_root --allowed-patch-file runtime_patch_preview/station_chief_patch_output.txt --write-dry-run-bundle /tmp/station_chief_dry_runs
-python3 10_runtime/station_chief_runtime.py --compare-dry-run-bundles before.json after.json
-python3 10_runtime/station_chief_runtime.py --command "check please" --compare-against-dry-run-bundle before.json --approval-handoff
-python3 10_runtime/station_chief_runtime.py --command "check please" --plan-repo-patch --patch-root /tmp/station_chief_patch_root --allowed-patch-file runtime_patch_preview/station_chief_patch_output.txt --write-approval-handoff /tmp/station_chief_handoffs
-python3 10_runtime/station_chief_runtime.py --command "check please" --execute-repo-patch --patch-root /tmp/station_chief_patch_root --allowed-patch-file runtime_patch_preview/station_chief_patch_output.txt --confirm-patch YES_I_APPROVE_SCOPED_REPO_PATCH
+python3 10_runtime/station_chief_runtime.py --command "check please" --plan-repo-patch --patch-root /tmp/station_chief_patch_root --allowed-patch-file runtime_patch_preview/station_chief_patch_output.txt --approval-handoff
+python3 10_runtime/station_chief_runtime.py --command "check please" --plan-repo-patch --patch-root /tmp/station_chief_patch_root --allowed-patch-file runtime_patch_preview/station_chief_patch_output.txt --sign-approval-record --approval-reviewer "Devin O’Rourke" --approval-decision approve --approval-record-token YES_I_APPROVE_APPROVAL_HANDOFF_RECORD --patch-preview-reviewed --changed-file-scope-reviewed --baseline-protection-reviewed --risk-summary-reviewed
+python3 10_runtime/station_chief_runtime.py --command "check please" --plan-repo-patch --patch-root /tmp/station_chief_patch_root --allowed-patch-file runtime_patch_preview/station_chief_patch_output.txt --sign-approval-record --approval-reviewer "Devin O’Rourke" --approval-decision needs_changes --approval-note "Revise before approval."
+python3 10_runtime/station_chief_runtime.py --command "check please" --plan-repo-patch --patch-root /tmp/station_chief_patch_root --allowed-patch-file runtime_patch_preview/station_chief_patch_output.txt --write-approval-record /tmp/station_chief_approval_records --approval-reviewer "Devin O’Rourke" --approval-decision approve --approval-record-token YES_I_APPROVE_APPROVAL_HANDOFF_RECORD --patch-preview-reviewed --changed-file-scope-reviewed --baseline-protection-reviewed --risk-summary-reviewed
+python3 10_runtime/station_chief_runtime.py --verify-approval-record approval_handoff_packet.json signed_approval_record.json
 python3 10_runtime/station_chief_runtime.py --command "check please" --write-artifacts /tmp/station_chief_runs --registry-dir /tmp/station_chief_registry
 python3 10_runtime/station_chief_runtime.py --resume-run-id RUN_ID --registry-dir /tmp/station_chief_registry
 python3 10_runtime/station_chief_runtime.py --fixture-test
@@ -92,6 +96,10 @@ When `--write-artifacts` is used, the runtime creates a deterministic run direct
 - dry_run_bundle.json
 - dry_run_bundle_comparison.json
 - approval_handoff_packet.json
+- approval_review_ui_schema.json
+- signed_approval_record.json
+- approval_record_verification.json
+- approval_record_audit_manifest.json
 - runtime_index_entry.json
 - manifest.json
 - full_result.json
@@ -114,24 +122,23 @@ When `--write-approval-handoff` is used, the runtime creates:
 - patch_preview.diff
 - approval_handoff_manifest.json
 
+When `--write-approval-record` is used, the runtime creates:
+- approval_review_ui_schema.json
+- approval_handoff_packet.json
+- signed_approval_record.json
+- approval_record_verification.json
+- approval_record_audit_manifest.json
+- approval_record_manifest.json
+
 When `--registry-dir` is used with `--write-artifacts`, the runtime also writes:
 - run_registry.json
 - runtime_index.json
 
-## Approval Handoff
-Runtime v0.7.0 adds approval UX handoff packets. These packets summarize dry-run readiness, repo patch risk, human approval requirements, patch preview content, comparison status, and next recommended actions before any confirmed scoped repo patch execution.
-
-## Execution Profiles
-Runtime v0.7.0 includes execution profiles:
-- audit_only
-- dry_run_patch
-- sandbox_write
-- scoped_repo_patch
-
-Execution profiles help the validator and runtime choose safer behavior before any human-approved execution step.
+## Signed Approval Records
+Runtime v0.8.0 adds deterministic signed approval records. These records document human review of an approval handoff packet and include a local deterministic audit hash. They do not execute repo patches by themselves and are not legal digital signatures.
 
 ## Runtime Doctrine
-The Station Chief runtime keeps the full 175-family command civilization intact while activating only the logic needed for a specific task. Runtime v0.7.0 proves command intake, classification, overlay loading, activation-tier selection, command-brief creation, deterministic artifact output, run registry tracking, resume lookup, controlled no-op adapter behavior, human-confirmed sandbox file-operation gates, human-approved scoped repo patch planning, validator-selected execution profiles, repo patch dry-run bundles, dry-run bundle comparison, and approval UX handoff packets without waking the full workforce as live execution.
+The Station Chief runtime keeps the full 175-family command civilization intact while activating only the logic needed for a specific task. Runtime v0.8.0 proves command intake, classification, overlay loading, activation-tier selection, command-brief creation, deterministic artifact output, run registry tracking, resume lookup, controlled no-op adapter behavior, human-confirmed sandbox file-operation gates, human-approved scoped repo patch planning, validator-selected execution profiles, repo patch dry-run bundles, dry-run bundle comparison, approval UX handoff packets, approval review UI schema, and signed approval records without waking the full workforce as live execution.
 
 ## Next Recommended Step
-Next recommended step: add approval handoff review UI schema and signed approval records.
+Next recommended step: add approval ledger indexing and signed approval comparison.

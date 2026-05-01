@@ -26,6 +26,13 @@ from station_chief_approval_handoff import (
     compare_dry_run_bundles,
     create_approval_handoff_packet,
 )
+from station_chief_approval_records import (
+    APPROVAL_RECORD_CONFIRMATION_TOKEN,
+    create_approval_record_audit_manifest,
+    create_approval_review_ui_schema,
+    create_signed_approval_record,
+    verify_signed_approval_record,
+)
 from station_chief_execution_profiles import (
     create_dry_run_bundle,
     create_execution_readiness_score,
@@ -35,7 +42,7 @@ from station_chief_execution_profiles import (
     select_execution_profile,
 )
 
-STATION_CHIEF_RUNTIME_VERSION = "0.7.0"
+STATION_CHIEF_RUNTIME_VERSION = "0.8.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -241,7 +248,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}|{run_label}|{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v0-7-{normalized}-{digest[:12]}"
+    return f"station-chief-v0-8-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -352,7 +359,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "0.7.0",
+            "registry_version": "0.8.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -369,7 +376,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "0.7.0"
+    registry["registry_version"] = "0.8.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -378,7 +385,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "0.7.0",
+        "index_version": "0.8.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -460,6 +467,10 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "risk_summary_artifacts": True,
             "next_action_recommendations": True,
             "approval_handoff_available": True,
+            "approval_review_ui_schema": True,
+            "signed_approval_records": True,
+            "approval_record_verification": True,
+            "approval_audit_manifests": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -486,6 +497,10 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
         "dry_run_bundle": None,
         "dry_run_bundle_comparison": None,
         "approval_handoff_packet": None,
+        "approval_review_ui_schema": None,
+        "signed_approval_record": None,
+        "approval_record_verification": None,
+        "approval_record_audit_manifest": None,
         "evidence": {
             "baseline_preserved": True,
             "external_actions_taken": False,
@@ -497,8 +512,10 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "changed_file_scope_enforced": True,
             "dry_run_bundle_available": True,
             "approval_handoff_available": True,
+            "signed_approval_record_available": True,
+            "signed_approval_record_does_not_execute_patch": True,
         },
-        "next_step": "Next step: add approval handoff review UI schema and signed approval records.",
+        "next_step": "Next step: add approval ledger indexing and signed approval comparison.",
     }
 
 
@@ -522,6 +539,10 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
     dry_run_bundle = result.get("dry_run_bundle")
     dry_run_bundle_comparison = result.get("dry_run_bundle_comparison")
     approval_handoff_packet = result.get("approval_handoff_packet")
+    approval_review_ui_schema = result.get("approval_review_ui_schema")
+    signed_approval_record = result.get("signed_approval_record")
+    approval_record_verification = result.get("approval_record_verification")
+    approval_record_audit_manifest = result.get("approval_record_audit_manifest")
     selected_records = [
         item
         for item in result["overlay_stack_summary"]
@@ -567,11 +588,15 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "dry_run_bundle": dry_run_bundle,
         "dry_run_bundle_comparison": dry_run_bundle_comparison,
         "approval_handoff_packet": approval_handoff_packet,
+        "approval_review_ui_schema": approval_review_ui_schema,
+        "signed_approval_record": signed_approval_record,
+        "approval_record_verification": approval_record_verification,
+        "approval_record_audit_manifest": approval_record_audit_manifest,
         "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v0_7_artifacts",
+            "artifact_type": "station_chief_runtime_v0_8_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -594,6 +619,10 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "dry_run_bundle.json",
                 "dry_run_bundle_comparison.json",
                 "approval_handoff_packet.json",
+                "approval_review_ui_schema.json",
+                "signed_approval_record.json",
+                "approval_record_verification.json",
+                "approval_record_audit_manifest.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -616,6 +645,11 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "approval_ux_handoff": True,
             "risk_summary_artifacts": True,
             "next_action_recommendations": True,
+            "approval_review_ui_schema": True,
+            "signed_approval_records": True,
+            "approval_record_verification": True,
+            "approval_audit_manifests": True,
+            "signed_approval_record_does_not_execute_patch": True,
         },
     }
 
@@ -662,6 +696,10 @@ def write_runtime_artifacts(
         "dry_run_bundle.json": artifacts["dry_run_bundle"],
         "dry_run_bundle_comparison.json": artifacts["dry_run_bundle_comparison"],
         "approval_handoff_packet.json": artifacts["approval_handoff_packet"],
+        "approval_review_ui_schema.json": artifacts["approval_review_ui_schema"],
+        "signed_approval_record.json": artifacts["signed_approval_record"],
+        "approval_record_verification.json": artifacts["approval_record_verification"],
+        "approval_record_audit_manifest.json": artifacts["approval_record_audit_manifest"],
         "runtime_index_entry.json": artifacts["runtime_index_entry"],
         "manifest.json": artifacts["manifest"],
         "full_result.json": result,
@@ -871,7 +909,7 @@ def write_dry_run_bundle(
         "execution_readiness_score.json": result.get("execution_readiness_score"),
         "repo_patch_preview.diff": dry_run_bundle.get("repo_patch_preview") or "",
         "dry_run_manifest.json": {
-            "dry_run_bundle_version": "0.7.0",
+            "dry_run_bundle_version": "0.8.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -927,7 +965,7 @@ def write_approval_handoff(
         "dry_run_bundle_comparison.json": packet.get("comparison"),
         "patch_preview.diff": (packet.get("dry_run_bundle") or {}).get("repo_patch_preview") or "",
         "approval_handoff_manifest.json": {
-            "approval_handoff_version": "0.7.0",
+            "approval_handoff_version": "0.8.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -959,6 +997,105 @@ def write_approval_handoff(
     }
 
 
+def attach_signed_approval_record(
+    result: dict,
+    reviewer_name: str,
+    approval_decision: str,
+    approval_note: str | None = None,
+    approval_record_token: str | None = None,
+    patch_preview_reviewed: bool = False,
+    changed_file_scope_reviewed: bool = False,
+    baseline_protection_reviewed: bool = False,
+    risk_summary_reviewed: bool = False,
+) -> dict:
+    updated = dict(result)
+    if updated.get("dry_run_bundle") is None:
+        updated = attach_execution_profile_and_dry_run(
+            updated,
+            requested_profile=updated.get("requested_execution_profile"),
+            include_dry_run_bundle=True,
+        )
+    if updated.get("approval_handoff_packet") is None:
+        updated = attach_approval_handoff(updated, include_handoff=True)
+    updated["approval_review_ui_schema"] = create_approval_review_ui_schema()
+    signed_approval_record = create_signed_approval_record(
+        updated["approval_handoff_packet"],
+        reviewer_name,
+        approval_decision,
+        approval_note=approval_note,
+        confirmation_token=approval_record_token,
+        patch_preview_reviewed=patch_preview_reviewed,
+        changed_file_scope_reviewed=changed_file_scope_reviewed,
+        baseline_protection_reviewed=baseline_protection_reviewed,
+        risk_summary_reviewed=risk_summary_reviewed,
+    )
+    approval_record_verification = verify_signed_approval_record(
+        updated["approval_handoff_packet"],
+        signed_approval_record,
+    )
+    approval_record_audit_manifest = create_approval_record_audit_manifest(
+        updated["approval_handoff_packet"],
+        signed_approval_record,
+        approval_record_verification,
+    )
+    updated["signed_approval_record"] = signed_approval_record
+    updated["approval_record_verification"] = approval_record_verification
+    updated["approval_record_audit_manifest"] = approval_record_audit_manifest
+    return updated
+
+
+def write_approval_record(
+    result: dict,
+    output_dir: str | Path,
+    run_label: str = "station-chief-runtime",
+) -> dict:
+    if "signed_approval_record" not in result or result["signed_approval_record"] is None:
+        raise ValueError("write_approval_record requires signed_approval_record to be attached first")
+
+    output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
+    run_id = generate_run_id(result["command"], run_label=run_label)
+    record_dir = output_path / run_id
+    record_dir.mkdir(parents=True, exist_ok=True)
+
+    files_written = []
+    approval_record_manifest = {
+        "approval_record_manifest_version": "0.8.0",
+        "run_id": run_id,
+        "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
+        "files_written": [
+            "approval_review_ui_schema.json",
+            "approval_handoff_packet.json",
+            "signed_approval_record.json",
+            "approval_record_verification.json",
+            "approval_record_audit_manifest.json",
+            "approval_record_manifest.json",
+        ],
+        "baseline_preserved": True,
+        "external_actions_taken": False,
+        "live_worker_agents_activated": False,
+        "execution_authorized": False,
+        "note": "Signed approval records do not execute repo patches by themselves.",
+    }
+    payloads = {
+        "approval_review_ui_schema.json": result.get("approval_review_ui_schema"),
+        "approval_handoff_packet.json": result.get("approval_handoff_packet"),
+        "signed_approval_record.json": result.get("signed_approval_record"),
+        "approval_record_verification.json": result.get("approval_record_verification"),
+        "approval_record_audit_manifest.json": result.get("approval_record_audit_manifest"),
+        "approval_record_manifest.json": approval_record_manifest,
+    }
+    for filename, payload in payloads.items():
+        _write_json(record_dir / filename, payload)
+        files_written.append(filename)
+
+    return {
+        "run_id": run_id,
+        "approval_record_dir": str(record_dir),
+        "files_written": files_written,
+    }
+
+
 def _build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Station Chief Runtime Skeleton")
     parser.add_argument("--demo", action="store_true", help="Run the deterministic demo command")
@@ -973,8 +1110,20 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--write-dry-run-bundle", type=str, help="Write dry-run bundle artifacts into the provided directory")
     parser.add_argument("--compare-dry-run-bundles", nargs=2, metavar=("BEFORE_JSON", "AFTER_JSON"), help="Compare two dry-run bundle JSON files")
     parser.add_argument("--approval-handoff", action="store_true", help="Attach an approval handoff packet")
+    parser.add_argument("--approval-review-ui-schema", action="store_true", help="Print the approval review UI schema as JSON")
+    parser.add_argument("--sign-approval-record", action="store_true", help="Create a deterministic signed approval record")
+    parser.add_argument("--approval-reviewer", type=str, help="Reviewer name for approval records")
+    parser.add_argument("--approval-decision", type=str, help="Approval decision for approval records")
+    parser.add_argument("--approval-note", type=str, help="Optional approval note")
+    parser.add_argument("--approval-record-token", type=str, help="Confirmation token for signed approval records")
+    parser.add_argument("--patch-preview-reviewed", action="store_true", help="Approve that the patch preview was reviewed")
+    parser.add_argument("--changed-file-scope-reviewed", action="store_true", help="Approve that changed-file scope was reviewed")
+    parser.add_argument("--baseline-protection-reviewed", action="store_true", help="Approve that baseline protection was reviewed")
+    parser.add_argument("--risk-summary-reviewed", action="store_true", help="Approve that the risk summary was reviewed")
     parser.add_argument("--compare-against-dry-run-bundle", type=str, help="Compare the current dry-run bundle against a saved bundle JSON file")
     parser.add_argument("--write-approval-handoff", type=str, help="Write approval handoff artifacts into the provided directory")
+    parser.add_argument("--write-approval-record", type=str, help="Write approval record artifacts into the provided directory")
+    parser.add_argument("--verify-approval-record", nargs=2, metavar=("APPROVAL_HANDOFF_PACKET_JSON", "APPROVAL_RECORD_JSON"), help="Verify an approval record against an approval handoff packet")
     parser.add_argument("--run-label", type=str, default="station-chief-runtime", help="Label included in artifact run IDs")
     parser.add_argument("--fixture-test", action="store_true", help="Run deterministic fixture tests")
     parser.add_argument("--adapter", type=str, default="noop", help="Choose the controlled execution adapter")
@@ -1007,6 +1156,17 @@ def main() -> None:
         before_bundle = load_json_file(before_path)
         after_bundle = load_json_file(after_path)
         print(json.dumps(compare_dry_run_bundles(before_bundle, after_bundle), indent=2, ensure_ascii=False))
+        return
+
+    if args.approval_review_ui_schema:
+        print(json.dumps(create_approval_review_ui_schema(), indent=2, ensure_ascii=False))
+        return
+
+    if args.verify_approval_record:
+        handoff_path, record_path = args.verify_approval_record
+        approval_handoff_packet = load_json_file(handoff_path)
+        approval_record = load_json_file(record_path)
+        print(json.dumps(verify_signed_approval_record(approval_handoff_packet, approval_record), indent=2, ensure_ascii=False))
         return
 
     if args.fixture_test:
@@ -1047,6 +1207,19 @@ def main() -> None:
         print(json.dumps({"patch_status": "ERROR", "error": "--execute-repo-patch requires --patch-root"}, indent=2, ensure_ascii=False))
         return
 
+    if (args.sign_approval_record or args.write_approval_record) and (not args.approval_reviewer or not args.approval_decision):
+        print(
+            json.dumps(
+                {
+                    "approval_record_status": "ERROR",
+                    "error": "--sign-approval-record requires --approval-reviewer and --approval-decision",
+                },
+                indent=2,
+                ensure_ascii=False,
+            )
+        )
+        return
+
     result = run_station_chief(command, adapter_name=args.adapter)
 
     if args.plan_file_operation or args.execute_sandbox_file_write:
@@ -1079,6 +1252,8 @@ def main() -> None:
         or args.approval_handoff
         or args.compare_against_dry_run_bundle
         or args.write_approval_handoff
+        or args.sign_approval_record
+        or args.write_approval_record
     ):
         result = attach_execution_profile_and_dry_run(
             result,
@@ -1086,11 +1261,24 @@ def main() -> None:
             include_dry_run_bundle=True,
         )
 
-    if args.compare_against_dry_run_bundle or args.approval_handoff or args.write_approval_handoff:
+    if args.compare_against_dry_run_bundle or args.approval_handoff or args.write_approval_handoff or args.sign_approval_record or args.write_approval_record:
         result = attach_approval_handoff(
             result,
             comparison_bundle_path=args.compare_against_dry_run_bundle,
-            include_handoff=args.approval_handoff or args.write_approval_handoff is not None,
+            include_handoff=args.approval_handoff or args.write_approval_handoff is not None or args.sign_approval_record or args.write_approval_record,
+        )
+
+    if args.sign_approval_record or args.write_approval_record:
+        result = attach_signed_approval_record(
+            result,
+            reviewer_name=args.approval_reviewer,
+            approval_decision=args.approval_decision,
+            approval_note=args.approval_note,
+            approval_record_token=args.approval_record_token,
+            patch_preview_reviewed=args.patch_preview_reviewed,
+            changed_file_scope_reviewed=args.changed_file_scope_reviewed,
+            baseline_protection_reviewed=args.baseline_protection_reviewed,
+            risk_summary_reviewed=args.risk_summary_reviewed,
         )
 
     artifact_summary = None
@@ -1128,6 +1316,24 @@ def main() -> None:
         result = dict(result)
         result["approval_handoff_write_summary"] = approval_handoff_summary
 
+    approval_record_summary = None
+    if args.write_approval_record:
+        if "signed_approval_record" not in result or result["signed_approval_record"] is None:
+            result = attach_signed_approval_record(
+                result,
+                reviewer_name=args.approval_reviewer,
+                approval_decision=args.approval_decision,
+                approval_note=args.approval_note,
+                approval_record_token=args.approval_record_token,
+                patch_preview_reviewed=args.patch_preview_reviewed,
+                changed_file_scope_reviewed=args.changed_file_scope_reviewed,
+                baseline_protection_reviewed=args.baseline_protection_reviewed,
+                risk_summary_reviewed=args.risk_summary_reviewed,
+            )
+        approval_record_summary = write_approval_record(result, args.write_approval_record, run_label=args.run_label)
+        result = dict(result)
+        result["approval_record_write_summary"] = approval_record_summary
+
     if args.write_output:
         Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
 
@@ -1139,6 +1345,10 @@ def main() -> None:
         or args.dry_run_bundle
         or args.write_dry_run_bundle
         or args.execution_profile is not None
+        or args.approval_handoff
+        or args.write_approval_handoff is not None
+        or args.sign_approval_record
+        or args.write_approval_record is not None
     ):
         output: Any = result["command_brief"]
         if artifact_summary is not None:
