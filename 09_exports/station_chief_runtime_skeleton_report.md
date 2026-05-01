@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v0.3.0. Locked 175-family baseline preserved.
+Station Chief Runtime upgraded to v0.4.0. Locked 175-family baseline preserved.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -9,20 +9,22 @@ Project owner, system architect, and operating-doctrine author: Devin O’Rourke
 This attribution applies to the Agent Command Center Station Chief runtime skeleton. The locked 175-family baseline remains preserved.
 
 ## Purpose
-This report documents the first runnable Station Chief runtime skeleton after the Devinization stack lock and its v0.3.0 enhancement for persistent runtime index, resumable run registry, and controlled execution adapters.
+This report documents the first runnable Station Chief runtime skeleton after the Devinization stack lock and its v0.4.0 enhancement for controlled file-operation adapters and human-confirmed execution gates.
 
 ## Files Created / Modified
-10_runtime/station_chief_runtime.py
-10_runtime/station_chief_demo_cases.json
-10_runtime/station_chief_runtime_readme.md
-10_runtime/station_chief_fixture_tests.py
-10_runtime/station_chief_adapters.py
-09_exports/station_chief_runtime_skeleton_report.md
-09_exports/station_chief_runtime_v0_2_report.md
-09_exports/station_chief_runtime_v0_3_report.md
-scripts/validate_station_chief_runtime_skeleton.py
-scripts/validate_station_chief_runtime_v0_2.py
-scripts/validate_station_chief_runtime_v0_3.py
+- 10_runtime/station_chief_runtime.py
+- 10_runtime/station_chief_demo_cases.json
+- 10_runtime/station_chief_runtime_readme.md
+- 10_runtime/station_chief_fixture_tests.py
+- 10_runtime/station_chief_adapters.py
+- 09_exports/station_chief_runtime_skeleton_report.md
+- 09_exports/station_chief_runtime_v0_2_report.md
+- 09_exports/station_chief_runtime_v0_3_report.md
+- 09_exports/station_chief_runtime_v0_4_report.md
+- scripts/validate_station_chief_runtime_skeleton.py
+- scripts/validate_station_chief_runtime_v0_2.py
+- scripts/validate_station_chief_runtime_v0_3.py
+- scripts/validate_station_chief_runtime_v0_4.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -40,6 +42,9 @@ scripts/validate_station_chief_runtime_v0_3.py
 - resumable run registry
 - resume-by-run-id lookup
 - controlled no-op adapter simulation
+- controlled sandbox file-operation planning
+- human-confirmed sandbox file writes
+- unsafe path blocking
 - deterministic fixture tests
 - proof-backed JSON output
 - baseline preservation
@@ -66,6 +71,7 @@ scripts/validate_station_chief_runtime_v0_3.py
 - Tier 4 — Audit / Archive
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v0_4.py
 python3 scripts/validate_station_chief_runtime_v0_3.py
 python3 scripts/validate_station_chief_runtime_v0_2.py
 python3 scripts/validate_station_chief_runtime_skeleton.py
@@ -84,10 +90,10 @@ python3 scripts/validate_full_expansion_completion.py
 ## What This Does Not Do
 - Does not modify the 175-family baseline
 - Does not hire or animate worker agents yet
-- Does not execute real work orders yet
+- Does not execute real repo work orders yet
 - Does not build UI yet
 - Does not connect live APIs yet
 - Does not authorize uncontrolled live execution
 
 ## Next Recommended Build Step
-Next recommended build step: add controlled file-operation adapters and human-confirmed execution gates.
+Next recommended build step: add human-approved repo patch adapters with changed-file scope enforcement.

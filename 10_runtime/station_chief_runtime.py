@@ -8,9 +8,17 @@ import re
 from pathlib import Path
 from typing import Any
 
-from station_chief_adapters import create_execution_plan, list_adapters, run_noop_adapter
+from station_chief_adapters import (
+    classify_path_safety,
+    create_execution_plan,
+    create_file_operation_plan,
+    evaluate_execution_gate,
+    list_adapters,
+    run_noop_adapter,
+    run_sandbox_file_write_adapter,
+)
 
-STATION_CHIEF_RUNTIME_VERSION = "0.3.0"
+STATION_CHIEF_RUNTIME_VERSION = "0.4.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -212,7 +220,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}|{run_label}|{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v0-3-{normalized}-{digest[:12]}"
+    return f"station-chief-v0-4-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -323,7 +331,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "0.3.0",
+            "registry_version": "0.4.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -340,7 +348,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "0.3.0"
+    registry["registry_version"] = "0.4.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -349,7 +357,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "0.3.0",
+        "index_version": "0.4.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -415,6 +423,9 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "resumable_run_registry": True,
             "controlled_execution_adapters": True,
             "noop_execution_adapter": True,
+            "controlled_file_operation_adapter": True,
+            "human_confirmed_execution_gates": True,
+            "sandbox_file_write_adapter": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -427,14 +438,18 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
         "adapter_name": adapter_name,
         "execution_plan": execution_plan,
         "adapter_result": adapter_result,
+        "file_operation_plan": None,
+        "execution_gate": None,
+        "file_operation_result": None,
         "evidence": {
             "baseline_preserved": True,
             "external_actions_taken": False,
             "live_worker_agents_activated": False,
             "deterministic_demo_mode": True,
             "validators_required_before_completion": True,
+            "controlled_file_write_requires_confirmation": True,
         },
-        "next_step": "Next step: add controlled file-operation adapters and human-confirmed execution gates.",
+        "next_step": "Next step: add human-approved repo patch adapters with changed-file scope enforcement.",
     }
 
 
@@ -444,6 +459,9 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
     work_orders = result["work_orders"]
     execution_plan = result.get("execution_plan") or create_execution_plan(command_brief, work_orders, adapter_name=adapter_name)
     adapter_result = result.get("adapter_result") or run_noop_adapter(execution_plan)
+    file_operation_plan = result.get("file_operation_plan")
+    execution_gate = result.get("execution_gate")
+    file_operation_result = result.get("file_operation_result")
     selected_records = [
         item
         for item in result["overlay_stack_summary"]
@@ -475,11 +493,14 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "evidence": result["evidence"],
         "execution_plan": execution_plan,
         "adapter_result": adapter_result,
+        "file_operation_plan": file_operation_plan,
+        "execution_gate": execution_gate,
+        "file_operation_result": file_operation_result,
         "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v0_3_artifacts",
+            "artifact_type": "station_chief_runtime_v0_4_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -488,6 +509,9 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "evidence.json",
                 "execution_plan.json",
                 "adapter_result.json",
+                "file_operation_plan.json",
+                "execution_gate.json",
+                "file_operation_result.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -497,6 +521,8 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "live_worker_agents_activated": False,
             "deterministic_demo_mode": True,
             "controlled_execution_adapter": "noop",
+            "controlled_file_operations_supported": True,
+            "human_confirmation_required_for_file_write": True,
         },
     }
 
@@ -518,6 +544,8 @@ def write_runtime_artifacts(
     artifact_dir.mkdir(parents=True, exist_ok=True)
 
     artifacts = build_runtime_artifacts(result, run_id)
+    artifacts["runtime_index_entry"] = build_runtime_index_entry(result, run_id, artifact_dir=str(artifact_dir))
+
     files_written = []
     mapping = {
         "run_log.json": artifacts["run_log"],
@@ -527,6 +555,9 @@ def write_runtime_artifacts(
         "evidence.json": artifacts["evidence"],
         "execution_plan.json": artifacts["execution_plan"],
         "adapter_result.json": artifacts["adapter_result"],
+        "file_operation_plan.json": artifacts["file_operation_plan"],
+        "execution_gate.json": artifacts["execution_gate"],
+        "file_operation_result.json": artifacts["file_operation_result"],
         "runtime_index_entry.json": artifacts["runtime_index_entry"],
         "manifest.json": artifacts["manifest"],
         "full_result.json": result,
@@ -540,9 +571,7 @@ def write_runtime_artifacts(
     if registry_dir is not None:
         registry_dir_path = Path(registry_dir)
         registry_dir_path.mkdir(parents=True, exist_ok=True)
-        runtime_index_entry = dict(artifacts["runtime_index_entry"])
-        runtime_index_entry["artifact_dir"] = str(artifact_dir)
-        registry = update_registry(registry_dir_path, runtime_index_entry)
+        registry = update_registry(registry_dir_path, artifacts["runtime_index_entry"])
         write_runtime_index(registry_dir_path, registry)
         registry_updated = True
         registry_dir_str = str(registry_dir_path)
@@ -594,6 +623,39 @@ def run_fixture_tests() -> dict:
     }
 
 
+def attach_file_operation(
+    result: dict,
+    execution_dir: str | None,
+    target_filename: str,
+    confirmation_token: str | None,
+    execute: bool,
+) -> dict:
+    updated = dict(result)
+    file_operation_plan = create_file_operation_plan(
+        result["command_brief"],
+        execution_dir=execution_dir,
+        target_filename=target_filename,
+    )
+    execution_gate = evaluate_execution_gate(file_operation_plan, confirmation_token if execute else None)
+    if execute:
+        file_operation_result = run_sandbox_file_write_adapter(file_operation_plan, execution_gate)
+    else:
+        file_operation_result = {
+            "adapter_result_status": "PLANNED_ONLY",
+            "operation_type": "sandbox_file_write",
+            "file_written": False,
+            "target_path": file_operation_plan["target_path"],
+            "live_execution_performed": False,
+            "external_actions_taken": False,
+            "worker_agents_activated": False,
+            "reason": "File operation planned but not executed.",
+        }
+    updated["file_operation_plan"] = file_operation_plan
+    updated["execution_gate"] = execution_gate
+    updated["file_operation_result"] = file_operation_result
+    return updated
+
+
 def _build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Station Chief Runtime Skeleton")
     parser.add_argument("--demo", action="store_true", help="Run the deterministic demo command")
@@ -610,6 +672,11 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--simulate-adapter", action="store_true", help="Simulate the selected controlled execution adapter")
     parser.add_argument("--registry-dir", type=str, help="Directory used for the persistent run registry")
     parser.add_argument("--resume-run-id", type=str, help="Resume a previously recorded run by run ID")
+    parser.add_argument("--plan-file-operation", action="store_true", help="Plan a sandbox file operation without executing it")
+    parser.add_argument("--execution-dir", type=str, help="Directory used for sandbox file-operation execution")
+    parser.add_argument("--target-filename", type=str, default="station_chief_sandbox_output.txt", help="Target filename for sandbox file operations")
+    parser.add_argument("--confirm-execution", type=str, help="Confirmation token required for sandbox file writes")
+    parser.add_argument("--execute-sandbox-file-write", action="store_true", help="Execute a sandbox file write if the gate approves")
     return parser
 
 
@@ -636,8 +703,6 @@ def main() -> None:
         command = "check please"
     elif args.command:
         command = args.command
-    elif args.list_overlays:
-        command = None
     else:
         command = "check please"
 
@@ -645,8 +710,20 @@ def main() -> None:
         print(json.dumps(load_overlay_stack(), indent=2, ensure_ascii=False))
         return
 
+    if args.execute_sandbox_file_write and not args.execution_dir:
+        print(json.dumps({"execution_status": "ERROR", "error": "--execute-sandbox-file-write requires --execution-dir"}, indent=2, ensure_ascii=False))
+        return
+
     result = run_station_chief(command, adapter_name=args.adapter)
-    output: Any = result
+
+    if args.plan_file_operation or args.execute_sandbox_file_write:
+        result = attach_file_operation(
+            result,
+            args.execution_dir,
+            args.target_filename,
+            args.confirm_execution,
+            execute=args.execute_sandbox_file_write,
+        )
 
     artifact_summary = None
     if args.write_artifacts:
@@ -658,23 +735,19 @@ def main() -> None:
         )
         result = dict(result)
         result["artifact_write_summary"] = artifact_summary
-        output = result
 
-    if args.simulate_adapter:
-        output = result
+    if args.write_output:
+        Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
 
-    if args.brief:
-        output = result["command_brief"]
+    if args.brief and not (args.plan_file_operation or args.execute_sandbox_file_write):
+        output: Any = result["command_brief"]
         if artifact_summary is not None:
             output = {
                 "command_brief": result["command_brief"],
                 "artifact_write_summary": artifact_summary,
             }
-    elif args.json or args.demo or args.command or args.write_output or args.write_artifacts or args.simulate_adapter:
+    else:
         output = result
-
-    if args.write_output:
-        Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
 
     print(json.dumps(output, indent=2, ensure_ascii=False))
 
