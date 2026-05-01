@@ -24,6 +24,7 @@ def validate_batch():
         "Agent Reputation, Reliability & Trust Scoring",
         "Reliability Scoring",
         "Trust Decay Tracking",
+        "Decay Trigger Detection",
         "Completion Architecture & Definition of Done",
         "Definition of Done",
         "Completion Evidence",
@@ -90,6 +91,8 @@ def validate_batch():
 
             for unit in dept['units']:
                 unit_id = unit['id']
+                if unit_id == "149.7.1" and unit['name'] != "Decay Trigger Detection":
+                    errors.append(f"Unit 149.7.1 name mismatch: expected 'Decay Trigger Detection', found '{unit['name']}'")
                 if len(unit['team']) != 9:
                     errors.append(f"Team size mismatch in unit {unit_id}: expected 9, found {len(unit['team'])}")
                 

@@ -41,7 +41,7 @@
 - 149.6.3 Reputation Risk Summary
 
 ### 149.7 Trust Decay Tracking
-- 149.7.1 Trust Decay Tracking
+- 149.7.1 Decay Trigger Detection
 - 149.7.2 Time-Based Score Review
 - 149.7.3 Trust Decay Notes
 
