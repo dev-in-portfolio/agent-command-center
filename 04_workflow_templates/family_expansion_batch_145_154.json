@@ -1,0 +1,962 @@
+[
+  {
+    "id": "145",
+    "name": "Agent Ethics Board & Value Alignment Office",
+    "departments": [
+      {
+        "id": "145.1",
+        "name": "Ethics Review Intake",
+        "units": [
+          { "id": "145.1.1", "name": "Ethics Issue Capture" },
+          { "id": "145.1.2", "name": "Stakeholder Impact Review" },
+          { "id": "145.1.3", "name": "Ethics Intake Summary" }
+        ]
+      },
+      {
+        "id": "145.2",
+        "name": "Value Alignment Mapping",
+        "units": [
+          { "id": "145.2.1", "name": "Core Value Identification" },
+          { "id": "145.2.2", "name": "Behavior Alignment Review" },
+          { "id": "145.2.3", "name": "Alignment Map Update" }
+        ]
+      },
+      {
+        "id": "145.3",
+        "name": "Ethical Conflict Review",
+        "units": [
+          { "id": "145.3.1", "name": "Conflict Signal Detection" },
+          { "id": "145.3.2", "name": "Value Tradeoff Analysis" },
+          { "id": "145.3.3", "name": "Ethical Decision Notes" }
+        ]
+      },
+      {
+        "id": "145.4",
+        "name": "Agent Conduct Standards",
+        "units": [
+          { "id": "145.4.1", "name": "Conduct Rule Definition" },
+          { "id": "145.4.2", "name": "Behavior Boundary Review" },
+          { "id": "145.4.3", "name": "Conduct Standard Update" }
+        ]
+      },
+      {
+        "id": "145.5",
+        "name": "Harm Assessment",
+        "units": [
+          { "id": "145.5.1", "name": "Harm Scenario Capture" },
+          { "id": "145.5.2", "name": "Severity And Likelihood Review" },
+          { "id": "145.5.3", "name": "Harm Mitigation Notes" }
+        ]
+      },
+      {
+        "id": "145.6",
+        "name": "Value Drift Detection",
+        "units": [
+          { "id": "145.6.1", "name": "Drift Signal Capture" },
+          { "id": "145.6.2", "name": "Alignment Deviation Review" },
+          { "id": "145.6.3", "name": "Drift Correction Notes" }
+        ]
+      },
+      {
+        "id": "145.7",
+        "name": "Ethics Board Decisioning",
+        "units": [
+          { "id": "145.7.1", "name": "Board Issue Preparation" },
+          { "id": "145.7.2", "name": "Decision Criteria Review" },
+          { "id": "145.7.3", "name": "Board Decision Record" }
+        ]
+      },
+      {
+        "id": "145.8",
+        "name": "Ethical Exception Handling",
+        "units": [
+          { "id": "145.8.1", "name": "Exception Request Capture" },
+          { "id": "145.8.2", "name": "Exception Risk Review" },
+          { "id": "145.8.3", "name": "Exception Decision Notes" }
+        ]
+      },
+      {
+        "id": "145.9",
+        "name": "Alignment Audit Trail",
+        "units": [
+          { "id": "145.9.1", "name": "Alignment Event Logging" },
+          { "id": "145.9.2", "name": "Evidence Trace Review" },
+          { "id": "145.9.3", "name": "Audit Trail Update" }
+        ]
+      },
+      {
+        "id": "145.10",
+        "name": "Ethics Dashboard",
+        "units": [
+          { "id": "145.10.1", "name": "Ethics Signal Collection" },
+          { "id": "145.10.2", "name": "Alignment Status Summary" },
+          { "id": "145.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "146",
+    "name": "Agent Procurement Stack & Vendor Ecosystem",
+    "departments": [
+      {
+        "id": "146.1",
+        "name": "Vendor Inventory",
+        "units": [
+          { "id": "146.1.1", "name": "Vendor Candidate Capture" },
+          { "id": "146.1.2", "name": "Vendor Category Assignment" },
+          { "id": "146.1.3", "name": "Vendor Inventory Update" }
+        ]
+      },
+      {
+        "id": "146.2",
+        "name": "Procurement Stack Mapping",
+        "units": [
+          { "id": "146.2.1", "name": "Tool Stack Inventory" },
+          { "id": "146.2.2", "name": "Vendor Relationship Mapping" },
+          { "id": "146.2.3", "name": "Stack Map Summary" }
+        ]
+      },
+      {
+        "id": "146.3",
+        "name": "Vendor Capability Review",
+        "units": [
+          { "id": "146.3.1", "name": "Capability Evidence Capture" },
+          { "id": "146.3.2", "name": "Feature Fit Review" },
+          { "id": "146.3.3", "name": "Vendor Capability Notes" }
+        ]
+      },
+      {
+        "id": "146.4",
+        "name": "Vendor Risk Assessment",
+        "units": [
+          { "id": "146.4.1", "name": "Vendor Risk Signal Capture" },
+          { "id": "146.4.2", "name": "Dependency Exposure Review" },
+          { "id": "146.4.3", "name": "Vendor Risk Summary" }
+        ]
+      },
+      {
+        "id": "146.5",
+        "name": "Procurement Cost Review",
+        "units": [
+          { "id": "146.5.1", "name": "Pricing Model Capture" },
+          { "id": "146.5.2", "name": "Cost Scenario Review" },
+          { "id": "146.5.3", "name": "Procurement Cost Notes" }
+        ]
+      },
+      {
+        "id": "146.6",
+        "name": "Vendor Contract Coordination",
+        "units": [
+          { "id": "146.6.1", "name": "Contract Requirement Capture" },
+          { "id": "146.6.2", "name": "Service Term Review" },
+          { "id": "146.6.3", "name": "Contract Coordination Notes" }
+        ]
+      },
+      {
+        "id": "146.7",
+        "name": "Vendor Performance Tracking",
+        "units": [
+          { "id": "146.7.1", "name": "Performance Signal Collection" },
+          { "id": "146.7.2", "name": "Service Quality Review" },
+          { "id": "146.7.3", "name": "Vendor Score Update" }
+        ]
+      },
+      {
+        "id": "146.8",
+        "name": "Ecosystem Opportunity Review",
+        "units": [
+          { "id": "146.8.1", "name": "Ecosystem Signal Detection" },
+          { "id": "146.8.2", "name": "Partnership Fit Review" },
+          { "id": "146.8.3", "name": "Opportunity Notes" }
+        ]
+      },
+      {
+        "id": "146.9",
+        "name": "Vendor Exit Planning",
+        "units": [
+          { "id": "146.9.1", "name": "Exit Trigger Definition" },
+          { "id": "146.9.2", "name": "Replacement Path Mapping" },
+          { "id": "146.9.3", "name": "Exit Plan Summary" }
+        ]
+      },
+      {
+        "id": "146.10",
+        "name": "Procurement Dashboard",
+        "units": [
+          { "id": "146.10.1", "name": "Vendor Signal Collection" },
+          { "id": "146.10.2", "name": "Stack Status Summary" },
+          { "id": "146.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "147",
+    "name": "Agent Learning Loops & Continuous Improvement",
+    "departments": [
+      {
+        "id": "147.1",
+        "name": "Learning Signal Capture",
+        "units": [
+          { "id": "147.1.1", "name": "Learning Event Detection" },
+          { "id": "147.1.2", "name": "Improvement Candidate Capture" },
+          { "id": "147.1.3", "name": "Learning Signal Summary" }
+        ]
+      },
+      {
+        "id": "147.2",
+        "name": "Feedback Loop Design",
+        "units": [
+          { "id": "147.2.1", "name": "Feedback Source Mapping" },
+          { "id": "147.2.2", "name": "Loop Trigger Definition" },
+          { "id": "147.2.3", "name": "Feedback Loop QA" }
+        ]
+      },
+      {
+        "id": "147.3",
+        "name": "Performance Reflection",
+        "units": [
+          { "id": "147.3.1", "name": "Performance Evidence Review" },
+          { "id": "147.3.2", "name": "Pattern Interpretation" },
+          { "id": "147.3.3", "name": "Reflection Notes" }
+        ]
+      },
+      {
+        "id": "147.4",
+        "name": "Improvement Backlog",
+        "units": [
+          { "id": "147.4.1", "name": "Improvement Item Capture" },
+          { "id": "147.4.2", "name": "Priority Review" },
+          { "id": "147.4.3", "name": "Backlog Update" }
+        ]
+      },
+      {
+        "id": "147.5",
+        "name": "Lesson Generalization",
+        "units": [
+          { "id": "147.5.1", "name": "Specific Lesson Extraction" },
+          { "id": "147.5.2", "name": "General Rule Draft" },
+          { "id": "147.5.3", "name": "Generalization Review" }
+        ]
+      },
+      {
+        "id": "147.6",
+        "name": "Behavior Update Planning",
+        "units": [
+          { "id": "147.6.1", "name": "Behavior Change Need Detection" },
+          { "id": "147.6.2", "name": "Update Option Review" },
+          { "id": "147.6.3", "name": "Behavior Update Plan" }
+        ]
+      },
+      {
+        "id": "147.7",
+        "name": "Loop Effectiveness Review",
+        "units": [
+          { "id": "147.7.1", "name": "Loop Outcome Capture" },
+          { "id": "147.7.2", "name": "Improvement Impact Review" },
+          { "id": "147.7.3", "name": "Effectiveness Summary" }
+        ]
+      },
+      {
+        "id": "147.8",
+        "name": "Continuous Improvement Governance",
+        "units": [
+          { "id": "147.8.1", "name": "Improvement Rule Definition" },
+          { "id": "147.8.2", "name": "Change Approval Review" },
+          { "id": "147.8.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "147.9",
+        "name": "Learning Archive",
+        "units": [
+          { "id": "147.9.1", "name": "Learning Record Filing" },
+          { "id": "147.9.2", "name": "Pattern Tagging" },
+          { "id": "147.9.3", "name": "Archive Update" }
+        ]
+      },
+      {
+        "id": "147.10",
+        "name": "Learning Dashboard",
+        "units": [
+          { "id": "147.10.1", "name": "Learning Signal Collection" },
+          { "id": "147.10.2", "name": "Improvement Status Summary" },
+          { "id": "147.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "148",
+    "name": "Multi-Tenant, Multi-Client & Workspace Management",
+    "departments": [
+      {
+        "id": "148.1",
+        "name": "Tenant Model Design",
+        "units": [
+          { "id": "148.1.1", "name": "Tenant Type Definition" },
+          { "id": "148.1.2", "name": "Workspace Boundary Mapping" },
+          { "id": "148.1.3", "name": "Tenant Model Review" }
+        ]
+      },
+      {
+        "id": "148.2",
+        "name": "Client Workspace Setup",
+        "units": [
+          { "id": "148.2.1", "name": "Workspace Requirement Capture" },
+          { "id": "148.2.2", "name": "Client Folder Structure Draft" },
+          { "id": "148.2.3", "name": "Workspace Setup QA" }
+        ]
+      },
+      {
+        "id": "148.3",
+        "name": "Tenant Isolation",
+        "units": [
+          { "id": "148.3.1", "name": "Isolation Requirement Review" },
+          { "id": "148.3.2", "name": "Cross-Tenant Risk Detection" },
+          { "id": "148.3.3", "name": "Isolation Control Notes" }
+        ]
+      },
+      {
+        "id": "148.4",
+        "name": "Client Context Management",
+        "units": [
+          { "id": "148.4.1", "name": "Client Context Capture" },
+          { "id": "148.4.2", "name": "Context Boundary Review" },
+          { "id": "148.4.3", "name": "Client Context Update" }
+        ]
+      },
+      {
+        "id": "148.5",
+        "name": "Workspace Permission Review",
+        "units": [
+          { "id": "148.5.1", "name": "Permission Requirement Capture" },
+          { "id": "148.5.2", "name": "Access Scope Review" },
+          { "id": "148.5.3", "name": "Permission Decision Notes" }
+        ]
+      },
+      {
+        "id": "148.6",
+        "name": "Multi-Client Routing",
+        "units": [
+          { "id": "148.6.1", "name": "Client Identification Check" },
+          { "id": "148.6.2", "name": "Routing Path Selection" },
+          { "id": "148.6.3", "name": "Client Route Confirmation" }
+        ]
+      },
+      {
+        "id": "148.7",
+        "name": "Workspace Cleanup",
+        "units": [
+          { "id": "148.7.1", "name": "Obsolete Workspace Detection" },
+          { "id": "148.7.2", "name": "Archive Requirement Review" },
+          { "id": "148.7.3", "name": "Cleanup Decision Notes" }
+        ]
+      },
+      {
+        "id": "148.8",
+        "name": "Tenant Governance",
+        "units": [
+          { "id": "148.8.1", "name": "Tenant Rule Definition" },
+          { "id": "148.8.2", "name": "Workspace Exception Review" },
+          { "id": "148.8.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "148.9",
+        "name": "Client Workspace Audit",
+        "units": [
+          { "id": "148.9.1", "name": "Workspace Event Logging" },
+          { "id": "148.9.2", "name": "Boundary Compliance Review" },
+          { "id": "148.9.3", "name": "Audit Summary" }
+        ]
+      },
+      {
+        "id": "148.10",
+        "name": "Workspace Dashboard",
+        "units": [
+          { "id": "148.10.1", "name": "Workspace Signal Collection" },
+          { "id": "148.10.2", "name": "Tenant Status Summary" },
+          { "id": "148.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "149",
+    "name": "Agent Reputation, Reliability & Trust Scoring",
+    "departments": [
+      {
+        "id": "149.1",
+        "name": "Reputation Signal Capture",
+        "units": [
+          { "id": "149.1.1", "name": "Reputation Event Detection" },
+          { "id": "149.1.2", "name": "Trust Signal Classification" },
+          { "id": "149.1.3", "name": "Reputation Record Update" }
+        ]
+      },
+      {
+        "id": "149.2",
+        "name": "Reliability Scoring",
+        "units": [
+          { "id": "149.2.1", "name": "Reliability Metric Selection" },
+          { "id": "149.2.2", "name": "Performance History Review" },
+          { "id": "149.2.3", "name": "Reliability Score Update" }
+        ]
+      },
+      {
+        "id": "149.3",
+        "name": "Trust Score Modeling",
+        "units": [
+          { "id": "149.3.1", "name": "Trust Factor Definition" },
+          { "id": "149.3.2", "name": "Weighting Rule Review" },
+          { "id": "149.3.3", "name": "Trust Model Notes" }
+        ]
+      },
+      {
+        "id": "149.4",
+        "name": "Agent Error History",
+        "units": [
+          { "id": "149.4.1", "name": "Error Event Capture" },
+          { "id": "149.4.2", "name": "Error Severity Review" },
+          { "id": "149.4.3", "name": "Error History Update" }
+        ]
+      },
+      {
+        "id": "149.5",
+        "name": "Recovery Credit",
+        "units": [
+          { "id": "149.5.1", "name": "Recovery Action Capture" },
+          { "id": "149.5.2", "name": "Repair Quality Review" },
+          { "id": "149.5.3", "name": "Recovery Credit Notes" }
+        ]
+      },
+      {
+        "id": "149.6",
+        "name": "Reputation Risk Review",
+        "units": [
+          { "id": "149.6.1", "name": "Reputation Risk Signal" },
+          { "id": "149.6.2", "name": "Impact Review" },
+          { "id": "149.6.3", "name": "Reputation Risk Summary" }
+        ]
+      },
+      {
+        "id": "149.7",
+        "name": "Trust Decay Tracking",
+        "units": [
+          { "id": "149.7.1", "name": "Trust Decay Tracking" },
+          { "id": "149.7.2", "name": "Time-Based Score Review" },
+          { "id": "149.7.3", "name": "Trust Decay Notes" }
+        ]
+      },
+      {
+        "id": "149.8",
+        "name": "Reputation Governance",
+        "units": [
+          { "id": "149.8.1", "name": "Scoring Rule Definition" },
+          { "id": "149.8.2", "name": "Score Exception Review" },
+          { "id": "149.8.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "149.9",
+        "name": "Trust Report Generation",
+        "units": [
+          { "id": "149.9.1", "name": "Trust Data Collection" },
+          { "id": "149.9.2", "name": "Report Drafting" },
+          { "id": "149.9.3", "name": "Trust Report QA" }
+        ]
+      },
+      {
+        "id": "149.10",
+        "name": "Reputation Dashboard",
+        "units": [
+          { "id": "149.10.1", "name": "Reputation Signal Collection" },
+          { "id": "149.10.2", "name": "Reliability Status Summary" },
+          { "id": "149.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "150",
+    "name": "Completion Architecture & Definition of Done",
+    "departments": [
+      {
+        "id": "150.1",
+        "name": "Completion Criteria Design",
+        "units": [
+          { "id": "150.1.1", "name": "Completion Standard Capture" },
+          { "id": "150.1.2", "name": "Done Condition Mapping" },
+          { "id": "150.1.3", "name": "Criteria Review Notes" }
+        ]
+      },
+      {
+        "id": "150.2",
+        "name": "Definition of Done",
+        "units": [
+          { "id": "150.2.1", "name": "Done Requirement Definition" },
+          { "id": "150.2.2", "name": "Acceptance Standard Review" },
+          { "id": "150.2.3", "name": "Definition Update Record" }
+        ]
+      },
+      {
+        "id": "150.3",
+        "name": "Completion Checklist",
+        "units": [
+          { "id": "150.3.1", "name": "Checklist Item Capture" },
+          { "id": "150.3.2", "name": "Checklist Sequence Review" },
+          { "id": "150.3.3", "name": "Checklist Update" }
+        ]
+      },
+      {
+        "id": "150.4",
+        "name": "Exit Condition Review",
+        "units": [
+          { "id": "150.4.1", "name": "Exit Trigger Detection" },
+          { "id": "150.4.2", "name": "Stop Condition Review" },
+          { "id": "150.4.3", "name": "Exit Decision Notes" }
+        ]
+      },
+      {
+        "id": "150.5",
+        "name": "Completion Evidence",
+        "units": [
+          { "id": "150.5.1", "name": "Completion Proof Capture" },
+          { "id": "150.5.2", "name": "Evidence Sufficiency Review" },
+          { "id": "150.5.3", "name": "Evidence Record Update" }
+        ]
+      },
+      {
+        "id": "150.6",
+        "name": "Final QA Gate",
+        "units": [
+          { "id": "150.6.1", "name": "QA Gate Requirement Capture" },
+          { "id": "150.6.2", "name": "Final Defect Review" },
+          { "id": "150.6.3", "name": "QA Gate Decision" }
+        ]
+      },
+      {
+        "id": "150.7",
+        "name": "Handoff Completion",
+        "units": [
+          { "id": "150.7.1", "name": "Handoff Requirement Review" },
+          { "id": "150.7.2", "name": "Delivery Confirmation Capture" },
+          { "id": "150.7.3", "name": "Completion Handoff Notes" }
+        ]
+      },
+      {
+        "id": "150.8",
+        "name": "Incomplete Work Handling",
+        "units": [
+          { "id": "150.8.1", "name": "Incomplete Signal Detection" },
+          { "id": "150.8.2", "name": "Remaining Work Mapping" },
+          { "id": "150.8.3", "name": "Incomplete Work Notes" }
+        ]
+      },
+      {
+        "id": "150.9",
+        "name": "Completion Governance",
+        "units": [
+          { "id": "150.9.1", "name": "Completion Rule Definition" },
+          { "id": "150.9.2", "name": "Done Exception Review" },
+          { "id": "150.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "150.10",
+        "name": "Completion Dashboard",
+        "units": [
+          { "id": "150.10.1", "name": "Completion Signal Collection" },
+          { "id": "150.10.2", "name": "Done Status Summary" },
+          { "id": "150.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "151",
+    "name": "Legal Evidence Exhibit Production",
+    "departments": [
+      {
+        "id": "151.1",
+        "name": "Evidence Intake",
+        "units": [
+          { "id": "151.1.1", "name": "Evidence Item Capture" },
+          { "id": "151.1.2", "name": "Evidence Source Review" },
+          { "id": "151.1.3", "name": "Evidence Intake Record" }
+        ]
+      },
+      {
+        "id": "151.2",
+        "name": "Exhibit Organization",
+        "units": [
+          { "id": "151.2.1", "name": "Exhibit Category Assignment" },
+          { "id": "151.2.2", "name": "Exhibit Sequence Mapping" },
+          { "id": "151.2.3", "name": "Exhibit Organization Notes" }
+        ]
+      },
+      {
+        "id": "151.3",
+        "name": "Chain of Custody Support",
+        "units": [
+          { "id": "151.3.1", "name": "Custody Event Capture" },
+          { "id": "151.3.2", "name": "Custody Gap Review" },
+          { "id": "151.3.3", "name": "Custody Record Update" }
+        ]
+      },
+      {
+        "id": "151.4",
+        "name": "Evidence Authenticity Review",
+        "units": [
+          { "id": "151.4.1", "name": "Authenticity Signal Capture" },
+          { "id": "151.4.2", "name": "Source Verification Review" },
+          { "id": "151.4.3", "name": "Authenticity Notes" }
+        ]
+      },
+      {
+        "id": "151.5",
+        "name": "Exhibit Labeling",
+        "units": [
+          { "id": "151.5.1", "name": "Label Requirement Capture" },
+          { "id": "151.5.2", "name": "Exhibit Number Assignment" },
+          { "id": "151.5.3", "name": "Label QA Review" }
+        ]
+      },
+      {
+        "id": "151.6",
+        "name": "Timeline Exhibit Production",
+        "units": [
+          { "id": "151.6.1", "name": "Timeline Event Capture" },
+          { "id": "151.6.2", "name": "Evidence Date Review" },
+          { "id": "151.6.3", "name": "Timeline Exhibit Draft" }
+        ]
+      },
+      {
+        "id": "151.7",
+        "name": "Supporting Document Assembly",
+        "units": [
+          { "id": "151.7.1", "name": "Document Set Collection" },
+          { "id": "151.7.2", "name": "Relevance Review" },
+          { "id": "151.7.3", "name": "Document Packet Update" }
+        ]
+      },
+      {
+        "id": "151.8",
+        "name": "Exhibit Index Creation",
+        "units": [
+          { "id": "151.8.1", "name": "Index Field Definition" },
+          { "id": "151.8.2", "name": "Exhibit Entry Drafting" },
+          { "id": "151.8.3", "name": "Exhibit Index QA" }
+        ]
+      },
+      {
+        "id": "151.9",
+        "name": "Legal Exhibit QA",
+        "units": [
+          { "id": "151.9.1", "name": "Formatting Requirement Review" },
+          { "id": "151.9.2", "name": "Completeness Check" },
+          { "id": "151.9.3", "name": "Exhibit QA Notes" }
+        ]
+      },
+      {
+        "id": "151.10",
+        "name": "Exhibit Dashboard",
+        "units": [
+          { "id": "151.10.1", "name": "Evidence Signal Collection" },
+          { "id": "151.10.2", "name": "Exhibit Status Summary" },
+          { "id": "151.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "152",
+    "name": "Compliance Training Academy",
+    "departments": [
+      {
+        "id": "152.1",
+        "name": "Training Requirement Intake",
+        "units": [
+          { "id": "152.1.1", "name": "Compliance Topic Capture" },
+          { "id": "152.1.2", "name": "Audience Requirement Review" },
+          { "id": "152.1.3", "name": "Training Intake Summary" }
+        ]
+      },
+      {
+        "id": "152.2",
+        "name": "Curriculum Design",
+        "units": [
+          { "id": "152.2.1", "name": "Learning Objective Definition" },
+          { "id": "152.2.2", "name": "Module Sequence Mapping" },
+          { "id": "152.2.3", "name": "Curriculum Design Review" }
+        ]
+      },
+      {
+        "id": "152.3",
+        "name": "Training Content Production",
+        "units": [
+          { "id": "152.3.1", "name": "Lesson Outline Draft" },
+          { "id": "152.3.2", "name": "Training Copy Creation" },
+          { "id": "152.3.3", "name": "Content QA Notes" }
+        ]
+      },
+      {
+        "id": "152.4",
+        "name": "Scenario-Based Training",
+        "units": [
+          { "id": "152.4.1", "name": "Scenario Need Detection" },
+          { "id": "152.4.2", "name": "Compliance Scenario Draft" },
+          { "id": "152.4.3", "name": "Scenario Training Review" }
+        ]
+      },
+      {
+        "id": "152.5",
+        "name": "Assessment Design",
+        "units": [
+          { "id": "152.5.1", "name": "Assessment Criteria Capture" },
+          { "id": "152.5.2", "name": "Question Drafting" },
+          { "id": "152.5.3", "name": "Assessment QA Review" }
+        ]
+      },
+      {
+        "id": "152.6",
+        "name": "Training Delivery Planning",
+        "units": [
+          { "id": "152.6.1", "name": "Delivery Channel Selection" },
+          { "id": "152.6.2", "name": "Schedule Requirement Review" },
+          { "id": "152.6.3", "name": "Delivery Plan Notes" }
+        ]
+      },
+      {
+        "id": "152.7",
+        "name": "Learner Completion Tracking",
+        "units": [
+          { "id": "152.7.1", "name": "Completion Signal Capture" },
+          { "id": "152.7.2", "name": "Learner Progress Review" },
+          { "id": "152.7.3", "name": "Completion Record Update" }
+        ]
+      },
+      {
+        "id": "152.8",
+        "name": "Training Evidence Archive",
+        "units": [
+          { "id": "152.8.1", "name": "Evidence Item Filing" },
+          { "id": "152.8.2", "name": "Completion Proof Review" },
+          { "id": "152.8.3", "name": "Evidence Archive Update" }
+        ]
+      },
+      {
+        "id": "152.9",
+        "name": "Academy Governance",
+        "units": [
+          { "id": "152.9.1", "name": "Training Rule Definition" },
+          { "id": "152.9.2", "name": "Curriculum Exception Review" },
+          { "id": "152.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "152.10",
+        "name": "Training Dashboard",
+        "units": [
+          { "id": "152.10.1", "name": "Training Signal Collection" },
+          { "id": "152.10.2", "name": "Compliance Learning Status" },
+          { "id": "152.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "153",
+    "name": "Disaster Simulation Lab",
+    "departments": [
+      {
+        "id": "153.1",
+        "name": "Disaster Scenario Intake",
+        "units": [
+          { "id": "153.1.1", "name": "Scenario Threat Capture" },
+          { "id": "153.1.2", "name": "Impact Scope Review" },
+          { "id": "153.1.3", "name": "Scenario Intake Summary" }
+        ]
+      },
+      {
+        "id": "153.2",
+        "name": "Simulation Design",
+        "units": [
+          { "id": "153.2.1", "name": "Simulation Objective Definition" },
+          { "id": "153.2.2", "name": "Failure Path Mapping" },
+          { "id": "153.2.3", "name": "Simulation Design QA" }
+        ]
+      },
+      {
+        "id": "153.3",
+        "name": "Stress Test Execution",
+        "units": [
+          { "id": "153.3.1", "name": "Stress Condition Setup" },
+          { "id": "153.3.2", "name": "Simulation Run Observation" },
+          { "id": "153.3.3", "name": "Stress Test Result Notes" }
+        ]
+      },
+      {
+        "id": "153.4",
+        "name": "Business Continuity Review",
+        "units": [
+          { "id": "153.4.1", "name": "Continuity Requirement Capture" },
+          { "id": "153.4.2", "name": "Recovery Capability Review" },
+          { "id": "153.4.3", "name": "Continuity Recommendation" }
+        ]
+      },
+      {
+        "id": "153.5",
+        "name": "Incident Drill Planning",
+        "units": [
+          { "id": "153.5.1", "name": "Drill Trigger Definition" },
+          { "id": "153.5.2", "name": "Response Role Mapping" },
+          { "id": "153.5.3", "name": "Drill Plan Summary" }
+        ]
+      },
+      {
+        "id": "153.6",
+        "name": "Recovery Path Testing",
+        "units": [
+          { "id": "153.6.1", "name": "Recovery Option Selection" },
+          { "id": "153.6.2", "name": "Recovery Step Execution" },
+          { "id": "153.6.3", "name": "Recovery Result Summary" }
+        ]
+      },
+      {
+        "id": "153.7",
+        "name": "Disaster Lessons Learned",
+        "units": [
+          { "id": "153.7.1", "name": "Lesson Signal Capture" },
+          { "id": "153.7.2", "name": "Failure Pattern Review" },
+          { "id": "153.7.3", "name": "Disaster Lesson Update" }
+        ]
+      },
+      {
+        "id": "153.8",
+        "name": "Simulation Evidence",
+        "units": [
+          { "id": "153.8.1", "name": "Simulation Event Logging" },
+          { "id": "153.8.2", "name": "Result Evidence Review" },
+          { "id": "153.8.3", "name": "Evidence Packet Update" }
+        ]
+      },
+      {
+        "id": "153.9",
+        "name": "Disaster Governance",
+        "units": [
+          { "id": "153.9.1", "name": "Disaster Rule Definition" },
+          { "id": "153.9.2", "name": "Preparedness Exception Review" },
+          { "id": "153.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "153.10",
+        "name": "Disaster Dashboard",
+        "units": [
+          { "id": "153.10.1", "name": "Disaster Signal Collection" },
+          { "id": "153.10.2", "name": "Readiness Status Summary" },
+          { "id": "153.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "154",
+    "name": "Public Launch Command Center",
+    "departments": [
+      {
+        "id": "154.1",
+        "name": "Launch Intake",
+        "units": [
+          { "id": "154.1.1", "name": "Launch Objective Capture" },
+          { "id": "154.1.2", "name": "Launch Scope Review" },
+          { "id": "154.1.3", "name": "Launch Intake Summary" }
+        ]
+      },
+      {
+        "id": "154.2",
+        "name": "Launch Readiness Planning",
+        "units": [
+          { "id": "154.2.1", "name": "Readiness Criteria Mapping" },
+          { "id": "154.2.2", "name": "Launch Blocker Review" },
+          { "id": "154.2.3", "name": "Readiness Plan Update" }
+        ]
+      },
+      {
+        "id": "154.3",
+        "name": "Public Messaging Coordination",
+        "units": [
+          { "id": "154.3.1", "name": "Message Theme Capture" },
+          { "id": "154.3.2", "name": "Public Statement Draft" },
+          { "id": "154.3.3", "name": "Messaging QA Review" }
+        ]
+      },
+      {
+        "id": "154.4",
+        "name": "Launch Asset Coordination",
+        "units": [
+          { "id": "154.4.1", "name": "Asset Requirement Capture" },
+          { "id": "154.4.2", "name": "Asset Status Review" },
+          { "id": "154.4.3", "name": "Launch Asset Tracker Update" }
+        ]
+      },
+      {
+        "id": "154.5",
+        "name": "Channel Launch Operations",
+        "units": [
+          { "id": "154.5.1", "name": "Channel Requirement Review" },
+          { "id": "154.5.2", "name": "Launch Sequence Mapping" },
+          { "id": "154.5.3", "name": "Channel Launch Notes" }
+        ]
+      },
+      {
+        "id": "154.6",
+        "name": "Launch Risk Control",
+        "units": [
+          { "id": "154.6.1", "name": "Launch Risk Signal Capture" },
+          { "id": "154.6.2", "name": "Mitigation Path Review" },
+          { "id": "154.6.3", "name": "Launch Risk Notes" }
+        ]
+      },
+      {
+        "id": "154.7",
+        "name": "Launch War Room",
+        "units": [
+          { "id": "154.7.1", "name": "War Room Role Mapping" },
+          { "id": "154.7.2", "name": "Live Issue Tracking" },
+          { "id": "154.7.3", "name": "War Room Status Notes" }
+        ]
+      },
+      {
+        "id": "154.8",
+        "name": "Launch Monitoring",
+        "units": [
+          { "id": "154.8.1", "name": "Public Signal Collection" },
+          { "id": "154.8.2", "name": "Launch Metric Review" },
+          { "id": "154.8.3", "name": "Monitoring Summary" }
+        ]
+      },
+      {
+        "id": "154.9",
+        "name": "Post-Launch Review",
+        "units": [
+          { "id": "154.9.1", "name": "Launch Outcome Capture" },
+          { "id": "154.9.2", "name": "Lessons Learned Review" },
+          { "id": "154.9.3", "name": "Post-Launch Summary" }
+        ]
+      },
+      {
+        "id": "154.10",
+        "name": "Launch Dashboard",
+        "units": [
+          { "id": "154.10.1", "name": "Launch Signal Collection" },
+          { "id": "154.10.2", "name": "Public Readiness Summary" },
+          { "id": "154.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  }
+]
