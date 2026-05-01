@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Initial runnable runtime skeleton upgraded to v0.2.0. Locked 175-family baseline preserved.
+Station Chief Runtime upgraded to v0.3.0. Locked 175-family baseline preserved.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -9,17 +9,20 @@ Project owner, system architect, and operating-doctrine author: Devin O’Rourke
 This attribution applies to the Agent Command Center Station Chief runtime skeleton. The locked 175-family baseline remains preserved.
 
 ## Purpose
-This report documents the first runnable Station Chief runtime skeleton after the Devinization stack lock and its v0.2.0 enhancement for persistent artifacts and deterministic fixture tests.
+This report documents the first runnable Station Chief runtime skeleton after the Devinization stack lock and its v0.3.0 enhancement for persistent runtime index, resumable run registry, and controlled execution adapters.
 
 ## Files Created / Modified
 10_runtime/station_chief_runtime.py
 10_runtime/station_chief_demo_cases.json
 10_runtime/station_chief_runtime_readme.md
 10_runtime/station_chief_fixture_tests.py
+10_runtime/station_chief_adapters.py
 09_exports/station_chief_runtime_skeleton_report.md
 09_exports/station_chief_runtime_v0_2_report.md
+09_exports/station_chief_runtime_v0_3_report.md
 scripts/validate_station_chief_runtime_skeleton.py
 scripts/validate_station_chief_runtime_v0_2.py
+scripts/validate_station_chief_runtime_v0_3.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -28,12 +31,15 @@ scripts/validate_station_chief_runtime_v0_2.py
 - overlay stack loading
 - command brief generation
 - non-executing work order generation
-- deterministic demo mode
 - persistent run log artifacts
 - command brief artifact output
 - work order artifact output
 - selected overlay artifact output
 - evidence artifact output
+- runtime index artifacts
+- resumable run registry
+- resume-by-run-id lookup
+- controlled no-op adapter simulation
 - deterministic fixture tests
 - proof-backed JSON output
 - baseline preservation
@@ -60,6 +66,7 @@ scripts/validate_station_chief_runtime_v0_2.py
 - Tier 4 — Audit / Archive
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v0_3.py
 python3 scripts/validate_station_chief_runtime_v0_2.py
 python3 scripts/validate_station_chief_runtime_skeleton.py
 python3 scripts/validate_devin_ownership_metadata.py
@@ -77,10 +84,10 @@ python3 scripts/validate_full_expansion_completion.py
 ## What This Does Not Do
 - Does not modify the 175-family baseline
 - Does not hire or animate worker agents yet
-- Does not execute work orders yet
+- Does not execute real work orders yet
 - Does not build UI yet
 - Does not connect live APIs yet
 - Does not authorize uncontrolled live execution
 
 ## Next Recommended Build Step
-Next recommended build step: add persistent runtime index, resumable run registry, and controlled execution adapters.
+Next recommended build step: add controlled file-operation adapters and human-confirmed execution gates.

@@ -17,7 +17,7 @@ REQUIRED_FILES = [
     ROOT / "10_runtime/station_chief_adapters.py",
     ROOT / "09_exports/station_chief_runtime_skeleton_report.md",
     ROOT / "09_exports/station_chief_runtime_v0_3_report.md",
-    ROOT / "scripts/validate_station_chief_runtime_skeleton.py",
+    ROOT / "scripts/validate_station_chief_runtime_v0_3.py",
 ]
 
 FORBIDDEN_SNIPPETS = [
@@ -53,20 +53,21 @@ runtime_path = ROOT / "10_runtime/station_chief_runtime.py"
 runtime_text = runtime_path.read_text() if runtime_path.exists() else ""
 for snippet in [
     'STATION_CHIEF_RUNTIME_VERSION = "0.3.0"',
-    "normalize_command_for_id",
     "generate_run_id",
     "build_runtime_artifacts",
     "write_runtime_artifacts",
+    "build_runtime_index_entry",
+    "load_registry",
+    "save_registry",
+    "update_registry",
+    "resume_run",
+    "write_runtime_index",
     "run_fixture_tests",
-    "--write-artifacts",
-    "--run-label",
-    "--fixture-test",
-    "persistent_run_logs",
-    "command_brief_artifacts",
-    "work_order_artifacts",
-    "deterministic_fixture_tests",
-    "selected_overlay_artifacts",
-    "evidence_artifacts",
+    "--list-adapters",
+    "--adapter",
+    "--simulate-adapter",
+    "--registry-dir",
+    "--resume-run-id",
     "persistent_runtime_index",
     "resumable_run_registry",
     "controlled_execution_adapters",
@@ -79,6 +80,26 @@ for forbidden in FORBIDDEN_SNIPPETS:
         errors.append(f"runtime contains forbidden snippet: {forbidden}")
 if "import subprocess" in runtime_text:
     errors.append("runtime must not import subprocess")
+
+adapter_path = ROOT / "10_runtime/station_chief_adapters.py"
+adapter_text = adapter_path.read_text() if adapter_path.exists() else ""
+for snippet in [
+    'ADAPTER_MODULE_VERSION = "0.3.0"',
+    "SUPPORTED_ADAPTERS",
+    "list_adapters",
+    "create_execution_plan",
+    "run_noop_adapter",
+    "controlled_noop",
+    "simulated_noop_complete",
+    "live_execution_performed",
+    "external_actions_taken",
+    "worker_agents_activated",
+]:
+    if snippet not in adapter_text:
+        errors.append(f"adapter module missing snippet: {snippet}")
+for forbidden in ["requests", "urllib.request", "os.system", "pip install", "npm install", "live API", "API key", "import subprocess"]:
+    if forbidden in adapter_text:
+        errors.append(f"adapter module contains forbidden snippet: {forbidden}")
 
 fixture_runner_text = (ROOT / "10_runtime/station_chief_fixture_tests.py").read_text() if (ROOT / "10_runtime/station_chief_fixture_tests.py").exists() else ""
 for snippet in [
@@ -108,7 +129,7 @@ for forbidden in ["Explain that", "Include:", "List:", "Write:"]:
     if forbidden in readme_text:
         errors.append(f"README contains forbidden scaffold text: {forbidden}")
 
-report_text = (ROOT / "09_exports/station_chief_runtime_skeleton_report.md").read_text() if (ROOT / "09_exports/station_chief_runtime_skeleton_report.md").exists() else ""
+skeleton_report_text = (ROOT / "09_exports/station_chief_runtime_skeleton_report.md").read_text() if (ROOT / "09_exports/station_chief_runtime_skeleton_report.md").exists() else ""
 for snippet in [
     "Station Chief Runtime upgraded to v0.3.0.",
     "persistent runtime index",
@@ -117,13 +138,38 @@ for snippet in [
     "controlled no-op adapter simulation",
     "no live API calls",
     "no full workforce animation",
+]:
+    if snippet not in skeleton_report_text:
+        errors.append(f"skeleton report missing required text: {snippet}")
+for forbidden in ["Explain that", "Include:", "List:", "Write:"]:
+    if forbidden in skeleton_report_text:
+        errors.append(f"skeleton report contains forbidden scaffold text: {forbidden}")
+
+report_text = (ROOT / "09_exports/station_chief_runtime_v0_3_report.md").read_text() if (ROOT / "09_exports/station_chief_runtime_v0_3_report.md").exists() else ""
+for snippet in [
+    "Station Chief Runtime v0.3.0 Report",
+    "Station Chief Runtime upgraded to v0.3.0. Locked 175-family baseline preserved.",
+    "persistent runtime index",
+    "run_registry.json",
+    "runtime_index.json",
+    "resume-by-run-id lookup",
+    "controlled execution adapter contract",
+    "safe no-op adapter",
+    "execution_plan.json",
+    "adapter_result.json",
+    "runtime_index_entry.json",
+    "no baseline mutation",
+    "no Devinization overlay mutation",
+    "no live API calls",
+    "no full workforce animation",
+    "Station Chief Runtime v0.3.0 keeps execution deterministic",
     "Next recommended build step",
 ]:
     if snippet not in report_text:
-        errors.append(f"skeleton report missing required text: {snippet}")
+        errors.append(f"v0.3 report missing required text: {snippet}")
 for forbidden in ["Explain that", "Include:", "List:", "Write:"]:
     if forbidden in report_text:
-        errors.append(f"skeleton report contains forbidden scaffold text: {forbidden}")
+        errors.append(f"v0.3 report contains forbidden scaffold text: {forbidden}")
 
 print("Manual scope check required: confirm git diff contains only the allowed Station Chief v0.3 runtime files.")
 
@@ -364,4 +410,4 @@ if errors:
     print("FAIL")
     sys.exit(1)
 
-print("PASS: Station Chief Runtime Skeleton valid.")
+print("PASS: Station Chief Runtime v0.3 valid.")

@@ -14,8 +14,9 @@ REQUIRED_FILES = [
     ROOT / "10_runtime/station_chief_demo_cases.json",
     ROOT / "10_runtime/station_chief_runtime_readme.md",
     ROOT / "10_runtime/station_chief_fixture_tests.py",
+    ROOT / "10_runtime/station_chief_adapters.py",
     ROOT / "09_exports/station_chief_runtime_skeleton_report.md",
-    ROOT / "09_exports/station_chief_runtime_v0_2_report.md",
+    ROOT / "09_exports/station_chief_runtime_v0_3_report.md",
     ROOT / "scripts/validate_station_chief_runtime_v0_2.py",
 ]
 
@@ -39,6 +40,10 @@ def run_cmd(args: list[str]) -> str:
     return proc.stdout
 
 
+def parsed_json_output(args: list[str]) -> dict:
+    return json.loads(run_cmd(args))
+
+
 errors: list[str] = []
 for path in REQUIRED_FILES:
     if not path.exists():
@@ -46,9 +51,8 @@ for path in REQUIRED_FILES:
 
 runtime_path = ROOT / "10_runtime/station_chief_runtime.py"
 runtime_text = runtime_path.read_text() if runtime_path.exists() else ""
-
-required_runtime_snippets = [
-    'STATION_CHIEF_RUNTIME_VERSION = "0.2.0"',
+for snippet in [
+    'STATION_CHIEF_RUNTIME_VERSION = "0.3.0"',
     "normalize_command_for_id",
     "generate_run_id",
     "build_runtime_artifacts",
@@ -63,8 +67,11 @@ required_runtime_snippets = [
     "deterministic_fixture_tests",
     "selected_overlay_artifacts",
     "evidence_artifacts",
-]
-for snippet in required_runtime_snippets:
+    "persistent_runtime_index",
+    "resumable_run_registry",
+    "controlled_execution_adapters",
+    "noop_execution_adapter",
+]:
     if snippet not in runtime_text:
         errors.append(f"runtime missing snippet: {snippet}")
 for forbidden in FORBIDDEN_SNIPPETS:
@@ -72,6 +79,25 @@ for forbidden in FORBIDDEN_SNIPPETS:
         errors.append(f"runtime contains forbidden snippet: {forbidden}")
 if "import subprocess" in runtime_text:
     errors.append("runtime must not import subprocess")
+
+adapter_text = (ROOT / "10_runtime/station_chief_adapters.py").read_text() if (ROOT / "10_runtime/station_chief_adapters.py").exists() else ""
+for snippet in [
+    'ADAPTER_MODULE_VERSION = "0.3.0"',
+    "SUPPORTED_ADAPTERS",
+    "list_adapters",
+    "create_execution_plan",
+    "run_noop_adapter",
+    "controlled_noop",
+    "simulated_noop_complete",
+    "live_execution_performed",
+    "external_actions_taken",
+    "worker_agents_activated",
+]:
+    if snippet not in adapter_text:
+        errors.append(f"adapter module missing snippet: {snippet}")
+for forbidden in ["requests", "urllib.request", "os.system", "pip install", "npm install", "live API", "API key", "import subprocess"]:
+    if forbidden in adapter_text:
+        errors.append(f"adapter module contains forbidden snippet: {forbidden}")
 
 fixture_runner_text = (ROOT / "10_runtime/station_chief_fixture_tests.py").read_text() if (ROOT / "10_runtime/station_chief_fixture_tests.py").exists() else ""
 for snippet in [
@@ -84,62 +110,54 @@ for snippet in [
 
 readme_text = (ROOT / "10_runtime/station_chief_runtime_readme.md").read_text() if (ROOT / "10_runtime/station_chief_runtime_readme.md").exists() else ""
 for snippet in [
-    "Initial runnable runtime skeleton upgraded to v0.2.0.",
-    "optional runtime artifacts",
-    "deterministic fixture tests",
-    "Runtime Artifacts",
-    "run_log.json",
-    "command_brief.json",
-    "work_orders.json",
-    "selected_overlays.json",
-    "evidence.json",
-    "manifest.json",
-    "full_result.json",
-    "The Station Chief runtime skeleton keeps the full 175-family command civilization intact",
+    "Station Chief Runtime upgraded to v0.3.0.",
+    "persistent run registry",
+    "resume-by-run-id lookup",
+    "controlled no-op execution adapter simulation",
+    "run_registry.json",
+    "runtime_index.json",
+    "execution_plan.json",
+    "adapter_result.json",
+    "runtime_index_entry.json",
+    "The Station Chief runtime keeps the full 175-family command civilization intact",
 ]:
     if snippet not in readme_text:
         errors.append(f"README missing required text: {snippet}")
-for forbidden in [
-    "Explain that",
-    "Include exact examples:",
-    "Include this exact paragraph:",
-    "Write:",
-]:
+for forbidden in ["Explain that", "Include:", "List:", "Write:"]:
     if forbidden in readme_text:
         errors.append(f"README contains forbidden scaffold text: {forbidden}")
 
-report_text = (ROOT / "09_exports/station_chief_runtime_v0_2_report.md").read_text() if (ROOT / "09_exports/station_chief_runtime_v0_2_report.md").exists() else ""
+report_text = (ROOT / "09_exports/station_chief_runtime_v0_3_report.md").read_text() if (ROOT / "09_exports/station_chief_runtime_v0_3_report.md").exists() else ""
 for snippet in [
-    "Station Chief Runtime v0.2.0 Report",
-    "Station Chief Runtime upgraded to v0.2.0. Locked 175-family baseline preserved.",
-    "deterministic run ID generation",
-    "optional artifact directory writing",
-    "persistent run_log.json",
-    "command_brief.json",
-    "work_orders.json",
-    "selected_overlays.json",
-    "evidence.json",
-    "manifest.json",
-    "full_result.json",
-    "deterministic fixture test runner",
+    "Station Chief Runtime v0.3.0 Report",
+    "Station Chief Runtime upgraded to v0.3.0. Locked 175-family baseline preserved.",
+    "persistent runtime index",
+    "run_registry.json",
+    "runtime_index.json",
+    "resume-by-run-id lookup",
+    "controlled execution adapter contract",
+    "safe no-op adapter",
+    "execution_plan.json",
+    "adapter_result.json",
+    "runtime_index_entry.json",
     "no baseline mutation",
     "no Devinization overlay mutation",
     "no live API calls",
     "no full workforce animation",
-    "Station Chief Runtime v0.2.0 keeps execution deterministic",
+    "Station Chief Runtime v0.3.0 keeps execution deterministic",
     "Next recommended build step",
 ]:
     if snippet not in report_text:
-        errors.append(f"v0.2 report missing required text: {snippet}")
+        errors.append(f"v0.3 report missing required text: {snippet}")
+for forbidden in ["Explain that", "Include:", "List:", "Write:"]:
+    if forbidden in report_text:
+        errors.append(f"v0.3 report contains forbidden scaffold text: {forbidden}")
 
-print("Manual scope check required: confirm git diff contains only the allowed Station Chief v0.2 runtime files.")
-
-def parsed_json_output(args: list[str]) -> dict:
-    return json.loads(run_cmd(args))
+print("Manual scope check required: confirm git diff contains only the allowed Station Chief v0.3 runtime files.")
 
 try:
     demo = parsed_json_output(["python3", "10_runtime/station_chief_runtime.py", "--demo"])
-    if demo.get("station_chief_runtime_version") != "0.2.0":
+    if demo.get("station_chief_runtime_version") != "0.3.0":
         errors.append("demo runtime version mismatch")
     if demo.get("command_type") != "verification":
         errors.append("demo command_type mismatch")
@@ -153,6 +171,10 @@ try:
         "deterministic_fixture_tests",
         "selected_overlay_artifacts",
         "evidence_artifacts",
+        "persistent_runtime_index",
+        "resumable_run_registry",
+        "controlled_execution_adapters",
+        "noop_execution_adapter",
     ]:
         if run_caps.get(key) is not True:
             errors.append(f"demo run_capabilities mismatch for {key}")
@@ -172,7 +194,7 @@ try:
     fixture = parsed_json_output(["python3", "10_runtime/station_chief_runtime.py", "--fixture-test"])
     if fixture.get("fixture_test_status") != "PASS":
         errors.append("runtime fixture-test status mismatch")
-    if fixture.get("runtime_version") != "0.2.0":
+    if fixture.get("runtime_version") != "0.3.0":
         errors.append("runtime fixture-test version mismatch")
     if fixture.get("case_count") != 5:
         errors.append("runtime fixture-test case count mismatch")
@@ -185,7 +207,7 @@ try:
     fixture_runner = parsed_json_output(["python3", "10_runtime/station_chief_fixture_tests.py"])
     if fixture_runner.get("fixture_test_status") != "PASS":
         errors.append("fixture runner status mismatch")
-    if fixture_runner.get("runtime_version") != "0.2.0":
+    if fixture_runner.get("runtime_version") != "0.3.0":
         errors.append("fixture runner version mismatch")
     if fixture_runner.get("case_count") != 5:
         errors.append("fixture runner case count mismatch")
@@ -209,6 +231,41 @@ except Exception as exc:
     errors.append(str(exc))
 
 try:
+    adapters = parsed_json_output(["python3", "10_runtime/station_chief_runtime.py", "--list-adapters"])
+    if adapters.get("adapter_module_version") != "0.3.0":
+        errors.append("adapter module version mismatch")
+    noop = adapters.get("supported_adapters", {}).get("noop")
+    if not noop:
+        errors.append("noop adapter missing")
+    else:
+        if noop.get("live_execution") is not False:
+            errors.append("noop live_execution mismatch")
+        if noop.get("external_actions") is not False:
+            errors.append("noop external_actions mismatch")
+        if noop.get("worker_animation") is not False:
+            errors.append("noop worker_animation mismatch")
+except Exception as exc:
+    errors.append(str(exc))
+
+try:
+    simulate = parsed_json_output(["python3", "10_runtime/station_chief_runtime.py", "--command", "check please", "--simulate-adapter"])
+    if "execution_plan" not in simulate:
+        errors.append("simulate output missing execution_plan")
+    if "adapter_result" not in simulate:
+        errors.append("simulate output missing adapter_result")
+    adapter_result = simulate.get("adapter_result", {})
+    if adapter_result.get("adapter_result_status") != "PASS":
+        errors.append("simulate adapter status mismatch")
+    if adapter_result.get("live_execution_performed") is not False:
+        errors.append("simulate live execution mismatch")
+    if adapter_result.get("external_actions_taken") is not False:
+        errors.append("simulate external actions mismatch")
+    if adapter_result.get("worker_agents_activated") is not False:
+        errors.append("simulate worker activation mismatch")
+except Exception as exc:
+    errors.append(str(exc))
+
+try:
     brief = parsed_json_output(["python3", "10_runtime/station_chief_runtime.py", "--command", "build Station Chief runtime skeleton", "--brief"])
     if brief.get("command_type") != "build":
         errors.append("brief command_type mismatch")
@@ -226,24 +283,28 @@ except Exception as exc:
     errors.append(str(exc))
 
 try:
-    with tempfile.TemporaryDirectory() as tmpdir:
+    with tempfile.TemporaryDirectory() as tmp_run_dir, tempfile.TemporaryDirectory() as tmp_registry_dir:
         with_artifacts = parsed_json_output([
             "python3",
             "10_runtime/station_chief_runtime.py",
             "--command",
             "check please",
             "--write-artifacts",
-            tmpdir,
+            tmp_run_dir,
+            "--registry-dir",
+            tmp_registry_dir,
         ])
         summary = with_artifacts.get("artifact_write_summary")
         if not summary:
             errors.append("missing artifact_write_summary")
         else:
-            if not str(summary.get("run_id", "")).startswith("station-chief-v0-2-check-please-"):
+            if not str(summary.get("run_id", "")).startswith("station-chief-v0-3-check-please-"):
                 errors.append("artifact run_id prefix mismatch")
             artifact_dir = Path(summary.get("artifact_dir", ""))
             if not artifact_dir.exists():
                 errors.append("artifact directory missing")
+            if summary.get("registry_updated") is not True:
+                errors.append("registry_updated flag mismatch")
             files_written = summary.get("files_written", [])
             expected_files = {
                 "run_log.json",
@@ -251,6 +312,9 @@ try:
                 "work_orders.json",
                 "selected_overlays.json",
                 "evidence.json",
+                "execution_plan.json",
+                "adapter_result.json",
+                "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
             }
@@ -258,18 +322,19 @@ try:
                 errors.append(f"artifact files written mismatch: {files_written}")
             manifest = json.loads((artifact_dir / "manifest.json").read_text())
             for key, expected in [
-                ("artifact_type", "station_chief_runtime_v0_2_artifacts"),
-                ("runtime_version", "0.2.0"),
+                ("artifact_type", "station_chief_runtime_v0_3_artifacts"),
+                ("runtime_version", "0.3.0"),
                 ("baseline_preserved", True),
                 ("external_actions_taken", False),
                 ("live_worker_agents_activated", False),
                 ("deterministic_demo_mode", True),
+                ("controlled_execution_adapter", "noop"),
             ]:
-                if manifest.get(key) is not expected and manifest.get(key) != expected:
+                if manifest.get(key) != expected:
                     errors.append(f"artifact manifest mismatch for {key}")
             run_log = json.loads((artifact_dir / "run_log.json").read_text())
             for key, expected in [
-                ("runtime_version", "0.2.0"),
+                ("runtime_version", "0.3.0"),
                 ("command", "check please"),
                 ("command_type", "verification"),
                 ("baseline_preserved", True),
@@ -277,12 +342,47 @@ try:
                 ("live_worker_agents_activated", False),
                 ("deterministic_demo_mode", True),
             ]:
-                if run_log.get(key) is not expected and run_log.get(key) != expected:
+                if run_log.get(key) != expected:
                     errors.append(f"run_log mismatch for {key}")
             if run_log.get("activation_tier", {}).get("name") != "Tier 4 — Audit / Archive":
                 errors.append("run_log activation tier mismatch")
-            if not with_artifacts.get("artifact_write_summary"):
-                errors.append("printed JSON missing artifact_write_summary")
+            registry_dir = Path(summary.get("registry_dir", tmp_registry_dir))
+            run_registry = json.loads((registry_dir / "run_registry.json").read_text())
+            if run_registry.get("registry_version") != "0.3.0":
+                errors.append("registry version mismatch")
+            if not any(run.get("run_id") == summary.get("run_id") for run in run_registry.get("runs", [])):
+                errors.append("registry missing run entry")
+            runtime_index = json.loads((registry_dir / "runtime_index.json").read_text())
+            if runtime_index.get("index_version") != "0.3.0":
+                errors.append("runtime index version mismatch")
+            if runtime_index.get("run_count", 0) < 1:
+                errors.append("runtime index count mismatch")
+            if not any(run.get("run_id") == summary.get("run_id") for run in runtime_index.get("runs", [])):
+                errors.append("runtime index missing run entry")
+            found = parsed_json_output([
+                "python3",
+                "10_runtime/station_chief_runtime.py",
+                "--resume-run-id",
+                summary.get("run_id", ""),
+                "--registry-dir",
+                str(registry_dir),
+            ])
+            if found.get("resume_status") != "FOUND":
+                errors.append("resume found status mismatch")
+            if found.get("run_id") != summary.get("run_id"):
+                errors.append("resume run_id mismatch")
+            if found.get("run_entry", {}).get("run_id") != summary.get("run_id"):
+                errors.append("resume run_entry mismatch")
+            missing = parsed_json_output([
+                "python3",
+                "10_runtime/station_chief_runtime.py",
+                "--resume-run-id",
+                "missing-run",
+                "--registry-dir",
+                str(registry_dir),
+            ])
+            if missing.get("resume_status") != "NOT_FOUND":
+                errors.append("resume missing status mismatch")
 except Exception as exc:
     errors.append(str(exc))
 
@@ -292,4 +392,4 @@ if errors:
     print("FAIL")
     sys.exit(1)
 
-print("PASS: Station Chief Runtime v0.2 valid.")
+print("PASS: Station Chief Runtime v0.3 valid.")

@@ -8,7 +8,9 @@ import re
 from pathlib import Path
 from typing import Any
 
-STATION_CHIEF_RUNTIME_VERSION = "0.2.0"
+from station_chief_adapters import create_execution_plan, list_adapters, run_noop_adapter
+
+STATION_CHIEF_RUNTIME_VERSION = "0.3.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -210,7 +212,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}|{run_label}|{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v0-2-{normalized}-{digest[:12]}"
+    return f"station-chief-v0-3-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -317,10 +319,88 @@ def create_work_orders(command_brief: dict[str, Any]) -> list[dict[str, Any]]:
     return work_orders
 
 
-def run_station_chief(command: str) -> dict[str, Any]:
+def load_registry(registry_dir: str | Path) -> dict:
+    registry_path = Path(registry_dir) / "run_registry.json"
+    if not registry_path.exists():
+        return {
+            "registry_version": "0.3.0",
+            "runtime_name": "Station Chief Runtime",
+            "runs": [],
+        }
+    return json.loads(registry_path.read_text())
+
+
+def save_registry(registry_dir: str | Path, registry: dict) -> None:
+    registry_path = Path(registry_dir)
+    registry_path.mkdir(parents=True, exist_ok=True)
+    (registry_path / "run_registry.json").write_text(json.dumps(registry, indent=2, ensure_ascii=False) + "\n")
+
+
+def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
+    registry = load_registry(registry_dir)
+    runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
+    runs.append(index_entry)
+    registry["registry_version"] = "0.3.0"
+    registry["runtime_name"] = "Station Chief Runtime"
+    registry["runs"] = runs
+    save_registry(registry_dir, registry)
+    return registry
+
+
+def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
+    index = {
+        "index_version": "0.3.0",
+        "runtime_name": "Station Chief Runtime",
+        "run_count": len(registry.get("runs", [])),
+        "runs": registry.get("runs", []),
+    }
+    registry_path = Path(registry_dir)
+    registry_path.mkdir(parents=True, exist_ok=True)
+    (registry_path / "runtime_index.json").write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n")
+    return index
+
+
+def resume_run(registry_dir: str | Path, run_id: str) -> dict:
+    registry = load_registry(registry_dir)
+    for run_entry in registry.get("runs", []):
+        if run_entry.get("run_id") == run_id:
+            return {
+                "resume_status": "FOUND",
+                "run_id": run_id,
+                "registry_dir": str(registry_dir),
+                "run_entry": run_entry,
+            }
+    return {
+        "resume_status": "NOT_FOUND",
+        "run_id": run_id,
+        "registry_dir": str(registry_dir),
+        "run_entry": None,
+    }
+
+
+def build_runtime_index_entry(result: dict, run_id: str, artifact_dir: str | None = None) -> dict:
+    return {
+        "run_id": run_id,
+        "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
+        "command": result["command"],
+        "command_type": result["command_type"],
+        "activation_tier": result["activation_tier"]["name"],
+        "selected_overlays": result["selected_overlays"],
+        "artifact_dir": artifact_dir,
+        "baseline_preserved": True,
+        "external_actions_taken": False,
+        "live_worker_agents_activated": False,
+        "deterministic_demo_mode": True,
+        "runtime_status": result["runtime_status"],
+    }
+
+
+def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any]:
     brief = create_command_brief(command)
     work_orders = create_work_orders(brief)
     overlays = load_overlay_stack()
+    execution_plan = create_execution_plan(brief, work_orders, adapter_name=adapter_name)
+    adapter_result = run_noop_adapter(execution_plan)
     return {
         "station_chief_runtime_version": STATION_CHIEF_RUNTIME_VERSION,
         "runtime_status": "deterministic_demo_ready",
@@ -331,6 +411,10 @@ def run_station_chief(command: str) -> dict[str, Any]:
             "deterministic_fixture_tests": True,
             "selected_overlay_artifacts": True,
             "evidence_artifacts": True,
+            "persistent_runtime_index": True,
+            "resumable_run_registry": True,
+            "controlled_execution_adapters": True,
+            "noop_execution_adapter": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -340,6 +424,9 @@ def run_station_chief(command: str) -> dict[str, Any]:
         "selected_overlays": brief["selected_overlays"],
         "command_brief": brief,
         "work_orders": work_orders,
+        "adapter_name": adapter_name,
+        "execution_plan": execution_plan,
+        "adapter_result": adapter_result,
         "evidence": {
             "baseline_preserved": True,
             "external_actions_taken": False,
@@ -347,16 +434,22 @@ def run_station_chief(command: str) -> dict[str, Any]:
             "deterministic_demo_mode": True,
             "validators_required_before_completion": True,
         },
-        "next_step": "Next step: add persistent runtime index, resumable run registry, and controlled execution adapters.",
+        "next_step": "Next step: add controlled file-operation adapters and human-confirmed execution gates.",
     }
 
 
 def build_runtime_artifacts(result: dict, run_id: str) -> dict:
+    adapter_name = result.get("adapter_name", "noop")
+    command_brief = result["command_brief"]
+    work_orders = result["work_orders"]
+    execution_plan = result.get("execution_plan") or create_execution_plan(command_brief, work_orders, adapter_name=adapter_name)
+    adapter_result = result.get("adapter_result") or run_noop_adapter(execution_plan)
     selected_records = [
         item
         for item in result["overlay_stack_summary"]
         if item["id"] in result["selected_overlays"]
     ]
+    runtime_index_entry = build_runtime_index_entry(result, run_id, artifact_dir=None)
     return {
         "run_log": {
             "run_id": run_id,
@@ -373,23 +466,29 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "validators_required_before_completion": result["evidence"]["validators_required_before_completion"],
             "next_step": result["next_step"],
         },
-        "command_brief": result["command_brief"],
-        "work_orders": result["work_orders"],
+        "command_brief": command_brief,
+        "work_orders": work_orders,
         "selected_overlays": {
             "selected_overlay_ids": result["selected_overlays"],
             "selected_overlay_records": selected_records,
         },
         "evidence": result["evidence"],
+        "execution_plan": execution_plan,
+        "adapter_result": adapter_result,
+        "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v0_2_artifacts",
+            "artifact_type": "station_chief_runtime_v0_3_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
                 "work_orders.json",
                 "selected_overlays.json",
                 "evidence.json",
+                "execution_plan.json",
+                "adapter_result.json",
+                "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
             ],
@@ -397,6 +496,7 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "external_actions_taken": False,
             "live_worker_agents_activated": False,
             "deterministic_demo_mode": True,
+            "controlled_execution_adapter": "noop",
         },
     }
 
@@ -405,7 +505,12 @@ def _write_json(path: Path, data: Any) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 
 
-def write_runtime_artifacts(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
+def write_runtime_artifacts(
+    result: dict,
+    output_dir: str | Path,
+    run_label: str = "station-chief-runtime",
+    registry_dir: str | Path | None = None,
+) -> dict:
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
     run_id = generate_run_id(result["command"], run_label=run_label)
@@ -414,13 +519,15 @@ def write_runtime_artifacts(result: dict, output_dir: str | Path, run_label: str
 
     artifacts = build_runtime_artifacts(result, run_id)
     files_written = []
-
     mapping = {
         "run_log.json": artifacts["run_log"],
         "command_brief.json": artifacts["command_brief"],
         "work_orders.json": artifacts["work_orders"],
         "selected_overlays.json": artifacts["selected_overlays"],
         "evidence.json": artifacts["evidence"],
+        "execution_plan.json": artifacts["execution_plan"],
+        "adapter_result.json": artifacts["adapter_result"],
+        "runtime_index_entry.json": artifacts["runtime_index_entry"],
         "manifest.json": artifacts["manifest"],
         "full_result.json": result,
     }
@@ -428,10 +535,24 @@ def write_runtime_artifacts(result: dict, output_dir: str | Path, run_label: str
         _write_json(artifact_dir / filename, payload)
         files_written.append(filename)
 
+    registry_updated = False
+    registry_dir_str = None
+    if registry_dir is not None:
+        registry_dir_path = Path(registry_dir)
+        registry_dir_path.mkdir(parents=True, exist_ok=True)
+        runtime_index_entry = dict(artifacts["runtime_index_entry"])
+        runtime_index_entry["artifact_dir"] = str(artifact_dir)
+        registry = update_registry(registry_dir_path, runtime_index_entry)
+        write_runtime_index(registry_dir_path, registry)
+        registry_updated = True
+        registry_dir_str = str(registry_dir_path)
+
     return {
         "run_id": run_id,
         "artifact_dir": str(artifact_dir),
         "files_written": files_written,
+        "registry_updated": registry_updated,
+        "registry_dir": registry_dir_str,
     }
 
 
@@ -480,10 +601,15 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--json", action="store_true", help="Print full Station Chief result as JSON")
     parser.add_argument("--brief", action="store_true", help="Print the command brief as JSON")
     parser.add_argument("--list-overlays", action="store_true", help="Print overlay stack summary as JSON")
+    parser.add_argument("--list-adapters", action="store_true", help="Print adapter catalog as JSON")
     parser.add_argument("--write-output", type=str, help="Write full result JSON to a file path")
     parser.add_argument("--write-artifacts", type=str, help="Write runtime artifacts into the provided directory")
     parser.add_argument("--run-label", type=str, default="station-chief-runtime", help="Label included in artifact run IDs")
     parser.add_argument("--fixture-test", action="store_true", help="Run deterministic fixture tests")
+    parser.add_argument("--adapter", type=str, default="noop", help="Choose the controlled execution adapter")
+    parser.add_argument("--simulate-adapter", action="store_true", help="Simulate the selected controlled execution adapter")
+    parser.add_argument("--registry-dir", type=str, help="Directory used for the persistent run registry")
+    parser.add_argument("--resume-run-id", type=str, help="Resume a previously recorded run by run ID")
     return parser
 
 
@@ -493,6 +619,17 @@ def main() -> None:
 
     if args.fixture_test:
         print(json.dumps(run_fixture_tests(), indent=2, ensure_ascii=False))
+        return
+
+    if args.list_adapters:
+        print(json.dumps(list_adapters(), indent=2, ensure_ascii=False))
+        return
+
+    if args.resume_run_id:
+        if not args.registry_dir:
+            print(json.dumps({"resume_status": "ERROR", "error": "--resume-run-id requires --registry-dir"}, indent=2, ensure_ascii=False))
+            return
+        print(json.dumps(resume_run(args.registry_dir, args.resume_run_id), indent=2, ensure_ascii=False))
         return
 
     if args.demo:
@@ -508,15 +645,22 @@ def main() -> None:
         print(json.dumps(load_overlay_stack(), indent=2, ensure_ascii=False))
         return
 
-    result = run_station_chief(command)
+    result = run_station_chief(command, adapter_name=args.adapter)
     output: Any = result
 
     artifact_summary = None
     if args.write_artifacts:
-        artifact_result = dict(result)
-        artifact_summary = write_runtime_artifacts(artifact_result, args.write_artifacts, run_label=args.run_label)
+        artifact_summary = write_runtime_artifacts(
+            dict(result),
+            args.write_artifacts,
+            run_label=args.run_label,
+            registry_dir=args.registry_dir,
+        )
         result = dict(result)
         result["artifact_write_summary"] = artifact_summary
+        output = result
+
+    if args.simulate_adapter:
         output = result
 
     if args.brief:
@@ -526,7 +670,7 @@ def main() -> None:
                 "command_brief": result["command_brief"],
                 "artifact_write_summary": artifact_summary,
             }
-    elif args.json or args.demo or args.command or args.write_output or args.write_artifacts:
+    elif args.json or args.demo or args.command or args.write_output or args.write_artifacts or args.simulate_adapter:
         output = result
 
     if args.write_output:
