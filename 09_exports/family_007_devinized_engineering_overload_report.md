@@ -3,6 +3,11 @@
 ## Status
 Overlay created. Locked baseline preserved.
 
+## Ownership / Attribution
+
+Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
+
+This attribution applies to the Agent Command Center Devinization overlay architecture. The locked 175-family baseline remains preserved; this metadata identifies Devin O’Rourke as owner/architect of the Devinization overlay stack.
 ## Purpose
 This pack turns Engineering & Automation into the runnable-build engine for the Agent Command Center. It defines the specialized engineering crews needed for runtime, tool wiring, command routing, and developer workflows.
 

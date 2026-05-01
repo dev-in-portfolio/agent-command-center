@@ -57,19 +57,61 @@
       "crew_name": "Station Chief Command Intake Crew",
       "family_anchor": "1. Agent Command",
       "mission": "Receive the user’s top-level command, identify whether it is a question, verification request, build request, correction, memory instruction, routing request, or strict execution task.",
-      "triggers": ["station chief", "one command", "new task", "check please", "what’s next", "execute this"],
-      "primary_outputs": ["command_intake_record.json", "command_type_classification.md", "user_instruction_summary.md"],
-      "handoff_targets": ["DV.P1.002 Station Chief Routing Decision Crew", "DV.P1.013 Intent vs Interpretation Crew", "DV.P1.031 Final Rule Arbitration Crew"],
+      "triggers": [
+        "station chief",
+        "one command",
+        "new task",
+        "check please",
+        "what’s next",
+        "execute this"
+      ],
+      "primary_outputs": [
+        "command_intake_record.json",
+        "command_type_classification.md",
+        "user_instruction_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.002 Station Chief Routing Decision Crew",
+        "DV.P1.013 Intent vs Interpretation Crew",
+        "DV.P1.031 Final Rule Arbitration Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.001.1A", "role": "Realist" },
-        { "id": "DV.P1.001.1B", "role": "Overachiever" },
-        { "id": "DV.P1.001.1C", "role": "Dreamer" },
-        { "id": "DV.P1.001.1D", "role": "Timid" },
-        { "id": "DV.P1.001.1E", "role": "Overprotective" },
-        { "id": "DV.P1.001.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.001.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.001.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.001.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.001.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.001.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.001.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.001.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.001.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.001.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.001.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.001.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.001.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -77,19 +119,60 @@
       "crew_name": "Station Chief Routing Decision Crew",
       "family_anchor": "1. Agent Command",
       "mission": "Decide which families, Devinization packs, overlays, command layers, or execution crews should be consulted for a task without waking the entire agency as live execution.",
-      "triggers": ["route this", "which department", "who handles this", "agency routing", "dispatch"],
-      "primary_outputs": ["routing_decision.json", "selected_family_map.md", "activation_tier_summary.md"],
-      "handoff_targets": ["DV.P1.003 Council Scan Crew", "DV.P1.007 Constitution Enforcement Crew", "DV.P1.031 Final Rule Arbitration Crew"],
+      "triggers": [
+        "route this",
+        "which department",
+        "who handles this",
+        "agency routing",
+        "dispatch"
+      ],
+      "primary_outputs": [
+        "routing_decision.json",
+        "selected_family_map.md",
+        "activation_tier_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.003 Council Scan Crew",
+        "DV.P1.007 Constitution Enforcement Crew",
+        "DV.P1.031 Final Rule Arbitration Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.002.1A", "role": "Realist" },
-        { "id": "DV.P1.002.1B", "role": "Overachiever" },
-        { "id": "DV.P1.002.1C", "role": "Dreamer" },
-        { "id": "DV.P1.002.1D", "role": "Timid" },
-        { "id": "DV.P1.002.1E", "role": "Overprotective" },
-        { "id": "DV.P1.002.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.002.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.002.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.002.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.002.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.002.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.002.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.002.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.002.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.002.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.002.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.002.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.002.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -97,19 +180,58 @@
       "crew_name": "Council Scan Crew",
       "family_anchor": "1. Agent Command",
       "mission": "Perform a fast whole-agency awareness scan to identify which families may have relevance before expensive or live execution begins.",
-      "triggers": ["scan the agency", "whole map", "who should weigh in", "command council"],
-      "primary_outputs": ["council_scan_notes.md", "relevant_family_candidates.json", "passive_awareness_summary.md"],
-      "handoff_targets": ["DV.P1.002 Station Chief Routing Decision Crew", "DV.P1.004 Command Brief Crew"],
+      "triggers": [
+        "scan the agency",
+        "whole map",
+        "who should weigh in",
+        "command council"
+      ],
+      "primary_outputs": [
+        "council_scan_notes.md",
+        "relevant_family_candidates.json",
+        "passive_awareness_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.002 Station Chief Routing Decision Crew",
+        "DV.P1.004 Command Brief Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.003.1A", "role": "Realist" },
-        { "id": "DV.P1.003.1B", "role": "Overachiever" },
-        { "id": "DV.P1.003.1C", "role": "Dreamer" },
-        { "id": "DV.P1.003.1D", "role": "Timid" },
-        { "id": "DV.P1.003.1E", "role": "Overprotective" },
-        { "id": "DV.P1.003.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.003.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.003.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.003.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.003.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.003.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.003.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.003.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.003.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.003.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.003.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.003.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.003.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -117,19 +239,58 @@
       "crew_name": "Command Brief Crew",
       "family_anchor": "1. Agent Command",
       "mission": "Convert routing decisions into a clear operation brief that explains objective, scope, allowed actions, forbidden actions, required artifacts, and success criteria.",
-      "triggers": ["command brief", "operation brief", "scope this", "write the mission"],
-      "primary_outputs": ["operation_brief.md", "scope_boundary.md", "success_criteria.md"],
-      "handoff_targets": ["DV.P1.005 Execution Permission Crew", "DV.P1.024 Command Shortcut Resolver Crew"],
+      "triggers": [
+        "command brief",
+        "operation brief",
+        "scope this",
+        "write the mission"
+      ],
+      "primary_outputs": [
+        "operation_brief.md",
+        "scope_boundary.md",
+        "success_criteria.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.005 Execution Permission Crew",
+        "DV.P1.024 Command Shortcut Resolver Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.004.1A", "role": "Realist" },
-        { "id": "DV.P1.004.1B", "role": "Overachiever" },
-        { "id": "DV.P1.004.1C", "role": "Dreamer" },
-        { "id": "DV.P1.004.1D", "role": "Timid" },
-        { "id": "DV.P1.004.1E", "role": "Overprotective" },
-        { "id": "DV.P1.004.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.004.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.004.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.004.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.004.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.004.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.004.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.004.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.004.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.004.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.004.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.004.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.004.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -137,19 +298,60 @@
       "crew_name": "Execution Permission Crew",
       "family_anchor": "1. Agent Command",
       "mission": "Decide whether the system should answer, ask, verify, create a prompt, modify files, run validators, or stop for human confirmation.",
-      "triggers": ["can we run", "should we execute", "permission", "confirm before action", "external action"],
-      "primary_outputs": ["execution_permission_record.json", "action_boundary_notes.md", "confirmation_requirement.md"],
-      "handoff_targets": ["DV.P1.031 Final Rule Arbitration Crew", "DV.P1.032 Override Review Crew", "DV.P1.034 Scope Drift Stopper Crew"],
+      "triggers": [
+        "can we run",
+        "should we execute",
+        "permission",
+        "confirm before action",
+        "external action"
+      ],
+      "primary_outputs": [
+        "execution_permission_record.json",
+        "action_boundary_notes.md",
+        "confirmation_requirement.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.031 Final Rule Arbitration Crew",
+        "DV.P1.032 Override Review Crew",
+        "DV.P1.034 Scope Drift Stopper Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.005.1A", "role": "Realist" },
-        { "id": "DV.P1.005.1B", "role": "Overachiever" },
-        { "id": "DV.P1.005.1C", "role": "Dreamer" },
-        { "id": "DV.P1.005.1D", "role": "Timid" },
-        { "id": "DV.P1.005.1E", "role": "Overprotective" },
-        { "id": "DV.P1.005.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.005.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.005.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.005.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.005.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.005.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.005.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.005.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.005.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.005.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.005.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.005.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.005.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -157,19 +359,60 @@
       "crew_name": "Command Result Reporting Crew",
       "family_anchor": "1. Agent Command",
       "mission": "Report results in Devin’s preferred style: direct, useful, specific, with changed files, validator results, commit hashes, and no fake completion.",
-      "triggers": ["report back", "final answer", "what happened", "summarize results", "check result"],
-      "primary_outputs": ["result_report.md", "validator_summary.md", "changed_file_summary.md", "next_step_recommendation.md"],
-      "handoff_targets": ["DV.P1.018 Preference Application Crew", "DV.P1.035 Final Lock Crew"],
+      "triggers": [
+        "report back",
+        "final answer",
+        "what happened",
+        "summarize results",
+        "check result"
+      ],
+      "primary_outputs": [
+        "result_report.md",
+        "validator_summary.md",
+        "changed_file_summary.md",
+        "next_step_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.018 Preference Application Crew",
+        "DV.P1.035 Final Lock Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.006.1A", "role": "Realist" },
-        { "id": "DV.P1.006.1B", "role": "Overachiever" },
-        { "id": "DV.P1.006.1C", "role": "Dreamer" },
-        { "id": "DV.P1.006.1D", "role": "Timid" },
-        { "id": "DV.P1.006.1E", "role": "Overprotective" },
-        { "id": "DV.P1.006.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.006.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.006.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.006.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.006.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.006.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.006.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.006.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.006.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.006.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.006.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.006.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.006.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -177,19 +420,59 @@
       "crew_name": "Constitution Enforcement Crew",
       "family_anchor": "100. Master Control, Meta-Architecture & System Constitution",
       "mission": "Enforce the system constitution, including baseline preservation, overlay-first Devinization, strict execution mode, and no unauthorized scope expansion.",
-      "triggers": ["constitution", "locked baseline", "system rules", "preserve architecture", "don’t mutate baseline"],
-      "primary_outputs": ["constitution_check.md", "rule_application_record.json", "baseline_protection_notes.md"],
-      "handoff_targets": ["DV.P1.031 Final Rule Arbitration Crew", "DV.P1.034 Scope Drift Stopper Crew"],
+      "triggers": [
+        "constitution",
+        "locked baseline",
+        "system rules",
+        "preserve architecture",
+        "don’t mutate baseline"
+      ],
+      "primary_outputs": [
+        "constitution_check.md",
+        "rule_application_record.json",
+        "baseline_protection_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.031 Final Rule Arbitration Crew",
+        "DV.P1.034 Scope Drift Stopper Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.007.1A", "role": "Realist" },
-        { "id": "DV.P1.007.1B", "role": "Overachiever" },
-        { "id": "DV.P1.007.1C", "role": "Dreamer" },
-        { "id": "DV.P1.007.1D", "role": "Timid" },
-        { "id": "DV.P1.007.1E", "role": "Overprotective" },
-        { "id": "DV.P1.007.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.007.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.007.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.007.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.007.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.007.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.007.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.007.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.007.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.007.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.007.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.007.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.007.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -197,19 +480,59 @@
       "crew_name": "Baseline Preservation Crew",
       "family_anchor": "100. Master Control, Meta-Architecture & System Constitution",
       "mission": "Protect the locked 175-family baseline by requiring overlays for enhancements and blocking unauthorized edits to core org-chart files.",
-      "triggers": ["baseline", "locked", "overlay", "don’t touch family files", "preserve lock"],
-      "primary_outputs": ["baseline_guard_report.md", "allowed_file_scope.md", "forbidden_file_scope.md"],
-      "handoff_targets": ["DV.P1.007 Constitution Enforcement Crew", "DV.P1.034 Scope Drift Stopper Crew"],
+      "triggers": [
+        "baseline",
+        "locked",
+        "overlay",
+        "don’t touch family files",
+        "preserve lock"
+      ],
+      "primary_outputs": [
+        "baseline_guard_report.md",
+        "allowed_file_scope.md",
+        "forbidden_file_scope.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.007 Constitution Enforcement Crew",
+        "DV.P1.034 Scope Drift Stopper Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.008.1A", "role": "Realist" },
-        { "id": "DV.P1.008.1B", "role": "Overachiever" },
-        { "id": "DV.P1.008.1C", "role": "Dreamer" },
-        { "id": "DV.P1.008.1D", "role": "Timid" },
-        { "id": "DV.P1.008.1E", "role": "Overprotective" },
-        { "id": "DV.P1.008.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.008.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.008.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.008.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.008.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.008.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.008.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.008.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.008.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.008.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.008.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.008.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.008.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -217,19 +540,58 @@
       "crew_name": "Rule Precedence Crew",
       "family_anchor": "100. Master Control, Meta-Architecture & System Constitution",
       "mission": "Decide which instruction wins when user instruction, prior memory, tool limitations, safety rules, repo state, and assistant assumptions conflict.",
-      "triggers": ["rule conflict", "which rule wins", "precedence", "instruction conflict"],
-      "primary_outputs": ["rule_precedence_decision.md", "conflict_resolution_record.json", "applied_rule_stack.md"],
-      "handoff_targets": ["DV.P1.031 Final Rule Arbitration Crew", "DV.P1.032 Override Review Crew"],
+      "triggers": [
+        "rule conflict",
+        "which rule wins",
+        "precedence",
+        "instruction conflict"
+      ],
+      "primary_outputs": [
+        "rule_precedence_decision.md",
+        "conflict_resolution_record.json",
+        "applied_rule_stack.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.031 Final Rule Arbitration Crew",
+        "DV.P1.032 Override Review Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.009.1A", "role": "Realist" },
-        { "id": "DV.P1.009.1B", "role": "Overachiever" },
-        { "id": "DV.P1.009.1C", "role": "Dreamer" },
-        { "id": "DV.P1.009.1D", "role": "Timid" },
-        { "id": "DV.P1.009.1E", "role": "Overprotective" },
-        { "id": "DV.P1.009.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.009.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.009.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.009.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.009.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.009.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.009.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.009.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.009.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.009.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.009.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.009.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.009.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -237,19 +599,59 @@
       "crew_name": "Architecture Boundary Crew",
       "family_anchor": "100. Master Control, Meta-Architecture & System Constitution",
       "mission": "Ensure enhancements are added as overlays, packs, runtime layers, reports, or validators rather than uncontrolled changes to locked architecture.",
-      "triggers": ["architecture boundary", "extension pack", "overlay", "system layer", "architecture drift"],
-      "primary_outputs": ["architecture_boundary_review.md", "overlay_decision.md", "mutation_risk_notes.md"],
-      "handoff_targets": ["DV.P1.008 Baseline Preservation Crew", "DV.P1.034 Scope Drift Stopper Crew"],
+      "triggers": [
+        "architecture boundary",
+        "extension pack",
+        "overlay",
+        "system layer",
+        "architecture drift"
+      ],
+      "primary_outputs": [
+        "architecture_boundary_review.md",
+        "overlay_decision.md",
+        "mutation_risk_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.008 Baseline Preservation Crew",
+        "DV.P1.034 Scope Drift Stopper Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.010.1A", "role": "Realist" },
-        { "id": "DV.P1.010.1B", "role": "Overachiever" },
-        { "id": "DV.P1.010.1C", "role": "Dreamer" },
-        { "id": "DV.P1.010.1D", "role": "Timid" },
-        { "id": "DV.P1.010.1E", "role": "Overprotective" },
-        { "id": "DV.P1.010.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.010.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.010.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.010.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.010.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.010.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.010.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.010.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.010.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.010.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.010.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.010.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.010.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -257,19 +659,58 @@
       "crew_name": "System Integrity Crew",
       "family_anchor": "100. Master Control, Meta-Architecture & System Constitution",
       "mission": "Check whether a proposed change preserves the whole-agency design, avoids reducing the art piece, and maintains structural consistency.",
-      "triggers": ["system integrity", "art piece", "whole agency", "structural consistency"],
-      "primary_outputs": ["system_integrity_report.md", "agency_preservation_notes.md", "structural_consistency_check.md"],
-      "handoff_targets": ["DV.P1.031 Final Rule Arbitration Crew", "DV.P1.035 Final Lock Crew"],
+      "triggers": [
+        "system integrity",
+        "art piece",
+        "whole agency",
+        "structural consistency"
+      ],
+      "primary_outputs": [
+        "system_integrity_report.md",
+        "agency_preservation_notes.md",
+        "structural_consistency_check.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.031 Final Rule Arbitration Crew",
+        "DV.P1.035 Final Lock Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.011.1A", "role": "Realist" },
-        { "id": "DV.P1.011.1B", "role": "Overachiever" },
-        { "id": "DV.P1.011.1C", "role": "Dreamer" },
-        { "id": "DV.P1.011.1D", "role": "Timid" },
-        { "id": "DV.P1.011.1E", "role": "Overprotective" },
-        { "id": "DV.P1.011.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.011.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.011.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.011.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.011.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.011.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.011.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.011.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.011.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.011.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.011.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.011.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.011.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -277,19 +718,58 @@
       "crew_name": "Meta-Architecture Decision Crew",
       "family_anchor": "100. Master Control, Meta-Architecture & System Constitution",
       "mission": "Decide whether a proposed idea belongs in baseline, overlay, runtime, prompt layer, validator, report, UI layer, or future backlog.",
-      "triggers": ["where does this belong", "architecture decision", "baseline or overlay", "runtime or report"],
-      "primary_outputs": ["architecture_decision_record.md", "placement_recommendation.json", "future_phase_notes.md"],
-      "handoff_targets": ["DV.P1.002 Station Chief Routing Decision Crew", "DV.P1.010 Architecture Boundary Crew"],
+      "triggers": [
+        "where does this belong",
+        "architecture decision",
+        "baseline or overlay",
+        "runtime or report"
+      ],
+      "primary_outputs": [
+        "architecture_decision_record.md",
+        "placement_recommendation.json",
+        "future_phase_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.002 Station Chief Routing Decision Crew",
+        "DV.P1.010 Architecture Boundary Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.012.1A", "role": "Realist" },
-        { "id": "DV.P1.012.1B", "role": "Overachiever" },
-        { "id": "DV.P1.012.1C", "role": "Dreamer" },
-        { "id": "DV.P1.012.1D", "role": "Timid" },
-        { "id": "DV.P1.012.1E", "role": "Overprotective" },
-        { "id": "DV.P1.012.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.012.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.012.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.012.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.012.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.012.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.012.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.012.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.012.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.012.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.012.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.012.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.012.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -297,19 +777,59 @@
       "crew_name": "Intent vs Interpretation Crew",
       "family_anchor": "104. User Intent Forensics",
       "mission": "Compare what Devin likely meant against what the assistant might incorrectly assume, then flag interpretation risks before execution.",
-      "triggers": ["what did I mean", "intent", "interpretation", "don’t assume", "you misunderstood"],
-      "primary_outputs": ["intent_interpretation_diff.md", "assumption_risk_notes.md", "corrected_intent_summary.md"],
-      "handoff_targets": ["DV.P1.001 Station Chief Command Intake Crew", "DV.P1.014 Ambiguity Resolver Crew"],
+      "triggers": [
+        "what did I mean",
+        "intent",
+        "interpretation",
+        "don’t assume",
+        "you misunderstood"
+      ],
+      "primary_outputs": [
+        "intent_interpretation_diff.md",
+        "assumption_risk_notes.md",
+        "corrected_intent_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.001 Station Chief Command Intake Crew",
+        "DV.P1.014 Ambiguity Resolver Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.013.1A", "role": "Realist" },
-        { "id": "DV.P1.013.1B", "role": "Overachiever" },
-        { "id": "DV.P1.013.1C", "role": "Dreamer" },
-        { "id": "DV.P1.013.1D", "role": "Timid" },
-        { "id": "DV.P1.013.1E", "role": "Overprotective" },
-        { "id": "DV.P1.013.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.013.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.013.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.013.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.013.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.013.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.013.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.013.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.013.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.013.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.013.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.013.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.013.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -317,19 +837,59 @@
       "crew_name": "Ambiguity Resolver Crew",
       "family_anchor": "104. User Intent Forensics",
       "mission": "Resolve ambiguity from context when possible and ask only necessary questions when execution would otherwise be unsafe or wrong.",
-      "triggers": ["ambiguous", "unclear", "clarify", "ask or act", "missing info"],
-      "primary_outputs": ["ambiguity_assessment.md", "resolved_context_notes.md", "minimal_question_recommendation.md"],
-      "handoff_targets": ["DV.P1.005 Execution Permission Crew", "DV.P1.018 Preference Application Crew"],
+      "triggers": [
+        "ambiguous",
+        "unclear",
+        "clarify",
+        "ask or act",
+        "missing info"
+      ],
+      "primary_outputs": [
+        "ambiguity_assessment.md",
+        "resolved_context_notes.md",
+        "minimal_question_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.005 Execution Permission Crew",
+        "DV.P1.018 Preference Application Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.014.1A", "role": "Realist" },
-        { "id": "DV.P1.014.1B", "role": "Overachiever" },
-        { "id": "DV.P1.014.1C", "role": "Dreamer" },
-        { "id": "DV.P1.014.1D", "role": "Timid" },
-        { "id": "DV.P1.014.1E", "role": "Overprotective" },
-        { "id": "DV.P1.014.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.014.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.014.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.014.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.014.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.014.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.014.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.014.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.014.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.014.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.014.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.014.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.014.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -337,19 +897,59 @@
       "crew_name": "Sarcasm, Humor & Tone Crew",
       "family_anchor": "104. User Intent Forensics",
       "mission": "Detect sarcasm, humor, frustration, shorthand, irritation, and playful tone so the system does not respond like a corporate hostage note.",
-      "triggers": ["sarcasm", "joke", "frustration", "tone", "smart donkey"],
-      "primary_outputs": ["tone_read.md", "sarcasm_risk_notes.md", "response_tone_recommendation.md"],
-      "handoff_targets": ["DV.P1.018 Preference Application Crew", "DV.P1.006 Command Result Reporting Crew"],
+      "triggers": [
+        "sarcasm",
+        "joke",
+        "frustration",
+        "tone",
+        "smart donkey"
+      ],
+      "primary_outputs": [
+        "tone_read.md",
+        "sarcasm_risk_notes.md",
+        "response_tone_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.018 Preference Application Crew",
+        "DV.P1.006 Command Result Reporting Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.015.1A", "role": "Realist" },
-        { "id": "DV.P1.015.1B", "role": "Overachiever" },
-        { "id": "DV.P1.015.1C", "role": "Dreamer" },
-        { "id": "DV.P1.015.1D", "role": "Timid" },
-        { "id": "DV.P1.015.1E", "role": "Overprotective" },
-        { "id": "DV.P1.015.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.015.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.015.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.015.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.015.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.015.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.015.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.015.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.015.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.015.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.015.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.015.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.015.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -357,19 +957,59 @@
       "crew_name": "SIR Error Pattern Crew",
       "family_anchor": "104. User Intent Forensics",
       "mission": "Detect common assistant interpretation errors such as overexplaining, changing scope, adding unwanted content, failing to follow exact format, or treating a check request as a build request.",
-      "triggers": ["SIR", "interpretation error", "wrong move", "why are you doing that", "check please"],
-      "primary_outputs": ["sir_pattern_match.md", "error_type_notes.md", "correction_recommendation.md"],
-      "handoff_targets": ["DV.P1.034 Scope Drift Stopper Crew", "DV.P1.033 Repair Protocol Crew"],
+      "triggers": [
+        "SIR",
+        "interpretation error",
+        "wrong move",
+        "why are you doing that",
+        "check please"
+      ],
+      "primary_outputs": [
+        "sir_pattern_match.md",
+        "error_type_notes.md",
+        "correction_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.034 Scope Drift Stopper Crew",
+        "DV.P1.033 Repair Protocol Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.016.1A", "role": "Realist" },
-        { "id": "DV.P1.016.1B", "role": "Overachiever" },
-        { "id": "DV.P1.016.1C", "role": "Dreamer" },
-        { "id": "DV.P1.016.1D", "role": "Timid" },
-        { "id": "DV.P1.016.1E", "role": "Overprotective" },
-        { "id": "DV.P1.016.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.016.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.016.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.016.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.016.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.016.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.016.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.016.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.016.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.016.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.016.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.016.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.016.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -377,19 +1017,59 @@
       "crew_name": "Continuity Preservation Crew",
       "family_anchor": "104. User Intent Forensics",
       "mission": "Preserve ongoing thread context, project state, task order, prior constraints, and user corrections across long workflows.",
-      "triggers": ["continue", "where were we", "don’t lose this", "preserve context", "thread move"],
-      "primary_outputs": ["continuity_packet.md", "prior_constraint_summary.md", "active_project_state.json"],
-      "handoff_targets": ["DV.P1.021 Memory Preference Router Crew", "DV.P1.027 Context Recall Crew"],
+      "triggers": [
+        "continue",
+        "where were we",
+        "don’t lose this",
+        "preserve context",
+        "thread move"
+      ],
+      "primary_outputs": [
+        "continuity_packet.md",
+        "prior_constraint_summary.md",
+        "active_project_state.json"
+      ],
+      "handoff_targets": [
+        "DV.P1.021 Memory Preference Router Crew",
+        "DV.P1.027 Context Recall Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.017.1A", "role": "Realist" },
-        { "id": "DV.P1.017.1B", "role": "Overachiever" },
-        { "id": "DV.P1.017.1C", "role": "Dreamer" },
-        { "id": "DV.P1.017.1D", "role": "Timid" },
-        { "id": "DV.P1.017.1E", "role": "Overprotective" },
-        { "id": "DV.P1.017.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.017.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.017.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.017.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.017.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.017.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.017.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.017.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.017.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.017.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.017.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.017.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.017.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -397,19 +1077,59 @@
       "crew_name": "Preference Application Crew",
       "family_anchor": "104. User Intent Forensics",
       "mission": "Apply Devin’s response preferences to active tasks, including directness, humor level, formatting, no filler, full detail when requested, and scope discipline.",
-      "triggers": ["write it my way", "use my style", "direct answer", "no fluff", "full detail"],
-      "primary_outputs": ["response_style_decision.md", "applied_preference_notes.md", "formatting_instruction_packet.md"],
-      "handoff_targets": ["DV.P1.006 Command Result Reporting Crew", "DV.P1.019 Preference Capture Crew"],
+      "triggers": [
+        "write it my way",
+        "use my style",
+        "direct answer",
+        "no fluff",
+        "full detail"
+      ],
+      "primary_outputs": [
+        "response_style_decision.md",
+        "applied_preference_notes.md",
+        "formatting_instruction_packet.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.006 Command Result Reporting Crew",
+        "DV.P1.019 Preference Capture Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.018.1A", "role": "Realist" },
-        { "id": "DV.P1.018.1B", "role": "Overachiever" },
-        { "id": "DV.P1.018.1C", "role": "Dreamer" },
-        { "id": "DV.P1.018.1D", "role": "Timid" },
-        { "id": "DV.P1.018.1E", "role": "Overprotective" },
-        { "id": "DV.P1.018.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.018.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.018.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.018.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.018.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.018.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.018.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.018.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.018.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.018.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.018.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.018.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.018.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -417,19 +1137,59 @@
       "crew_name": "Preference Capture Crew",
       "family_anchor": "105. User Preference Engine",
       "mission": "Capture new Devin preferences, task rules, formatting rules, tone rules, and project-specific operating constraints for future use.",
-      "triggers": ["remember this", "from now on", "preference", "save this", "always do this"],
-      "primary_outputs": ["preference_capture_record.json", "preference_summary.md", "project_rule_update_notes.md"],
-      "handoff_targets": ["DV.P1.020 Preference Conflict Crew", "DV.P1.021 Memory Preference Router Crew"],
+      "triggers": [
+        "remember this",
+        "from now on",
+        "preference",
+        "save this",
+        "always do this"
+      ],
+      "primary_outputs": [
+        "preference_capture_record.json",
+        "preference_summary.md",
+        "project_rule_update_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.020 Preference Conflict Crew",
+        "DV.P1.021 Memory Preference Router Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.019.1A", "role": "Realist" },
-        { "id": "DV.P1.019.1B", "role": "Overachiever" },
-        { "id": "DV.P1.019.1C", "role": "Dreamer" },
-        { "id": "DV.P1.019.1D", "role": "Timid" },
-        { "id": "DV.P1.019.1E", "role": "Overprotective" },
-        { "id": "DV.P1.019.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.019.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.019.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.019.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.019.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.019.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.019.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.019.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.019.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.019.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.019.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.019.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.019.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -437,19 +1197,58 @@
       "crew_name": "Preference Conflict Crew",
       "family_anchor": "105. User Preference Engine",
       "mission": "Resolve conflicts between older preferences, newer instructions, project-specific rules, strict mode, and current task requirements.",
-      "triggers": ["conflicting preferences", "old rule", "new rule", "which preference wins"],
-      "primary_outputs": ["preference_conflict_record.md", "winning_preference_decision.json", "superseded_rule_notes.md"],
-      "handoff_targets": ["DV.P1.009 Rule Precedence Crew", "DV.P1.031 Final Rule Arbitration Crew"],
+      "triggers": [
+        "conflicting preferences",
+        "old rule",
+        "new rule",
+        "which preference wins"
+      ],
+      "primary_outputs": [
+        "preference_conflict_record.md",
+        "winning_preference_decision.json",
+        "superseded_rule_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.009 Rule Precedence Crew",
+        "DV.P1.031 Final Rule Arbitration Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.020.1A", "role": "Realist" },
-        { "id": "DV.P1.020.1B", "role": "Overachiever" },
-        { "id": "DV.P1.020.1C", "role": "Dreamer" },
-        { "id": "DV.P1.020.1D", "role": "Timid" },
-        { "id": "DV.P1.020.1E", "role": "Overprotective" },
-        { "id": "DV.P1.020.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.020.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.020.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.020.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.020.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.020.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.020.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.020.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.020.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.020.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.020.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.020.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.020.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -457,19 +1256,59 @@
       "crew_name": "Memory Preference Router Crew",
       "family_anchor": "105. User Preference Engine",
       "mission": "Decide whether a preference belongs to global behavior, project behavior, thread behavior, command language, or a temporary task.",
-      "triggers": ["save where", "global rule", "project rule", "temporary rule", "thread rule"],
-      "primary_outputs": ["preference_routing_decision.json", "storage_scope_notes.md", "retrieval_hint.md"],
-      "handoff_targets": ["DV.P1.027 Context Recall Crew", "DV.P1.025 Command Alias Crew"],
+      "triggers": [
+        "save where",
+        "global rule",
+        "project rule",
+        "temporary rule",
+        "thread rule"
+      ],
+      "primary_outputs": [
+        "preference_routing_decision.json",
+        "storage_scope_notes.md",
+        "retrieval_hint.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.027 Context Recall Crew",
+        "DV.P1.025 Command Alias Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.021.1A", "role": "Realist" },
-        { "id": "DV.P1.021.1B", "role": "Overachiever" },
-        { "id": "DV.P1.021.1C", "role": "Dreamer" },
-        { "id": "DV.P1.021.1D", "role": "Timid" },
-        { "id": "DV.P1.021.1E", "role": "Overprotective" },
-        { "id": "DV.P1.021.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.021.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.021.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.021.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.021.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.021.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.021.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.021.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.021.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.021.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.021.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.021.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.021.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -477,19 +1316,59 @@
       "crew_name": "Formatting Preference Crew",
       "family_anchor": "105. User Preference Engine",
       "mission": "Apply Devin’s formatting preferences, including full paragraphs, clear headings, copy/paste blocks, exact file prompts, tangent translation protocol, and no unnecessary bullets unless useful.",
-      "triggers": ["format this", "make it copy paste", "full paragraphs", "exact prompt", "tangent translation"],
-      "primary_outputs": ["formatting_profile.md", "response_layout_rules.md", "copy_paste_ready_output.md"],
-      "handoff_targets": ["DV.P1.006 Command Result Reporting Crew", "DV.P1.018 Preference Application Crew"],
+      "triggers": [
+        "format this",
+        "make it copy paste",
+        "full paragraphs",
+        "exact prompt",
+        "tangent translation"
+      ],
+      "primary_outputs": [
+        "formatting_profile.md",
+        "response_layout_rules.md",
+        "copy_paste_ready_output.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.006 Command Result Reporting Crew",
+        "DV.P1.018 Preference Application Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.022.1A", "role": "Realist" },
-        { "id": "DV.P1.022.1B", "role": "Overachiever" },
-        { "id": "DV.P1.022.1C", "role": "Dreamer" },
-        { "id": "DV.P1.022.1D", "role": "Timid" },
-        { "id": "DV.P1.022.1E", "role": "Overprotective" },
-        { "id": "DV.P1.022.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.022.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.022.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.022.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.022.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.022.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.022.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.022.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.022.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.022.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.022.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.022.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.022.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -497,19 +1376,59 @@
       "crew_name": "Execution Style Crew",
       "family_anchor": "105. User Preference Engine",
       "mission": "Apply Devin’s execution preferences: move fast when instructed, avoid repeated explanations, do not stall on missing keys, use demo mode, and provide checkable outputs.",
-      "triggers": ["Speed Racer", "stop explaining", "just build", "no keys", "keep moving"],
-      "primary_outputs": ["execution_style_profile.md", "speed_racer_rules.md", "demo_mode_default_notes.md"],
-      "handoff_targets": ["DV.P1.005 Execution Permission Crew", "DV.P1.029 Speed Racer Mode Crew"],
+      "triggers": [
+        "Speed Racer",
+        "stop explaining",
+        "just build",
+        "no keys",
+        "keep moving"
+      ],
+      "primary_outputs": [
+        "execution_style_profile.md",
+        "speed_racer_rules.md",
+        "demo_mode_default_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.005 Execution Permission Crew",
+        "DV.P1.029 Speed Racer Mode Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.023.1A", "role": "Realist" },
-        { "id": "DV.P1.023.1B", "role": "Overachiever" },
-        { "id": "DV.P1.023.1C", "role": "Dreamer" },
-        { "id": "DV.P1.023.1D", "role": "Timid" },
-        { "id": "DV.P1.023.1E", "role": "Overprotective" },
-        { "id": "DV.P1.023.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.023.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.023.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.023.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.023.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.023.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.023.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.023.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.023.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.023.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.023.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.023.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.023.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -517,19 +1436,59 @@
       "crew_name": "Trust Calibration Crew",
       "family_anchor": "105. User Preference Engine",
       "mission": "Adjust confidence and reporting style based on whether the system verified a claim, saw a file, ran a validator, checked a commit, or is making an inference.",
-      "triggers": ["are you sure", "verify", "check", "don’t guess", "proof"],
-      "primary_outputs": ["verification_status.md", "confidence_notes.md", "proof_required_flags.json"],
-      "handoff_targets": ["DV.P1.006 Command Result Reporting Crew", "DV.P1.035 Final Lock Crew"],
+      "triggers": [
+        "are you sure",
+        "verify",
+        "check",
+        "don’t guess",
+        "proof"
+      ],
+      "primary_outputs": [
+        "verification_status.md",
+        "confidence_notes.md",
+        "proof_required_flags.json"
+      ],
+      "handoff_targets": [
+        "DV.P1.006 Command Result Reporting Crew",
+        "DV.P1.035 Final Lock Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.024.1A", "role": "Realist" },
-        { "id": "DV.P1.024.1B", "role": "Overachiever" },
-        { "id": "DV.P1.024.1C", "role": "Dreamer" },
-        { "id": "DV.P1.024.1D", "role": "Timid" },
-        { "id": "DV.P1.024.1E", "role": "Overprotective" },
-        { "id": "DV.P1.024.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.024.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.024.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.024.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.024.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.024.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.024.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.024.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.024.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.024.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.024.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.024.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.024.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -537,19 +1496,59 @@
       "crew_name": "Command Alias Crew",
       "family_anchor": "106. Command Language & Shortcut Systems",
       "mission": "Map Devin’s shorthand commands and natural-language variations to system actions without requiring exact phrasing every time.",
-      "triggers": ["shortcut", "alias", "same as", "command phrase", "shorthand"],
-      "primary_outputs": ["command_alias_registry.json", "shorthand_mapping.md", "synonym_trigger_notes.md"],
-      "handoff_targets": ["DV.P1.026 Mode Switchboard Crew", "DV.P1.001 Station Chief Command Intake Crew"],
+      "triggers": [
+        "shortcut",
+        "alias",
+        "same as",
+        "command phrase",
+        "shorthand"
+      ],
+      "primary_outputs": [
+        "command_alias_registry.json",
+        "shorthand_mapping.md",
+        "synonym_trigger_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.026 Mode Switchboard Crew",
+        "DV.P1.001 Station Chief Command Intake Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.025.1A", "role": "Realist" },
-        { "id": "DV.P1.025.1B", "role": "Overachiever" },
-        { "id": "DV.P1.025.1C", "role": "Dreamer" },
-        { "id": "DV.P1.025.1D", "role": "Timid" },
-        { "id": "DV.P1.025.1E", "role": "Overprotective" },
-        { "id": "DV.P1.025.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.025.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.025.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.025.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.025.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.025.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.025.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.025.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.025.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.025.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.025.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.025.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.025.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -557,19 +1556,60 @@
       "crew_name": "Mode Switchboard Crew",
       "family_anchor": "106. Command Language & Shortcut Systems",
       "mission": "Recognize and apply command modes such as strict execution, Speed Racer, check-only, remember-only, normal mode, and Devinization mode.",
-      "triggers": ["strict execution", "Speed Racer", "check please", "blueberry pancakes", "Square Block Square Hole", "normal mode"],
-      "primary_outputs": ["active_mode_record.json", "mode_switch_notes.md", "mode_behavior_rules.md"],
-      "handoff_targets": ["DV.P1.007 Constitution Enforcement Crew", "DV.P1.029 Speed Racer Mode Crew"],
+      "triggers": [
+        "strict execution",
+        "Speed Racer",
+        "check please",
+        "blueberry pancakes",
+        "Square Block Square Hole",
+        "normal mode"
+      ],
+      "primary_outputs": [
+        "active_mode_record.json",
+        "mode_switch_notes.md",
+        "mode_behavior_rules.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.007 Constitution Enforcement Crew",
+        "DV.P1.029 Speed Racer Mode Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.026.1A", "role": "Realist" },
-        { "id": "DV.P1.026.1B", "role": "Overachiever" },
-        { "id": "DV.P1.026.1C", "role": "Dreamer" },
-        { "id": "DV.P1.026.1D", "role": "Timid" },
-        { "id": "DV.P1.026.1E", "role": "Overprotective" },
-        { "id": "DV.P1.026.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.026.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.026.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.026.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.026.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.026.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.026.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.026.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.026.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.026.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.026.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.026.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.026.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -577,19 +1617,59 @@
       "crew_name": "Context Recall Crew",
       "family_anchor": "106. Command Language & Shortcut Systems",
       "mission": "Trigger relevant context recall from prior state when Devin uses shorthand such as check please, next, ok, ready, or code phrases.",
-      "triggers": ["check please", "ok", "next", "ready", "remember"],
-      "primary_outputs": ["context_recall_packet.md", "shorthand_interpretation.md", "active_task_pointer.json"],
-      "handoff_targets": ["DV.P1.017 Continuity Preservation Crew", "DV.P1.001 Station Chief Command Intake Crew"],
+      "triggers": [
+        "check please",
+        "ok",
+        "next",
+        "ready",
+        "remember"
+      ],
+      "primary_outputs": [
+        "context_recall_packet.md",
+        "shorthand_interpretation.md",
+        "active_task_pointer.json"
+      ],
+      "handoff_targets": [
+        "DV.P1.017 Continuity Preservation Crew",
+        "DV.P1.001 Station Chief Command Intake Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.027.1A", "role": "Realist" },
-        { "id": "DV.P1.027.1B", "role": "Overachiever" },
-        { "id": "DV.P1.027.1C", "role": "Dreamer" },
-        { "id": "DV.P1.027.1D", "role": "Timid" },
-        { "id": "DV.P1.027.1E", "role": "Overprotective" },
-        { "id": "DV.P1.027.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.027.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.027.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.027.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.027.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.027.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.027.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.027.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.027.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.027.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.027.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.027.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.027.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -597,19 +1677,59 @@
       "crew_name": "Strict Execution Crew",
       "family_anchor": "106. Command Language & Shortcut Systems",
       "mission": "Enforce exact-template behavior, no extra changes, no creative rearranging, and contract-style execution when strict execution mode is active.",
-      "triggers": ["Square Block Square Hole", "strict execution", "exact template", "no extras", "only this"],
-      "primary_outputs": ["strict_execution_profile.md", "allowed_change_set.md", "forbidden_extra_actions.md"],
-      "handoff_targets": ["DV.P1.007 Constitution Enforcement Crew", "DV.P1.034 Scope Drift Stopper Crew"],
+      "triggers": [
+        "Square Block Square Hole",
+        "strict execution",
+        "exact template",
+        "no extras",
+        "only this"
+      ],
+      "primary_outputs": [
+        "strict_execution_profile.md",
+        "allowed_change_set.md",
+        "forbidden_extra_actions.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.007 Constitution Enforcement Crew",
+        "DV.P1.034 Scope Drift Stopper Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.028.1A", "role": "Realist" },
-        { "id": "DV.P1.028.1B", "role": "Overachiever" },
-        { "id": "DV.P1.028.1C", "role": "Dreamer" },
-        { "id": "DV.P1.028.1D", "role": "Timid" },
-        { "id": "DV.P1.028.1E", "role": "Overprotective" },
-        { "id": "DV.P1.028.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.028.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.028.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.028.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.028.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.028.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.028.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.028.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.028.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.028.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.028.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.028.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.028.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -617,19 +1737,59 @@
       "crew_name": "Speed Racer Mode Crew",
       "family_anchor": "106. Command Language & Shortcut Systems",
       "mission": "Apply fast-build behavior: minimize repeated explanations, avoid credential stalls, default to demo mode where appropriate, and drive toward output.",
-      "triggers": ["Speed Racer", "fast mode", "keep moving", "no credentials", "demo mode"],
-      "primary_outputs": ["speed_racer_activation.md", "fast_execution_rules.json", "credential_fallback_plan.md"],
-      "handoff_targets": ["DV.P1.023 Execution Style Crew", "DV.P1.005 Execution Permission Crew"],
+      "triggers": [
+        "Speed Racer",
+        "fast mode",
+        "keep moving",
+        "no credentials",
+        "demo mode"
+      ],
+      "primary_outputs": [
+        "speed_racer_activation.md",
+        "fast_execution_rules.json",
+        "credential_fallback_plan.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.023 Execution Style Crew",
+        "DV.P1.005 Execution Permission Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.029.1A", "role": "Realist" },
-        { "id": "DV.P1.029.1B", "role": "Overachiever" },
-        { "id": "DV.P1.029.1C", "role": "Dreamer" },
-        { "id": "DV.P1.029.1D", "role": "Timid" },
-        { "id": "DV.P1.029.1E", "role": "Overprotective" },
-        { "id": "DV.P1.029.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.029.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.029.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.029.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.029.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.029.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.029.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.029.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.029.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.029.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.029.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.029.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.029.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -637,19 +1797,58 @@
       "crew_name": "Remember-Only Signal Crew",
       "family_anchor": "106. Command Language & Shortcut Systems",
       "mission": "Interpret remember-only phrases such as blueberry pancakes as lock-state or memory cues rather than execution requests unless Devin explicitly overrides.",
-      "triggers": ["blueberry pancakes", "remember this", "lock this", "save for later"],
-      "primary_outputs": ["remember_only_record.md", "no_execution_confirmation.md", "memory_lock_notes.md"],
-      "handoff_targets": ["DV.P1.019 Preference Capture Crew", "DV.P1.021 Memory Preference Router Crew"],
+      "triggers": [
+        "blueberry pancakes",
+        "remember this",
+        "lock this",
+        "save for later"
+      ],
+      "primary_outputs": [
+        "remember_only_record.md",
+        "no_execution_confirmation.md",
+        "memory_lock_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.019 Preference Capture Crew",
+        "DV.P1.021 Memory Preference Router Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.030.1A", "role": "Realist" },
-        { "id": "DV.P1.030.1B", "role": "Overachiever" },
-        { "id": "DV.P1.030.1C", "role": "Dreamer" },
-        { "id": "DV.P1.030.1D", "role": "Timid" },
-        { "id": "DV.P1.030.1E", "role": "Overprotective" },
-        { "id": "DV.P1.030.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.030.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.030.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.030.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.030.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.030.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.030.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.030.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.030.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.030.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.030.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.030.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.030.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -657,19 +1856,59 @@
       "crew_name": "Final Rule Arbitration Crew",
       "family_anchor": "140. Final Boss Layer: System-of-Systems Governance",
       "mission": "Make final decisions when system rules, user instructions, repo state, safety constraints, and execution goals conflict.",
-      "triggers": ["final boss", "rule collision", "who wins", "arbitration", "conflict"],
-      "primary_outputs": ["final_arbitration_decision.md", "winning_rule_stack.json", "conflict_resolution_summary.md"],
-      "handoff_targets": ["DV.P1.009 Rule Precedence Crew", "DV.P1.035 Final Lock Crew"],
+      "triggers": [
+        "final boss",
+        "rule collision",
+        "who wins",
+        "arbitration",
+        "conflict"
+      ],
+      "primary_outputs": [
+        "final_arbitration_decision.md",
+        "winning_rule_stack.json",
+        "conflict_resolution_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.009 Rule Precedence Crew",
+        "DV.P1.035 Final Lock Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.031.1A", "role": "Realist" },
-        { "id": "DV.P1.031.1B", "role": "Overachiever" },
-        { "id": "DV.P1.031.1C", "role": "Dreamer" },
-        { "id": "DV.P1.031.1D", "role": "Timid" },
-        { "id": "DV.P1.031.1E", "role": "Overprotective" },
-        { "id": "DV.P1.031.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.031.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.031.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.031.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.031.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.031.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.031.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.031.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.031.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.031.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.031.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.031.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.031.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -677,19 +1916,58 @@
       "crew_name": "Override Review Crew",
       "family_anchor": "140. Final Boss Layer: System-of-Systems Governance",
       "mission": "Review whether an override is allowed, whether the user explicitly authorized it, and whether the system should proceed, stop, or ask for confirmation.",
-      "triggers": ["override", "exception", "proceed anyway", "user authorized"],
-      "primary_outputs": ["override_review.md", "authorization_record.json", "proceed_or_stop_decision.md"],
-      "handoff_targets": ["DV.P1.005 Execution Permission Crew", "DV.P1.031 Final Rule Arbitration Crew"],
+      "triggers": [
+        "override",
+        "exception",
+        "proceed anyway",
+        "user authorized"
+      ],
+      "primary_outputs": [
+        "override_review.md",
+        "authorization_record.json",
+        "proceed_or_stop_decision.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.005 Execution Permission Crew",
+        "DV.P1.031 Final Rule Arbitration Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.032.1A", "role": "Realist" },
-        { "id": "DV.P1.032.1B", "role": "Overachiever" },
-        { "id": "DV.P1.032.1C", "role": "Dreamer" },
-        { "id": "DV.P1.032.1D", "role": "Timid" },
-        { "id": "DV.P1.032.1E", "role": "Overprotective" },
-        { "id": "DV.P1.032.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.032.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.032.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.032.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.032.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.032.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.032.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.032.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.032.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.032.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.032.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.032.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.032.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -697,19 +1975,60 @@
       "crew_name": "Repair Protocol Crew",
       "family_anchor": "140. Final Boss Layer: System-of-Systems Governance",
       "mission": "Define the repair process when the system overreaches, drifts, mutates wrong files, misinterprets, or claims completion without proof.",
-      "triggers": ["repair", "undo", "revert", "overreach", "wrong files"],
-      "primary_outputs": ["repair_protocol.md", "revert_plan.md", "post_repair_validation.md"],
-      "handoff_targets": ["DV.P1.016 SIR Error Pattern Crew", "DV.P1.034 Scope Drift Stopper Crew", "DV.P1.035 Final Lock Crew"],
+      "triggers": [
+        "repair",
+        "undo",
+        "revert",
+        "overreach",
+        "wrong files"
+      ],
+      "primary_outputs": [
+        "repair_protocol.md",
+        "revert_plan.md",
+        "post_repair_validation.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.016 SIR Error Pattern Crew",
+        "DV.P1.034 Scope Drift Stopper Crew",
+        "DV.P1.035 Final Lock Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.033.1A", "role": "Realist" },
-        { "id": "DV.P1.033.1B", "role": "Overachiever" },
-        { "id": "DV.P1.033.1C", "role": "Dreamer" },
-        { "id": "DV.P1.033.1D", "role": "Timid" },
-        { "id": "DV.P1.033.1E", "role": "Overprotective" },
-        { "id": "DV.P1.033.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.033.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.033.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.033.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.033.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.033.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.033.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.033.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.033.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.033.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.033.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.033.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.033.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -717,19 +2036,59 @@
       "crew_name": "Scope Drift Stopper Crew",
       "family_anchor": "140. Final Boss Layer: System-of-Systems Governance",
       "mission": "Detect and stop unauthorized scope expansion before it mutates baseline files, changes unrelated systems, or “improves” beyond the user’s request.",
-      "triggers": ["scope drift", "too much changed", "don’t touch that", "stop", "only these files"],
-      "primary_outputs": ["scope_drift_alert.md", "changed_file_risk_report.md", "stop_or_continue_decision.md"],
-      "handoff_targets": ["DV.P1.008 Baseline Preservation Crew", "DV.P1.033 Repair Protocol Crew"],
+      "triggers": [
+        "scope drift",
+        "too much changed",
+        "don’t touch that",
+        "stop",
+        "only these files"
+      ],
+      "primary_outputs": [
+        "scope_drift_alert.md",
+        "changed_file_risk_report.md",
+        "stop_or_continue_decision.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.008 Baseline Preservation Crew",
+        "DV.P1.033 Repair Protocol Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.034.1A", "role": "Realist" },
-        { "id": "DV.P1.034.1B", "role": "Overachiever" },
-        { "id": "DV.P1.034.1C", "role": "Dreamer" },
-        { "id": "DV.P1.034.1D", "role": "Timid" },
-        { "id": "DV.P1.034.1E", "role": "Overprotective" },
-        { "id": "DV.P1.034.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.034.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.034.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.034.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.034.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.034.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.034.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.034.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.034.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.034.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.034.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.034.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.034.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -737,19 +2096,59 @@
       "crew_name": "Final Lock Crew",
       "family_anchor": "140. Final Boss Layer: System-of-Systems Governance",
       "mission": "Decide whether a task is truly complete using proof, validators, changed-file scope, output artifacts, and user-visible report.",
-      "triggers": ["final lock", "done done", "baseline locked", "completion", "proof of done"],
-      "primary_outputs": ["final_lock_report.md", "completion_evidence_packet.md", "validator_pass_summary.md"],
-      "handoff_targets": ["DV.P1.006 Command Result Reporting Crew", "DV.P1.011 System Integrity Crew"],
+      "triggers": [
+        "final lock",
+        "done done",
+        "baseline locked",
+        "completion",
+        "proof of done"
+      ],
+      "primary_outputs": [
+        "final_lock_report.md",
+        "completion_evidence_packet.md",
+        "validator_pass_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.006 Command Result Reporting Crew",
+        "DV.P1.011 System Integrity Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.035.1A", "role": "Realist" },
-        { "id": "DV.P1.035.1B", "role": "Overachiever" },
-        { "id": "DV.P1.035.1C", "role": "Dreamer" },
-        { "id": "DV.P1.035.1D", "role": "Timid" },
-        { "id": "DV.P1.035.1E", "role": "Overprotective" },
-        { "id": "DV.P1.035.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.035.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.035.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.035.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.035.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.035.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.035.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.035.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.035.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.035.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.035.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.035.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.035.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     },
     {
@@ -757,20 +2156,72 @@
       "crew_name": "Whole-Agency Preservation Crew",
       "family_anchor": "140. Final Boss Layer: System-of-Systems Governance",
       "mission": "Preserve the beauty of the full 175-family command civilization while allowing efficient selective live deployment.",
-      "triggers": ["art piece", "whole agency", "don’t shrink it", "massive command civilization", "selective live deployment"],
-      "primary_outputs": ["agency_preservation_doctrine.md", "selective_activation_policy.md", "whole_org_awareness_notes.md"],
-      "handoff_targets": ["DV.P1.003 Council Scan Crew", "DV.P1.011 System Integrity Crew", "DV.P1.031 Final Rule Arbitration Crew"],
+      "triggers": [
+        "art piece",
+        "whole agency",
+        "don’t shrink it",
+        "massive command civilization",
+        "selective live deployment"
+      ],
+      "primary_outputs": [
+        "agency_preservation_doctrine.md",
+        "selective_activation_policy.md",
+        "whole_org_awareness_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P1.003 Council Scan Crew",
+        "DV.P1.011 System Integrity Crew",
+        "DV.P1.031 Final Rule Arbitration Crew"
+      ],
       "roles": [
-        { "id": "DV.P1.036.1A", "role": "Realist" },
-        { "id": "DV.P1.036.1B", "role": "Overachiever" },
-        { "id": "DV.P1.036.1C", "role": "Dreamer" },
-        { "id": "DV.P1.036.1D", "role": "Timid" },
-        { "id": "DV.P1.036.1E", "role": "Overprotective" },
-        { "id": "DV.P1.036.1F", "role": "Wildcard Intern" },
-        { "id": "DV.P1.036.1G", "role": "Team Lead / Manager" },
-        { "id": "DV.P1.036.1H", "role": "Scribe / Shower of Work" },
-        { "id": "DV.P1.036.1I", "role": "Auditor / Revision Director" }
+        {
+          "id": "DV.P1.036.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P1.036.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P1.036.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P1.036.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P1.036.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P1.036.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P1.036.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P1.036.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P1.036.1I",
+          "role": "Auditor / Revision Director"
+        }
       ]
     }
-  ]
+  ],
+  "ownership_metadata": {
+    "project_owner": "Devin O’Rourke",
+    "project_owner_ascii": "Devin O'Rourke",
+    "system_architect": "Devin O’Rourke",
+    "operating_doctrine_author": "Devin O’Rourke",
+    "maintainer": "Devin O’Rourke",
+    "ownership_phrase": "Project owner, system architect, and operating-doctrine author: Devin O’Rourke.",
+    "applies_to": "Agent Command Center Devinization overlay architecture",
+    "baseline_note": "The locked 175-family baseline remains preserved; this metadata identifies Devin O’Rourke as owner/architect of the Devinization overlay stack.",
+    "scope": "metadata attribution only"
+  }
 }

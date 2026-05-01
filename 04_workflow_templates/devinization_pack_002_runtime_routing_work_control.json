@@ -9,23 +9,64 @@
     "devinization_pack_001_command_brain"
   ],
   "included_families": [
-    { "family_id": 35, "family_name": "Workflow Control Tower" },
-    { "family_id": 57, "family_name": "Multi-Agent Orchestration & Swarm Control" },
-    { "family_id": 127, "family_name": "State Management & Workflow Memory" },
-    { "family_id": 135, "family_name": "Work Intake, Scoping & Triage" },
-    { "family_id": 136, "family_name": "Task Decomposition & Work Package Design" },
-    { "family_id": 137, "family_name": "Department Dependency Graph & Routing Matrix" },
-    { "family_id": 139, "family_name": "Long-Running Work, Checkpointing & Resumability" }
+    {
+      "family_id": 35,
+      "family_name": "Workflow Control Tower"
+    },
+    {
+      "family_id": 57,
+      "family_name": "Multi-Agent Orchestration & Swarm Control"
+    },
+    {
+      "family_id": 127,
+      "family_name": "State Management & Workflow Memory"
+    },
+    {
+      "family_id": 135,
+      "family_name": "Work Intake, Scoping & Triage"
+    },
+    {
+      "family_id": 136,
+      "family_name": "Task Decomposition & Work Package Design"
+    },
+    {
+      "family_id": 137,
+      "family_name": "Department Dependency Graph & Routing Matrix"
+    },
+    {
+      "family_id": 139,
+      "family_name": "Long-Running Work, Checkpointing & Resumability"
+    }
   ],
   "purpose": "Define the runtime-control layer that lets the Station Chief turn one user command into an organized operation: intake, route, decompose, assign, checkpoint, resume, monitor, and complete work without waking the entire agency as expensive live execution.",
   "core_operating_philosophy": "The Agent Command Center remains a massive command civilization with selective live deployment. The whole 175-family agency remains available for awareness, routing, governance, memory, and context. This pack defines how work moves through the agency without becoming chaos soup.",
   "activation_rule": "Use this pack when the user says or implies: route the task, runtime routing, workflow control, work queue, task intake, scope this, decompose this, build work packets, route through the agency, choose families, choose departments, checkpoint this, resume work, long-running task, continue where we left off, don’t lose progress, assign the agents, orchestrate the swarm, create operation brief, Station Chief runtime, one command to the agency.",
   "runtime_activation_tiers": [
-    { "tier": 0, "name": "Passive Whole-Org Awareness", "description": "The full 175-family agency map remains available as structure, context, memory, governance, and routing intelligence." },
-    { "tier": 1, "name": "Council Scan", "description": "The Station Chief and routing layer identify which families may be relevant without launching expensive execution." },
-    { "tier": 2, "name": "Command Brief", "description": "Relevant command layers produce a scoped operation brief with objective, allowed actions, forbidden actions, required outputs, and success criteria." },
-    { "tier": 3, "name": "Active Operation", "description": "Selected execution crews or workers are activated for actual work, with budget and scope controls." },
-    { "tier": 4, "name": "Audit, Archive & Continuity Lock", "description": "Scribes, auditors, state memory, checkpointing, and archive logic preserve results and make the operation resumable." }
+    {
+      "tier": 0,
+      "name": "Passive Whole-Org Awareness",
+      "description": "The full 175-family agency map remains available as structure, context, memory, governance, and routing intelligence."
+    },
+    {
+      "tier": 1,
+      "name": "Council Scan",
+      "description": "The Station Chief and routing layer identify which families may be relevant without launching expensive execution."
+    },
+    {
+      "tier": 2,
+      "name": "Command Brief",
+      "description": "Relevant command layers produce a scoped operation brief with objective, allowed actions, forbidden actions, required outputs, and success criteria."
+    },
+    {
+      "tier": 3,
+      "name": "Active Operation",
+      "description": "Selected execution crews or workers are activated for actual work, with budget and scope controls."
+    },
+    {
+      "tier": 4,
+      "name": "Audit, Archive & Continuity Lock",
+      "description": "Scribes, auditors, state memory, checkpointing, and archive logic preserve results and make the operation resumable."
+    }
   ],
   "global_rules": [
     "1. Preserve the locked 175-family baseline unless the user explicitly authorizes baseline mutation.",
@@ -47,47 +88,2529 @@
     "17. Preserve the art piece: all employees exist, all families can be considered, only live execution is budgeted."
   ],
   "crews": [
-    { "crew_id": "DV.P2.001", "crew_name": "Active Work Queue Crew", "family_anchor": "35. Workflow Control Tower", "mission": "Maintain the active work queue, paused tasks, blocked tasks, next tasks, and review-ready tasks for the Station Chief runtime.", "triggers": ["active queue", "what is active", "work queue", "next task", "paused task"], "primary_outputs": ["active_work_queue.json", "paused_task_register.md", "blocked_task_register.md", "next_action_list.md"], "handoff_targets": ["DV.P2.002 Workflow Status Crew", "DV.P2.025 Task Boundary Crew", "DV.P2.031 Checkpoint Planning Crew"], "roles": [{"id": "DV.P2.001.1A", "role": "Realist"}, {"id": "DV.P2.001.1B", "role": "Overachiever"}, {"id": "DV.P2.001.1C", "role": "Dreamer"}, {"id": "DV.P2.001.1D", "role": "Timid"}, {"id": "DV.P2.001.1E", "role": "Overprotective"}, {"id": "DV.P2.001.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.001.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.001.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.001.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.002", "crew_name": "Workflow Status Crew", "family_anchor": "35. Workflow Control Tower", "mission": "Track whether each operation is intake, scoped, routed, assigned, executing, blocked, verifying, complete, or archived.", "triggers": ["status", "where are we", "workflow state", "task status", "progress"], "primary_outputs": ["workflow_status_board.json", "status_summary.md", "operation_state_log.md"], "handoff_targets": ["DV.P2.003 Blocker Control Crew", "DV.P2.004 Review Gate Crew", "DV.P2.031 Checkpoint Planning Crew"], "roles": [{"id": "DV.P2.002.1A", "role": "Realist"}, {"id": "DV.P2.002.1B", "role": "Overachiever"}, {"id": "DV.P2.002.1C", "role": "Dreamer"}, {"id": "DV.P2.002.1D", "role": "Timid"}, {"id": "DV.P2.002.1E", "role": "Overprotective"}, {"id": "DV.P2.002.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.002.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.002.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.002.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.003", "crew_name": "Blocker Control Crew", "family_anchor": "35. Workflow Control Tower", "mission": "Identify blockers, classify whether they are missing info, tool failure, validator failure, scope conflict, permission issue, or credential issue, and recommend a path forward.", "triggers": ["blocked", "stuck", "can’t continue", "missing info", "validator failed"], "primary_outputs": ["blocker_report.md", "blocker_type.json", "unblock_plan.md"], "handoff_targets": ["DV.P2.018 Dependency Risk Crew", "DV.P2.032 Progress State Capture Crew", "DV.P2.035 Interruption Handling Crew"], "roles": [{"id": "DV.P2.003.1A", "role": "Realist"}, {"id": "DV.P2.003.1B", "role": "Overachiever"}, {"id": "DV.P2.003.1C", "role": "Dreamer"}, {"id": "DV.P2.003.1D", "role": "Timid"}, {"id": "DV.P2.003.1E", "role": "Overprotective"}, {"id": "DV.P2.003.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.003.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.003.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.003.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.004", "crew_name": "Review Gate Crew", "family_anchor": "35. Workflow Control Tower", "mission": "Decide when work must pause for human review, validator review, auditor review, or final lock review.", "triggers": ["review gate", "pause for review", "needs approval", "ready to check", "final review"], "primary_outputs": ["review_gate_decision.md", "approval_needed_record.json", "ready_for_review_packet.md"], "handoff_targets": ["DV.P2.002 Workflow Status Crew", "DV.P2.039 Long Task Governance Crew", "DV.P2.042 Resumability Dashboard Crew"], "roles": [{"id": "DV.P2.004.1A", "role": "Realist"}, {"id": "DV.P2.004.1B", "role": "Overachiever"}, {"id": "DV.P2.004.1C", "role": "Dreamer"}, {"id": "DV.P2.004.1D", "role": "Timid"}, {"id": "DV.P2.004.1E", "role": "Overprotective"}, {"id": "DV.P2.004.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.004.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.004.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.004.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.005", "crew_name": "Operation Brief Control Crew", "family_anchor": "35. Workflow Control Tower", "mission": "Ensure every operation has a clear brief before execution: objective, context, scope, constraints, outputs, validators, and stop conditions.", "triggers": ["operation brief", "scope this", "mission packet", "execution brief", "define success"], "primary_outputs": ["operation_brief.md", "stop_conditions.md", "required_artifacts.md", "validator_plan.md"], "handoff_targets": ["DV.P2.021 Requirement Clarification Crew", "DV.P2.026 Checkpoint Planning Crew", "DV.P2.007 Swarm Activation Crew"], "roles": [{"id": "DV.P2.005.1A", "role": "Realist"}, {"id": "DV.P2.005.1B", "role": "Overachiever"}, {"id": "DV.P2.005.1C", "role": "Dreamer"}, {"id": "DV.P2.005.1D", "role": "Timid"}, {"id": "DV.P2.005.1E", "role": "Overprotective"}, {"id": "DV.P2.005.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.005.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.005.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.005.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.006", "crew_name": "Workflow Continuity Crew", "family_anchor": "35. Workflow Control Tower", "mission": "Preserve continuity across “ok,” “next,” “check please,” interruptions, thread moves, and long gaps without losing task order.", "triggers": ["ok", "next", "continue", "check please", "thread move"], "primary_outputs": ["active_task_pointer.json", "continuity_notes.md", "resumed_context_packet.md"], "handoff_targets": ["DV.P2.031 Checkpoint Planning Crew", "DV.P2.037 Continuity Bridge Crew", "DV.P2.001 Active Work Queue Crew"], "roles": [{"id": "DV.P2.006.1A", "role": "Realist"}, {"id": "DV.P2.006.1B", "role": "Overachiever"}, {"id": "DV.P2.006.1C", "role": "Dreamer"}, {"id": "DV.P2.006.1D", "role": "Timid"}, {"id": "DV.P2.006.1E", "role": "Overprotective"}, {"id": "DV.P2.006.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.006.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.006.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.006.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.007", "crew_name": "Swarm Activation Crew", "family_anchor": "57. Multi-Agent Orchestration & Swarm Control", "mission": "Decide which command layers, family chiefs, department chiefs, or worker crews should become active for a task while preserving whole-agency awareness.", "triggers": ["activate agents", "orchestrate", "swarm", "who wakes up", "selected crews"], "primary_outputs": ["activation_plan.json", "selected_agents.md", "activation_tier_record.md"], "handoff_targets": ["DV.P2.008 Family Chief Coordination Crew", "DV.P2.013 Routing Matrix Crew", "DV.P2.014 Cross-Department Handoff Crew"], "roles": [{"id": "DV.P2.007.1A", "role": "Realist"}, {"id": "DV.P2.007.1B", "role": "Overachiever"}, {"id": "DV.P2.007.1C", "role": "Dreamer"}, {"id": "DV.P2.007.1D", "role": "Timid"}, {"id": "DV.P2.007.1E", "role": "Overprotective"}, {"id": "DV.P2.007.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.007.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.007.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.007.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.008", "crew_name": "Family Chief Coordination Crew", "family_anchor": "57. Multi-Agent Orchestration & Swarm Control", "mission": "Coordinate family-level chiefs so relevant families provide routing judgment without turning every family into live execution.", "triggers": ["family chiefs", "family coordination", "council", "command layer"], "primary_outputs": ["family_chief_brief.md", "family_relevance_scores.json", "family_coordination_notes.md"], "handoff_targets": ["DV.P2.009 Department Chief Coordination Crew", "DV.P2.013 Routing Matrix Crew"], "roles": [{"id": "DV.P2.008.1A", "role": "Realist"}, {"id": "DV.P2.008.1B", "role": "Overachiever"}, {"id": "DV.P2.008.1C", "role": "Dreamer"}, {"id": "DV.P2.008.1D", "role": "Timid"}, {"id": "DV.P2.008.1E", "role": "Overprotective"}, {"id": "DV.P2.008.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.008.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.008.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.008.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.009", "crew_name": "Department Chief Coordination Crew", "family_anchor": "57. Multi-Agent Orchestration & Swarm Control", "mission": "Coordinate department-level managers, scribes, and auditors for selected families and convert command guidance into assignable work.", "triggers": ["department chiefs", "managers", "scribes", "auditors", "department assignment"], "primary_outputs": ["department_coordination_packet.md", "department_assignment_map.json", "scribe_auditor_plan.md"], "handoff_targets": ["DV.P2.022 Work Breakdown Crew", "DV.P2.024 Ownership Assignment Crew"], "roles": [{"id": "DV.P2.009.1A", "role": "Realist"}, {"id": "DV.P2.009.1B", "role": "Overachiever"}, {"id": "DV.P2.009.1C", "role": "Dreamer"}, {"id": "DV.P2.009.1D", "role": "Timid"}, {"id": "DV.P2.009.1E", "role": "Overprotective"}, {"id": "DV.P2.009.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.009.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.009.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.009.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.010", "crew_name": "Worker Activation Crew", "family_anchor": "57. Multi-Agent Orchestration & Swarm Control", "mission": "Activate only the worker roles needed for execution, with defined task packets, budgets, and reporting requirements.", "triggers": ["worker agents", "execute task", "assign workers", "run crew"], "primary_outputs": ["worker_activation_packet.json", "worker_task_cards.md", "live_execution_budget.md"], "handoff_targets": ["DV.P2.023 Work Package Crew", "DV.P2.033 Resumability Design Crew"], "roles": [{"id": "DV.P2.010.1A", "role": "Realist"}, {"id": "DV.P2.010.1B", "role": "Overachiever"}, {"id": "DV.P2.010.1C", "role": "Dreamer"}, {"id": "DV.P2.010.1D", "role": "Timid"}, {"id": "DV.P2.010.1E", "role": "Overprotective"}, {"id": "DV.P2.010.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.010.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.010.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.010.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.011", "crew_name": "Parallel Work Coordination Crew", "family_anchor": "57. Multi-Agent Orchestration & Swarm Control", "mission": "Decide which work can run in parallel, which work must be sequential, and which outputs depend on prior steps.", "triggers": ["parallel", "sequence", "dependencies", "run at same time", "order of operations"], "primary_outputs": ["parallel_work_plan.md", "sequence_map.json", "dependency_warning_notes.md"], "handoff_targets": ["DV.P2.018 Dependency Risk Crew", "DV.P2.023 Work Package Crew", "DV.P2.029 Sequencing Logic Crew"], "roles": [{"id": "DV.P2.011.1A", "role": "Realist"}, {"id": "DV.P2.011.1B", "role": "Overachiever"}, {"id": "DV.P2.011.1C", "role": "Dreamer"}, {"id": "DV.P2.011.1D", "role": "Timid"}, {"id": "DV.P2.011.1E", "role": "Overprotective"}, {"id": "DV.P2.011.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.011.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.011.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.011.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.012", "crew_name": "Swarm Containment Crew", "family_anchor": "57. Multi-Agent Orchestration & Swarm Control", "mission": "Prevent uncontrolled agent sprawl, duplicated work, runaway execution, redundant outputs, and pointless model calls.", "triggers": ["too many agents", "runaway", "duplicate work", "credit burn", "no output"], "primary_outputs": ["containment_decision.md", "redundant_agent_report.md", "live_execution_limit_notes.md"], "handoff_targets": ["DV.P2.007 Swarm Activation Crew", "DV.P2.003 Blocker Control Crew", "DV.P2.039 Long Task Governance Crew"], "roles": [{"id": "DV.P2.012.1A", "role": "Realist"}, {"id": "DV.P2.012.1B", "role": "Overachiever"}, {"id": "DV.P2.012.1C", "role": "Dreamer"}, {"id": "DV.P2.012.1D", "role": "Timid"}, {"id": "DV.P2.012.1E", "role": "Overprotective"}, {"id": "DV.P2.012.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.012.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.012.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.012.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.013", "crew_name": "Routing Matrix Crew", "family_anchor": "137. Department Dependency Graph & Routing Matrix", "mission": "Maintain the map that translates task types into likely families, departments, overlays, crews, and validators.", "triggers": ["routing matrix", "route task", "department map", "who handles this"], "primary_outputs": ["routing_matrix.json", "task_type_to_family_map.md", "route_explanation.md"], "handoff_targets": ["DV.P2.014 Cross-Department Handoff Crew", "DV.P2.015 Dependency Graph Crew", "DV.P2.007 Swarm Activation Crew"], "roles": [{"id": "DV.P2.013.1A", "role": "Realist"}, {"id": "DV.P2.013.1B", "role": "Overachiever"}, {"id": "DV.P2.013.1C", "role": "Dreamer"}, {"id": "DV.P2.013.1D", "role": "Timid"}, {"id": "DV.P2.013.1E", "role": "Overprotective"}, {"id": "DV.P2.013.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.013.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.013.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.013.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.014", "crew_name": "Cross-Department Handoff Crew", "family_anchor": "137. Department Dependency Graph & Routing Matrix", "mission": "Define handoff packets between families/departments so context, outputs, and constraints do not get lost.", "triggers": ["handoff", "pass to department", "context transfer", "next department"], "primary_outputs": ["handoff_packet.md", "handoff_context.json", "receiving_department_notes.md"], "handoff_targets": ["DV.P2.009 Department Chief Coordination Crew", "DV.P2.032 Progress State Capture Crew"], "roles": [{"id": "DV.P2.014.1A", "role": "Realist"}, {"id": "DV.P2.014.1B", "role": "Overachiever"}, {"id": "DV.P2.014.1C", "role": "Dreamer"}, {"id": "DV.P2.014.1D", "role": "Timid"}, {"id": "DV.P2.014.1E", "role": "Overprotective"}, {"id": "DV.P2.014.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.014.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.014.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.014.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.015", "crew_name": "Dependency Graph Crew", "family_anchor": "137. Department Dependency Graph & Routing Matrix", "mission": "Represent dependencies between families, departments, crews, outputs, validators, files, tools, and approvals.", "triggers": ["dependency graph", "depends on", "prerequisite", "relationship map"], "primary_outputs": ["dependency_graph.json", "dependency_notes.md", "prerequisite_map.md"], "handoff_targets": ["DV.P2.016 Escalation Route Crew", "DV.P2.018 Dependency Risk Crew"], "roles": [{"id": "DV.P2.015.1A", "role": "Realist"}, {"id": "DV.P2.015.1B", "role": "Overachiever"}, {"id": "DV.P2.015.1C", "role": "Dreamer"}, {"id": "DV.P2.015.1D", "role": "Timid"}, {"id": "DV.P2.015.1E", "role": "Overprotective"}, {"id": "DV.P2.015.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.015.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.015.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.015.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.016", "crew_name": "Escalation Route Crew", "family_anchor": "137. Department Dependency Graph & Routing Matrix", "mission": "Route unresolved conflicts, blockers, validator failures, tool failures, or scope disputes to the right command/governance layer.", "triggers": ["escalate", "unresolved", "conflict", "validator failure", "scope dispute"], "primary_outputs": ["escalation_route.md", "escalation_decision.json", "escalation_summary.md"], "handoff_targets": ["DV.P2.003 Blocker Control Crew", "DV.P2.039 Long Task Governance Crew"], "roles": [{"id": "DV.P2.016.1A", "role": "Realist"}, {"id": "DV.P2.016.1B", "role": "Overachiever"}, {"id": "DV.P2.016.1C", "role": "Dreamer"}, {"id": "DV.P2.016.1D", "role": "Timid"}, {"id": "DV.P2.016.1E", "role": "Overprotective"}, {"id": "DV.P2.016.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.016.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.016.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.016.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.017", "crew_name": "Routing Conflict Crew", "family_anchor": "137. Department Dependency Graph & Routing Matrix", "mission": "Resolve cases where multiple families could own the work or where ownership is ambiguous.", "triggers": ["routing conflict", "who owns this", "overlapping departments", "ambiguous owner"], "primary_outputs": ["routing_conflict_report.md", "ownership_decision.json", "alternate_route_notes.md"], "handoff_targets": ["DV.P2.013 Routing Matrix Crew", "DV.P2.024 Ownership Assignment Crew"], "roles": [{"id": "DV.P2.017.1A", "role": "Realist"}, {"id": "DV.P2.017.1B", "role": "Overachiever"}, {"id": "DV.P2.017.1C", "role": "Dreamer"}, {"id": "DV.P2.017.1D", "role": "Timid"}, {"id": "DV.P2.017.1E", "role": "Overprotective"}, {"id": "DV.P2.017.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.017.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.017.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.017.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.018", "crew_name": "Dependency Risk Crew", "family_anchor": "137. Department Dependency Graph & Routing Matrix", "mission": "Identify dependency risks before execution, including missing files, missing tools, unknown context, unsafe writes, unavailable credentials, or validator gaps.", "triggers": ["dependency risk", "missing dependency", "tool missing", "credential missing", "validator gap"], "primary_outputs": ["dependency_risk_report.md", "preflight_warning_list.md", "mitigation_plan.md"], "handoff_targets": ["DV.P2.003 Blocker Control Crew", "DV.P2.012 Swarm Containment Crew", "DV.P2.026 Checkpoint Planning Crew"], "roles": [{"id": "DV.P2.018.1A", "role": "Realist"}, {"id": "DV.P2.018.1B", "role": "Overachiever"}, {"id": "DV.P2.018.1C", "role": "Dreamer"}, {"id": "DV.P2.018.1D", "role": "Timid"}, {"id": "DV.P2.018.1E", "role": "Overprotective"}, {"id": "DV.P2.018.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.018.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.018.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.018.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.019", "crew_name": "Work Intake Crew", "family_anchor": "135. Work Intake, Scoping & Triage", "mission": "Convert raw user input into a structured intake record with task type, project context, urgency, risk level, and likely next action.", "triggers": ["new request", "intake", "what is this", "classify task", "start task"], "primary_outputs": ["work_intake_record.json", "task_type_summary.md", "intake_risk_notes.md"], "handoff_targets": ["DV.P2.020 Scope Boundary Crew", "DV.P2.013 Routing Matrix Crew"], "roles": [{"id": "DV.P2.019.1A", "role": "Realist"}, {"id": "DV.P2.019.1B", "role": "Overachiever"}, {"id": "DV.P2.019.1C", "role": "Dreamer"}, {"id": "DV.P2.019.1D", "role": "Timid"}, {"id": "DV.P2.019.1E", "role": "Overprotective"}, {"id": "DV.P2.019.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.019.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.019.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.019.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.020", "crew_name": "Scope Boundary Crew", "family_anchor": "135. Work Intake, Scoping & Triage", "mission": "Define exactly what is in scope, out of scope, allowed, forbidden, required, and optional for a task.", "triggers": ["scope", "boundaries", "only this", "do not touch", "allowed files"], "primary_outputs": ["scope_boundary.md", "allowed_actions.json", "forbidden_actions.json"], "handoff_targets": ["DV.P2.005 Operation Brief Control Crew", "DV.P2.034 Scope Guard Crew"], "roles": [{"id": "DV.P2.020.1A", "role": "Realist"}, {"id": "DV.P2.020.1B", "role": "Overachiever"}, {"id": "DV.P2.020.1C", "role": "Dreamer"}, {"id": "DV.P2.020.1D", "role": "Timid"}, {"id": "DV.P2.020.1E", "role": "Overprotective"}, {"id": "DV.P2.020.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.020.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.020.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.020.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.021", "crew_name": "Requirement Clarification Crew", "family_anchor": "135. Work Intake, Scoping & Triage", "mission": "Detect missing requirements and decide whether to resolve from context, proceed with assumptions, or ask one necessary question.", "triggers": ["missing requirement", "clarify", "question", "assume or ask"], "primary_outputs": ["requirement_gap_report.md", "resolved_assumptions.md", "minimal_question.md"], "handoff_targets": ["DV.P2.019 Work Intake Crew", "DV.P2.022 Work Breakdown Crew"], "roles": [{"id": "DV.P2.021.1A", "role": "Realist"}, {"id": "DV.P2.021.1B", "role": "Overachiever"}, {"id": "DV.P2.021.1C", "role": "Dreamer"}, {"id": "DV.P2.021.1D", "role": "Timid"}, {"id": "DV.P2.021.1E", "role": "Overprotective"}, {"id": "DV.P2.021.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.021.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.021.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.021.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.022", "crew_name": "Work Type Classification Crew", "family_anchor": "135. Work Intake, Scoping & Triage", "mission": "Classify work as question, verification, prompt-writing, build, patch, audit, research, file operation, memory capture, planning, or correction.", "triggers": ["classify", "task type", "check please", "build request", "correction"], "primary_outputs": ["work_type_classification.json", "action_mode_recommendation.md", "verification_or_execution_decision.md"], "handoff_targets": ["DV.P2.001 Active Work Queue Crew", "DV.P2.013 Routing Matrix Crew"], "roles": [{"id": "DV.P2.022.1A", "role": "Realist"}, {"id": "DV.P2.022.1B", "role": "Overachiever"}, {"id": "DV.P2.022.1C", "role": "Dreamer"}, {"id": "DV.P2.022.1D", "role": "Timid"}, {"id": "DV.P2.022.1E", "role": "Overprotective"}, {"id": "DV.P2.022.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.022.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.022.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.022.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.023", "crew_name": "Acceptance Criteria Crew", "family_anchor": "135. Work Intake, Scoping & Triage", "mission": "Define the testable conditions that make a task complete, including required artifacts, validators, scope check, and final report.", "triggers": ["success criteria", "definition of done", "completion standard", "done done"], "primary_outputs": ["acceptance_criteria.md", "completion_checklist.md", "evidence_requirements.md"], "handoff_targets": ["DV.P2.005 Operation Brief Control Crew", "DV.P2.039 Long Task Governance Crew"], "roles": [{"id": "DV.P2.023.1A", "role": "Realist"}, {"id": "DV.P2.023.1B", "role": "Overachiever"}, {"id": "DV.P2.023.1C", "role": "Dreamer"}, {"id": "DV.P2.023.1D", "role": "Timid"}, {"id": "DV.P2.023.1E", "role": "Overprotective"}, {"id": "DV.P2.023.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.023.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.023.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.023.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.024", "crew_name": "Intake Handoff Crew", "family_anchor": "135. Work Intake, Scoping & Triage", "mission": "Package intake results into a handoff-ready operation packet for decomposition, routing, or execution.", "triggers": ["hand off intake", "start routing", "package request", "task packet"], "primary_outputs": ["intake_handoff_packet.md", "task_context_bundle.json", "initial_route_recommendation.md"], "handoff_targets": ["DV.P2.025 Task Boundary Crew", "DV.P2.013 Routing Matrix Crew"], "roles": [{"id": "DV.P2.024.1A", "role": "Realist"}, {"id": "DV.P2.024.1B", "role": "Overachiever"}, {"id": "DV.P2.024.1C", "role": "Dreamer"}, {"id": "DV.P2.024.1D", "role": "Timid"}, {"id": "DV.P2.024.1E", "role": "Overprotective"}, {"id": "DV.P2.024.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.024.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.024.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.024.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.025", "crew_name": "Task Boundary Crew", "family_anchor": "136. Task Decomposition & Work Package Design", "mission": "Convert scope into precise task boundaries so the system does not mix planning, coding, validating, committing, and reporting unless requested.", "triggers": ["task boundary", "break this down", "separate phases", "avoid scope drift"], "primary_outputs": ["task_boundary_record.md", "phase_split_plan.md", "action_boundary_notes.md"], "handoff_targets": ["DV.P2.026 Work Breakdown Crew", "DV.P2.034 Scope Guard Crew"], "roles": [{"id": "DV.P2.025.1A", "role": "Realist"}, {"id": "DV.P2.025.1B", "role": "Overachiever"}, {"id": "DV.P2.025.1C", "role": "Dreamer"}, {"id": "DV.P2.025.1D", "role": "Timid"}, {"id": "DV.P2.025.1E", "role": "Overprotective"}, {"id": "DV.P2.025.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.025.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.025.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.025.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.026", "crew_name": "Work Breakdown Crew", "family_anchor": "136. Task Decomposition & Work Package Design", "mission": "Break the task into major steps, subtasks, deliverables, validators, dependencies, and stop points.", "triggers": ["decompose", "break down", "work breakdown", "task plan"], "primary_outputs": ["work_breakdown_structure.md", "subtask_list.json", "deliverable_map.md"], "handoff_targets": ["DV.P2.027 Work Package Crew", "DV.P2.029 Sequencing Logic Crew"], "roles": [{"id": "DV.P2.026.1A", "role": "Realist"}, {"id": "DV.P2.026.1B", "role": "Overachiever"}, {"id": "DV.P2.026.1C", "role": "Dreamer"}, {"id": "DV.P2.026.1D", "role": "Timid"}, {"id": "DV.P2.026.1E", "role": "Overprotective"}, {"id": "DV.P2.026.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.026.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.026.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.026.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.027", "crew_name": "Work Package Crew", "family_anchor": "136. Task Decomposition & Work Package Design", "mission": "Create assignable work packages with owner, objective, scope, inputs, outputs, budget, validators, and reporting rules.", "triggers": ["work package", "assignable task", "task card", "execution packet"], "primary_outputs": ["work_package.json", "worker_task_card.md", "package_success_criteria.md"], "handoff_targets": ["DV.P2.010 Worker Activation Crew", "DV.P2.030 Decomposition QA Crew"], "roles": [{"id": "DV.P2.027.1A", "role": "Realist"}, {"id": "DV.P2.027.1B", "role": "Overachiever"}, {"id": "DV.P2.027.1C", "role": "Dreamer"}, {"id": "DV.P2.027.1D", "role": "Timid"}, {"id": "DV.P2.027.1E", "role": "Overprotective"}, {"id": "DV.P2.027.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.027.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.027.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.027.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.028", "crew_name": "Ownership Assignment Crew", "family_anchor": "136. Task Decomposition & Work Package Design", "mission": "Assign ownership to family chiefs, department chiefs, overlay crews, workers, scribes, or auditors based on task type and routing matrix.", "triggers": ["assign owner", "who owns", "responsible agent", "crew owner"], "primary_outputs": ["ownership_assignment.json", "responsible_party_notes.md", "accountability_map.md"], "handoff_targets": ["DV.P2.009 Department Chief Coordination Crew", "DV.P2.017 Routing Conflict Crew"], "roles": [{"id": "DV.P2.028.1A", "role": "Realist"}, {"id": "DV.P2.028.1B", "role": "Overachiever"}, {"id": "DV.P2.028.1C", "role": "Dreamer"}, {"id": "DV.P2.028.1D", "role": "Timid"}, {"id": "DV.P2.028.1E", "role": "Overprotective"}, {"id": "DV.P2.028.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.028.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.028.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.028.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.029", "crew_name": "Sequencing Logic Crew", "family_anchor": "136. Task Decomposition & Work Package Design", "mission": "Decide the order of work, what must happen first, what can happen in parallel, and when verification should occur.", "triggers": ["sequence", "order", "first then", "parallel", "dependencies"], "primary_outputs": ["sequence_plan.md", "dependency_order.json", "parallelization_notes.md"], "handoff_targets": ["DV.P2.011 Parallel Work Coordination Crew", "DV.P2.031 Checkpoint Planning Crew"], "roles": [{"id": "DV.P2.029.1A", "role": "Realist"}, {"id": "DV.P2.029.1B", "role": "Overachiever"}, {"id": "DV.P2.029.1C", "role": "Dreamer"}, {"id": "DV.P2.029.1D", "role": "Timid"}, {"id": "DV.P2.029.1E", "role": "Overprotective"}, {"id": "DV.P2.029.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.029.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.029.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.029.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.030", "crew_name": "Decomposition QA Crew", "family_anchor": "136. Task Decomposition & Work Package Design", "mission": "Detect missing steps, overlapping steps, vague outputs, impossible task packets, and hidden scope creep before execution.", "triggers": ["check plan", "missing step", "vague output", "impossible packet", "decomposition QA"], "primary_outputs": ["decomposition_qa_report.md", "missing_step_list.md", "corrected_work_package.md"], "handoff_targets": ["DV.P2.034 Scope Guard Crew", "DV.P2.004 Review Gate Crew"], "roles": [{"id": "DV.P2.030.1A", "role": "Realist"}, {"id": "DV.P2.030.1B", "role": "Overachiever"}, {"id": "DV.P2.030.1C", "role": "Dreamer"}, {"id": "DV.P2.030.1D", "role": "Timid"}, {"id": "DV.P2.030.1E", "role": "Overprotective"}, {"id": "DV.P2.030.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.030.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.030.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.030.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.031", "crew_name": "Checkpoint Planning Crew", "family_anchor": "127. State Management & Workflow Memory", "mission": "Decide where checkpoints should occur before, during, and after a task so work can resume without losing context.", "triggers": ["checkpoint", "save state", "pause point", "resume later"], "primary_outputs": ["checkpoint_plan.md", "checkpoint_triggers.json", "save_state_instructions.md"], "handoff_targets": ["DV.P2.032 Progress State Capture Crew", "DV.P2.037 Continuity Bridge Crew"], "roles": [{"id": "DV.P2.031.1A", "role": "Realist"}, {"id": "DV.P2.031.1B", "role": "Overachiever"}, {"id": "DV.P2.031.1C", "role": "Dreamer"}, {"id": "DV.P2.031.1D", "role": "Timid"}, {"id": "DV.P2.031.1E", "role": "Overprotective"}, {"id": "DV.P2.031.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.031.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.031.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.031.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.032", "crew_name": "Progress State Capture Crew", "family_anchor": "127. State Management & Workflow Memory", "mission": "Capture current state, completed work, pending work, blockers, changed files, validators run, and next action.", "triggers": ["capture state", "progress", "what changed", "save progress"], "primary_outputs": ["progress_state.json", "completed_pending_blocked.md", "current_run_summary.md"], "handoff_targets": ["DV.P2.006 Workflow Continuity Crew", "DV.P2.036 Partial Output Crew"], "roles": [{"id": "DV.P2.032.1A", "role": "Realist"}, {"id": "DV.P2.032.1B", "role": "Overachiever"}, {"id": "DV.P2.032.1C", "role": "Dreamer"}, {"id": "DV.P2.032.1D", "role": "Timid"}, {"id": "DV.P2.032.1E", "role": "Overprotective"}, {"id": "DV.P2.032.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.032.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.032.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.032.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.033", "crew_name": "Resumability Design Crew", "family_anchor": "127. State Management & Workflow Memory", "mission": "Define how tasks restart after interruption, tool failure, model limit, thread move, or user pause.", "triggers": ["resumability", "resume", "restart", "interrupted", "thread moved"], "primary_outputs": ["resumability_plan.md", "resume_context_packet.json", "restart_instructions.md"], "handoff_targets": ["DV.P2.037 Continuity Bridge Crew", "DV.P2.035 Interruption Handling Crew"], "roles": [{"id": "DV.P2.033.1A", "role": "Realist"}, {"id": "DV.P2.033.1B", "role": "Overachiever"}, {"id": "DV.P2.033.1C", "role": "Dreamer"}, {"id": "DV.P2.033.1D", "role": "Timid"}, {"id": "DV.P2.033.1E", "role": "Overprotective"}, {"id": "DV.P2.033.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.033.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.033.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.033.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.034", "crew_name": "Scope Guard Crew", "family_anchor": "127. State Management & Workflow Memory", "mission": "Compare current work against original scope and stop the run if unexpected files, actions, or goals appear.", "triggers": ["scope guard", "wrong file", "unexpected change", "drift", "overreach"], "primary_outputs": ["scope_guard_report.md", "unexpected_change_list.md", "stop_or_continue_recommendation.md"], "handoff_targets": ["DV.P2.003 Blocker Control Crew", "DV.P2.004 Review Gate Crew"], "roles": [{"id": "DV.P2.034.1A", "role": "Realist"}, {"id": "DV.P2.034.1B", "role": "Overachiever"}, {"id": "DV.P2.034.1C", "role": "Dreamer"}, {"id": "DV.P2.034.1D", "role": "Timid"}, {"id": "DV.P2.034.1E", "role": "Overprotective"}, {"id": "DV.P2.034.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.034.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.034.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.034.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.035", "crew_name": "Interruption Handling Crew", "family_anchor": "127. State Management & Workflow Memory", "mission": "Handle user interruptions, task pivots, tool errors, context loss, and message cutoffs while preserving active state.", "triggers": ["interruption", "wait", "pause", "error", "context loss"], "primary_outputs": ["interruption_record.md", "recovery_context.md", "paused_state.json"], "handoff_targets": ["DV.P2.006 Workflow Continuity Crew", "DV.P2.033 Resumability Design Crew"], "roles": [{"id": "DV.P2.035.1A", "role": "Realist"}, {"id": "DV.P2.035.1B", "role": "Overachiever"}, {"id": "DV.P2.035.1C", "role": "Dreamer"}, {"id": "DV.P2.035.1D", "role": "Timid"}, {"id": "DV.P2.035.1E", "role": "Overprotective"}, {"id": "DV.P2.035.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.035.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.035.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.035.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.036", "crew_name": "Partial Output Crew", "family_anchor": "127. State Management & Workflow Memory", "mission": "Preserve partial outputs as artifacts instead of letting unfinished work disappear or become “no output.”", "triggers": ["partial", "unfinished", "save output", "no output", "draft result"], "primary_outputs": ["partial_output_record.md", "partial_artifact_manifest.json", "completion_gap_notes.md"], "handoff_targets": ["DV.P2.032 Progress State Capture Crew", "DV.P2.039 Long Task Governance Crew"], "roles": [{"id": "DV.P2.036.1A", "role": "Realist"}, {"id": "DV.P2.036.1B", "role": "Overachiever"}, {"id": "DV.P2.036.1C", "role": "Dreamer"}, {"id": "DV.P2.036.1D", "role": "Timid"}, {"id": "DV.P2.036.1E", "role": "Overprotective"}, {"id": "DV.P2.036.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.036.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.036.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.036.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.037", "crew_name": "Continuity Bridge Crew", "family_anchor": "139. Long-Running Work, Checkpointing & Resumability", "mission": "Create compact bridge summaries that let future runs continue from prior work without rereading the entire project.", "triggers": ["bridge", "continue later", "summarize state", "resume packet"], "primary_outputs": ["continuity_bridge.md", "resume_packet.json", "prior_work_summary.md"], "handoff_targets": ["DV.P2.006 Workflow Continuity Crew", "DV.P2.033 Resumability Design Crew"], "roles": [{"id": "DV.P2.037.1A", "role": "Realist"}, {"id": "DV.P2.037.1B", "role": "Overachiever"}, {"id": "DV.P2.037.1C", "role": "Dreamer"}, {"id": "DV.P2.037.1D", "role": "Timid"}, {"id": "DV.P2.037.1E", "role": "Overprotective"}, {"id": "DV.P2.037.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.037.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.037.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.037.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.038", "crew_name": "Completion Forecast Crew", "family_anchor": "139. Long-Running Work, Checkpointing & Resumability", "mission": "Estimate remaining work, identify next milestones, flag likely blockers, and recommend whether to split the task.", "triggers": ["how much left", "forecast", "remaining work", "split task"], "primary_outputs": ["completion_forecast.md", "remaining_work_map.json", "split_recommendation.md"], "handoff_targets": ["DV.P2.001 Active Work Queue Crew", "DV.P2.039 Long Task Governance Crew"], "roles": [{"id": "DV.P2.038.1A", "role": "Realist"}, {"id": "DV.P2.038.1B", "role": "Overachiever"}, {"id": "DV.P2.038.1C", "role": "Dreamer"}, {"id": "DV.P2.038.1D", "role": "Timid"}, {"id": "DV.P2.038.1E", "role": "Overprotective"}, {"id": "DV.P2.038.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.038.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.038.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.038.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.039", "crew_name": "Long Task Governance Crew", "family_anchor": "139. Long-Running Work, Checkpointing & Resumability", "mission": "Enforce long-task rules: checkpoints, progress reports, output artifacts, stop conditions, validators, and no fake completion.", "triggers": ["long task", "big project", "checkpoint rules", "no fake done", "progress report"], "primary_outputs": ["long_task_governance_report.md", "checkpoint_compliance.md", "long_task_rules.json"], "handoff_targets": ["DV.P2.004 Review Gate Crew", "DV.P2.042 Resumability Dashboard Crew"], "roles": [{"id": "DV.P2.039.1A", "role": "Realist"}, {"id": "DV.P2.039.1B", "role": "Overachiever"}, {"id": "DV.P2.039.1C", "role": "Dreamer"}, {"id": "DV.P2.039.1D", "role": "Timid"}, {"id": "DV.P2.039.1E", "role": "Overprotective"}, {"id": "DV.P2.039.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.039.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.039.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.039.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.040", "crew_name": "Run Log Crew", "family_anchor": "139. Long-Running Work, Checkpointing & Resumability", "mission": "Record run history, commands, decisions, outputs, errors, validators, and continuation notes.", "triggers": ["log run", "run history", "execution log", "record this"], "primary_outputs": ["run_log.md", "run_event_history.json", "decision_log.md"], "handoff_targets": ["DV.P2.032 Progress State Capture Crew", "DV.P2.037 Continuity Bridge Crew"], "roles": [{"id": "DV.P2.040.1A", "role": "Realist"}, {"id": "DV.P2.040.1B", "role": "Overachiever"}, {"id": "DV.P2.040.1C", "role": "Dreamer"}, {"id": "DV.P2.040.1D", "role": "Timid"}, {"id": "DV.P2.040.1E", "role": "Overprotective"}, {"id": "DV.P2.040.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.040.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.040.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.040.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.041", "crew_name": "Resume Command Crew", "family_anchor": "139. Long-Running Work, Checkpointing & Resumability", "mission": "Generate exact next commands or prompts needed to resume a task from the current checkpoint.", "triggers": ["resume command", "next prompt", "continue from here", "exact next step"], "primary_outputs": ["resume_command.md", "next_prompt.txt", "continuation_instructions.md"], "handoff_targets": ["DV.P2.006 Workflow Continuity Crew", "DV.P2.001 Active Work Queue Crew"], "roles": [{"id": "DV.P2.041.1A", "role": "Realist"}, {"id": "DV.P2.041.1B", "role": "Overachiever"}, {"id": "DV.P2.041.1C", "role": "Dreamer"}, {"id": "DV.P2.041.1D", "role": "Timid"}, {"id": "DV.P2.041.1E", "role": "Overprotective"}, {"id": "DV.P2.041.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.041.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.041.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.041.1I", "role": "Auditor / Revision Director"}]},
-    { "crew_id": "DV.P2.042", "crew_name": "Resumability Dashboard Crew", "family_anchor": "139. Long-Running Work, Checkpointing & Resumability", "mission": "Summarize resumability health across active tasks, including checkpoint status, blocked items, partial outputs, and next actions.", "triggers": ["resumability dashboard", "task dashboard", "checkpoint status", "what can resume"], "primary_outputs": ["resumability_dashboard.md", "active_checkpoint_index.json", "next_action_dashboard.md"], "handoff_targets": ["DV.P2.002 Workflow Status Crew", "DV.P2.039 Long Task Governance Crew"], "roles": [{"id": "DV.P2.042.1A", "role": "Realist"}, {"id": "DV.P2.042.1B", "role": "Overachiever"}, {"id": "DV.P2.042.1C", "role": "Dreamer"}, {"id": "DV.P2.042.1D", "role": "Timid"}, {"id": "DV.P2.042.1E", "role": "Overprotective"}, {"id": "DV.P2.042.1F", "role": "Wildcard Intern"}, {"id": "DV.P2.042.1G", "role": "Team Lead / Manager"}, {"id": "DV.P2.042.1H", "role": "Scribe / Shower of Work"}, {"id": "DV.P2.042.1I", "role": "Auditor / Revision Director"}]}
-  ]
+    {
+      "crew_id": "DV.P2.001",
+      "crew_name": "Active Work Queue Crew",
+      "family_anchor": "35. Workflow Control Tower",
+      "mission": "Maintain the active work queue, paused tasks, blocked tasks, next tasks, and review-ready tasks for the Station Chief runtime.",
+      "triggers": [
+        "active queue",
+        "what is active",
+        "work queue",
+        "next task",
+        "paused task"
+      ],
+      "primary_outputs": [
+        "active_work_queue.json",
+        "paused_task_register.md",
+        "blocked_task_register.md",
+        "next_action_list.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.002 Workflow Status Crew",
+        "DV.P2.025 Task Boundary Crew",
+        "DV.P2.031 Checkpoint Planning Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.001.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.001.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.001.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.001.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.001.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.001.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.001.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.001.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.001.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.002",
+      "crew_name": "Workflow Status Crew",
+      "family_anchor": "35. Workflow Control Tower",
+      "mission": "Track whether each operation is intake, scoped, routed, assigned, executing, blocked, verifying, complete, or archived.",
+      "triggers": [
+        "status",
+        "where are we",
+        "workflow state",
+        "task status",
+        "progress"
+      ],
+      "primary_outputs": [
+        "workflow_status_board.json",
+        "status_summary.md",
+        "operation_state_log.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.003 Blocker Control Crew",
+        "DV.P2.004 Review Gate Crew",
+        "DV.P2.031 Checkpoint Planning Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.002.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.002.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.002.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.002.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.002.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.002.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.002.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.002.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.002.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.003",
+      "crew_name": "Blocker Control Crew",
+      "family_anchor": "35. Workflow Control Tower",
+      "mission": "Identify blockers, classify whether they are missing info, tool failure, validator failure, scope conflict, permission issue, or credential issue, and recommend a path forward.",
+      "triggers": [
+        "blocked",
+        "stuck",
+        "can’t continue",
+        "missing info",
+        "validator failed"
+      ],
+      "primary_outputs": [
+        "blocker_report.md",
+        "blocker_type.json",
+        "unblock_plan.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.018 Dependency Risk Crew",
+        "DV.P2.032 Progress State Capture Crew",
+        "DV.P2.035 Interruption Handling Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.003.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.003.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.003.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.003.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.003.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.003.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.003.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.003.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.003.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.004",
+      "crew_name": "Review Gate Crew",
+      "family_anchor": "35. Workflow Control Tower",
+      "mission": "Decide when work must pause for human review, validator review, auditor review, or final lock review.",
+      "triggers": [
+        "review gate",
+        "pause for review",
+        "needs approval",
+        "ready to check",
+        "final review"
+      ],
+      "primary_outputs": [
+        "review_gate_decision.md",
+        "approval_needed_record.json",
+        "ready_for_review_packet.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.002 Workflow Status Crew",
+        "DV.P2.039 Long Task Governance Crew",
+        "DV.P2.042 Resumability Dashboard Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.004.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.004.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.004.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.004.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.004.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.004.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.004.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.004.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.004.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.005",
+      "crew_name": "Operation Brief Control Crew",
+      "family_anchor": "35. Workflow Control Tower",
+      "mission": "Ensure every operation has a clear brief before execution: objective, context, scope, constraints, outputs, validators, and stop conditions.",
+      "triggers": [
+        "operation brief",
+        "scope this",
+        "mission packet",
+        "execution brief",
+        "define success"
+      ],
+      "primary_outputs": [
+        "operation_brief.md",
+        "stop_conditions.md",
+        "required_artifacts.md",
+        "validator_plan.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.021 Requirement Clarification Crew",
+        "DV.P2.026 Checkpoint Planning Crew",
+        "DV.P2.007 Swarm Activation Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.005.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.005.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.005.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.005.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.005.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.005.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.005.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.005.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.005.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.006",
+      "crew_name": "Workflow Continuity Crew",
+      "family_anchor": "35. Workflow Control Tower",
+      "mission": "Preserve continuity across “ok,” “next,” “check please,” interruptions, thread moves, and long gaps without losing task order.",
+      "triggers": [
+        "ok",
+        "next",
+        "continue",
+        "check please",
+        "thread move"
+      ],
+      "primary_outputs": [
+        "active_task_pointer.json",
+        "continuity_notes.md",
+        "resumed_context_packet.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.031 Checkpoint Planning Crew",
+        "DV.P2.037 Continuity Bridge Crew",
+        "DV.P2.001 Active Work Queue Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.006.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.006.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.006.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.006.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.006.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.006.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.006.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.006.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.006.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.007",
+      "crew_name": "Swarm Activation Crew",
+      "family_anchor": "57. Multi-Agent Orchestration & Swarm Control",
+      "mission": "Decide which command layers, family chiefs, department chiefs, or worker crews should become active for a task while preserving whole-agency awareness.",
+      "triggers": [
+        "activate agents",
+        "orchestrate",
+        "swarm",
+        "who wakes up",
+        "selected crews"
+      ],
+      "primary_outputs": [
+        "activation_plan.json",
+        "selected_agents.md",
+        "activation_tier_record.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.008 Family Chief Coordination Crew",
+        "DV.P2.013 Routing Matrix Crew",
+        "DV.P2.014 Cross-Department Handoff Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.007.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.007.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.007.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.007.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.007.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.007.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.007.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.007.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.007.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.008",
+      "crew_name": "Family Chief Coordination Crew",
+      "family_anchor": "57. Multi-Agent Orchestration & Swarm Control",
+      "mission": "Coordinate family-level chiefs so relevant families provide routing judgment without turning every family into live execution.",
+      "triggers": [
+        "family chiefs",
+        "family coordination",
+        "council",
+        "command layer"
+      ],
+      "primary_outputs": [
+        "family_chief_brief.md",
+        "family_relevance_scores.json",
+        "family_coordination_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.009 Department Chief Coordination Crew",
+        "DV.P2.013 Routing Matrix Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.008.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.008.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.008.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.008.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.008.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.008.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.008.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.008.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.008.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.009",
+      "crew_name": "Department Chief Coordination Crew",
+      "family_anchor": "57. Multi-Agent Orchestration & Swarm Control",
+      "mission": "Coordinate department-level managers, scribes, and auditors for selected families and convert command guidance into assignable work.",
+      "triggers": [
+        "department chiefs",
+        "managers",
+        "scribes",
+        "auditors",
+        "department assignment"
+      ],
+      "primary_outputs": [
+        "department_coordination_packet.md",
+        "department_assignment_map.json",
+        "scribe_auditor_plan.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.022 Work Breakdown Crew",
+        "DV.P2.024 Ownership Assignment Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.009.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.009.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.009.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.009.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.009.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.009.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.009.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.009.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.009.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.010",
+      "crew_name": "Worker Activation Crew",
+      "family_anchor": "57. Multi-Agent Orchestration & Swarm Control",
+      "mission": "Activate only the worker roles needed for execution, with defined task packets, budgets, and reporting requirements.",
+      "triggers": [
+        "worker agents",
+        "execute task",
+        "assign workers",
+        "run crew"
+      ],
+      "primary_outputs": [
+        "worker_activation_packet.json",
+        "worker_task_cards.md",
+        "live_execution_budget.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.023 Work Package Crew",
+        "DV.P2.033 Resumability Design Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.010.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.010.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.010.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.010.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.010.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.010.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.010.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.010.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.010.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.011",
+      "crew_name": "Parallel Work Coordination Crew",
+      "family_anchor": "57. Multi-Agent Orchestration & Swarm Control",
+      "mission": "Decide which work can run in parallel, which work must be sequential, and which outputs depend on prior steps.",
+      "triggers": [
+        "parallel",
+        "sequence",
+        "dependencies",
+        "run at same time",
+        "order of operations"
+      ],
+      "primary_outputs": [
+        "parallel_work_plan.md",
+        "sequence_map.json",
+        "dependency_warning_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.018 Dependency Risk Crew",
+        "DV.P2.023 Work Package Crew",
+        "DV.P2.029 Sequencing Logic Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.011.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.011.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.011.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.011.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.011.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.011.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.011.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.011.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.011.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.012",
+      "crew_name": "Swarm Containment Crew",
+      "family_anchor": "57. Multi-Agent Orchestration & Swarm Control",
+      "mission": "Prevent uncontrolled agent sprawl, duplicated work, runaway execution, redundant outputs, and pointless model calls.",
+      "triggers": [
+        "too many agents",
+        "runaway",
+        "duplicate work",
+        "credit burn",
+        "no output"
+      ],
+      "primary_outputs": [
+        "containment_decision.md",
+        "redundant_agent_report.md",
+        "live_execution_limit_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.007 Swarm Activation Crew",
+        "DV.P2.003 Blocker Control Crew",
+        "DV.P2.039 Long Task Governance Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.012.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.012.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.012.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.012.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.012.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.012.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.012.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.012.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.012.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.013",
+      "crew_name": "Routing Matrix Crew",
+      "family_anchor": "137. Department Dependency Graph & Routing Matrix",
+      "mission": "Maintain the map that translates task types into likely families, departments, overlays, crews, and validators.",
+      "triggers": [
+        "routing matrix",
+        "route task",
+        "department map",
+        "who handles this"
+      ],
+      "primary_outputs": [
+        "routing_matrix.json",
+        "task_type_to_family_map.md",
+        "route_explanation.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.014 Cross-Department Handoff Crew",
+        "DV.P2.015 Dependency Graph Crew",
+        "DV.P2.007 Swarm Activation Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.013.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.013.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.013.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.013.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.013.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.013.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.013.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.013.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.013.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.014",
+      "crew_name": "Cross-Department Handoff Crew",
+      "family_anchor": "137. Department Dependency Graph & Routing Matrix",
+      "mission": "Define handoff packets between families/departments so context, outputs, and constraints do not get lost.",
+      "triggers": [
+        "handoff",
+        "pass to department",
+        "context transfer",
+        "next department"
+      ],
+      "primary_outputs": [
+        "handoff_packet.md",
+        "handoff_context.json",
+        "receiving_department_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.009 Department Chief Coordination Crew",
+        "DV.P2.032 Progress State Capture Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.014.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.014.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.014.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.014.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.014.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.014.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.014.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.014.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.014.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.015",
+      "crew_name": "Dependency Graph Crew",
+      "family_anchor": "137. Department Dependency Graph & Routing Matrix",
+      "mission": "Represent dependencies between families, departments, crews, outputs, validators, files, tools, and approvals.",
+      "triggers": [
+        "dependency graph",
+        "depends on",
+        "prerequisite",
+        "relationship map"
+      ],
+      "primary_outputs": [
+        "dependency_graph.json",
+        "dependency_notes.md",
+        "prerequisite_map.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.016 Escalation Route Crew",
+        "DV.P2.018 Dependency Risk Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.015.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.015.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.015.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.015.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.015.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.015.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.015.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.015.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.015.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.016",
+      "crew_name": "Escalation Route Crew",
+      "family_anchor": "137. Department Dependency Graph & Routing Matrix",
+      "mission": "Route unresolved conflicts, blockers, validator failures, tool failures, or scope disputes to the right command/governance layer.",
+      "triggers": [
+        "escalate",
+        "unresolved",
+        "conflict",
+        "validator failure",
+        "scope dispute"
+      ],
+      "primary_outputs": [
+        "escalation_route.md",
+        "escalation_decision.json",
+        "escalation_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.003 Blocker Control Crew",
+        "DV.P2.039 Long Task Governance Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.016.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.016.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.016.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.016.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.016.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.016.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.016.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.016.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.016.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.017",
+      "crew_name": "Routing Conflict Crew",
+      "family_anchor": "137. Department Dependency Graph & Routing Matrix",
+      "mission": "Resolve cases where multiple families could own the work or where ownership is ambiguous.",
+      "triggers": [
+        "routing conflict",
+        "who owns this",
+        "overlapping departments",
+        "ambiguous owner"
+      ],
+      "primary_outputs": [
+        "routing_conflict_report.md",
+        "ownership_decision.json",
+        "alternate_route_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.013 Routing Matrix Crew",
+        "DV.P2.024 Ownership Assignment Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.017.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.017.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.017.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.017.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.017.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.017.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.017.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.017.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.017.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.018",
+      "crew_name": "Dependency Risk Crew",
+      "family_anchor": "137. Department Dependency Graph & Routing Matrix",
+      "mission": "Identify dependency risks before execution, including missing files, missing tools, unknown context, unsafe writes, unavailable credentials, or validator gaps.",
+      "triggers": [
+        "dependency risk",
+        "missing dependency",
+        "tool missing",
+        "credential missing",
+        "validator gap"
+      ],
+      "primary_outputs": [
+        "dependency_risk_report.md",
+        "preflight_warning_list.md",
+        "mitigation_plan.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.003 Blocker Control Crew",
+        "DV.P2.012 Swarm Containment Crew",
+        "DV.P2.026 Checkpoint Planning Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.018.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.018.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.018.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.018.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.018.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.018.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.018.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.018.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.018.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.019",
+      "crew_name": "Work Intake Crew",
+      "family_anchor": "135. Work Intake, Scoping & Triage",
+      "mission": "Convert raw user input into a structured intake record with task type, project context, urgency, risk level, and likely next action.",
+      "triggers": [
+        "new request",
+        "intake",
+        "what is this",
+        "classify task",
+        "start task"
+      ],
+      "primary_outputs": [
+        "work_intake_record.json",
+        "task_type_summary.md",
+        "intake_risk_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.020 Scope Boundary Crew",
+        "DV.P2.013 Routing Matrix Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.019.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.019.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.019.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.019.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.019.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.019.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.019.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.019.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.019.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.020",
+      "crew_name": "Scope Boundary Crew",
+      "family_anchor": "135. Work Intake, Scoping & Triage",
+      "mission": "Define exactly what is in scope, out of scope, allowed, forbidden, required, and optional for a task.",
+      "triggers": [
+        "scope",
+        "boundaries",
+        "only this",
+        "do not touch",
+        "allowed files"
+      ],
+      "primary_outputs": [
+        "scope_boundary.md",
+        "allowed_actions.json",
+        "forbidden_actions.json"
+      ],
+      "handoff_targets": [
+        "DV.P2.005 Operation Brief Control Crew",
+        "DV.P2.034 Scope Guard Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.020.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.020.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.020.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.020.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.020.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.020.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.020.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.020.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.020.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.021",
+      "crew_name": "Requirement Clarification Crew",
+      "family_anchor": "135. Work Intake, Scoping & Triage",
+      "mission": "Detect missing requirements and decide whether to resolve from context, proceed with assumptions, or ask one necessary question.",
+      "triggers": [
+        "missing requirement",
+        "clarify",
+        "question",
+        "assume or ask"
+      ],
+      "primary_outputs": [
+        "requirement_gap_report.md",
+        "resolved_assumptions.md",
+        "minimal_question.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.019 Work Intake Crew",
+        "DV.P2.022 Work Breakdown Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.021.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.021.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.021.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.021.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.021.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.021.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.021.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.021.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.021.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.022",
+      "crew_name": "Work Type Classification Crew",
+      "family_anchor": "135. Work Intake, Scoping & Triage",
+      "mission": "Classify work as question, verification, prompt-writing, build, patch, audit, research, file operation, memory capture, planning, or correction.",
+      "triggers": [
+        "classify",
+        "task type",
+        "check please",
+        "build request",
+        "correction"
+      ],
+      "primary_outputs": [
+        "work_type_classification.json",
+        "action_mode_recommendation.md",
+        "verification_or_execution_decision.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.001 Active Work Queue Crew",
+        "DV.P2.013 Routing Matrix Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.022.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.022.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.022.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.022.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.022.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.022.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.022.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.022.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.022.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.023",
+      "crew_name": "Acceptance Criteria Crew",
+      "family_anchor": "135. Work Intake, Scoping & Triage",
+      "mission": "Define the testable conditions that make a task complete, including required artifacts, validators, scope check, and final report.",
+      "triggers": [
+        "success criteria",
+        "definition of done",
+        "completion standard",
+        "done done"
+      ],
+      "primary_outputs": [
+        "acceptance_criteria.md",
+        "completion_checklist.md",
+        "evidence_requirements.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.005 Operation Brief Control Crew",
+        "DV.P2.039 Long Task Governance Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.023.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.023.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.023.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.023.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.023.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.023.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.023.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.023.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.023.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.024",
+      "crew_name": "Intake Handoff Crew",
+      "family_anchor": "135. Work Intake, Scoping & Triage",
+      "mission": "Package intake results into a handoff-ready operation packet for decomposition, routing, or execution.",
+      "triggers": [
+        "hand off intake",
+        "start routing",
+        "package request",
+        "task packet"
+      ],
+      "primary_outputs": [
+        "intake_handoff_packet.md",
+        "task_context_bundle.json",
+        "initial_route_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.025 Task Boundary Crew",
+        "DV.P2.013 Routing Matrix Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.024.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.024.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.024.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.024.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.024.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.024.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.024.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.024.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.024.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.025",
+      "crew_name": "Task Boundary Crew",
+      "family_anchor": "136. Task Decomposition & Work Package Design",
+      "mission": "Convert scope into precise task boundaries so the system does not mix planning, coding, validating, committing, and reporting unless requested.",
+      "triggers": [
+        "task boundary",
+        "break this down",
+        "separate phases",
+        "avoid scope drift"
+      ],
+      "primary_outputs": [
+        "task_boundary_record.md",
+        "phase_split_plan.md",
+        "action_boundary_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.026 Work Breakdown Crew",
+        "DV.P2.034 Scope Guard Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.025.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.025.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.025.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.025.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.025.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.025.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.025.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.025.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.025.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.026",
+      "crew_name": "Work Breakdown Crew",
+      "family_anchor": "136. Task Decomposition & Work Package Design",
+      "mission": "Break the task into major steps, subtasks, deliverables, validators, dependencies, and stop points.",
+      "triggers": [
+        "decompose",
+        "break down",
+        "work breakdown",
+        "task plan"
+      ],
+      "primary_outputs": [
+        "work_breakdown_structure.md",
+        "subtask_list.json",
+        "deliverable_map.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.027 Work Package Crew",
+        "DV.P2.029 Sequencing Logic Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.026.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.026.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.026.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.026.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.026.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.026.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.026.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.026.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.026.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.027",
+      "crew_name": "Work Package Crew",
+      "family_anchor": "136. Task Decomposition & Work Package Design",
+      "mission": "Create assignable work packages with owner, objective, scope, inputs, outputs, budget, validators, and reporting rules.",
+      "triggers": [
+        "work package",
+        "assignable task",
+        "task card",
+        "execution packet"
+      ],
+      "primary_outputs": [
+        "work_package.json",
+        "worker_task_card.md",
+        "package_success_criteria.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.010 Worker Activation Crew",
+        "DV.P2.030 Decomposition QA Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.027.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.027.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.027.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.027.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.027.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.027.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.027.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.027.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.027.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.028",
+      "crew_name": "Ownership Assignment Crew",
+      "family_anchor": "136. Task Decomposition & Work Package Design",
+      "mission": "Assign ownership to family chiefs, department chiefs, overlay crews, workers, scribes, or auditors based on task type and routing matrix.",
+      "triggers": [
+        "assign owner",
+        "who owns",
+        "responsible agent",
+        "crew owner"
+      ],
+      "primary_outputs": [
+        "ownership_assignment.json",
+        "responsible_party_notes.md",
+        "accountability_map.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.009 Department Chief Coordination Crew",
+        "DV.P2.017 Routing Conflict Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.028.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.028.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.028.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.028.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.028.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.028.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.028.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.028.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.028.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.029",
+      "crew_name": "Sequencing Logic Crew",
+      "family_anchor": "136. Task Decomposition & Work Package Design",
+      "mission": "Decide the order of work, what must happen first, what can happen in parallel, and when verification should occur.",
+      "triggers": [
+        "sequence",
+        "order",
+        "first then",
+        "parallel",
+        "dependencies"
+      ],
+      "primary_outputs": [
+        "sequence_plan.md",
+        "dependency_order.json",
+        "parallelization_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.011 Parallel Work Coordination Crew",
+        "DV.P2.031 Checkpoint Planning Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.029.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.029.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.029.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.029.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.029.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.029.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.029.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.029.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.029.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.030",
+      "crew_name": "Decomposition QA Crew",
+      "family_anchor": "136. Task Decomposition & Work Package Design",
+      "mission": "Detect missing steps, overlapping steps, vague outputs, impossible task packets, and hidden scope creep before execution.",
+      "triggers": [
+        "check plan",
+        "missing step",
+        "vague output",
+        "impossible packet",
+        "decomposition QA"
+      ],
+      "primary_outputs": [
+        "decomposition_qa_report.md",
+        "missing_step_list.md",
+        "corrected_work_package.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.034 Scope Guard Crew",
+        "DV.P2.004 Review Gate Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.030.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.030.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.030.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.030.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.030.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.030.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.030.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.030.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.030.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.031",
+      "crew_name": "Checkpoint Planning Crew",
+      "family_anchor": "127. State Management & Workflow Memory",
+      "mission": "Decide where checkpoints should occur before, during, and after a task so work can resume without losing context.",
+      "triggers": [
+        "checkpoint",
+        "save state",
+        "pause point",
+        "resume later"
+      ],
+      "primary_outputs": [
+        "checkpoint_plan.md",
+        "checkpoint_triggers.json",
+        "save_state_instructions.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.032 Progress State Capture Crew",
+        "DV.P2.037 Continuity Bridge Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.031.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.031.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.031.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.031.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.031.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.031.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.031.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.031.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.031.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.032",
+      "crew_name": "Progress State Capture Crew",
+      "family_anchor": "127. State Management & Workflow Memory",
+      "mission": "Capture current state, completed work, pending work, blockers, changed files, validators run, and next action.",
+      "triggers": [
+        "capture state",
+        "progress",
+        "what changed",
+        "save progress"
+      ],
+      "primary_outputs": [
+        "progress_state.json",
+        "completed_pending_blocked.md",
+        "current_run_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.006 Workflow Continuity Crew",
+        "DV.P2.036 Partial Output Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.032.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.032.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.032.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.032.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.032.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.032.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.032.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.032.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.032.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.033",
+      "crew_name": "Resumability Design Crew",
+      "family_anchor": "127. State Management & Workflow Memory",
+      "mission": "Define how tasks restart after interruption, tool failure, model limit, thread move, or user pause.",
+      "triggers": [
+        "resumability",
+        "resume",
+        "restart",
+        "interrupted",
+        "thread moved"
+      ],
+      "primary_outputs": [
+        "resumability_plan.md",
+        "resume_context_packet.json",
+        "restart_instructions.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.037 Continuity Bridge Crew",
+        "DV.P2.035 Interruption Handling Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.033.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.033.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.033.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.033.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.033.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.033.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.033.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.033.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.033.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.034",
+      "crew_name": "Scope Guard Crew",
+      "family_anchor": "127. State Management & Workflow Memory",
+      "mission": "Compare current work against original scope and stop the run if unexpected files, actions, or goals appear.",
+      "triggers": [
+        "scope guard",
+        "wrong file",
+        "unexpected change",
+        "drift",
+        "overreach"
+      ],
+      "primary_outputs": [
+        "scope_guard_report.md",
+        "unexpected_change_list.md",
+        "stop_or_continue_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.003 Blocker Control Crew",
+        "DV.P2.004 Review Gate Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.034.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.034.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.034.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.034.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.034.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.034.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.034.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.034.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.034.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.035",
+      "crew_name": "Interruption Handling Crew",
+      "family_anchor": "127. State Management & Workflow Memory",
+      "mission": "Handle user interruptions, task pivots, tool errors, context loss, and message cutoffs while preserving active state.",
+      "triggers": [
+        "interruption",
+        "wait",
+        "pause",
+        "error",
+        "context loss"
+      ],
+      "primary_outputs": [
+        "interruption_record.md",
+        "recovery_context.md",
+        "paused_state.json"
+      ],
+      "handoff_targets": [
+        "DV.P2.006 Workflow Continuity Crew",
+        "DV.P2.033 Resumability Design Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.035.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.035.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.035.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.035.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.035.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.035.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.035.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.035.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.035.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.036",
+      "crew_name": "Partial Output Crew",
+      "family_anchor": "127. State Management & Workflow Memory",
+      "mission": "Preserve partial outputs as artifacts instead of letting unfinished work disappear or become “no output.”",
+      "triggers": [
+        "partial",
+        "unfinished",
+        "save output",
+        "no output",
+        "draft result"
+      ],
+      "primary_outputs": [
+        "partial_output_record.md",
+        "partial_artifact_manifest.json",
+        "completion_gap_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.032 Progress State Capture Crew",
+        "DV.P2.039 Long Task Governance Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.036.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.036.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.036.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.036.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.036.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.036.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.036.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.036.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.036.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.037",
+      "crew_name": "Continuity Bridge Crew",
+      "family_anchor": "139. Long-Running Work, Checkpointing & Resumability",
+      "mission": "Create compact bridge summaries that let future runs continue from prior work without rereading the entire project.",
+      "triggers": [
+        "bridge",
+        "continue later",
+        "summarize state",
+        "resume packet"
+      ],
+      "primary_outputs": [
+        "continuity_bridge.md",
+        "resume_packet.json",
+        "prior_work_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.006 Workflow Continuity Crew",
+        "DV.P2.033 Resumability Design Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.037.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.037.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.037.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.037.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.037.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.037.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.037.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.037.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.037.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.038",
+      "crew_name": "Completion Forecast Crew",
+      "family_anchor": "139. Long-Running Work, Checkpointing & Resumability",
+      "mission": "Estimate remaining work, identify next milestones, flag likely blockers, and recommend whether to split the task.",
+      "triggers": [
+        "how much left",
+        "forecast",
+        "remaining work",
+        "split task"
+      ],
+      "primary_outputs": [
+        "completion_forecast.md",
+        "remaining_work_map.json",
+        "split_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.001 Active Work Queue Crew",
+        "DV.P2.039 Long Task Governance Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.038.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.038.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.038.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.038.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.038.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.038.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.038.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.038.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.038.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.039",
+      "crew_name": "Long Task Governance Crew",
+      "family_anchor": "139. Long-Running Work, Checkpointing & Resumability",
+      "mission": "Enforce long-task rules: checkpoints, progress reports, output artifacts, stop conditions, validators, and no fake completion.",
+      "triggers": [
+        "long task",
+        "big project",
+        "checkpoint rules",
+        "no fake done",
+        "progress report"
+      ],
+      "primary_outputs": [
+        "long_task_governance_report.md",
+        "checkpoint_compliance.md",
+        "long_task_rules.json"
+      ],
+      "handoff_targets": [
+        "DV.P2.004 Review Gate Crew",
+        "DV.P2.042 Resumability Dashboard Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.039.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.039.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.039.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.039.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.039.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.039.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.039.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.039.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.039.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.040",
+      "crew_name": "Run Log Crew",
+      "family_anchor": "139. Long-Running Work, Checkpointing & Resumability",
+      "mission": "Record run history, commands, decisions, outputs, errors, validators, and continuation notes.",
+      "triggers": [
+        "log run",
+        "run history",
+        "execution log",
+        "record this"
+      ],
+      "primary_outputs": [
+        "run_log.md",
+        "run_event_history.json",
+        "decision_log.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.032 Progress State Capture Crew",
+        "DV.P2.037 Continuity Bridge Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.040.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.040.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.040.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.040.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.040.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.040.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.040.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.040.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.040.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.041",
+      "crew_name": "Resume Command Crew",
+      "family_anchor": "139. Long-Running Work, Checkpointing & Resumability",
+      "mission": "Generate exact next commands or prompts needed to resume a task from the current checkpoint.",
+      "triggers": [
+        "resume command",
+        "next prompt",
+        "continue from here",
+        "exact next step"
+      ],
+      "primary_outputs": [
+        "resume_command.md",
+        "next_prompt.txt",
+        "continuation_instructions.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.006 Workflow Continuity Crew",
+        "DV.P2.001 Active Work Queue Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.041.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.041.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.041.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.041.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.041.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.041.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.041.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.041.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.041.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P2.042",
+      "crew_name": "Resumability Dashboard Crew",
+      "family_anchor": "139. Long-Running Work, Checkpointing & Resumability",
+      "mission": "Summarize resumability health across active tasks, including checkpoint status, blocked items, partial outputs, and next actions.",
+      "triggers": [
+        "resumability dashboard",
+        "task dashboard",
+        "checkpoint status",
+        "what can resume"
+      ],
+      "primary_outputs": [
+        "resumability_dashboard.md",
+        "active_checkpoint_index.json",
+        "next_action_dashboard.md"
+      ],
+      "handoff_targets": [
+        "DV.P2.002 Workflow Status Crew",
+        "DV.P2.039 Long Task Governance Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P2.042.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P2.042.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P2.042.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P2.042.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P2.042.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P2.042.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P2.042.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P2.042.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P2.042.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    }
+  ],
+  "ownership_metadata": {
+    "project_owner": "Devin O’Rourke",
+    "project_owner_ascii": "Devin O'Rourke",
+    "system_architect": "Devin O’Rourke",
+    "operating_doctrine_author": "Devin O’Rourke",
+    "maintainer": "Devin O’Rourke",
+    "ownership_phrase": "Project owner, system architect, and operating-doctrine author: Devin O’Rourke.",
+    "applies_to": "Agent Command Center Devinization overlay architecture",
+    "baseline_note": "The locked 175-family baseline remains preserved; this metadata identifies Devin O’Rourke as owner/architect of the Devinization overlay stack.",
+    "scope": "metadata attribution only"
+  }
 }

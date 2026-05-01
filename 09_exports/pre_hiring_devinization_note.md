@@ -1,5 +1,10 @@
 # Agent Command Center — Pre-Hiring Devinization Note
 
+## Ownership / Attribution
+
+Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
+
+This attribution applies to the Agent Command Center Devinization overlay architecture. The locked 175-family baseline remains preserved; this metadata identifies Devin O’Rourke as owner/architect of the Devinization overlay stack.
 ## Current Status
 The 175-family Agent Command Center baseline is locked. The families, departments, units, team-role slots, validators, exports, and final lock report exist as the completed blueprint/org-chart layer.
 

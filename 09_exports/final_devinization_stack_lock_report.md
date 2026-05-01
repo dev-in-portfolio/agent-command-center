@@ -3,6 +3,11 @@
 ## Status
 Family 7 and Devinization Packs 1 through 7 are locked as overlay architecture. Locked 175-family baseline preserved.
 
+## Ownership / Attribution
+
+Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
+
+This attribution applies to the Agent Command Center Devinization overlay architecture. The locked 175-family baseline remains preserved; this metadata identifies Devin O’Rourke as owner/architect of the Devinization overlay stack.
 ## Purpose
 This report locks the management, routing, memory, safety, quality, delivery, and governance overlays needed before hiring/animating the workforce or building the Station Chief runtime skeleton.
 

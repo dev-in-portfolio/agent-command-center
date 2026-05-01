@@ -3,6 +3,11 @@
 ## Status
 Overlay created. Locked 175-family baseline preserved.
 
+## Ownership / Attribution
+
+Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
+
+This attribution applies to the Agent Command Center Devinization overlay architecture. The locked 175-family baseline remains preserved; this metadata identifies Devin O’Rourke as owner/architect of the Devinization overlay stack.
 ## Included Families
 138. Output Assembly, Synthesis & Final Answer Design
 82. Version Control, Releases & Change Management
