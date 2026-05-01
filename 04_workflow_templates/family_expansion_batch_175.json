@@ -1,0 +1,98 @@
+[
+  {
+    "id": "175",
+    "name": "Master Archive / Library of Alexandria",
+    "departments": [
+      {
+        "id": "175.1",
+        "name": "Master Archive Intake",
+        "units": [
+          { "id": "175.1.1", "name": "Archive Request Capture" },
+          { "id": "175.1.2", "name": "Collection Scope Review" },
+          { "id": "175.1.3", "name": "Archive Intake Summary" }
+        ]
+      },
+      {
+        "id": "175.2",
+        "name": "Universal Indexing System",
+        "units": [
+          { "id": "175.2.1", "name": "Index Field Definition" },
+          { "id": "175.2.2", "name": "Cross-Reference Mapping" },
+          { "id": "175.2.3", "name": "Index Update Notes" }
+        ]
+      },
+      {
+        "id": "175.3",
+        "name": "Collection Classification",
+        "units": [
+          { "id": "175.3.1", "name": "Collection Category Assignment" },
+          { "id": "175.3.2", "name": "Shelf Taxonomy Review" },
+          { "id": "175.3.3", "name": "Classification Record Update" }
+        ]
+      },
+      {
+        "id": "175.4",
+        "name": "Source Preservation",
+        "units": [
+          { "id": "175.4.1", "name": "Preservation Requirement Capture" },
+          { "id": "175.4.2", "name": "File Integrity Review" },
+          { "id": "175.4.3", "name": "Preservation Action Notes" }
+        ]
+      },
+      {
+        "id": "175.5",
+        "name": "Retrieval Pathways",
+        "units": [
+          { "id": "175.5.1", "name": "Retrieval Need Capture" },
+          { "id": "175.5.2", "name": "Search Route Mapping" },
+          { "id": "175.5.3", "name": "Retrieval Path QA" }
+        ]
+      },
+      {
+        "id": "175.6",
+        "name": "Archive Continuity",
+        "units": [
+          { "id": "175.6.1", "name": "Continuity Context Capture" },
+          { "id": "175.6.2", "name": "Historical Thread Linking" },
+          { "id": "175.6.3", "name": "Continuity Summary Update" }
+        ]
+      },
+      {
+        "id": "175.7",
+        "name": "Library Governance",
+        "units": [
+          { "id": "175.7.1", "name": "Archive Rule Definition" },
+          { "id": "175.7.2", "name": "Access Boundary Review" },
+          { "id": "175.7.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "175.8",
+        "name": "Alexandria Catalog",
+        "units": [
+          { "id": "175.8.1", "name": "Catalog Entry Capture" },
+          { "id": "175.8.2", "name": "Collection Metadata Review" },
+          { "id": "175.8.3", "name": "Catalog Update Notes" }
+        ]
+      },
+      {
+        "id": "175.9",
+        "name": "Legacy Archive Packaging",
+        "units": [
+          { "id": "175.9.1", "name": "Archive Package Assembly" },
+          { "id": "175.9.2", "name": "Export Format Review" },
+          { "id": "175.9.3", "name": "Legacy Package QA" }
+        ]
+      },
+      {
+        "id": "175.10",
+        "name": "Master Archive Dashboard",
+        "units": [
+          { "id": "175.10.1", "name": "Archive Signal Collection" },
+          { "id": "175.10.2", "name": "Library Status Summary" },
+          { "id": "175.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  }
+]
