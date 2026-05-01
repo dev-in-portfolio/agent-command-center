@@ -11,7 +11,7 @@
 ## Departments
 
 ### 85.1 Agent Role Definition
-- 85.1.1 Agent Role Definition
+- 85.1.1 Role Need Capture
 - 85.1.2 Responsibility Boundary Mapping
 - 85.1.3 Role Specification Draft
 

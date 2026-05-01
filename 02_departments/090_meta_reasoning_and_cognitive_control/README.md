@@ -11,7 +11,7 @@
 ## Departments
 
 ### 90.1 Reasoning Strategy Selection
-- 90.1.1 Reasoning Strategy Selection
+- 90.1.1 Reasoning Task Classification
 - 90.1.2 Strategy Option Review
 - 90.1.3 Strategy Selection Notes
 
