@@ -1,0 +1,575 @@
+{
+  "batch": "085_094",
+  "families": [
+    {
+      "id": 85,
+      "name": "Agent Procurement, Hiring & Role Marketplace",
+      "folder": "02_departments/085_agent_procurement_hiring_and_role_marketplace",
+      "departments": [
+        {
+          "id": "85.1",
+          "name": "Agent Role Definition",
+          "units": ["Agent Role Definition", "Responsibility Boundary Mapping", "Role Specification Draft"]
+        },
+        {
+          "id": "85.2",
+          "name": "Agent Candidate Sourcing",
+          "units": ["Candidate Profile Definition", "Capability Search Criteria", "Candidate Shortlist Summary"]
+        },
+        {
+          "id": "85.3",
+          "name": "Agent Capability Screening",
+          "units": ["Capability Evidence Review", "Skill Match Scoring", "Screening Decision Notes"]
+        },
+        {
+          "id": "85.4",
+          "name": "Agent Interview Design",
+          "units": ["Interview Scenario Draft", "Evaluation Question Mapping", "Interview Rubric Review"]
+        },
+        {
+          "id": "85.5",
+          "name": "Agent Trial Assignment",
+          "units": ["Trial Task Definition", "Trial Output Review", "Trial Performance Summary"]
+        },
+        {
+          "id": "85.6",
+          "name": "Agent Marketplace Listings",
+          "units": ["Listing Requirement Mapping", "Agent Listing Draft", "Listing QA Review"]
+        },
+        {
+          "id": "85.7",
+          "name": "Agent Contract Fit",
+          "units": ["Scope Fit Review", "Service Boundary Check", "Contract Fit Recommendation"]
+        },
+        {
+          "id": "85.8",
+          "name": "Agent Onboarding",
+          "units": ["Onboarding Packet Assembly", "Access And Context Handoff", "Onboarding Completion Check"]
+        },
+        {
+          "id": "85.9",
+          "name": "Agent Bench Management",
+          "units": ["Bench Inventory Update", "Availability Signal Review", "Agent Reassignment Recommendation"]
+        },
+        {
+          "id": "85.10",
+          "name": "Agent Hiring Governance",
+          "units": ["Hiring Rule Definition", "Hiring Decision Review", "Procurement Record Update"]
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "name": "Agent Labor Relations & Internal Governance",
+      "folder": "02_departments/086_agent_labor_relations_and_internal_governance",
+      "departments": [
+        {
+          "id": "86.1",
+          "name": "Agent Workload Review",
+          "units": ["Workload Signal Capture", "Capacity Pressure Review", "Workload Adjustment Notes"]
+        },
+        {
+          "id": "86.2",
+          "name": "Agent Role Rights",
+          "units": ["Role Right Definition", "Permission Boundary Review", "Role Rights Update"]
+        },
+        {
+          "id": "86.3",
+          "name": "Internal Governance Rules",
+          "units": ["Governance Rule Capture", "Rule Conflict Review", "Governance Rule Update"]
+        },
+        {
+          "id": "86.4",
+          "name": "Agent Dispute Resolution",
+          "units": ["Dispute Signal Capture", "Resolution Path Selection", "Dispute Outcome Record"]
+        },
+        {
+          "id": "86.5",
+          "name": "Agent Performance Review",
+          "units": ["Performance Evidence Collection", "Performance Pattern Review", "Performance Feedback Summary"]
+        },
+        {
+          "id": "86.6",
+          "name": "Agent Accountability",
+          "units": ["Accountability Owner Mapping", "Obligation Tracking", "Accountability Status Notes"]
+        },
+        {
+          "id": "86.7",
+          "name": "Agent Reward Systems",
+          "units": ["Reward Trigger Definition", "Recognition Candidate Review", "Reward Record Update"]
+        },
+        {
+          "id": "86.8",
+          "name": "Agent Policy Compliance",
+          "units": ["Policy Requirement Review", "Compliance Signal Detection", "Compliance Correction Notes"]
+        },
+        {
+          "id": "86.9",
+          "name": "Agent Council Operations",
+          "units": ["Council Issue Intake", "Council Decision Support", "Council Decision Record"]
+        },
+        {
+          "id": "86.10",
+          "name": "Internal Governance Archive",
+          "units": ["Governance Event Capture", "Decision Filing", "Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "name": "Emotional Brand Experience & Client Perception",
+      "folder": "02_departments/087_emotional_brand_experience_and_client_perception",
+      "departments": [
+        {
+          "id": "87.1",
+          "name": "Emotional Brand Mapping",
+          "units": ["Desired Feeling Capture", "Emotional Touchpoint Mapping", "Emotional Brand Summary"]
+        },
+        {
+          "id": "87.2",
+          "name": "Client Perception Review",
+          "units": ["Perception Signal Collection", "Perception Gap Detection", "Perception Adjustment Notes"]
+        },
+        {
+          "id": "87.3",
+          "name": "Experience Tone Design",
+          "units": ["Tone Objective Definition", "Experience Language Draft", "Tone Consistency Review"]
+        },
+        {
+          "id": "87.4",
+          "name": "Trust Emotion Signals",
+          "units": ["Trust Feeling Detection", "Trust Friction Review", "Trust Emotion Notes"]
+        },
+        {
+          "id": "87.5",
+          "name": "Client Anxiety Reduction",
+          "units": ["Anxiety Trigger Capture", "Reassurance Path Mapping", "Anxiety Reduction Message"]
+        },
+        {
+          "id": "87.6",
+          "name": "Emotional Journey Mapping",
+          "units": ["Emotional Stage Capture", "Emotional Friction Review", "Journey Emotion Summary"]
+        },
+        {
+          "id": "87.7",
+          "name": "Client Confidence Design",
+          "units": ["Confidence Driver Mapping", "Proof And Clarity Review", "Confidence Signal Placement"]
+        },
+        {
+          "id": "87.8",
+          "name": "Brand Warmth Review",
+          "units": ["Warmth Signal Detection", "Coldness Risk Review", "Warmth Adjustment Notes"]
+        },
+        {
+          "id": "87.9",
+          "name": "Emotional Feedback Loops",
+          "units": ["Feedback Emotion Capture", "Pattern Review", "Feedback Loop Update"]
+        },
+        {
+          "id": "87.10",
+          "name": "Emotional Brand Dashboard",
+          "units": ["Emotional Signal Collection", "Perception Status Summary", "Brand Emotion Dashboard Update"]
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "name": "Strategic Memory, Institutional Knowledge & Lore",
+      "folder": "02_departments/088_strategic_memory_institutional_knowledge_and_lore",
+      "departments": [
+        {
+          "id": "88.1",
+          "name": "Strategic Memory Capture",
+          "units": ["Strategic Event Detection", "Decision Context Capture", "Strategic Memory Record"]
+        },
+        {
+          "id": "88.2",
+          "name": "Institutional Knowledge Filing",
+          "units": ["Knowledge Asset Intake", "Institutional Category Selection", "Knowledge Filing Review"]
+        },
+        {
+          "id": "88.3",
+          "name": "Lore Development",
+          "units": ["Lore Event Capture", "Mythic Pattern Mapping", "Lore Entry Draft"]
+        },
+        {
+          "id": "88.4",
+          "name": "Historical Decision Review",
+          "units": ["Past Decision Retrieval", "Outcome Comparison", "Decision History Insight"]
+        },
+        {
+          "id": "88.5",
+          "name": "Organizational Memory Map",
+          "units": ["Memory Node Identification", "Relationship Mapping", "Memory Map Update"]
+        },
+        {
+          "id": "88.6",
+          "name": "Knowledge Continuity",
+          "units": ["Continuity Risk Detection", "Knowledge Transfer Plan", "Continuity Status Notes"]
+        },
+        {
+          "id": "88.7",
+          "name": "Strategic Pattern Archive",
+          "units": ["Pattern Candidate Capture", "Strategic Pattern Classification", "Pattern Archive Update"]
+        },
+        {
+          "id": "88.8",
+          "name": "Origin Story Management",
+          "units": ["Origin Event Capture", "Narrative Thread Review", "Origin Story Update"]
+        },
+        {
+          "id": "88.9",
+          "name": "Institutional Recall",
+          "units": ["Recall Need Detection", "Memory Source Retrieval", "Recall Summary Notes"]
+        },
+        {
+          "id": "88.10",
+          "name": "Lore Governance",
+          "units": ["Lore Rule Definition", "Lore Accuracy Review", "Lore Governance Record"]
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "name": "Narrative Intelligence & Explanation Design",
+      "folder": "02_departments/089_narrative_intelligence_and_explanation_design",
+      "departments": [
+        {
+          "id": "89.1",
+          "name": "Narrative Framing",
+          "units": ["Narrative Purpose Definition", "Audience Context Mapping", "Frame Recommendation"]
+        },
+        {
+          "id": "89.2",
+          "name": "Explanation Architecture",
+          "units": ["Explanation Goal Capture", "Concept Sequence Design", "Explanation Flow Review"]
+        },
+        {
+          "id": "89.3",
+          "name": "Story Logic Review",
+          "units": ["Story Claim Extraction", "Causal Link Review", "Story Logic Notes"]
+        },
+        {
+          "id": "89.4",
+          "name": "Analogy Design",
+          "units": ["Source Analogy Selection", "Analogy Fit Review", "Analogy Explanation Draft"]
+        },
+        {
+          "id": "89.5",
+          "name": "Narrative Compression",
+          "units": ["Key Point Extraction", "Compression Pass", "Meaning Preservation Review"]
+        },
+        {
+          "id": "89.6",
+          "name": "Narrative Expansion",
+          "units": ["Thin Point Detection", "Detail Expansion", "Expanded Narrative QA"]
+        },
+        {
+          "id": "89.7",
+          "name": "Explanation Debugging",
+          "units": ["Confusion Point Detection", "Explanation Fault Isolation", "Clarity Patch Draft"]
+        },
+        {
+          "id": "89.8",
+          "name": "Audience-Specific Translation",
+          "units": ["Audience Knowledge Review", "Translation Level Selection", "Audience Fit Summary"]
+        },
+        {
+          "id": "89.9",
+          "name": "Narrative Evidence Integration",
+          "units": ["Evidence Placement Mapping", "Claim Support Review", "Evidence-Backed Narrative"]
+        },
+        {
+          "id": "89.10",
+          "name": "Explanation Archive",
+          "units": ["Explanation Record Capture", "Pattern Filing", "Explanation Library Update"]
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "name": "Meta-Reasoning & Cognitive Control",
+      "folder": "02_departments/090_meta_reasoning_and_cognitive_control",
+      "departments": [
+        {
+          "id": "90.1",
+          "name": "Reasoning Strategy Selection",
+          "units": ["Reasoning Strategy Selection", "Strategy Option Review", "Strategy Selection Notes"]
+        },
+        {
+          "id": "90.2",
+          "name": "Thought Process Monitoring",
+          "units": ["Reasoning Signal Capture", "Drift Detection", "Process Correction Notes"]
+        },
+        {
+          "id": "90.3",
+          "name": "Assumption Control",
+          "units": ["Assumption Capture", "Assumption Challenge Review", "Assumption Update Record"]
+        },
+        {
+          "id": "90.4",
+          "name": "Cognitive Bias Review",
+          "units": ["Bias Candidate Detection", "Bias Impact Review", "Bias Mitigation Notes"]
+        },
+        {
+          "id": "90.5",
+          "name": "Problem Decomposition",
+          "units": ["Problem Boundary Definition", "Subproblem Mapping", "Decomposition QA"]
+        },
+        {
+          "id": "90.6",
+          "name": "Reasoning Mode Switching",
+          "units": ["Mode Need Detection", "Mode Selection", "Mode Transition Review"]
+        },
+        {
+          "id": "90.7",
+          "name": "Recursive Review",
+          "units": ["Output Self-Check", "Reasoning Trace Review", "Recursive Correction Notes"]
+        },
+        {
+          "id": "90.8",
+          "name": "Confidence Calibration",
+          "units": ["Confidence Signal Review", "Evidence Strength Comparison", "Calibration Statement Draft"]
+        },
+        {
+          "id": "90.9",
+          "name": "Cognitive Load Management",
+          "units": ["Complexity Signal Capture", "Load Reduction Strategy", "Cognitive Workspace Reset"]
+        },
+        {
+          "id": "90.10",
+          "name": "Meta-Reasoning Archive",
+          "units": ["Reasoning Pattern Capture", "Failure Mode Filing", "Meta-Lesson Update"]
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "name": "Multi-Modal Intelligence & Artifact Understanding",
+      "folder": "02_departments/091_multi_modal_intelligence_and_artifact_understanding",
+      "departments": [
+        {
+          "id": "91.1",
+          "name": "Image Understanding",
+          "units": ["Visual Element Detection", "Image Context Interpretation", "Image Findings Summary"]
+        },
+        {
+          "id": "91.2",
+          "name": "Document Layout Understanding",
+          "units": ["Layout Structure Detection", "Reading Order Review", "Layout Interpretation Notes"]
+        },
+        {
+          "id": "91.3",
+          "name": "Chart And Graph Interpretation",
+          "units": ["Chart Type Identification", "Data Pattern Review", "Chart Insight Summary"]
+        },
+        {
+          "id": "91.4",
+          "name": "Audio Artifact Understanding",
+          "units": ["Audio Context Capture", "Speaker And Tone Review", "Audio Summary Notes"]
+        },
+        {
+          "id": "91.5",
+          "name": "Video Artifact Understanding",
+          "units": ["Scene Sequence Capture", "Visual Change Review", "Video Interpretation Summary"]
+        },
+        {
+          "id": "91.6",
+          "name": "Screenshot Analysis",
+          "units": ["Interface Element Detection", "Screenshot Issue Review", "Screenshot Finding Notes"]
+        },
+        {
+          "id": "91.7",
+          "name": "Mixed Artifact Synthesis",
+          "units": ["Artifact Set Inventory", "Cross-Artifact Pattern Review", "Synthesis Summary"]
+        },
+        {
+          "id": "91.8",
+          "name": "Visual Consistency Review",
+          "units": ["Visual Style Capture", "Consistency Difference Detection", "Visual Consistency Notes"]
+        },
+        {
+          "id": "91.9",
+          "name": "Artifact Quality Review",
+          "units": ["Artifact Defect Detection", "Quality Criteria Review", "Artifact QA Summary"]
+        },
+        {
+          "id": "91.10",
+          "name": "Multi-Modal Archive",
+          "units": ["Artifact Record Capture", "Modality Category Filing", "Multi-Modal Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "name": "Data Visualization & Information Design",
+      "folder": "02_departments/092_data_visualization_and_information_design",
+      "departments": [
+        {
+          "id": "92.1",
+          "name": "Visualization Strategy",
+          "units": ["Visualization Goal Definition", "Audience Insight Mapping", "Visualization Strategy Brief"]
+        },
+        {
+          "id": "92.2",
+          "name": "Chart Selection",
+          "units": ["Data Type Review", "Chart Option Comparison", "Chart Selection Recommendation"]
+        },
+        {
+          "id": "92.3",
+          "name": "Dashboard Design",
+          "units": ["Dashboard Question Mapping", "Metric Layout Draft", "Dashboard Usability Review"]
+        },
+        {
+          "id": "92.4",
+          "name": "Information Hierarchy",
+          "units": ["Priority Signal Capture", "Hierarchy Structure Draft", "Hierarchy Clarity Review"]
+        },
+        {
+          "id": "92.5",
+          "name": "Data Storytelling",
+          "units": ["Data Narrative Framing", "Insight Sequence Design", "Data Story QA"]
+        },
+        {
+          "id": "92.6",
+          "name": "Table Design",
+          "units": ["Table Purpose Definition", "Column Structure Review", "Table Readability QA"]
+        },
+        {
+          "id": "92.7",
+          "name": "Visual Encoding Review",
+          "units": ["Encoding Method Selection", "Color And Shape Review", "Encoding Accuracy Notes"]
+        },
+        {
+          "id": "92.8",
+          "name": "Infographic Design",
+          "units": ["Infographic Concept Draft", "Visual Section Planning", "Infographic QA"]
+        },
+        {
+          "id": "92.9",
+          "name": "Visualization Accessibility",
+          "units": ["Accessibility Requirement Review", "Visual Barrier Detection", "Accessible Visualization Notes"]
+        },
+        {
+          "id": "92.10",
+          "name": "Visualization Archive",
+          "units": ["Visualization Record Capture", "Pattern Category Filing", "Visualization Library Update"]
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "name": "Conversation Design & Dialogue Systems",
+      "folder": "02_departments/093_conversation_design_and_dialogue_systems",
+      "departments": [
+        {
+          "id": "93.1",
+          "name": "Dialogue Flow Design",
+          "units": ["Conversation Goal Definition", "Turn Sequence Mapping", "Dialogue Flow Review"]
+        },
+        {
+          "id": "93.2",
+          "name": "Intent Handling",
+          "units": ["Intent Signal Detection", "Intent Classification", "Intent Response Mapping"]
+        },
+        {
+          "id": "93.3",
+          "name": "Clarifying Question Design",
+          "units": ["Ambiguity Detection", "Clarification Need Review", "Question Draft"]
+        },
+        {
+          "id": "93.4",
+          "name": "Conversation Repair",
+          "units": ["Breakdown Signal Capture", "Repair Strategy Selection", "Repair Response Draft"]
+        },
+        {
+          "id": "93.5",
+          "name": "Dialogue Tone Control",
+          "units": ["Tone Requirement Detection", "Tone Adjustment", "Tone Fit Review"]
+        },
+        {
+          "id": "93.6",
+          "name": "Multi-Turn Continuity",
+          "units": ["Prior Turn Retrieval", "Conversation State Review", "Continuity Bridge Draft"]
+        },
+        {
+          "id": "93.7",
+          "name": "User Instruction Tracking",
+          "units": ["Instruction Capture", "Active Constraint Review", "Instruction Application Check"]
+        },
+        {
+          "id": "93.8",
+          "name": "Response Timing And Pacing",
+          "units": ["Pacing Need Detection", "Update Timing Selection", "Pacing Quality Review"]
+        },
+        {
+          "id": "93.9",
+          "name": "Conversation UX Testing",
+          "units": ["Dialogue Test Scenario", "User Friction Detection", "Conversation UX Notes"]
+        },
+        {
+          "id": "93.10",
+          "name": "Dialogue Pattern Archive",
+          "units": ["Dialogue Pattern Capture", "Pattern Category Filing", "Dialogue Library Update"]
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "name": "Trust, Transparency & Explainability",
+      "folder": "02_departments/094_trust_transparency_and_explainability",
+      "departments": [
+        {
+          "id": "94.1",
+          "name": "Trust Signal Design",
+          "units": ["Trust Need Capture", "Trust Signal Mapping", "Trust Signal Placement"]
+        },
+        {
+          "id": "94.2",
+          "name": "Transparency Requirements",
+          "units": ["Transparency Need Detection", "Disclosure Level Review", "Transparency Statement Draft"]
+        },
+        {
+          "id": "94.3",
+          "name": "Explainability Design",
+          "units": ["Explanation Audience Mapping", "Reasoning Summary Draft", "Explainability Quality Review"]
+        },
+        {
+          "id": "94.4",
+          "name": "Uncertainty Communication",
+          "units": ["Uncertainty Signal Detection", "Confidence Language Selection", "Uncertainty Statement QA"]
+        },
+        {
+          "id": "94.5",
+          "name": "Source Transparency",
+          "units": ["Source Use Capture", "Citation Visibility Review", "Source Transparency Notes"]
+        },
+        {
+          "id": "94.6",
+          "name": "Decision Explainability",
+          "units": ["Decision Factor Capture", "Rationale Summary Draft", "Decision Explanation Review"]
+        },
+        {
+          "id": "94.7",
+          "name": "Limitation Disclosure",
+          "units": ["Limitation Detection", "Boundary Statement Draft", "Limitation Disclosure QA"]
+        },
+        {
+          "id": "94.8",
+          "name": "Trust Repair",
+          "units": ["Trust Damage Detection", "Repair Explanation Draft", "Trust Recovery Notes"]
+        },
+        {
+          "id": "94.9",
+          "name": "Auditability Support",
+          "units": ["Audit Trail Requirement", "Evidence Trace Assembly", "Auditability Review"]
+        },
+        {
+          "id": "94.10",
+          "name": "Trust Dashboard",
+          "units": ["Trust Signal Collection", "Transparency Status Summary", "Trust Dashboard Update"]
+        }
+      ]
+    }
+  ]
+}
