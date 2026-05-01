@@ -28,7 +28,7 @@
 ### 158.4 Client Document Delivery
 - 158.4.1 Delivery Package Assembly
 - 158.4.2 Client Visibility Review
-- 158.4.3 Client Document Delivery
+- 158.4.3 Delivery Confirmation Notes
 
 ### 158.5 Portal Support Queue
 - 158.5.1 Support Request Capture
@@ -48,7 +48,7 @@
 ### 158.8 Portal Security Review
 - 158.8.1 Access Risk Detection
 - 158.8.2 Sensitive Content Review
-- 158.8.3 Portal Security Review
+- 158.8.3 Portal Security Notes
 
 ### 158.9 Portal Governance
 - 158.9.1 Portal Rule Definition

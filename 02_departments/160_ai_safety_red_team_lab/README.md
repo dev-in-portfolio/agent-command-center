@@ -33,7 +33,7 @@
 ### 160.5 Refusal Boundary Testing
 - 160.5.1 Boundary Case Selection
 - 160.5.2 Refusal Behavior Review
-- 160.5.3 Refusal Boundary Testing
+- 160.5.3 Boundary Test Summary
 
 ### 160.6 Safety Mitigation Design
 - 160.6.1 Mitigation Need Capture
@@ -48,7 +48,7 @@
 ### 160.8 Safety Regression Testing
 - 160.8.1 Regression Case Selection
 - 160.8.2 Control Change Impact Review
-- 160.8.3 Safety Regression Testing
+- 160.8.3 Regression Result Notes
 
 ### 160.9 Red-Team Governance
 - 160.9.1 Red-Team Rule Definition

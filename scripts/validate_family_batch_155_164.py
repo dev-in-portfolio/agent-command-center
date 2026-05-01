@@ -17,28 +17,44 @@ def validate_batch():
         "Licensing Revenue Tracking",
         "Agent App Store & Plugin Ecosystem",
         "Plugin Compatibility Testing",
+        "Compatibility Result Notes",
         "Plugin Security Review",
+        "Security Review Notes",
         "Client Portal Operations",
         "Client Document Delivery",
+        "Delivery Confirmation Notes",
         "Portal Security Review",
+        "Portal Security Notes",
         "Knowledge Graph Visualization Studio",
         "Graph Interaction Design",
+        "Interaction Design Notes",
         "Graph Visualization Governance",
+        "Governance Record Update",
         "AI Safety Red-Team Lab",
         "Refusal Boundary Testing",
+        "Boundary Test Summary",
         "Safety Regression Testing",
+        "Regression Result Notes",
         "Prompt Injection Defense Office",
         "Tool-Use Injection Defense",
+        "Tool Defense Notes",
         "Data Exfiltration Prevention",
+        "Prevention Control Notes",
         "Data Backup & Cold Storage",
         "Cold Storage Classification",
+        "Storage Class Decision",
         "Restore Testing",
+        "Restore Test Summary",
         "Digital Legacy Planning",
         "Digital Estate Inventory",
+        "Estate Inventory Update",
         "Legacy Privacy Review",
+        "Legacy Privacy Notes",
         "Reputation Fire Drill Team",
         "Crisis Message Drafting",
-        "Fire Drill Execution"
+        "Crisis Message QA",
+        "Fire Drill Execution",
+        "Drill Result Notes"
     ]
 
     errors = []
@@ -48,6 +64,26 @@ def validate_batch():
     for s in required_strings:
         if s not in spec_content:
             errors.append(f"Prompt fidelity failure: missing string '{s}' in spec.")
+
+    # Unit-level exact corrections
+    unit_corrections = {
+        "157.3.3": "Compatibility Result Notes",
+        "157.5.3": "Security Review Notes",
+        "158.4.3": "Delivery Confirmation Notes",
+        "158.8.3": "Portal Security Notes",
+        "159.5.3": "Interaction Design Notes",
+        "159.9.3": "Governance Record Update",
+        "160.5.3": "Boundary Test Summary",
+        "160.8.3": "Regression Result Notes",
+        "161.5.3": "Tool Defense Notes",
+        "161.6.3": "Prevention Control Notes",
+        "162.3.3": "Storage Class Decision",
+        "162.5.3": "Restore Test Summary",
+        "163.2.3": "Estate Inventory Update",
+        "163.7.3": "Legacy Privacy Notes",
+        "164.3.3": "Crisis Message QA",
+        "164.8.3": "Drill Result Notes"
+    }
 
     for family_spec in batch_spec:
         family_id_str = family_spec['id']
@@ -90,6 +126,10 @@ def validate_batch():
 
             for unit in dept['units']:
                 unit_id = unit['id']
+                if unit_id in unit_corrections:
+                    if unit['name'] != unit_corrections[unit_id]:
+                        errors.append(f"Unit {unit_id} name mismatch: expected '{unit_corrections[unit_id]}', found '{unit['name']}'")
+                
                 if len(unit['team']) != 9:
                     errors.append(f"Team size mismatch in unit {unit_id}: expected 9, found {len(unit['team'])}")
                 

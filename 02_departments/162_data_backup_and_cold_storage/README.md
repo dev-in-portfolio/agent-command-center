@@ -23,7 +23,7 @@
 ### 162.3 Cold Storage Classification
 - 162.3.1 Cold Storage Candidate Capture
 - 162.3.2 Access Frequency Review
-- 162.3.3 Cold Storage Classification
+- 162.3.3 Storage Class Decision
 
 ### 162.4 Backup Execution Monitoring
 - 162.4.1 Backup Run Signal Collection
@@ -33,7 +33,7 @@
 ### 162.5 Restore Testing
 - 162.5.1 Restore Scenario Selection
 - 162.5.2 Recovery Execution Review
-- 162.5.3 Restore Testing
+- 162.5.3 Restore Test Summary
 
 ### 162.6 Archive Integrity Review
 - 162.6.1 Integrity Signal Capture

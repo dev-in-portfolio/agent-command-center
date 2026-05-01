@@ -33,7 +33,7 @@
 ### 159.5 Graph Interaction Design
 - 159.5.1 Interaction Requirement Capture
 - 159.5.2 Zoom And Filter Review
-- 159.5.3 Graph Interaction Design
+- 159.5.3 Interaction Design Notes
 
 ### 159.6 Graph Legend Design
 - 159.6.1 Symbol Meaning Definition
@@ -53,7 +53,7 @@
 ### 159.9 Graph Visualization Governance
 - 159.9.1 Visualization Rule Definition
 - 159.9.2 Interpretation Risk Review
-- 159.9.3 Graph Visualization Governance
+- 159.9.3 Governance Record Update
 
 ### 159.10 Graph Studio Dashboard
 - 159.10.1 Graph Signal Collection

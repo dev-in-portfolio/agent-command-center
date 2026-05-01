@@ -219,7 +219,7 @@
         "units": [
           { "id": "157.3.1", "name": "Compatibility Requirement Mapping" },
           { "id": "157.3.2", "name": "Integration Test Review" },
-          { "id": "157.3.3", "name": "Plugin Compatibility Testing" }
+          { "id": "157.3.3", "name": "Compatibility Result Notes" }
         ]
       },
       {
@@ -237,7 +237,7 @@
         "units": [
           { "id": "157.5.1", "name": "Plugin Risk Signal Capture" },
           { "id": "157.5.2", "name": "Permission Scope Review" },
-          { "id": "157.5.3", "name": "Plugin Security Review" }
+          { "id": "157.5.3", "name": "Security Review Notes" }
         ]
       },
       {
@@ -324,7 +324,7 @@
         "units": [
           { "id": "158.4.1", "name": "Delivery Package Assembly" },
           { "id": "158.4.2", "name": "Client Visibility Review" },
-          { "id": "158.4.3", "name": "Client Document Delivery" }
+          { "id": "158.4.3", "name": "Delivery Confirmation Notes" }
         ]
       },
       {
@@ -360,7 +360,7 @@
         "units": [
           { "id": "158.8.1", "name": "Access Risk Detection" },
           { "id": "158.8.2", "name": "Sensitive Content Review" },
-          { "id": "158.8.3", "name": "Portal Security Review" }
+          { "id": "158.8.3", "name": "Portal Security Notes" }
         ]
       },
       {
@@ -429,7 +429,7 @@
         "units": [
           { "id": "159.5.1", "name": "Interaction Requirement Capture" },
           { "id": "159.5.2", "name": "Zoom And Filter Review" },
-          { "id": "159.5.3", "name": "Graph Interaction Design" }
+          { "id": "159.5.3", "name": "Interaction Design Notes" }
         ]
       },
       {
@@ -465,7 +465,7 @@
         "units": [
           { "id": "159.9.1", "name": "Visualization Rule Definition" },
           { "id": "159.9.2", "name": "Interpretation Risk Review" },
-          { "id": "159.9.3", "name": "Graph Visualization Governance" }
+          { "id": "159.9.3", "name": "Governance Record Update" }
         ]
       },
       {
@@ -525,7 +525,7 @@
         "units": [
           { "id": "160.5.1", "name": "Boundary Case Selection" },
           { "id": "160.5.2", "name": "Refusal Behavior Review" },
-          { "id": "160.5.3", "name": "Refusal Boundary Testing" }
+          { "id": "160.5.3", "name": "Boundary Test Summary" }
         ]
       },
       {
@@ -552,7 +552,7 @@
         "units": [
           { "id": "160.8.1", "name": "Regression Case Selection" },
           { "id": "160.8.2", "name": "Control Change Impact Review" },
-          { "id": "160.8.3", "name": "Safety Regression Testing" }
+          { "id": "160.8.3", "name": "Regression Result Notes" }
         ]
       },
       {
@@ -621,7 +621,7 @@
         "units": [
           { "id": "161.5.1", "name": "Tool Attack Path Capture" },
           { "id": "161.5.2", "name": "Permission Boundary Review" },
-          { "id": "161.5.3", "name": "Tool-Use Injection Defense" }
+          { "id": "161.5.3", "name": "Tool Defense Notes" }
         ]
       },
       {
@@ -630,7 +630,7 @@
         "units": [
           { "id": "161.6.1", "name": "Exfiltration Signal Detection" },
           { "id": "161.6.2", "name": "Sensitive Data Boundary Review" },
-          { "id": "161.6.3", "name": "Data Exfiltration Prevention" }
+          { "id": "161.6.3", "name": "Prevention Control Notes" }
         ]
       },
       {
@@ -699,7 +699,7 @@
         "units": [
           { "id": "162.3.1", "name": "Cold Storage Candidate Capture" },
           { "id": "162.3.2", "name": "Access Frequency Review" },
-          { "id": "162.3.3", "name": "Cold Storage Classification" }
+          { "id": "162.3.3", "name": "Storage Class Decision" }
         ]
       },
       {
@@ -717,7 +717,7 @@
         "units": [
           { "id": "162.5.1", "name": "Restore Scenario Selection" },
           { "id": "162.5.2", "name": "Recovery Execution Review" },
-          { "id": "162.5.3", "name": "Restore Testing" }
+          { "id": "162.5.3", "name": "Restore Test Summary" }
         ]
       },
       {
@@ -786,7 +786,7 @@
         "units": [
           { "id": "163.2.1", "name": "Account Inventory Capture" },
           { "id": "163.2.2", "name": "Ownership Status Review" },
-          { "id": "163.2.3", "name": "Digital Estate Inventory" }
+          { "id": "163.2.3", "name": "Estate Inventory Update" }
         ]
       },
       {
@@ -831,7 +831,7 @@
         "units": [
           { "id": "163.7.1", "name": "Sensitive Legacy Data Detection" },
           { "id": "163.7.2", "name": "Privacy Boundary Review" },
-          { "id": "163.7.3", "name": "Legacy Privacy Review" }
+          { "id": "163.7.3", "name": "Legacy Privacy Notes" }
         ]
       },
       {
@@ -891,7 +891,7 @@
         "units": [
           { "id": "164.3.1", "name": "Message Objective Capture" },
           { "id": "164.3.2", "name": "Public Response Draft" },
-          { "id": "164.3.3", "name": "Crisis Message Drafting" }
+          { "id": "164.3.3", "name": "Crisis Message QA" }
         ]
       },
       {
@@ -936,7 +936,7 @@
         "units": [
           { "id": "164.8.1", "name": "Drill Role Assignment" },
           { "id": "164.8.2", "name": "Simulation Run Review" },
-          { "id": "164.8.3", "name": "Fire Drill Execution" }
+          { "id": "164.8.3", "name": "Drill Result Notes" }
         ]
       },
       {

@@ -33,12 +33,12 @@
 ### 161.5 Tool-Use Injection Defense
 - 161.5.1 Tool Attack Path Capture
 - 161.5.2 Permission Boundary Review
-- 161.5.3 Tool-Use Injection Defense
+- 161.5.3 Tool Defense Notes
 
 ### 161.6 Data Exfiltration Prevention
 - 161.6.1 Exfiltration Signal Detection
 - 161.6.2 Sensitive Data Boundary Review
-- 161.6.3 Data Exfiltration Prevention
+- 161.6.3 Prevention Control Notes
 
 ### 161.7 Injection Incident Response
 - 161.7.1 Incident Signal Capture

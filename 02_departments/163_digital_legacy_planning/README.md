@@ -18,7 +18,7 @@
 ### 163.2 Digital Estate Inventory
 - 163.2.1 Account Inventory Capture
 - 163.2.2 Ownership Status Review
-- 163.2.3 Digital Estate Inventory
+- 163.2.3 Estate Inventory Update
 
 ### 163.3 Legacy Access Planning
 - 163.3.1 Access Need Definition
@@ -43,7 +43,7 @@
 ### 163.7 Legacy Privacy Review
 - 163.7.1 Sensitive Legacy Data Detection
 - 163.7.2 Privacy Boundary Review
-- 163.7.3 Legacy Privacy Review
+- 163.7.3 Legacy Privacy Notes
 
 ### 163.8 Legacy Archive Packaging
 - 163.8.1 Archive Package Assembly

@@ -23,7 +23,7 @@
 ### 157.3 Plugin Compatibility Testing
 - 157.3.1 Compatibility Requirement Mapping
 - 157.3.2 Integration Test Review
-- 157.3.3 Plugin Compatibility Testing
+- 157.3.3 Compatibility Result Notes
 
 ### 157.4 App Store Listing Design
 - 157.4.1 Listing Copy Draft
@@ -33,7 +33,7 @@
 ### 157.5 Plugin Security Review
 - 157.5.1 Plugin Risk Signal Capture
 - 157.5.2 Permission Scope Review
-- 157.5.3 Plugin Security Review
+- 157.5.3 Security Review Notes
 
 ### 157.6 Ecosystem Partner Management
 - 157.6.1 Partner Candidate Capture

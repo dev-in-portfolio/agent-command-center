@@ -23,7 +23,7 @@
 ### 164.3 Crisis Message Drafting
 - 164.3.1 Message Objective Capture
 - 164.3.2 Public Response Draft
-- 164.3.3 Crisis Message Drafting
+- 164.3.3 Crisis Message QA
 
 ### 164.4 Stakeholder Response Routing
 - 164.4.1 Stakeholder Group Identification
@@ -48,7 +48,7 @@
 ### 164.8 Fire Drill Execution
 - 164.8.1 Drill Role Assignment
 - 164.8.2 Simulation Run Review
-- 164.8.3 Fire Drill Execution
+- 164.8.3 Drill Result Notes
 
 ### 164.9 Reputation Governance
 - 164.9.1 Reputation Rule Definition
