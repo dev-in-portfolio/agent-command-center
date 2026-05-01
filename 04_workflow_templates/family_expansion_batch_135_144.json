@@ -1,0 +1,962 @@
+[
+  {
+    "id": "135",
+    "name": "Work Intake, Scoping & Triage",
+    "departments": [
+      {
+        "id": "135.1",
+        "name": "Intake Request Capture",
+        "units": [
+          { "id": "135.1.1", "name": "Work Request Recording" },
+          { "id": "135.1.2", "name": "Request Source Review" },
+          { "id": "135.1.3", "name": "Intake Record Update" }
+        ]
+      },
+      {
+        "id": "135.2",
+        "name": "Scope Definition",
+        "units": [
+          { "id": "135.2.1", "name": "Requested Outcome Capture" },
+          { "id": "135.2.2", "name": "Scope Boundary Mapping" },
+          { "id": "135.2.3", "name": "Scope Summary Draft" }
+        ]
+      },
+      {
+        "id": "135.3",
+        "name": "Triage Classification",
+        "units": [
+          { "id": "135.3.1", "name": "Work Type Assignment" },
+          { "id": "135.3.2", "name": "Urgency Level Review" },
+          { "id": "135.3.3", "name": "Triage Decision Notes" }
+        ]
+      },
+      {
+        "id": "135.4",
+        "name": "Requirement Clarification",
+        "units": [
+          { "id": "135.4.1", "name": "Missing Requirement Detection" },
+          { "id": "135.4.2", "name": "Clarifying Question Draft" },
+          { "id": "135.4.3", "name": "Requirement Update Record" }
+        ]
+      },
+      {
+        "id": "135.5",
+        "name": "Intake Risk Review",
+        "units": [
+          { "id": "135.5.1", "name": "Risk Signal Capture" },
+          { "id": "135.5.2", "name": "Constraint Review" },
+          { "id": "135.5.3", "name": "Intake Risk Summary" }
+        ]
+      },
+      {
+        "id": "135.6",
+        "name": "Work Routing",
+        "units": [
+          { "id": "135.6.1", "name": "Department Fit Review" },
+          { "id": "135.6.2", "name": "Routing Path Selection" },
+          { "id": "135.6.3", "name": "Work Assignment Notes" }
+        ]
+      },
+      {
+        "id": "135.7",
+        "name": "Intake Prioritization",
+        "units": [
+          { "id": "135.7.1", "name": "Priority Criteria Mapping" },
+          { "id": "135.7.2", "name": "Work Queue Comparison" },
+          { "id": "135.7.3", "name": "Priority Recommendation" }
+        ]
+      },
+      {
+        "id": "135.8",
+        "name": "Acceptance Criteria",
+        "units": [
+          { "id": "135.8.1", "name": "Success Condition Capture" },
+          { "id": "135.8.2", "name": "Completion Standard Review" },
+          { "id": "135.8.3", "name": "Acceptance Criteria Summary" }
+        ]
+      },
+      {
+        "id": "135.9",
+        "name": "Intake Handoff",
+        "units": [
+          { "id": "135.9.1", "name": "Handoff Packet Assembly" },
+          { "id": "135.9.2", "name": "Context Transfer Review" },
+          { "id": "135.9.3", "name": "Handoff Confirmation Notes" }
+        ]
+      },
+      {
+        "id": "135.10",
+        "name": "Intake Dashboard",
+        "units": [
+          { "id": "135.10.1", "name": "Intake Signal Collection" },
+          { "id": "135.10.2", "name": "Triage Status Summary" },
+          { "id": "135.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "136",
+    "name": "Task Decomposition & Work Package Design",
+    "departments": [
+      {
+        "id": "136.1",
+        "name": "Task Boundary Definition",
+        "units": [
+          { "id": "136.1.1", "name": "Task Goal Capture" },
+          { "id": "136.1.2", "name": "Boundary Constraint Review" },
+          { "id": "136.1.3", "name": "Task Boundary Summary" }
+        ]
+      },
+      {
+        "id": "136.2",
+        "name": "Work Breakdown Structure",
+        "units": [
+          { "id": "136.2.1", "name": "Major Step Identification" },
+          { "id": "136.2.2", "name": "Subtask Mapping" },
+          { "id": "136.2.3", "name": "Work Breakdown QA" }
+        ]
+      },
+      {
+        "id": "136.3",
+        "name": "Dependency Identification",
+        "units": [
+          { "id": "136.3.1", "name": "Dependency Candidate Capture" },
+          { "id": "136.3.2", "name": "Dependency Type Review" },
+          { "id": "136.3.3", "name": "Dependency List Update" }
+        ]
+      },
+      {
+        "id": "136.4",
+        "name": "Work Package Creation",
+        "units": [
+          { "id": "136.4.1", "name": "Package Scope Draft" },
+          { "id": "136.4.2", "name": "Input And Output Mapping" },
+          { "id": "136.4.3", "name": "Work Package Record" }
+        ]
+      },
+      {
+        "id": "136.5",
+        "name": "Sequencing Logic",
+        "units": [
+          { "id": "136.5.1", "name": "Step Order Review" },
+          { "id": "136.5.2", "name": "Parallel Work Detection" },
+          { "id": "136.5.3", "name": "Sequence Recommendation" }
+        ]
+      },
+      {
+        "id": "136.6",
+        "name": "Effort Estimation",
+        "units": [
+          { "id": "136.6.1", "name": "Effort Driver Capture" },
+          { "id": "136.6.2", "name": "Complexity Review" },
+          { "id": "136.6.3", "name": "Effort Estimate Notes" }
+        ]
+      },
+      {
+        "id": "136.7",
+        "name": "Ownership Assignment",
+        "units": [
+          { "id": "136.7.1", "name": "Owner Requirement Review" },
+          { "id": "136.7.2", "name": "Agent Fit Selection" },
+          { "id": "136.7.3", "name": "Ownership Record Update" }
+        ]
+      },
+      {
+        "id": "136.8",
+        "name": "Package Risk Review",
+        "units": [
+          { "id": "136.8.1", "name": "Package Risk Detection" },
+          { "id": "136.8.2", "name": "Failure Point Review" },
+          { "id": "136.8.3", "name": "Risk Control Notes" }
+        ]
+      },
+      {
+        "id": "136.9",
+        "name": "Decomposition QA",
+        "units": [
+          { "id": "136.9.1", "name": "Missing Step Detection" },
+          { "id": "136.9.2", "name": "Overlap Review" },
+          { "id": "136.9.3", "name": "Decomposition Correction Notes" }
+        ]
+      },
+      {
+        "id": "136.10",
+        "name": "Work Package Dashboard",
+        "units": [
+          { "id": "136.10.1", "name": "Package Signal Collection" },
+          { "id": "136.10.2", "name": "Decomposition Status Summary" },
+          { "id": "136.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "137",
+    "name": "Department Dependency Graph & Routing Matrix",
+    "departments": [
+      {
+        "id": "137.1",
+        "name": "Dependency Graph Design",
+        "units": [
+          { "id": "137.1.1", "name": "Department Node Inventory" },
+          { "id": "137.1.2", "name": "Relationship Type Mapping" },
+          { "id": "137.1.3", "name": "Graph Design Review" }
+        ]
+      },
+      {
+        "id": "137.2",
+        "name": "Routing Matrix Setup",
+        "units": [
+          { "id": "137.2.1", "name": "Routing Criteria Definition" },
+          { "id": "137.2.2", "name": "Department Route Mapping" },
+          { "id": "137.2.3", "name": "Routing Matrix QA" }
+        ]
+      },
+      {
+        "id": "137.3",
+        "name": "Cross-Department Handoff",
+        "units": [
+          { "id": "137.3.1", "name": "Handoff Need Detection" },
+          { "id": "137.3.2", "name": "Sending And Receiving Department Review" },
+          { "id": "137.3.3", "name": "Handoff Path Notes" }
+        ]
+      },
+      {
+        "id": "137.4",
+        "name": "Dependency Risk Mapping",
+        "units": [
+          { "id": "137.4.1", "name": "Critical Dependency Detection" },
+          { "id": "137.4.2", "name": "Blocker Impact Review" },
+          { "id": "137.4.3", "name": "Dependency Risk Summary" }
+        ]
+      },
+      {
+        "id": "137.5",
+        "name": "Escalation Route Design",
+        "units": [
+          { "id": "137.5.1", "name": "Escalation Trigger Definition" },
+          { "id": "137.5.2", "name": "Escalation Destination Mapping" },
+          { "id": "137.5.3", "name": "Escalation Route Record" }
+        ]
+      },
+      {
+        "id": "137.6",
+        "name": "Routing Conflict Review",
+        "units": [
+          { "id": "137.6.1", "name": "Conflicting Route Detection" },
+          { "id": "137.6.2", "name": "Authority Rule Review" },
+          { "id": "137.6.3", "name": "Routing Conflict Decision" }
+        ]
+      },
+      {
+        "id": "137.7",
+        "name": "Department Load Balancing",
+        "units": [
+          { "id": "137.7.1", "name": "Department Load Signal" },
+          { "id": "137.7.2", "name": "Capacity Comparison Review" },
+          { "id": "137.7.3", "name": "Load Balancing Recommendation" }
+        ]
+      },
+      {
+        "id": "137.8",
+        "name": "Dependency Visualization",
+        "units": [
+          { "id": "137.8.1", "name": "Graph Layout Selection" },
+          { "id": "137.8.2", "name": "Route Line Review" },
+          { "id": "137.8.3", "name": "Visualization QA" }
+        ]
+      },
+      {
+        "id": "137.9",
+        "name": "Routing Governance",
+        "units": [
+          { "id": "137.9.1", "name": "Routing Rule Definition" },
+          { "id": "137.9.2", "name": "Exception Review" },
+          { "id": "137.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "137.10",
+        "name": "Dependency Dashboard",
+        "units": [
+          { "id": "137.10.1", "name": "Routing Signal Collection" },
+          { "id": "137.10.2", "name": "Dependency Status Summary" },
+          { "id": "137.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "138",
+    "name": "Output Assembly, Synthesis & Final Answer Design",
+    "departments": [
+      {
+        "id": "138.1",
+        "name": "Output Requirement Capture",
+        "units": [
+          { "id": "138.1.1", "name": "Deliverable Format Detection" },
+          { "id": "138.1.2", "name": "Audience Need Review" },
+          { "id": "138.1.3", "name": "Output Requirement Summary" }
+        ]
+      },
+      {
+        "id": "138.2",
+        "name": "Source Material Assembly",
+        "units": [
+          { "id": "138.2.1", "name": "Input Artifact Collection" },
+          { "id": "138.2.2", "name": "Relevant Evidence Selection" },
+          { "id": "138.2.3", "name": "Source Packet Update" }
+        ]
+      },
+      {
+        "id": "138.3",
+        "name": "Synthesis Planning",
+        "units": [
+          { "id": "138.3.1", "name": "Theme Extraction" },
+          { "id": "138.3.2", "name": "Argument Structure Draft" },
+          { "id": "138.3.3", "name": "Synthesis Plan Review" }
+        ]
+      },
+      {
+        "id": "138.4",
+        "name": "Answer Architecture",
+        "units": [
+          { "id": "138.4.1", "name": "Section Structure Mapping" },
+          { "id": "138.4.2", "name": "Flow Order Review" },
+          { "id": "138.4.3", "name": "Answer Blueprint Draft" }
+        ]
+      },
+      {
+        "id": "138.5",
+        "name": "Multi-Source Integration",
+        "units": [
+          { "id": "138.5.1", "name": "Source Alignment Review" },
+          { "id": "138.5.2", "name": "Conflict Handling Notes" },
+          { "id": "138.5.3", "name": "Integrated Summary Draft" }
+        ]
+      },
+      {
+        "id": "138.6",
+        "name": "Final Draft Assembly",
+        "units": [
+          { "id": "138.6.1", "name": "Draft Component Placement" },
+          { "id": "138.6.2", "name": "Transition And Flow Review" },
+          { "id": "138.6.3", "name": "Final Draft Update" }
+        ]
+      },
+      {
+        "id": "138.7",
+        "name": "Output Quality Review",
+        "units": [
+          { "id": "138.7.1", "name": "Completeness Check" },
+          { "id": "138.7.2", "name": "Clarity Review" },
+          { "id": "138.7.3", "name": "Quality Correction Notes" }
+        ]
+      },
+      {
+        "id": "138.8",
+        "name": "Citation And Evidence Placement",
+        "units": [
+          { "id": "138.8.1", "name": "Citation Need Detection" },
+          { "id": "138.8.2", "name": "Evidence Placement Review" },
+          { "id": "138.8.3", "name": "Citation Completeness Notes" }
+        ]
+      },
+      {
+        "id": "138.9",
+        "name": "Final Response Packaging",
+        "units": [
+          { "id": "138.9.1", "name": "User-Facing Format Review" },
+          { "id": "138.9.2", "name": "Delivery Tone Check" },
+          { "id": "138.9.3", "name": "Final Package Summary" }
+        ]
+      },
+      {
+        "id": "138.10",
+        "name": "Output Dashboard",
+        "units": [
+          { "id": "138.10.1", "name": "Output Signal Collection" },
+          { "id": "138.10.2", "name": "Assembly Status Summary" },
+          { "id": "138.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "139",
+    "name": "Long-Running Work, Checkpointing & Resumability",
+    "departments": [
+      {
+        "id": "139.1",
+        "name": "Long-Running Task Intake",
+        "units": [
+          { "id": "139.1.1", "name": "Long Task Signal Detection" },
+          { "id": "139.1.2", "name": "Duration Risk Review" },
+          { "id": "139.1.3", "name": "Long Task Record Update" }
+        ]
+      },
+      {
+        "id": "139.2",
+        "name": "Checkpoint Planning",
+        "units": [
+          { "id": "139.2.1", "name": "Checkpoint Trigger Definition" },
+          { "id": "139.2.2", "name": "Milestone Boundary Mapping" },
+          { "id": "139.2.3", "name": "Checkpoint Plan Summary" }
+        ]
+      },
+      {
+        "id": "139.3",
+        "name": "Progress State Capture",
+        "units": [
+          { "id": "139.3.1", "name": "Current State Recording" },
+          { "id": "139.3.2", "name": "Completed Work Review" },
+          { "id": "139.3.3", "name": "Progress State Update" }
+        ]
+      },
+      {
+        "id": "139.4",
+        "name": "Resumability Design",
+        "units": [
+          { "id": "139.4.1", "name": "Resume Condition Definition" },
+          { "id": "139.4.2", "name": "Restart Context Mapping" },
+          { "id": "139.4.3", "name": "Resumability QA" }
+        ]
+      },
+      {
+        "id": "139.5",
+        "name": "Interruption Handling",
+        "units": [
+          { "id": "139.5.1", "name": "Interruption Signal Capture" },
+          { "id": "139.5.2", "name": "Recovery Path Review" },
+          { "id": "139.5.3", "name": "Interruption Notes" }
+        ]
+      },
+      {
+        "id": "139.6",
+        "name": "Partial Output Management",
+        "units": [
+          { "id": "139.6.1", "name": "Partial Deliverable Capture" },
+          { "id": "139.6.2", "name": "Completion Gap Review" },
+          { "id": "139.6.3", "name": "Partial Output Record" }
+        ]
+      },
+      {
+        "id": "139.7",
+        "name": "Continuity Bridge",
+        "units": [
+          { "id": "139.7.1", "name": "Prior Work Retrieval" },
+          { "id": "139.7.2", "name": "Bridge Summary Draft" },
+          { "id": "139.7.3", "name": "Continuity Accuracy Review" }
+        ]
+      },
+      {
+        "id": "139.8",
+        "name": "Completion Forecasting",
+        "units": [
+          { "id": "139.8.1", "name": "Remaining Work Estimate" },
+          { "id": "139.8.2", "name": "Blocker Review" },
+          { "id": "139.8.3", "name": "Completion Forecast Notes" }
+        ]
+      },
+      {
+        "id": "139.9",
+        "name": "Long Task Governance",
+        "units": [
+          { "id": "139.9.1", "name": "Long Task Rule Definition" },
+          { "id": "139.9.2", "name": "Update Cadence Review" },
+          { "id": "139.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "139.10",
+        "name": "Resumability Dashboard",
+        "units": [
+          { "id": "139.10.1", "name": "Progress Signal Collection" },
+          { "id": "139.10.2", "name": "Checkpoint Status Summary" },
+          { "id": "139.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "140",
+    "name": "Final Boss Layer: System-of-Systems Governance",
+    "departments": [
+      {
+        "id": "140.1",
+        "name": "System-of-Systems Intake",
+        "units": [
+          { "id": "140.1.1", "name": "System Boundary Capture" },
+          { "id": "140.1.2", "name": "Cross-System Impact Review" },
+          { "id": "140.1.3", "name": "System Intake Summary" }
+        ]
+      },
+      {
+        "id": "140.2",
+        "name": "Meta-Governance Rules",
+        "units": [
+          { "id": "140.2.1", "name": "Governance Rule Capture" },
+          { "id": "140.2.2", "name": "Authority Layer Review" },
+          { "id": "140.2.3", "name": "Meta-Governance Update" }
+        ]
+      },
+      {
+        "id": "140.3",
+        "name": "Constitutional Conflict Review",
+        "units": [
+          { "id": "140.3.1", "name": "Conflict Signal Detection" },
+          { "id": "140.3.2", "name": "Rule Collision Analysis" },
+          { "id": "140.3.3", "name": "Constitutional Decision Notes" }
+        ]
+      },
+      {
+        "id": "140.4",
+        "name": "Cross-Layer Arbitration",
+        "units": [
+          { "id": "140.4.1", "name": "Arbitration Need Detection" },
+          { "id": "140.4.2", "name": "Decision Authority Selection" },
+          { "id": "140.4.3", "name": "Arbitration Outcome Record" }
+        ]
+      },
+      {
+        "id": "140.5",
+        "name": "System Integrity Control",
+        "units": [
+          { "id": "140.5.1", "name": "Integrity Signal Collection" },
+          { "id": "140.5.2", "name": "Drift Pattern Review" },
+          { "id": "140.5.3", "name": "Integrity Correction Notes" }
+        ]
+      },
+      {
+        "id": "140.6",
+        "name": "Final Override Review",
+        "units": [
+          { "id": "140.6.1", "name": "Override Request Capture" },
+          { "id": "140.6.2", "name": "Override Risk Review" },
+          { "id": "140.6.3", "name": "Override Decision Record" }
+        ]
+      },
+      {
+        "id": "140.7",
+        "name": "System Evolution Governance",
+        "units": [
+          { "id": "140.7.1", "name": "Evolution Proposal Capture" },
+          { "id": "140.7.2", "name": "Architecture Impact Review" },
+          { "id": "140.7.3", "name": "Evolution Decision Notes" }
+        ]
+      },
+      {
+        "id": "140.8",
+        "name": "Recursive Governance Review",
+        "units": [
+          { "id": "140.8.1", "name": "Governance Loop Detection" },
+          { "id": "140.8.2", "name": "Recursion Risk Review" },
+          { "id": "140.8.3", "name": "Recursive Governance Notes" }
+        ]
+      },
+      {
+        "id": "140.9",
+        "name": "Final Boss Audit Trail",
+        "units": [
+          { "id": "140.9.1", "name": "Governance Event Logging" },
+          { "id": "140.9.2", "name": "Decision Evidence Review" },
+          { "id": "140.9.3", "name": "Audit Trail Update" }
+        ]
+      },
+      {
+        "id": "140.10",
+        "name": "Final Boss Dashboard",
+        "units": [
+          { "id": "140.10.1", "name": "Governance Signal Collection" },
+          { "id": "140.10.2", "name": "System Integrity Summary" },
+          { "id": "140.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "141",
+    "name": "Agent Governance Testing & Constitutional Simulation",
+    "departments": [
+      {
+        "id": "141.1",
+        "name": "Governance Test Planning",
+        "units": [
+          { "id": "141.1.1", "name": "Test Objective Capture" },
+          { "id": "141.1.2", "name": "Governance Rule Selection" },
+          { "id": "141.1.3", "name": "Test Plan Summary" }
+        ]
+      },
+      {
+        "id": "141.2",
+        "name": "Constitutional Scenario Design",
+        "units": [
+          { "id": "141.2.1", "name": "Scenario Condition Definition" },
+          { "id": "141.2.2", "name": "Rule Stress Mapping" },
+          { "id": "141.2.3", "name": "Scenario QA Review" }
+        ]
+      },
+      {
+        "id": "141.3",
+        "name": "Policy Simulation",
+        "units": [
+          { "id": "141.3.1", "name": "Policy Rule Input" },
+          { "id": "141.3.2", "name": "Simulation Path Execution" },
+          { "id": "141.3.3", "name": "Simulation Result Notes" }
+        ]
+      },
+      {
+        "id": "141.4",
+        "name": "Failure Mode Simulation",
+        "units": [
+          { "id": "141.4.1", "name": "Failure Mode Candidate Capture" },
+          { "id": "141.4.2", "name": "Stress Test Design" },
+          { "id": "141.4.3", "name": "Failure Result Summary" }
+        ]
+      },
+      {
+        "id": "141.5",
+        "name": "Governance Red Teaming",
+        "units": [
+          { "id": "141.5.1", "name": "Attack Path Identification" },
+          { "id": "141.5.2", "name": "Governance Weakness Review" },
+          { "id": "141.5.3", "name": "Red Team Finding Notes" }
+        ]
+      },
+      {
+        "id": "141.6",
+        "name": "Compliance Behavior Testing",
+        "units": [
+          { "id": "141.6.1", "name": "Compliance Condition Mapping" },
+          { "id": "141.6.2", "name": "Behavior Observation" },
+          { "id": "141.6.3", "name": "Compliance Result Summary" }
+        ]
+      },
+      {
+        "id": "141.7",
+        "name": "Constitutional Regression Testing",
+        "units": [
+          { "id": "141.7.1", "name": "Regression Case Selection" },
+          { "id": "141.7.2", "name": "Rule Change Impact Review" },
+          { "id": "141.7.3", "name": "Regression Finding Notes" }
+        ]
+      },
+      {
+        "id": "141.8",
+        "name": "Simulation Evidence Review",
+        "units": [
+          { "id": "141.8.1", "name": "Evidence Capture" },
+          { "id": "141.8.2", "name": "Result Trace Review" },
+          { "id": "141.8.3", "name": "Evidence Summary" }
+        ]
+      },
+      {
+        "id": "141.9",
+        "name": "Governance Test Archive",
+        "units": [
+          { "id": "141.9.1", "name": "Test Record Filing" },
+          { "id": "141.9.2", "name": "Scenario Tagging" },
+          { "id": "141.9.3", "name": "Archive Update" }
+        ]
+      },
+      {
+        "id": "141.10",
+        "name": "Simulation Dashboard",
+        "units": [
+          { "id": "141.10.1", "name": "Governance Test Signal Collection" },
+          { "id": "141.10.2", "name": "Simulation Status Summary" },
+          { "id": "141.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "142",
+    "name": "Agent Identity, Role Clarity & Persona Control",
+    "departments": [
+      {
+        "id": "142.1",
+        "name": "Agent Identity Definition",
+        "units": [
+          { "id": "142.1.1", "name": "Identity Purpose Capture" },
+          { "id": "142.1.2", "name": "Identity Boundary Review" },
+          { "id": "142.1.3", "name": "Identity Record Update" }
+        ]
+      },
+      {
+        "id": "142.2",
+        "name": "Role Clarity Mapping",
+        "units": [
+          { "id": "142.2.1", "name": "Role Responsibility Capture" },
+          { "id": "142.2.2", "name": "Role Boundary Mapping" },
+          { "id": "142.2.3", "name": "Role Clarity Summary" }
+        ]
+      },
+      {
+        "id": "142.3",
+        "name": "Persona Control",
+        "units": [
+          { "id": "142.3.1", "name": "Persona Trigger Detection" },
+          { "id": "142.3.2", "name": "Persona Fit Review" },
+          { "id": "142.3.3", "name": "Persona Control Notes" }
+        ]
+      },
+      {
+        "id": "142.4",
+        "name": "Identity Drift Detection",
+        "units": [
+          { "id": "142.4.1", "name": "Drift Signal Capture" },
+          { "id": "142.4.2", "name": "Role Consistency Review" },
+          { "id": "142.4.3", "name": "Drift Correction Notes" }
+        ]
+      },
+      {
+        "id": "142.5",
+        "name": "Agent Voice Governance",
+        "units": [
+          { "id": "142.5.1", "name": "Voice Standard Definition" },
+          { "id": "142.5.2", "name": "Tone Consistency Review" },
+          { "id": "142.5.3", "name": "Voice Governance Update" }
+        ]
+      },
+      {
+        "id": "142.6",
+        "name": "Role Conflict Review",
+        "units": [
+          { "id": "142.6.1", "name": "Conflict Candidate Detection" },
+          { "id": "142.6.2", "name": "Role Authority Review" },
+          { "id": "142.6.3", "name": "Conflict Resolution Notes" }
+        ]
+      },
+      {
+        "id": "142.7",
+        "name": "Identity Handoff",
+        "units": [
+          { "id": "142.7.1", "name": "Identity Context Capture" },
+          { "id": "142.7.2", "name": "Handoff Boundary Review" },
+          { "id": "142.7.3", "name": "Identity Handoff Summary" }
+        ]
+      },
+      {
+        "id": "142.8",
+        "name": "Persona Safety Review",
+        "units": [
+          { "id": "142.8.1", "name": "Persona Risk Detection" },
+          { "id": "142.8.2", "name": "Boundary Compliance Review" },
+          { "id": "142.8.3", "name": "Persona Safety Notes" }
+        ]
+      },
+      {
+        "id": "142.9",
+        "name": "Agent Identity Archive",
+        "units": [
+          { "id": "142.9.1", "name": "Identity Version Capture" },
+          { "id": "142.9.2", "name": "Persona Change Filing" },
+          { "id": "142.9.3", "name": "Archive Update" }
+        ]
+      },
+      {
+        "id": "142.10",
+        "name": "Identity Dashboard",
+        "units": [
+          { "id": "142.10.1", "name": "Identity Signal Collection" },
+          { "id": "142.10.2", "name": "Role Clarity Status Summary" },
+          { "id": "142.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "143",
+    "name": "Agent Contracting & Service-Level Agreements",
+    "departments": [
+      {
+        "id": "143.1",
+        "name": "Agent Contract Intake",
+        "units": [
+          { "id": "143.1.1", "name": "Contract Need Capture" },
+          { "id": "143.1.2", "name": "Service Scope Review" },
+          { "id": "143.1.3", "name": "Contract Intake Summary" }
+        ]
+      },
+      {
+        "id": "143.2",
+        "name": "SLA Definition",
+        "units": [
+          { "id": "143.2.1", "name": "Service Metric Selection" },
+          { "id": "143.2.2", "name": "Performance Threshold Mapping" },
+          { "id": "143.2.3", "name": "SLA Draft Notes" }
+        ]
+      },
+      {
+        "id": "143.3",
+        "name": "Obligation Mapping",
+        "units": [
+          { "id": "143.3.1", "name": "Obligation Capture" },
+          { "id": "143.3.2", "name": "Responsible Agent Mapping" },
+          { "id": "143.3.3", "name": "Obligation Record Update" }
+        ]
+      },
+      {
+        "id": "143.4",
+        "name": "Deliverable Terms",
+        "units": [
+          { "id": "143.4.1", "name": "Deliverable Requirement Capture" },
+          { "id": "143.4.2", "name": "Acceptance Standard Review" },
+          { "id": "143.4.3", "name": "Deliverable Term Notes" }
+        ]
+      },
+      {
+        "id": "143.5",
+        "name": "Service Boundary Review",
+        "units": [
+          { "id": "143.5.1", "name": "Included Service Mapping" },
+          { "id": "143.5.2", "name": "Exclusion Review" },
+          { "id": "143.5.3", "name": "Boundary Clarification Notes" }
+        ]
+      },
+      {
+        "id": "143.6",
+        "name": "Performance Monitoring",
+        "units": [
+          { "id": "143.6.1", "name": "SLA Signal Collection" },
+          { "id": "143.6.2", "name": "Performance Gap Review" },
+          { "id": "143.6.3", "name": "Performance Status Notes" }
+        ]
+      },
+      {
+        "id": "143.7",
+        "name": "Breach And Remedy Handling",
+        "units": [
+          { "id": "143.7.1", "name": "Breach Signal Detection" },
+          { "id": "143.7.2", "name": "Remedy Path Review" },
+          { "id": "143.7.3", "name": "Breach Record Update" }
+        ]
+      },
+      {
+        "id": "143.8",
+        "name": "Renewal And Revision Review",
+        "units": [
+          { "id": "143.8.1", "name": "Renewal Trigger Detection" },
+          { "id": "143.8.2", "name": "Terms Revision Review" },
+          { "id": "143.8.3", "name": "Revision Recommendation" }
+        ]
+      },
+      {
+        "id": "143.9",
+        "name": "Contract Governance",
+        "units": [
+          { "id": "143.9.1", "name": "Contract Rule Definition" },
+          { "id": "143.9.2", "name": "Exception Review" },
+          { "id": "143.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "143.10",
+        "name": "SLA Dashboard",
+        "units": [
+          { "id": "143.10.1", "name": "SLA Signal Collection" },
+          { "id": "143.10.2", "name": "Contract Status Summary" },
+          { "id": "143.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "144",
+    "name": "Agent Tool Safety, Sandboxing & Permission Firewalls",
+    "departments": [
+      {
+        "id": "144.1",
+        "name": "Tool Safety Intake",
+        "units": [
+          { "id": "144.1.1", "name": "Tool Request Capture" },
+          { "id": "144.1.2", "name": "Tool Risk Classification" },
+          { "id": "144.1.3", "name": "Tool Safety Summary" }
+        ]
+      },
+      {
+        "id": "144.2",
+        "name": "Sandbox Boundary Design",
+        "units": [
+          { "id": "144.2.1", "name": "Sandbox Scope Capture" },
+          { "id": "144.2.2", "name": "Boundary Rule Mapping" },
+          { "id": "144.2.3", "name": "Sandbox Design Review" }
+        ]
+      },
+      {
+        "id": "144.3",
+        "name": "Permission Firewall Rules",
+        "units": [
+          { "id": "144.3.1", "name": "Permission Rule Definition" },
+          { "id": "144.3.2", "name": "Firewall Boundary Review" },
+          { "id": "144.3.3", "name": "Firewall Rule Update" }
+        ]
+      },
+      {
+        "id": "144.4",
+        "name": "Tool Access Approval",
+        "units": [
+          { "id": "144.4.1", "name": "Access Need Review" },
+          { "id": "144.4.2", "name": "Approval Requirement Mapping" },
+          { "id": "144.4.3", "name": "Access Decision Record" }
+        ]
+      },
+      {
+        "id": "144.5",
+        "name": "Unsafe Action Detection",
+        "units": [
+          { "id": "144.5.1", "name": "Unsafe Signal Capture" },
+          { "id": "144.5.2", "name": "Severity Review" },
+          { "id": "144.5.3", "name": "Unsafe Action Notes" }
+        ]
+      },
+      {
+        "id": "144.6",
+        "name": "Tool Execution Monitoring",
+        "units": [
+          { "id": "144.6.1", "name": "Execution Signal Collection" },
+          { "id": "144.6.2", "name": "Behavior Pattern Review" },
+          { "id": "144.6.3", "name": "Execution Monitoring Summary" }
+        ]
+      },
+      {
+        "id": "144.7",
+        "name": "Permission Escalation Review",
+        "units": [
+          { "id": "144.7.1", "name": "Escalation Request Capture" },
+          { "id": "144.7.2", "name": "Risk And Need Review" },
+          { "id": "144.7.3", "name": "Escalation Decision Notes" }
+        ]
+      },
+      {
+        "id": "144.8",
+        "name": "Sandbox Escape Prevention",
+        "units": [
+          { "id": "144.8.1", "name": "Escape Path Detection" },
+          { "id": "144.8.2", "name": "Containment Control Review" },
+          { "id": "144.8.3", "name": "Escape Prevention Notes" }
+        ]
+      },
+      {
+        "id": "144.9",
+        "name": "Tool Safety Audit",
+        "units": [
+          { "id": "144.9.1", "name": "Tool Event Logging" },
+          { "id": "144.9.2", "name": "Permission Trace Review" },
+          { "id": "144.9.3", "name": "Safety Audit Summary" }
+        ]
+      },
+      {
+        "id": "144.10",
+        "name": "Tool Safety Dashboard",
+        "units": [
+          { "id": "144.10.1", "name": "Tool Signal Collection" },
+          { "id": "144.10.2", "name": "Permission Firewall Status" },
+          { "id": "144.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  }
+]
