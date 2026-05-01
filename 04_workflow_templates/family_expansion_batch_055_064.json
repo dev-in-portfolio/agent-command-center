@@ -1,0 +1,575 @@
+{
+  "batch": "055_064",
+  "families": [
+    {
+      "id": 55,
+      "name": "Agent Society & Internal Culture",
+      "folder": "02_departments/055_agent_society_and_internal_culture",
+      "departments": [
+        {
+          "id": "55.1",
+          "name": "Agent Culture Design",
+          "units": ["Culture Principle Definition", "Norm And Ritual Mapping", "Culture Consistency Review"]
+        },
+        {
+          "id": "55.2",
+          "name": "Internal Agent Roles",
+          "units": ["Role Identity Definition", "Role Boundary Mapping", "Role Conflict Review"]
+        },
+        {
+          "id": "55.3",
+          "name": "Agent Communication Norms",
+          "units": ["Message Standard Definition", "Tone And Protocol Review", "Communication Drift Notes"]
+        },
+        {
+          "id": "55.4",
+          "name": "Agent Collaboration Patterns",
+          "units": ["Collaboration Mode Selection", "Shared Work Pattern Design", "Collaboration Quality Review"]
+        },
+        {
+          "id": "55.5",
+          "name": "Agent Ethics Culture",
+          "units": ["Ethical Norm Capture", "Culture Risk Detection", "Ethics Reinforcement Notes"]
+        },
+        {
+          "id": "55.6",
+          "name": "Agent Rituals",
+          "units": ["Ritual Trigger Definition", "Ritual Script Draft", "Ritual Effectiveness Review"]
+        },
+        {
+          "id": "55.7",
+          "name": "Agent Conflict Mediation",
+          "units": ["Agent Disagreement Detection", "Mediation Path Selection", "Resolution Record"]
+        },
+        {
+          "id": "55.8",
+          "name": "Agent Identity Continuity",
+          "units": ["Identity Signal Capture", "Continuity Rule Review", "Identity Drift Correction"]
+        },
+        {
+          "id": "55.9",
+          "name": "Agent Morale Signals",
+          "units": ["Morale Signal Detection", "Load And Friction Review", "Morale Adjustment Notes"]
+        },
+        {
+          "id": "55.10",
+          "name": "Internal Culture Archive",
+          "units": ["Culture Event Capture", "Internal Lore Filing", "Culture Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Autonomous Operations Control",
+      "folder": "02_departments/056_autonomous_operations_control",
+      "departments": [
+        {
+          "id": "56.1",
+          "name": "Autonomy Boundary Design",
+          "units": ["Autonomy Scope Definition", "Boundary Condition Mapping", "Autonomy Limit Review"]
+        },
+        {
+          "id": "56.2",
+          "name": "Autonomous Task Selection",
+          "units": ["Candidate Task Detection", "Autonomy Suitability Review", "Task Activation Decision"]
+        },
+        {
+          "id": "56.3",
+          "name": "Autonomous Workflow Execution",
+          "units": ["Execution Plan Setup", "Run Monitoring", "Execution Completion Record"]
+        },
+        {
+          "id": "56.4",
+          "name": "Autonomous Escalation",
+          "units": ["Escalation Trigger Detection", "Human Review Routing", "Escalation Outcome Notes"]
+        },
+        {
+          "id": "56.5",
+          "name": "Autonomy Safety Checks",
+          "units": ["Safety Boundary Verification", "Risk Condition Review", "Safety Stop Decision"]
+        },
+        {
+          "id": "56.6",
+          "name": "Autonomous Recovery",
+          "units": ["Failure Signal Detection", "Recovery Path Selection", "Recovery Result Summary"]
+        },
+        {
+          "id": "56.7",
+          "name": "Autonomous Decision Logs",
+          "units": ["Decision Event Capture", "Decision Rationale Summary", "Decision Log Update"]
+        },
+        {
+          "id": "56.8",
+          "name": "Human Override Handling",
+          "units": ["Override Signal Capture", "Override Rule Application", "Override Resolution Record"]
+        },
+        {
+          "id": "56.9",
+          "name": "Autonomy Performance Review",
+          "units": ["Performance Signal Collection", "Autonomy Quality Scoring", "Improvement Recommendation"]
+        },
+        {
+          "id": "56.10",
+          "name": "Autonomy Governance",
+          "units": ["Autonomy Rule Definition", "Governance Review", "Autonomy Policy Update"]
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Multi-Agent Orchestration & Swarm Control",
+      "folder": "02_departments/057_multi_agent_orchestration_and_swarm_control",
+      "departments": [
+        {
+          "id": "57.1",
+          "name": "Swarm Role Design",
+          "units": ["Swarm Role Definition", "Role Dependency Mapping", "Role Coverage Review"]
+        },
+        {
+          "id": "57.2",
+          "name": "Agent Crew Assembly",
+          "units": ["Crew Requirement Mapping", "Agent Selection", "Crew Readiness Review"]
+        },
+        {
+          "id": "57.3",
+          "name": "Task Decomposition Routing",
+          "units": ["Work Package Breakdown", "Agent Assignment", "Routing Confirmation"]
+        },
+        {
+          "id": "57.4",
+          "name": "Inter-Agent Messaging",
+          "units": ["Message Channel Setup", "Agent Status Exchange", "Message Trace Review"]
+        },
+        {
+          "id": "57.5",
+          "name": "Swarm Coordination",
+          "units": ["Coordination Pattern Selection", "Synchronization Check", "Swarm Status Summary"]
+        },
+        {
+          "id": "57.6",
+          "name": "Consensus Building",
+          "units": ["Opinion Collection", "Consensus Method Selection", "Consensus Decision Record"]
+        },
+        {
+          "id": "57.7",
+          "name": "Agent Disagreement Handling",
+          "units": ["Disagreement Capture", "Evidence Comparison", "Resolution Recommendation"]
+        },
+        {
+          "id": "57.8",
+          "name": "Parallel Work Management",
+          "units": ["Parallel Task Mapping", "Dependency Timing Review", "Parallel Output Merge Notes"]
+        },
+        {
+          "id": "57.9",
+          "name": "Swarm Failure Recovery",
+          "units": ["Failed Agent Detection", "Task Reassignment", "Recovery Verification"]
+        },
+        {
+          "id": "57.10",
+          "name": "Orchestration Reporting",
+          "units": ["Swarm Activity Summary", "Dependency Report", "Orchestration Lessons Update"]
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Tool Operations & External Access",
+      "folder": "02_departments/058_tool_operations_and_external_access",
+      "departments": [
+        {
+          "id": "58.1",
+          "name": "Tool Inventory",
+          "units": ["Tool Capability Capture", "Tool Access Status Review", "Tool Inventory Update"]
+        },
+        {
+          "id": "58.2",
+          "name": "Tool Selection",
+          "units": ["Tool Need Detection", "Capability Match Review", "Tool Choice Decision"]
+        },
+        {
+          "id": "58.3",
+          "name": "External Access Control",
+          "units": ["Access Requirement Review", "Permission Boundary Mapping", "Access Approval Notes"]
+        },
+        {
+          "id": "58.4",
+          "name": "API Tool Use",
+          "units": ["API Capability Mapping", "API Call Preparation", "API Result Review"]
+        },
+        {
+          "id": "58.5",
+          "name": "Browser And Web Tool Operations",
+          "units": ["Web Query Framing", "Source Retrieval", "Web Result Validation"]
+        },
+        {
+          "id": "58.6",
+          "name": "File And Connector Operations",
+          "units": ["Connector Source Selection", "File Retrieval", "Connector Result Review"]
+        },
+        {
+          "id": "58.7",
+          "name": "Tool Failure Handling",
+          "units": ["Tool Error Capture", "Fallback Tool Selection", "Failure Resolution Notes"]
+        },
+        {
+          "id": "58.8",
+          "name": "Tool Safety Review",
+          "units": ["Tool Risk Identification", "Permission Exposure Review", "Safe Use Decision"]
+        },
+        {
+          "id": "58.9",
+          "name": "Tool Output Integration",
+          "units": ["Tool Output Parsing", "Evidence Integration", "Tool Result Summary"]
+        },
+        {
+          "id": "58.10",
+          "name": "Tool Operations Audit",
+          "units": ["Tool Use Log Review", "Tool Outcome Audit", "Tool Policy Update"]
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Interface, Dashboard & Control Panels",
+      "folder": "02_departments/059_interface_dashboard_and_control_panels",
+      "departments": [
+        {
+          "id": "59.1",
+          "name": "Dashboard Architecture",
+          "units": ["Dashboard Purpose Definition", "Panel Layout Mapping", "Dashboard Flow Review"]
+        },
+        {
+          "id": "59.2",
+          "name": "Control Panel Design",
+          "units": ["Control Requirement Mapping", "Control Interaction Design", "Control Panel QA"]
+        },
+        {
+          "id": "59.3",
+          "name": "Status Display Systems",
+          "units": ["Status Signal Selection", "Display Rule Definition", "Status Visibility Review"]
+        },
+        {
+          "id": "59.4",
+          "name": "User Command Interface",
+          "units": ["Command Input Mapping", "Interface Response Design", "Command UX Review"]
+        },
+        {
+          "id": "59.5",
+          "name": "Agent Visibility Panels",
+          "units": ["Agent State Signal Capture", "Agent Activity Display", "Agent Visibility QA"]
+        },
+        {
+          "id": "59.6",
+          "name": "Alert Panels",
+          "units": ["Alert Trigger Definition", "Alert Priority Review", "Alert Display Check"]
+        },
+        {
+          "id": "59.7",
+          "name": "Workflow Map Displays",
+          "units": ["Workflow Node Mapping", "Dependency Visualization", "Workflow Map QA"]
+        },
+        {
+          "id": "59.8",
+          "name": "Performance Dashboards",
+          "units": ["Performance Metric Selection", "Dashboard Data Binding", "Performance Summary Review"]
+        },
+        {
+          "id": "59.9",
+          "name": "Configuration Panels",
+          "units": ["Setting Inventory", "Configuration Control Design", "Setting Change Review"]
+        },
+        {
+          "id": "59.10",
+          "name": "Interface Governance",
+          "units": ["Interface Rule Definition", "UX Consistency Review", "Interface Version Notes"]
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Experimental Systems & Weird Lab",
+      "folder": "02_departments/060_experimental_systems_and_weird_lab",
+      "departments": [
+        {
+          "id": "60.1",
+          "name": "Weird Idea Intake",
+          "units": ["Strange Concept Capture", "Experimental Value Review", "Weird Idea Parking Decision"]
+        },
+        {
+          "id": "60.2",
+          "name": "Prototype Weird Systems",
+          "units": ["Prototype Premise Definition", "Strange Workflow Build", "Prototype Weirdness Review"]
+        },
+        {
+          "id": "60.3",
+          "name": "Experimental Constraints",
+          "units": ["Constraint Definition", "Boundary Stress Test", "Constraint Result Notes"]
+        },
+        {
+          "id": "60.4",
+          "name": "Impossible Systems",
+          "units": ["Impossible Goal Framing", "Paradox Path Mapping", "Impossible System Debrief"]
+        },
+        {
+          "id": "60.5",
+          "name": "Chaos Testing",
+          "units": ["Chaos Scenario Design", "Stress Run Observation", "Chaos Lesson Capture"]
+        },
+        {
+          "id": "60.6",
+          "name": "Strange Interface Experiments",
+          "units": ["Interface Oddity Concept", "Interaction Experiment", "Interface Reaction Notes"]
+        },
+        {
+          "id": "60.7",
+          "name": "Experimental Agent Behaviors",
+          "units": ["Behavior Mutation Idea", "Controlled Behavior Test", "Behavior Outcome Review"]
+        },
+        {
+          "id": "60.8",
+          "name": "Weird Lab Safety",
+          "units": ["Weird Risk Identification", "Containment Boundary Review", "Weird Lab Stop Decision"]
+        },
+        {
+          "id": "60.9",
+          "name": "Experiment Archive",
+          "units": ["Experiment Record Capture", "Result Classification", "Weird Archive Update"]
+        },
+        {
+          "id": "60.10",
+          "name": "Lab Roadmap",
+          "units": ["Experiment Backlog Review", "Lab Priority Selection", "Weird Roadmap Update"]
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "Archives, Museums & Collection Management",
+      "folder": "02_departments/061_archives_museums_and_collection_management",
+      "departments": [
+        {
+          "id": "61.1",
+          "name": "Collection Inventory",
+          "units": ["Item Identification", "Collection Record Creation", "Inventory Completeness Review"]
+        },
+        {
+          "id": "61.2",
+          "name": "Archive Cataloging",
+          "units": ["Archive Category Selection", "Catalog Metadata Entry", "Catalog Quality Review"]
+        },
+        {
+          "id": "61.3",
+          "name": "Provenance Tracking",
+          "units": ["Source History Capture", "Ownership Chain Review", "Provenance Notes Update"]
+        },
+        {
+          "id": "61.4",
+          "name": "Preservation Planning",
+          "units": ["Preservation Need Assessment", "Condition Risk Review", "Preservation Recommendation"]
+        },
+        {
+          "id": "61.5",
+          "name": "Exhibit Planning",
+          "units": ["Exhibit Theme Definition", "Object Selection", "Exhibit Narrative Review"]
+        },
+        {
+          "id": "61.6",
+          "name": "Artifact Description",
+          "units": ["Object Feature Capture", "Description Drafting", "Description Accuracy Review"]
+        },
+        {
+          "id": "61.7",
+          "name": "Digital Archive Management",
+          "units": ["Digital Asset Intake", "File Structure Design", "Digital Archive QA"]
+        },
+        {
+          "id": "61.8",
+          "name": "Collection Research",
+          "units": ["Research Question Framing", "Source Evidence Review", "Collection Research Summary"]
+        },
+        {
+          "id": "61.9",
+          "name": "Loan And Access Management",
+          "units": ["Access Request Review", "Loan Condition Mapping", "Access Decision Record"]
+        },
+        {
+          "id": "61.10",
+          "name": "Collection Governance",
+          "units": ["Collection Rule Definition", "Acquisition Review", "Deaccession Decision Notes"]
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "name": "Scientific Research & Lab Operations",
+      "folder": "02_departments/062_scientific_research_and_lab_operations",
+      "departments": [
+        {
+          "id": "62.1",
+          "name": "Research Question Design",
+          "units": ["Scientific Question Framing", "Hypothesis Drafting", "Research Scope Review"]
+        },
+        {
+          "id": "62.2",
+          "name": "Literature Review",
+          "units": ["Source Search Strategy", "Study Evidence Extraction", "Literature Summary"]
+        },
+        {
+          "id": "62.3",
+          "name": "Experiment Planning",
+          "units": ["Experimental Design Draft", "Variable Mapping", "Protocol Readiness Review"]
+        },
+        {
+          "id": "62.4",
+          "name": "Lab Protocols",
+          "units": ["Protocol Step Definition", "Materials Requirement Review", "Protocol Safety Check"]
+        },
+        {
+          "id": "62.5",
+          "name": "Data Collection",
+          "units": ["Measurement Plan Setup", "Observation Capture", "Collection Quality Review"]
+        },
+        {
+          "id": "62.6",
+          "name": "Scientific Analysis",
+          "units": ["Analysis Method Selection", "Result Interpretation", "Scientific Finding Summary"]
+        },
+        {
+          "id": "62.7",
+          "name": "Lab Safety",
+          "units": ["Hazard Identification", "Safety Procedure Review", "Safety Compliance Notes"]
+        },
+        {
+          "id": "62.8",
+          "name": "Scientific Visualization",
+          "units": ["Figure Requirement Mapping", "Data Figure Draft", "Visualization Accuracy Review"]
+        },
+        {
+          "id": "62.9",
+          "name": "Research Reporting",
+          "units": ["Report Structure Draft", "Results Narrative", "Research Report QA"]
+        },
+        {
+          "id": "62.10",
+          "name": "Replication And Validation",
+          "units": ["Replication Requirement Review", "Validation Method Selection", "Replication Notes Summary"]
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "Investor Research & Market Intelligence",
+      "folder": "02_departments/063_investor_research_and_market_intelligence",
+      "departments": [
+        {
+          "id": "63.1",
+          "name": "Ticker Research",
+          "units": ["Ticker Intake", "Company Profile Review", "Ticker Research Summary"]
+        },
+        {
+          "id": "63.2",
+          "name": "Sector Analysis",
+          "units": ["Sector Boundary Definition", "Sector Trend Review", "Sector Risk Summary"]
+        },
+        {
+          "id": "63.3",
+          "name": "Catalyst Tracking",
+          "units": ["Catalyst Signal Capture", "Catalyst Impact Review", "Catalyst Watchlist Update"]
+        },
+        {
+          "id": "63.4",
+          "name": "Risk Analysis",
+          "units": ["Risk Factor Identification", "Downside Scenario Review", "Risk Summary Notes"]
+        },
+        {
+          "id": "63.5",
+          "name": "Financial Statement Review",
+          "units": ["Statement Item Extraction", "Ratio And Trend Review", "Financial Health Notes"]
+        },
+        {
+          "id": "63.6",
+          "name": "Market Sentiment Review",
+          "units": ["Sentiment Source Collection", "Sentiment Pattern Detection", "Sentiment Summary"]
+        },
+        {
+          "id": "63.7",
+          "name": "Watchlist Management",
+          "units": ["Watchlist Candidate Review", "Watchlist Category Assignment", "Watchlist Update Notes"]
+        },
+        {
+          "id": "63.8",
+          "name": "Trade Thesis Support",
+          "units": ["Thesis Claim Draft", "Evidence And Counterpoint Review", "Thesis Risk Notes"]
+        },
+        {
+          "id": "63.9",
+          "name": "Portfolio Scenario Review",
+          "units": ["Position Scenario Mapping", "Exposure Review", "Portfolio Scenario Summary"]
+        },
+        {
+          "id": "63.10",
+          "name": "Investment Research Archive",
+          "units": ["Research Note Capture", "Historical Thesis Review", "Research Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "name": "Relationship Intelligence & Network Management",
+      "folder": "02_departments/064_relationship_intelligence_and_network_management",
+      "departments": [
+        {
+          "id": "64.1",
+          "name": "Contact Intelligence",
+          "units": ["Contact Detail Capture", "Relationship Context Review", "Contact Profile Update"]
+        },
+        {
+          "id": "64.2",
+          "name": "Network Mapping",
+          "units": ["Relationship Node Identification", "Connection Strength Review", "Network Map Update"]
+        },
+        {
+          "id": "64.3",
+          "name": "Follow-Up Management",
+          "units": ["Follow-Up Need Detection", "Message Timing Review", "Follow-Up Action Notes"]
+        },
+        {
+          "id": "64.4",
+          "name": "Relationship History",
+          "units": ["Interaction Event Capture", "History Pattern Review", "Relationship Timeline Update"]
+        },
+        {
+          "id": "64.5",
+          "name": "Warm Introduction Support",
+          "units": ["Intro Opportunity Detection", "Mutual Value Mapping", "Introduction Message Draft"]
+        },
+        {
+          "id": "64.6",
+          "name": "Stakeholder Memory",
+          "units": ["Stakeholder Preference Capture", "Context Memory Filing", "Stakeholder Recall Summary"]
+        },
+        {
+          "id": "64.7",
+          "name": "Relationship Risk Review",
+          "units": ["Relationship Friction Detection", "Trust Risk Review", "Relationship Repair Notes"]
+        },
+        {
+          "id": "64.8",
+          "name": "Networking Strategy",
+          "units": ["Network Goal Definition", "Target Relationship Mapping", "Networking Action Plan"]
+        },
+        {
+          "id": "64.9",
+          "name": "Referral Tracking",
+          "units": ["Referral Source Capture", "Referral Status Review", "Referral Follow-Up Notes"]
+        },
+        {
+          "id": "64.10",
+          "name": "Network Dashboard",
+          "units": ["Relationship Signal Collection", "Network Summary", "Network Maintenance Update"]
+        }
+      ]
+    }
+  ]
+}
