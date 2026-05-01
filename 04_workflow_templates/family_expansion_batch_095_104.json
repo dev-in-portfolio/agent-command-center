@@ -1,0 +1,575 @@
+{
+  "batch": "095_104",
+  "families": [
+    {
+      "id": 95,
+      "name": "Compliance Evidence, Attestation & Regulated Deliverables",
+      "folder": "02_departments/095_compliance_evidence_attestation_and_regulated_deliverables",
+      "departments": [
+        {
+          "id": "95.1",
+          "name": "Compliance Evidence Intake",
+          "units": ["Evidence Requirement Capture", "Evidence Source Identification", "Evidence Intake Summary"]
+        },
+        {
+          "id": "95.2",
+          "name": "Attestation Preparation",
+          "units": ["Attestation Requirement Review", "Statement Drafting", "Attestation Completeness Check"]
+        },
+        {
+          "id": "95.3",
+          "name": "Regulated Deliverable Review",
+          "units": ["Deliverable Rule Mapping", "Required Disclosure Review", "Regulated Output QA"]
+        },
+        {
+          "id": "95.4",
+          "name": "Evidence Packet Assembly",
+          "units": ["Evidence Item Collection", "Packet Structure Review", "Packet Readiness Check"]
+        },
+        {
+          "id": "95.5",
+          "name": "Compliance Signoff Support",
+          "units": ["Signoff Criteria Mapping", "Reviewer Evidence Prep", "Signoff Status Record"]
+        },
+        {
+          "id": "95.6",
+          "name": "Audit Evidence Trace",
+          "units": ["Claim Evidence Linking", "Trace Path Review", "Audit Trace Summary"]
+        },
+        {
+          "id": "95.7",
+          "name": "Required Language Control",
+          "units": ["Required Phrase Capture", "Language Placement Review", "Required Language QA"]
+        },
+        {
+          "id": "95.8",
+          "name": "Regulated Change Tracking",
+          "units": ["Change Event Capture", "Regulation Impact Review", "Change Evidence Update"]
+        },
+        {
+          "id": "95.9",
+          "name": "Compliance Exception Notes",
+          "units": ["Exception Signal Detection", "Exception Rationale Draft", "Exception Record Update"]
+        },
+        {
+          "id": "95.10",
+          "name": "Compliance Deliverable Archive",
+          "units": ["Deliverable Record Capture", "Evidence Filing", "Archive Retrieval Review"]
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "name": "Digital Asset Management & Creative Libraries",
+      "folder": "02_departments/096_digital_asset_management_and_creative_libraries",
+      "departments": [
+        {
+          "id": "96.1",
+          "name": "Asset Intake",
+          "units": ["Asset Source Capture", "Asset Type Classification", "Asset Intake Record"]
+        },
+        {
+          "id": "96.2",
+          "name": "Creative Library Structure",
+          "units": ["Library Category Design", "Folder Structure Mapping", "Library Organization QA"]
+        },
+        {
+          "id": "96.3",
+          "name": "Metadata Management",
+          "units": ["Metadata Field Definition", "Metadata Tagging", "Metadata Quality Review"]
+        },
+        {
+          "id": "96.4",
+          "name": "Asset Version Control",
+          "units": ["Version Label Assignment", "Version Difference Review", "Version Record Update"]
+        },
+        {
+          "id": "96.5",
+          "name": "Rights And Usage Tracking",
+          "units": ["Usage Permission Capture", "Rights Restriction Review", "Usage Status Notes"]
+        },
+        {
+          "id": "96.6",
+          "name": "Asset Search And Retrieval",
+          "units": ["Retrieval Query Framing", "Asset Match Review", "Retrieval Result Summary"]
+        },
+        {
+          "id": "96.7",
+          "name": "Visual Consistency Library",
+          "units": ["Style Pattern Capture", "Reference Asset Selection", "Consistency Library Update"]
+        },
+        {
+          "id": "96.8",
+          "name": "Asset Packaging",
+          "units": ["Package Requirement Mapping", "File Set Assembly", "Package Completeness Review"]
+        },
+        {
+          "id": "96.9",
+          "name": "Asset Cleanup",
+          "units": ["Duplicate Asset Detection", "Obsolete Asset Review", "Cleanup Decision Record"]
+        },
+        {
+          "id": "96.10",
+          "name": "Creative Library Dashboard",
+          "units": ["Asset Signal Collection", "Library Status Summary", "Dashboard Update"]
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "name": "Forms, Intake & Structured Data Collection",
+      "folder": "02_departments/097_forms_intake_and_structured_data_collection",
+      "departments": [
+        {
+          "id": "97.1",
+          "name": "Form Design",
+          "units": ["Form Purpose Definition", "Field Requirement Mapping", "Form Structure Draft"]
+        },
+        {
+          "id": "97.2",
+          "name": "Intake Flow Mapping",
+          "units": ["Intake Step Identification", "User Path Review", "Intake Flow Summary"]
+        },
+        {
+          "id": "97.3",
+          "name": "Field Logic",
+          "units": ["Field Dependency Mapping", "Conditional Logic Review", "Field Logic QA"]
+        },
+        {
+          "id": "97.4",
+          "name": "Data Validation Rules",
+          "units": ["Required Field Definition", "Input Format Review", "Validation Rule Update"]
+        },
+        {
+          "id": "97.5",
+          "name": "Intake Question Writing",
+          "units": ["Question Purpose Capture", "Plain-Language Question Draft", "Question Clarity Review"]
+        },
+        {
+          "id": "97.6",
+          "name": "Form Response Processing",
+          "units": ["Response Intake", "Response Classification", "Response Summary Notes"]
+        },
+        {
+          "id": "97.7",
+          "name": "Structured Data Export",
+          "units": ["Export Field Mapping", "Output Format Review", "Export QA"]
+        },
+        {
+          "id": "97.8",
+          "name": "Intake Error Handling",
+          "units": ["Missing Data Detection", "Error Message Draft", "Correction Path Review"]
+        },
+        {
+          "id": "97.9",
+          "name": "Form Compliance Review",
+          "units": ["Disclosure Requirement Review", "Consent Language Check", "Form Compliance Notes"]
+        },
+        {
+          "id": "97.10",
+          "name": "Intake Archive",
+          "units": ["Intake Record Capture", "Response Filing", "Archive Retrieval Summary"]
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "name": "Inbox, Notifications & Signal Management",
+      "folder": "02_departments/098_inbox_notifications_and_signal_management",
+      "departments": [
+        {
+          "id": "98.1",
+          "name": "Inbox Triage",
+          "units": ["Message Intake Review", "Priority Signal Detection", "Triage Decision Notes"]
+        },
+        {
+          "id": "98.2",
+          "name": "Notification Filtering",
+          "units": ["Notification Source Review", "Filter Rule Selection", "Notification Reduction Notes"]
+        },
+        {
+          "id": "98.3",
+          "name": "Signal Extraction",
+          "units": ["Message Signal Capture", "Action Requirement Detection", "Signal Summary"]
+        },
+        {
+          "id": "98.4",
+          "name": "Response Queue Management",
+          "units": ["Response Need Detection", "Queue Priority Review", "Response Queue Update"]
+        },
+        {
+          "id": "98.5",
+          "name": "Follow-Up Detection",
+          "units": ["Follow-Up Trigger Capture", "Deadline Risk Review", "Follow-Up Reminder Notes"]
+        },
+        {
+          "id": "98.6",
+          "name": "Inbox Cleanup",
+          "units": ["Archive Candidate Review", "Noise Source Detection", "Cleanup Action Summary"]
+        },
+        {
+          "id": "98.7",
+          "name": "Notification Routing",
+          "units": ["Routing Rule Mapping", "Destination Selection", "Routing Confirmation"]
+        },
+        {
+          "id": "98.8",
+          "name": "Alert Escalation",
+          "units": ["Alert Severity Review", "Escalation Path Selection", "Alert Resolution Record"]
+        },
+        {
+          "id": "98.9",
+          "name": "Digest Creation",
+          "units": ["Message Cluster Review", "Digest Summary Draft", "Digest Action List"]
+        },
+        {
+          "id": "98.10",
+          "name": "Signal Dashboard",
+          "units": ["Signal Metric Collection", "Inbox Status Summary", "Signal Dashboard Update"]
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "name": "Calendar, Scheduling & Time Intelligence",
+      "folder": "02_departments/099_calendar_scheduling_and_time_intelligence",
+      "departments": [
+        {
+          "id": "99.1",
+          "name": "Calendar Review",
+          "units": ["Event Inventory", "Time Conflict Detection", "Calendar Status Summary"]
+        },
+        {
+          "id": "99.2",
+          "name": "Scheduling Coordination",
+          "units": ["Availability Window Review", "Scheduling Option Draft", "Schedule Confirmation Notes"]
+        },
+        {
+          "id": "99.3",
+          "name": "Meeting Preparation",
+          "units": ["Meeting Purpose Capture", "Agenda Requirement Mapping", "Prep Packet Summary"]
+        },
+        {
+          "id": "99.4",
+          "name": "Time Conflict Resolution",
+          "units": ["Conflict Signal Detection", "Priority Comparison", "Conflict Resolution Recommendation"]
+        },
+        {
+          "id": "99.5",
+          "name": "Recurring Event Management",
+          "units": ["Recurrence Pattern Review", "Series Change Detection", "Recurring Event Update Notes"]
+        },
+        {
+          "id": "99.6",
+          "name": "Time Budget Analysis",
+          "units": ["Time Allocation Capture", "Calendar Load Review", "Time Budget Recommendation"]
+        },
+        {
+          "id": "99.7",
+          "name": "Deadline Forecasting",
+          "units": ["Deadline Source Capture", "Lead Time Review", "Deadline Forecast Notes"]
+        },
+        {
+          "id": "99.8",
+          "name": "Meeting Follow-Up",
+          "units": ["Action Item Extraction", "Owner And Due Date Mapping", "Follow-Up Summary"]
+        },
+        {
+          "id": "99.9",
+          "name": "Schedule Recovery",
+          "units": ["Schedule Disruption Detection", "Recovery Option Mapping", "Reschedule Plan Draft"]
+        },
+        {
+          "id": "99.10",
+          "name": "Time Intelligence Dashboard",
+          "units": ["Calendar Signal Collection", "Time Risk Summary", "Dashboard Update"]
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "name": "Master Control, Meta-Architecture & System Constitution",
+      "folder": "02_departments/100_master_control_meta_architecture_and_system_constitution",
+      "departments": [
+        {
+          "id": "100.1",
+          "name": "System Constitution",
+          "units": ["Core Rule Definition", "Authority Hierarchy Review", "Constitution Update Record"]
+        },
+        {
+          "id": "100.2",
+          "name": "Master Control Layer",
+          "units": ["Control Function Mapping", "Override Rule Review", "Master Control Status"]
+        },
+        {
+          "id": "100.3",
+          "name": "Meta-Architecture Design",
+          "units": ["Architecture Principle Capture", "Layer Relationship Mapping", "Meta-Architecture Review"]
+        },
+        {
+          "id": "100.4",
+          "name": "Governance Command Rules",
+          "units": ["Command Authority Definition", "Command Conflict Review", "Governance Rule Update"]
+        },
+        {
+          "id": "100.5",
+          "name": "System Boundary Management",
+          "units": ["Boundary Condition Capture", "Boundary Conflict Detection", "Boundary Decision Record"]
+        },
+        {
+          "id": "100.6",
+          "name": "Cross-System Arbitration",
+          "units": ["System Conflict Capture", "Arbitration Rule Selection", "Arbitration Outcome Notes"]
+        },
+        {
+          "id": "100.7",
+          "name": "Operating Doctrine",
+          "units": ["Doctrine Principle Draft", "Doctrine Application Review", "Doctrine Update Notes"]
+        },
+        {
+          "id": "100.8",
+          "name": "System Integrity Review",
+          "units": ["Integrity Signal Collection", "Drift and Conflict Review", "Integrity Correction Plan"]
+        },
+        {
+          "id": "100.9",
+          "name": "Constitutional Changelog",
+          "units": ["Constitutional Change Capture", "Amendment Note Draft", "Changelog Update"]
+        },
+        {
+          "id": "100.10",
+          "name": "Master Control Dashboard",
+          "units": ["Control Signal Collection", "Governance Status Summary", "Master Dashboard Update"]
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "name": "Cross-Project Intelligence & Pattern Transfer",
+      "folder": "02_departments/101_cross_project_intelligence_and_pattern_transfer",
+      "departments": [
+        {
+          "id": "101.1",
+          "name": "Cross-Project Signal Detection",
+          "units": ["Project Signal Capture", "Similarity Pattern Review", "Transfer Candidate Notes"]
+        },
+        {
+          "id": "101.2",
+          "name": "Pattern Transfer Mapping",
+          "units": ["Source Pattern Identification", "Target Project Fit Review", "Transfer Map Summary"]
+        },
+        {
+          "id": "101.3",
+          "name": "Reusable Solution Mining",
+          "units": ["Prior Solution Retrieval", "Reuse Fit Assessment", "Reusable Solution Record"]
+        },
+        {
+          "id": "101.4",
+          "name": "Cross-Project Dependency Review",
+          "units": ["Dependency Candidate Capture", "Dependency Impact Review", "Dependency Action Notes"]
+        },
+        {
+          "id": "101.5",
+          "name": "Project Memory Bridging",
+          "units": ["Bridge Need Detection", "Context Bridge Draft", "Bridge Accuracy Review"]
+        },
+        {
+          "id": "101.6",
+          "name": "Pattern Generalization",
+          "units": ["Specific Case Extraction", "General Rule Draft", "Generalization QA"]
+        },
+        {
+          "id": "101.7",
+          "name": "Cross-Domain Inspiration Routing",
+          "units": ["Inspiration Source Capture", "Domain Transfer Review", "Inspiration Routing Notes"]
+        },
+        {
+          "id": "101.8",
+          "name": "Lessons Transfer",
+          "units": ["Lesson Source Review", "Application Context Mapping", "Lesson Transfer Summary"]
+        },
+        {
+          "id": "101.9",
+          "name": "Cross-Project Risk Detection",
+          "units": ["Shared Risk Identification", "Risk Pattern Comparison", "Cross-Project Warning Notes"]
+        },
+        {
+          "id": "101.10",
+          "name": "Pattern Transfer Archive",
+          "units": ["Transfer Record Capture", "Pattern Filing", "Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "name": "Error Recovery, Apology & Repair Systems",
+      "folder": "02_departments/102_error_recovery_apology_and_repair_systems",
+      "departments": [
+        {
+          "id": "102.1",
+          "name": "Error Detection",
+          "units": ["Failure Signal Capture", "Error Type Classification", "Error Detection Notes"]
+        },
+        {
+          "id": "102.2",
+          "name": "Root Cause Review",
+          "units": ["Cause Candidate Mapping", "Evidence Review", "Root Cause Summary"]
+        },
+        {
+          "id": "102.3",
+          "name": "Repair Planning",
+          "units": ["Repair Need Definition", "Correction Path Selection", "Repair Plan Draft"]
+        },
+        {
+          "id": "102.4",
+          "name": "Apology Design",
+          "units": ["Harm Acknowledgment Review", "Apology Language Draft", "Apology Tone QA"]
+        },
+        {
+          "id": "102.5",
+          "name": "Trust Repair Response",
+          "units": ["Trust Damage Assessment", "Repair Evidence Mapping", "Trust Repair Message"]
+        },
+        {
+          "id": "102.6",
+          "name": "Error Prevention",
+          "units": ["Prevention Rule Capture", "Guardrail Option Review", "Prevention Update Notes"]
+        },
+        {
+          "id": "102.7",
+          "name": "Correction Verification",
+          "units": ["Correction Output Review", "Regression Risk Check", "Verification Record"]
+        },
+        {
+          "id": "102.8",
+          "name": "User Frustration Recovery",
+          "units": ["Frustration Signal Detection", "Recovery Tone Selection", "Recovery Response Draft"]
+        },
+        {
+          "id": "102.9",
+          "name": "Incident Recordkeeping",
+          "units": ["Incident Event Capture", "Incident Timeline Draft", "Incident Record Update"]
+        },
+        {
+          "id": "102.10",
+          "name": "Repair Lessons Archive",
+          "units": ["Repair Lesson Capture", "Failure Pattern Filing", "Lessons Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "name": "Attention Management & Cognitive Workspace",
+      "folder": "02_departments/103_attention_management_and_cognitive_workspace",
+      "departments": [
+        {
+          "id": "103.1",
+          "name": "Attention Capture",
+          "units": ["Attention Signal Detection", "Focus Object Identification", "Attention State Summary"]
+        },
+        {
+          "id": "103.2",
+          "name": "Cognitive Workspace Setup",
+          "units": ["Workspace Need Definition", "Context Load Review", "Workspace Setup Notes"]
+        },
+        {
+          "id": "103.3",
+          "name": "Distraction Management",
+          "units": ["Distraction Source Detection", "Distraction Severity Review", "Distraction Reduction Plan"]
+        },
+        {
+          "id": "103.4",
+          "name": "Context Stack Control",
+          "units": ["Active Context Inventory", "Stack Priority Review", "Context Stack Update"]
+        },
+        {
+          "id": "103.5",
+          "name": "Mental Load Balancing",
+          "units": ["Load Signal Capture", "Complexity Reduction Review", "Load Balance Recommendation"]
+        },
+        {
+          "id": "103.6",
+          "name": "Attention Recovery",
+          "units": ["Drift Detection", "Reorientation Prompt Draft", "Attention Recovery Notes"]
+        },
+        {
+          "id": "103.7",
+          "name": "Work Mode Selection",
+          "units": ["Work Type Detection", "Mode Fit Review", "Work Mode Recommendation"]
+        },
+        {
+          "id": "103.8",
+          "name": "Cognitive Parking Lot",
+          "units": ["Stray Idea Capture", "Parking Category Selection", "Parking Lot Update"]
+        },
+        {
+          "id": "103.9",
+          "name": "Focus Rituals",
+          "units": ["Ritual Trigger Definition", "Ritual Step Draft", "Ritual Effectiveness Review"]
+        },
+        {
+          "id": "103.10",
+          "name": "Attention Dashboard",
+          "units": ["Attention Signal Collection", "Focus Status Summary", "Dashboard Update"]
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "name": "User Intent Forensics",
+      "folder": "02_departments/104_user_intent_forensics",
+      "departments": [
+        {
+          "id": "104.1",
+          "name": "Intent Capture",
+          "units": ["User Request Capture", "Explicit Intent Extraction", "Intent Summary Draft"]
+        },
+        {
+          "id": "104.2",
+          "name": "Hidden Constraint Detection",
+          "units": ["Implied Constraint Review", "Contextual Boundary Detection", "Constraint Record Update"]
+        },
+        {
+          "id": "104.3",
+          "name": "Ambiguity Analysis",
+          "units": ["Ambiguous Phrase Identification", "Possible Meaning Mapping", "Ambiguity Resolution Notes"]
+        },
+        {
+          "id": "104.4",
+          "name": "Tone And Friction Analysis",
+          "units": ["Tone Signal Capture", "Friction Source Review", "Tone Interpretation Summary"]
+        },
+        {
+          "id": "104.5",
+          "name": "Intent Drift Detection",
+          "units": ["Prior Intent Comparison", "Drift Signal Review", "Intent Drift Notes"]
+        },
+        {
+          "id": "104.6",
+          "name": "Task Boundary Reconstruction",
+          "units": ["Requested Scope Capture", "Forbidden Scope Review", "Boundary Reconstruction Summary"]
+        },
+        {
+          "id": "104.7",
+          "name": "User Correction Analysis",
+          "units": ["Correction Event Capture", "Misinterpretation Pattern Review", "Correction Lesson Update"]
+        },
+        {
+          "id": "104.8",
+          "name": "Desired Output Inference",
+          "units": ["Output Format Signal Review", "Detail Level Inference", "Output Expectation Summary"]
+        },
+        {
+          "id": "104.9",
+          "name": "Intent Evidence Trace",
+          "units": ["Intent Claim Mapping", "Evidence Phrase Linking", "Intent Trace Record"]
+        },
+        {
+          "id": "104.10",
+          "name": "Intent Forensics Archive",
+          "units": ["Intent Case Capture", "Forensic Pattern Filing", "Archive Update"]
+        }
+      ]
+    }
+  ]
+}
