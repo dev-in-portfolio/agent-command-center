@@ -22,6 +22,10 @@ from station_chief_adapters import (
     run_sandbox_file_write_adapter,
     run_scoped_repo_patch_adapter,
 )
+from station_chief_approval_handoff import (
+    compare_dry_run_bundles,
+    create_approval_handoff_packet,
+)
 from station_chief_execution_profiles import (
     create_dry_run_bundle,
     create_execution_readiness_score,
@@ -31,7 +35,7 @@ from station_chief_execution_profiles import (
     select_execution_profile,
 )
 
-STATION_CHIEF_RUNTIME_VERSION = "0.6.0"
+STATION_CHIEF_RUNTIME_VERSION = "0.7.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -185,6 +189,10 @@ def load_json(path: str | Path) -> Any:
     return json.loads(full_path.read_text())
 
 
+def load_json_file(path: str | Path) -> dict:
+    return json.loads(Path(path).read_text())
+
+
 def load_overlay_stack() -> list[dict[str, Any]]:
     overlays: list[dict[str, Any]] = []
     for overlay in EXPECTED_OVERLAYS:
@@ -233,7 +241,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}|{run_label}|{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v0-6-{normalized}-{digest[:12]}"
+    return f"station-chief-v0-7-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -344,7 +352,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "0.6.0",
+            "registry_version": "0.7.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -361,7 +369,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "0.6.0"
+    registry["registry_version"] = "0.7.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -370,7 +378,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "0.6.0",
+        "index_version": "0.7.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -447,6 +455,11 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "repo_patch_dry_run_bundles": True,
             "preflight_gate_records": True,
             "execution_readiness_scoring": True,
+            "dry_run_bundle_comparison": True,
+            "approval_ux_handoff": True,
+            "risk_summary_artifacts": True,
+            "next_action_recommendations": True,
+            "approval_handoff_available": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -471,6 +484,8 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
         "patch_approval_checklist": None,
         "execution_readiness_score": None,
         "dry_run_bundle": None,
+        "dry_run_bundle_comparison": None,
+        "approval_handoff_packet": None,
         "evidence": {
             "baseline_preserved": True,
             "external_actions_taken": False,
@@ -481,8 +496,9 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "repo_patch_requires_confirmation": True,
             "changed_file_scope_enforced": True,
             "dry_run_bundle_available": True,
+            "approval_handoff_available": True,
         },
-        "next_step": "Next step: add repo patch dry-run bundle comparison and approval UX handoff.",
+        "next_step": "Next step: add approval handoff review UI schema and signed approval records.",
     }
 
 
@@ -504,6 +520,8 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
     patch_approval_checklist = result.get("patch_approval_checklist")
     execution_readiness_score = result.get("execution_readiness_score")
     dry_run_bundle = result.get("dry_run_bundle")
+    dry_run_bundle_comparison = result.get("dry_run_bundle_comparison")
+    approval_handoff_packet = result.get("approval_handoff_packet")
     selected_records = [
         item
         for item in result["overlay_stack_summary"]
@@ -547,11 +565,13 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "patch_approval_checklist": patch_approval_checklist,
         "execution_readiness_score": execution_readiness_score,
         "dry_run_bundle": dry_run_bundle,
+        "dry_run_bundle_comparison": dry_run_bundle_comparison,
+        "approval_handoff_packet": approval_handoff_packet,
         "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v0_6_artifacts",
+            "artifact_type": "station_chief_runtime_v0_7_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -572,6 +592,8 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "patch_approval_checklist.json",
                 "execution_readiness_score.json",
                 "dry_run_bundle.json",
+                "dry_run_bundle_comparison.json",
+                "approval_handoff_packet.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -590,6 +612,10 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "repo_patch_dry_run_bundles": True,
             "preflight_gate_records": True,
             "execution_readiness_scoring": True,
+            "dry_run_bundle_comparison": True,
+            "approval_ux_handoff": True,
+            "risk_summary_artifacts": True,
+            "next_action_recommendations": True,
         },
     }
 
@@ -634,6 +660,8 @@ def write_runtime_artifacts(
         "patch_approval_checklist.json": artifacts["patch_approval_checklist"],
         "execution_readiness_score.json": artifacts["execution_readiness_score"],
         "dry_run_bundle.json": artifacts["dry_run_bundle"],
+        "dry_run_bundle_comparison.json": artifacts["dry_run_bundle_comparison"],
+        "approval_handoff_packet.json": artifacts["approval_handoff_packet"],
         "runtime_index_entry.json": artifacts["runtime_index_entry"],
         "manifest.json": artifacts["manifest"],
         "full_result.json": result,
@@ -801,6 +829,24 @@ def attach_execution_profile_and_dry_run(
     return updated
 
 
+def attach_approval_handoff(
+    result: dict,
+    comparison_bundle_path: str | None = None,
+    include_handoff: bool = False,
+) -> dict:
+    updated = dict(result)
+    if updated.get("dry_run_bundle") is None and include_handoff:
+        updated = attach_execution_profile_and_dry_run(updated, requested_profile=updated.get("requested_execution_profile"), include_dry_run_bundle=True)
+    comparison = None
+    if comparison_bundle_path:
+        before_bundle = load_json_file(comparison_bundle_path)
+        comparison = compare_dry_run_bundles(before_bundle, updated["dry_run_bundle"])
+    updated["dry_run_bundle_comparison"] = comparison
+    if include_handoff:
+        updated["approval_handoff_packet"] = create_approval_handoff_packet(updated["dry_run_bundle"], comparison)
+    return updated
+
+
 def write_dry_run_bundle(
     result: dict,
     output_dir: str | Path,
@@ -825,7 +871,7 @@ def write_dry_run_bundle(
         "execution_readiness_score.json": result.get("execution_readiness_score"),
         "repo_patch_preview.diff": dry_run_bundle.get("repo_patch_preview") or "",
         "dry_run_manifest.json": {
-            "dry_run_bundle_version": "0.6.0",
+            "dry_run_bundle_version": "0.7.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -857,6 +903,62 @@ def write_dry_run_bundle(
     }
 
 
+def write_approval_handoff(
+    result: dict,
+    output_dir: str | Path,
+    run_label: str = "station-chief-runtime",
+) -> dict:
+    if "approval_handoff_packet" not in result or result["approval_handoff_packet"] is None:
+        raise ValueError("write_approval_handoff requires approval_handoff_packet to be attached first")
+
+    output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
+    run_id = generate_run_id(result["command"], run_label=run_label)
+    handoff_dir = output_path / run_id
+    handoff_dir.mkdir(parents=True, exist_ok=True)
+
+    packet = result["approval_handoff_packet"]
+    files_written = []
+    payloads = {
+        "approval_handoff_packet.json": packet,
+        "human_approval_summary.json": packet.get("human_approval_summary"),
+        "risk_summary.json": packet.get("risk_summary"),
+        "next_action_recommendation.json": packet.get("next_action_recommendation"),
+        "dry_run_bundle_comparison.json": packet.get("comparison"),
+        "patch_preview.diff": (packet.get("dry_run_bundle") or {}).get("repo_patch_preview") or "",
+        "approval_handoff_manifest.json": {
+            "approval_handoff_version": "0.7.0",
+            "run_id": run_id,
+            "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
+            "files_written": [
+                "approval_handoff_packet.json",
+                "human_approval_summary.json",
+                "risk_summary.json",
+                "next_action_recommendation.json",
+                "dry_run_bundle_comparison.json",
+                "patch_preview.diff",
+                "approval_handoff_manifest.json",
+            ],
+            "baseline_preserved": True,
+            "external_actions_taken": False,
+            "live_worker_agents_activated": False,
+            "requires_human_approval_before_execution": (packet.get("human_approval_summary") or {}).get("approval_required") is True,
+        },
+    }
+    for filename, payload in payloads.items():
+        if filename.endswith(".diff"):
+            (handoff_dir / filename).write_text(str(payload))
+        else:
+            _write_json(handoff_dir / filename, payload)
+        files_written.append(filename)
+
+    return {
+        "run_id": run_id,
+        "approval_handoff_dir": str(handoff_dir),
+        "files_written": files_written,
+    }
+
+
 def _build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Station Chief Runtime Skeleton")
     parser.add_argument("--demo", action="store_true", help="Run the deterministic demo command")
@@ -869,6 +971,10 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--write-output", type=str, help="Write full result JSON to a file path")
     parser.add_argument("--write-artifacts", type=str, help="Write runtime artifacts into the provided directory")
     parser.add_argument("--write-dry-run-bundle", type=str, help="Write dry-run bundle artifacts into the provided directory")
+    parser.add_argument("--compare-dry-run-bundles", nargs=2, metavar=("BEFORE_JSON", "AFTER_JSON"), help="Compare two dry-run bundle JSON files")
+    parser.add_argument("--approval-handoff", action="store_true", help="Attach an approval handoff packet")
+    parser.add_argument("--compare-against-dry-run-bundle", type=str, help="Compare the current dry-run bundle against a saved bundle JSON file")
+    parser.add_argument("--write-approval-handoff", type=str, help="Write approval handoff artifacts into the provided directory")
     parser.add_argument("--run-label", type=str, default="station-chief-runtime", help="Label included in artifact run IDs")
     parser.add_argument("--fixture-test", action="store_true", help="Run deterministic fixture tests")
     parser.add_argument("--adapter", type=str, default="noop", help="Choose the controlled execution adapter")
@@ -895,6 +1001,13 @@ def _build_arg_parser() -> argparse.ArgumentParser:
 def main() -> None:
     parser = _build_arg_parser()
     args = parser.parse_args()
+
+    if args.compare_dry_run_bundles:
+        before_path, after_path = args.compare_dry_run_bundles
+        before_bundle = load_json_file(before_path)
+        after_bundle = load_json_file(after_path)
+        print(json.dumps(compare_dry_run_bundles(before_bundle, after_bundle), indent=2, ensure_ascii=False))
+        return
 
     if args.fixture_test:
         print(json.dumps(run_fixture_tests(), indent=2, ensure_ascii=False))
@@ -959,11 +1072,25 @@ def main() -> None:
             execute=args.execute_repo_patch,
         )
 
-    if args.dry_run_bundle or args.write_dry_run_bundle or args.execution_profile is not None:
+    if (
+        args.dry_run_bundle
+        or args.write_dry_run_bundle
+        or args.execution_profile is not None
+        or args.approval_handoff
+        or args.compare_against_dry_run_bundle
+        or args.write_approval_handoff
+    ):
         result = attach_execution_profile_and_dry_run(
             result,
             requested_profile=args.execution_profile,
             include_dry_run_bundle=True,
+        )
+
+    if args.compare_against_dry_run_bundle or args.approval_handoff or args.write_approval_handoff:
+        result = attach_approval_handoff(
+            result,
+            comparison_bundle_path=args.compare_against_dry_run_bundle,
+            include_handoff=args.approval_handoff or args.write_approval_handoff is not None,
         )
 
     artifact_summary = None
@@ -988,6 +1115,18 @@ def main() -> None:
         dry_run_bundle_summary = write_dry_run_bundle(result, args.write_dry_run_bundle, run_label=args.run_label)
         result = dict(result)
         result["dry_run_bundle_write_summary"] = dry_run_bundle_summary
+
+    approval_handoff_summary = None
+    if args.write_approval_handoff:
+        if "approval_handoff_packet" not in result or result["approval_handoff_packet"] is None:
+            result = attach_approval_handoff(
+                result,
+                comparison_bundle_path=args.compare_against_dry_run_bundle,
+                include_handoff=True,
+            )
+        approval_handoff_summary = write_approval_handoff(result, args.write_approval_handoff, run_label=args.run_label)
+        result = dict(result)
+        result["approval_handoff_write_summary"] = approval_handoff_summary
 
     if args.write_output:
         Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
