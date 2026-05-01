@@ -1,0 +1,962 @@
+[
+  {
+    "id": "125",
+    "name": "Integration Testing & End-to-End Validation",
+    "departments": [
+      {
+        "id": "125.1",
+        "name": "Integration Test Planning",
+        "units": [
+          { "id": "125.1.1", "name": "Integration Scope Capture" },
+          { "id": "125.1.2", "name": "Dependency Path Mapping" },
+          { "id": "125.1.3", "name": "Test Plan Summary" }
+        ]
+      },
+      {
+        "id": "125.2",
+        "name": "Test Environment Setup",
+        "units": [
+          { "id": "125.2.1", "name": "Environment Requirement Review" },
+          { "id": "125.2.2", "name": "Configuration Setup Check" },
+          { "id": "125.2.3", "name": "Environment Readiness Notes" }
+        ]
+      },
+      {
+        "id": "125.3",
+        "name": "End-to-End Scenario Design",
+        "units": [
+          { "id": "125.3.1", "name": "Scenario Path Definition" },
+          { "id": "125.3.2", "name": "User Journey Mapping" },
+          { "id": "125.3.3", "name": "Scenario Coverage Review" }
+        ]
+      },
+      {
+        "id": "125.4",
+        "name": "Dependency Mocking",
+        "units": [
+          { "id": "125.4.1", "name": "Dependency Identification" },
+          { "id": "125.4.2", "name": "Mock Behavior Definition" },
+          { "id": "125.4.3", "name": "Mock Validation Notes" }
+        ]
+      },
+      {
+        "id": "125.5",
+        "name": "Test Data Preparation",
+        "units": [
+          { "id": "125.5.1", "name": "Test Data Requirement Capture" },
+          { "id": "125.5.2", "name": "Data Fixture Assembly" },
+          { "id": "125.5.3", "name": "Test Data QA" }
+        ]
+      },
+      {
+        "id": "125.6",
+        "name": "Execution Monitoring",
+        "units": [
+          { "id": "125.6.1", "name": "Test Run Signal Collection" },
+          { "id": "125.6.2", "name": "Execution Status Review" },
+          { "id": "125.6.3", "name": "Run Observation Notes" }
+        ]
+      },
+      {
+        "id": "125.7",
+        "name": "Failure Diagnosis",
+        "units": [
+          { "id": "125.7.1", "name": "Failure Event Capture" },
+          { "id": "125.7.2", "name": "Root Cause Candidate Review" },
+          { "id": "125.7.3", "name": "Failure Diagnosis Summary" }
+        ]
+      },
+      {
+        "id": "125.8",
+        "name": "Regression Validation",
+        "units": [
+          { "id": "125.8.1", "name": "Regression Area Mapping" },
+          { "id": "125.8.2", "name": "Repeat Test Execution" },
+          { "id": "125.8.3", "name": "Regression Result Notes" }
+        ]
+      },
+      {
+        "id": "125.9",
+        "name": "Acceptance Evidence",
+        "units": [
+          { "id": "125.9.1", "name": "Acceptance Criteria Mapping" },
+          { "id": "125.9.2", "name": "Evidence Capture" },
+          { "id": "125.9.3", "name": "Acceptance Record Update" }
+        ]
+      },
+      {
+        "id": "125.10",
+        "name": "Validation Dashboard",
+        "units": [
+          { "id": "125.10.1", "name": "Validation Signal Collection" },
+          { "id": "125.10.2", "name": "Test Status Summary" },
+          { "id": "125.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "126",
+    "name": "Agent Observability, Telemetry & Run Analytics",
+    "departments": [
+      {
+        "id": "126.1",
+        "name": "Telemetry Signal Design",
+        "units": [
+          { "id": "126.1.1", "name": "Signal Requirement Capture" },
+          { "id": "126.1.2", "name": "Metric Definition" },
+          { "id": "126.1.3", "name": "Signal Design Review" }
+        ]
+      },
+      {
+        "id": "126.2",
+        "name": "Agent Run Logging",
+        "units": [
+          { "id": "126.2.1", "name": "Run Event Capture" },
+          { "id": "126.2.2", "name": "Log Structure Review" },
+          { "id": "126.2.3", "name": "Run Log Update" }
+        ]
+      },
+      {
+        "id": "126.3",
+        "name": "Trace Collection",
+        "units": [
+          { "id": "126.3.1", "name": "Trace Point Definition" },
+          { "id": "126.3.2", "name": "Execution Path Capture" },
+          { "id": "126.3.3", "name": "Trace Completeness Review" }
+        ]
+      },
+      {
+        "id": "126.4",
+        "name": "Performance Metrics",
+        "units": [
+          { "id": "126.4.1", "name": "Performance Metric Selection" },
+          { "id": "126.4.2", "name": "Metric Collection Review" },
+          { "id": "126.4.3", "name": "Performance Summary Notes" }
+        ]
+      },
+      {
+        "id": "126.5",
+        "name": "Error Telemetry",
+        "units": [
+          { "id": "126.5.1", "name": "Error Signal Capture" },
+          { "id": "126.5.2", "name": "Error Pattern Review" },
+          { "id": "126.5.3", "name": "Error Telemetry Summary" }
+        ]
+      },
+      {
+        "id": "126.6",
+        "name": "Agent Behavior Analytics",
+        "units": [
+          { "id": "126.6.1", "name": "Behavior Event Capture" },
+          { "id": "126.6.2", "name": "Behavior Pattern Review" },
+          { "id": "126.6.3", "name": "Behavior Analytics Notes" }
+        ]
+      },
+      {
+        "id": "126.7",
+        "name": "Run Quality Scoring",
+        "units": [
+          { "id": "126.7.1", "name": "Quality Criteria Definition" },
+          { "id": "126.7.2", "name": "Run Score Assignment" },
+          { "id": "126.7.3", "name": "Quality Score Summary" }
+        ]
+      },
+      {
+        "id": "126.8",
+        "name": "Observability Alerts",
+        "units": [
+          { "id": "126.8.1", "name": "Alert Trigger Definition" },
+          { "id": "126.8.2", "name": "Alert Severity Review" },
+          { "id": "126.8.3", "name": "Alert Routing Notes" }
+        ]
+      },
+      {
+        "id": "126.9",
+        "name": "Telemetry Governance",
+        "units": [
+          { "id": "126.9.1", "name": "Telemetry Rule Definition" },
+          { "id": "126.9.2", "name": "Signal Privacy Review" },
+          { "id": "126.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "126.10",
+        "name": "Observability Dashboard",
+        "units": [
+          { "id": "126.10.1", "name": "Telemetry Signal Collection" },
+          { "id": "126.10.2", "name": "Agent Run Status Summary" },
+          { "id": "126.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "127",
+    "name": "State Management & Workflow Memory",
+    "departments": [
+      {
+        "id": "127.1",
+        "name": "State Model Design",
+        "units": [
+          { "id": "127.1.1", "name": "State Object Definition" },
+          { "id": "127.1.2", "name": "State Transition Mapping" },
+          { "id": "127.1.3", "name": "State Model Review" }
+        ]
+      },
+      {
+        "id": "127.2",
+        "name": "Workflow Memory Capture",
+        "units": [
+          { "id": "127.2.1", "name": "Workflow Event Detection" },
+          { "id": "127.2.2", "name": "Memory Entry Draft" },
+          { "id": "127.2.3", "name": "Workflow Memory Update" }
+        ]
+      },
+      {
+        "id": "127.3",
+        "name": "State Persistence",
+        "units": [
+          { "id": "127.3.1", "name": "Persistence Requirement Review" },
+          { "id": "127.3.2", "name": "Storage Method Selection" },
+          { "id": "127.3.3", "name": "Persistence QA Notes" }
+        ]
+      },
+      {
+        "id": "127.4",
+        "name": "Checkpoint Management",
+        "units": [
+          { "id": "127.4.1", "name": "Checkpoint Trigger Definition" },
+          { "id": "127.4.2", "name": "Snapshot Capture" },
+          { "id": "127.4.3", "name": "Checkpoint Recovery Review" }
+        ]
+      },
+      {
+        "id": "127.5",
+        "name": "Resume Logic",
+        "units": [
+          { "id": "127.5.1", "name": "Resume Context Retrieval" },
+          { "id": "127.5.2", "name": "Continuation Path Selection" },
+          { "id": "127.5.3", "name": "Resume Logic QA" }
+        ]
+      },
+      {
+        "id": "127.6",
+        "name": "State Conflict Resolution",
+        "units": [
+          { "id": "127.6.1", "name": "State Conflict Detection" },
+          { "id": "127.6.2", "name": "Authority Rule Review" },
+          { "id": "127.6.3", "name": "State Resolution Notes" }
+        ]
+      },
+      {
+        "id": "127.7",
+        "name": "Workflow Context Stack",
+        "units": [
+          { "id": "127.7.1", "name": "Active Context Capture" },
+          { "id": "127.7.2", "name": "Context Priority Review" },
+          { "id": "127.7.3", "name": "Stack Update Notes" }
+        ]
+      },
+      {
+        "id": "127.8",
+        "name": "Memory Expiration Rules",
+        "units": [
+          { "id": "127.8.1", "name": "Expiration Condition Definition" },
+          { "id": "127.8.2", "name": "Stale State Review" },
+          { "id": "127.8.3", "name": "Expiration Decision Notes" }
+        ]
+      },
+      {
+        "id": "127.9",
+        "name": "Workflow State Audit",
+        "units": [
+          { "id": "127.9.1", "name": "State Change Capture" },
+          { "id": "127.9.2", "name": "Audit Trail Review" },
+          { "id": "127.9.3", "name": "State Audit Summary" }
+        ]
+      },
+      {
+        "id": "127.10",
+        "name": "State Dashboard",
+        "units": [
+          { "id": "127.10.1", "name": "State Signal Collection" },
+          { "id": "127.10.2", "name": "Workflow Memory Summary" },
+          { "id": "127.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "128",
+    "name": "Work Product Governance & Deliverable Standards",
+    "departments": [
+      {
+        "id": "128.1",
+        "name": "Deliverable Standard Definition",
+        "units": [
+          { "id": "128.1.1", "name": "Deliverable Type Capture" },
+          { "id": "128.1.2", "name": "Quality Standard Draft" },
+          { "id": "128.1.3", "name": "Standard Approval Notes" }
+        ]
+      },
+      {
+        "id": "128.2",
+        "name": "Work Product Review",
+        "units": [
+          { "id": "128.2.1", "name": "Work Product Intake" },
+          { "id": "128.2.2", "name": "Standard Fit Review" },
+          { "id": "128.2.3", "name": "Review Finding Summary" }
+        ]
+      },
+      {
+        "id": "128.3",
+        "name": "Format Compliance",
+        "units": [
+          { "id": "128.3.1", "name": "Format Requirement Mapping" },
+          { "id": "128.3.2", "name": "Formatting Defect Detection" },
+          { "id": "128.3.3", "name": "Format Compliance Notes" }
+        ]
+      },
+      {
+        "id": "128.4",
+        "name": "Content Completeness",
+        "units": [
+          { "id": "128.4.1", "name": "Required Section Review" },
+          { "id": "128.4.2", "name": "Missing Content Detection" },
+          { "id": "128.4.3", "name": "Completeness Summary" }
+        ]
+      },
+      {
+        "id": "128.5",
+        "name": "Deliverable QA Workflow",
+        "units": [
+          { "id": "128.5.1", "name": "QA Step Mapping" },
+          { "id": "128.5.2", "name": "Reviewer Assignment" },
+          { "id": "128.5.3", "name": "QA Outcome Record" }
+        ]
+      },
+      {
+        "id": "128.6",
+        "name": "Versioned Deliverable Control",
+        "units": [
+          { "id": "128.6.1", "name": "Deliverable Version Capture" },
+          { "id": "128.6.2", "name": "Change Summary Review" },
+          { "id": "128.6.3", "name": "Version Record Update" }
+        ]
+      },
+      {
+        "id": "128.7",
+        "name": "Approval Evidence",
+        "units": [
+          { "id": "128.7.1", "name": "Approval Requirement Capture" },
+          { "id": "128.7.2", "name": "Evidence Packet Assembly" },
+          { "id": "128.7.3", "name": "Approval Evidence Record" }
+        ]
+      },
+      {
+        "id": "128.8",
+        "name": "Delivery Readiness",
+        "units": [
+          { "id": "128.8.1", "name": "Final Checklist Review" },
+          { "id": "128.8.2", "name": "Delivery Risk Detection" },
+          { "id": "128.8.3", "name": "Delivery Readiness Notes" }
+        ]
+      },
+      {
+        "id": "128.9",
+        "name": "Standards Governance",
+        "units": [
+          { "id": "128.9.1", "name": "Standard Rule Definition" },
+          { "id": "128.9.2", "name": "Exception Review" },
+          { "id": "128.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "128.10",
+        "name": "Deliverable Dashboard",
+        "units": [
+          { "id": "128.10.1", "name": "Deliverable Signal Collection" },
+          { "id": "128.10.2", "name": "Work Product Status Summary" },
+          { "id": "128.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "129",
+    "name": "Knowledge Quality, Currency & Source Freshness",
+    "departments": [
+      {
+        "id": "129.1",
+        "name": "Knowledge Quality Criteria",
+        "units": [
+          { "id": "129.1.1", "name": "Quality Dimension Definition" },
+          { "id": "129.1.2", "name": "Evaluation Standard Review" },
+          { "id": "129.1.3", "name": "Quality Criteria Update" }
+        ]
+      },
+      {
+        "id": "129.2",
+        "name": "Source Freshness Review",
+        "units": [
+          { "id": "129.2.1", "name": "Source Date Capture" },
+          { "id": "129.2.2", "name": "Freshness Requirement Check" },
+          { "id": "129.2.3", "name": "Freshness Warning Notes" }
+        ]
+      },
+      {
+        "id": "129.3",
+        "name": "Currency Monitoring",
+        "units": [
+          { "id": "129.3.1", "name": "Currency Signal Detection" },
+          { "id": "129.3.2", "name": "Update Need Review" },
+          { "id": "129.3.3", "name": "Currency Status Notes" }
+        ]
+      },
+      {
+        "id": "129.4",
+        "name": "Knowledge Gap Detection",
+        "units": [
+          { "id": "129.4.1", "name": "Missing Knowledge Signal" },
+          { "id": "129.4.2", "name": "Gap Severity Review" },
+          { "id": "129.4.3", "name": "Gap Closure Recommendation" }
+        ]
+      },
+      {
+        "id": "129.5",
+        "name": "Source Replacement",
+        "units": [
+          { "id": "129.5.1", "name": "Stale Source Identification" },
+          { "id": "129.5.2", "name": "Replacement Source Search" },
+          { "id": "129.5.3", "name": "Source Replacement Notes" }
+        ]
+      },
+      {
+        "id": "129.6",
+        "name": "Evidence Strength Review",
+        "units": [
+          { "id": "129.6.1", "name": "Evidence Type Capture" },
+          { "id": "129.6.2", "name": "Support Strength Scoring" },
+          { "id": "129.6.3", "name": "Evidence Quality Summary" }
+        ]
+      },
+      {
+        "id": "129.7",
+        "name": "Knowledge Decay Tracking",
+        "units": [
+          { "id": "129.7.1", "name": "Decay Risk Detection" },
+          { "id": "129.7.2", "name": "Shelf-Life Review" },
+          { "id": "129.7.3", "name": "Decay Tracking Update" }
+        ]
+      },
+      {
+        "id": "129.8",
+        "name": "Update Prioritization",
+        "units": [
+          { "id": "129.8.1", "name": "Update Candidate Collection" },
+          { "id": "129.8.2", "name": "Priority Scoring" },
+          { "id": "129.8.3", "name": "Update Priority Notes" }
+        ]
+      },
+      {
+        "id": "129.9",
+        "name": "Knowledge Quality Governance",
+        "units": [
+          { "id": "129.9.1", "name": "Quality Rule Definition" },
+          { "id": "129.9.2", "name": "Compliance Review" },
+          { "id": "129.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "129.10",
+        "name": "Quality Dashboard",
+        "units": [
+          { "id": "129.10.1", "name": "Quality Signal Collection" },
+          { "id": "129.10.2", "name": "Freshness Status Summary" },
+          { "id": "129.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "130",
+    "name": "Agent Economy, Internal Costing & Resource Allocation",
+    "departments": [
+      {
+        "id": "130.1",
+        "name": "Agent Cost Model",
+        "units": [
+          { "id": "130.1.1", "name": "Cost Driver Capture" },
+          { "id": "130.1.2", "name": "Cost Formula Review" },
+          { "id": "130.1.3", "name": "Cost Model Summary" }
+        ]
+      },
+      {
+        "id": "130.2",
+        "name": "Resource Allocation",
+        "units": [
+          { "id": "130.2.1", "name": "Resource Need Detection" },
+          { "id": "130.2.2", "name": "Allocation Priority Review" },
+          { "id": "130.2.3", "name": "Allocation Decision Notes" }
+        ]
+      },
+      {
+        "id": "130.3",
+        "name": "Internal Budgeting",
+        "units": [
+          { "id": "130.3.1", "name": "Budget Requirement Capture" },
+          { "id": "130.3.2", "name": "Resource Constraint Review" },
+          { "id": "130.3.3", "name": "Budget Recommendation" }
+        ]
+      },
+      {
+        "id": "130.4",
+        "name": "Agent Utilization Review",
+        "units": [
+          { "id": "130.4.1", "name": "Utilization Signal Collection" },
+          { "id": "130.4.2", "name": "Idle Capacity Review" },
+          { "id": "130.4.3", "name": "Utilization Summary Notes" }
+        ]
+      },
+      {
+        "id": "130.5",
+        "name": "Cost-Benefit Analysis",
+        "units": [
+          { "id": "130.5.1", "name": "Benefit Candidate Capture" },
+          { "id": "130.5.2", "name": "Cost Comparison Review" },
+          { "id": "130.5.3", "name": "Cost-Benefit Summary" }
+        ]
+      },
+      {
+        "id": "130.6",
+        "name": "Compute Spend Allocation",
+        "units": [
+          { "id": "130.6.1", "name": "Compute Usage Capture" },
+          { "id": "130.6.2", "name": "Spend Category Review" },
+          { "id": "130.6.3", "name": "Compute Allocation Notes" }
+        ]
+      },
+      {
+        "id": "130.7",
+        "name": "Internal Chargeback",
+        "units": [
+          { "id": "130.7.1", "name": "Chargeback Rule Definition" },
+          { "id": "130.7.2", "name": "Usage Attribution Review" },
+          { "id": "130.7.3", "name": "Chargeback Record Update" }
+        ]
+      },
+      {
+        "id": "130.8",
+        "name": "Resource Constraint Handling",
+        "units": [
+          { "id": "130.8.1", "name": "Constraint Signal Detection" },
+          { "id": "130.8.2", "name": "Tradeoff Review" },
+          { "id": "130.8.3", "name": "Constraint Resolution Notes" }
+        ]
+      },
+      {
+        "id": "130.9",
+        "name": "Economy Governance",
+        "units": [
+          { "id": "130.9.1", "name": "Resource Rule Definition" },
+          { "id": "130.9.2", "name": "Spend Exception Review" },
+          { "id": "130.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "130.10",
+        "name": "Agent Economy Dashboard",
+        "units": [
+          { "id": "130.10.1", "name": "Cost Signal Collection" },
+          { "id": "130.10.2", "name": "Resource Status Summary" },
+          { "id": "130.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "131",
+    "name": "Approval UX, Review Queues & Human Control",
+    "departments": [
+      {
+        "id": "131.1",
+        "name": "Approval Flow Design",
+        "units": [
+          { "id": "131.1.1", "name": "Approval Need Capture" },
+          { "id": "131.1.2", "name": "Review Path Mapping" },
+          { "id": "131.1.3", "name": "Approval Flow Summary" }
+        ]
+      },
+      {
+        "id": "131.2",
+        "name": "Review Queue Management",
+        "units": [
+          { "id": "131.2.1", "name": "Queue Item Intake" },
+          { "id": "131.2.2", "name": "Priority Order Review" },
+          { "id": "131.2.3", "name": "Queue Status Update" }
+        ]
+      },
+      {
+        "id": "131.3",
+        "name": "Human Control Points",
+        "units": [
+          { "id": "131.3.1", "name": "Control Point Definition" },
+          { "id": "131.3.2", "name": "Human Decision Requirement Review" },
+          { "id": "131.3.3", "name": "Control Point Record" }
+        ]
+      },
+      {
+        "id": "131.4",
+        "name": "Approval Interface Design",
+        "units": [
+          { "id": "131.4.1", "name": "Interface Requirement Capture" },
+          { "id": "131.4.2", "name": "Decision Button Mapping" },
+          { "id": "131.4.3", "name": "Approval UX Review" }
+        ]
+      },
+      {
+        "id": "131.5",
+        "name": "Reviewer Assignment",
+        "units": [
+          { "id": "131.5.1", "name": "Reviewer Requirement Detection" },
+          { "id": "131.5.2", "name": "Reviewer Fit Review" },
+          { "id": "131.5.3", "name": "Reviewer Assignment Notes" }
+        ]
+      },
+      {
+        "id": "131.6",
+        "name": "Approval Evidence Review",
+        "units": [
+          { "id": "131.6.1", "name": "Evidence Requirement Mapping" },
+          { "id": "131.6.2", "name": "Evidence Completeness Check" },
+          { "id": "131.6.3", "name": "Approval Evidence Summary" }
+        ]
+      },
+      {
+        "id": "131.7",
+        "name": "Rejection Handling",
+        "units": [
+          { "id": "131.7.1", "name": "Rejection Reason Capture" },
+          { "id": "131.7.2", "name": "Revision Path Selection" },
+          { "id": "131.7.3", "name": "Rejection Resolution Notes" }
+        ]
+      },
+      {
+        "id": "131.8",
+        "name": "Approval SLA Tracking",
+        "units": [
+          { "id": "131.8.1", "name": "Review Deadline Capture" },
+          { "id": "131.8.2", "name": "Queue Delay Detection" },
+          { "id": "131.8.3", "name": "SLA Status Notes" }
+        ]
+      },
+      {
+        "id": "131.9",
+        "name": "Human Override Governance",
+        "units": [
+          { "id": "131.9.1", "name": "Override Rule Definition" },
+          { "id": "131.9.2", "name": "Override Risk Review" },
+          { "id": "131.9.3", "name": "Override Record Update" }
+        ]
+      },
+      {
+        "id": "131.10",
+        "name": "Approval Dashboard",
+        "units": [
+          { "id": "131.10.1", "name": "Approval Signal Collection" },
+          { "id": "131.10.2", "name": "Queue Status Summary" },
+          { "id": "131.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "132",
+    "name": "Agent Marketplace, Templates & Reusable Crews",
+    "departments": [
+      {
+        "id": "132.1",
+        "name": "Marketplace Inventory",
+        "units": [
+          { "id": "132.1.1", "name": "Agent Listing Capture" },
+          { "id": "132.1.2", "name": "Template Asset Review" },
+          { "id": "132.1.3", "name": "Marketplace Inventory Update" }
+        ]
+      },
+      {
+        "id": "132.2",
+        "name": "Reusable Crew Design",
+        "units": [
+          { "id": "132.2.1", "name": "Crew Purpose Definition" },
+          { "id": "132.2.2", "name": "Role Composition Mapping" },
+          { "id": "132.2.3", "name": "Crew Design Review" }
+        ]
+      },
+      {
+        "id": "132.3",
+        "name": "Template Packaging",
+        "units": [
+          { "id": "132.3.1", "name": "Template Component Inventory" },
+          { "id": "132.3.2", "name": "Usage Instruction Draft" },
+          { "id": "132.3.3", "name": "Template Package QA" }
+        ]
+      },
+      {
+        "id": "132.4",
+        "name": "Crew Discovery",
+        "units": [
+          { "id": "132.4.1", "name": "Crew Search Need Detection" },
+          { "id": "132.4.2", "name": "Match Criteria Review" },
+          { "id": "132.4.3", "name": "Crew Recommendation Notes" }
+        ]
+      },
+      {
+        "id": "132.5",
+        "name": "Marketplace Quality Review",
+        "units": [
+          { "id": "132.5.1", "name": "Listing Quality Criteria" },
+          { "id": "132.5.2", "name": "Reuse Fit Review" },
+          { "id": "132.5.3", "name": "Quality Finding Summary" }
+        ]
+      },
+      {
+        "id": "132.6",
+        "name": "Agent Template Versioning",
+        "units": [
+          { "id": "132.6.1", "name": "Template Change Capture" },
+          { "id": "132.6.2", "name": "Version Difference Review" },
+          { "id": "132.6.3", "name": "Template Version Update" }
+        ]
+      },
+      {
+        "id": "132.7",
+        "name": "Crew Performance Review",
+        "units": [
+          { "id": "132.7.1", "name": "Crew Run Signal Collection" },
+          { "id": "132.7.2", "name": "Performance Pattern Review" },
+          { "id": "132.7.3", "name": "Crew Performance Summary" }
+        ]
+      },
+      {
+        "id": "132.8",
+        "name": "Marketplace Governance",
+        "units": [
+          { "id": "132.8.1", "name": "Marketplace Rule Definition" },
+          { "id": "132.8.2", "name": "Listing Approval Review" },
+          { "id": "132.8.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "132.9",
+        "name": "Reuse Analytics",
+        "units": [
+          { "id": "132.9.1", "name": "Reuse Event Capture" },
+          { "id": "132.9.2", "name": "Adoption Pattern Review" },
+          { "id": "132.9.3", "name": "Reuse Analytics Notes" }
+        ]
+      },
+      {
+        "id": "132.10",
+        "name": "Marketplace Dashboard",
+        "units": [
+          { "id": "132.10.1", "name": "Marketplace Signal Collection" },
+          { "id": "132.10.2", "name": "Crew Status Summary" },
+          { "id": "132.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "133",
+    "name": "Agent Conversation Memory & Internal Messaging",
+    "departments": [
+      {
+        "id": "133.1",
+        "name": "Internal Message Capture",
+        "units": [
+          { "id": "133.1.1", "name": "Message Event Detection" },
+          { "id": "133.1.2", "name": "Message Context Capture" },
+          { "id": "133.1.3", "name": "Message Record Update" }
+        ]
+      },
+      {
+        "id": "133.2",
+        "name": "Agent Thread Management",
+        "units": [
+          { "id": "133.2.1", "name": "Thread Creation Review" },
+          { "id": "133.2.2", "name": "Thread State Tracking" },
+          { "id": "133.2.3", "name": "Thread Update Notes" }
+        ]
+      },
+      {
+        "id": "133.3",
+        "name": "Conversation Memory Filing",
+        "units": [
+          { "id": "133.3.1", "name": "Memory Candidate Detection" },
+          { "id": "133.3.2", "name": "Memory Category Selection" },
+          { "id": "133.3.3", "name": "Conversation Memory Update" }
+        ]
+      },
+      {
+        "id": "133.4",
+        "name": "Internal Message Routing",
+        "units": [
+          { "id": "133.4.1", "name": "Routing Need Detection" },
+          { "id": "133.4.2", "name": "Recipient Agent Selection" },
+          { "id": "133.4.3", "name": "Routing Confirmation Notes" }
+        ]
+      },
+      {
+        "id": "133.5",
+        "name": "Agent Mention Handling",
+        "units": [
+          { "id": "133.5.1", "name": "Mention Signal Capture" },
+          { "id": "133.5.2", "name": "Mention Priority Review" },
+          { "id": "133.5.3", "name": "Mention Response Notes" }
+        ]
+      },
+      {
+        "id": "133.6",
+        "name": "Conversation Context Bridging",
+        "units": [
+          { "id": "133.6.1", "name": "Context Bridge Need Detection" },
+          { "id": "133.6.2", "name": "Bridge Summary Draft" },
+          { "id": "133.6.3", "name": "Bridge Accuracy Review" }
+        ]
+      },
+      {
+        "id": "133.7",
+        "name": "Internal Messaging Norms",
+        "units": [
+          { "id": "133.7.1", "name": "Messaging Rule Definition" },
+          { "id": "133.7.2", "name": "Tone And Protocol Review" },
+          { "id": "133.7.3", "name": "Norm Update Notes" }
+        ]
+      },
+      {
+        "id": "133.8",
+        "name": "Conversation Conflict Review",
+        "units": [
+          { "id": "133.8.1", "name": "Conflicting Message Detection" },
+          { "id": "133.8.2", "name": "Thread Evidence Review" },
+          { "id": "133.8.3", "name": "Conflict Resolution Summary" }
+        ]
+      },
+      {
+        "id": "133.9",
+        "name": "Message Archive Governance",
+        "units": [
+          { "id": "133.9.1", "name": "Archive Rule Definition" },
+          { "id": "133.9.2", "name": "Retention Review" },
+          { "id": "133.9.3", "name": "Governance Record Update" }
+        ]
+      },
+      {
+        "id": "133.10",
+        "name": "Messaging Dashboard",
+        "units": [
+          { "id": "133.10.1", "name": "Message Signal Collection" },
+          { "id": "133.10.2", "name": "Thread Status Summary" },
+          { "id": "133.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "134",
+    "name": "External Action Governance",
+    "departments": [
+      {
+        "id": "134.1",
+        "name": "External Action Intake",
+        "units": [
+          { "id": "134.1.1", "name": "Action Request Capture" },
+          { "id": "134.1.2", "name": "Action Type Classification" },
+          { "id": "134.1.3", "name": "Action Intake Summary" }
+        ]
+      },
+      {
+        "id": "134.2",
+        "name": "Permission Boundary Review",
+        "units": [
+          { "id": "134.2.1", "name": "Permission Requirement Mapping" },
+          { "id": "134.2.2", "name": "Boundary Risk Review" },
+          { "id": "134.2.3", "name": "Permission Decision Notes" }
+        ]
+      },
+      {
+        "id": "134.3",
+        "name": "External Tool Action Approval",
+        "units": [
+          { "id": "134.3.1", "name": "Tool Action Detection" },
+          { "id": "134.3.2", "name": "Approval Requirement Review" },
+          { "id": "134.3.3", "name": "Tool Action Approval Record" }
+        ]
+      },
+      {
+        "id": "134.4",
+        "name": "Human Confirmation Routing",
+        "units": [
+          { "id": "134.4.1", "name": "Confirmation Need Detection" },
+          { "id": "134.4.2", "name": "Confirmation Prompt Draft" },
+          { "id": "134.4.3", "name": "Confirmation Outcome Record" }
+        ]
+      },
+      {
+        "id": "134.5",
+        "name": "External Communication Control",
+        "units": [
+          { "id": "134.5.1", "name": "Communication Target Review" },
+          { "id": "134.5.2", "name": "Message Approval Check" },
+          { "id": "134.5.3", "name": "External Message Record" }
+        ]
+      },
+      {
+        "id": "134.6",
+        "name": "Transaction Risk Review",
+        "units": [
+          { "id": "134.6.1", "name": "Transaction Signal Detection" },
+          { "id": "134.6.2", "name": "Financial Or Legal Risk Review" },
+          { "id": "134.6.3", "name": "Transaction Risk Notes" }
+        ]
+      },
+      {
+        "id": "134.7",
+        "name": "Irreversible Action Handling",
+        "units": [
+          { "id": "134.7.1", "name": "Irreversibility Detection" },
+          { "id": "134.7.2", "name": "Safeguard Requirement Review" },
+          { "id": "134.7.3", "name": "Stop Or Proceed Decision" }
+        ]
+      },
+      {
+        "id": "134.8",
+        "name": "Action Audit Trail",
+        "units": [
+          { "id": "134.8.1", "name": "Action Event Logging" },
+          { "id": "134.8.2", "name": "Evidence Trace Review" },
+          { "id": "134.8.3", "name": "Audit Trail Update" }
+        ]
+      },
+      {
+        "id": "134.9",
+        "name": "External Action Policy",
+        "units": [
+          { "id": "134.9.1", "name": "External Action Rule Definition" },
+          { "id": "134.9.2", "name": "Policy Exception Review" },
+          { "id": "134.9.3", "name": "Policy Record Update" }
+        ]
+      },
+      {
+        "id": "134.10",
+        "name": "Action Governance Dashboard",
+        "units": [
+          { "id": "134.10.1", "name": "External Action Signal Collection" },
+          { "id": "134.10.2", "name": "Permission Status Summary" },
+          { "id": "134.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  }
+]
