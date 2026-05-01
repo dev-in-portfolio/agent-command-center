@@ -2,6 +2,7 @@
 import json
 import os
 import sys
+import re
 
 def validate_batch():
     spec_path = "04_workflow_templates/family_expansion_batch_105_114.json"
@@ -63,7 +64,11 @@ def validate_batch():
         with open(family_json_path, 'r') as f:
             family_json = json.load(f)
 
-        if family_json['id'] != family_id:
+        # Structural check: Family ID MUST be an integer
+        if not isinstance(family_json['id'], int):
+            errors.append(f"ID type error in {family_json_path}: expected int, found {type(family_json['id']).__name__}")
+
+        if str(family_json['id']) != family_id:
             errors.append(f"ID mismatch in {family_json_path}: expected {family_id}, found {family_json['id']}")
         if family_json['name'] != family_name:
             errors.append(f"Name mismatch in {family_json_path}: expected {family_name}, found {family_json['name']}")
@@ -109,6 +114,22 @@ def validate_batch():
                 content = f.read()
             if f"# {family_name}" not in content: errors.append(f"README title mismatch in {family_id}")
             if "## Departments" not in content: errors.append(f"README missing Departments section in {family_id}")
+            
+            # Check for incorrect formatting patterns
+            if re.search(r"### .* \(\d+\.\d+\)", content):
+                errors.append(f"README formatting error in {family_id}: Found '### Name (ID)' format")
+            if re.search(r"- .* \(\d+\.\d+\.\d+\)", content):
+                errors.append(f"README formatting error in {family_id}: Found '- Name (ID)' format")
+            
+            # Check for required formatting patterns
+            for dept in family_json['departments']:
+                expected_heading = f"### {dept['id']} {dept['name']}"
+                if expected_heading not in content:
+                    errors.append(f"README missing correct dept format in {family_id}: '{expected_heading}'")
+                for unit in dept['units']:
+                    expected_bullet = f"- {unit['id']} {unit['name']}"
+                    if expected_bullet not in content:
+                        errors.append(f"README missing correct unit format in {family_id}: '{expected_bullet}'")
 
     if errors:
         for error in errors:
@@ -120,5 +141,3 @@ def validate_batch():
 
 if __name__ == "__main__":
     validate_batch()
-
-

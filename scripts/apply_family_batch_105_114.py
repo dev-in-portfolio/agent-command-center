@@ -16,9 +16,9 @@ def apply_batch():
         with open(family_json_path, 'r') as f:
             family_json = json.load(f)
 
-        # Preserve top-level
+        # Preserve top-level, ensuring ID is an integer
         new_family_json = {
-            "id": family_json['id'],
+            "id": int(family_json['id']),
             "name": family_json['name'],
             "manager": family_json.get('manager', f"{family_id}.M"),
             "scribe": family_json.get('scribe', f"{family_id}.H"),
@@ -70,9 +70,9 @@ def apply_batch():
         readme_content += "## Departments\n"
         
         for dept in new_family_json['departments']:
-            readme_content += f"\n### {dept['name']} ({dept['id']})\n"
+            readme_content += f"\n### {dept['id']} {dept['name']}\n"
             for unit in dept['units']:
-                readme_content += f"- {unit['name']} ({unit['id']})\n"
+                readme_content += f"- {unit['id']} {unit['name']}\n"
         
         with open(readme_path, 'w') as f:
             f.write(readme_content)
