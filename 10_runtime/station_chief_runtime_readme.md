@@ -1,23 +1,24 @@
 # Station Chief Runtime Skeleton
 
 ## Status
-Initial runnable runtime skeleton created. Locked 175-family baseline preserved.
+Initial runnable runtime skeleton upgraded to v0.2.0. Locked 175-family baseline preserved.
 
 ## Purpose
-Explain that this runtime receives one command, classifies it, loads the locked Devinization overlay stack, selects activation tier, creates a command brief, creates non-executing work orders, and returns deterministic demo output.
+The Station Chief runtime receives one command, classifies it, loads the locked Devinization overlay stack, selects an activation tier, creates a command brief, creates non-executing work orders, optionally writes runtime artifacts, and returns deterministic demo output.
 
 ## What This Does
 - Loads Family 7 and Devinization Packs 1 through 7
-- one-command intake
 - Confirms overlays exist
 - Preserves baseline architecture
-- command classification
-- Classifies commands
-- Selects activation tiers
+- Supports one-command intake
+- Supports command classification
+- Supports activation-tier selection
 - Selects relevant overlays
 - Creates command briefs
 - Creates non-executing work orders
 - Produces deterministic JSON output
+- Writes optional runtime artifacts
+- Runs deterministic fixture tests
 - Supports check please, blueberry pancakes, Square Block Square Hole, Speed Racer, build, route, repair, governance, and final output command types
 
 ## What This Does Not Do
@@ -30,17 +31,32 @@ Explain that this runtime receives one command, classifies it, loads the locked 
 - Does not claim production readiness
 
 ## Commands
-Include exact examples:
 python3 10_runtime/station_chief_runtime.py --demo
+
 python3 10_runtime/station_chief_runtime.py --command "check please" --json
+
 python3 10_runtime/station_chief_runtime.py --command "build Station Chief runtime skeleton" --brief
+
 python3 10_runtime/station_chief_runtime.py --list-overlays
 
-## Runtime Doctrine
-Include this exact paragraph:
+python3 10_runtime/station_chief_runtime.py --command "check please" --write-artifacts /tmp/station_chief_runs
 
-The Station Chief runtime skeleton keeps the full 175-family command civilization intact while activating only the logic needed for a specific task. This skeleton proves command intake, classification, overlay loading, activation-tier selection, command-brief creation, and deterministic demo output without waking the full workforce as live execution.
+python3 10_runtime/station_chief_runtime.py --fixture-test
+
+python3 10_runtime/station_chief_fixture_tests.py
+
+## Runtime Artifacts
+When `--write-artifacts` is used, the runtime creates a deterministic run directory containing:
+- run_log.json
+- command_brief.json
+- work_orders.json
+- selected_overlays.json
+- evidence.json
+- manifest.json
+- full_result.json
+
+## Runtime Doctrine
+The Station Chief runtime skeleton keeps the full 175-family command civilization intact while activating only the logic needed for a specific task. This skeleton proves command intake, classification, overlay loading, activation-tier selection, command-brief creation, deterministic artifact output, and fixture-tested demo behavior without waking the full workforce as live execution.
 
 ## Next Recommended Step
-Write:
-Next recommended step: add persistent run logs, command brief artifact output, deterministic fixture tests, and a small runtime validation suite before any live agent execution.
+Next recommended step: add persistent runtime index, resumable run registry, and controlled execution adapters.

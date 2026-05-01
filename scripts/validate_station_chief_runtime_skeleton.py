@@ -22,7 +22,7 @@ for path in FILES:
 
 runtime_text = (ROOT / '10_runtime/station_chief_runtime.py').read_text() if (ROOT / '10_runtime/station_chief_runtime.py').exists() else ''
 required_snippets = [
-    'STATION_CHIEF_RUNTIME_VERSION = "0.1.0"',
+    'STATION_CHIEF_RUNTIME_VERSION = "0.2.0"',
     'EXPECTED_OVERLAYS',
     'load_overlay_stack',
     'classify_command',
@@ -31,6 +31,7 @@ required_snippets = [
     'create_command_brief',
     'create_work_orders',
     'run_station_chief',
+    'run_fixture_tests',
     'deterministic_demo_mode',
     'baseline_protection',
     'workforce_animation_allowed',
@@ -64,17 +65,19 @@ REPORT = ROOT / '09_exports/station_chief_runtime_skeleton_report.md'
 for path, required in [
     (README, [
         'Station Chief Runtime Skeleton',
-        'Initial runnable runtime skeleton created.',
+        'Initial runnable runtime skeleton upgraded to v0.2.0.',
         'one-command intake',
         'command classification',
         'activation-tier selection',
         'deterministic demo output',
+        'optional runtime artifacts',
+        'deterministic fixture tests',
         'Does not animate all 47,250 worker agents',
         'The Station Chief runtime skeleton keeps the full 175-family command civilization intact',
     ]),
     (REPORT, [
         'Station Chief Runtime Skeleton Report',
-        'Initial runnable runtime skeleton created. Locked 175-family baseline preserved.',
+        'Initial runnable runtime skeleton upgraded to v0.2.0. Locked 175-family baseline preserved.',
         'Project owner, system architect, and operating-doctrine author: Devin O’Rourke.',
         'one-command intake',
         'command classification',
@@ -82,6 +85,12 @@ for path, required in [
         'overlay stack loading',
         'command brief generation',
         'non-executing work order generation',
+        'persistent run log artifacts',
+        'command brief artifact output',
+        'work order artifact output',
+        'selected overlay artifact output',
+        'evidence artifact output',
+        'deterministic fixture tests',
         'deterministic demo mode',
         'no live API calls',
         'no full workforce animation',
@@ -110,7 +119,7 @@ def run_cmd(args: list[str]) -> str:
 
 try:
     demo = json.loads(run_cmd(['python3', '10_runtime/station_chief_runtime.py', '--demo']))
-    if demo.get('station_chief_runtime_version') != '0.1.0':
+    if demo.get('station_chief_runtime_version') != '0.2.0':
         errors.append('demo runtime version mismatch')
     if demo.get('command_type') != 'verification':
         errors.append('demo command_type mismatch')

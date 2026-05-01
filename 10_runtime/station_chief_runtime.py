@@ -2,11 +2,13 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import re
 from pathlib import Path
 from typing import Any
 
-STATION_CHIEF_RUNTIME_VERSION = "0.1.0"
+STATION_CHIEF_RUNTIME_VERSION = "0.2.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -180,20 +182,35 @@ def load_overlay_stack() -> list[dict[str, Any]]:
             ownership = data.get("ownership_metadata", {})
             ownership_project_owner = ownership.get("project_owner")
             ownership_phrase = ownership.get("ownership_phrase")
-        overlays.append({
-            "id": overlay["id"],
-            "name": overlay["name"],
-            "json_path": overlay["json_path"],
-            "report_path": overlay["report_path"],
-            "validator_path": overlay["validator_path"],
-            "exists": exists,
-            "mode": mode,
-            "preserves_locked_baseline": preserves_locked_baseline,
-            "crew_count": crew_count,
-            "ownership_project_owner": ownership_project_owner,
-            "ownership_phrase": ownership_phrase,
-        })
+        overlays.append(
+            {
+                "id": overlay["id"],
+                "name": overlay["name"],
+                "json_path": overlay["json_path"],
+                "report_path": overlay["report_path"],
+                "validator_path": overlay["validator_path"],
+                "exists": exists,
+                "mode": mode,
+                "preserves_locked_baseline": preserves_locked_baseline,
+                "crew_count": crew_count,
+                "ownership_project_owner": ownership_project_owner,
+                "ownership_phrase": ownership_phrase,
+            }
+        )
     return overlays
+
+
+def normalize_command_for_id(command: str) -> str:
+    normalized = command.strip().lower()
+    normalized = re.sub(r"[^a-z0-9]+", "-", normalized)
+    normalized = normalized.strip("-")
+    return normalized or "empty-command"
+
+
+def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
+    normalized = normalize_command_for_id(command)
+    digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}|{run_label}|{command}".encode("utf-8")).hexdigest()
+    return f"station-chief-v0-2-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -259,7 +276,7 @@ def create_command_brief(command: str) -> dict[str, Any]:
         "forbidden_actions": [
             "modify 02_departments baseline files",
             "regenerate baseline exports",
-            "connect live APIs",
+            "connect external services",
             "animate all 47,250 worker agents",
             "mutate locked family architecture",
             "skip validators",
@@ -287,14 +304,16 @@ def create_work_orders(command_brief: dict[str, Any]) -> list[dict[str, Any]]:
     work_orders = []
     selected = command_brief["selected_overlays"]
     for idx, overlay_id in enumerate(selected, start=1):
-        work_orders.append({
-            "work_order_id": f"WO-{idx:02d}",
-            "overlay_id": overlay_id,
-            "purpose": f"Support {command_brief['command_type']} handling for {overlay_id}.",
-            "task": f"Apply overlay guidance for {command_brief['command']}.",
-            "expected_output": f"Scoped output for {overlay_id}.",
-            "status": "generated",
-        })
+        work_orders.append(
+            {
+                "work_order_id": f"WO-{idx:02d}",
+                "overlay_id": overlay_id,
+                "purpose": f"Support {command_brief['command_type']} handling for {overlay_id}.",
+                "task": f"Apply overlay guidance for {command_brief['command']}.",
+                "expected_output": f"Scoped output for {overlay_id}.",
+                "status": "generated",
+            }
+        )
     return work_orders
 
 
@@ -305,6 +324,14 @@ def run_station_chief(command: str) -> dict[str, Any]:
     return {
         "station_chief_runtime_version": STATION_CHIEF_RUNTIME_VERSION,
         "runtime_status": "deterministic_demo_ready",
+        "run_capabilities": {
+            "persistent_run_logs": True,
+            "command_brief_artifacts": True,
+            "work_order_artifacts": True,
+            "deterministic_fixture_tests": True,
+            "selected_overlay_artifacts": True,
+            "evidence_artifacts": True,
+        },
         "command": command,
         "command_type": brief["command_type"],
         "activation_tier": brief["activation_tier"],
@@ -320,7 +347,129 @@ def run_station_chief(command: str) -> dict[str, Any]:
             "deterministic_demo_mode": True,
             "validators_required_before_completion": True,
         },
-        "next_step": "Next step: expand the Station Chief runtime skeleton with persistent run logs, command brief files, and deterministic demo fixtures.",
+        "next_step": "Next step: add persistent runtime index, resumable run registry, and controlled execution adapters.",
+    }
+
+
+def build_runtime_artifacts(result: dict, run_id: str) -> dict:
+    selected_records = [
+        item
+        for item in result["overlay_stack_summary"]
+        if item["id"] in result["selected_overlays"]
+    ]
+    return {
+        "run_log": {
+            "run_id": run_id,
+            "runtime_version": result["station_chief_runtime_version"],
+            "command": result["command"],
+            "command_type": result["command_type"],
+            "activation_tier": result["activation_tier"],
+            "runtime_status": result["runtime_status"],
+            "overlay_stack_loaded": result["overlay_stack_loaded"],
+            "deterministic_demo_mode": result["evidence"]["deterministic_demo_mode"],
+            "baseline_preserved": result["evidence"]["baseline_preserved"],
+            "external_actions_taken": result["evidence"]["external_actions_taken"],
+            "live_worker_agents_activated": result["evidence"]["live_worker_agents_activated"],
+            "validators_required_before_completion": result["evidence"]["validators_required_before_completion"],
+            "next_step": result["next_step"],
+        },
+        "command_brief": result["command_brief"],
+        "work_orders": result["work_orders"],
+        "selected_overlays": {
+            "selected_overlay_ids": result["selected_overlays"],
+            "selected_overlay_records": selected_records,
+        },
+        "evidence": result["evidence"],
+        "manifest": {
+            "run_id": run_id,
+            "runtime_version": result["station_chief_runtime_version"],
+            "artifact_type": "station_chief_runtime_v0_2_artifacts",
+            "files_planned": [
+                "run_log.json",
+                "command_brief.json",
+                "work_orders.json",
+                "selected_overlays.json",
+                "evidence.json",
+                "manifest.json",
+                "full_result.json",
+            ],
+            "baseline_preserved": True,
+            "external_actions_taken": False,
+            "live_worker_agents_activated": False,
+            "deterministic_demo_mode": True,
+        },
+    }
+
+
+def _write_json(path: Path, data: Any) -> None:
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+
+
+def write_runtime_artifacts(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
+    output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
+    run_id = generate_run_id(result["command"], run_label=run_label)
+    artifact_dir = output_path / run_id
+    artifact_dir.mkdir(parents=True, exist_ok=True)
+
+    artifacts = build_runtime_artifacts(result, run_id)
+    files_written = []
+
+    mapping = {
+        "run_log.json": artifacts["run_log"],
+        "command_brief.json": artifacts["command_brief"],
+        "work_orders.json": artifacts["work_orders"],
+        "selected_overlays.json": artifacts["selected_overlays"],
+        "evidence.json": artifacts["evidence"],
+        "manifest.json": artifacts["manifest"],
+        "full_result.json": result,
+    }
+    for filename, payload in mapping.items():
+        _write_json(artifact_dir / filename, payload)
+        files_written.append(filename)
+
+    return {
+        "run_id": run_id,
+        "artifact_dir": str(artifact_dir),
+        "files_written": files_written,
+    }
+
+
+def run_fixture_tests() -> dict:
+    cases = load_json("10_runtime/station_chief_demo_cases.json")["demo_cases"]
+    results = []
+    passed = 0
+    failed = 0
+    for case in cases:
+        result = run_station_chief(case["command"])
+        actual_command_type = result["command_type"]
+        actual_activation_tier = result["activation_tier"]["name"]
+        case_passed = (
+            actual_command_type == case["expected_command_type"]
+            and actual_activation_tier == case["expected_activation_tier"]
+        )
+        if case_passed:
+            passed += 1
+        else:
+            failed += 1
+        results.append(
+            {
+                "case_id": case["case_id"],
+                "command": case["command"],
+                "expected_command_type": case["expected_command_type"],
+                "actual_command_type": actual_command_type,
+                "expected_activation_tier": case["expected_activation_tier"],
+                "actual_activation_tier": actual_activation_tier,
+                "passed": case_passed,
+            }
+        )
+    return {
+        "fixture_test_status": "PASS" if failed == 0 else "FAIL",
+        "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
+        "case_count": len(cases),
+        "passed": passed,
+        "failed": failed,
+        "results": results,
     }
 
 
@@ -332,12 +481,19 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--brief", action="store_true", help="Print the command brief as JSON")
     parser.add_argument("--list-overlays", action="store_true", help="Print overlay stack summary as JSON")
     parser.add_argument("--write-output", type=str, help="Write full result JSON to a file path")
+    parser.add_argument("--write-artifacts", type=str, help="Write runtime artifacts into the provided directory")
+    parser.add_argument("--run-label", type=str, default="station-chief-runtime", help="Label included in artifact run IDs")
+    parser.add_argument("--fixture-test", action="store_true", help="Run deterministic fixture tests")
     return parser
 
 
 def main() -> None:
     parser = _build_arg_parser()
     args = parser.parse_args()
+
+    if args.fixture_test:
+        print(json.dumps(run_fixture_tests(), indent=2, ensure_ascii=False))
+        return
 
     if args.demo:
         command = "check please"
@@ -354,9 +510,23 @@ def main() -> None:
 
     result = run_station_chief(command)
     output: Any = result
+
+    artifact_summary = None
+    if args.write_artifacts:
+        artifact_result = dict(result)
+        artifact_summary = write_runtime_artifacts(artifact_result, args.write_artifacts, run_label=args.run_label)
+        result = dict(result)
+        result["artifact_write_summary"] = artifact_summary
+        output = result
+
     if args.brief:
         output = result["command_brief"]
-    elif args.json or args.demo or args.command or args.write_output:
+        if artifact_summary is not None:
+            output = {
+                "command_brief": result["command_brief"],
+                "artifact_write_summary": artifact_summary,
+            }
+    elif args.json or args.demo or args.command or args.write_output or args.write_artifacts:
         output = result
 
     if args.write_output:
