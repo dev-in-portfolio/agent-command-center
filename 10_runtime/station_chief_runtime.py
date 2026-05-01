@@ -22,8 +22,16 @@ from station_chief_adapters import (
     run_sandbox_file_write_adapter,
     run_scoped_repo_patch_adapter,
 )
+from station_chief_execution_profiles import (
+    create_dry_run_bundle,
+    create_execution_readiness_score,
+    create_patch_approval_checklist,
+    create_preflight_gate_record,
+    list_execution_profiles,
+    select_execution_profile,
+)
 
-STATION_CHIEF_RUNTIME_VERSION = "0.5.0"
+STATION_CHIEF_RUNTIME_VERSION = "0.6.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -225,7 +233,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}|{run_label}|{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v0-5-{normalized}-{digest[:12]}"
+    return f"station-chief-v0-6-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -336,7 +344,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "0.5.0",
+            "registry_version": "0.6.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -353,7 +361,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "0.5.0"
+    registry["registry_version"] = "0.6.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -362,7 +370,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "0.5.0",
+        "index_version": "0.6.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -435,6 +443,10 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "changed_file_scope_enforcement": True,
             "patch_preview_artifacts": True,
             "patch_approval_records": True,
+            "validator_selected_execution_profiles": True,
+            "repo_patch_dry_run_bundles": True,
+            "preflight_gate_records": True,
+            "execution_readiness_scoring": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -454,6 +466,11 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
         "repo_patch_gate": None,
         "repo_patch_result": None,
         "changed_file_scope_proof": None,
+        "execution_profile": None,
+        "preflight_gate_record": None,
+        "patch_approval_checklist": None,
+        "execution_readiness_score": None,
+        "dry_run_bundle": None,
         "evidence": {
             "baseline_preserved": True,
             "external_actions_taken": False,
@@ -463,8 +480,9 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "controlled_file_write_requires_confirmation": True,
             "repo_patch_requires_confirmation": True,
             "changed_file_scope_enforced": True,
+            "dry_run_bundle_available": True,
         },
-        "next_step": "Next step: add validator-selected execution profiles and repo patch dry-run bundles.",
+        "next_step": "Next step: add repo patch dry-run bundle comparison and approval UX handoff.",
     }
 
 
@@ -481,6 +499,11 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
     repo_patch_gate = result.get("repo_patch_gate")
     repo_patch_result = result.get("repo_patch_result")
     changed_file_scope_proof = result.get("changed_file_scope_proof")
+    execution_profile = result.get("execution_profile")
+    preflight_gate_record = result.get("preflight_gate_record")
+    patch_approval_checklist = result.get("patch_approval_checklist")
+    execution_readiness_score = result.get("execution_readiness_score")
+    dry_run_bundle = result.get("dry_run_bundle")
     selected_records = [
         item
         for item in result["overlay_stack_summary"]
@@ -519,11 +542,16 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "repo_patch_gate": repo_patch_gate,
         "repo_patch_result": repo_patch_result,
         "changed_file_scope_proof": changed_file_scope_proof,
+        "execution_profile": execution_profile,
+        "preflight_gate_record": preflight_gate_record,
+        "patch_approval_checklist": patch_approval_checklist,
+        "execution_readiness_score": execution_readiness_score,
+        "dry_run_bundle": dry_run_bundle,
         "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v0_5_artifacts",
+            "artifact_type": "station_chief_runtime_v0_6_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -539,6 +567,11 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "repo_patch_gate.json",
                 "repo_patch_result.json",
                 "changed_file_scope_proof.json",
+                "execution_profile.json",
+                "preflight_gate_record.json",
+                "patch_approval_checklist.json",
+                "execution_readiness_score.json",
+                "dry_run_bundle.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -553,6 +586,10 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "scoped_repo_patch_supported": True,
             "human_confirmation_required_for_repo_patch": True,
             "changed_file_scope_enforced": True,
+            "validator_selected_execution_profiles": True,
+            "repo_patch_dry_run_bundles": True,
+            "preflight_gate_records": True,
+            "execution_readiness_scoring": True,
         },
     }
 
@@ -592,6 +629,11 @@ def write_runtime_artifacts(
         "repo_patch_gate.json": artifacts["repo_patch_gate"],
         "repo_patch_result.json": artifacts["repo_patch_result"],
         "changed_file_scope_proof.json": artifacts["changed_file_scope_proof"],
+        "execution_profile.json": artifacts["execution_profile"],
+        "preflight_gate_record.json": artifacts["preflight_gate_record"],
+        "patch_approval_checklist.json": artifacts["patch_approval_checklist"],
+        "execution_readiness_score.json": artifacts["execution_readiness_score"],
+        "dry_run_bundle.json": artifacts["dry_run_bundle"],
         "runtime_index_entry.json": artifacts["runtime_index_entry"],
         "manifest.json": artifacts["manifest"],
         "full_result.json": result,
@@ -730,6 +772,91 @@ def attach_repo_patch(
     return updated
 
 
+def attach_execution_profile_and_dry_run(
+    result: dict,
+    requested_profile: str | None = None,
+    include_dry_run_bundle: bool = False,
+) -> dict:
+    updated = dict(result)
+    execution_profile = select_execution_profile(result["command_type"], result["selected_overlays"], requested_profile)
+    preflight_gate_record = create_preflight_gate_record(result["command_brief"], execution_profile, result.get("repo_patch_plan"))
+    patch_approval_checklist = create_patch_approval_checklist(result.get("repo_patch_plan"), execution_profile)
+    execution_readiness_score = create_execution_readiness_score(
+        preflight_gate_record,
+        patch_approval_checklist,
+        result.get("changed_file_scope_proof"),
+    )
+    updated["execution_profile"] = execution_profile
+    updated["preflight_gate_record"] = preflight_gate_record
+    updated["patch_approval_checklist"] = patch_approval_checklist
+    updated["execution_readiness_score"] = execution_readiness_score
+    if include_dry_run_bundle:
+        updated["dry_run_bundle"] = create_dry_run_bundle(
+            updated,
+            execution_profile,
+            preflight_gate_record,
+            patch_approval_checklist,
+            execution_readiness_score,
+        )
+    return updated
+
+
+def write_dry_run_bundle(
+    result: dict,
+    output_dir: str | Path,
+    run_label: str = "station-chief-runtime",
+) -> dict:
+    if "dry_run_bundle" not in result or result["dry_run_bundle"] is None:
+        raise ValueError("write_dry_run_bundle requires dry_run_bundle to be attached first")
+
+    output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
+    run_id = generate_run_id(result["command"], run_label=run_label)
+    bundle_dir = output_path / run_id
+    bundle_dir.mkdir(parents=True, exist_ok=True)
+
+    dry_run_bundle = result["dry_run_bundle"]
+    files_written = []
+    payloads = {
+        "dry_run_bundle.json": dry_run_bundle,
+        "execution_profile.json": result.get("execution_profile"),
+        "preflight_gate_record.json": result.get("preflight_gate_record"),
+        "patch_approval_checklist.json": result.get("patch_approval_checklist"),
+        "execution_readiness_score.json": result.get("execution_readiness_score"),
+        "repo_patch_preview.diff": dry_run_bundle.get("repo_patch_preview") or "",
+        "dry_run_manifest.json": {
+            "dry_run_bundle_version": "0.6.0",
+            "run_id": run_id,
+            "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
+            "files_written": [
+                "dry_run_bundle.json",
+                "execution_profile.json",
+                "preflight_gate_record.json",
+                "patch_approval_checklist.json",
+                "execution_readiness_score.json",
+                "repo_patch_preview.diff",
+                "dry_run_manifest.json",
+            ],
+            "baseline_preserved": True,
+            "external_actions_taken": False,
+            "live_worker_agents_activated": False,
+            "requires_human_approval_before_execution": (result.get("patch_approval_checklist") or {}).get("checklist_status") == "READY",
+        },
+    }
+    for filename, payload in payloads.items():
+        if filename.endswith(".diff"):
+            (bundle_dir / filename).write_text(str(payload))
+        else:
+            _write_json(bundle_dir / filename, payload)
+        files_written.append(filename)
+
+    return {
+        "run_id": run_id,
+        "dry_run_bundle_dir": str(bundle_dir),
+        "files_written": files_written,
+    }
+
+
 def _build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Station Chief Runtime Skeleton")
     parser.add_argument("--demo", action="store_true", help="Run the deterministic demo command")
@@ -738,8 +865,10 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--brief", action="store_true", help="Print the command brief as JSON")
     parser.add_argument("--list-overlays", action="store_true", help="Print overlay stack summary as JSON")
     parser.add_argument("--list-adapters", action="store_true", help="Print adapter catalog as JSON")
+    parser.add_argument("--list-execution-profiles", action="store_true", help="Print execution profile catalog as JSON")
     parser.add_argument("--write-output", type=str, help="Write full result JSON to a file path")
     parser.add_argument("--write-artifacts", type=str, help="Write runtime artifacts into the provided directory")
+    parser.add_argument("--write-dry-run-bundle", type=str, help="Write dry-run bundle artifacts into the provided directory")
     parser.add_argument("--run-label", type=str, default="station-chief-runtime", help="Label included in artifact run IDs")
     parser.add_argument("--fixture-test", action="store_true", help="Run deterministic fixture tests")
     parser.add_argument("--adapter", type=str, default="noop", help="Choose the controlled execution adapter")
@@ -758,6 +887,8 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--patch-content", type=str, help="Explicit repo patch content; otherwise a deterministic default is used")
     parser.add_argument("--confirm-patch", type=str, help="Confirmation token required for scoped repo patches")
     parser.add_argument("--execute-repo-patch", action="store_true", help="Execute a scoped repo patch if the gate approves")
+    parser.add_argument("--execution-profile", type=str, help="Requested execution profile for dry-run behavior")
+    parser.add_argument("--dry-run-bundle", action="store_true", help="Attach a dry-run bundle to the printed result")
     return parser
 
 
@@ -767,6 +898,10 @@ def main() -> None:
 
     if args.fixture_test:
         print(json.dumps(run_fixture_tests(), indent=2, ensure_ascii=False))
+        return
+
+    if args.list_execution_profiles:
+        print(json.dumps(list_execution_profiles(), indent=2, ensure_ascii=False))
         return
 
     if args.list_adapters:
@@ -824,6 +959,13 @@ def main() -> None:
             execute=args.execute_repo_patch,
         )
 
+    if args.dry_run_bundle or args.write_dry_run_bundle or args.execution_profile is not None:
+        result = attach_execution_profile_and_dry_run(
+            result,
+            requested_profile=args.execution_profile,
+            include_dry_run_bundle=True,
+        )
+
     artifact_summary = None
     if args.write_artifacts:
         artifact_summary = write_runtime_artifacts(
@@ -835,10 +977,30 @@ def main() -> None:
         result = dict(result)
         result["artifact_write_summary"] = artifact_summary
 
+    dry_run_bundle_summary = None
+    if args.write_dry_run_bundle:
+        if "dry_run_bundle" not in result or result["dry_run_bundle"] is None:
+            result = attach_execution_profile_and_dry_run(
+                result,
+                requested_profile=args.execution_profile,
+                include_dry_run_bundle=True,
+            )
+        dry_run_bundle_summary = write_dry_run_bundle(result, args.write_dry_run_bundle, run_label=args.run_label)
+        result = dict(result)
+        result["dry_run_bundle_write_summary"] = dry_run_bundle_summary
+
     if args.write_output:
         Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
 
-    if args.brief and not (args.plan_file_operation or args.execute_sandbox_file_write):
+    if args.brief and not (
+        args.plan_file_operation
+        or args.execute_sandbox_file_write
+        or args.plan_repo_patch
+        or args.execute_repo_patch
+        or args.dry_run_bundle
+        or args.write_dry_run_bundle
+        or args.execution_profile is not None
+    ):
         output: Any = result["command_brief"]
         if artifact_summary is not None:
             output = {
