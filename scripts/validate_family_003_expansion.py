@@ -27,7 +27,7 @@ def main():
         errors.append("Manager/Scribe/Auditor fields are incorrect.")
         
     depts = data.get("departments", [])
-    if not isinstance(depts, list) or len(depts) != 10:
+    if not isinstance(depts, list) or len(depts) != 14:
         errors.append(f"Expected exactly 14 departments, found {len(depts) if isinstance(depts, list) else type(depts)}.")
     
     depts_expected = [

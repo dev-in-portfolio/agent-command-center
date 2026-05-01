@@ -1,12 +1,16 @@
 # Planning & Project Control
 
 ## Purpose
+Planning & Project Control oversees project execution, scope, timeline, and delivery, ensuring aligned delivery of objectives.
 
 ## Family Manager (2.M)
+Routes family-level work, resolves escalations, and coordinates subordinate departments.
 
 ## Family Scribe (2.H)
+Records family-level decisions, assumptions, handoffs, and work trails.
 
 ## Family Auditor (2.I)
+Reviews family-level output and marks items as keep, fix, remove, redo, or escalate.
 
 ## Departments
 
@@ -59,3 +63,23 @@
 - 2.10.1 Scope Boundary Definition
 - 2.10.2 Scope Creep Detection
 - 2.10.3 Scope Change Approval
+
+### 2.11 Change Request Management
+- 2.11.1 Change Request Intake
+- 2.11.2 Change Impact Review
+- 2.11.3 Change Decision Record
+
+### 2.12 Delivery Management
+- 2.12.1 Delivery Package Assembly
+- 2.12.2 Delivery Readiness Review
+- 2.12.3 Delivery Confirmation
+
+### 2.13 Status Reporting
+- 2.13.1 Status Collection
+- 2.13.2 Status Summary Writing
+- 2.13.3 Status Risk Flagging
+
+### 2.14 Project Recovery / Rescue
+- 2.14.1 Failure Diagnosis
+- 2.14.2 Recovery Plan Design
+- 2.14.3 Rescue Execution Tracking

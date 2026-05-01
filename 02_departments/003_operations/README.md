@@ -1,12 +1,16 @@
 # Operations
 
 ## Purpose
+Operations ensures the continuous, efficient, and reliable execution of day-to-day activities and service delivery.
 
 ## Family Manager (3.M)
+Routes family-level work, resolves escalations, and coordinates subordinate departments.
 
 ## Family Scribe (3.H)
+Records family-level decisions, assumptions, handoffs, and work trails.
 
 ## Family Auditor (3.I)
+Reviews family-level output and marks items as keep, fix, remove, redo, or escalate.
 
 ## Departments
 
@@ -59,3 +63,23 @@
 - 3.10.1 Fulfillment Intake
 - 3.10.2 Fulfillment Assembly
 - 3.10.3 Fulfillment Completion Check
+
+### 3.11 Production Coordination
+- 3.11.1 Production Schedule Coordination
+- 3.11.2 Production Handoff Tracking
+- 3.11.3 Production Status Review
+
+### 3.12 Facilities Operations
+- 3.12.1 Facility Readiness Review
+- 3.12.2 Maintenance Request Routing
+- 3.12.3 Facility Issue Tracking
+
+### 3.13 Vendor Coordination
+- 3.13.1 Vendor Request Intake
+- 3.13.2 Vendor Status Follow-Up
+- 3.13.3 Vendor Performance Notes
+
+### 3.14 Standard Operating Procedures
+- 3.14.1 SOP Drafting
+- 3.14.2 SOP Review
+- 3.14.3 SOP Update Control
