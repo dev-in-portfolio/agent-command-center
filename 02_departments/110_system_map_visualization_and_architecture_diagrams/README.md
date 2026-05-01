@@ -2,20 +2,60 @@
 
 ## Purpose
 
-Placeholder purpose for System Map, Visualization & Architecture Diagrams.
-
 ## Family Manager (110.M)
-
-Routes family-level work, resolves escalations, and coordinates subordinate departments.
 
 ## Family Scribe (110.H)
 
-Records family-level decisions, assumptions, handoffs, and work trails.
-
 ## Family Auditor (110.I)
-
-Reviews family-level output and marks items as keep, fix, remove, redo, or escalate.
 
 ## Departments
 
-Not populated yet.
+### System Map Intake (110.1)
+- Map Purpose Capture (110.1.1)
+- System Boundary Review (110.1.2)
+- Map Brief Draft (110.1.3)
+
+### Architecture Diagramming (110.2)
+- Architecture Node Identification (110.2.1)
+- Relationship Line Mapping (110.2.2)
+- Diagram QA Review (110.2.3)
+
+### Dependency Visualization (110.3)
+- Dependency Capture (110.3.1)
+- Dependency Layout Draft (110.3.2)
+- Dependency Clarity Review (110.3.3)
+
+### Workflow Diagramming (110.4)
+- Workflow Step Capture (110.4.1)
+- Flow Path Mapping (110.4.2)
+- Workflow Diagram QA (110.4.3)
+
+### Org Chart Visualization (110.5)
+- Role Node Inventory (110.5.1)
+- Hierarchy Layout Review (110.5.2)
+- Org Chart Update (110.5.3)
+
+### Control Panel Mapping (110.6)
+- Control Surface Inventory (110.6.1)
+- Panel Relationship Mapping (110.6.2)
+- Control Map QA (110.6.3)
+
+### System Legend Design (110.7)
+- Symbol Set Definition (110.7.1)
+- Legend Label Draft (110.7.2)
+- Legend Consistency Review (110.7.3)
+
+### Diagram Export Packaging (110.8)
+- Export Format Selection (110.8.1)
+- Diagram File Assembly (110.8.2)
+- Export Package QA (110.8.3)
+
+### Visual Architecture Review (110.9)
+- Visual Complexity Review (110.9.1)
+- Readability Improvement Notes (110.9.2)
+- Architecture Visual QA (110.9.3)
+
+### System Map Archive (110.10)
+- Diagram Record Capture (110.10.1)
+- Version Filing (110.10.2)
+- Map Archive Update (110.10.3)

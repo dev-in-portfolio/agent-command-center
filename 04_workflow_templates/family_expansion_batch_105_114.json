@@ -1,0 +1,962 @@
+[
+  {
+    "id": "105",
+    "name": "User Preference Engine",
+    "departments": [
+      {
+        "id": "105.1",
+        "name": "Preference Capture",
+        "units": [
+          { "id": "105.1.1", "name": "Preference Signal Detection" },
+          { "id": "105.1.2", "name": "Preference Statement Draft" },
+          { "id": "105.1.3", "name": "Preference Record Update" }
+        ]
+      },
+      {
+        "id": "105.2",
+        "name": "Preference Classification",
+        "units": [
+          { "id": "105.2.1", "name": "Preference Type Assignment" },
+          { "id": "105.2.2", "name": "Strength Level Review" },
+          { "id": "105.2.3", "name": "Category Filing Notes" }
+        ]
+      },
+      {
+        "id": "105.3",
+        "name": "Preference Conflict Review",
+        "units": [
+          { "id": "105.3.1", "name": "Conflict Candidate Detection" },
+          { "id": "105.3.2", "name": "Priority Rule Review" },
+          { "id": "105.3.3", "name": "Conflict Resolution Notes" }
+        ]
+      },
+      {
+        "id": "105.4",
+        "name": "Style Preference Management",
+        "units": [
+          { "id": "105.4.1", "name": "Tone Preference Capture" },
+          { "id": "105.4.2", "name": "Formatting Preference Review" },
+          { "id": "105.4.3", "name": "Style Rule Update" }
+        ]
+      },
+      {
+        "id": "105.5",
+        "name": "Workflow Preference Management",
+        "units": [
+          { "id": "105.5.1", "name": "Work Pattern Detection" },
+          { "id": "105.5.2", "name": "Execution Preference Review" },
+          { "id": "105.5.3", "name": "Workflow Rule Update" }
+        ]
+      },
+      {
+        "id": "105.6",
+        "name": "Preference Freshness Review",
+        "units": [
+          { "id": "105.6.1", "name": "Preference Age Check" },
+          { "id": "105.6.2", "name": "Staleness Signal Detection" },
+          { "id": "105.6.3", "name": "Refresh Recommendation" }
+        ]
+      },
+      {
+        "id": "105.7",
+        "name": "Preference Application",
+        "units": [
+          { "id": "105.7.1", "name": "Active Preference Retrieval" },
+          { "id": "105.7.2", "name": "Response Adjustment Mapping" },
+          { "id": "105.7.3", "name": "Application Quality Review" }
+        ]
+      },
+      {
+        "id": "105.8",
+        "name": "Preference Exception Handling",
+        "units": [
+          { "id": "105.8.1", "name": "Exception Need Detection" },
+          { "id": "105.8.2", "name": "Override Rule Selection" },
+          { "id": "105.8.3", "name": "Exception Record Update" }
+        ]
+      },
+      {
+        "id": "105.9",
+        "name": "Preference Audit Trail",
+        "units": [
+          { "id": "105.9.1", "name": "Preference Change Capture" },
+          { "id": "105.9.2", "name": "Evidence Phrase Linking" },
+          { "id": "105.9.3", "name": "Audit Trail Update" }
+        ]
+      },
+      {
+        "id": "105.10",
+        "name": "Preference Dashboard",
+        "units": [
+          { "id": "105.10.1", "name": "Preference Signal Collection" },
+          { "id": "105.10.2", "name": "Preference Status Summary" },
+          { "id": "105.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "106",
+    "name": "Command Language & Shortcut Systems",
+    "departments": [
+      {
+        "id": "106.1",
+        "name": "Command Phrase Capture",
+        "units": [
+          { "id": "106.1.1", "name": "Shortcut Signal Detection" },
+          { "id": "106.1.2", "name": "Command Phrase Recording" },
+          { "id": "106.1.3", "name": "Command Record Update" }
+        ]
+      },
+      {
+        "id": "106.2",
+        "name": "Command Intent Mapping",
+        "units": [
+          { "id": "106.2.1", "name": "Command Meaning Extraction" },
+          { "id": "106.2.2", "name": "Action Mapping Review" },
+          { "id": "106.2.3", "name": "Intent Map Update" }
+        ]
+      },
+      {
+        "id": "106.3",
+        "name": "Shortcut Expansion",
+        "units": [
+          { "id": "106.3.1", "name": "Shorthand Detection" },
+          { "id": "106.3.2", "name": "Expanded Meaning Draft" },
+          { "id": "106.3.3", "name": "Shortcut Expansion QA" }
+        ]
+      },
+      {
+        "id": "106.4",
+        "name": "Command Priority Rules",
+        "units": [
+          { "id": "106.4.1", "name": "Command Authority Review" },
+          { "id": "106.4.2", "name": "Priority Conflict Detection" },
+          { "id": "106.4.3", "name": "Command Priority Decision" }
+        ]
+      },
+      {
+        "id": "106.5",
+        "name": "Command Safety Review",
+        "units": [
+          { "id": "106.5.1", "name": "Risky Command Detection" },
+          { "id": "106.5.2", "name": "Boundary Rule Review" },
+          { "id": "106.5.3", "name": "Safe Execution Notes" }
+        ]
+      },
+      {
+        "id": "106.6",
+        "name": "Command Variant Recognition",
+        "units": [
+          { "id": "106.6.1", "name": "Variant Phrase Capture" },
+          { "id": "106.6.2", "name": "Meaning Equivalence Review" },
+          { "id": "106.6.3", "name": "Variant Map Update" }
+        ]
+      },
+      {
+        "id": "106.7",
+        "name": "Command Lifecycle Management",
+        "units": [
+          { "id": "106.7.1", "name": "Command Activation Record" },
+          { "id": "106.7.2", "name": "Command Update Review" },
+          { "id": "106.7.3", "name": "Command Retirement Notes" }
+        ]
+      },
+      {
+        "id": "106.8",
+        "name": "Command Testing",
+        "units": [
+          { "id": "106.8.1", "name": "Test Scenario Draft" },
+          { "id": "106.8.2", "name": "Trigger Behavior Review" },
+          { "id": "106.8.3", "name": "Command Test Summary" }
+        ]
+      },
+      {
+        "id": "106.9",
+        "name": "Command Documentation",
+        "units": [
+          { "id": "106.9.1", "name": "Command Inventory Review" },
+          { "id": "106.9.2", "name": "Usage Rule Draft" },
+          { "id": "106.9.3", "name": "Documentation Update" }
+        ]
+      },
+      {
+        "id": "106.10",
+        "name": "Command Dashboard",
+        "units": [
+          { "id": "106.10.1", "name": "Command Signal Collection" },
+          { "id": "106.10.2", "name": "Active Command Summary" },
+          { "id": "106.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "107",
+    "name": "Personal Archive, Vaults & Shelving Systems",
+    "departments": [
+      {
+        "id": "107.1",
+        "name": "Archive Intake",
+        "units": [
+          { "id": "107.1.1", "name": "Archive Candidate Capture" },
+          { "id": "107.1.2", "name": "Archive Purpose Review" },
+          { "id": "107.1.3", "name": "Intake Record Update" }
+        ]
+      },
+      {
+        "id": "107.2",
+        "name": "Vault Structure Design",
+        "units": [
+          { "id": "107.2.1", "name": "Vault Category Definition" },
+          { "id": "107.2.2", "name": "Access Boundary Mapping" },
+          { "id": "107.2.3", "name": "Vault Structure Review" }
+        ]
+      },
+      {
+        "id": "107.3",
+        "name": "Shelf Management",
+        "units": [
+          { "id": "107.3.1", "name": "Shelf Selection" },
+          { "id": "107.3.2", "name": "Item Filing" },
+          { "id": "107.3.3", "name": "Shelf Cleanup Notes" }
+        ]
+      },
+      {
+        "id": "107.4",
+        "name": "Personal Record Indexing",
+        "units": [
+          { "id": "107.4.1", "name": "Record Metadata Capture" },
+          { "id": "107.4.2", "name": "Index Tag Assignment" },
+          { "id": "107.4.3", "name": "Retrieval Index Update" }
+        ]
+      },
+      {
+        "id": "107.5",
+        "name": "Archive Retrieval",
+        "units": [
+          { "id": "107.5.1", "name": "Retrieval Need Detection" },
+          { "id": "107.5.2", "name": "Archive Search Routing" },
+          { "id": "107.5.3", "name": "Retrieval Summary" }
+        ]
+      },
+      {
+        "id": "107.6",
+        "name": "Archive Cleanup",
+        "units": [
+          { "id": "107.6.1", "name": "Duplicate Record Detection" },
+          { "id": "107.6.2", "name": "Obsolete Record Review" },
+          { "id": "107.6.3", "name": "Cleanup Decision Notes" }
+        ]
+      },
+      {
+        "id": "107.7",
+        "name": "Secure Personal Vaults",
+        "units": [
+          { "id": "107.7.1", "name": "Sensitive Record Detection" },
+          { "id": "107.7.2", "name": "Secure Storage Rule Review" },
+          { "id": "107.7.3", "name": "Vault Safety Notes" }
+        ]
+      },
+      {
+        "id": "107.8",
+        "name": "Archive Continuity",
+        "units": [
+          { "id": "107.8.1", "name": "Continuity Need Detection" },
+          { "id": "107.8.2", "name": "Context Bridge Creation" },
+          { "id": "107.8.3", "name": "Continuity Check" }
+        ]
+      },
+      {
+        "id": "107.9",
+        "name": "Personal Archive Map",
+        "units": [
+          { "id": "107.9.1", "name": "Archive Node Capture" },
+          { "id": "107.9.2", "name": "Shelf Relationship Mapping" },
+          { "id": "107.9.3", "name": "Archive Map Update" }
+        ]
+      },
+      {
+        "id": "107.10",
+        "name": "Archive Governance",
+        "units": [
+          { "id": "107.10.1", "name": "Archive Rule Definition" },
+          { "id": "107.10.2", "name": "Retention Review" },
+          { "id": "107.10.3", "name": "Governance Record Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "108",
+    "name": "Client-Facing Asset Factory",
+    "departments": [
+      {
+        "id": "108.1",
+        "name": "Asset Request Intake",
+        "units": [
+          { "id": "108.1.1", "name": "Asset Need Capture" },
+          { "id": "108.1.2", "name": "Audience Requirement Review" },
+          { "id": "108.1.3", "name": "Asset Brief Draft" }
+        ]
+      },
+      {
+        "id": "108.2",
+        "name": "One-Pager Production",
+        "units": [
+          { "id": "108.2.1", "name": "One-Pager Outline" },
+          { "id": "108.2.2", "name": "Copy And Layout Draft" },
+          { "id": "108.2.3", "name": "One-Pager QA" }
+        ]
+      },
+      {
+        "id": "108.3",
+        "name": "Worksheet Production",
+        "units": [
+          { "id": "108.3.1", "name": "Worksheet Purpose Definition" },
+          { "id": "108.3.2", "name": "Prompt And Field Drafting" },
+          { "id": "108.3.3", "name": "Worksheet Usability Review" }
+        ]
+      },
+      {
+        "id": "108.4",
+        "name": "Script Production",
+        "units": [
+          { "id": "108.4.1", "name": "Conversation Goal Capture" },
+          { "id": "108.4.2", "name": "Script Flow Draft" },
+          { "id": "108.4.3", "name": "Script Tone Review" }
+        ]
+      },
+      {
+        "id": "108.5",
+        "name": "Comparison Grid Production",
+        "units": [
+          { "id": "108.5.1", "name": "Comparison Criteria Mapping" },
+          { "id": "108.5.2", "name": "Grid Structure Draft" },
+          { "id": "108.5.3", "name": "Comparison QA" }
+        ]
+      },
+      {
+        "id": "108.6",
+        "name": "Client Visual Production",
+        "units": [
+          { "id": "108.6.1", "name": "Visual Concept Draft" },
+          { "id": "108.6.2", "name": "Client-Friendly Language Review" },
+          { "id": "108.6.3", "name": "Visual Asset QA" }
+        ]
+      },
+      {
+        "id": "108.7",
+        "name": "Objection Asset Production",
+        "units": [
+          { "id": "108.7.1", "name": "Objection Capture" },
+          { "id": "108.7.2", "name": "Response Framework Draft" },
+          { "id": "108.7.3", "name": "Objection Asset Review" }
+        ]
+      },
+      {
+        "id": "108.8",
+        "name": "Asset Versioning",
+        "units": [
+          { "id": "108.8.1", "name": "Asset Version Labeling" },
+          { "id": "108.8.2", "name": "Change Summary Draft" },
+          { "id": "108.8.3", "name": "Version Archive Update" }
+        ]
+      },
+      {
+        "id": "108.9",
+        "name": "Print-Ready Packaging",
+        "units": [
+          { "id": "108.9.1", "name": "Print Requirement Review" },
+          { "id": "108.9.2", "name": "File Package Assembly" },
+          { "id": "108.9.3", "name": "Print-Ready QA" }
+        ]
+      },
+      {
+        "id": "108.10",
+        "name": "Client Asset Dashboard",
+        "units": [
+          { "id": "108.10.1", "name": "Asset Pipeline Review" },
+          { "id": "108.10.2", "name": "Production Status Summary" },
+          { "id": "108.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "109",
+    "name": "Agent-Based Business Process Outsourcing",
+    "departments": [
+      {
+        "id": "109.1",
+        "name": "Process Outsourcing Intake",
+        "units": [
+          { "id": "109.1.1", "name": "Process Candidate Capture" },
+          { "id": "109.1.2", "name": "Outsourcing Suitability Review" },
+          { "id": "109.1.3", "name": "Process Intake Summary" }
+        ]
+      },
+      {
+        "id": "109.2",
+        "name": "Agent Service Design",
+        "units": [
+          { "id": "109.2.1", "name": "Service Scope Definition" },
+          { "id": "109.2.2", "name": "Agent Role Mapping" },
+          { "id": "109.2.3", "name": "Service Design Brief" }
+        ]
+      },
+      {
+        "id": "109.3",
+        "name": "Process Decomposition",
+        "units": [
+          { "id": "109.3.1", "name": "Process Step Capture" },
+          { "id": "109.3.2", "name": "Work Package Splitting" },
+          { "id": "109.3.3", "name": "Decomposition QA" }
+        ]
+      },
+      {
+        "id": "109.4",
+        "name": "Agent Staffing Plan",
+        "units": [
+          { "id": "109.4.1", "name": "Agent Capacity Review" },
+          { "id": "109.4.2", "name": "Role Coverage Mapping" },
+          { "id": "109.4.3", "name": "Staffing Recommendation" }
+        ]
+      },
+      {
+        "id": "109.5",
+        "name": "BPO Workflow Setup",
+        "units": [
+          { "id": "109.5.1", "name": "Workflow Trigger Definition" },
+          { "id": "109.5.2", "name": "Handoff Rule Draft" },
+          { "id": "109.5.3", "name": "Workflow Activation Notes" }
+        ]
+      },
+      {
+        "id": "109.6",
+        "name": "Service-Level Monitoring",
+        "units": [
+          { "id": "109.6.1", "name": "SLA Criteria Mapping" },
+          { "id": "109.6.2", "name": "Performance Signal Review" },
+          { "id": "109.6.3", "name": "SLA Status Notes" }
+        ]
+      },
+      {
+        "id": "109.7",
+        "name": "Quality Control Operations",
+        "units": [
+          { "id": "109.7.1", "name": "Output Review Criteria" },
+          { "id": "109.7.2", "name": "QA Sampling Plan" },
+          { "id": "109.7.3", "name": "Quality Finding Summary" }
+        ]
+      },
+      {
+        "id": "109.8",
+        "name": "Client Handoff Operations",
+        "units": [
+          { "id": "109.8.1", "name": "Client Input Package Review" },
+          { "id": "109.8.2", "name": "Delivery Format Selection" },
+          { "id": "109.8.3", "name": "Handoff Confirmation Record" }
+        ]
+      },
+      {
+        "id": "109.9",
+        "name": "BPO Cost Modeling",
+        "units": [
+          { "id": "109.9.1", "name": "Cost Driver Capture" },
+          { "id": "109.9.2", "name": "Labor Replacement Estimate" },
+          { "id": "109.9.3", "name": "Cost Model Summary" }
+        ]
+      },
+      {
+        "id": "109.10",
+        "name": "BPO Governance",
+        "units": [
+          { "id": "109.10.1", "name": "Outsourcing Rule Definition" },
+          { "id": "109.10.2", "name": "Risk And Control Review" },
+          { "id": "109.10.3", "name": "Governance Record Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "110",
+    "name": "System Map, Visualization & Architecture Diagrams",
+    "departments": [
+      {
+        "id": "110.1",
+        "name": "System Map Intake",
+        "units": [
+          { "id": "110.1.1", "name": "Map Purpose Capture" },
+          { "id": "110.1.2", "name": "System Boundary Review" },
+          { "id": "110.1.3", "name": "Map Brief Draft" }
+        ]
+      },
+      {
+        "id": "110.2",
+        "name": "Architecture Diagramming",
+        "units": [
+          { "id": "110.2.1", "name": "Architecture Node Identification" },
+          { "id": "110.2.2", "name": "Relationship Line Mapping" },
+          { "id": "110.2.3", "name": "Diagram QA Review" }
+        ]
+      },
+      {
+        "id": "110.3",
+        "name": "Dependency Visualization",
+        "units": [
+          { "id": "110.3.1", "name": "Dependency Capture" },
+          { "id": "110.3.2", "name": "Dependency Layout Draft" },
+          { "id": "110.3.3", "name": "Dependency Clarity Review" }
+        ]
+      },
+      {
+        "id": "110.4",
+        "name": "Workflow Diagramming",
+        "units": [
+          { "id": "110.4.1", "name": "Workflow Step Capture" },
+          { "id": "110.4.2", "name": "Flow Path Mapping" },
+          { "id": "110.4.3", "name": "Workflow Diagram QA" }
+        ]
+      },
+      {
+        "id": "110.5",
+        "name": "Org Chart Visualization",
+        "units": [
+          { "id": "110.5.1", "name": "Role Node Inventory" },
+          { "id": "110.5.2", "name": "Hierarchy Layout Review" },
+          { "id": "110.5.3", "name": "Org Chart Update" }
+        ]
+      },
+      {
+        "id": "110.6",
+        "name": "Control Panel Mapping",
+        "units": [
+          { "id": "110.6.1", "name": "Control Surface Inventory" },
+          { "id": "110.6.2", "name": "Panel Relationship Mapping" },
+          { "id": "110.6.3", "name": "Control Map QA" }
+        ]
+      },
+      {
+        "id": "110.7",
+        "name": "System Legend Design",
+        "units": [
+          { "id": "110.7.1", "name": "Symbol Set Definition" },
+          { "id": "110.7.2", "name": "Legend Label Draft" },
+          { "id": "110.7.3", "name": "Legend Consistency Review" }
+        ]
+      },
+      {
+        "id": "110.8",
+        "name": "Diagram Export Packaging",
+        "units": [
+          { "id": "110.8.1", "name": "Export Format Selection" },
+          { "id": "110.8.2", "name": "Diagram File Assembly" },
+          { "id": "110.8.3", "name": "Export Package QA" }
+        ]
+      },
+      {
+        "id": "110.9",
+        "name": "Visual Architecture Review",
+        "units": [
+          { "id": "110.9.1", "name": "Visual Complexity Review" },
+          { "id": "110.9.2", "name": "Readability Improvement Notes" },
+          { "id": "110.9.3", "name": "Architecture Visual QA" }
+        ]
+      },
+      {
+        "id": "110.10",
+        "name": "System Map Archive",
+        "units": [
+          { "id": "110.10.1", "name": "Diagram Record Capture" },
+          { "id": "110.10.2", "name": "Version Filing" },
+          { "id": "110.10.3", "name": "Map Archive Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "111",
+    "name": "Knowledge Monetization & Asset Commercialization",
+    "departments": [
+      {
+        "id": "111.1",
+        "name": "Monetizable Knowledge Discovery",
+        "units": [
+          { "id": "111.1.1", "name": "Knowledge Asset Capture" },
+          { "id": "111.1.2", "name": "Commercial Fit Review" },
+          { "id": "111.1.3", "name": "Monetization Candidate Notes" }
+        ]
+      },
+      {
+        "id": "111.2",
+        "name": "Productization Strategy",
+        "units": [
+          { "id": "111.2.1", "name": "Asset Package Definition" },
+          { "id": "111.2.2", "name": "Buyer Outcome Mapping" },
+          { "id": "111.2.3", "name": "Productization Brief" }
+        ]
+      },
+      {
+        "id": "111.3",
+        "name": "Commercial Offer Mapping",
+        "units": [
+          { "id": "111.3.1", "name": "Offer Type Selection" },
+          { "id": "111.3.2", "name": "Pricing Logic Review" },
+          { "id": "111.3.3", "name": "Offer Map Summary" }
+        ]
+      },
+      {
+        "id": "111.4",
+        "name": "Licensing Opportunity Review",
+        "units": [
+          { "id": "111.4.1", "name": "Licensing Candidate Capture" },
+          { "id": "111.4.2", "name": "Rights Scope Review" },
+          { "id": "111.4.3", "name": "Licensing Opportunity Notes" }
+        ]
+      },
+      {
+        "id": "111.5",
+        "name": "Digital Product Packaging",
+        "units": [
+          { "id": "111.5.1", "name": "Package Component Inventory" },
+          { "id": "111.5.2", "name": "Delivery Format Selection" },
+          { "id": "111.5.3", "name": "Product Package QA" }
+        ]
+      },
+      {
+        "id": "111.6",
+        "name": "Commercial Proof Development",
+        "units": [
+          { "id": "111.6.1", "name": "Proof Asset Selection" },
+          { "id": "111.6.2", "name": "Outcome Evidence Review" },
+          { "id": "111.6.3", "name": "Commercial Proof Summary" }
+        ]
+      },
+      {
+        "id": "111.7",
+        "name": "Distribution Channel Selection",
+        "units": [
+          { "id": "111.7.1", "name": "Channel Candidate Capture" },
+          { "id": "111.7.2", "name": "Channel Fit Review" },
+          { "id": "111.7.3", "name": "Distribution Recommendation" }
+        ]
+      },
+      {
+        "id": "111.8",
+        "name": "Revenue Model Design",
+        "units": [
+          { "id": "111.8.1", "name": "Revenue Path Mapping" },
+          { "id": "111.8.2", "name": "Cost And Margin Review" },
+          { "id": "111.8.3", "name": "Revenue Model Summary" }
+        ]
+      },
+      {
+        "id": "111.9",
+        "name": "Asset Commercialization Risk",
+        "units": [
+          { "id": "111.9.1", "name": "IP Risk Detection" },
+          { "id": "111.9.2", "name": "Market Confusion Review" },
+          { "id": "111.9.3", "name": "Commercial Risk Notes" }
+        ]
+      },
+      {
+        "id": "111.10",
+        "name": "Monetization Dashboard",
+        "units": [
+          { "id": "111.10.1", "name": "Revenue Signal Collection" },
+          { "id": "111.10.2", "name": "Asset Pipeline Summary" },
+          { "id": "111.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "112",
+    "name": "Enterprise Knowledge Base & Internal Wiki",
+    "departments": [
+      {
+        "id": "112.1",
+        "name": "Knowledge Base Architecture",
+        "units": [
+          { "id": "112.1.1", "name": "Knowledge Base Purpose Definition" },
+          { "id": "112.1.2", "name": "Section Structure Mapping" },
+          { "id": "112.1.3", "name": "Architecture Review" }
+        ]
+      },
+      {
+        "id": "112.2",
+        "name": "Wiki Page Creation",
+        "units": [
+          { "id": "112.2.1", "name": "Page Topic Selection" },
+          { "id": "112.2.2", "name": "Page Drafting" },
+          { "id": "112.2.3", "name": "Wiki Page QA" }
+        ]
+      },
+      {
+        "id": "112.3",
+        "name": "Knowledge Article Standards",
+        "units": [
+          { "id": "112.3.1", "name": "Article Template Definition" },
+          { "id": "112.3.2", "name": "Article Quality Review" },
+          { "id": "112.3.3", "name": "Standard Update Notes" }
+        ]
+      },
+      {
+        "id": "112.4",
+        "name": "Internal Search Optimization",
+        "units": [
+          { "id": "112.4.1", "name": "Search Term Capture" },
+          { "id": "112.4.2", "name": "Metadata Improvement Review" },
+          { "id": "112.4.3", "name": "Searchability Update" }
+        ]
+      },
+      {
+        "id": "112.5",
+        "name": "Knowledge Ownership",
+        "units": [
+          { "id": "112.5.1", "name": "Owner Assignment Review" },
+          { "id": "112.5.2", "name": "Maintenance Responsibility Mapping" },
+          { "id": "112.5.3", "name": "Ownership Record Update" }
+        ]
+      },
+      {
+        "id": "112.6",
+        "name": "Wiki Maintenance",
+        "units": [
+          { "id": "112.6.1", "name": "Stale Page Detection" },
+          { "id": "112.6.2", "name": "Update Requirement Review" },
+          { "id": "112.6.3", "name": "Maintenance Notes" }
+        ]
+      },
+      {
+        "id": "112.7",
+        "name": "Internal FAQ Management",
+        "units": [
+          { "id": "112.7.1", "name": "FAQ Candidate Capture" },
+          { "id": "112.7.2", "name": "Answer Drafting" },
+          { "id": "112.7.3", "name": "FAQ Update" }
+        ]
+      },
+      {
+        "id": "112.8",
+        "name": "Knowledge Base Governance",
+        "units": [
+          { "id": "112.8.1", "name": "Knowledge Rule Definition" },
+          { "id": "112.8.2", "name": "Edit Permission Review" },
+          { "id": "112.8.3", "name": "Governance Decision Record" }
+        ]
+      },
+      {
+        "id": "112.9",
+        "name": "Wiki Analytics",
+        "units": [
+          { "id": "112.9.1", "name": "Usage Signal Collection" },
+          { "id": "112.9.2", "name": "Gap Pattern Review" },
+          { "id": "112.9.3", "name": "Analytics Summary" }
+        ]
+      },
+      {
+        "id": "112.10",
+        "name": "Knowledge Base Dashboard",
+        "units": [
+          { "id": "112.10.1", "name": "Knowledge Health Signal Collection" },
+          { "id": "112.10.2", "name": "Wiki Status Summary" },
+          { "id": "112.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "113",
+    "name": "Scenario Library & Playbook Systems",
+    "departments": [
+      {
+        "id": "113.1",
+        "name": "Scenario Intake",
+        "units": [
+          { "id": "113.1.1", "name": "Scenario Signal Capture" },
+          { "id": "113.1.2", "name": "Scenario Boundary Definition" },
+          { "id": "113.1.3", "name": "Scenario Intake Record" }
+        ]
+      },
+      {
+        "id": "113.2",
+        "name": "Scenario Classification",
+        "units": [
+          { "id": "113.2.1", "name": "Scenario Type Assignment" },
+          { "id": "113.2.2", "name": "Risk Level Review" },
+          { "id": "113.2.3", "name": "Classification Update" }
+        ]
+      },
+      {
+        "id": "113.3",
+        "name": "Playbook Design",
+        "units": [
+          { "id": "113.3.1", "name": "Playbook Objective Definition" },
+          { "id": "113.3.2", "name": "Response Step Drafting" },
+          { "id": "113.3.3", "name": "Playbook QA" }
+        ]
+      },
+      {
+        "id": "113.4",
+        "name": "Scenario Response Mapping",
+        "units": [
+          { "id": "113.4.1", "name": "Trigger Condition Mapping" },
+          { "id": "113.4.2", "name": "Response Path Selection" },
+          { "id": "113.4.3", "name": "Response Map Summary" }
+        ]
+      },
+      {
+        "id": "113.5",
+        "name": "Decision Tree Development",
+        "units": [
+          { "id": "113.5.1", "name": "Decision Point Capture" },
+          { "id": "113.5.2", "name": "Branch Logic Draft" },
+          { "id": "113.5.3", "name": "Decision Tree Review" }
+        ]
+      },
+      {
+        "id": "113.6",
+        "name": "Playbook Testing",
+        "units": [
+          { "id": "113.6.1", "name": "Test Case Selection" },
+          { "id": "113.6.2", "name": "Scenario Run Review" },
+          { "id": "113.6.3", "name": "Playbook Test Notes" }
+        ]
+      },
+      {
+        "id": "113.7",
+        "name": "Scenario Lessons",
+        "units": [
+          { "id": "113.7.1", "name": "Scenario Outcome Capture" },
+          { "id": "113.7.2", "name": "Lesson Pattern Review" },
+          { "id": "113.7.3", "name": "Lesson Update" }
+        ]
+      },
+      {
+        "id": "113.8",
+        "name": "Playbook Versioning",
+        "units": [
+          { "id": "113.8.1", "name": "Version Change Capture" },
+          { "id": "113.8.2", "name": "Playbook Diff Review" },
+          { "id": "113.8.3", "name": "Version Record Update" }
+        ]
+      },
+      {
+        "id": "113.9",
+        "name": "Scenario Archive",
+        "units": [
+          { "id": "113.9.1", "name": "Scenario Record Filing" },
+          { "id": "113.9.2", "name": "Scenario Retrieval Tagging" },
+          { "id": "113.9.3", "name": "Archive Update" }
+        ]
+      },
+      {
+        "id": "113.10",
+        "name": "Playbook Dashboard",
+        "units": [
+          { "id": "113.10.1", "name": "Playbook Signal Collection" },
+          { "id": "113.10.2", "name": "Scenario Coverage Summary" },
+          { "id": "113.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "114",
+    "name": "Marketplace Intelligence & Commercial Positioning",
+    "departments": [
+      {
+        "id": "114.1",
+        "name": "Market Landscape Mapping",
+        "units": [
+          { "id": "114.1.1", "name": "Market Category Definition" },
+          { "id": "114.1.2", "name": "Competitor Set Review" },
+          { "id": "114.1.3", "name": "Landscape Summary" }
+        ]
+      },
+      {
+        "id": "114.2",
+        "name": "Commercial Positioning",
+        "units": [
+          { "id": "114.2.1", "name": "Positioning Goal Capture" },
+          { "id": "114.2.2", "name": "Differentiation Angle Review" },
+          { "id": "114.2.3", "name": "Positioning Statement Draft" }
+        ]
+      },
+      {
+        "id": "114.3",
+        "name": "Competitor Intelligence",
+        "units": [
+          { "id": "114.3.1", "name": "Competitor Signal Collection" },
+          { "id": "114.3.2", "name": "Offer Comparison Review" },
+          { "id": "114.3.3", "name": "Competitor Brief Update" }
+        ]
+      },
+      {
+        "id": "114.4",
+        "name": "Buyer Segment Intelligence",
+        "units": [
+          { "id": "114.4.1", "name": "Buyer Segment Definition" },
+          { "id": "114.4.2", "name": "Need Pattern Review" },
+          { "id": "114.4.3", "name": "Buyer Insight Summary" }
+        ]
+      },
+      {
+        "id": "114.5",
+        "name": "Pricing Position Review",
+        "units": [
+          { "id": "114.5.1", "name": "Price Benchmark Capture" },
+          { "id": "114.5.2", "name": "Value Comparison Review" },
+          { "id": "114.5.3", "name": "Pricing Position Notes" }
+        ]
+      },
+      {
+        "id": "114.6",
+        "name": "Messaging Position Review",
+        "units": [
+          { "id": "114.6.1", "name": "Message Claim Capture" },
+          { "id": "114.6.2", "name": "Market Resonance Review" },
+          { "id": "114.6.3", "name": "Messaging Recommendation" }
+        ]
+      },
+      {
+        "id": "114.7",
+        "name": "Commercial Risk Review",
+        "units": [
+          { "id": "114.7.1", "name": "Market Risk Detection" },
+          { "id": "114.7.2", "name": "Positioning Weakness Review" },
+          { "id": "114.7.3", "name": "Commercial Risk Notes" }
+        ]
+      },
+      {
+        "id": "114.8",
+        "name": "Opportunity Gap Analysis",
+        "units": [
+          { "id": "114.8.1", "name": "Market Gap Detection" },
+          { "id": "114.8.2", "name": "Capability Fit Review" },
+          { "id": "114.8.3", "name": "Opportunity Gap Summary" }
+        ]
+      },
+      {
+        "id": "114.9",
+        "name": "Go-To-Market Intelligence",
+        "units": [
+          { "id": "114.9.1", "name": "Channel Signal Review" },
+          { "id": "114.9.2", "name": "Launch Path Mapping" },
+          { "id": "114.9.3", "name": "GTM Intelligence Brief" }
+        ]
+      },
+      {
+        "id": "114.10",
+        "name": "Marketplace Dashboard",
+        "units": [
+          { "id": "114.10.1", "name": "Market Signal Collection" },
+          { "id": "114.10.2", "name": "Positioning Status Summary" },
+          { "id": "114.10.3", "name": "Dashboard Update" }
+        ]
+      }
+    ]
+  }
+]
