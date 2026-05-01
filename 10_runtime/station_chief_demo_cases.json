@@ -1,0 +1,34 @@
+{
+  "demo_cases": [
+    {
+      "case_id": "demo_check_please",
+      "command": "check please",
+      "expected_command_type": "verification",
+      "expected_activation_tier": "Tier 4 — Audit / Archive"
+    },
+    {
+      "case_id": "demo_build_runtime",
+      "command": "build Station Chief runtime skeleton",
+      "expected_command_type": "build",
+      "expected_activation_tier": "Tier 3 — Active Operation"
+    },
+    {
+      "case_id": "demo_blueberry_pancakes",
+      "command": "blueberry pancakes remember this",
+      "expected_command_type": "remember_only",
+      "expected_activation_tier": "Tier 0 — Passive Whole-Org Awareness"
+    },
+    {
+      "case_id": "demo_square_block",
+      "command": "Square Block Square Hole strict execution",
+      "expected_command_type": "strict_execution",
+      "expected_activation_tier": "Tier 2 — Command Brief"
+    },
+    {
+      "case_id": "demo_agent_court",
+      "command": "agent court accountability review",
+      "expected_command_type": "governance",
+      "expected_activation_tier": "Tier 2 — Command Brief"
+    }
+  ]
+}
