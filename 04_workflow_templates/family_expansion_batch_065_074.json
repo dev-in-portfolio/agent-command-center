@@ -1,0 +1,575 @@
+{
+  "batch": "065_074",
+  "families": [
+    {
+      "id": 65,
+      "name": "Legal Operations & Case Management",
+      "folder": "02_departments/065_legal_operations_and_case_management",
+      "departments": [
+        {
+          "id": "65.1",
+          "name": "Legal Matter Intake",
+          "units": ["Matter Summary Capture", "Legal Issue Classification", "Matter Intake Record"]
+        },
+        {
+          "id": "65.2",
+          "name": "Case File Organization",
+          "units": ["Case Document Inventory", "File Structure Setup", "Case File QA"]
+        },
+        {
+          "id": "65.3",
+          "name": "Evidence Management",
+          "units": ["Evidence Item Capture", "Evidence Relevance Review", "Evidence Packet Update"]
+        },
+        {
+          "id": "65.4",
+          "name": "Legal Timeline Building",
+          "units": ["Event Capture", "Chronology Assembly", "Timeline Gap Review"]
+        },
+        {
+          "id": "65.5",
+          "name": "Legal Research Support",
+          "units": ["Research Question Framing", "Source And Authority Review", "Legal Research Summary"]
+        },
+        {
+          "id": "65.6",
+          "name": "Contract Review Support",
+          "units": ["Clause Extraction", "Obligation Mapping", "Contract Risk Notes"]
+        },
+        {
+          "id": "65.7",
+          "name": "Filing And Deadline Tracking",
+          "units": ["Filing Requirement Capture", "Deadline Calendar Update", "Filing Readiness Check"]
+        },
+        {
+          "id": "65.8",
+          "name": "Legal Correspondence",
+          "units": ["Correspondence Intent Review", "Draft Response Preparation", "Legal Tone Check"]
+        },
+        {
+          "id": "65.9",
+          "name": "Case Strategy Support",
+          "units": ["Argument Position Mapping", "Evidence Alignment Review", "Case Strategy Brief"]
+        },
+        {
+          "id": "65.10",
+          "name": "Legal Operations Dashboard",
+          "units": ["Matter Status Collection", "Risk And Deadline Summary", "Legal Dashboard Update"]
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Investigations & Due Diligence",
+      "folder": "02_departments/066_investigations_and_due_diligence",
+      "departments": [
+        {
+          "id": "66.1",
+          "name": "Investigation Intake",
+          "units": ["Investigation Question Capture", "Scope Boundary Definition", "Investigation Plan Draft"]
+        },
+        {
+          "id": "66.2",
+          "name": "Background Research",
+          "units": ["Subject Profile Collection", "Source Trail Review", "Background Summary"]
+        },
+        {
+          "id": "66.3",
+          "name": "Due Diligence Review",
+          "units": ["Due Diligence Checklist", "Risk Factor Collection", "Due Diligence Finding Summary"]
+        },
+        {
+          "id": "66.4",
+          "name": "Evidence Collection",
+          "units": ["Evidence Source Identification", "Evidence Capture", "Evidence Integrity Check"]
+        },
+        {
+          "id": "66.5",
+          "name": "Claim Verification",
+          "units": ["Claim Extraction", "Cross-Source Confirmation", "Verification Decision Notes"]
+        },
+        {
+          "id": "66.6",
+          "name": "Entity Research",
+          "units": ["Entity Identification", "Entity Relationship Mapping", "Entity Risk Summary"]
+        },
+        {
+          "id": "66.7",
+          "name": "Red Flag Detection",
+          "units": ["Red Flag Signal Review", "Severity Assessment", "Escalation Recommendation"]
+        },
+        {
+          "id": "66.8",
+          "name": "Investigation Timeline",
+          "units": ["Event Sequence Capture", "Timeline Consistency Review", "Timeline Finding Summary"]
+        },
+        {
+          "id": "66.9",
+          "name": "Source Credibility Review",
+          "units": ["Source Origin Review", "Bias And Reliability Check", "Credibility Decision Record"]
+        },
+        {
+          "id": "66.10",
+          "name": "Investigation Report",
+          "units": ["Findings Outline", "Evidence-Backed Narrative", "Report QA Review"]
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Personal Finance, Tax & Household Economy",
+      "folder": "02_departments/067_personal_finance_tax_and_household_economy",
+      "departments": [
+        {
+          "id": "67.1",
+          "name": "Household Budgeting",
+          "units": ["Income And Expense Capture", "Budget Category Review", "Budget Adjustment Notes"]
+        },
+        {
+          "id": "67.2",
+          "name": "Cash Flow Management",
+          "units": ["Cash Flow Snapshot", "Upcoming Obligation Review", "Cash Flow Recommendation"]
+        },
+        {
+          "id": "67.3",
+          "name": "Personal Tax Organization",
+          "units": ["Tax Document Inventory", "Deduction Category Mapping", "Tax Prep Checklist"]
+        },
+        {
+          "id": "67.4",
+          "name": "Debt Tracking",
+          "units": ["Debt Account Inventory", "Payment Priority Review", "Debt Action Notes"]
+        },
+        {
+          "id": "67.5",
+          "name": "Savings Planning",
+          "units": ["Savings Goal Definition", "Funding Path Mapping", "Savings Progress Review"]
+        },
+        {
+          "id": "67.6",
+          "name": "Household Cost Reduction",
+          "units": ["Expense Pattern Review", "Savings Opportunity Detection", "Cost Reduction Plan"]
+        },
+        {
+          "id": "67.7",
+          "name": "Financial Document Management",
+          "units": ["Financial Record Intake", "Statement Organization", "Document Retrieval Summary"]
+        },
+        {
+          "id": "67.8",
+          "name": "Insurance Cost Review",
+          "units": ["Policy Cost Capture", "Renewal And Premium Review", "Coverage Cost Notes"]
+        },
+        {
+          "id": "67.9",
+          "name": "Household Economic Planning",
+          "units": ["Household Goal Mapping", "Resource Allocation Review", "Household Economy Brief"]
+        },
+        {
+          "id": "67.10",
+          "name": "Personal Finance Dashboard",
+          "units": ["Finance Signal Collection", "Monthly Summary Draft", "Dashboard Update"]
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "name": "Travel, Field Work & Mobility Operations",
+      "folder": "02_departments/068_travel_field_work_and_mobility_operations",
+      "departments": [
+        {
+          "id": "68.1",
+          "name": "Travel Planning",
+          "units": ["Destination Requirement Capture", "Travel Option Review", "Travel Plan Summary"]
+        },
+        {
+          "id": "68.2",
+          "name": "Itinerary Building",
+          "units": ["Time Block Mapping", "Activity Sequence Design", "Itinerary QA"]
+        },
+        {
+          "id": "68.3",
+          "name": "Route Planning",
+          "units": ["Stop List Intake", "Route Order Optimization", "Route Export Review"]
+        },
+        {
+          "id": "68.4",
+          "name": "Field Work Preparation",
+          "units": ["Field Objective Definition", "Equipment And Document Checklist", "Field Readiness Review"]
+        },
+        {
+          "id": "68.5",
+          "name": "Lodging And Transportation",
+          "units": ["Lodging Requirement Review", "Transportation Option Mapping", "Booking Decision Notes"]
+        },
+        {
+          "id": "68.6",
+          "name": "Travel Risk Review",
+          "units": ["Travel Risk Identification", "Safety And Contingency Mapping", "Travel Risk Summary"]
+        },
+        {
+          "id": "68.7",
+          "name": "Field Notes Capture",
+          "units": ["Observation Intake", "Field Note Organization", "Field Summary Update"]
+        },
+        {
+          "id": "68.8",
+          "name": "Travel Budgeting",
+          "units": ["Cost Estimate Capture", "Travel Spend Review", "Budget Adjustment Notes"]
+        },
+        {
+          "id": "68.9",
+          "name": "Mobility Logistics",
+          "units": ["Movement Constraint Review", "Schedule Coordination", "Mobility Plan Update"]
+        },
+        {
+          "id": "68.10",
+          "name": "Travel Archive",
+          "units": ["Trip Record Capture", "Lessons Learned Summary", "Travel Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "name": "Home, Workshop & Physical Project Builds",
+      "folder": "02_departments/069_home_workshop_and_physical_project_builds",
+      "departments": [
+        {
+          "id": "69.1",
+          "name": "Home Project Intake",
+          "units": ["Project Idea Capture", "Scope Boundary Review", "Project Intake Summary"]
+        },
+        {
+          "id": "69.2",
+          "name": "Build Planning",
+          "units": ["Build Requirement Mapping", "Step Sequence Draft", "Build Readiness Review"]
+        },
+        {
+          "id": "69.3",
+          "name": "Materials And Tools",
+          "units": ["Material List Creation", "Tool Requirement Review", "Supply Gap Notes"]
+        },
+        {
+          "id": "69.4",
+          "name": "Workshop Organization",
+          "units": ["Workspace Inventory", "Storage Layout Planning", "Workshop Cleanup Review"]
+        },
+        {
+          "id": "69.5",
+          "name": "DIY Safety",
+          "units": ["Hazard Identification", "Safety Control Selection", "Safety Checklist Review"]
+        },
+        {
+          "id": "69.6",
+          "name": "Repair And Maintenance",
+          "units": ["Repair Issue Capture", "Maintenance Step Mapping", "Repair Follow-Up Notes"]
+        },
+        {
+          "id": "69.7",
+          "name": "Measurement And Layout",
+          "units": ["Measurement Capture", "Layout Sketch Review", "Measurement QA"]
+        },
+        {
+          "id": "69.8",
+          "name": "Vendor And Contractor Coordination",
+          "units": ["Contracter Need Review", "Quote Comparison Notes", "Contractor Follow-Up Plan"]
+        },
+        {
+          "id": "69.9",
+          "name": "Project Progress Tracking",
+          "units": ["Progress Signal Capture", "Blocker Review", "Progress Update Summary"]
+        },
+        {
+          "id": "69.10",
+          "name": "Physical Build Archive",
+          "units": ["Build Record Capture", "Before-And-After Asset Filing", "Build Lesson Update"]
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "name": "Humor, Entertainment & Engagement Systems",
+      "folder": "02_departments/070_humor_entertainment_and_engagement_systems",
+      "departments": [
+        {
+          "id": "70.1",
+          "name": "Humor Concepting",
+          "units": ["Joke Seed Capture", "Punchline Angle Mapping", "Humor Fit Review"]
+        },
+        {
+          "id": "70.2",
+          "name": "Meme Development",
+          "units": ["Meme Format Selection", "Caption Drafting", "Meme Timing Review"]
+        },
+        {
+          "id": "70.3",
+          "name": "Entertainment Planning",
+          "units": ["Entertainment Goal Capture", "Activity Option Mapping", "Entertainment Plan Summary"]
+        },
+        {
+          "id": "70.4",
+          "name": "Game And Activity Design",
+          "units": ["Game Concept Draft", "Rule Set Design", "Playability Review"]
+        },
+        {
+          "id": "70.5",
+          "name": "Audience Engagement",
+          "units": ["Audience Signal Review", "Engagement Hook Draft", "Response Pattern Notes"]
+        },
+        {
+          "id": "70.6",
+          "name": "Fun Facts And Trivia",
+          "units": ["Trivia Topic Selection", "Fact Collection", "Trivia QA Review"]
+        },
+        {
+          "id": "70.7",
+          "name": "Comedy Risk Review",
+          "units": ["Joke Risk Detection", "Audience Sensitivity Review", "Safer Punchline Option"]
+        },
+        {
+          "id": "70.8",
+          "name": "Event Entertainment Support",
+          "units": ["Event Mood Mapping", "Entertainment Segment Draft", "Event Engagement Review"]
+        },
+        {
+          "id": "70.9",
+          "name": "Character-Based Humor",
+          "units": ["Character Trait Capture", "Situation Setup Draft", "Character Joke QA"]
+        },
+        {
+          "id": "70.10",
+          "name": "Engagement Archive",
+          "units": ["Winning Bit Capture", "Audience Reaction Filing", "Reusable Humor Update"]
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "name": "Spiritual, Philosophical & Meaning Systems",
+      "folder": "02_departments/071_spiritual_philosophical_and_meaning_systems",
+      "departments": [
+        {
+          "id": "71.1",
+          "name": "Meaning-Making",
+          "units": ["Meaning Question Capture", "Theme Reflection", "Meaning Summary Notes"]
+        },
+        {
+          "id": "71.2",
+          "name": "Philosophical Inquiry",
+          "units": ["Philosophical Question Framing", "Argument Path Mapping", "Philosophical Reflection Summary"]
+        },
+        {
+          "id": "71.3",
+          "name": "Values Clarification",
+          "units": ["Value Signal Detection", "Value Conflict Review", "Values Statement Draft"]
+        },
+        {
+          "id": "71.4",
+          "name": "Personal Ritual Design",
+          "units": ["Ritual Purpose Definition", "Ritual Structure Draft", "Ritual Reflection Notes"]
+        },
+        {
+          "id": "71.5",
+          "name": "Symbol And Archetype Mapping",
+          "units": ["Symbol Capture", "Archetype Pattern Review", "Symbol Meaning Record"]
+        },
+        {
+          "id": "71.6",
+          "name": "Ethical Reflection",
+          "units": ["Ethical Question Capture", "Consequence And Principle Review", "Ethical Reflection Summary"]
+        },
+        {
+          "id": "71.7",
+          "name": "Life Narrative Reflection",
+          "units": ["Life Event Capture", "Narrative Pattern Review", "Life Story Update"]
+        },
+        {
+          "id": "71.8",
+          "name": "Belief System Mapping",
+          "units": ["Belief Inventory", "Belief Conflict Detection", "Belief Map Update"]
+        },
+        {
+          "id": "71.9",
+          "name": "Awe And Wonder",
+          "units": ["Wonder Signal Capture", "Awe Reflection Prompt", "Wonder Archive Update"]
+        },
+        {
+          "id": "71.10",
+          "name": "Meaning Archive",
+          "units": ["Reflection Record Capture", "Theme Filing", "Meaning Archive Update"]
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "name": "Emotional Intelligence & Self-Regulation Systems",
+      "folder": "02_departments/072_emotional_intelligence_and_self_regulation_systems",
+      "departments": [
+        {
+          "id": "72.1",
+          "name": "Emotion Detection",
+          "units": ["Emotional Signal Capture", "Emotion Label Selection", "Emotion Pattern Notes"]
+        },
+        {
+          "id": "72.2",
+          "name": "Self-Regulation Planning",
+          "units": ["Regulation Need Detection", "Regulation Strategy Selection", "Regulation Plan Summary"]
+        },
+        {
+          "id": "72.3",
+          "name": "Stress Pattern Review",
+          "units": ["Stress Trigger Capture", "Stress Response Mapping", "Stress Adjustment Notes"]
+        },
+        {
+          "id": "72.4",
+          "name": "Communication Tone Review",
+          "units": ["Tone Signal Detection", "Tone Impact Review", "Tone Adjustment Suggestion"]
+        },
+        {
+          "id": "72.5",
+          "name": "Conflict Emotion Mapping",
+          "units": ["Conflict Feeling Capture", "Need And Boundary Review", "Conflict Emotion Summary"]
+        },
+        {
+          "id": "72.6",
+          "name": "Recovery And Reset",
+          "units": ["Recovery Need Detection", "Reset Action Selection", "Recovery Status Notes"]
+        },
+        {
+          "id": "72.7",
+          "name": "Emotional Pattern Memory",
+          "units": ["Pattern Event Capture", "Pattern Trend Review", "Emotional Memory Update"]
+        },
+        {
+          "id": "72.8",
+          "name": "Empathy Mapping",
+          "units": ["Perspective Capture", "Feeling And Need Mapping", "Empathy Summary"]
+        },
+        {
+          "id": "72.9",
+          "name": "Boundary Support",
+          "units": ["Boundary Need Review", "Boundary Statement Draft", "Boundary Follow-Up Notes"]
+        },
+        {
+          "id": "72.10",
+          "name": "Emotional Dashboard",
+          "units": ["Emotional Signal Collection", "Trend Summary", "Emotional Dashboard Update"]
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "name": "Negotiation, Conflict & Mediation Systems",
+      "folder": "02_departments/073_negotiation_conflict_and_mediation_systems",
+      "departments": [
+        {
+          "id": "73.1",
+          "name": "Conflict Intake",
+          "units": ["Conflict Situation Capture", "Stakeholder Position Mapping", "Conflict Intake Summary"]
+        },
+        {
+          "id": "73.2",
+          "name": "Mediation Planning",
+          "units": ["Mediation Goal Definition", "Neutral Framing Draft", "Mediation Plan Review"]
+        },
+        {
+          "id": "73.3",
+          "name": "Negotiation Preparation",
+          "units": ["Desired Outcome Mapping", "Leverage And Constraint Review", "Negotiation Prep Brief"]
+        },
+        {
+          "id": "73.4",
+          "name": "Interest-Based Analysis",
+          "units": ["Position Statement Extraction", "Underlying Interest Mapping", "Shared Interest Summary"]
+        },
+        {
+          "id": "73.5",
+          "name": "De-Escalation Support",
+          "units": ["Escalation Signal Detection", "De-Escalation Language Draft", "Calm Path Recommendation"]
+        },
+        {
+          "id": "73.6",
+          "name": "Agreement Drafting",
+          "units": ["Agreement Point Capture", "Term Clarity Review", "Agreement Summary Draft"]
+        },
+        {
+          "id": "73.7",
+          "name": "Conflict Pattern Review",
+          "units": ["Repeated Conflict Detection", "Pattern Cause Review", "Pattern Repair Recommendation"]
+        },
+        {
+          "id": "73.8",
+          "name": "Boundary Negotiation",
+          "units": ["Boundary Issue Capture", "Boundary Option Mapping", "Boundary Agreement Notes"]
+        },
+        {
+          "id": "73.9",
+          "name": "Post-Conflict Repair",
+          "units": ["Repair Need Detection", "Repair Message Draft", "Relationship Recovery Notes"]
+        },
+        {
+          "id": "73.10",
+          "name": "Conflict Resolution Archive",
+          "units": ["Conflict Record Capture", "Resolution Outcome Filing", "Conflict Lesson Update"]
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "name": "Debate, Argument & Critical Thinking Systems",
+      "folder": "02_departments/074_debate_argument_and_critical_thinking_systems",
+      "departments": [
+        {
+          "id": "74.1",
+          "name": "Argument Mapping",
+          "units": ["Claim Identification", "Premise And Evidence Mapping", "Argument Structure Review"]
+        },
+        {
+          "id": "74.2",
+          "name": "Critical Thinking Review",
+          "units": ["Assumption Detection", "Logic Quality Review", "Critical Thinking Notes"]
+        },
+        {
+          "id": "74.3",
+          "name": "Debate Preparation",
+          "units": ["Debate Position Definition", "Supporting Argument Draft", "Debate Readiness Review"]
+        },
+        {
+          "id": "74.4",
+          "name": "Counterargument Development",
+          "units": ["Opposing Claim Capture", "Counterpoint Drafting", "Counterargument QA"]
+        },
+        {
+          "id": "74.5",
+          "name": "Fallacy Detection",
+          "units": ["Fallacy Candidate Capture", "Logic Error Classification", "Fallacy Correction Notes"]
+        },
+        {
+          "id": "74.6",
+          "name": "Evidence Weighing",
+          "units": ["Evidence Inventory", "Evidence Strength Review", "Evidence Weight Summary"]
+        },
+        {
+          "id": "74.7",
+          "name": "Steelmanning",
+          "units": ["Opposing View Reconstruction", "Strongest Case Draft", "Steelman Quality Review"]
+        },
+        {
+          "id": "74.8",
+          "name": "Red Team Thinking",
+          "units": ["Weakness Detection", "Attack Path Simulation", "Red Team Finding Summary"]
+        },
+        {
+          "id": "74.9",
+          "name": "Decision Argument Review",
+          "units": ["Decision Claim Capture", "Pro-Con Structure Review", "Decision Argument Recommendation"]
+        },
+        {
+          "id": "74.10",
+          "name": "Reasoning Archive",
+          "units": ["Argument Record Capture", "Reasoning Pattern Filing", "Reasoning Lesson Update"]
+        }
+      ]
+    }
+  ]
+}
