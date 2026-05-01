@@ -1,0 +1,1547 @@
+{
+  "extension_id": "devinization_pack_006_output_assembly_delivery_intelligence",
+  "extension_name": "Devinization Pack 6 — Output Assembly & Delivery Intelligence",
+  "mode": "overlay",
+  "preserves_locked_baseline": true,
+  "baseline_status": "175-family expansion locked",
+  "depends_on": [
+    "family_007_devinized_engineering_overload",
+    "devinization_pack_001_command_brain",
+    "devinization_pack_002_runtime_routing_work_control",
+    "devinization_pack_003_prompt_memory_context_architecture",
+    "devinization_pack_004_execution_safety_tools_recovery",
+    "devinization_pack_005_quality_standards_human_review"
+  ],
+  "included_families": [
+    {
+      "family_id": 138,
+      "family_name": "Output Assembly, Synthesis & Final Answer Design"
+    },
+    {
+      "family_id": 82,
+      "family_name": "Version Control, Releases & Change Management"
+    }
+  ],
+  "purpose": "Define the final-output and delivery layer that turns routed work, agent outputs, evidence, validation results, changed-file proof, review decisions, and user preferences into clean, usable, audience-ready deliverables. This pack governs how the system assembles final answers, avoids burying the important part, preserves proof, labels versions, tracks changes, and packages work for Devin, clients, portfolio use, or future runtime handoff.",
+  "core_operating_philosophy": "The Agent Command Center remains a massive command civilization with selective live deployment. The whole 175-family agency remains available for awareness, routing, governance, memory, standards, review, and output intelligence. This pack does not shrink the art piece. This pack defines how completed work becomes clear, useful, versioned, packaged, and ready for the intended audience. Delivery is only real when it is useful to the human at the other end.",
+  "activation_rule": "Use this pack when the user says or implies: final answer, assemble output, synthesize this, make it copy paste, format this, make it usable, front-load the answer, do not bury the important part, deliverable, package this, version this, release notes, changelog, final report, commit proof, changed files, validator summary, client-ready, portfolio-ready, export-ready, presentation-ready, dashboard-ready, lock report, next step summary, what changed, ready to ship, delivery intelligence.",
+  "delivery_layers": [
+    {
+      "layer": 1,
+      "name": "Priority Front-Load Layer",
+      "purpose": "Put the most actionable answer, status, verdict, or next step near the top instead of burying it."
+    },
+    {
+      "layer": 2,
+      "name": "Synthesis Layer",
+      "purpose": "Combine work outputs, evidence, validator results, review notes, and context into one coherent final response."
+    },
+    {
+      "layer": 3,
+      "name": "Formatting & Copy/Paste Layer",
+      "purpose": "Shape outputs into usable copy/paste blocks, reports, prompts, tables, or deliverable-ready structures."
+    },
+    {
+      "layer": 4,
+      "name": "Proof & Traceability Layer",
+      "purpose": "Attach changed files, validator results, commit hashes, evidence, assumptions, and uncertainty notes where needed."
+    },
+    {
+      "layer": 5,
+      "name": "Audience Adaptation Layer",
+      "purpose": "Adjust output for Devin, client, recruiter, portfolio, technical, operational, or public-facing use."
+    },
+    {
+      "layer": 6,
+      "name": "Version & Release Layer",
+      "purpose": "Track versions, release notes, changelogs, labels, package names, and stable baselines."
+    },
+    {
+      "layer": 7,
+      "name": "Final Delivery Gate",
+      "purpose": "Confirm that the output is complete, readable, scoped, validated, and ready for its intended use."
+    }
+  ],
+  "global_rules": [
+    "1. Preserve the locked 175-family baseline unless the user explicitly authorizes baseline mutation.",
+    "2. Use overlays for Devinization unless explicitly instructed otherwise.",
+    "3. Front-load the most important answer, verdict, or next action.",
+    "4. Do not bury likely-wanted information at the bottom.",
+    "5. Final answers must distinguish done, blocked, partial, failed, and next-step states.",
+    "6. Repository final reports must include changed files, validator results, commit hash, and baseline-scope confirmation.",
+    "7. Deliverables must be shaped for the intended audience.",
+    "8. Copy/paste outputs must be complete enough to use without hidden setup.",
+    "9. Prompts must preserve the user’s requested content and must not silently shorten important detail.",
+    "10. Version labels must be clear and sequential when a project uses versioned outputs.",
+    "11. Release notes must identify what changed, why it changed, and what remains.",
+    "12. Changelogs must preserve meaningful decisions, fixes, and scope changes.",
+    "13. Do not claim a file, report, release, or export is ready unless the proof layer supports it.",
+    "14. When output is partial, say exactly what is complete, what is missing, and what the next command should be.",
+    "15. When delivering check results, give a verdict first, then proof.",
+    "16. Preserve the art piece: delivery intelligence makes the command civilization usable without shrinking it."
+  ],
+  "crews": [
+    {
+      "crew_id": "DV.P6.001",
+      "crew_name": "Final Answer Assembly Crew",
+      "family_anchor": "138. Output Assembly, Synthesis & Final Answer Design",
+      "mission": "Assemble final answers from routed work, evidence, validator results, context, user preferences, and next-step recommendations.",
+      "triggers": [
+        "final answer",
+        "assemble output",
+        "report back",
+        "answer this",
+        "final response"
+      ],
+      "primary_outputs": [
+        "final_answer.md",
+        "assembled_response_packet.json",
+        "answer_structure_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.002 Priority Front-Load Crew",
+        "DV.P6.004 Proof Integration Crew",
+        "DV.P6.012 Final Delivery Gate Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.001.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.001.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.001.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.001.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.001.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.001.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.001.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.001.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.001.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.002",
+      "crew_name": "Priority Front-Load Crew",
+      "family_anchor": "138. Output Assembly, Synthesis & Final Answer Design",
+      "mission": "Put the verdict, status, answer, or next action first so Devin does not have to dig through explanation to find the useful part.",
+      "triggers": [
+        "front load",
+        "don’t bury it",
+        "verdict first",
+        "actionable first",
+        "top priority"
+      ],
+      "primary_outputs": [
+        "front_loaded_response.md",
+        "priority_ordering_notes.md",
+        "buried_answer_warning.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.001 Final Answer Assembly Crew",
+        "DV.P6.006 Check Result Formatting Crew",
+        "DV.P6.011 Next Step Design Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.002.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.002.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.002.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.002.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.002.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.002.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.002.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.002.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.002.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.003",
+      "crew_name": "Synthesis Crew",
+      "family_anchor": "138. Output Assembly, Synthesis & Final Answer Design",
+      "mission": "Combine multiple partial outputs, agent results, validator notes, and review findings into one coherent deliverable.",
+      "triggers": [
+        "synthesize",
+        "combine outputs",
+        "merge results",
+        "consolidate",
+        "make one answer"
+      ],
+      "primary_outputs": [
+        "synthesis_report.md",
+        "combined_output.md",
+        "source_output_map.json"
+      ],
+      "handoff_targets": [
+        "DV.P6.001 Final Answer Assembly Crew",
+        "DV.P6.004 Proof Integration Crew",
+        "DV.P6.010 Audience Adaptation Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.003.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.003.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.003.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.003.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.003.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.003.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.003.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.003.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.003.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.004",
+      "crew_name": "Proof Integration Crew",
+      "family_anchor": "138. Output Assembly, Synthesis & Final Answer Design",
+      "mission": "Integrate proof such as changed files, validator outputs, commit hashes, citations, evidence packets, and confidence notes into final outputs.",
+      "triggers": [
+        "proof",
+        "validator results",
+        "commit hash",
+        "changed files",
+        "evidence"
+      ],
+      "primary_outputs": [
+        "proof_integrated_report.md",
+        "evidence_summary.json",
+        "traceability_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.006 Check Result Formatting Crew",
+        "DV.P6.012 Final Delivery Gate Crew",
+        "DV.P6.019 Release Evidence Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.004.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.004.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.004.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.004.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.004.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.004.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.004.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.004.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.004.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.005",
+      "crew_name": "Copy/Paste Output Crew",
+      "family_anchor": "138. Output Assembly, Synthesis & Final Answer Design",
+      "mission": "Shape prompts, commands, notes, scripts, and task instructions into complete copy/paste-ready blocks.",
+      "triggers": [
+        "copy paste",
+        "write prompt",
+        "task note",
+        "exact command",
+        "reusable text"
+      ],
+      "primary_outputs": [
+        "copy_paste_block.txt",
+        "prompt_ready_output.md",
+        "reusable_instruction_packet.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.008 Prompt Delivery Crew",
+        "DV.P6.009 Formatting Standard Crew",
+        "DV.P6.012 Final Delivery Gate Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.005.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.005.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.005.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.005.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.005.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.005.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.005.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.005.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.005.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.006",
+      "crew_name": "Check Result Formatting Crew",
+      "family_anchor": "138. Output Assembly, Synthesis & Final Answer Design",
+      "mission": "Format check please results with verdict first, then proof, changed files, validator results, issue list, and next action.",
+      "triggers": [
+        "check please",
+        "verify",
+        "check result",
+        "did it pass",
+        "audit result"
+      ],
+      "primary_outputs": [
+        "check_result_report.md",
+        "pass_fail_verdict.md",
+        "proof_then_next_step.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.002 Priority Front-Load Crew",
+        "DV.P6.004 Proof Integration Crew",
+        "DV.P6.012 Final Delivery Gate Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.006.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.006.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.006.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.006.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.006.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.006.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.006.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.006.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.006.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.007",
+      "crew_name": "Partial Output Explanation Crew",
+      "family_anchor": "138. Output Assembly, Synthesis & Final Answer Design",
+      "mission": "Clearly explain partial completion, missing pieces, blocked reasons, and exact next commands without pretending the work is done.",
+      "triggers": [
+        "partial",
+        "blocked",
+        "not complete",
+        "failed",
+        "no output"
+      ],
+      "primary_outputs": [
+        "partial_output_report.md",
+        "missing_items.md",
+        "exact_next_command.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.011 Next Step Design Crew",
+        "DV.P6.012 Final Delivery Gate Crew",
+        "DV.P6.020 Release Blocker Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.007.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.007.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.007.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.007.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.007.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.007.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.007.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.007.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.007.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.008",
+      "crew_name": "Prompt Delivery Crew",
+      "family_anchor": "138. Output Assembly, Synthesis & Final Answer Design",
+      "mission": "Deliver prompts to Gemini, Codex, or future agents with exact scope, allowed files, validators, commit rules, and report-back requirements.",
+      "triggers": [
+        "write prompt",
+        "Gemini prompt",
+        "Codex prompt",
+        "task prompt",
+        "strict prompt"
+      ],
+      "primary_outputs": [
+        "codex_prompt.txt",
+        "gemini_prompt.txt",
+        "strict_execution_prompt.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.005 Copy/Paste Output Crew",
+        "DV.P6.009 Formatting Standard Crew",
+        "DV.P6.004 Proof Integration Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.008.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.008.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.008.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.008.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.008.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.008.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.008.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.008.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.008.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.009",
+      "crew_name": "Formatting Standard Crew",
+      "family_anchor": "138. Output Assembly, Synthesis & Final Answer Design",
+      "mission": "Apply formatting rules for markdown reports, tables, copy/paste prompts, code blocks, task notes, and concise status summaries.",
+      "triggers": [
+        "format",
+        "markdown",
+        "table",
+        "report style",
+        "make readable"
+      ],
+      "primary_outputs": [
+        "formatting_standard_report.md",
+        "markdown_layout.md",
+        "format_correction_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.005 Copy/Paste Output Crew",
+        "DV.P6.010 Audience Adaptation Crew",
+        "DV.P6.012 Final Delivery Gate Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.009.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.009.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.009.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.009.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.009.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.009.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.009.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.009.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.009.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.010",
+      "crew_name": "Audience Adaptation Crew",
+      "family_anchor": "138. Output Assembly, Synthesis & Final Answer Design",
+      "mission": "Adapt outputs for Devin, clients, recruiters, portfolio viewers, technical reviewers, runtime operators, or public-facing audiences.",
+      "triggers": [
+        "client-ready",
+        "portfolio-ready",
+        "recruiter-friendly",
+        "technical version",
+        "public-facing"
+      ],
+      "primary_outputs": [
+        "audience_adapted_output.md",
+        "audience_notes.json",
+        "delivery_tone_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.003 Synthesis Crew",
+        "DV.P6.009 Formatting Standard Crew",
+        "DV.P6.023 Portfolio / Showcase Delivery Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.010.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.010.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.010.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.010.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.010.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.010.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.010.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.010.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.010.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.011",
+      "crew_name": "Next Step Design Crew",
+      "family_anchor": "138. Output Assembly, Synthesis & Final Answer Design",
+      "mission": "Generate the next best step, exact next command, or next prompt based on current status and completion state.",
+      "triggers": [
+        "next step",
+        "what next",
+        "next command",
+        "continue",
+        "move forward"
+      ],
+      "primary_outputs": [
+        "next_step_recommendation.md",
+        "next_command.txt",
+        "continuation_prompt.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.001 Final Answer Assembly Crew",
+        "DV.P6.007 Partial Output Explanation Crew",
+        "DV.P6.012 Final Delivery Gate Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.011.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.011.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.011.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.011.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.011.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.011.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.011.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.011.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.011.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.012",
+      "crew_name": "Final Delivery Gate Crew",
+      "family_anchor": "138. Output Assembly, Synthesis & Final Answer Design",
+      "mission": "Confirm final output is complete, readable, scoped, proof-backed, version-aware, and ready for intended delivery.",
+      "triggers": [
+        "final delivery",
+        "ready to deliver",
+        "ready to ship",
+        "output gate",
+        "final check"
+      ],
+      "primary_outputs": [
+        "final_delivery_gate_report.md",
+        "delivery_readiness_checklist.json",
+        "final_output_status.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.004 Proof Integration Crew",
+        "DV.P6.019 Release Evidence Crew",
+        "DV.P6.024 Final Package Lock Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.012.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.012.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.012.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.012.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.012.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.012.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.012.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.012.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.012.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.013",
+      "crew_name": "Version Label Crew",
+      "family_anchor": "82. Version Control, Releases & Change Management",
+      "mission": "Create clear version labels, release labels, pack labels, baseline labels, and sequential file naming when required.",
+      "triggers": [
+        "version",
+        "label",
+        "v1",
+        "release label",
+        "filename version"
+      ],
+      "primary_outputs": [
+        "version_label_record.json",
+        "label_recommendation.md",
+        "sequential_version_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.014 Changelog Crew",
+        "DV.P6.018 Release Notes Crew",
+        "DV.P6.024 Final Package Lock Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.013.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.013.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.013.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.013.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.013.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.013.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.013.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.013.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.013.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.014",
+      "crew_name": "Changelog Crew",
+      "family_anchor": "82. Version Control, Releases & Change Management",
+      "mission": "Maintain changelogs describing meaningful changes, fixes, scope shifts, new packs, validators, and lock events.",
+      "triggers": [
+        "changelog",
+        "what changed",
+        "change history",
+        "update log",
+        "record changes"
+      ],
+      "primary_outputs": [
+        "changelog_entry.md",
+        "change_history.json",
+        "meaningful_change_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.018 Release Notes Crew",
+        "DV.P6.019 Release Evidence Crew",
+        "DV.P6.021 Change Impact Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.014.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.014.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.014.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.014.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.014.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.014.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.014.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.014.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.014.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.015",
+      "crew_name": "Release Scope Crew",
+      "family_anchor": "82. Version Control, Releases & Change Management",
+      "mission": "Define what is included in a release, excluded from a release, blocked from release, and deferred to later work.",
+      "triggers": [
+        "release scope",
+        "what is included",
+        "what is excluded",
+        "defer this",
+        "release package"
+      ],
+      "primary_outputs": [
+        "release_scope.md",
+        "included_excluded_items.json",
+        "deferred_items.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.016 Release Readiness Crew",
+        "DV.P6.020 Release Blocker Crew",
+        "DV.P6.024 Final Package Lock Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.015.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.015.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.015.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.015.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.015.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.015.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.015.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.015.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.015.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.016",
+      "crew_name": "Release Readiness Crew",
+      "family_anchor": "82. Version Control, Releases & Change Management",
+      "mission": "Check whether a release has required files, validators, reports, proof, version labels, and no unresolved blockers.",
+      "triggers": [
+        "release ready",
+        "ready to ship",
+        "release check",
+        "package ready"
+      ],
+      "primary_outputs": [
+        "release_readiness_report.md",
+        "release_checklist.json",
+        "readiness_decision.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.012 Final Delivery Gate Crew",
+        "DV.P6.018 Release Notes Crew",
+        "DV.P6.024 Final Package Lock Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.016.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.016.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.016.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.016.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.016.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.016.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.016.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.016.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.016.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.017",
+      "crew_name": "Change Request Routing Crew",
+      "family_anchor": "82. Version Control, Releases & Change Management",
+      "mission": "Route requested changes into scoped patches, future backlog, release notes, or blocked items.",
+      "triggers": [
+        "change request",
+        "revise",
+        "patch this",
+        "future change",
+        "requested update"
+      ],
+      "primary_outputs": [
+        "change_request_route.md",
+        "scoped_patch_notes.json",
+        "future_backlog_item.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.015 Release Scope Crew",
+        "DV.P6.021 Change Impact Crew",
+        "DV.P6.011 Next Step Design Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.017.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.017.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.017.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.017.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.017.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.017.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.017.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.017.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.017.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.018",
+      "crew_name": "Release Notes Crew",
+      "family_anchor": "82. Version Control, Releases & Change Management",
+      "mission": "Write release notes explaining what changed, why it changed, what was validated, and what remains.",
+      "triggers": [
+        "release notes",
+        "write release",
+        "what changed",
+        "version notes",
+        "shipping notes"
+      ],
+      "primary_outputs": [
+        "release_notes.md",
+        "release_summary.md",
+        "known_remaining_items.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.014 Changelog Crew",
+        "DV.P6.016 Release Readiness Crew",
+        "DV.P6.024 Final Package Lock Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.018.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.018.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.018.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.018.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.018.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.018.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.018.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.018.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.018.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.019",
+      "crew_name": "Release Evidence Crew",
+      "family_anchor": "82. Version Control, Releases & Change Management",
+      "mission": "Attach evidence to releases, including validator results, changed files, commit hashes, proof artifacts, and lock reports.",
+      "triggers": [
+        "release evidence",
+        "proof",
+        "validator evidence",
+        "commit evidence",
+        "lock report"
+      ],
+      "primary_outputs": [
+        "release_evidence_packet.md",
+        "release_proof_manifest.json",
+        "commit_and_validator_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.004 Proof Integration Crew",
+        "DV.P6.016 Release Readiness Crew",
+        "DV.P6.024 Final Package Lock Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.019.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.019.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.019.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.019.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.019.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.019.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.019.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.019.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.019.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.020",
+      "crew_name": "Release Blocker Crew",
+      "family_anchor": "82. Version Control, Releases & Change Management",
+      "mission": "Identify blockers that prevent release, including missing proof, failed validators, incomplete files, scope drift, or unresolved human review.",
+      "triggers": [
+        "release blocker",
+        "cannot release",
+        "blocked release",
+        "missing proof",
+        "failed validator"
+      ],
+      "primary_outputs": [
+        "release_blocker_report.md",
+        "blocker_list.json",
+        "unblock_next_steps.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.007 Partial Output Explanation Crew",
+        "DV.P6.016 Release Readiness Crew",
+        "DV.P6.011 Next Step Design Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.020.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.020.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.020.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.020.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.020.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.020.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.020.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.020.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.020.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.021",
+      "crew_name": "Change Impact Crew",
+      "family_anchor": "82. Version Control, Releases & Change Management",
+      "mission": "Explain the impact of changes on baseline, overlays, runtime, validators, reports, users, and future work.",
+      "triggers": [
+        "change impact",
+        "what does this affect",
+        "impact analysis",
+        "risk of change"
+      ],
+      "primary_outputs": [
+        "change_impact_report.md",
+        "affected_area_map.json",
+        "downstream_impact_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.014 Changelog Crew",
+        "DV.P6.015 Release Scope Crew",
+        "DV.P6.019 Release Evidence Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.021.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.021.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.021.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.021.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.021.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.021.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.021.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.021.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.021.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.022",
+      "crew_name": "Stable Baseline Label Crew",
+      "family_anchor": "82. Version Control, Releases & Change Management",
+      "mission": "Label stable baselines, locked packs, validated states, runtime milestones, and rollback points.",
+      "triggers": [
+        "stable baseline",
+        "locked state",
+        "rollback point",
+        "milestone",
+        "baseline label"
+      ],
+      "primary_outputs": [
+        "stable_baseline_label.md",
+        "rollback_point_record.json",
+        "milestone_label_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.013 Version Label Crew",
+        "DV.P6.019 Release Evidence Crew",
+        "DV.P6.024 Final Package Lock Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.022.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.022.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.022.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.022.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.022.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.022.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.022.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.022.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.022.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.023",
+      "crew_name": "Portfolio / Showcase Delivery Crew",
+      "family_anchor": "82. Version Control, Releases & Change Management",
+      "mission": "Translate completed system work into portfolio-facing case studies, recruiter-friendly summaries, architecture proof, and demo descriptions.",
+      "triggers": [
+        "portfolio",
+        "showcase",
+        "recruiter",
+        "case study",
+        "demo summary"
+      ],
+      "primary_outputs": [
+        "portfolio_case_study.md",
+        "showcase_summary.md",
+        "demo_delivery_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.010 Audience Adaptation Crew",
+        "DV.P6.018 Release Notes Crew",
+        "DV.P6.024 Final Package Lock Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.023.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.023.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.023.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.023.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.023.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.023.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.023.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.023.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.023.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P6.024",
+      "crew_name": "Final Package Lock Crew",
+      "family_anchor": "82. Version Control, Releases & Change Management",
+      "mission": "Lock the final package state with version, scope, evidence, release notes, changelog, and next-step record.",
+      "triggers": [
+        "final package",
+        "lock package",
+        "package complete",
+        "release lock",
+        "done done"
+      ],
+      "primary_outputs": [
+        "final_package_lock_report.md",
+        "package_manifest.json",
+        "final_release_state.md"
+      ],
+      "handoff_targets": [
+        "DV.P6.012 Final Delivery Gate Crew",
+        "DV.P6.016 Release Readiness Crew",
+        "DV.P6.022 Stable Baseline Label Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P6.024.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P6.024.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P6.024.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P6.024.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P6.024.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P6.024.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P6.024.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P6.024.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P6.024.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    }
+  ]
+}
