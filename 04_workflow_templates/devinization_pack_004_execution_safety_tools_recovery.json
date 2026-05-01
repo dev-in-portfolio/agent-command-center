@@ -1,0 +1,2649 @@
+{
+  "extension_id": "devinization_pack_004_execution_safety_tools_recovery",
+  "extension_name": "Devinization Pack 4 — Execution Safety, Tools & Recovery",
+  "mode": "overlay",
+  "preserves_locked_baseline": true,
+  "baseline_status": "175-family expansion locked",
+  "depends_on": [
+    "family_007_devinized_engineering_overload",
+    "devinization_pack_001_command_brain",
+    "devinization_pack_002_runtime_routing_work_control",
+    "devinization_pack_003_prompt_memory_context_architecture"
+  ],
+  "included_families": [
+    {
+      "family_id": 58,
+      "family_name": "Tool Operations & External Access"
+    },
+    {
+      "family_id": 102,
+      "family_name": "Error Recovery, Apology & Repair Systems"
+    },
+    {
+      "family_id": 125,
+      "family_name": "Integration Testing & End-to-End Validation"
+    },
+    {
+      "family_id": 126,
+      "family_name": "Agent Observability, Telemetry & Run Analytics"
+    },
+    {
+      "family_id": 134,
+      "family_name": "External Action Governance"
+    },
+    {
+      "family_id": 144,
+      "family_name": "Agent Tool Safety, Sandboxing & Permission Firewalls"
+    },
+    {
+      "family_id": 150,
+      "family_name": "Completion Architecture & Definition of Done"
+    }
+  ],
+  "purpose": "Define the execution-safety layer that prevents the Station Chief runtime and future agent workforce from mutating the wrong files, wasting credits, making unsafe external actions, hiding failures, claiming fake completion, leaking secrets, skipping validators, or turning a small repair into a new disaster.",
+  "core_operating_philosophy": "The Agent Command Center remains a massive command civilization with selective live deployment. The whole 175-family agency remains available for awareness, routing, governance, memory, and context. This pack does not shrink the art piece. This pack defines how the system executes safely, verifies honestly, recovers cleanly, and proves completion before saying done.",
+  "activation_rule": "Use this pack when the user says or implies: run the tool, use GitHub, check the repo, verify the commit, external action, permission, sandbox, safe execution, tool call, API call, file operation, test this, validate this, smoke test, integration test, failed run, error recovery, rollback, repair, scope drift, wrong files changed, no output, credit burn, done done, final lock, definition of done, prove it passed, changed files, validator results.",
+  "execution_safety_layers": [
+    {
+      "layer": 1,
+      "name": "Permission Boundary",
+      "purpose": "Decide whether the system may answer, inspect, edit, run, commit, push, or perform an external action."
+    },
+    {
+      "layer": 2,
+      "name": "Scope Boundary",
+      "purpose": "Restrict execution to allowed files, allowed commands, allowed tools, and declared outputs."
+    },
+    {
+      "layer": 3,
+      "name": "Tool Safety Boundary",
+      "purpose": "Prevent unsafe, irrelevant, expensive, or unauthorized tool calls."
+    },
+    {
+      "layer": 4,
+      "name": "Execution Evidence Boundary",
+      "purpose": "Require changed-file lists, validator output, run logs, commit hashes, and proof artifacts."
+    },
+    {
+      "layer": 5,
+      "name": "Recovery Boundary",
+      "purpose": "Detect failures, isolate overreach, repair only the broken area, and validate after repair."
+    },
+    {
+      "layer": 6,
+      "name": "Completion Boundary",
+      "purpose": "Block fake completion unless required artifacts, validators, reports, and final proof are present."
+    }
+  ],
+  "global_rules": [
+    "1. Preserve the locked 175-family baseline unless the user explicitly authorizes baseline mutation.",
+    "2. Use overlays for Devinization unless explicitly instructed otherwise.",
+    "3. Never claim completion without proof.",
+    "4. Repository tasks must include changed-file scope.",
+    "5. Repository tasks must include validator results or a clear reason validators were not applicable.",
+    "6. Execution tasks must produce an output artifact or a blocked-reason artifact.",
+    "7. External actions require explicit permission unless already authorized by task scope.",
+    "8. Secret, credential, token, and private-data handling must stay inside safe boundaries.",
+    "9. Do not run expensive live execution when deterministic demo mode can prove the workflow first.",
+    "10. Stop on scope drift.",
+    "11. If wrong files are modified, stop and report before continuing.",
+    "12. Repair work must be minimal and targeted.",
+    "13. Do not use apology as a substitute for repair.",
+    "14. Error reports must include cause, affected files, repair plan, and validation plan.",
+    "15. Completion requires objective, outputs, scope check, validator check, and final report.",
+    "16. Done means done-done, not probably fine.",
+    "17. Preserve the art piece: safety controls protect the full agency without shrinking the command civilization."
+  ],
+  "crews": [
+    {
+      "crew_id": "DV.P4.001",
+      "crew_name": "Tool Capability Registry Crew",
+      "family_anchor": "58. Tool Operations & External Access",
+      "mission": "Maintain a registry of available tools, what each tool can do, what it cannot do, permission requirements, risk level, and expected output evidence.",
+      "triggers": [
+        "tool registry",
+        "what tools exist",
+        "available tools",
+        "tool capability",
+        "tool map"
+      ],
+      "primary_outputs": [
+        "tool_capability_registry.json",
+        "tool_limitations.md",
+        "tool_risk_index.json"
+      ],
+      "handoff_targets": [
+        "DV.P4.002 Tool Adapter Boundary Crew",
+        "DV.P4.025 External Action Permission Crew",
+        "DV.P4.031 Sandbox Policy Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.001.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.001.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.001.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.001.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.001.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.001.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.001.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.001.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.001.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.002",
+      "crew_name": "Tool Adapter Boundary Crew",
+      "family_anchor": "58. Tool Operations & External Access",
+      "mission": "Define safe adapter boundaries for file operations, GitHub operations, browser/search operations, local scripts, APIs, and future MCP-style connectors.",
+      "triggers": [
+        "adapter",
+        "tool boundary",
+        "API adapter",
+        "MCP",
+        "external connector"
+      ],
+      "primary_outputs": [
+        "tool_adapter_boundary.md",
+        "adapter_contracts.json",
+        "safe_tool_interface_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.001 Tool Capability Registry Crew",
+        "DV.P4.005 External API Access Crew",
+        "DV.P4.033 Dangerous Command Blocker Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.002.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.002.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.002.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.002.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.002.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.002.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.002.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.002.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.002.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.003",
+      "crew_name": "GitHub Tool Operations Crew",
+      "family_anchor": "58. Tool Operations & External Access",
+      "mission": "Handle GitHub-specific verification workflows including commit checks, diffs, file scope, status, rollback evidence, and commit-hash reporting.",
+      "triggers": [
+        "GitHub",
+        "check commit",
+        "git diff",
+        "repo check",
+        "commit hash"
+      ],
+      "primary_outputs": [
+        "github_operation_report.md",
+        "commit_scope_check.md",
+        "changed_file_evidence.txt",
+        "commit_hash_record.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.017 Validator Chain Crew",
+        "DV.P4.040 Changed File Proof Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.003.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.003.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.003.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.003.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.003.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.003.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.003.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.003.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.003.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.004",
+      "crew_name": "File System Operations Crew",
+      "family_anchor": "58. Tool Operations & External Access",
+      "mission": "Control file reads, writes, deletes, generated artifacts, untracked files, scope checks, and file-system cleanup rules.",
+      "triggers": [
+        "file operation",
+        "write file",
+        "delete file",
+        "untracked file",
+        "file scope"
+      ],
+      "primary_outputs": [
+        "file_operation_plan.md",
+        "allowed_file_list.json",
+        "forbidden_file_list.json",
+        "untracked_file_report.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.032 Allowed / Forbidden File Guard Crew",
+        "DV.P4.034 Scope Drift Runtime Guard Crew",
+        "DV.P4.040 Changed File Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.004.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.004.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.004.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.004.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.004.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.004.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.004.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.004.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.004.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.005",
+      "crew_name": "External API Access Crew",
+      "family_anchor": "58. Tool Operations & External Access",
+      "mission": "Govern API calls, request/response logging, rate limits, credential boundaries, fallback behavior, and no-key demo-mode alternatives.",
+      "triggers": [
+        "API",
+        "external API",
+        "rate limit",
+        "credential",
+        "no API key"
+      ],
+      "primary_outputs": [
+        "api_access_plan.md",
+        "request_response_log_schema.json",
+        "no_key_fallback_plan.md",
+        "rate_limit_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.027 Credential / Secret Boundary Crew",
+        "DV.P4.030 Safe Fallback / No-Key Crew",
+        "DV.P4.021 Cost / Credit Budget Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.005.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.005.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.005.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.005.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.005.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.005.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.005.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.005.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.005.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.006",
+      "crew_name": "Tool Failure Detection Crew",
+      "family_anchor": "58. Tool Operations & External Access",
+      "mission": "Detect failed, partial, unavailable, misleading, or stale tool results and route them into recovery instead of pretending success.",
+      "triggers": [
+        "tool failed",
+        "partial result",
+        "stale result",
+        "unavailable tool",
+        "misleading output"
+      ],
+      "primary_outputs": [
+        "tool_failure_report.md",
+        "partial_tool_output_record.json",
+        "retry_or_stop_decision.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.007 Error Intake Classification Crew",
+        "DV.P4.010 Repair Prompt Crew",
+        "DV.P4.018 Test Evidence Packet Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.006.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.006.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.006.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.006.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.006.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.006.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.006.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.006.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.006.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.007",
+      "crew_name": "Error Intake Classification Crew",
+      "family_anchor": "102. Error Recovery, Apology & Repair Systems",
+      "mission": "Classify errors as scope drift, wrong file mutation, validator failure, missing output, tool failure, prompt failure, runtime failure, or user-intent mismatch.",
+      "triggers": [
+        "error",
+        "failure",
+        "wrong",
+        "broken",
+        "classify error"
+      ],
+      "primary_outputs": [
+        "error_intake_record.json",
+        "error_type_classification.md",
+        "affected_area_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.008 Overreach Detection Crew",
+        "DV.P4.009 Rollback Plan Crew",
+        "DV.P4.012 Post-Repair Validation Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.007.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.007.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.007.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.007.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.007.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.007.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.007.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.007.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.007.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.008",
+      "crew_name": "Overreach Detection Crew",
+      "family_anchor": "102. Error Recovery, Apology & Repair Systems",
+      "mission": "Detect when the system changed more than requested, edited forbidden files, expanded scope, normalized content, or “improved” beyond instruction.",
+      "triggers": [
+        "overreach",
+        "too much changed",
+        "wrong files",
+        "scope drift",
+        "unwanted improvement"
+      ],
+      "primary_outputs": [
+        "overreach_report.md",
+        "unauthorized_change_list.json",
+        "scope_violation_summary.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.009 Rollback Plan Crew",
+        "DV.P4.034 Scope Drift Runtime Guard Crew",
+        "DV.P4.040 Changed File Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.008.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.008.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.008.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.008.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.008.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.008.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.008.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.008.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.008.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.009",
+      "crew_name": "Rollback Plan Crew",
+      "family_anchor": "102. Error Recovery, Apology & Repair Systems",
+      "mission": "Create safe rollback, revert, or cleanup plans that isolate the bad change without damaging valid work.",
+      "triggers": [
+        "rollback",
+        "revert",
+        "undo",
+        "restore",
+        "clean working tree"
+      ],
+      "primary_outputs": [
+        "rollback_plan.md",
+        "revert_command_notes.md",
+        "preserved_valid_work_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.010 Repair Prompt Crew",
+        "DV.P4.012 Post-Repair Validation Crew",
+        "DV.P4.039 Validator Completion Gate Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.009.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.009.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.009.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.009.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.009.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.009.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.009.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.009.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.009.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.010",
+      "crew_name": "Repair Prompt Crew",
+      "family_anchor": "102. Error Recovery, Apology & Repair Systems",
+      "mission": "Generate precise repair prompts that fix only the failed portion, preserve valid work, and enforce allowed-file scope.",
+      "triggers": [
+        "repair prompt",
+        "fix only this",
+        "correction prompt",
+        "minimal repair"
+      ],
+      "primary_outputs": [
+        "repair_prompt.md",
+        "allowed_repair_scope.json",
+        "repair_success_criteria.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.012 Post-Repair Validation Crew",
+        "DV.P4.034 Scope Drift Runtime Guard Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.010.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.010.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.010.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.010.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.010.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.010.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.010.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.010.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.010.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.011",
+      "crew_name": "No-Drama Repair Reporting Crew",
+      "family_anchor": "102. Error Recovery, Apology & Repair Systems",
+      "mission": "Report failures and repairs plainly without fake certainty, over-apologizing, burying the problem, or using apology as a substitute for correction.",
+      "triggers": [
+        "what went wrong",
+        "report failure",
+        "explain repair",
+        "no fake done",
+        "no drama"
+      ],
+      "primary_outputs": [
+        "repair_status_report.md",
+        "failure_summary.md",
+        "honest_next_step.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.007 Error Intake Classification Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew",
+        "DV.P4.042 No Output Failure & Blocked Reason Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.011.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.011.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.011.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.011.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.011.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.011.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.011.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.011.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.011.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.012",
+      "crew_name": "Post-Repair Validation Crew",
+      "family_anchor": "102. Error Recovery, Apology & Repair Systems",
+      "mission": "Run or require validation after repair, including validators, changed-file checks, report checks, and confirmation that the original error is fixed.",
+      "triggers": [
+        "validate repair",
+        "recheck",
+        "after fix",
+        "confirm repaired"
+      ],
+      "primary_outputs": [
+        "post_repair_validation.md",
+        "repair_validator_results.txt",
+        "resolved_error_confirmation.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.017 Validator Chain Crew",
+        "DV.P4.039 Validator Completion Gate Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.012.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.012.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.012.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.012.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.012.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.012.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.012.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.012.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.012.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.013",
+      "crew_name": "Integration Test Plan Crew",
+      "family_anchor": "125. Integration Testing & End-to-End Validation",
+      "mission": "Define integration test plans that verify connected pieces work together across prompts, runtime, files, validators, reports, and tool operations.",
+      "triggers": [
+        "integration test",
+        "test plan",
+        "e2e",
+        "connected systems"
+      ],
+      "primary_outputs": [
+        "integration_test_plan.md",
+        "integration_test_matrix.json",
+        "test_scope_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.014 End-to-End Smoke Test Crew",
+        "DV.P4.016 Regression Test Crew",
+        "DV.P4.018 Test Evidence Packet Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.013.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.013.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.013.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.013.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.013.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.013.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.013.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.013.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.013.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.014",
+      "crew_name": "End-to-End Smoke Test Crew",
+      "family_anchor": "125. Integration Testing & End-to-End Validation",
+      "mission": "Create or run quick smoke tests proving the system can complete the smallest valid workflow from input to output evidence.",
+      "triggers": [
+        "smoke test",
+        "end to end",
+        "quick test",
+        "basic workflow"
+      ],
+      "primary_outputs": [
+        "smoke_test_plan.md",
+        "smoke_test_result.txt",
+        "e2e_minimal_path.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.015 Deterministic Demo Test Crew",
+        "DV.P4.017 Validator Chain Crew",
+        "DV.P4.039 Validator Completion Gate Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.014.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.014.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.014.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.014.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.014.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.014.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.014.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.014.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.014.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.015",
+      "crew_name": "Deterministic Demo Test Crew",
+      "family_anchor": "125. Integration Testing & End-to-End Validation",
+      "mission": "Validate workflows with deterministic demo data before using live APIs, paid model calls, credentials, or external actions.",
+      "triggers": [
+        "demo mode",
+        "deterministic demo",
+        "no API key",
+        "fake run",
+        "offline test"
+      ],
+      "primary_outputs": [
+        "deterministic_demo_test.md",
+        "demo_fixture_manifest.json",
+        "demo_test_result.txt"
+      ],
+      "handoff_targets": [
+        "DV.P4.030 Safe Fallback / No-Key Crew",
+        "DV.P4.021 Cost / Credit Budget Crew",
+        "DV.P4.018 Test Evidence Packet Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.015.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.015.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.015.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.015.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.015.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.015.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.015.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.015.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.015.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.016",
+      "crew_name": "Regression Test Crew",
+      "family_anchor": "125. Integration Testing & End-to-End Validation",
+      "mission": "Check that new changes do not break prior packs, validators, baseline locks, reports, or already-working runtime behavior.",
+      "triggers": [
+        "regression",
+        "did it break",
+        "previous pack",
+        "existing validators"
+      ],
+      "primary_outputs": [
+        "regression_test_plan.md",
+        "regression_results.txt",
+        "breakage_risk_report.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.017 Validator Chain Crew",
+        "DV.P4.039 Validator Completion Gate Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.016.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.016.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.016.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.016.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.016.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.016.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.016.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.016.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.016.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.017",
+      "crew_name": "Validator Chain Crew",
+      "family_anchor": "125. Integration Testing & End-to-End Validation",
+      "mission": "Define and verify the correct chain of validators for each task, including pack validators, baseline validators, runtime validators, and report validators.",
+      "triggers": [
+        "validators",
+        "validation chain",
+        "run checks",
+        "prove it passes"
+      ],
+      "primary_outputs": [
+        "validator_chain.md",
+        "validator_result_log.txt",
+        "required_validator_map.json"
+      ],
+      "handoff_targets": [
+        "DV.P4.039 Validator Completion Gate Crew",
+        "DV.P4.018 Test Evidence Packet Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.017.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.017.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.017.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.017.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.017.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.017.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.017.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.017.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.017.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.018",
+      "crew_name": "Test Evidence Packet Crew",
+      "family_anchor": "125. Integration Testing & End-to-End Validation",
+      "mission": "Bundle test results, validator outputs, run logs, failure notes, changed files, and proof artifacts into a reviewable evidence packet.",
+      "triggers": [
+        "evidence packet",
+        "test evidence",
+        "proof bundle",
+        "validation evidence"
+      ],
+      "primary_outputs": [
+        "test_evidence_packet.md",
+        "validator_output_archive.txt",
+        "proof_artifact_manifest.json"
+      ],
+      "handoff_targets": [
+        "DV.P4.041 Final Report / Commit Proof Crew",
+        "DV.P4.037 Definition of Done Crew",
+        "DV.P4.045 Source Preservation Crew if available"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.018.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.018.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.018.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.018.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.018.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.018.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.018.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.018.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.018.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.019",
+      "crew_name": "Run Telemetry Crew",
+      "family_anchor": "126. Agent Observability, Telemetry & Run Analytics",
+      "mission": "Track each run’s objective, selected crews, tools used, commands run, outputs created, validators run, errors, and final state.",
+      "triggers": [
+        "telemetry",
+        "run analytics",
+        "track run",
+        "run summary"
+      ],
+      "primary_outputs": [
+        "run_telemetry.json",
+        "run_summary.md",
+        "selected_crew_log.json"
+      ],
+      "handoff_targets": [
+        "DV.P4.020 Execution Log Crew",
+        "DV.P4.022 Model / Tool Call Trace Crew",
+        "DV.P4.024 Observability Dashboard Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.019.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.019.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.019.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.019.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.019.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.019.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.019.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.019.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.019.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.020",
+      "crew_name": "Execution Log Crew",
+      "family_anchor": "126. Agent Observability, Telemetry & Run Analytics",
+      "mission": "Maintain readable execution logs that show what happened, in what order, what succeeded, what failed, and what remains.",
+      "triggers": [
+        "execution log",
+        "log this run",
+        "what happened",
+        "run history"
+      ],
+      "primary_outputs": [
+        "execution_log.md",
+        "ordered_event_log.json",
+        "remaining_work_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.019 Run Telemetry Crew",
+        "DV.P4.011 No-Drama Repair Reporting Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.020.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.020.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.020.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.020.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.020.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.020.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.020.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.020.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.020.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.021",
+      "crew_name": "Cost / Credit Budget Crew",
+      "family_anchor": "126. Agent Observability, Telemetry & Run Analytics",
+      "mission": "Track and limit expensive model calls, tool calls, retries, long-running sessions, and no-output loops so runtime execution stays useful.",
+      "triggers": [
+        "credit burn",
+        "token budget",
+        "cost",
+        "too many calls",
+        "no output"
+      ],
+      "primary_outputs": [
+        "credit_budget_report.md",
+        "call_budget.json",
+        "no_output_loop_warning.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.012 Post-Repair Validation Crew",
+        "DV.P4.015 Deterministic Demo Test Crew",
+        "DV.P4.030 Safe Fallback / No-Key Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.021.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.021.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.021.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.021.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.021.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.021.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.021.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.021.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.021.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.022",
+      "crew_name": "Model / Tool Call Trace Crew",
+      "family_anchor": "126. Agent Observability, Telemetry & Run Analytics",
+      "mission": "Record which model/tool calls happened, why they were needed, what they returned, and whether the result was used.",
+      "triggers": [
+        "trace calls",
+        "tool trace",
+        "model call log",
+        "why call this"
+      ],
+      "primary_outputs": [
+        "model_tool_call_trace.json",
+        "call_reason_log.md",
+        "call_result_usage_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.006 Tool Failure Detection Crew",
+        "DV.P4.019 Run Telemetry Crew",
+        "DV.P4.021 Cost / Credit Budget Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.022.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.022.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.022.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.022.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.022.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.022.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.022.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.022.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.022.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.023",
+      "crew_name": "Performance Bottleneck Crew",
+      "family_anchor": "126. Agent Observability, Telemetry & Run Analytics",
+      "mission": "Identify runtime slowdowns, repeated failures, unnecessary calls, redundant validation, oversized context, and inefficient execution loops.",
+      "triggers": [
+        "slow",
+        "bottleneck",
+        "inefficient",
+        "repeated failure",
+        "wasted calls"
+      ],
+      "primary_outputs": [
+        "performance_bottleneck_report.md",
+        "runtime_efficiency_notes.md",
+        "optimization_without_scope_drift.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.021 Cost / Credit Budget Crew",
+        "DV.P4.012 Post-Repair Validation Crew",
+        "DV.P4.024 Observability Dashboard Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.023.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.023.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.023.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.023.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.023.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.023.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.023.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.023.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.023.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.024",
+      "crew_name": "Observability Dashboard Crew",
+      "family_anchor": "126. Agent Observability, Telemetry & Run Analytics",
+      "mission": "Summarize active run health, validator health, error health, budget health, output health, and completion readiness.",
+      "triggers": [
+        "observability dashboard",
+        "run health",
+        "status dashboard",
+        "completion readiness"
+      ],
+      "primary_outputs": [
+        "observability_dashboard.md",
+        "run_health_summary.json",
+        "completion_readiness_report.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.037 Definition of Done Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew",
+        "DV.P4.042 No Output Failure & Blocked Reason Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.024.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.024.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.024.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.024.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.024.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.024.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.024.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.024.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.024.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.025",
+      "crew_name": "External Action Permission Crew",
+      "family_anchor": "134. External Action Governance",
+      "mission": "Decide whether the system is allowed to perform external actions such as API calls, pushes, deletes, sends, deployments, or irreversible changes.",
+      "triggers": [
+        "external action",
+        "push",
+        "delete",
+        "deploy",
+        "permission"
+      ],
+      "primary_outputs": [
+        "external_action_permission.md",
+        "permission_decision.json",
+        "action_risk_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.026 Human Confirmation Gate Crew",
+        "DV.P4.028 Network / Write Action Gate Crew",
+        "DV.P4.031 Sandbox Policy Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.025.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.025.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.025.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.025.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.025.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.025.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.025.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.025.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.025.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.026",
+      "crew_name": "Human Confirmation Gate Crew",
+      "family_anchor": "134. External Action Governance",
+      "mission": "Require human confirmation for risky, irreversible, external, sensitive, or scope-expanding actions.",
+      "triggers": [
+        "confirm",
+        "human approval",
+        "risky action",
+        "irreversible",
+        "ask before"
+      ],
+      "primary_outputs": [
+        "confirmation_gate_decision.md",
+        "human_approval_needed.json",
+        "approval_prompt.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.025 External Action Permission Crew",
+        "DV.P4.029 External Change Audit Crew",
+        "DV.P4.035 Data / Secret Leak Prevention Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.026.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.026.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.026.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.026.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.026.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.026.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.026.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.026.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.026.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.027",
+      "crew_name": "Credential / Secret Boundary Crew",
+      "family_anchor": "134. External Action Governance",
+      "mission": "Protect API keys, tokens, secrets, credentials, private data, environment files, and sensitive values from exposure or unsafe use.",
+      "triggers": [
+        "secret",
+        "credential",
+        "token",
+        "API key",
+        "private data"
+      ],
+      "primary_outputs": [
+        "credential_boundary_policy.md",
+        "secret_handling_report.md",
+        "redaction_requirement_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.035 Data / Secret Leak Prevention Crew",
+        "DV.P4.030 Safe Fallback / No-Key Crew",
+        "DV.P4.005 External API Access Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.027.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.027.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.027.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.027.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.027.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.027.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.027.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.027.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.027.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.028",
+      "crew_name": "Network / Write Action Gate Crew",
+      "family_anchor": "134. External Action Governance",
+      "mission": "Gate network access, writes, commits, pushes, file deletes, deployments, and external mutations based on task scope and permission level.",
+      "triggers": [
+        "network",
+        "write action",
+        "commit",
+        "push",
+        "deployment"
+      ],
+      "primary_outputs": [
+        "network_write_gate.md",
+        "allowed_external_actions.json",
+        "blocked_external_actions.json"
+      ],
+      "handoff_targets": [
+        "DV.P4.025 External Action Permission Crew",
+        "DV.P4.032 Allowed / Forbidden File Guard Crew",
+        "DV.P4.029 External Change Audit Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.028.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.028.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.028.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.028.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.028.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.028.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.028.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.028.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.028.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.029",
+      "crew_name": "External Change Audit Crew",
+      "family_anchor": "134. External Action Governance",
+      "mission": "Audit any external change after it happens, including what changed, where, why, with what proof, and how to revert.",
+      "triggers": [
+        "audit external change",
+        "what changed externally",
+        "verify push",
+        "external audit"
+      ],
+      "primary_outputs": [
+        "external_change_audit.md",
+        "external_change_evidence.json",
+        "external_revert_notes.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.003 GitHub Tool Operations Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew",
+        "DV.P4.009 Rollback Plan Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.029.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.029.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.029.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.029.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.029.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.029.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.029.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.029.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.029.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.030",
+      "crew_name": "Safe Fallback / No-Key Crew",
+      "family_anchor": "134. External Action Governance",
+      "mission": "Provide deterministic demo, local-only, no-key, no-credential, or offline fallback paths when live credentials are missing or expensive.",
+      "triggers": [
+        "no key",
+        "missing credential",
+        "demo fallback",
+        "offline mode",
+        "deterministic demo"
+      ],
+      "primary_outputs": [
+        "safe_fallback_plan.md",
+        "no_key_execution_mode.json",
+        "demo_mode_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.015 Deterministic Demo Test Crew",
+        "DV.P4.005 External API Access Crew",
+        "DV.P4.021 Cost / Credit Budget Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.030.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.030.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.030.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.030.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.030.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.030.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.030.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.030.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.030.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.031",
+      "crew_name": "Sandbox Policy Crew",
+      "family_anchor": "144. Agent Tool Safety, Sandboxing & Permission Firewalls",
+      "mission": "Define sandbox levels, allowed directories, allowed commands, blocked commands, safe defaults, and escalation rules.",
+      "triggers": [
+        "sandbox",
+        "safe mode",
+        "permission firewall",
+        "allowed command",
+        "blocked command"
+      ],
+      "primary_outputs": [
+        "sandbox_policy.md",
+        "sandbox_levels.json",
+        "command_permission_map.json"
+      ],
+      "handoff_targets": [
+        "DV.P4.028 Network / Write Action Gate Crew",
+        "DV.P4.033 Dangerous Command Blocker Crew",
+        "DV.P4.036 Permission Firewall QA Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.031.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.031.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.031.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.031.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.031.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.031.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.031.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.031.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.031.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.032",
+      "crew_name": "Allowed / Forbidden File Guard Crew",
+      "family_anchor": "144. Agent Tool Safety, Sandboxing & Permission Firewalls",
+      "mission": "Enforce allowed and forbidden file scopes before execution, during execution, before commit, and after repair.",
+      "triggers": [
+        "allowed files",
+        "forbidden files",
+        "file guard",
+        "wrong file",
+        "scope check"
+      ],
+      "primary_outputs": [
+        "file_guard_report.md",
+        "allowed_forbidden_file_scope.json",
+        "file_scope_violation_alert.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.004 File System Operations Crew",
+        "DV.P4.034 Scope Drift Runtime Guard Crew",
+        "DV.P4.040 Changed File Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.032.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.032.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.032.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.032.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.032.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.032.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.032.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.032.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.032.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.033",
+      "crew_name": "Dangerous Command Blocker Crew",
+      "family_anchor": "144. Agent Tool Safety, Sandboxing & Permission Firewalls",
+      "mission": "Block or escalate dangerous shell commands, destructive file operations, broad deletes, uncontrolled installs, and unsafe network commands.",
+      "triggers": [
+        "dangerous command",
+        "rm -rf",
+        "install package",
+        "destructive",
+        "unsafe shell"
+      ],
+      "primary_outputs": [
+        "dangerous_command_alert.md",
+        "blocked_command_list.json",
+        "safer_command_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.031 Sandbox Policy Crew",
+        "DV.P4.026 Human Confirmation Gate Crew",
+        "DV.P4.008 Overreach Detection Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.033.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.033.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.033.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.033.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.033.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.033.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.033.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.033.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.033.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.034",
+      "crew_name": "Scope Drift Runtime Guard Crew",
+      "family_anchor": "144. Agent Tool Safety, Sandboxing & Permission Firewalls",
+      "mission": "Monitor runtime execution for actions, files, goals, or outputs that drift beyond the approved operation brief.",
+      "triggers": [
+        "runtime drift",
+        "scope drift",
+        "unexpected change",
+        "unauthorized action"
+      ],
+      "primary_outputs": [
+        "runtime_scope_drift_report.md",
+        "unexpected_action_log.json",
+        "stop_execution_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.008 Overreach Detection Crew",
+        "DV.P4.032 Allowed / Forbidden File Guard Crew",
+        "DV.P4.004 File System Operations Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.034.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.034.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.034.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.034.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.034.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.034.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.034.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.034.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.034.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.035",
+      "crew_name": "Data / Secret Leak Prevention Crew",
+      "family_anchor": "144. Agent Tool Safety, Sandboxing & Permission Firewalls",
+      "mission": "Prevent secrets, credentials, private data, hidden tokens, sensitive paths, or unsafe content from being exposed in outputs, logs, commits, or reports.",
+      "triggers": [
+        "leak",
+        "secret exposure",
+        "private data",
+        "redaction",
+        "sensitive output"
+      ],
+      "primary_outputs": [
+        "leak_prevention_report.md",
+        "redaction_plan.md",
+        "sensitive_output_warning.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.027 Credential / Secret Boundary Crew",
+        "DV.P4.026 Human Confirmation Gate Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.035.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.035.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.035.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.035.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.035.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.035.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.035.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.035.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.035.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.036",
+      "crew_name": "Permission Firewall QA Crew",
+      "family_anchor": "144. Agent Tool Safety, Sandboxing & Permission Firewalls",
+      "mission": "Validate that sandbox rules, file guards, command blockers, external gates, and secret boundaries are applied before and after execution.",
+      "triggers": [
+        "permission QA",
+        "firewall check",
+        "safety validation",
+        "sandbox validation"
+      ],
+      "primary_outputs": [
+        "permission_firewall_qa.md",
+        "safety_gate_results.txt",
+        "firewall_gap_report.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.031 Sandbox Policy Crew",
+        "DV.P4.039 Validator Completion Gate Crew",
+        "DV.P4.037 Definition of Done Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.036.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.036.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.036.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.036.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.036.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.036.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.036.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.036.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.036.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.037",
+      "crew_name": "Definition of Done Crew",
+      "family_anchor": "150. Completion Architecture & Definition of Done",
+      "mission": "Define the completion standard for each task, including objective satisfied, artifacts created, validators passed, scope verified, and report delivered.",
+      "triggers": [
+        "definition of done",
+        "done done",
+        "completion",
+        "finish criteria",
+        "final lock"
+      ],
+      "primary_outputs": [
+        "definition_of_done.md",
+        "task_completion_standard.json",
+        "done_done_checklist.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.038 Artifact Requirement Crew",
+        "DV.P4.039 Validator Completion Gate Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.037.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.037.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.037.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.037.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.037.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.037.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.037.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.037.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.037.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.038",
+      "crew_name": "Artifact Requirement Crew",
+      "family_anchor": "150. Completion Architecture & Definition of Done",
+      "mission": "Require every execution task to produce a durable artifact, changed file, diagnostic report, validator result, or blocked-reason artifact.",
+      "triggers": [
+        "output artifact",
+        "required output",
+        "no output",
+        "artifact check"
+      ],
+      "primary_outputs": [
+        "artifact_requirement.md",
+        "artifact_manifest.json",
+        "missing_artifact_alert.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.042 No Output Failure & Blocked Reason Crew",
+        "DV.P4.018 Test Evidence Packet Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.038.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.038.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.038.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.038.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.038.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.038.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.038.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.038.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.038.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.039",
+      "crew_name": "Validator Completion Gate Crew",
+      "family_anchor": "150. Completion Architecture & Definition of Done",
+      "mission": "Block completion claims until required validators pass or a valid blocked-reason explanation is produced.",
+      "triggers": [
+        "validator gate",
+        "did validators pass",
+        "completion check",
+        "proof of pass"
+      ],
+      "primary_outputs": [
+        "validator_completion_gate.md",
+        "validator_pass_fail_summary.txt",
+        "blocked_validator_reason.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.017 Validator Chain Crew",
+        "DV.P4.037 Definition of Done Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.039.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.039.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.039.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.039.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.039.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.039.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.039.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.039.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.039.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.040",
+      "crew_name": "Changed File Proof Crew",
+      "family_anchor": "150. Completion Architecture & Definition of Done",
+      "mission": "Require repository tasks to provide changed-file lists, staged-file lists, commit diffs, and confirmation that no forbidden files changed.",
+      "triggers": [
+        "changed files",
+        "git diff",
+        "file proof",
+        "scope proof",
+        "what changed"
+      ],
+      "primary_outputs": [
+        "changed_file_proof.md",
+        "changed_files.txt",
+        "forbidden_file_check.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.003 GitHub Tool Operations Crew",
+        "DV.P4.032 Allowed / Forbidden File Guard Crew",
+        "DV.P4.041 Final Report / Commit Proof Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.040.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.040.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.040.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.040.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.040.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.040.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.040.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.040.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.040.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.041",
+      "crew_name": "Final Report / Commit Proof Crew",
+      "family_anchor": "150. Completion Architecture & Definition of Done",
+      "mission": "Assemble final reports with files created/modified, validators run, pass/fail status, commit hash, scope confirmation, and next step.",
+      "triggers": [
+        "final report",
+        "commit proof",
+        "report back",
+        "commit hash",
+        "validator results"
+      ],
+      "primary_outputs": [
+        "final_execution_report.md",
+        "commit_proof.md",
+        "validator_and_scope_summary.md",
+        "next_step_recommendation.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.037 Definition of Done Crew",
+        "DV.P4.039 Validator Completion Gate Crew",
+        "DV.P4.024 Observability Dashboard Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.041.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.041.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.041.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.041.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.041.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.041.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.041.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.041.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.041.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    },
+    {
+      "crew_id": "DV.P4.042",
+      "crew_name": "No Output Failure & Blocked Reason Crew",
+      "family_anchor": "150. Completion Architecture & Definition of Done",
+      "mission": "Treat no-output runs as failures unless a clear blocked-reason artifact explains what stopped, what was attempted, and what exact next step is needed.",
+      "triggers": [
+        "no output",
+        "nothing happened",
+        "blocked reason",
+        "failed to produce",
+        "stalled"
+      ],
+      "primary_outputs": [
+        "no_output_failure_report.md",
+        "blocked_reason_artifact.md",
+        "exact_next_step.md"
+      ],
+      "handoff_targets": [
+        "DV.P4.011 No-Drama Repair Reporting Crew",
+        "DV.P4.038 Artifact Requirement Crew",
+        "DV.P4.021 Cost / Credit Budget Crew"
+      ],
+      "roles": [
+        {
+          "id": "DV.P4.042.1A",
+          "role": "Realist"
+        },
+        {
+          "id": "DV.P4.042.1B",
+          "role": "Overachiever"
+        },
+        {
+          "id": "DV.P4.042.1C",
+          "role": "Dreamer"
+        },
+        {
+          "id": "DV.P4.042.1D",
+          "role": "Timid"
+        },
+        {
+          "id": "DV.P4.042.1E",
+          "role": "Overprotective"
+        },
+        {
+          "id": "DV.P4.042.1F",
+          "role": "Wildcard Intern"
+        },
+        {
+          "id": "DV.P4.042.1G",
+          "role": "Team Lead / Manager"
+        },
+        {
+          "id": "DV.P4.042.1H",
+          "role": "Scribe / Shower of Work"
+        },
+        {
+          "id": "DV.P4.042.1I",
+          "role": "Auditor / Revision Director"
+        }
+      ]
+    }
+  ]
+}
