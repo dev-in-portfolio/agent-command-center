@@ -46,7 +46,7 @@
 - 69.7.3 Measurement QA
 
 ### 69.8 Vendor And Contractor Coordination
-- 69.8.1 Contracter Need Review
+- 69.8.1 Contractor Need Review
 - 69.8.2 Quote Comparison Notes
 - 69.8.3 Contractor Follow-Up Plan
 
