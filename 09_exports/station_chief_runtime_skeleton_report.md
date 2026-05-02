@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v1.2.0. Locked 175-family baseline preserved. Work order executor skeleton added.
+Station Chief Runtime upgraded to v1.3.0. Locked 175-family baseline preserved. Worker hiring registry preview added.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -9,7 +9,7 @@ Project owner, system architect, and operating-doctrine author: Devin O’Rourke
 This attribution applies to the Agent Command Center Station Chief runtime skeleton. The locked 175-family baseline remains preserved.
 
 ## Purpose
-This report documents the first stable Station Chief Runtime foundation lock after the Devinization stack lock and its v1.2.0 enhancement for work order executor skeleton.
+This report documents the first stable Station Chief Runtime foundation lock after the Devinization stack lock and its v1.3.0 enhancement for worker hiring registry preview.
 
 ## Files Created / Modified
 10_runtime/station_chief_runtime.py
@@ -24,6 +24,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 10_runtime/station_chief_release_lock.py
 10_runtime/station_chief_controlled_execution.py
 10_runtime/station_chief_work_order_executor.py
+10_runtime/station_chief_worker_hiring_registry.py
 09_exports/station_chief_runtime_skeleton_report.md
 09_exports/station_chief_runtime_v0_2_report.md
 09_exports/station_chief_runtime_v0_3_report.md
@@ -36,6 +37,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 09_exports/station_chief_runtime_v1_0_report.md
 09_exports/station_chief_runtime_v1_1_report.md
 09_exports/station_chief_runtime_v1_2_report.md
+09_exports/station_chief_runtime_v1_3_report.md
 scripts/validate_station_chief_runtime_skeleton.py
 scripts/validate_station_chief_runtime_v0_2.py
 scripts/validate_station_chief_runtime_v0_3.py
@@ -48,6 +50,7 @@ scripts/validate_station_chief_runtime_v0_9.py
 scripts/validate_station_chief_runtime_v1_0.py
 scripts/validate_station_chief_runtime_v1_1.py
 scripts/validate_station_chief_runtime_v1_2.py
+scripts/validate_station_chief_runtime_v1_3.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -112,13 +115,22 @@ scripts/validate_station_chief_runtime_v1_2.py
 - work order execution ledger
 - work order completion proof
 - work order executor summary
+- worker role schema
+- deterministic worker ID generation
+- worker candidate generation from work orders
+- worker registry status lifecycle
+- worker assignment planning
+- worker registry ledger
+- worker hiring preview records
+- worker hiring readiness summary
+- department routing readiness bridge
 - deterministic fixture tests
 - proof-backed JSON output
 - baseline preservation
 - no live API calls
 - no full workforce animation (no worker animation)
 - no real worker hiring
-- no live work order execution
+- no live worker assignment
 
 ## Supported Command Types
 - verification
@@ -146,6 +158,7 @@ Tier 3 — Active Operation
 Tier 4 — Audit / Archive
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v1_3.py
 python3 scripts/validate_station_chief_runtime_v1_2.py
 python3 scripts/validate_station_chief_runtime_v1_1.py
 python3 scripts/validate_station_chief_runtime_v1_0.py
@@ -183,6 +196,7 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not authorize uncontrolled live execution
 - Does not hire real worker agents yet
 - Does not execute live work orders
+- Does not assign live workers
 
 ## Next Recommended Build Step
-Next recommended build step: build worker hiring registry.
+Next recommended build step: build department routing runtime.
