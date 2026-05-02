@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v2.0.0. Locked 175-family baseline preserved. First controlled worker-agent execution release added.
+Station Chief Runtime upgraded to v2.1.0. Locked 175-family baseline preserved. Single-worker tool permission binding added.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -27,7 +27,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 10_runtime/station_chief_worker_hiring_registry.py
 10_runtime/station_chief_department_routing.py
 10_runtime/station_chief_multi_agent_orchestration.py
-10_runtime/station_chief_controlled_worker_execution.py
+10_runtime/station_chief_tool_permission_binding.py
 09_exports/station_chief_runtime_skeleton_report.md
 09_exports/station_chief_runtime_v0_2_report.md
 09_exports/station_chief_runtime_v0_3_report.md
@@ -47,6 +47,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 09_exports/station_chief_runtime_v1_7_report.md
 09_exports/station_chief_runtime_v1_8_report.md
 09_exports/station_chief_runtime_v2_0_report.md
+09_exports/station_chief_runtime_v2_1_report.md
 scripts/validate_station_chief_runtime_skeleton.py
 scripts/validate_station_chief_runtime_v0_2.py
 scripts/validate_station_chief_runtime_v0_3.py
@@ -66,6 +67,7 @@ scripts/validate_station_chief_runtime_v1_6.py
 scripts/validate_station_chief_runtime_v1_7.py
 scripts/validate_station_chief_runtime_v1_8.py
 scripts/validate_station_chief_runtime_v2_0.py
+scripts/validate_station_chief_runtime_v2_1.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -187,20 +189,23 @@ scripts/validate_station_chief_runtime_v2_0.py
 - human approval chain binding
 - patch execution readiness scoring
 - patch hardening audit bundle
-- first controlled worker-agent execution schema
-- first-worker approval token
-- worker execution gate
-- tool permission binding
-- sandbox worker task runner
-- controlled worker execution result
-- worker abort contract
-- worker rollback contract
-- worker execution telemetry stub
-- post-run audit proof
-- worker execution ledger
-- single-worker tool permission binding readiness bridge
+- single-worker tool permission binding schema
+- per-tool permission registry
+- tool-specific approval tokens
+- tool permission request validator
+- tool-specific approval binding
+- tool invocation dry-run contract
+- tool output validation schema
+- tool output validation result
+- tool failure handling contract
+- tool revocation contract
+- per-run permission audit proof
+- tool permission ledger
+- tool permission readiness summary
+- live execution telemetry and abort controls readiness bridge
 - no broad workforce animation
 - no external API calls
+- no external tool invocation
 - no shell command execution
 - no arbitrary code execution
 - no repo mutation
@@ -208,6 +213,7 @@ scripts/validate_station_chief_runtime_v2_0.py
 - deterministic fixture tests
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v2_1.py
 python3 scripts/validate_station_chief_runtime_v2_0.py
 python3 scripts/validate_station_chief_runtime_v1_8.py
 - no full workforce animation (no worker animation)

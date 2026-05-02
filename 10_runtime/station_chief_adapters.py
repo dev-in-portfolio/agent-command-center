@@ -4,10 +4,18 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-ADAPTER_MODULE_VERSION = "2.0.0"
+ADAPTER_MODULE_VERSION = "2.1.0"
 
 YES_I_APPROVE_SANDBOX_FILE_WRITE = "YES_I_APPROVE_SANDBOX_FILE_WRITE"
 YES_I_APPROVE_SCOPED_REPO_PATCH = "YES_I_APPROVE_SCOPED_REPO_PATCH"
+YES_I_APPROVE_FIRST_CONTROLLED_WORKER_EXECUTION = "YES_I_APPROVE_FIRST_CONTROLLED_WORKER_EXECUTION"
+
+# Tool-specific approval tokens
+YES_I_APPROVE_TOOL_SANDBOX_NOOP = "YES_I_APPROVE_TOOL_SANDBOX_NOOP"
+YES_I_APPROVE_TOOL_DETERMINISTIC_SUMMARY = "YES_I_APPROVE_TOOL_DETERMINISTIC_SUMMARY"
+YES_I_APPROVE_TOOL_RUNTIME_STATE_READ = "YES_I_APPROVE_TOOL_RUNTIME_STATE_READ"
+YES_I_APPROVE_TOOL_LOCAL_JSON_ARTIFACT_WRITE = "YES_I_APPROVE_TOOL_LOCAL_JSON_ARTIFACT_WRITE"
+
 SAFE_SANDBOX_PATH = "SAFE_SANDBOX_PATH"
 SAFE_REPO_PATCH_PATH = "SAFE_REPO_PATCH_PATH"
 BLOCKED_FORBIDDEN_PATH = "BLOCKED_FORBIDDEN_PATH"
@@ -22,6 +30,7 @@ SUPPORTED_ADAPTERS = {
         "external_actions": False,
         "worker_animation": False,
         "supports_controlled_worker_execution": True,
+        "supports_tool_permission_binding": True,
         "description": "Safely simulates execution boundaries without performing live work.",
     },
     "sandbox_file_write": {
@@ -66,6 +75,12 @@ SUPPORTED_ADAPTERS = {
         "supports_controlled_worker_execution": False,
         "controlled_worker_execution_requires_separate_gate": True,
         "first_controlled_worker_execution_token": "YES_I_APPROVE_FIRST_CONTROLLED_WORKER_EXECUTION",
+        "supports_single_worker_tool_permission_binding": True,
+        "tool_permission_binding_requires_specific_tokens": True,
+        "supports_tool_permission_binding": False,
+        "tool_permission_binding_requires_separate_gate": True,
+        "broad_tool_access_allowed": False,
+        "external_tool_invocations_allowed": False,
         "broad_worker_activation_allowed": False,
         "external_worker_tool_calls_allowed": False,
         "description": "Applies deterministic local patches only inside a provided patch root, only to explicitly allowlisted relative files, after explicit confirmation.",

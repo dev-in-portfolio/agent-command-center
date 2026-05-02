@@ -1,26 +1,28 @@
 # Station Chief Runtime Skeleton
 
 ## Status
-Station Chief Runtime upgraded to v2.0.0. Locked 175-family baseline preserved. First controlled worker-agent execution release added.
+Station Chief Runtime upgraded to v2.1.0. Locked 175-family baseline preserved. Single-worker tool permission binding added.
 
 ## Purpose
-The Station Chief runtime receives one command, classifies it, loads the locked Devinization overlay stack, selects an activation tier, creates a command brief, creates non-executing work orders, writes deterministic artifacts, supports registry/resume, supports gated sandbox and scoped repo patch operations, supports dry-run/approval/ledger/release-lock flows, supports controlled execution profile expansion, supports a dry-run-only work order executor skeleton, supports worker hiring registry preview, supports department routing runtime preview, supports a multi-agent orchestration sandbox, supports UI/operator console schemas, supports GitHub patch application hardening, supports a deployment/portfolio packaging bridge, and now adds the first controlled single-worker sandbox execution path.
+The Station Chief runtime receives one command, classifies it, loads the locked Devinization overlay stack, selects an activation tier, creates a command brief, creates non-executing work orders, writes deterministic artifacts, supports registry/resume, supports gated sandbox and scoped repo patch operations, supports dry-run/approval/ledger/release-lock flows, supports controlled execution profile expansion, supports a dry-run-only work order executor skeleton, supports worker hiring registry preview, supports department routing runtime preview, supports a multi-agent orchestration sandbox, supports UI/operator console schemas, supports GitHub patch application hardening, supports a deployment/portfolio packaging bridge, supports first controlled single-worker sandbox execution, and now adds single-worker tool permission binding.
 
 ## What This Adds
-- first controlled worker-agent execution schema
-- first-worker approval token
-- worker execution gate
-- tool permission binding
-- sandbox worker task runner
-- controlled worker execution result
-- worker abort contract
-- worker rollback contract
-- worker execution telemetry stub
-- post-run audit proof
-- worker execution ledger
-- single-worker tool permission binding readiness bridge
-- controlled worker execution artifact writing
-- controlled worker execution manifest
+- single-worker tool permission binding schema
+- per-tool permission registry
+- tool-specific approval tokens
+- tool permission request validator
+- tool-specific approval binding
+- tool invocation dry-run contract
+- tool output validation schema
+- tool output validation result
+- tool failure handling contract
+- tool revocation contract
+- per-run permission audit proof
+- tool permission ledger
+- tool permission readiness summary
+- live execution telemetry and abort controls readiness bridge
+- tool permission binding artifact writing
+- tool permission binding manifest
 
 ## What This Does Not Do
 - Does not modify baseline family files
@@ -34,6 +36,7 @@ The Station Chief runtime receives one command, classifies it, loads the locked 
 - Does not execute arbitrary code
 - Does not run shell commands
 - Does not execute live external tools
+- Does not invoke external tools
 - Does not assign broad live workers
 - Does not route live workers
 - Does not perform live orchestration
@@ -43,8 +46,8 @@ The Station Chief runtime receives one command, classifies it, loads the locked 
 - Does not apply uncontrolled repo patches
 - Does not push commits
 - Does not write to protected baseline or overlay paths
-- Does not treat controlled worker execution as broad execution permission
-- Does not build full single-worker tool permission binding yet
+- Does not treat tool permission binding as broad execution permission
+- Does not build live execution telemetry and abort controls yet
 - Does not claim full Agent Command Center production completion
 - no live UI rendering
 - no live orchestration
@@ -66,42 +69,44 @@ The Station Chief runtime receives one command, classifies it, loads the locked 
 
 python3 10_runtime/station_chief_runtime.py --demo
 
-python3 10_runtime/station_chief_runtime.py --controlled-worker-schema
+python3 10_runtime/station_chief_runtime.py --tool-permission-schema
 
-python3 10_runtime/station_chief_runtime.py --command "check please" --controlled-worker-execution
+python3 10_runtime/station_chief_runtime.py --command "check please" --tool-permission-binding
 
-python3 10_runtime/station_chief_runtime.py --command "check please" --controlled-worker-execution --controlled-worker-task echo_command_summary --confirm-controlled-worker-execution YES_I_APPROVE_FIRST_CONTROLLED_WORKER_EXECUTION
+python3 10_runtime/station_chief_runtime.py --command "check please" --tool-permission-binding --tool-permission-request deterministic_summary --tool-permission-token deterministic_summary=YES_I_APPROVE_TOOL_DETERMINISTIC_SUMMARY
 
-python3 10_runtime/station_chief_runtime.py --command "build single-worker tool permission binding" --controlled-worker-execution --controlled-worker-task produce_static_worker_note --controlled-worker-tool-permission deterministic_summary --confirm-controlled-worker-execution YES_I_APPROVE_FIRST_CONTROLLED_WORKER_EXECUTION
+python3 10_runtime/station_chief_runtime.py --command "build live execution telemetry and abort controls" --tool-permission-binding --tool-permission-request deterministic_summary --tool-permission-token deterministic_summary=YES_I_APPROVE_TOOL_DETERMINISTIC_SUMMARY
 
-python3 10_runtime/station_chief_runtime.py --command "check please" --write-controlled-worker-execution /tmp/station_chief_controlled_worker_execution --confirm-controlled-worker-execution YES_I_APPROVE_FIRST_CONTROLLED_WORKER_EXECUTION
+python3 10_runtime/station_chief_runtime.py --command "check please" --write-tool-permission-binding /tmp/station_chief_tool_permission_binding --tool-permission-request sandbox_noop --tool-permission-token sandbox_noop=YES_I_APPROVE_TOOL_SANDBOX_NOOP
 
-python3 10_runtime/station_chief_runtime.py --command "check please" --write-artifacts /tmp/station_chief_runs --registry-dir /tmp/station_chief_registry --controlled-worker-execution --confirm-controlled-worker-execution YES_I_APPROVE_FIRST_CONTROLLED_WORKER_EXECUTION
+python3 10_runtime/station_chief_runtime.py --command "check please" --write-artifacts /tmp/station_chief_runs --registry-dir /tmp/station_chief_registry --tool-permission-binding --tool-permission-request deterministic_summary --tool-permission-token deterministic_summary=YES_I_APPROVE_TOOL_DETERMINISTIC_SUMMARY
 
 python3 10_runtime/station_chief_runtime.py --fixture-test
 
 python3 10_runtime/station_chief_fixture_tests.py
 
-## Controlled Worker Execution Artifacts
+## Tool Permission Binding Artifacts
 
-When --write-controlled-worker-execution is used, the runtime creates:
-- controlled_worker_execution_bundle.json
-- controlled_worker_execution_schema.json
-- worker_execution_gate.json
-- tool_permission_binding.json
-- sandbox_worker_task.json
-- worker_abort_contract.json
-- worker_rollback_contract.json
-- worker_execution_telemetry_stub.json
-- controlled_worker_execution_result.json
-- post_run_audit_proof.json
-- worker_execution_ledger.json
-- single_worker_tool_permission_binding_readiness_bridge.json
-- controlled_worker_execution_manifest.json
+When --write-tool-permission-binding is used, the runtime creates:
+- tool_permission_binding_bundle.json
+- tool_permission_binding_schema.json
+- per_tool_permission_registry.json
+- tool_permission_request_validation.json
+- tool_specific_approval_binding.json
+- tool_invocation_dry_run_contract.json
+- tool_output_validation_schema.json
+- tool_output_validation_result.json
+- tool_failure_handling_contract.json
+- tool_revocation_contract.json
+- per_run_permission_audit_proof.json
+- tool_permission_ledger.json
+- tool_permission_readiness_summary.json
+- live_execution_telemetry_abort_readiness_bridge.json
+- tool_permission_binding_manifest.json
 
 ## Runtime Doctrine
 
-Station Chief Runtime v2.0.0 adds the First Controlled Worker-Agent Execution Release without broad workforce animation or external execution. It allows one explicitly approved deterministic local sandbox worker task, creates worker execution gates, tool permission bindings, sandbox worker task records, abort contracts, rollback contracts, telemetry stubs, post-run audit proofs, worker execution ledgers, and single-worker tool permission binding handoff records while preserving the locked 175-family baseline, avoiding live external actions, avoiding shell commands, avoiding arbitrary code execution, avoiding hosting API calls, avoiding live deployment, avoiding uncontrolled repo edits, avoiding baseline mutation, avoiding Devinization overlay mutation, and avoiding repo file modification.
+Station Chief Runtime v2.1.0 adds Single-Worker Tool Permission Binding without granting unbounded tool access or external execution. It creates per-tool permission registries, tool-specific approval-token bindings, permission request validators, dry-run invocation contracts, output validation schemas and results, failure handling contracts, revocation contracts, per-run permission audit proofs, tool permission ledgers, readiness summaries, and live execution telemetry/abort handoff records while preserving the locked 175-family baseline, avoiding live external actions, avoiding external tool invocation, avoiding shell commands, avoiding arbitrary code execution, avoiding hosting API calls, avoiding live deployment, avoiding uncontrolled repo edits, avoiding baseline mutation, avoiding Devinization overlay mutation, and avoiding repo file modification.
 
 ## Next Recommended Step
-Next recommended step: build single-worker tool permission binding.
+Next recommended step: build live execution telemetry and abort controls.
