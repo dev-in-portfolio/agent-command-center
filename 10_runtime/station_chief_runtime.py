@@ -67,6 +67,10 @@ from station_chief_multi_agent_orchestration import (
     create_multi_agent_orchestration_bundle,
     create_orchestration_topology_schema,
 )
+from station_chief_operator_console import (
+    create_operator_console_bundle,
+    create_operator_console_screen_schema,
+)
 from station_chief_execution_profiles import (
     create_dry_run_bundle,
     create_execution_readiness_score,
@@ -76,7 +80,7 @@ from station_chief_execution_profiles import (
     select_execution_profile,
 )
 
-STATION_CHIEF_RUNTIME_VERSION = "1.5.0"
+STATION_CHIEF_RUNTIME_VERSION = "1.6.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -282,7 +286,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}:{run_label}:{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v1-5-{normalized}-{digest[:12]}"
+    return f"station-chief-v1-6-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -393,7 +397,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "1.5.0",
+            "registry_version": "1.6.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -410,7 +414,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "1.5.0"
+    registry["registry_version"] = "1.6.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -419,7 +423,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "1.5.0",
+        "index_version": "1.6.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -473,7 +477,7 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
     adapter_result = run_noop_adapter(execution_plan)
     return {
         "station_chief_runtime_version": STATION_CHIEF_RUNTIME_VERSION,
-        "runtime_status": "multi_agent_orchestration_sandbox",
+        "runtime_status": "operator_console_schema",
         "release_status": "STABLE_LOCKED",
         "run_capabilities": {
             "persistent_run_logs": True,
@@ -552,6 +556,31 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "department_routing_completion_proof": True,
             "department_routing_readiness_summary": True,
             "multi_agent_orchestration_readiness_bridge": True,
+            "orchestration_topology_schema": True,
+            "orchestration_node_generation": True,
+            "multi_worker_coordination_map": True,
+            "task_handoff_simulation": True,
+            "inter_worker_dependency_graph": True,
+            "orchestration_conflict_detector": True,
+            "orchestration_dry_run_engine": True,
+            "orchestration_ledger": True,
+            "orchestration_completion_proof": True,
+            "orchestration_readiness_summary": True,
+            "ui_operator_console_readiness_bridge": True,
+            "operator_console_screen_schema": True,
+            "runtime_status_panel_schema": True,
+            "approval_queue_panel_schema": True,
+            "work_order_panel_schema": True,
+            "worker_registry_panel_schema": True,
+            "department_routing_panel_schema": True,
+            "orchestration_sandbox_panel_schema": True,
+            "human_control_surface_schema": True,
+            "operator_action_registry": True,
+            "disabled_action_state_map": True,
+            "operator_console_review_bundle": True,
+            "operator_console_safety_summary": True,
+            "operator_console_readiness_summary": True,
+            "github_patch_hardening_readiness_bridge": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -640,6 +669,22 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
         "department_routing_completion_proofs": None,
         "department_routing_readiness_summary": None,
         "multi_agent_orchestration_readiness_bridge": None,
+        "operator_console_bundle": None,
+        "operator_console_review_bundle": None,
+        "operator_console_screen_schema": None,
+        "runtime_status_panel_schema": None,
+        "approval_queue_panel_schema": None,
+        "work_order_panel_schema": None,
+        "worker_registry_panel_schema": None,
+        "department_routing_panel_schema": None,
+        "orchestration_sandbox_panel_schema": None,
+        "release_lock_panel_schema": None,
+        "human_control_surface_schema": None,
+        "operator_action_registry": None,
+        "disabled_action_state_map": None,
+        "operator_console_safety_summary": None,
+        "operator_console_readiness_summary": None,
+        "github_patch_hardening_readiness_bridge": None,
         "evidence": {
             "baseline_preserved": True,
             "external_actions_taken": False,
@@ -685,9 +730,14 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "multi_agent_orchestration_does_not_hire_workers": True,
             "multi_agent_orchestration_does_not_route_live_workers": True,
             "multi_agent_orchestration_does_not_perform_live_orchestration": True,
-            "ui_operator_console_schema_not_yet_active": True,
+            "operator_console_schema_available": True,
+            "operator_console_schema_only": True,
+            "operator_console_does_not_render_live_ui": True,
+            "operator_console_does_not_authorize_execution": True,
+            "operator_console_does_not_connect_live_apis": True,
+            "github_patch_hardening_not_yet_active": True,
         },
-        "next_step": "Next step: build UI/operator console schema.",
+        "next_step": "Next step: build GitHub patch application hardening.",
     }
 
 
@@ -742,9 +792,9 @@ def write_approval_ledger(result: dict, output_dir: str | Path, run_label: str =
     ]
     
     manifest = {
-        "approval_ledger_manifest_version": "1.5.0",
+        "approval_ledger_manifest_version": "1.6.0",
         "run_id": run_id,
-        "runtime_version": "1.5.0",
+        "runtime_version": "1.6.0",
         "files_written": files_written,
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -813,9 +863,9 @@ def write_controlled_execution(result: dict, output_dir: str | Path, run_label: 
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "controlled_execution_manifest_version": "1.5.0",
+        "controlled_execution_manifest_version": "1.6.0",
         "run_id": run_id,
-        "runtime_version": "1.5.0",
+        "runtime_version": "1.6.0",
         "files_written": files_written + ["controlled_execution_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -823,7 +873,7 @@ def write_controlled_execution(result: dict, output_dir: str | Path, run_label: 
         "real_worker_hiring_performed": False,
         "execution_authorized": False,
         "status": "PROFILE_EXPANSION_ONLY",
-        "note": "Controlled execution v1.5.0 expands execution profiles only. It does not execute live actions or hire workers."
+        "note": "Controlled execution v1.6.0 expands execution profiles only. It does not execute live actions or hire workers."
     }
     _write_json(record_dir / "controlled_execution_manifest.json", manifest)
     files_written.append("controlled_execution_manifest.json")
@@ -878,9 +928,9 @@ def write_work_order_executor(result: dict, output_dir: str | Path, run_label: s
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "work_order_executor_manifest_version": "1.5.0",
+        "work_order_executor_manifest_version": "1.6.0",
         "run_id": run_id,
-        "runtime_version": "1.5.0",
+        "runtime_version": "1.6.0",
         "files_written": files_written + ["work_order_executor_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -889,7 +939,7 @@ def write_work_order_executor(result: dict, output_dir: str | Path, run_label: s
         "repo_files_modified": False,
         "execution_authorized": False,
         "status": "SKELETON_DRY_RUN_ONLY",
-        "note": "Work Order Executor v1.5.0 creates dry-run skeleton artifacts only. It does not execute live actions, modify repo files, hire workers, or animate the workforce."
+        "note": "Work Order Executor v1.6.0 creates dry-run skeleton artifacts only. It does not execute live actions, modify repo files, hire workers, or animate the workforce."
     }
     _write_json(record_dir / "work_order_executor_manifest.json", manifest)
     files_written.append("work_order_executor_manifest.json")
@@ -944,9 +994,9 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "worker_hiring_registry_manifest_version": "1.5.0",
+        "worker_hiring_registry_manifest_version": "1.6.0",
         "run_id": run_id,
-        "runtime_version": "1.5.0",
+        "runtime_version": "1.6.0",
         "files_written": files_written + ["worker_hiring_registry_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -954,7 +1004,7 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
         "real_worker_hiring_performed": False,
         "execution_authorized": False,
         "status": "REGISTRY_PREVIEW_ONLY",
-        "note": "Worker Hiring Registry v1.5.0 creates preview registry artifacts only. It does not hire workers, animate the workforce, execute live actions, or modify repo files."
+        "note": "Worker Hiring Registry v1.6.0 creates preview registry artifacts only. It does not hire workers, animate the workforce, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "worker_hiring_registry_manifest.json", manifest)
     files_written.append("worker_hiring_registry_manifest.json")
@@ -1013,9 +1063,9 @@ def write_department_routing(result: dict, output_dir: str | Path, run_label: st
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "department_routing_manifest_version": "1.5.0",
+        "department_routing_manifest_version": "1.6.0",
         "run_id": run_id,
-        "runtime_version": "1.5.0",
+        "runtime_version": "1.6.0",
         "files_written": files_written + ["department_routing_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1024,7 +1074,7 @@ def write_department_routing(result: dict, output_dir: str | Path, run_label: st
         "live_worker_routing_performed": False,
         "execution_authorized": False,
         "status": "ROUTING_PREVIEW_ONLY",
-        "note": "Department Routing Runtime v1.5.0 creates preview routing artifacts only. It does not route live workers, hire workers, animate the workforce, execute live actions, or modify repo files."
+        "note": "Department Routing Runtime v1.6.0 creates preview routing artifacts only. It does not route live workers, hire workers, animate the workforce, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "department_routing_manifest.json", manifest)
     files_written.append("department_routing_manifest.json")
@@ -1085,9 +1135,9 @@ def write_multi_agent_orchestration(result: dict, output_dir: str | Path, run_la
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "multi_agent_orchestration_manifest_version": "1.5.0",
+        "multi_agent_orchestration_manifest_version": "1.6.0",
         "run_id": run_id,
-        "runtime_version": "1.5.0",
+        "runtime_version": "1.6.0",
         "files_written": files_written + ["multi_agent_orchestration_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1097,7 +1147,7 @@ def write_multi_agent_orchestration(result: dict, output_dir: str | Path, run_la
         "live_orchestration_performed": False,
         "execution_authorized": False,
         "status": "ORCHESTRATION_SANDBOX_ONLY",
-        "note": "Multi-Agent Orchestration Sandbox v1.5.0 creates sandbox orchestration artifacts only. It does not animate workers, hire workers, route live workers, execute live actions, perform live orchestration, or modify repo files."
+        "note": "Multi-Agent Orchestration Sandbox v1.6.0 creates sandbox orchestration artifacts only. It does not animate workers, hire workers, route live workers, execute live actions, perform live orchestration, or modify repo files."
     }
     _write_json(record_dir / "multi_agent_orchestration_manifest.json", manifest)
     files_written.append("multi_agent_orchestration_manifest.json")
@@ -1105,6 +1155,88 @@ def write_multi_agent_orchestration(result: dict, output_dir: str | Path, run_la
     return {
         "run_id": run_id,
         "multi_agent_orchestration_dir": str(record_dir),
+        "files_written": files_written
+    }
+
+
+def attach_operator_console(result: dict) -> dict:
+    if result.get("multi_agent_orchestration_bundle") is None:
+        result = attach_multi_agent_orchestration(result)
+        
+    bundle = create_operator_console_bundle(result)
+    
+    result["operator_console_bundle"] = bundle
+    result["operator_console_review_bundle"] = bundle["operator_console_review_bundle"]
+    result["operator_console_screen_schema"] = bundle["operator_console_review_bundle"]["operator_console_screen_schema"]
+    result["runtime_status_panel_schema"] = bundle["operator_console_review_bundle"]["runtime_status_panel_schema"]
+    result["approval_queue_panel_schema"] = bundle["operator_console_review_bundle"]["approval_queue_panel_schema"]
+    result["work_order_panel_schema"] = bundle["operator_console_review_bundle"]["work_order_panel_schema"]
+    result["worker_registry_panel_schema"] = bundle["operator_console_review_bundle"]["worker_registry_panel_schema"]
+    result["department_routing_panel_schema"] = bundle["operator_console_review_bundle"]["department_routing_panel_schema"]
+    result["orchestration_sandbox_panel_schema"] = bundle["operator_console_review_bundle"]["orchestration_sandbox_panel_schema"]
+    result["release_lock_panel_schema"] = bundle["operator_console_review_bundle"]["release_lock_panel_schema"]
+    result["human_control_surface_schema"] = bundle["operator_console_review_bundle"]["human_control_surface_schema"]
+    result["operator_action_registry"] = bundle["operator_console_review_bundle"]["operator_action_registry"]
+    result["disabled_action_state_map"] = bundle["operator_console_review_bundle"]["disabled_action_state_map"]
+    result["operator_console_safety_summary"] = bundle["operator_console_safety_summary"]
+    result["operator_console_readiness_summary"] = bundle["operator_console_readiness_summary"]
+    result["github_patch_hardening_readiness_bridge"] = bundle["github_patch_hardening_readiness_bridge"]
+    
+    return result
+
+def write_operator_console(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
+    if "operator_console_bundle" not in result:
+        raise ValueError("Missing operator_console_bundle in result")
+        
+    run_id = generate_run_id(result.get("command", "empty"), run_label)
+    record_dir = Path(output_dir) / run_id
+    record_dir.mkdir(parents=True, exist_ok=True)
+    
+    payloads = {
+        "operator_console_bundle.json": result["operator_console_bundle"],
+        "operator_console_review_bundle.json": result["operator_console_review_bundle"],
+        "operator_console_screen_schema.json": result["operator_console_screen_schema"],
+        "runtime_status_panel_schema.json": result["runtime_status_panel_schema"],
+        "approval_queue_panel_schema.json": result["approval_queue_panel_schema"],
+        "work_order_panel_schema.json": result["work_order_panel_schema"],
+        "worker_registry_panel_schema.json": result["worker_registry_panel_schema"],
+        "department_routing_panel_schema.json": result["department_routing_panel_schema"],
+        "orchestration_sandbox_panel_schema.json": result["orchestration_sandbox_panel_schema"],
+        "release_lock_panel_schema.json": result["release_lock_panel_schema"],
+        "human_control_surface_schema.json": result["human_control_surface_schema"],
+        "operator_action_registry.json": result["operator_action_registry"],
+        "disabled_action_state_map.json": result["disabled_action_state_map"],
+        "operator_console_safety_summary.json": result["operator_console_safety_summary"],
+        "operator_console_readiness_summary.json": result["operator_console_readiness_summary"],
+        "github_patch_hardening_readiness_bridge.json": result["github_patch_hardening_readiness_bridge"]
+    }
+    
+    files_written = list(payloads.keys())
+    for filename, payload in payloads.items():
+        _write_json(record_dir / filename, payload)
+        
+    manifest = {
+        "operator_console_manifest_version": "1.6.0",
+        "run_id": run_id,
+        "runtime_version": "1.6.0",
+        "files_written": files_written + ["operator_console_manifest.json"],
+        "baseline_preserved": True,
+        "external_actions_taken": False,
+        "live_worker_agents_activated": False,
+        "real_worker_hiring_performed": False,
+        "live_worker_routing_performed": False,
+        "live_orchestration_performed": False,
+        "live_ui_rendered": False,
+        "execution_authorized": False,
+        "status": "SCHEMA_ONLY",
+        "note": "UI / Operator Console Schema v1.6.0 creates schema and review artifacts only. It does not render a live UI, authorize execution, connect APIs, animate workers, hire workers, route live workers, perform live orchestration, execute live actions, or modify repo files."
+    }
+    _write_json(record_dir / "operator_console_manifest.json", manifest)
+    files_written.append("operator_console_manifest.json")
+    
+    return {
+        "run_id": run_id,
+        "operator_console_dir": str(record_dir),
         "files_written": files_written
     }
 
@@ -1242,11 +1374,27 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "orchestration_completion_proofs": result.get("orchestration_completion_proofs"),
         "orchestration_readiness_summary": result.get("orchestration_readiness_summary"),
         "ui_operator_console_readiness_bridge": result.get("ui_operator_console_readiness_bridge"),
+        "operator_console_bundle": result.get("operator_console_bundle"),
+        "operator_console_review_bundle": result.get("operator_console_review_bundle"),
+        "operator_console_screen_schema": result.get("operator_console_screen_schema"),
+        "runtime_status_panel_schema": result.get("runtime_status_panel_schema"),
+        "approval_queue_panel_schema": result.get("approval_queue_panel_schema"),
+        "work_order_panel_schema": result.get("work_order_panel_schema"),
+        "worker_registry_panel_schema": result.get("worker_registry_panel_schema"),
+        "department_routing_panel_schema": result.get("department_routing_panel_schema"),
+        "orchestration_sandbox_panel_schema": result.get("orchestration_sandbox_panel_schema"),
+        "release_lock_panel_schema": result.get("release_lock_panel_schema"),
+        "human_control_surface_schema": result.get("human_control_surface_schema"),
+        "operator_action_registry": result.get("operator_action_registry"),
+        "disabled_action_state_map": result.get("disabled_action_state_map"),
+        "operator_console_safety_summary": result.get("operator_console_safety_summary"),
+        "operator_console_readiness_summary": result.get("operator_console_readiness_summary"),
+        "github_patch_hardening_readiness_bridge": result.get("github_patch_hardening_readiness_bridge"),
         "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v1_5_artifacts",
+            "artifact_type": "station_chief_runtime_v1_6_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -1343,6 +1491,22 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "orchestration_completion_proofs.json",
                 "orchestration_readiness_summary.json",
                 "ui_operator_console_readiness_bridge.json",
+                "operator_console_bundle.json",
+                "operator_console_review_bundle.json",
+                "operator_console_screen_schema.json",
+                "runtime_status_panel_schema.json",
+                "approval_queue_panel_schema.json",
+                "work_order_panel_schema.json",
+                "worker_registry_panel_schema.json",
+                "department_routing_panel_schema.json",
+                "orchestration_sandbox_panel_schema.json",
+                "release_lock_panel_schema.json",
+                "human_control_surface_schema.json",
+                "operator_action_registry.json",
+                "disabled_action_state_map.json",
+                "operator_console_safety_summary.json",
+                "operator_console_readiness_summary.json",
+                "github_patch_hardening_readiness_bridge.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -1427,6 +1591,20 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "orchestration_completion_proof": True,
             "orchestration_readiness_summary": True,
             "ui_operator_console_readiness_bridge": True,
+            "operator_console_screen_schema": True,
+            "runtime_status_panel_schema": True,
+            "approval_queue_panel_schema": True,
+            "work_order_panel_schema": True,
+            "worker_registry_panel_schema": True,
+            "department_routing_panel_schema": True,
+            "orchestration_sandbox_panel_schema": True,
+            "human_control_surface_schema": True,
+            "operator_action_registry": True,
+            "disabled_action_state_map": True,
+            "operator_console_review_bundle": True,
+            "operator_console_safety_summary": True,
+            "operator_console_readiness_summary": True,
+            "github_patch_hardening_readiness_bridge": True,
             "signed_approval_record_does_not_execute_patch": True,
             "approval_ledger_does_not_execute_patch": True,
             "release_lock_does_not_execute_patch": True,
@@ -1449,6 +1627,10 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "multi_agent_orchestration_does_not_hire_workers": True,
             "multi_agent_orchestration_does_not_route_live_workers": True,
             "multi_agent_orchestration_does_not_perform_live_orchestration": True,
+            "operator_console_schema_only": True,
+            "operator_console_does_not_render_live_ui": True,
+            "operator_console_does_not_authorize_execution": True,
+            "operator_console_does_not_connect_live_apis": True,
         },
     }
 
@@ -1569,6 +1751,22 @@ def write_runtime_artifacts(
         "orchestration_completion_proofs.json": artifacts.get("orchestration_completion_proofs"),
         "orchestration_readiness_summary.json": artifacts.get("orchestration_readiness_summary"),
         "ui_operator_console_readiness_bridge.json": artifacts.get("ui_operator_console_readiness_bridge"),
+        "operator_console_bundle.json": artifacts.get("operator_console_bundle"),
+        "operator_console_review_bundle.json": artifacts.get("operator_console_review_bundle"),
+        "operator_console_screen_schema.json": artifacts.get("operator_console_screen_schema"),
+        "runtime_status_panel_schema.json": artifacts.get("runtime_status_panel_schema"),
+        "approval_queue_panel_schema.json": artifacts.get("approval_queue_panel_schema"),
+        "work_order_panel_schema.json": artifacts.get("work_order_panel_schema"),
+        "worker_registry_panel_schema.json": artifacts.get("worker_registry_panel_schema"),
+        "department_routing_panel_schema.json": artifacts.get("department_routing_panel_schema"),
+        "orchestration_sandbox_panel_schema.json": artifacts.get("orchestration_sandbox_panel_schema"),
+        "release_lock_panel_schema.json": artifacts.get("release_lock_panel_schema"),
+        "human_control_surface_schema.json": artifacts.get("human_control_surface_schema"),
+        "operator_action_registry.json": artifacts.get("operator_action_registry"),
+        "disabled_action_state_map.json": artifacts.get("disabled_action_state_map"),
+        "operator_console_safety_summary.json": artifacts.get("operator_console_safety_summary"),
+        "operator_console_readiness_summary.json": artifacts.get("operator_console_readiness_summary"),
+        "github_patch_hardening_readiness_bridge.json": artifacts.get("github_patch_hardening_readiness_bridge"),
         "runtime_index_entry.json": artifacts["runtime_index_entry"],
         "manifest.json": artifacts["manifest"],
         "full_result.json": result,
@@ -1779,7 +1977,7 @@ def write_dry_run_bundle(
         "execution_readiness_score.json": result.get("execution_readiness_score"),
         "repo_patch_preview.diff": dry_run_bundle.get("repo_patch_preview") or "",
         "dry_run_manifest.json": {
-            "dry_run_bundle_version": "1.5.0",
+            "dry_run_bundle_version": "1.6.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -1835,7 +2033,7 @@ def write_approval_handoff(
         "dry_run_bundle_comparison.json": packet.get("comparison"),
         "patch_preview.diff": (packet.get("dry_run_bundle") or {}).get("repo_patch_preview") or "",
         "approval_handoff_manifest.json": {
-            "approval_handoff_version": "1.5.0",
+            "approval_handoff_version": "1.6.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -1930,7 +2128,7 @@ def write_approval_record(
 
     files_written = []
     approval_record_manifest = {
-        "approval_record_manifest_version": "1.5.0",
+        "approval_record_manifest_version": "1.6.0",
         "run_id": run_id,
         "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
         "files_written": [
@@ -2014,10 +2212,10 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--execute-repo-patch", action="store_true", help="Execute a scoped repo patch if the gate approves")
     parser.add_argument("--execution-profile", type=str, help="Requested execution profile for dry-run behavior")
     parser.add_argument("--dry-run-bundle", action="store_true", help="Attach a dry-run bundle to the printed result")
-    parser.add_argument("--release-lock", action="store_true", help="Attach v1.5.0 stable release lock artifacts")
-    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v1.5.0 release manifest as JSON")
-    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v1.5.0 stable release lock artifacts to DIR")
-    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v1.5.0 stable release manifest JSON file")
+    parser.add_argument("--release-lock", action="store_true", help="Attach v1.6.0 stable release lock artifacts")
+    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v1.6.0 release manifest as JSON")
+    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v1.6.0 stable release lock artifacts to DIR")
+    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v1.6.0 stable release manifest JSON file")
     parser.add_argument("--list-controlled-execution-profiles", action="store_true", help="Print controlled execution profile catalog as JSON")
     parser.add_argument("--controlled-execution", action="store_true", help="Attach controlled execution bundle to the printed result")
     parser.add_argument("--controlled-execution-profile", type=str, metavar="PROFILE_ID", help="Choose a controlled execution profile")
@@ -2035,6 +2233,9 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--orchestration-schema", action="store_true", help="Print the multi-agent orchestration topology schema as JSON")
     parser.add_argument("--multi-agent-orchestration", action="store_true", help="Attach multi-agent orchestration bundle to the printed result")
     parser.add_argument("--write-multi-agent-orchestration", metavar="DIR", help="Write multi-agent orchestration artifacts into the provided directory")
+    parser.add_argument("--operator-console-schema", action="store_true", help="Print the operator console screen schema as JSON")
+    parser.add_argument("--operator-console", action="store_true", help="Attach operator console bundle to the printed result")
+    parser.add_argument("--write-operator-console", metavar="DIR", help="Write operator console artifacts into the provided directory")
     return parser
 
 
@@ -2091,6 +2292,10 @@ def main() -> None:
 
     if args.orchestration_schema:
         print(json.dumps(create_orchestration_topology_schema(), indent=2, ensure_ascii=False))
+        return
+
+    if args.operator_console_schema:
+        print(json.dumps(create_operator_console_screen_schema(), indent=2, ensure_ascii=False))
         return
 
     if args.list_controlled_execution_profiles:
@@ -2268,6 +2473,9 @@ def main() -> None:
     if args.multi_agent_orchestration or args.write_multi_agent_orchestration:
         result = attach_multi_agent_orchestration(result)
 
+    if args.operator_console or args.write_operator_console:
+        result = attach_operator_console(result)
+
     artifact_summary = None
     if args.write_artifacts:
         artifact_summary = write_runtime_artifacts(
@@ -2355,6 +2563,11 @@ def main() -> None:
         multi_agent_orchestration_summary = write_multi_agent_orchestration(result, args.write_multi_agent_orchestration, run_label=args.run_label)
         result = dict(result)
         result["multi_agent_orchestration_write_summary"] = multi_agent_orchestration_summary
+
+    if args.write_operator_console:
+        operator_console_summary = write_operator_console(result, args.write_operator_console, run_label=args.run_label)
+        result = dict(result)
+        result["operator_console_write_summary"] = operator_console_summary
 
     if args.write_output:
         Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")

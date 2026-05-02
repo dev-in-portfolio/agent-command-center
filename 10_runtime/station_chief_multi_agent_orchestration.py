@@ -3,7 +3,7 @@ import hashlib
 import re
 from pathlib import Path
 
-MULTI_AGENT_ORCHESTRATION_MODULE_VERSION = "1.5.0"
+MULTI_AGENT_ORCHESTRATION_MODULE_VERSION = "1.6.0"
 MULTI_AGENT_ORCHESTRATION_STATUS = "ORCHESTRATION_SANDBOX_ONLY"
 MULTI_AGENT_ORCHESTRATION_PHASE = "Multi-Agent Orchestration Sandbox"
 
@@ -19,15 +19,15 @@ def normalize_orchestration_label(label: str) -> str:
     normalized = re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
     return normalized or "orchestration"
 
-def generate_orchestration_id(command: str, label: str, index: int, runtime_version: str = "1.5.0") -> str:
+def generate_orchestration_id(command: str, label: str, index: int, runtime_version: str = "1.6.0") -> str:
     normalized_label = normalize_orchestration_label(label)
     hash_input = f"{runtime_version}:{command}:{label}:{index}"
     hash_chars = hashlib.sha256(hash_input.encode("utf-8")).hexdigest()[:12]
-    return f"orchestration-v1-5-{normalized_label}-{index:03d}-{hash_chars}"
+    return f"orchestration-v1-6-{normalized_label}-{index:03d}-{hash_chars}"
 
 def create_orchestration_topology_schema() -> dict:
     return {
-        "orchestration_topology_schema_version": "1.5.0",
+        "orchestration_topology_schema_version": "1.6.0",
         "schema_status": "ORCHESTRATION_SANDBOX_ONLY",
         "required_fields": [
             "orchestration_id",
@@ -110,7 +110,7 @@ def create_orchestration_node(
     orchestration_id = generate_orchestration_id(command, route_candidate.get("route_title", "coord"), index)
     
     return {
-        "orchestration_node_version": "1.5.0",
+        "orchestration_node_version": "1.6.0",
         "orchestration_id": orchestration_id,
         "orchestration_title": f"Coordinate {route_candidate.get('route_title', 'Route')}",
         "orchestration_type": "department_route_coordination_preview",
@@ -212,7 +212,7 @@ def create_multi_worker_coordination_map(orchestration_nodes: list[dict]) -> dic
             ready_ids.append(nid)
             
     return {
-        "multi_worker_coordination_map_version": "1.5.0",
+        "multi_worker_coordination_map_version": "1.6.0",
         "map_status": "ORCHESTRATION_SANDBOX_ONLY",
         "node_count": len(orchestration_nodes),
         "coordination_by_department": by_dept,
@@ -259,7 +259,7 @@ def create_task_handoff_simulation(orchestration_nodes: list[dict], coordination
         })
         
     return {
-        "task_handoff_simulation_version": "1.5.0",
+        "task_handoff_simulation_version": "1.6.0",
         "simulation_status": "SANDBOX_PREVIEW_ONLY",
         "handoff_count": len(handoffs),
         "handoffs": handoffs,
@@ -314,7 +314,7 @@ def create_inter_worker_dependency_graph(orchestration_nodes: list[dict]) -> dic
             ready_ids.append(nid)
             
     return {
-        "inter_worker_dependency_graph_version": "1.5.0",
+        "inter_worker_dependency_graph_version": "1.6.0",
         "graph_status": "SANDBOX_PREVIEW_ONLY",
         "node_count": len(orchestration_nodes),
         "dependency_graph": graph,
@@ -362,7 +362,7 @@ def detect_orchestration_conflicts(
     status = "CLEAR" if conflict_count == 0 else "CONFLICTS_DETECTED"
     
     return {
-        "orchestration_conflict_detector_version": "1.5.0",
+        "orchestration_conflict_detector_version": "1.6.0",
         "conflict_status": status,
         "duplicate_orchestration_ids": duplicates,
         "missing_source_worker_node_ids": missing_source,
@@ -409,7 +409,7 @@ def dry_run_multi_agent_orchestration(
             path = ["NODE_CANDIDATE_CREATED", "NODE_PREVIEW_READY", "NODE_COORDINATION_PLANNED", "NODE_HANDOFF_SIMULATED", "NODE_RECORDED"]
             
         results.append({
-            "orchestration_dry_run_result_version": "1.5.0",
+            "orchestration_dry_run_result_version": "1.6.0",
             "orchestration_id": nid,
             "worker_id": wid,
             "target_department": node["target_department"],
@@ -456,7 +456,7 @@ def create_orchestration_ledger(orchestration_nodes: list[dict], dry_run_results
         })
         
     return {
-        "orchestration_ledger_version": "1.5.0",
+        "orchestration_ledger_version": "1.6.0",
         "ledger_status": "ORCHESTRATION_SANDBOX_ONLY",
         "node_count": len(orchestration_nodes),
         "dry_run_pass_count": pass_count,
@@ -482,7 +482,7 @@ def create_orchestration_completion_proof(orchestration_node: dict, dry_run_resu
     digest = sha256_digest(proof_data)
     
     return {
-        "orchestration_completion_proof_version": "1.5.0",
+        "orchestration_completion_proof_version": "1.6.0",
         "orchestration_id": orchestration_node["orchestration_id"],
         "worker_id": orchestration_node["source_worker_id"],
         "proof_status": status,
@@ -527,7 +527,7 @@ def create_orchestration_readiness_summary(
     )
     
     return {
-        "orchestration_readiness_summary_version": "1.5.0",
+        "orchestration_readiness_summary_version": "1.6.0",
         "orchestration_status": "ORCHESTRATION_SANDBOX_ONLY",
         "node_count": node_count,
         "dry_run_pass_count": pass_count,
@@ -551,7 +551,7 @@ def create_ui_operator_console_readiness_bridge(
     readiness_summary: dict
 ) -> dict:
     return {
-        "ui_operator_console_readiness_bridge_version": "1.5.0",
+        "ui_operator_console_readiness_bridge_version": "1.6.0",
         "current_layer": "Multi-Agent Orchestration Sandbox",
         "next_layer": "UI / Operator Console Schema",
         "ready_for_ui_operator_console_schema": readiness_summary["ready_for_ui_operator_console_schema"],
@@ -596,7 +596,7 @@ def create_multi_agent_orchestration_bundle(result: dict) -> dict:
     bridge = create_ui_operator_console_readiness_bridge(result, nodes, summary)
     
     return {
-        "multi_agent_orchestration_bundle_version": "1.5.0",
+        "multi_agent_orchestration_bundle_version": "1.6.0",
         "orchestration_status": MULTI_AGENT_ORCHESTRATION_STATUS,
         "orchestration_topology_schema": schema,
         "orchestration_nodes": nodes,

@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v1.5.0. Locked 175-family baseline preserved. Multi-agent orchestration sandbox added.
+Station Chief Runtime upgraded to v1.6.0. Locked 175-family baseline preserved. UI/operator console schema added.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -27,6 +27,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 10_runtime/station_chief_worker_hiring_registry.py
 10_runtime/station_chief_department_routing.py
 10_runtime/station_chief_multi_agent_orchestration.py
+10_runtime/station_chief_operator_console.py
 09_exports/station_chief_runtime_skeleton_report.md
 09_exports/station_chief_runtime_v0_2_report.md
 09_exports/station_chief_runtime_v0_3_report.md
@@ -42,6 +43,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 09_exports/station_chief_runtime_v1_3_report.md
 09_exports/station_chief_runtime_v1_4_report.md
 09_exports/station_chief_runtime_v1_5_report.md
+09_exports/station_chief_runtime_v1_6_report.md
 scripts/validate_station_chief_runtime_skeleton.py
 scripts/validate_station_chief_runtime_v0_2.py
 scripts/validate_station_chief_runtime_v0_3.py
@@ -57,6 +59,7 @@ scripts/validate_station_chief_runtime_v1_2.py
 scripts/validate_station_chief_runtime_v1_3.py
 scripts/validate_station_chief_runtime_v1_4.py
 scripts/validate_station_chief_runtime_v1_5.py
+scripts/validate_station_chief_runtime_v1_6.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -153,6 +156,21 @@ scripts/validate_station_chief_runtime_v1_5.py
 - orchestration completion proof
 - orchestration readiness summary
 - UI/operator-console readiness bridge
+- operator console screen schema
+- runtime status panel schema
+- approval queue panel schema
+- work order panel schema
+- worker registry panel schema
+- department routing panel schema
+- orchestration sandbox panel schema
+- release lock panel schema
+- human control surface schema
+- operator action registry
+- disabled action state map
+- operator console review bundle
+- operator console safety summary
+- operator console readiness summary
+- GitHub patch hardening readiness bridge
 - deterministic fixture tests
 - proof-backed JSON output
 - baseline preservation
@@ -162,6 +180,7 @@ scripts/validate_station_chief_runtime_v1_5.py
 - no live worker routing
 - no live worker assignment
 - no live orchestration
+- no live UI rendering
 
 ## Supported Command Types
 - verification
@@ -189,6 +208,7 @@ Tier 3 — Active Operation
 Tier 4 — Audit / Archive
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v1_6.py
 python3 scripts/validate_station_chief_runtime_v1_5.py
 python3 scripts/validate_station_chief_runtime_v1_4.py
 python3 scripts/validate_station_chief_runtime_v1_3.py
@@ -236,6 +256,7 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not assign live workers
 - Does not route live workers
 - Does not perform live orchestration
+- Does not render a live UI
 
 ## Next Recommended Build Step
-Next recommended build step: build UI/operator console schema.
+Next recommended build step: build GitHub patch application hardening.
