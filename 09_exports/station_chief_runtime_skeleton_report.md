@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v1.7.0. Locked 175-family baseline preserved. GitHub patch application hardening added.
+Station Chief Runtime upgraded to v1.8.0. Locked 175-family baseline preserved. Deployment/portfolio packaging bridge added.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -27,7 +27,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 10_runtime/station_chief_worker_hiring_registry.py
 10_runtime/station_chief_department_routing.py
 10_runtime/station_chief_multi_agent_orchestration.py
-10_runtime/station_chief_github_patch_hardening.py
+10_runtime/station_chief_deployment_packaging.py
 09_exports/station_chief_runtime_skeleton_report.md
 09_exports/station_chief_runtime_v0_2_report.md
 09_exports/station_chief_runtime_v0_3_report.md
@@ -45,6 +45,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 09_exports/station_chief_runtime_v1_5_report.md
 09_exports/station_chief_runtime_v1_6_report.md
 09_exports/station_chief_runtime_v1_7_report.md
+09_exports/station_chief_runtime_v1_8_report.md
 scripts/validate_station_chief_runtime_skeleton.py
 scripts/validate_station_chief_runtime_v0_2.py
 scripts/validate_station_chief_runtime_v0_3.py
@@ -62,6 +63,7 @@ scripts/validate_station_chief_runtime_v1_4.py
 scripts/validate_station_chief_runtime_v1_5.py
 scripts/validate_station_chief_runtime_v1_6.py
 scripts/validate_station_chief_runtime_v1_7.py
+scripts/validate_station_chief_runtime_v1_8.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -184,9 +186,22 @@ scripts/validate_station_chief_runtime_v1_7.py
 - patch execution readiness scoring
 - patch hardening audit bundle
 - deployment/portfolio packaging readiness bridge
+- deployment artifact schema
+- portfolio packaging manifest
+- runtime export bundle
+- release notes generator
+- deployment safety contract
+- deployment readiness proof
+- packaging audit bundle
+- portfolio handoff summary
+- first controlled worker-agent execution readiness bridge
 - no uncontrolled repo edits
 - no GitHub API mutation
 - no patch execution authorization
+- no live deployment
+- no hosting API calls
+- no external service mutation
+- no deployment execution authorization
 - deterministic fixture tests
 - proof-backed JSON output
 - baseline preservation
@@ -224,6 +239,7 @@ Tier 3 — Active Operation
 Tier 4 — Audit / Archive
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v1_8.py
 python3 scripts/validate_station_chief_runtime_v1_7.py
 python3 scripts/validate_station_chief_runtime_v1_6.py
 python3 scripts/validate_station_chief_runtime_v1_5.py
@@ -265,6 +281,7 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not treat worker registry previews as real hiring or live assignment
 - Does not treat department routing previews as live routing
 - Does not treat orchestration sandbox previews as live execution
+- Does not treat deployment packaging artifacts as live deployment permission
 - Does not build UI yet
 - Does not connect live APIs yet
 - Does not authorize uncontrolled live execution
@@ -274,6 +291,8 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not route live workers
 - Does not perform live orchestration
 - Does not render a live UI
+- Does not call hosting APIs
+- Does not deploy to external platforms
 
 ## Next Recommended Build Step
-Next recommended build step: build deployment/portfolio packaging bridge.
+Next recommended build step: build first controlled worker-agent execution release.

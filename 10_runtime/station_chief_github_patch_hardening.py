@@ -20,15 +20,15 @@ def normalize_patch_label(label: str) -> str:
     normalized = re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
     return normalized or "patch-hardening"
 
-def generate_patch_hardening_id(command: str, label: str, runtime_version: str = "1.7.0") -> str:
+def generate_patch_hardening_id(command: str, label: str, runtime_version: str = "1.8.0") -> str:
     normalized_label = normalize_patch_label(label)
     hash_input = f"{runtime_version}:{command}:{label}"
     hash_chars = hashlib.sha256(hash_input.encode("utf-8")).hexdigest()[:12]
-    return f"patch-hardening-v1-7-{normalized_label}-{hash_chars}"
+    return f"patch-hardening-v1-8-{normalized_label}-{hash_chars}"
 
 def create_patch_hardening_schema() -> dict:
     return {
-        "patch_hardening_schema_version": "1.7.0",
+        "patch_hardening_schema_version": "1.8.0",
         "schema_status": "PATCH_HARDENING_CONTRACT_ONLY",
         "required_sections": [
             "protected_path_policy",
