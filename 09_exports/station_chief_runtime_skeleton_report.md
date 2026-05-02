@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v1.0.0. Locked 175-family baseline preserved. Stable runtime foundation locked.
+Station Chief Runtime upgraded to v1.1.0. Locked 175-family baseline preserved. Controlled execution profile expansion added.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -9,7 +9,7 @@ Project owner, system architect, and operating-doctrine author: Devin O’Rourke
 This attribution applies to the Agent Command Center Station Chief runtime skeleton. The locked 175-family baseline remains preserved.
 
 ## Purpose
-This report documents the first stable Station Chief Runtime foundation lock after the Devinization stack lock and the v0.1 through v0.9 controlled runtime buildout.
+This report documents the first stable Station Chief Runtime foundation lock after the Devinization stack lock and its v1.1.0 enhancement for controlled execution profile expansion.
 
 ## Files Created / Modified
 10_runtime/station_chief_runtime.py
@@ -22,6 +22,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 10_runtime/station_chief_approval_records.py
 10_runtime/station_chief_approval_ledger.py
 10_runtime/station_chief_release_lock.py
+10_runtime/station_chief_controlled_execution.py
 09_exports/station_chief_runtime_skeleton_report.md
 09_exports/station_chief_runtime_v0_2_report.md
 09_exports/station_chief_runtime_v0_3_report.md
@@ -32,6 +33,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 09_exports/station_chief_runtime_v0_8_report.md
 09_exports/station_chief_runtime_v0_9_report.md
 09_exports/station_chief_runtime_v1_0_report.md
+09_exports/station_chief_runtime_v1_1_report.md
 scripts/validate_station_chief_runtime_skeleton.py
 scripts/validate_station_chief_runtime_v0_2.py
 scripts/validate_station_chief_runtime_v0_3.py
@@ -42,6 +44,7 @@ scripts/validate_station_chief_runtime_v0_7.py
 scripts/validate_station_chief_runtime_v0_8.py
 scripts/validate_station_chief_runtime_v0_9.py
 scripts/validate_station_chief_runtime_v1_0.py
+scripts/validate_station_chief_runtime_v1_1.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -90,11 +93,20 @@ scripts/validate_station_chief_runtime_v1_0.py
 - stable approval flow lock
 - stable known limitations record
 - stable next-phase handoff
+- controlled execution profile catalog
+- controlled execution profile selection
+- execution permission matrix
+- execution mode contract
+- blocked-action ledger
+- controlled execution preflight contract
+- controlled execution readiness summary
+- work order executor readiness bridge
 - deterministic fixture tests
 - proof-backed JSON output
 - baseline preservation
 - no live API calls
-- no full workforce animation
+- no full workforce animation (no worker animation)
+- no real worker hiring
 
 ## Supported Command Types
 - verification
@@ -122,6 +134,7 @@ Tier 3 — Active Operation
 Tier 4 — Audit / Archive
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v1_1.py
 python3 scripts/validate_station_chief_runtime_v1_0.py
 python3 scripts/validate_station_chief_runtime_v0_9.py
 python3 scripts/validate_station_chief_runtime_v0_8.py
@@ -151,9 +164,11 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not treat signed approval records as automatic execution permission
 - Does not treat approval ledgers as automatic execution permission
 - Does not treat the v1.0 release lock as automatic execution permission
+- Does not treat controlled execution profiles as automatic execution permission
 - Does not build UI yet
 - Does not connect live APIs yet
 - Does not authorize uncontrolled live execution
+- Does not hire real worker agents yet
 
 ## Next Recommended Build Step
-Next recommended build step: begin controlled execution engine and worker hiring layer.
+Next recommended build step: build work order executor skeleton.

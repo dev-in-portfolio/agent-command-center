@@ -2,8 +2,8 @@ import json
 import hashlib
 from pathlib import Path
 
-RELEASE_LOCK_MODULE_VERSION = "1.0.0"
-STABLE_RUNTIME_VERSION = "1.0.0"
+RELEASE_LOCK_MODULE_VERSION = "1.1.0"
+STABLE_RUNTIME_VERSION = "1.1.0"
 STABLE_RUNTIME_NAME = "Station Chief Runtime"
 
 def canonical_json(data: object) -> str:
@@ -16,7 +16,7 @@ def sha256_digest(data: object) -> str:
 
 def create_stable_capability_inventory() -> dict:
     return {
-        "capability_inventory_version": "1.0.0",
+        "capability_inventory_version": "1.1.0",
         "runtime_name": STABLE_RUNTIME_NAME,
         "runtime_version": STABLE_RUNTIME_VERSION,
         "capability_groups": {
@@ -134,7 +134,7 @@ def create_stable_capability_inventory() -> dict:
 
 def create_stable_runtime_contract() -> dict:
     return {
-        "runtime_contract_version": "1.0.0",
+        "runtime_contract_version": "1.1.0",
         "runtime_name": STABLE_RUNTIME_NAME,
         "runtime_version": STABLE_RUNTIME_VERSION,
         "contract_status": "STABLE_LOCKED",
@@ -184,7 +184,7 @@ def create_stable_runtime_contract() -> dict:
 
 def create_stable_artifact_contract() -> dict:
     return {
-        "artifact_contract_version": "1.0.0",
+        "artifact_contract_version": "1.1.0",
         "runtime_version": STABLE_RUNTIME_VERSION,
         "artifact_groups": {
             "core_runtime": [
@@ -265,7 +265,7 @@ def create_stable_artifact_contract() -> dict:
 
 def create_stable_adapter_boundary_contract() -> dict:
     return {
-        "adapter_boundary_contract_version": "1.0.0",
+        "adapter_boundary_contract_version": "1.1.0",
         "runtime_version": STABLE_RUNTIME_VERSION,
         "adapters": {
             "noop": {
@@ -309,7 +309,7 @@ def create_stable_adapter_boundary_contract() -> dict:
 
 def create_stable_safety_doctrine_lock() -> dict:
     return {
-        "safety_doctrine_lock_version": "1.0.0",
+        "safety_doctrine_lock_version": "1.1.0",
         "runtime_version": STABLE_RUNTIME_VERSION,
         "safety_status": "LOCKED",
         "rules": [
@@ -348,7 +348,7 @@ def create_stable_safety_doctrine_lock() -> dict:
 
 def create_stable_approval_flow_lock() -> dict:
     return {
-        "approval_flow_lock_version": "1.0.0",
+        "approval_flow_lock_version": "1.1.0",
         "runtime_version": STABLE_RUNTIME_VERSION,
         "approval_flow_steps": [
             "1. command intake",
@@ -375,7 +375,7 @@ def create_stable_approval_flow_lock() -> dict:
 
 def create_known_limitations_record() -> dict:
     return {
-        "known_limitations_version": "1.0.0",
+        "known_limitations_version": "1.1.0",
         "runtime_version": STABLE_RUNTIME_VERSION,
         "limitations": [
             "no production UI/operator console yet",
@@ -404,12 +404,11 @@ def create_known_limitations_record() -> dict:
 
 def create_next_phase_handoff_record() -> dict:
     return {
-        "next_phase_handoff_version": "1.0.0",
+        "next_phase_handoff_version": "1.1.0",
         "runtime_version": STABLE_RUNTIME_VERSION,
-        "current_phase": "Station Chief Runtime Foundation Stable Lock",
-        "next_phase": "Controlled Execution Engine and Worker Hiring Layer",
+        "current_phase": "Controlled Execution Profile Expansion",
+        "next_phase": "Work Order Executor Skeleton",
         "recommended_next_builds": [
-            "v1.1 controlled execution profile expansion",
             "v1.2 work order executor skeleton",
             "v1.3 worker hiring registry",
             "v1.4 department routing runtime",
@@ -426,7 +425,7 @@ def create_next_phase_handoff_record() -> dict:
 
 def create_release_readiness_summary() -> dict:
     return {
-        "release_readiness_summary_version": "1.0.0",
+        "release_readiness_summary_version": "1.1.0",
         "runtime_version": STABLE_RUNTIME_VERSION,
         "release_readiness_status": "READY_FOR_V1_0_LOCK",
         "required_layers": {
@@ -453,7 +452,7 @@ def create_release_readiness_summary() -> dict:
 
 def create_stable_release_manifest() -> dict:
     manifest = {
-        "stable_release_manifest_version": "1.0.0",
+        "stable_release_manifest_version": "1.1.0",
         "runtime_name": STABLE_RUNTIME_NAME,
         "runtime_version": STABLE_RUNTIME_VERSION,
         "release_status": "STABLE_LOCKED",
@@ -491,7 +490,7 @@ def verify_stable_release_manifest(release_manifest: dict) -> dict:
     pass_all = all([digest_matches, status_ok, version_ok, baseline_ok, external_ok, worker_ok, auth_ok, readiness_ok])
     
     return {
-        "stable_release_verification_version": "1.0.0",
+        "stable_release_verification_version": "1.1.0",
         "verification_status": "PASS" if pass_all else "FAIL",
         "release_digest_matches": digest_matches,
         "release_status": test_manifest.get("release_status"),
@@ -507,7 +506,7 @@ def verify_stable_release_manifest(release_manifest: dict) -> dict:
 def create_release_lock_bundle() -> dict:
     manifest = create_stable_release_manifest()
     return {
-        "release_lock_bundle_version": "1.0.0",
+        "release_lock_bundle_version": "1.1.0",
         "stable_release_manifest": manifest,
         "stable_release_verification": verify_stable_release_manifest(manifest),
         "stable_runtime_contract": manifest["stable_runtime_contract"],
@@ -523,4 +522,76 @@ def create_release_lock_bundle() -> dict:
         "external_actions_taken": False,
         "live_worker_agents_activated": False,
         "execution_authorized": False
+    }
+
+def attach_release_lock(result: dict) -> dict:
+    bundle = create_release_lock_bundle()
+    result["release_lock_bundle"] = bundle
+    result["stable_release_manifest"] = bundle["stable_release_manifest"]
+    result["stable_release_verification"] = bundle["stable_release_verification"]
+    result["stable_runtime_contract"] = bundle["stable_runtime_contract"]
+    result["stable_capability_inventory"] = bundle["stable_capability_inventory"]
+    result["stable_artifact_contract"] = bundle["stable_artifact_contract"]
+    result["stable_adapter_boundary_contract"] = bundle["stable_adapter_boundary_contract"]
+    result["stable_safety_doctrine_lock"] = bundle["stable_safety_doctrine_lock"]
+    result["stable_approval_flow_lock"] = bundle["stable_approval_flow_lock"]
+    result["known_limitations"] = bundle["known_limitations"]
+    result["next_phase_handoff"] = bundle["next_phase_handoff"]
+    result["release_readiness_summary"] = bundle["release_readiness_summary"]
+    return result
+
+def _write_json(path: Path, data: object) -> None:
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+
+def write_release_lock(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
+    if "release_lock_bundle" not in result:
+        raise ValueError("Missing release_lock_bundle in result")
+        
+    command = result.get("command", "empty")
+    import re
+    normalized = re.sub(r"[^a-z0-9]+", "-", command.lower()).strip("-") or "empty-command"
+    digest = hashlib.sha256(f"{STABLE_RUNTIME_VERSION}:{run_label}:{command}".encode("utf-8")).hexdigest()
+    run_id = f"station-chief-v1-1-{normalized}-{digest[:12]}"
+    
+    record_dir = Path(output_dir) / run_id
+    record_dir.mkdir(parents=True, exist_ok=True)
+    
+    payloads = {
+        "release_lock_bundle.json": result["release_lock_bundle"],
+        "stable_release_manifest.json": result["stable_release_manifest"],
+        "stable_release_verification.json": result["stable_release_verification"],
+        "stable_runtime_contract.json": result["stable_runtime_contract"],
+        "stable_capability_inventory.json": result["stable_capability_inventory"],
+        "stable_artifact_contract.json": result["stable_artifact_contract"],
+        "stable_adapter_boundary_contract.json": result["stable_adapter_boundary_contract"],
+        "stable_safety_doctrine_lock.json": result["stable_safety_doctrine_lock"],
+        "stable_approval_flow_lock.json": result["stable_approval_flow_lock"],
+        "known_limitations.json": result["known_limitations"],
+        "next_phase_handoff.json": result["next_phase_handoff"],
+        "release_readiness_summary.json": result["release_readiness_summary"]
+    }
+    
+    files_written = list(payloads.keys())
+    for filename, payload in payloads.items():
+        _write_json(record_dir / filename, payload)
+        
+    manifest = {
+        "release_lock_manifest_version": "1.1.0",
+        "run_id": run_id,
+        "runtime_version": "1.1.0",
+        "files_written": files_written + ["release_lock_manifest.json"],
+        "baseline_preserved": True,
+        "external_actions_taken": False,
+        "live_worker_agents_activated": False,
+        "execution_authorized": False,
+        "release_status": "STABLE_LOCKED",
+        "note": "Station Chief Runtime v1.1.0 stable release lock does not execute repo patches by itself."
+    }
+    _write_json(record_dir / "release_lock_manifest.json", manifest)
+    files_written.append("release_lock_manifest.json")
+    
+    return {
+        "run_id": run_id,
+        "release_lock_dir": str(record_dir),
+        "files_written": files_written
     }

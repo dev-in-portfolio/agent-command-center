@@ -41,9 +41,15 @@ from station_chief_approval_records import (
     verify_signed_approval_record,
 )
 from station_chief_release_lock import (
+    attach_release_lock,
     create_release_lock_bundle,
     create_stable_release_manifest,
     verify_stable_release_manifest,
+    write_release_lock,
+)
+from station_chief_controlled_execution import (
+    create_controlled_execution_bundle,
+    create_controlled_execution_profile_catalog,
 )
 from station_chief_execution_profiles import (
     create_dry_run_bundle,
@@ -54,7 +60,7 @@ from station_chief_execution_profiles import (
     select_execution_profile,
 )
 
-STATION_CHIEF_RUNTIME_VERSION = "1.0.0"
+STATION_CHIEF_RUNTIME_VERSION = "1.1.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -260,7 +266,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}:{run_label}:{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v1-0-{normalized}-{digest[:12]}"
+    return f"station-chief-v1-1-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -371,7 +377,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "1.0.0",
+            "registry_version": "1.1.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -388,7 +394,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "1.0.0"
+    registry["registry_version"] = "1.1.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -397,7 +403,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "1.0.0",
+        "index_version": "1.1.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -451,7 +457,7 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
     adapter_result = run_noop_adapter(execution_plan)
     return {
         "station_chief_runtime_version": STATION_CHIEF_RUNTIME_VERSION,
-        "runtime_status": "stable_release_locked",
+        "runtime_status": "controlled_execution_profile_expansion",
         "release_status": "STABLE_LOCKED",
         "run_capabilities": {
             "persistent_run_logs": True,
@@ -498,6 +504,14 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "stable_known_limitations_record": True,
             "stable_next_phase_handoff": True,
             "stable_release_readiness_summary": True,
+            "controlled_execution_profile_catalog": True,
+            "controlled_execution_profile_selection": True,
+            "execution_permission_matrix": True,
+            "execution_mode_contract": True,
+            "blocked_action_ledger": True,
+            "controlled_execution_preflight_contract": True,
+            "controlled_execution_readiness_summary": True,
+            "work_order_executor_readiness_bridge": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -548,6 +562,15 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
         "known_limitations": None,
         "next_phase_handoff": None,
         "release_readiness_summary": None,
+        "controlled_execution_bundle": None,
+        "controlled_execution_profile_catalog": None,
+        "controlled_execution_selection": None,
+        "execution_permission_matrix": None,
+        "execution_mode_contract": None,
+        "blocked_action_ledger": None,
+        "controlled_execution_preflight_contract": None,
+        "controlled_execution_readiness_summary": None,
+        "work_order_executor_readiness_bridge": None,
         "evidence": {
             "baseline_preserved": True,
             "external_actions_taken": False,
@@ -566,8 +589,13 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "release_manifest_available": True,
             "release_lock_does_not_execute_patch": True,
             "v1_0_stable_foundation_complete": True,
+            "controlled_execution_profile_expansion_available": True,
+            "controlled_execution_does_not_execute_live_actions": True,
+            "controlled_execution_does_not_hire_workers": True,
+            "controlled_execution_does_not_animate_workforce": True,
+            "work_order_executor_not_yet_active": True,
         },
-        "next_step": "Next step: begin controlled execution engine and worker hiring layer.",
+        "next_step": "Next step: build work order executor skeleton.",
     }
 
 
@@ -622,9 +650,9 @@ def write_approval_ledger(result: dict, output_dir: str | Path, run_label: str =
     ]
     
     manifest = {
-        "approval_ledger_manifest_version": "1.0.0",
+        "approval_ledger_manifest_version": "1.1.0",
         "run_id": run_id,
-        "runtime_version": "1.0.0",
+        "runtime_version": "1.1.0",
         "files_written": files_written,
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -641,43 +669,51 @@ def write_approval_ledger(result: dict, output_dir: str | Path, run_label: str =
     }
 
 
-def attach_release_lock(result: dict) -> dict:
-    bundle = create_release_lock_bundle()
-    result["release_lock_bundle"] = bundle
-    result["stable_release_manifest"] = bundle["stable_release_manifest"]
-    result["stable_release_verification"] = bundle["stable_release_verification"]
-    result["stable_runtime_contract"] = bundle["stable_runtime_contract"]
-    result["stable_capability_inventory"] = bundle["stable_capability_inventory"]
-    result["stable_artifact_contract"] = bundle["stable_artifact_contract"]
-    result["stable_adapter_boundary_contract"] = bundle["stable_adapter_boundary_contract"]
-    result["stable_safety_doctrine_lock"] = bundle["stable_safety_doctrine_lock"]
-    result["stable_approval_flow_lock"] = bundle["stable_approval_flow_lock"]
-    result["known_limitations"] = bundle["known_limitations"]
-    result["next_phase_handoff"] = bundle["next_phase_handoff"]
-    result["release_readiness_summary"] = bundle["release_readiness_summary"]
+def attach_controlled_execution(
+    result: dict,
+    requested_profile: str | None = None,
+    attempted_actions: list[str] | None = None
+) -> dict:
+    if result.get("release_lock_bundle") is None:
+        result = attach_release_lock(result)
+        
+    bundle = create_controlled_execution_bundle(
+        result,
+        requested_profile=requested_profile,
+        release_lock_bundle=result.get("release_lock_bundle"),
+        attempted_actions=attempted_actions
+    )
+    
+    result["controlled_execution_bundle"] = bundle
+    result["controlled_execution_profile_catalog"] = bundle["controlled_execution_profile_catalog"]
+    result["controlled_execution_selection"] = bundle["controlled_execution_selection"]
+    result["execution_permission_matrix"] = bundle["execution_permission_matrix"]
+    result["execution_mode_contract"] = bundle["execution_mode_contract"]
+    result["blocked_action_ledger"] = bundle["blocked_action_ledger"]
+    result["controlled_execution_preflight_contract"] = bundle["controlled_execution_preflight_contract"]
+    result["controlled_execution_readiness_summary"] = bundle["controlled_execution_readiness_summary"]
+    result["work_order_executor_readiness_bridge"] = bundle["work_order_executor_readiness_bridge"]
+    
     return result
 
-def write_release_lock(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
-    if "release_lock_bundle" not in result:
-        raise ValueError("Missing release_lock_bundle in result")
+def write_controlled_execution(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
+    if "controlled_execution_bundle" not in result:
+        raise ValueError("Missing controlled_execution_bundle in result")
         
     run_id = generate_run_id(result.get("command", "empty"), run_label)
     record_dir = Path(output_dir) / run_id
     record_dir.mkdir(parents=True, exist_ok=True)
     
     payloads = {
-        "release_lock_bundle.json": result["release_lock_bundle"],
-        "stable_release_manifest.json": result["stable_release_manifest"],
-        "stable_release_verification.json": result["stable_release_verification"],
-        "stable_runtime_contract.json": result["stable_runtime_contract"],
-        "stable_capability_inventory.json": result["stable_capability_inventory"],
-        "stable_artifact_contract.json": result["stable_artifact_contract"],
-        "stable_adapter_boundary_contract.json": result["stable_adapter_boundary_contract"],
-        "stable_safety_doctrine_lock.json": result["stable_safety_doctrine_lock"],
-        "stable_approval_flow_lock.json": result["stable_approval_flow_lock"],
-        "known_limitations.json": result["known_limitations"],
-        "next_phase_handoff.json": result["next_phase_handoff"],
-        "release_readiness_summary.json": result["release_readiness_summary"]
+        "controlled_execution_bundle.json": result["controlled_execution_bundle"],
+        "controlled_execution_profile_catalog.json": result["controlled_execution_profile_catalog"],
+        "controlled_execution_selection.json": result["controlled_execution_selection"],
+        "execution_permission_matrix.json": result["execution_permission_matrix"],
+        "execution_mode_contract.json": result["execution_mode_contract"],
+        "blocked_action_ledger.json": result["blocked_action_ledger"],
+        "controlled_execution_preflight_contract.json": result["controlled_execution_preflight_contract"],
+        "controlled_execution_readiness_summary.json": result["controlled_execution_readiness_summary"],
+        "work_order_executor_readiness_bridge.json": result["work_order_executor_readiness_bridge"]
     }
     
     files_written = list(payloads.keys())
@@ -685,23 +721,24 @@ def write_release_lock(result: dict, output_dir: str | Path, run_label: str = "s
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "release_lock_manifest_version": "1.0.0",
+        "controlled_execution_manifest_version": "1.1.0",
         "run_id": run_id,
-        "runtime_version": "1.0.0",
-        "files_written": files_written + ["release_lock_manifest.json"],
+        "runtime_version": "1.1.0",
+        "files_written": files_written + ["controlled_execution_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
         "live_worker_agents_activated": False,
+        "real_worker_hiring_performed": False,
         "execution_authorized": False,
-        "release_status": "STABLE_LOCKED",
-        "note": "Station Chief Runtime v1.0.0 stable release lock does not execute repo patches by itself."
+        "status": "PROFILE_EXPANSION_ONLY",
+        "note": "Controlled execution v1.1.0 expands execution profiles only. It does not execute live actions or hire workers."
     }
-    _write_json(record_dir / "release_lock_manifest.json", manifest)
-    files_written.append("release_lock_manifest.json")
+    _write_json(record_dir / "controlled_execution_manifest.json", manifest)
+    files_written.append("controlled_execution_manifest.json")
     
     return {
         "run_id": run_id,
-        "release_lock_dir": str(record_dir),
+        "controlled_execution_dir": str(record_dir),
         "files_written": files_written
     }
 
@@ -799,11 +836,20 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "known_limitations": result.get("known_limitations"),
         "next_phase_handoff": result.get("next_phase_handoff"),
         "release_readiness_summary": result.get("release_readiness_summary"),
+        "controlled_execution_bundle": result.get("controlled_execution_bundle"),
+        "controlled_execution_profile_catalog": result.get("controlled_execution_profile_catalog"),
+        "controlled_execution_selection": result.get("controlled_execution_selection"),
+        "execution_permission_matrix": result.get("execution_permission_matrix"),
+        "execution_mode_contract": result.get("execution_mode_contract"),
+        "blocked_action_ledger": result.get("blocked_action_ledger"),
+        "controlled_execution_preflight_contract": result.get("controlled_execution_preflight_contract"),
+        "controlled_execution_readiness_summary": result.get("controlled_execution_readiness_summary"),
+        "work_order_executor_readiness_bridge": result.get("work_order_executor_readiness_bridge"),
         "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v1_0_artifacts",
+            "artifact_type": "station_chief_runtime_v1_1_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -850,6 +896,15 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "known_limitations.json",
                 "next_phase_handoff.json",
                 "release_readiness_summary.json",
+                "controlled_execution_bundle.json",
+                "controlled_execution_profile_catalog.json",
+                "controlled_execution_selection.json",
+                "execution_permission_matrix.json",
+                "execution_mode_contract.json",
+                "blocked_action_ledger.json",
+                "controlled_execution_preflight_contract.json",
+                "controlled_execution_readiness_summary.json",
+                "work_order_executor_readiness_bridge.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -891,9 +946,20 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "stable_known_limitations_record": True,
             "stable_next_phase_handoff": True,
             "stable_release_readiness_summary": True,
+            "controlled_execution_profile_catalog": True,
+            "controlled_execution_profile_selection": True,
+            "execution_permission_matrix": True,
+            "execution_mode_contract": True,
+            "blocked_action_ledger": True,
+            "controlled_execution_preflight_contract": True,
+            "controlled_execution_readiness_summary": True,
+            "work_order_executor_readiness_bridge": True,
             "signed_approval_record_does_not_execute_patch": True,
             "approval_ledger_does_not_execute_patch": True,
             "release_lock_does_not_execute_patch": True,
+            "controlled_execution_does_not_execute_live_actions": True,
+            "controlled_execution_does_not_hire_workers": True,
+            "controlled_execution_does_not_animate_workforce": True,
         },
     }
 
@@ -964,6 +1030,15 @@ def write_runtime_artifacts(
         "known_limitations.json": artifacts.get("known_limitations"),
         "next_phase_handoff.json": artifacts.get("next_phase_handoff"),
         "release_readiness_summary.json": artifacts.get("release_readiness_summary"),
+        "controlled_execution_bundle.json": artifacts.get("controlled_execution_bundle"),
+        "controlled_execution_profile_catalog.json": artifacts.get("controlled_execution_profile_catalog"),
+        "controlled_execution_selection.json": artifacts.get("controlled_execution_selection"),
+        "execution_permission_matrix.json": artifacts.get("execution_permission_matrix"),
+        "execution_mode_contract.json": artifacts.get("execution_mode_contract"),
+        "blocked_action_ledger.json": artifacts.get("blocked_action_ledger"),
+        "controlled_execution_preflight_contract.json": artifacts.get("controlled_execution_preflight_contract"),
+        "controlled_execution_readiness_summary.json": artifacts.get("controlled_execution_readiness_summary"),
+        "work_order_executor_readiness_bridge.json": artifacts.get("work_order_executor_readiness_bridge"),
         "runtime_index_entry.json": artifacts["runtime_index_entry"],
         "manifest.json": artifacts["manifest"],
         "full_result.json": result,
@@ -1174,7 +1249,7 @@ def write_dry_run_bundle(
         "execution_readiness_score.json": result.get("execution_readiness_score"),
         "repo_patch_preview.diff": dry_run_bundle.get("repo_patch_preview") or "",
         "dry_run_manifest.json": {
-            "dry_run_bundle_version": "1.0.0",
+            "dry_run_bundle_version": "1.1.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -1230,7 +1305,7 @@ def write_approval_handoff(
         "dry_run_bundle_comparison.json": packet.get("comparison"),
         "patch_preview.diff": (packet.get("dry_run_bundle") or {}).get("repo_patch_preview") or "",
         "approval_handoff_manifest.json": {
-            "approval_handoff_version": "1.0.0",
+            "approval_handoff_version": "1.1.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -1325,7 +1400,7 @@ def write_approval_record(
 
     files_written = []
     approval_record_manifest = {
-        "approval_record_manifest_version": "1.0.0",
+        "approval_record_manifest_version": "1.1.0",
         "run_id": run_id,
         "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
         "files_written": [
@@ -1409,10 +1484,15 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--execute-repo-patch", action="store_true", help="Execute a scoped repo patch if the gate approves")
     parser.add_argument("--execution-profile", type=str, help="Requested execution profile for dry-run behavior")
     parser.add_argument("--dry-run-bundle", action="store_true", help="Attach a dry-run bundle to the printed result")
-    parser.add_argument("--release-lock", action="store_true", help="Attach v1.0.0 stable release lock artifacts")
-    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v1.0.0 release manifest as JSON")
-    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v1.0.0 stable release lock artifacts to DIR")
-    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v1.0.0 stable release manifest JSON file")
+    parser.add_argument("--release-lock", action="store_true", help="Attach v1.1.0 stable release lock artifacts")
+    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v1.1.0 release manifest as JSON")
+    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v1.1.0 stable release lock artifacts to DIR")
+    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v1.1.0 stable release manifest JSON file")
+    parser.add_argument("--list-controlled-execution-profiles", action="store_true", help="Print controlled execution profile catalog as JSON")
+    parser.add_argument("--controlled-execution", action="store_true", help="Attach controlled execution bundle to the printed result")
+    parser.add_argument("--controlled-execution-profile", type=str, metavar="PROFILE_ID", help="Choose a controlled execution profile")
+    parser.add_argument("--attempted-action", action="append", default=[], help="Record an attempted action in the blocked action ledger")
+    parser.add_argument("--write-controlled-execution", metavar="DIR", help="Write controlled execution artifacts into the provided directory")
     return parser
 
 
@@ -1453,6 +1533,10 @@ def main() -> None:
         if "approval_ledger_index" in ledger:
             ledger = ledger["approval_ledger_index"]
         print(json.dumps(verify_approval_ledger_index(ledger), indent=2, ensure_ascii=False))
+        return
+
+    if args.list_controlled_execution_profiles:
+        print(json.dumps(create_controlled_execution_profile_catalog(), indent=2, ensure_ascii=False))
         return
 
     if args.verify_release_manifest:
@@ -1607,6 +1691,13 @@ def main() -> None:
     if args.release_lock or args.write_release_lock:
         result = attach_release_lock(result)
 
+    if args.controlled_execution or args.write_controlled_execution:
+        result = attach_controlled_execution(
+            result,
+            requested_profile=args.controlled_execution_profile,
+            attempted_actions=args.attempted_action
+        )
+
     artifact_summary = None
     if args.write_artifacts:
         artifact_summary = write_runtime_artifacts(
@@ -1669,6 +1760,11 @@ def main() -> None:
         release_lock_summary = write_release_lock(result, args.write_release_lock, run_label=args.run_label)
         result = dict(result)
         result["release_lock_write_summary"] = release_lock_summary
+
+    if args.write_controlled_execution:
+        controlled_execution_summary = write_controlled_execution(result, args.write_controlled_execution, run_label=args.run_label)
+        result = dict(result)
+        result["controlled_execution_write_summary"] = controlled_execution_summary
 
     if args.write_output:
         Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
