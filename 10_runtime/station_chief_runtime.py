@@ -59,6 +59,10 @@ from station_chief_worker_hiring_registry import (
     create_worker_hiring_registry_bundle,
     create_worker_role_schema,
 )
+from station_chief_department_routing import (
+    create_department_routing_bundle,
+    create_department_routing_schema,
+)
 from station_chief_execution_profiles import (
     create_dry_run_bundle,
     create_execution_readiness_score,
@@ -68,7 +72,7 @@ from station_chief_execution_profiles import (
     select_execution_profile,
 )
 
-STATION_CHIEF_RUNTIME_VERSION = "1.3.0"
+STATION_CHIEF_RUNTIME_VERSION = "1.4.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -274,7 +278,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}:{run_label}:{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v1-3-{normalized}-{digest[:12]}"
+    return f"station-chief-v1-4-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -385,7 +389,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "1.3.0",
+            "registry_version": "1.4.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -402,7 +406,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "1.3.0"
+    registry["registry_version"] = "1.4.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -411,7 +415,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "1.3.0",
+        "index_version": "1.4.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -465,7 +469,7 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
     adapter_result = run_noop_adapter(execution_plan)
     return {
         "station_chief_runtime_version": STATION_CHIEF_RUNTIME_VERSION,
-        "runtime_status": "worker_hiring_registry_preview",
+        "runtime_status": "department_routing_preview",
         "release_status": "STABLE_LOCKED",
         "run_capabilities": {
             "persistent_run_logs": True,
@@ -534,6 +538,16 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "worker_hiring_preview_records": True,
             "worker_hiring_readiness_summary": True,
             "department_routing_readiness_bridge": True,
+            "department_routing_schema": True,
+            "department_route_candidate_generation": True,
+            "family_to_department_routing_map": True,
+            "worker_to_department_assignment_map": True,
+            "department_routing_conflict_detector": True,
+            "department_routing_dry_run_engine": True,
+            "department_routing_ledger": True,
+            "department_routing_completion_proof": True,
+            "department_routing_readiness_summary": True,
+            "multi_agent_orchestration_readiness_bridge": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -611,6 +625,17 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
         "worker_hiring_preview_records": None,
         "worker_hiring_readiness_summary": None,
         "department_routing_readiness_bridge": None,
+        "department_routing_bundle": None,
+        "department_routing_schema": None,
+        "department_route_candidates": None,
+        "family_to_department_routing_map": None,
+        "worker_to_department_assignment_map": None,
+        "department_routing_conflict_detector": None,
+        "department_routing_dry_run_results": None,
+        "department_routing_ledger": None,
+        "department_routing_completion_proofs": None,
+        "department_routing_readiness_summary": None,
+        "multi_agent_orchestration_readiness_bridge": None,
         "evidence": {
             "baseline_preserved": True,
             "external_actions_taken": False,
@@ -645,8 +670,14 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "worker_hiring_registry_does_not_hire_workers": True,
             "worker_hiring_registry_does_not_animate_workforce": True,
             "department_routing_runtime_not_yet_active": True,
+            "department_routing_available": True,
+            "department_routing_preview_only": True,
+            "department_routing_does_not_route_live_workers": True,
+            "department_routing_does_not_hire_workers": True,
+            "department_routing_does_not_animate_workforce": True,
+            "multi_agent_orchestration_sandbox_not_yet_active": True,
         },
-        "next_step": "Next step: build department routing runtime.",
+        "next_step": "Next step: build multi-agent orchestration sandbox.",
     }
 
 
@@ -701,9 +732,9 @@ def write_approval_ledger(result: dict, output_dir: str | Path, run_label: str =
     ]
     
     manifest = {
-        "approval_ledger_manifest_version": "1.3.0",
+        "approval_ledger_manifest_version": "1.4.0",
         "run_id": run_id,
-        "runtime_version": "1.3.0",
+        "runtime_version": "1.4.0",
         "files_written": files_written,
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -772,9 +803,9 @@ def write_controlled_execution(result: dict, output_dir: str | Path, run_label: 
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "controlled_execution_manifest_version": "1.3.0",
+        "controlled_execution_manifest_version": "1.4.0",
         "run_id": run_id,
-        "runtime_version": "1.3.0",
+        "runtime_version": "1.4.0",
         "files_written": files_written + ["controlled_execution_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -782,7 +813,7 @@ def write_controlled_execution(result: dict, output_dir: str | Path, run_label: 
         "real_worker_hiring_performed": False,
         "execution_authorized": False,
         "status": "PROFILE_EXPANSION_ONLY",
-        "note": "Controlled execution v1.3.0 expands execution profiles only. It does not execute live actions or hire workers."
+        "note": "Controlled execution v1.4.0 expands execution profiles only. It does not execute live actions or hire workers."
     }
     _write_json(record_dir / "controlled_execution_manifest.json", manifest)
     files_written.append("controlled_execution_manifest.json")
@@ -837,9 +868,9 @@ def write_work_order_executor(result: dict, output_dir: str | Path, run_label: s
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "work_order_executor_manifest_version": "1.3.0",
+        "work_order_executor_manifest_version": "1.4.0",
         "run_id": run_id,
-        "runtime_version": "1.3.0",
+        "runtime_version": "1.4.0",
         "files_written": files_written + ["work_order_executor_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -848,7 +879,7 @@ def write_work_order_executor(result: dict, output_dir: str | Path, run_label: s
         "repo_files_modified": False,
         "execution_authorized": False,
         "status": "SKELETON_DRY_RUN_ONLY",
-        "note": "Work Order Executor v1.3.0 creates dry-run skeleton artifacts only. It does not execute live actions, modify repo files, hire workers, or animate the workforce."
+        "note": "Work Order Executor v1.4.0 creates dry-run skeleton artifacts only. It does not execute live actions, modify repo files, hire workers, or animate the workforce."
     }
     _write_json(record_dir / "work_order_executor_manifest.json", manifest)
     files_written.append("work_order_executor_manifest.json")
@@ -903,9 +934,9 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "worker_hiring_registry_manifest_version": "1.3.0",
+        "worker_hiring_registry_manifest_version": "1.4.0",
         "run_id": run_id,
-        "runtime_version": "1.3.0",
+        "runtime_version": "1.4.0",
         "files_written": files_written + ["worker_hiring_registry_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -913,7 +944,7 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
         "real_worker_hiring_performed": False,
         "execution_authorized": False,
         "status": "REGISTRY_PREVIEW_ONLY",
-        "note": "Worker Hiring Registry v1.3.0 creates preview registry artifacts only. It does not hire workers, animate the workforce, execute live actions, or modify repo files."
+        "note": "Worker Hiring Registry v1.4.0 creates preview registry artifacts only. It does not hire workers, animate the workforce, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "worker_hiring_registry_manifest.json", manifest)
     files_written.append("worker_hiring_registry_manifest.json")
@@ -921,6 +952,76 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
     return {
         "run_id": run_id,
         "worker_hiring_registry_dir": str(record_dir),
+        "files_written": files_written
+    }
+
+
+def attach_department_routing(result: dict) -> dict:
+    if result.get("worker_hiring_registry_bundle") is None:
+        result = attach_worker_hiring_registry(result)
+        
+    bundle = create_department_routing_bundle(result)
+    
+    result["department_routing_bundle"] = bundle
+    result["department_routing_schema"] = bundle["department_routing_schema"]
+    result["department_route_candidates"] = bundle["department_route_candidates"]
+    result["family_to_department_routing_map"] = bundle["family_to_department_routing_map"]
+    result["worker_to_department_assignment_map"] = bundle["worker_to_department_assignment_map"]
+    result["department_routing_conflict_detector"] = bundle["department_routing_conflict_detector"]
+    result["department_routing_dry_run_results"] = bundle["department_routing_dry_run_results"]
+    result["department_routing_ledger"] = bundle["department_routing_ledger"]
+    result["department_routing_completion_proofs"] = bundle["department_routing_completion_proofs"]
+    result["department_routing_readiness_summary"] = bundle["department_routing_readiness_summary"]
+    result["multi_agent_orchestration_readiness_bridge"] = bundle["multi_agent_orchestration_readiness_bridge"]
+    
+    return result
+
+def write_department_routing(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
+    if "department_routing_bundle" not in result:
+        raise ValueError("Missing department_routing_bundle in result")
+        
+    run_id = generate_run_id(result.get("command", "empty"), run_label)
+    record_dir = Path(output_dir) / run_id
+    record_dir.mkdir(parents=True, exist_ok=True)
+    
+    payloads = {
+        "department_routing_bundle.json": result["department_routing_bundle"],
+        "department_routing_schema.json": result["department_routing_schema"],
+        "department_route_candidates.json": result["department_route_candidates"],
+        "family_to_department_routing_map.json": result["family_to_department_routing_map"],
+        "worker_to_department_assignment_map.json": result["worker_to_department_assignment_map"],
+        "department_routing_conflict_detector.json": result["department_routing_conflict_detector"],
+        "department_routing_dry_run_results.json": result["department_routing_dry_run_results"],
+        "department_routing_ledger.json": result["department_routing_ledger"],
+        "department_routing_completion_proofs.json": result["department_routing_completion_proofs"],
+        "department_routing_readiness_summary.json": result["department_routing_readiness_summary"],
+        "multi_agent_orchestration_readiness_bridge.json": result["multi_agent_orchestration_readiness_bridge"]
+    }
+    
+    files_written = list(payloads.keys())
+    for filename, payload in payloads.items():
+        _write_json(record_dir / filename, payload)
+        
+    manifest = {
+        "department_routing_manifest_version": "1.4.0",
+        "run_id": run_id,
+        "runtime_version": "1.4.0",
+        "files_written": files_written + ["department_routing_manifest.json"],
+        "baseline_preserved": True,
+        "external_actions_taken": False,
+        "live_worker_agents_activated": False,
+        "real_worker_hiring_performed": False,
+        "live_worker_routing_performed": False,
+        "execution_authorized": False,
+        "status": "ROUTING_PREVIEW_ONLY",
+        "note": "Department Routing Runtime v1.4.0 creates preview routing artifacts only. It does not route live workers, hire workers, animate the workforce, execute live actions, or modify repo files."
+    }
+    _write_json(record_dir / "department_routing_manifest.json", manifest)
+    files_written.append("department_routing_manifest.json")
+    
+    return {
+        "run_id": run_id,
+        "department_routing_dir": str(record_dir),
         "files_written": files_written
     }
 
@@ -1049,7 +1150,7 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v1_3_artifacts",
+            "artifact_type": "station_chief_runtime_v1_4_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -1123,6 +1224,17 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "worker_hiring_preview_records.json",
                 "worker_hiring_readiness_summary.json",
                 "department_routing_readiness_bridge.json",
+                "department_routing_bundle.json",
+                "department_routing_schema.json",
+                "department_route_candidates.json",
+                "family_to_department_routing_map.json",
+                "worker_to_department_assignment_map.json",
+                "department_routing_conflict_detector.json",
+                "department_routing_dry_run_results.json",
+                "department_routing_ledger.json",
+                "department_routing_completion_proofs.json",
+                "department_routing_readiness_summary.json",
+                "multi_agent_orchestration_readiness_bridge.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -1186,6 +1298,16 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "worker_hiring_preview_records": True,
             "worker_hiring_readiness_summary": True,
             "department_routing_readiness_bridge": True,
+            "department_routing_schema": True,
+            "department_route_candidate_generation": True,
+            "family_to_department_routing_map": True,
+            "worker_to_department_assignment_map": True,
+            "department_routing_conflict_detector": True,
+            "department_routing_dry_run_engine": True,
+            "department_routing_ledger": True,
+            "department_routing_completion_proof": True,
+            "department_routing_readiness_summary": True,
+            "multi_agent_orchestration_readiness_bridge": True,
             "signed_approval_record_does_not_execute_patch": True,
             "approval_ledger_does_not_execute_patch": True,
             "release_lock_does_not_execute_patch": True,
@@ -1199,6 +1321,10 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "worker_hiring_registry_preview_only": True,
             "worker_hiring_registry_does_not_hire_workers": True,
             "worker_hiring_registry_does_not_animate_workforce": True,
+            "department_routing_preview_only": True,
+            "department_routing_does_not_route_live_workers": True,
+            "department_routing_does_not_hire_workers": True,
+            "department_routing_does_not_animate_workforce": True,
         },
     }
 
@@ -1296,6 +1422,17 @@ def write_runtime_artifacts(
         "worker_hiring_preview_records.json": artifacts.get("worker_hiring_preview_records"),
         "worker_hiring_readiness_summary.json": artifacts.get("worker_hiring_readiness_summary"),
         "department_routing_readiness_bridge.json": artifacts.get("department_routing_readiness_bridge"),
+        "department_routing_bundle.json": artifacts.get("department_routing_bundle"),
+        "department_routing_schema.json": artifacts.get("department_routing_schema"),
+        "department_route_candidates.json": artifacts.get("department_route_candidates"),
+        "family_to_department_routing_map.json": artifacts.get("family_to_department_routing_map"),
+        "worker_to_department_assignment_map.json": artifacts.get("worker_to_department_assignment_map"),
+        "department_routing_conflict_detector.json": artifacts.get("department_routing_conflict_detector"),
+        "department_routing_dry_run_results.json": artifacts.get("department_routing_dry_run_results"),
+        "department_routing_ledger.json": artifacts.get("department_routing_ledger"),
+        "department_routing_completion_proofs.json": artifacts.get("department_routing_completion_proofs"),
+        "department_routing_readiness_summary.json": artifacts.get("department_routing_readiness_summary"),
+        "multi_agent_orchestration_readiness_bridge.json": artifacts.get("multi_agent_orchestration_readiness_bridge"),
         "runtime_index_entry.json": artifacts["runtime_index_entry"],
         "manifest.json": artifacts["manifest"],
         "full_result.json": result,
@@ -1506,7 +1643,7 @@ def write_dry_run_bundle(
         "execution_readiness_score.json": result.get("execution_readiness_score"),
         "repo_patch_preview.diff": dry_run_bundle.get("repo_patch_preview") or "",
         "dry_run_manifest.json": {
-            "dry_run_bundle_version": "1.3.0",
+            "dry_run_bundle_version": "1.4.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -1562,7 +1699,7 @@ def write_approval_handoff(
         "dry_run_bundle_comparison.json": packet.get("comparison"),
         "patch_preview.diff": (packet.get("dry_run_bundle") or {}).get("repo_patch_preview") or "",
         "approval_handoff_manifest.json": {
-            "approval_handoff_version": "1.3.0",
+            "approval_handoff_version": "1.4.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -1657,7 +1794,7 @@ def write_approval_record(
 
     files_written = []
     approval_record_manifest = {
-        "approval_record_manifest_version": "1.3.0",
+        "approval_record_manifest_version": "1.4.0",
         "run_id": run_id,
         "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
         "files_written": [
@@ -1741,10 +1878,10 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--execute-repo-patch", action="store_true", help="Execute a scoped repo patch if the gate approves")
     parser.add_argument("--execution-profile", type=str, help="Requested execution profile for dry-run behavior")
     parser.add_argument("--dry-run-bundle", action="store_true", help="Attach a dry-run bundle to the printed result")
-    parser.add_argument("--release-lock", action="store_true", help="Attach v1.3.0 stable release lock artifacts")
-    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v1.3.0 release manifest as JSON")
-    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v1.3.0 stable release lock artifacts to DIR")
-    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v1.3.0 stable release manifest JSON file")
+    parser.add_argument("--release-lock", action="store_true", help="Attach v1.4.0 stable release lock artifacts")
+    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v1.4.0 release manifest as JSON")
+    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v1.4.0 stable release lock artifacts to DIR")
+    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v1.4.0 stable release manifest JSON file")
     parser.add_argument("--list-controlled-execution-profiles", action="store_true", help="Print controlled execution profile catalog as JSON")
     parser.add_argument("--controlled-execution", action="store_true", help="Attach controlled execution bundle to the printed result")
     parser.add_argument("--controlled-execution-profile", type=str, metavar="PROFILE_ID", help="Choose a controlled execution profile")
@@ -1756,6 +1893,9 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--worker-role-schema", action="store_true", help="Print the worker role schema as JSON")
     parser.add_argument("--worker-hiring-registry", action="store_true", help="Attach worker hiring registry bundle to the printed result")
     parser.add_argument("--write-worker-hiring-registry", metavar="DIR", help="Write worker hiring registry artifacts into the provided directory")
+    parser.add_argument("--department-routing-schema", action="store_true", help="Print the department routing schema as JSON")
+    parser.add_argument("--department-routing", action="store_true", help="Attach department routing bundle to the printed result")
+    parser.add_argument("--write-department-routing", metavar="DIR", help="Write department routing artifacts into the provided directory")
     return parser
 
 
@@ -1804,6 +1944,10 @@ def main() -> None:
 
     if args.worker_role_schema:
         print(json.dumps(create_worker_role_schema(), indent=2, ensure_ascii=False))
+        return
+
+    if args.department_routing_schema:
+        print(json.dumps(create_department_routing_schema(), indent=2, ensure_ascii=False))
         return
 
     if args.list_controlled_execution_profiles:
@@ -1975,6 +2119,9 @@ def main() -> None:
     if args.worker_hiring_registry or args.write_worker_hiring_registry:
         result = attach_worker_hiring_registry(result)
 
+    if args.department_routing or args.write_department_routing:
+        result = attach_department_routing(result)
+
     artifact_summary = None
     if args.write_artifacts:
         artifact_summary = write_runtime_artifacts(
@@ -2052,6 +2199,11 @@ def main() -> None:
         worker_hiring_registry_summary = write_worker_hiring_registry(result, args.write_worker_hiring_registry, run_label=args.run_label)
         result = dict(result)
         result["worker_hiring_registry_write_summary"] = worker_hiring_registry_summary
+
+    if args.write_department_routing:
+        department_routing_summary = write_department_routing(result, args.write_department_routing, run_label=args.run_label)
+        result = dict(result)
+        result["department_routing_write_summary"] = department_routing_summary
 
     if args.write_output:
         Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")

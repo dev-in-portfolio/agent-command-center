@@ -3,7 +3,7 @@ import hashlib
 import re
 from pathlib import Path
 
-WORKER_HIRING_REGISTRY_MODULE_VERSION = "1.3.0"
+WORKER_HIRING_REGISTRY_MODULE_VERSION = "1.4.0"
 WORKER_HIRING_REGISTRY_STATUS = "REGISTRY_PREVIEW_ONLY"
 WORKER_HIRING_REGISTRY_PHASE = "Worker Hiring Registry"
 
@@ -19,15 +19,15 @@ def normalize_worker_label(label: str) -> str:
     normalized = re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
     return normalized or "worker"
 
-def generate_worker_id(command: str, role_label: str, index: int, runtime_version: str = "1.3.0") -> str:
+def generate_worker_id(command: str, role_label: str, index: int, runtime_version: str = "1.4.0") -> str:
     normalized_label = normalize_worker_label(role_label)
     hash_input = f"{runtime_version}:{command}:{role_label}:{index}"
     hash_chars = hashlib.sha256(hash_input.encode("utf-8")).hexdigest()[:12]
-    return f"worker-v1-3-{normalized_label}-{index:03d}-{hash_chars}"
+    return f"worker-v1-4-{normalized_label}-{index:03d}-{hash_chars}"
 
 def create_worker_role_schema() -> dict:
     return {
-        "worker_role_schema_version": "1.3.0",
+        "worker_role_schema_version": "1.4.0",
         "schema_status": "REGISTRY_PREVIEW_ONLY",
         "required_fields": [
             "worker_id",
@@ -133,7 +133,7 @@ def create_worker_candidate(
     worker_id = generate_worker_id(command, role_title, index)
     
     return {
-        "worker_candidate_version": "1.3.0",
+        "worker_candidate_version": "1.4.0",
         "worker_id": worker_id,
         "worker_role_title": role_title,
         "worker_role_type": role_type,
@@ -183,7 +183,7 @@ def create_worker_candidates_from_work_orders(result: dict) -> list[dict]:
 
 def create_worker_registry_status_lifecycle() -> dict:
     return {
-        "worker_registry_status_lifecycle_version": "1.3.0",
+        "worker_registry_status_lifecycle_version": "1.4.0",
         "statuses": {
             "CANDIDATE_CREATED": {"description": "Worker candidate record exists."},
             "PREVIEW_READY": {"description": "Worker candidate passed registry preflight."},
@@ -241,7 +241,7 @@ def create_worker_assignment_plan(worker_candidates: list[dict]) -> dict:
     assignment_status = "BLOCKED" if blocked_ids else "PLANNED_PREVIEW_ONLY"
     
     return {
-        "worker_assignment_plan_version": "1.3.0",
+        "worker_assignment_plan_version": "1.4.0",
         "assignment_status": assignment_status,
         "worker_count": len(worker_candidates),
         "assignments": assignments,
@@ -284,7 +284,7 @@ def create_worker_registry_ledger(worker_candidates: list[dict], assignment_plan
         })
         
     return {
-        "worker_registry_ledger_version": "1.3.0",
+        "worker_registry_ledger_version": "1.4.0",
         "ledger_status": "REGISTRY_PREVIEW_ONLY",
         "worker_count": len(worker_candidates),
         "preview_ready_count": ready_count,
@@ -310,7 +310,7 @@ def create_worker_hiring_preview_record(worker_candidate: dict, assignment_entry
     digest = sha256_digest(preview_data)
     
     return {
-        "worker_hiring_preview_record_version": "1.3.0",
+        "worker_hiring_preview_record_version": "1.4.0",
         "worker_id": wid,
         "preview_status": status,
         "worker_role_title": worker_candidate.get("worker_role_title"),
@@ -350,7 +350,7 @@ def create_worker_hiring_readiness_summary(
     )
     
     return {
-        "worker_hiring_readiness_summary_version": "1.3.0",
+        "worker_hiring_readiness_summary_version": "1.4.0",
         "registry_status": "REGISTRY_PREVIEW_ONLY",
         "worker_count": worker_count,
         "assignment_planned_count": planned,
@@ -371,7 +371,7 @@ def create_department_routing_readiness_bridge(
     readiness_summary: dict
 ) -> dict:
     return {
-        "department_routing_readiness_bridge_version": "1.3.0",
+        "department_routing_readiness_bridge_version": "1.4.0",
         "current_layer": "Worker Hiring Registry",
         "next_layer": "Department Routing Runtime",
         "ready_for_department_routing_runtime": readiness_summary["ready_for_department_routing_runtime"],
@@ -409,7 +409,7 @@ def create_worker_hiring_registry_bundle(result: dict) -> dict:
     bridge = create_department_routing_readiness_bridge(result, candidates, summary)
     
     return {
-        "worker_hiring_registry_bundle_version": "1.3.0",
+        "worker_hiring_registry_bundle_version": "1.4.0",
         "registry_status": WORKER_HIRING_REGISTRY_STATUS,
         "worker_role_schema": schema,
         "worker_candidates": candidates,
