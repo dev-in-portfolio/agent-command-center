@@ -71,6 +71,10 @@ from station_chief_operator_console import (
     create_operator_console_bundle,
     create_operator_console_screen_schema,
 )
+from station_chief_github_patch_hardening import (
+    create_github_patch_hardening_bundle,
+    create_patch_hardening_schema,
+)
 from station_chief_execution_profiles import (
     create_dry_run_bundle,
     create_execution_readiness_score,
@@ -80,7 +84,7 @@ from station_chief_execution_profiles import (
     select_execution_profile,
 )
 
-STATION_CHIEF_RUNTIME_VERSION = "1.6.0"
+STATION_CHIEF_RUNTIME_VERSION = "1.7.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -286,7 +290,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}:{run_label}:{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v1-6-{normalized}-{digest[:12]}"
+    return f"station-chief-v1-7-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -397,7 +401,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "1.6.0",
+            "registry_version": "1.7.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -414,7 +418,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "1.6.0"
+    registry["registry_version"] = "1.7.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -423,7 +427,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "1.6.0",
+        "index_version": "1.7.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -477,7 +481,7 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
     adapter_result = run_noop_adapter(execution_plan)
     return {
         "station_chief_runtime_version": STATION_CHIEF_RUNTIME_VERSION,
-        "runtime_status": "operator_console_schema",
+        "runtime_status": "github_patch_hardening",
         "release_status": "STABLE_LOCKED",
         "run_capabilities": {
             "persistent_run_logs": True,
@@ -581,6 +585,17 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "operator_console_safety_summary": True,
             "operator_console_readiness_summary": True,
             "github_patch_hardening_readiness_bridge": True,
+            "patch_hardening_schema": True,
+            "protected_path_policy": True,
+            "patch_root_validation": True,
+            "patch_preview_diff_contract": True,
+            "patch_digest_manifest": True,
+            "patch_rollback_preview": True,
+            "changed_file_proof_hardening": True,
+            "human_approval_chain_binding": True,
+            "patch_execution_readiness_score": True,
+            "patch_hardening_audit_bundle": True,
+            "deployment_packaging_readiness_bridge": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -685,6 +700,18 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
         "operator_console_safety_summary": None,
         "operator_console_readiness_summary": None,
         "github_patch_hardening_readiness_bridge": None,
+        "github_patch_hardening_bundle": None,
+        "patch_hardening_audit_bundle": None,
+        "patch_hardening_schema": None,
+        "protected_path_policy": None,
+        "patch_root_validation": None,
+        "patch_preview_diff_contract": None,
+        "patch_digest_manifest": None,
+        "patch_rollback_preview": None,
+        "changed_file_proof_hardening": None,
+        "human_approval_chain_binding": None,
+        "patch_execution_readiness_score": None,
+        "deployment_packaging_readiness_bridge": None,
         "evidence": {
             "baseline_preserved": True,
             "external_actions_taken": False,
@@ -735,9 +762,14 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "operator_console_does_not_render_live_ui": True,
             "operator_console_does_not_authorize_execution": True,
             "operator_console_does_not_connect_live_apis": True,
-            "github_patch_hardening_not_yet_active": True,
+            "github_patch_hardening_available": True,
+            "github_patch_hardening_contract_only": True,
+            "github_patch_hardening_does_not_apply_patches": True,
+            "github_patch_hardening_does_not_call_github_api": True,
+            "github_patch_hardening_does_not_authorize_execution": True,
+            "deployment_packaging_bridge_not_yet_active": True,
         },
-        "next_step": "Next step: build GitHub patch application hardening.",
+        "next_step": "Next step: build deployment/portfolio packaging bridge.",
     }
 
 
@@ -792,9 +824,9 @@ def write_approval_ledger(result: dict, output_dir: str | Path, run_label: str =
     ]
     
     manifest = {
-        "approval_ledger_manifest_version": "1.6.0",
+        "approval_ledger_manifest_version": "1.7.0",
         "run_id": run_id,
-        "runtime_version": "1.6.0",
+        "runtime_version": "1.7.0",
         "files_written": files_written,
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -863,9 +895,9 @@ def write_controlled_execution(result: dict, output_dir: str | Path, run_label: 
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "controlled_execution_manifest_version": "1.6.0",
+        "controlled_execution_manifest_version": "1.7.0",
         "run_id": run_id,
-        "runtime_version": "1.6.0",
+        "runtime_version": "1.7.0",
         "files_written": files_written + ["controlled_execution_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -873,7 +905,7 @@ def write_controlled_execution(result: dict, output_dir: str | Path, run_label: 
         "real_worker_hiring_performed": False,
         "execution_authorized": False,
         "status": "PROFILE_EXPANSION_ONLY",
-        "note": "Controlled execution v1.6.0 expands execution profiles only. It does not execute live actions or hire workers."
+        "note": "Controlled execution v1.7.0 expands execution profiles only. It does not execute live actions or hire workers."
     }
     _write_json(record_dir / "controlled_execution_manifest.json", manifest)
     files_written.append("controlled_execution_manifest.json")
@@ -928,9 +960,9 @@ def write_work_order_executor(result: dict, output_dir: str | Path, run_label: s
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "work_order_executor_manifest_version": "1.6.0",
+        "work_order_executor_manifest_version": "1.7.0",
         "run_id": run_id,
-        "runtime_version": "1.6.0",
+        "runtime_version": "1.7.0",
         "files_written": files_written + ["work_order_executor_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -939,7 +971,7 @@ def write_work_order_executor(result: dict, output_dir: str | Path, run_label: s
         "repo_files_modified": False,
         "execution_authorized": False,
         "status": "SKELETON_DRY_RUN_ONLY",
-        "note": "Work Order Executor v1.6.0 creates dry-run skeleton artifacts only. It does not execute live actions, modify repo files, hire workers, or animate the workforce."
+        "note": "Work Order Executor v1.7.0 creates dry-run skeleton artifacts only. It does not execute live actions, modify repo files, hire workers, or animate the workforce."
     }
     _write_json(record_dir / "work_order_executor_manifest.json", manifest)
     files_written.append("work_order_executor_manifest.json")
@@ -994,9 +1026,9 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "worker_hiring_registry_manifest_version": "1.6.0",
+        "worker_hiring_registry_manifest_version": "1.7.0",
         "run_id": run_id,
-        "runtime_version": "1.6.0",
+        "runtime_version": "1.7.0",
         "files_written": files_written + ["worker_hiring_registry_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1004,7 +1036,7 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
         "real_worker_hiring_performed": False,
         "execution_authorized": False,
         "status": "REGISTRY_PREVIEW_ONLY",
-        "note": "Worker Hiring Registry v1.6.0 creates preview registry artifacts only. It does not hire workers, animate the workforce, execute live actions, or modify repo files."
+        "note": "Worker Hiring Registry v1.7.0 creates preview registry artifacts only. It does not hire workers, animate the workforce, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "worker_hiring_registry_manifest.json", manifest)
     files_written.append("worker_hiring_registry_manifest.json")
@@ -1063,9 +1095,9 @@ def write_department_routing(result: dict, output_dir: str | Path, run_label: st
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "department_routing_manifest_version": "1.6.0",
+        "department_routing_manifest_version": "1.7.0",
         "run_id": run_id,
-        "runtime_version": "1.6.0",
+        "runtime_version": "1.7.0",
         "files_written": files_written + ["department_routing_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1074,7 +1106,7 @@ def write_department_routing(result: dict, output_dir: str | Path, run_label: st
         "live_worker_routing_performed": False,
         "execution_authorized": False,
         "status": "ROUTING_PREVIEW_ONLY",
-        "note": "Department Routing Runtime v1.6.0 creates preview routing artifacts only. It does not route live workers, hire workers, animate the workforce, execute live actions, or modify repo files."
+        "note": "Department Routing Runtime v1.7.0 creates preview routing artifacts only. It does not route live workers, hire workers, animate the workforce, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "department_routing_manifest.json", manifest)
     files_written.append("department_routing_manifest.json")
@@ -1135,9 +1167,9 @@ def write_multi_agent_orchestration(result: dict, output_dir: str | Path, run_la
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "multi_agent_orchestration_manifest_version": "1.6.0",
+        "multi_agent_orchestration_manifest_version": "1.7.0",
         "run_id": run_id,
-        "runtime_version": "1.6.0",
+        "runtime_version": "1.7.0",
         "files_written": files_written + ["multi_agent_orchestration_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1147,7 +1179,7 @@ def write_multi_agent_orchestration(result: dict, output_dir: str | Path, run_la
         "live_orchestration_performed": False,
         "execution_authorized": False,
         "status": "ORCHESTRATION_SANDBOX_ONLY",
-        "note": "Multi-Agent Orchestration Sandbox v1.6.0 creates sandbox orchestration artifacts only. It does not animate workers, hire workers, route live workers, execute live actions, perform live orchestration, or modify repo files."
+        "note": "Multi-Agent Orchestration Sandbox v1.7.0 creates sandbox orchestration artifacts only. It does not animate workers, hire workers, route live workers, execute live actions, perform live orchestration, or modify repo files."
     }
     _write_json(record_dir / "multi_agent_orchestration_manifest.json", manifest)
     files_written.append("multi_agent_orchestration_manifest.json")
@@ -1216,9 +1248,9 @@ def write_operator_console(result: dict, output_dir: str | Path, run_label: str 
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "operator_console_manifest_version": "1.6.0",
+        "operator_console_manifest_version": "1.7.0",
         "run_id": run_id,
-        "runtime_version": "1.6.0",
+        "runtime_version": "1.7.0",
         "files_written": files_written + ["operator_console_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1229,7 +1261,7 @@ def write_operator_console(result: dict, output_dir: str | Path, run_label: str 
         "live_ui_rendered": False,
         "execution_authorized": False,
         "status": "SCHEMA_ONLY",
-        "note": "UI / Operator Console Schema v1.6.0 creates schema and review artifacts only. It does not render a live UI, authorize execution, connect APIs, animate workers, hire workers, route live workers, perform live orchestration, execute live actions, or modify repo files."
+        "note": "UI / Operator Console Schema v1.7.0 creates schema and review artifacts only. It does not render a live UI, authorize execution, connect APIs, animate workers, hire workers, route live workers, perform live orchestration, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "operator_console_manifest.json", manifest)
     files_written.append("operator_console_manifest.json")
@@ -1237,6 +1269,96 @@ def write_operator_console(result: dict, output_dir: str | Path, run_label: str 
     return {
         "run_id": run_id,
         "operator_console_dir": str(record_dir),
+        "files_written": files_written
+    }
+
+
+def attach_github_patch_hardening(
+    result: dict,
+    patch_root: str | None = None,
+    allowed_patch_file: str | None = None,
+    patch_content: str | None = None,
+    original_content: str | None = None,
+    changed_files: list[str] | None = None
+) -> dict:
+    if result.get("operator_console_bundle") is None:
+        result = attach_operator_console(result)
+        
+    approval_record = result.get("signed_approval_record") or result.get("approval_record")
+    approval_ledger = result.get("approval_ledger_bundle")
+    
+    bundle = create_github_patch_hardening_bundle(
+        result,
+        patch_root=patch_root,
+        allowed_patch_file=allowed_patch_file,
+        patch_content=patch_content,
+        original_content=original_content,
+        changed_files=changed_files,
+        approval_record=approval_record,
+        approval_ledger=approval_ledger
+    )
+    
+    result["github_patch_hardening_bundle"] = bundle
+    result["patch_hardening_audit_bundle"] = bundle["patch_hardening_audit_bundle"]
+    result["patch_hardening_schema"] = bundle["patch_hardening_schema"]
+    result["protected_path_policy"] = bundle["protected_path_policy"]
+    result["patch_root_validation"] = bundle["patch_root_validation"]
+    result["patch_preview_diff_contract"] = bundle["patch_preview_diff_contract"]
+    result["patch_digest_manifest"] = bundle["patch_digest_manifest"]
+    result["patch_rollback_preview"] = bundle["patch_rollback_preview"]
+    result["changed_file_proof_hardening"] = bundle["changed_file_proof_hardening"]
+    result["human_approval_chain_binding"] = bundle["human_approval_chain_binding"]
+    result["patch_execution_readiness_score"] = bundle["patch_execution_readiness_score"]
+    result["deployment_packaging_readiness_bridge"] = bundle["deployment_packaging_readiness_bridge"]
+    
+    return result
+
+def write_github_patch_hardening(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
+    if "github_patch_hardening_bundle" not in result:
+        raise ValueError("Missing github_patch_hardening_bundle in result")
+        
+    run_id = generate_run_id(result.get("command", "empty"), run_label)
+    record_dir = Path(output_dir) / run_id
+    record_dir.mkdir(parents=True, exist_ok=True)
+    
+    payloads = {
+        "github_patch_hardening_bundle.json": result["github_patch_hardening_bundle"],
+        "patch_hardening_audit_bundle.json": result["patch_hardening_audit_bundle"],
+        "patch_hardening_schema.json": result["patch_hardening_schema"],
+        "protected_path_policy.json": result["protected_path_policy"],
+        "patch_root_validation.json": result["patch_root_validation"],
+        "patch_preview_diff_contract.json": result["patch_preview_diff_contract"],
+        "patch_digest_manifest.json": result["patch_digest_manifest"],
+        "patch_rollback_preview.json": result["patch_rollback_preview"],
+        "changed_file_proof_hardening.json": result["changed_file_proof_hardening"],
+        "human_approval_chain_binding.json": result["human_approval_chain_binding"],
+        "patch_execution_readiness_score.json": result["patch_execution_readiness_score"],
+        "deployment_packaging_readiness_bridge.json": result["deployment_packaging_readiness_bridge"]
+    }
+    
+    files_written = list(payloads.keys())
+    for filename, payload in payloads.items():
+        _write_json(record_dir / filename, payload)
+        
+    manifest = {
+        "github_patch_hardening_manifest_version": "1.7.0",
+        "run_id": run_id,
+        "runtime_version": "1.7.0",
+        "files_written": files_written + ["github_patch_hardening_manifest.json"],
+        "baseline_preserved": True,
+        "external_actions_taken": False,
+        "repo_patch_applied": False,
+        "github_api_called": False,
+        "execution_authorized": False,
+        "status": "PATCH_HARDENING_CONTRACT_ONLY",
+        "note": "GitHub Patch Application Hardening v1.7.0 creates patch hardening contracts and review artifacts only. It does not apply patches, call GitHub APIs, push commits, authorize execution, execute live actions, or modify repo files."
+    }
+    _write_json(record_dir / "github_patch_hardening_manifest.json", manifest)
+    files_written.append("github_patch_hardening_manifest.json")
+    
+    return {
+        "run_id": run_id,
+        "github_patch_hardening_dir": str(record_dir),
         "files_written": files_written
     }
 
@@ -1390,11 +1512,23 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "operator_console_safety_summary": result.get("operator_console_safety_summary"),
         "operator_console_readiness_summary": result.get("operator_console_readiness_summary"),
         "github_patch_hardening_readiness_bridge": result.get("github_patch_hardening_readiness_bridge"),
+        "github_patch_hardening_bundle": result.get("github_patch_hardening_bundle"),
+        "patch_hardening_audit_bundle": result.get("patch_hardening_audit_bundle"),
+        "patch_hardening_schema": result.get("patch_hardening_schema"),
+        "protected_path_policy": result.get("protected_path_policy"),
+        "patch_root_validation": result.get("patch_root_validation"),
+        "patch_preview_diff_contract": result.get("patch_preview_diff_contract"),
+        "patch_digest_manifest": result.get("patch_digest_manifest"),
+        "patch_rollback_preview": result.get("patch_rollback_preview"),
+        "changed_file_proof_hardening": result.get("changed_file_proof_hardening"),
+        "human_approval_chain_binding": result.get("human_approval_chain_binding"),
+        "patch_execution_readiness_score": result.get("patch_execution_readiness_score"),
+        "deployment_packaging_readiness_bridge": result.get("deployment_packaging_readiness_bridge"),
         "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v1_6_artifacts",
+            "artifact_type": "station_chief_runtime_v1_7_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -1507,6 +1641,18 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "operator_console_safety_summary.json",
                 "operator_console_readiness_summary.json",
                 "github_patch_hardening_readiness_bridge.json",
+                "github_patch_hardening_bundle.json",
+                "patch_hardening_audit_bundle.json",
+                "patch_hardening_schema.json",
+                "protected_path_policy.json",
+                "patch_root_validation.json",
+                "patch_preview_diff_contract.json",
+                "patch_digest_manifest.json",
+                "patch_rollback_preview.json",
+                "changed_file_proof_hardening.json",
+                "human_approval_chain_binding.json",
+                "patch_execution_readiness_score.json",
+                "deployment_packaging_readiness_bridge.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -1605,6 +1751,21 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "operator_console_safety_summary": True,
             "operator_console_readiness_summary": True,
             "github_patch_hardening_readiness_bridge": True,
+            "patch_hardening_schema": True,
+            "protected_path_policy": True,
+            "patch_root_validation": True,
+            "patch_preview_diff_contract": True,
+            "patch_digest_manifest": True,
+            "patch_rollback_preview": True,
+            "changed_file_proof_hardening": True,
+            "human_approval_chain_binding": True,
+            "patch_execution_readiness_score": True,
+            "patch_hardening_audit_bundle": True,
+            "deployment_packaging_readiness_bridge": True,
+            "github_patch_hardening_contract_only": True,
+            "github_patch_hardening_does_not_apply_patches": True,
+            "github_patch_hardening_does_not_call_github_api": True,
+            "github_patch_hardening_does_not_authorize_execution": True,
             "signed_approval_record_does_not_execute_patch": True,
             "approval_ledger_does_not_execute_patch": True,
             "release_lock_does_not_execute_patch": True,
@@ -1767,6 +1928,18 @@ def write_runtime_artifacts(
         "operator_console_safety_summary.json": artifacts.get("operator_console_safety_summary"),
         "operator_console_readiness_summary.json": artifacts.get("operator_console_readiness_summary"),
         "github_patch_hardening_readiness_bridge.json": artifacts.get("github_patch_hardening_readiness_bridge"),
+        "github_patch_hardening_bundle.json": artifacts.get("github_patch_hardening_bundle"),
+        "patch_hardening_audit_bundle.json": artifacts.get("patch_hardening_audit_bundle"),
+        "patch_hardening_schema.json": artifacts.get("patch_hardening_schema"),
+        "protected_path_policy.json": artifacts.get("protected_path_policy"),
+        "patch_root_validation.json": artifacts.get("patch_root_validation"),
+        "patch_preview_diff_contract.json": artifacts.get("patch_preview_diff_contract"),
+        "patch_digest_manifest.json": artifacts.get("patch_digest_manifest"),
+        "patch_rollback_preview.json": artifacts.get("patch_rollback_preview"),
+        "changed_file_proof_hardening.json": artifacts.get("changed_file_proof_hardening"),
+        "human_approval_chain_binding.json": artifacts.get("human_approval_chain_binding"),
+        "patch_execution_readiness_score.json": artifacts.get("patch_execution_readiness_score"),
+        "deployment_packaging_readiness_bridge.json": artifacts.get("deployment_packaging_readiness_bridge"),
         "runtime_index_entry.json": artifacts["runtime_index_entry"],
         "manifest.json": artifacts["manifest"],
         "full_result.json": result,
@@ -1977,7 +2150,7 @@ def write_dry_run_bundle(
         "execution_readiness_score.json": result.get("execution_readiness_score"),
         "repo_patch_preview.diff": dry_run_bundle.get("repo_patch_preview") or "",
         "dry_run_manifest.json": {
-            "dry_run_bundle_version": "1.6.0",
+            "dry_run_bundle_version": "1.7.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -2033,7 +2206,7 @@ def write_approval_handoff(
         "dry_run_bundle_comparison.json": packet.get("comparison"),
         "patch_preview.diff": (packet.get("dry_run_bundle") or {}).get("repo_patch_preview") or "",
         "approval_handoff_manifest.json": {
-            "approval_handoff_version": "1.6.0",
+            "approval_handoff_version": "1.7.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -2128,7 +2301,7 @@ def write_approval_record(
 
     files_written = []
     approval_record_manifest = {
-        "approval_record_manifest_version": "1.6.0",
+        "approval_record_manifest_version": "1.7.0",
         "run_id": run_id,
         "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
         "files_written": [
@@ -2212,10 +2385,10 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--execute-repo-patch", action="store_true", help="Execute a scoped repo patch if the gate approves")
     parser.add_argument("--execution-profile", type=str, help="Requested execution profile for dry-run behavior")
     parser.add_argument("--dry-run-bundle", action="store_true", help="Attach a dry-run bundle to the printed result")
-    parser.add_argument("--release-lock", action="store_true", help="Attach v1.6.0 stable release lock artifacts")
-    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v1.6.0 release manifest as JSON")
-    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v1.6.0 stable release lock artifacts to DIR")
-    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v1.6.0 stable release manifest JSON file")
+    parser.add_argument("--release-lock", action="store_true", help="Attach v1.7.0 stable release lock artifacts")
+    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v1.7.0 release manifest as JSON")
+    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v1.7.0 stable release lock artifacts to DIR")
+    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v1.7.0 stable release manifest JSON file")
     parser.add_argument("--list-controlled-execution-profiles", action="store_true", help="Print controlled execution profile catalog as JSON")
     parser.add_argument("--controlled-execution", action="store_true", help="Attach controlled execution bundle to the printed result")
     parser.add_argument("--controlled-execution-profile", type=str, metavar="PROFILE_ID", help="Choose a controlled execution profile")
@@ -2236,6 +2409,14 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--operator-console-schema", action="store_true", help="Print the operator console screen schema as JSON")
     parser.add_argument("--operator-console", action="store_true", help="Attach operator console bundle to the printed result")
     parser.add_argument("--write-operator-console", metavar="DIR", help="Write operator console artifacts into the provided directory")
+    parser.add_argument("--patch-hardening-schema", action="store_true", help="Print the GitHub patch hardening schema as JSON")
+    parser.add_argument("--github-patch-hardening", action="store_true", help="Attach GitHub patch hardening bundle to the printed result")
+    parser.add_argument("--write-github-patch-hardening", metavar="DIR", help="Write GitHub patch hardening artifacts into the provided directory")
+    parser.add_argument("--hardening-patch-root", type=str, help="Patch root for hardening review")
+    parser.add_argument("--hardening-allowed-patch-file", type=str, help="Allowed patch file for hardening review")
+    parser.add_argument("--hardening-patch-content", type=str, help="Patch content for hardening review")
+    parser.add_argument("--hardening-original-content", type=str, help="Original content for hardening review")
+    parser.add_argument("--hardening-changed-file", action="append", default=[], help="Changed file for hardening review")
     return parser
 
 
@@ -2296,6 +2477,10 @@ def main() -> None:
 
     if args.operator_console_schema:
         print(json.dumps(create_operator_console_screen_schema(), indent=2, ensure_ascii=False))
+        return
+
+    if args.patch_hardening_schema:
+        print(json.dumps(create_patch_hardening_schema(), indent=2, ensure_ascii=False))
         return
 
     if args.list_controlled_execution_profiles:
@@ -2476,6 +2661,16 @@ def main() -> None:
     if args.operator_console or args.write_operator_console:
         result = attach_operator_console(result)
 
+    if args.github_patch_hardening or args.write_github_patch_hardening:
+        result = attach_github_patch_hardening(
+            result,
+            patch_root=args.hardening_patch_root,
+            allowed_patch_file=args.hardening_allowed_patch_file,
+            patch_content=args.hardening_patch_content,
+            original_content=args.hardening_original_content,
+            changed_files=args.hardening_changed_file
+        )
+
     artifact_summary = None
     if args.write_artifacts:
         artifact_summary = write_runtime_artifacts(
@@ -2568,6 +2763,11 @@ def main() -> None:
         operator_console_summary = write_operator_console(result, args.write_operator_console, run_label=args.run_label)
         result = dict(result)
         result["operator_console_write_summary"] = operator_console_summary
+
+    if args.write_github_patch_hardening:
+        github_patch_hardening_summary = write_github_patch_hardening(result, args.write_github_patch_hardening, run_label=args.run_label)
+        result = dict(result)
+        result["github_patch_hardening_write_summary"] = github_patch_hardening_summary
 
     if args.write_output:
         Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")

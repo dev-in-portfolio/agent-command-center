@@ -4,7 +4,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-ADAPTER_MODULE_VERSION = "1.6.0"
+ADAPTER_MODULE_VERSION = "1.7.0"
 
 YES_I_APPROVE_SANDBOX_FILE_WRITE = "YES_I_APPROVE_SANDBOX_FILE_WRITE"
 YES_I_APPROVE_SCOPED_REPO_PATCH = "YES_I_APPROVE_SCOPED_REPO_PATCH"
@@ -51,6 +51,12 @@ SUPPORTED_ADAPTERS = {
         "supports_department_routing_preview": True,
         "supports_multi_agent_orchestration_sandbox": True,
         "supports_operator_console_schema": True,
+        "supports_github_patch_hardening": True,
+        "requires_patch_hardening_review": True,
+        "requires_changed_file_proof": True,
+        "requires_patch_digest_manifest": True,
+        "requires_rollback_preview": True,
+        "requires_human_approval_chain_binding": True,
         "description": "Applies deterministic local patches only inside a provided patch root, only to explicitly allowlisted relative files, after explicit confirmation.",
     },
 }

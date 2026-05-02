@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v1.6.0. Locked 175-family baseline preserved. UI/operator console schema added.
+Station Chief Runtime upgraded to v1.7.0. Locked 175-family baseline preserved. GitHub patch application hardening added.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -27,7 +27,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 10_runtime/station_chief_worker_hiring_registry.py
 10_runtime/station_chief_department_routing.py
 10_runtime/station_chief_multi_agent_orchestration.py
-10_runtime/station_chief_operator_console.py
+10_runtime/station_chief_github_patch_hardening.py
 09_exports/station_chief_runtime_skeleton_report.md
 09_exports/station_chief_runtime_v0_2_report.md
 09_exports/station_chief_runtime_v0_3_report.md
@@ -44,6 +44,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 09_exports/station_chief_runtime_v1_4_report.md
 09_exports/station_chief_runtime_v1_5_report.md
 09_exports/station_chief_runtime_v1_6_report.md
+09_exports/station_chief_runtime_v1_7_report.md
 scripts/validate_station_chief_runtime_skeleton.py
 scripts/validate_station_chief_runtime_v0_2.py
 scripts/validate_station_chief_runtime_v0_3.py
@@ -60,6 +61,7 @@ scripts/validate_station_chief_runtime_v1_3.py
 scripts/validate_station_chief_runtime_v1_4.py
 scripts/validate_station_chief_runtime_v1_5.py
 scripts/validate_station_chief_runtime_v1_6.py
+scripts/validate_station_chief_runtime_v1_7.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -171,6 +173,20 @@ scripts/validate_station_chief_runtime_v1_6.py
 - operator console safety summary
 - operator console readiness summary
 - GitHub patch hardening readiness bridge
+- patch hardening schema
+- protected path policy expansion
+- stricter patch-root validation
+- patch preview diff contract
+- patch digest manifest
+- patch rollback preview
+- changed-file proof hardening
+- human approval chain binding
+- patch execution readiness scoring
+- patch hardening audit bundle
+- deployment/portfolio packaging readiness bridge
+- no uncontrolled repo edits
+- no GitHub API mutation
+- no patch execution authorization
 - deterministic fixture tests
 - proof-backed JSON output
 - baseline preservation
@@ -208,6 +224,7 @@ Tier 3 — Active Operation
 Tier 4 — Audit / Archive
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v1_7.py
 python3 scripts/validate_station_chief_runtime_v1_6.py
 python3 scripts/validate_station_chief_runtime_v1_5.py
 python3 scripts/validate_station_chief_runtime_v1_4.py
@@ -259,4 +276,4 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not render a live UI
 
 ## Next Recommended Build Step
-Next recommended build step: build GitHub patch application hardening.
+Next recommended build step: build deployment/portfolio packaging bridge.
