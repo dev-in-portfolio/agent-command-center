@@ -26,6 +26,13 @@ from station_chief_approval_handoff import (
     compare_dry_run_bundles,
     create_approval_handoff_packet,
 )
+from station_chief_approval_ledger import (
+    collect_approval_records_from_paths,
+    compare_signed_approval_records,
+    create_approval_ledger_bundle,
+    lookup_approval_records_by_digest,
+    verify_approval_ledger_index,
+)
 from station_chief_approval_records import (
     APPROVAL_RECORD_CONFIRMATION_TOKEN,
     create_approval_record_audit_manifest,
@@ -42,7 +49,7 @@ from station_chief_execution_profiles import (
     select_execution_profile,
 )
 
-STATION_CHIEF_RUNTIME_VERSION = "0.8.0"
+STATION_CHIEF_RUNTIME_VERSION = "0.9.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -247,8 +254,8 @@ def normalize_command_for_id(command: str) -> str:
 
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
-    digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}|{run_label}|{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v0-8-{normalized}-{digest[:12]}"
+    digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}:{run_label}:{command}".encode("utf-8")).hexdigest()
+    return f"station-chief-v0-9-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -359,7 +366,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "0.8.0",
+            "registry_version": "0.9.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -376,7 +383,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "0.8.0"
+    registry["registry_version"] = "0.9.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -385,7 +392,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "0.8.0",
+        "index_version": "0.9.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -471,6 +478,10 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "signed_approval_records": True,
             "approval_record_verification": True,
             "approval_audit_manifests": True,
+            "approval_ledger_indexing": True,
+            "signed_approval_comparison": True,
+            "approval_history_lookup": True,
+            "approval_duplicate_detection": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -514,8 +525,79 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "approval_handoff_available": True,
             "signed_approval_record_available": True,
             "signed_approval_record_does_not_execute_patch": True,
+            "approval_ledger_does_not_execute_patch": True,
         },
-        "next_step": "Next step: add approval ledger indexing and signed approval comparison.",
+        "next_step": "Next step: complete Station Chief Runtime v1.0 stable release lock.",
+    }
+
+
+def attach_approval_ledger(
+    result: dict,
+    approval_record_paths: list[str],
+    ledger_label: str = "station-chief-approval-ledger",
+    lookup_digest: str | None = None
+) -> dict:
+    records = collect_approval_records_from_paths(approval_record_paths)
+    bundle = create_approval_ledger_bundle(records, ledger_label)
+    
+    result["approval_record_sources"] = records
+    result["approval_ledger_bundle"] = bundle
+    result["approval_ledger_index"] = bundle["ledger_index"]
+    result["approval_ledger_verification"] = bundle["ledger_verification"]
+    result["approval_status_summary"] = bundle["approval_status_summary"]
+    result["duplicate_approval_signals"] = bundle["duplicate_approval_signals"]
+    
+    if lookup_digest:
+        result["approval_ledger_lookup"] = lookup_approval_records_by_digest(bundle["ledger_index"], lookup_digest)
+        
+    return result
+
+def write_approval_ledger(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
+    if "approval_ledger_bundle" not in result:
+        raise ValueError("Missing approval_ledger_bundle in result")
+        
+    run_id = generate_run_id(result.get("command", "empty"), run_label)
+    record_dir = Path(output_dir) / run_id
+    record_dir.mkdir(parents=True, exist_ok=True)
+    
+    _write_json(record_dir / "approval_ledger_bundle.json", result["approval_ledger_bundle"])
+    _write_json(record_dir / "approval_ledger_index.json", result["approval_ledger_index"])
+    _write_json(record_dir / "approval_ledger_verification.json", result["approval_ledger_verification"])
+    _write_json(record_dir / "approval_status_summary.json", result["approval_status_summary"])
+    _write_json(record_dir / "duplicate_approval_signals.json", result["duplicate_approval_signals"])
+    
+    if "approval_ledger_lookup" in result:
+        _write_json(record_dir / "approval_ledger_lookup.json", result["approval_ledger_lookup"])
+    else:
+        _write_json(record_dir / "approval_ledger_lookup.json", None)
+        
+    files_written = [
+        "approval_ledger_bundle.json",
+        "approval_ledger_index.json",
+        "approval_ledger_verification.json",
+        "approval_status_summary.json",
+        "duplicate_approval_signals.json",
+        "approval_ledger_lookup.json",
+        "approval_ledger_manifest.json"
+    ]
+    
+    manifest = {
+        "approval_ledger_manifest_version": "0.9.0",
+        "run_id": run_id,
+        "runtime_version": "0.9.0",
+        "files_written": files_written,
+        "baseline_preserved": True,
+        "external_actions_taken": False,
+        "live_worker_agents_activated": False,
+        "execution_authorized": False,
+        "note": "Approval ledgers index approval history only. They do not execute repo patches by themselves."
+    }
+    _write_json(record_dir / "approval_ledger_manifest.json", manifest)
+    
+    return {
+        "run_id": run_id,
+        "approval_ledger_dir": str(record_dir),
+        "files_written": files_written
     }
 
 
@@ -592,11 +674,19 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "signed_approval_record": signed_approval_record,
         "approval_record_verification": approval_record_verification,
         "approval_record_audit_manifest": approval_record_audit_manifest,
+        "approval_record_sources": result.get("approval_record_sources"),
+        "approval_ledger_bundle": result.get("approval_ledger_bundle"),
+        "approval_ledger_index": result.get("approval_ledger_index"),
+        "approval_ledger_verification": result.get("approval_ledger_verification"),
+        "approval_status_summary": result.get("approval_status_summary"),
+        "duplicate_approval_signals": result.get("duplicate_approval_signals"),
+        "approval_ledger_lookup": result.get("approval_ledger_lookup"),
+        "approval_record_comparison": result.get("approval_record_comparison"),
         "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v0_8_artifacts",
+            "artifact_type": "station_chief_runtime_v0_9_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -623,6 +713,14 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "signed_approval_record.json",
                 "approval_record_verification.json",
                 "approval_record_audit_manifest.json",
+                "approval_record_sources.json",
+                "approval_ledger_bundle.json",
+                "approval_ledger_index.json",
+                "approval_ledger_verification.json",
+                "approval_status_summary.json",
+                "duplicate_approval_signals.json",
+                "approval_ledger_lookup.json",
+                "approval_record_comparison.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -649,7 +747,12 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "signed_approval_records": True,
             "approval_record_verification": True,
             "approval_audit_manifests": True,
+            "approval_ledger_indexing": True,
+            "signed_approval_comparison": True,
+            "approval_history_lookup": True,
+            "approval_duplicate_detection": True,
             "signed_approval_record_does_not_execute_patch": True,
+            "approval_ledger_does_not_execute_patch": True,
         },
     }
 
@@ -700,12 +803,21 @@ def write_runtime_artifacts(
         "signed_approval_record.json": artifacts["signed_approval_record"],
         "approval_record_verification.json": artifacts["approval_record_verification"],
         "approval_record_audit_manifest.json": artifacts["approval_record_audit_manifest"],
+        "approval_record_sources.json": artifacts.get("approval_record_sources"),
+        "approval_ledger_bundle.json": artifacts.get("approval_ledger_bundle"),
+        "approval_ledger_index.json": artifacts.get("approval_ledger_index"),
+        "approval_ledger_verification.json": artifacts.get("approval_ledger_verification"),
+        "approval_status_summary.json": artifacts.get("approval_status_summary"),
+        "duplicate_approval_signals.json": artifacts.get("duplicate_approval_signals"),
+        "approval_ledger_lookup.json": artifacts.get("approval_ledger_lookup"),
+        "approval_record_comparison.json": artifacts.get("approval_record_comparison"),
         "runtime_index_entry.json": artifacts["runtime_index_entry"],
         "manifest.json": artifacts["manifest"],
         "full_result.json": result,
     }
     for filename, payload in mapping.items():
-        _write_json(artifact_dir / filename, payload)
+        if payload is not None:
+            _write_json(artifact_dir / filename, payload)
         files_written.append(filename)
 
     registry_updated = False
@@ -909,7 +1021,7 @@ def write_dry_run_bundle(
         "execution_readiness_score.json": result.get("execution_readiness_score"),
         "repo_patch_preview.diff": dry_run_bundle.get("repo_patch_preview") or "",
         "dry_run_manifest.json": {
-            "dry_run_bundle_version": "0.8.0",
+            "dry_run_bundle_version": "0.9.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -965,7 +1077,7 @@ def write_approval_handoff(
         "dry_run_bundle_comparison.json": packet.get("comparison"),
         "patch_preview.diff": (packet.get("dry_run_bundle") or {}).get("repo_patch_preview") or "",
         "approval_handoff_manifest.json": {
-            "approval_handoff_version": "0.8.0",
+            "approval_handoff_version": "0.9.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -1060,7 +1172,7 @@ def write_approval_record(
 
     files_written = []
     approval_record_manifest = {
-        "approval_record_manifest_version": "0.8.0",
+        "approval_record_manifest_version": "0.9.0",
         "run_id": run_id,
         "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
         "files_written": [
@@ -1149,6 +1261,14 @@ def _build_arg_parser() -> argparse.ArgumentParser:
 
 def main() -> None:
     parser = _build_arg_parser()
+    parser.add_argument("--compare-approval-records", nargs=2, metavar=("BEFORE_JSON", "AFTER_JSON"), help="Compare two signed approval records")
+    parser.add_argument("--approval-record-file", action="append", default=[], help="Path to a signed approval record file (can be used multiple times)")
+    parser.add_argument("--approval-ledger-index", action="store_true", help="Generate an approval ledger index from provided records")
+    parser.add_argument("--approval-ledger-label", default="station-chief-approval-ledger", help="Label for the approval ledger")
+    parser.add_argument("--write-approval-ledger", metavar="DIR", help="Write approval ledger artifacts to DIR (implies --approval-ledger-index)")
+    parser.add_argument("--verify-approval-ledger", metavar="LEDGER_JSON", help="Verify an approval ledger JSON file")
+    parser.add_argument("--lookup-approval-digest", metavar="DIGEST", help="Lookup an approval record by digest in the generated ledger")
+
     args = parser.parse_args()
 
     if args.compare_dry_run_bundles:
@@ -1156,6 +1276,26 @@ def main() -> None:
         before_bundle = load_json_file(before_path)
         after_bundle = load_json_file(after_path)
         print(json.dumps(compare_dry_run_bundles(before_bundle, after_bundle), indent=2, ensure_ascii=False))
+        return
+
+    if args.compare_approval_records:
+        before_path, after_path = args.compare_approval_records
+        before_record = load_json_file(before_path)
+        after_record = load_json_file(after_path)
+        
+        if "signed_approval_record" in before_record:
+            before_record = before_record["signed_approval_record"]
+        if "signed_approval_record" in after_record:
+            after_record = after_record["signed_approval_record"]
+            
+        print(json.dumps(compare_signed_approval_records(before_record, after_record), indent=2, ensure_ascii=False))
+        return
+
+    if args.verify_approval_ledger:
+        ledger = load_json_file(args.verify_approval_ledger)
+        if "approval_ledger_index" in ledger:
+            ledger = ledger["approval_ledger_index"]
+        print(json.dumps(verify_approval_ledger_index(ledger), indent=2, ensure_ascii=False))
         return
 
     if args.approval_review_ui_schema:
@@ -1281,6 +1421,21 @@ def main() -> None:
             risk_summary_reviewed=args.risk_summary_reviewed,
         )
 
+    if args.approval_ledger_index or args.write_approval_ledger:
+        if not args.approval_record_file:
+            print(json.dumps({
+                "approval_ledger_status": "ERROR",
+                "error": "--approval-ledger-index requires at least one --approval-record-file"
+            }, indent=2, ensure_ascii=False))
+            return
+            
+        result = attach_approval_ledger(
+            result,
+            approval_record_paths=args.approval_record_file,
+            ledger_label=args.approval_ledger_label,
+            lookup_digest=args.lookup_approval_digest
+        )
+
     artifact_summary = None
     if args.write_artifacts:
         artifact_summary = write_runtime_artifacts(
@@ -1333,6 +1488,11 @@ def main() -> None:
         approval_record_summary = write_approval_record(result, args.write_approval_record, run_label=args.run_label)
         result = dict(result)
         result["approval_record_write_summary"] = approval_record_summary
+
+    if args.write_approval_ledger:
+        ledger_summary = write_approval_ledger(result, args.write_approval_ledger, run_label=args.run_label)
+        result = dict(result)
+        result["approval_ledger_write_summary"] = ledger_summary
 
     if args.write_output:
         Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")

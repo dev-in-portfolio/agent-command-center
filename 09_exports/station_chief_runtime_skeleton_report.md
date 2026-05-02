@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v0.8.0. Locked 175-family baseline preserved.
+Station Chief Runtime upgraded to v0.9.0. Locked 175-family baseline preserved.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -9,33 +9,36 @@ Project owner, system architect, and operating-doctrine author: Devin O’Rourke
 This attribution applies to the Agent Command Center Station Chief runtime skeleton. The locked 175-family baseline remains preserved.
 
 ## Purpose
-This report documents the first runnable Station Chief runtime skeleton after the Devinization stack lock and its v0.8.0 enhancement for approval handoff review UI schema and signed approval records.
+This report documents the first runnable Station Chief runtime skeleton after the Devinization stack lock and its v0.9.0 enhancement for approval ledger indexing and signed approval comparison.
 
 ## Files Created / Modified
-- 10_runtime/station_chief_runtime.py
-- 10_runtime/station_chief_demo_cases.json
-- 10_runtime/station_chief_runtime_readme.md
-- 10_runtime/station_chief_fixture_tests.py
-- 10_runtime/station_chief_adapters.py
-- 10_runtime/station_chief_execution_profiles.py
-- 10_runtime/station_chief_approval_handoff.py
-- 10_runtime/station_chief_approval_records.py
-- 09_exports/station_chief_runtime_skeleton_report.md
-- 09_exports/station_chief_runtime_v0_2_report.md
-- 09_exports/station_chief_runtime_v0_3_report.md
-- 09_exports/station_chief_runtime_v0_4_report.md
-- 09_exports/station_chief_runtime_v0_5_report.md
-- 09_exports/station_chief_runtime_v0_6_report.md
-- 09_exports/station_chief_runtime_v0_7_report.md
-- 09_exports/station_chief_runtime_v0_8_report.md
-- scripts/validate_station_chief_runtime_skeleton.py
-- scripts/validate_station_chief_runtime_v0_2.py
-- scripts/validate_station_chief_runtime_v0_3.py
-- scripts/validate_station_chief_runtime_v0_4.py
-- scripts/validate_station_chief_runtime_v0_5.py
-- scripts/validate_station_chief_runtime_v0_6.py
-- scripts/validate_station_chief_runtime_v0_7.py
-- scripts/validate_station_chief_runtime_v0_8.py
+10_runtime/station_chief_runtime.py
+10_runtime/station_chief_demo_cases.json
+10_runtime/station_chief_runtime_readme.md
+10_runtime/station_chief_fixture_tests.py
+10_runtime/station_chief_adapters.py
+10_runtime/station_chief_execution_profiles.py
+10_runtime/station_chief_approval_handoff.py
+10_runtime/station_chief_approval_records.py
+10_runtime/station_chief_approval_ledger.py
+09_exports/station_chief_runtime_skeleton_report.md
+09_exports/station_chief_runtime_v0_2_report.md
+09_exports/station_chief_runtime_v0_3_report.md
+09_exports/station_chief_runtime_v0_4_report.md
+09_exports/station_chief_runtime_v0_5_report.md
+09_exports/station_chief_runtime_v0_6_report.md
+09_exports/station_chief_runtime_v0_7_report.md
+09_exports/station_chief_runtime_v0_8_report.md
+09_exports/station_chief_runtime_v0_9_report.md
+scripts/validate_station_chief_runtime_skeleton.py
+scripts/validate_station_chief_runtime_v0_2.py
+scripts/validate_station_chief_runtime_v0_3.py
+scripts/validate_station_chief_runtime_v0_4.py
+scripts/validate_station_chief_runtime_v0_5.py
+scripts/validate_station_chief_runtime_v0_6.py
+scripts/validate_station_chief_runtime_v0_7.py
+scripts/validate_station_chief_runtime_v0_8.py
+scripts/validate_station_chief_runtime_v0_9.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -71,6 +74,10 @@ This report documents the first runnable Station Chief runtime skeleton after th
 - deterministic signed approval records
 - approval record verification
 - approval audit manifests
+- approval ledger indexing
+- signed approval comparison
+- approval history lookup
+- duplicate approval detection
 - deterministic fixture tests
 - proof-backed JSON output
 - baseline preservation
@@ -96,13 +103,14 @@ This report documents the first runnable Station Chief runtime skeleton after th
 - scoped_repo_patch
 
 ## Activation Tiers
-- Tier 0 — Passive Whole-Org Awareness
-- Tier 1 — Council Scan
-- Tier 2 — Command Brief
-- Tier 3 — Active Operation
-- Tier 4 — Audit / Archive
+Tier 0 — Passive Whole-Org Awareness
+Tier 1 — Council Scan
+Tier 2 — Command Brief
+Tier 3 — Active Operation
+Tier 4 — Audit / Archive
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v0_9.py
 python3 scripts/validate_station_chief_runtime_v0_8.py
 python3 scripts/validate_station_chief_runtime_v0_7.py
 python3 scripts/validate_station_chief_runtime_v0_6.py
@@ -128,9 +136,10 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not hire or animate worker agents yet
 - Does not execute uncontrolled repo work orders
 - Does not treat signed approval records as automatic execution permission
+- Does not treat approval ledgers as automatic execution permission
 - Does not build UI yet
 - Does not connect live APIs yet
 - Does not authorize uncontrolled live execution
 
 ## Next Recommended Build Step
-Next recommended build step: add approval ledger indexing and signed approval comparison.
+Next recommended build step: complete Station Chief Runtime v1.0 stable release lock.
