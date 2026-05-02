@@ -4,7 +4,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-ADAPTER_MODULE_VERSION = "1.8.0"
+ADAPTER_MODULE_VERSION = "2.0.0"
 
 YES_I_APPROVE_SANDBOX_FILE_WRITE = "YES_I_APPROVE_SANDBOX_FILE_WRITE"
 YES_I_APPROVE_SCOPED_REPO_PATCH = "YES_I_APPROVE_SCOPED_REPO_PATCH"
@@ -21,6 +21,7 @@ SUPPORTED_ADAPTERS = {
         "live_execution": False,
         "external_actions": False,
         "worker_animation": False,
+        "supports_controlled_worker_execution": True,
         "description": "Safely simulates execution boundaries without performing live work.",
     },
     "sandbox_file_write": {
@@ -62,6 +63,11 @@ SUPPORTED_ADAPTERS = {
         "deployment_blocked_by_default": True,
         "hosting_api_calls_allowed": False,
         "live_deployment_allowed": False,
+        "supports_controlled_worker_execution": False,
+        "controlled_worker_execution_requires_separate_gate": True,
+        "first_controlled_worker_execution_token": "YES_I_APPROVE_FIRST_CONTROLLED_WORKER_EXECUTION",
+        "broad_worker_activation_allowed": False,
+        "external_worker_tool_calls_allowed": False,
         "description": "Applies deterministic local patches only inside a provided patch root, only to explicitly allowlisted relative files, after explicit confirmation.",
     },
 }

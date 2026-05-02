@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v1.8.0. Locked 175-family baseline preserved. Deployment/portfolio packaging bridge added.
+Station Chief Runtime upgraded to v2.0.0. Locked 175-family baseline preserved. First controlled worker-agent execution release added.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -27,7 +27,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 10_runtime/station_chief_worker_hiring_registry.py
 10_runtime/station_chief_department_routing.py
 10_runtime/station_chief_multi_agent_orchestration.py
-10_runtime/station_chief_deployment_packaging.py
+10_runtime/station_chief_controlled_worker_execution.py
 09_exports/station_chief_runtime_skeleton_report.md
 09_exports/station_chief_runtime_v0_2_report.md
 09_exports/station_chief_runtime_v0_3_report.md
@@ -46,6 +46,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 09_exports/station_chief_runtime_v1_6_report.md
 09_exports/station_chief_runtime_v1_7_report.md
 09_exports/station_chief_runtime_v1_8_report.md
+09_exports/station_chief_runtime_v2_0_report.md
 scripts/validate_station_chief_runtime_skeleton.py
 scripts/validate_station_chief_runtime_v0_2.py
 scripts/validate_station_chief_runtime_v0_3.py
@@ -64,6 +65,7 @@ scripts/validate_station_chief_runtime_v1_5.py
 scripts/validate_station_chief_runtime_v1_6.py
 scripts/validate_station_chief_runtime_v1_7.py
 scripts/validate_station_chief_runtime_v1_8.py
+scripts/validate_station_chief_runtime_v2_0.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -185,27 +187,29 @@ scripts/validate_station_chief_runtime_v1_8.py
 - human approval chain binding
 - patch execution readiness scoring
 - patch hardening audit bundle
-- deployment/portfolio packaging readiness bridge
-- deployment artifact schema
-- portfolio packaging manifest
-- runtime export bundle
-- release notes generator
-- deployment safety contract
-- deployment readiness proof
-- packaging audit bundle
-- portfolio handoff summary
-- first controlled worker-agent execution readiness bridge
-- no uncontrolled repo edits
-- no GitHub API mutation
-- no patch execution authorization
-- no live deployment
-- no hosting API calls
-- no external service mutation
-- no deployment execution authorization
+- first controlled worker-agent execution schema
+- first-worker approval token
+- worker execution gate
+- tool permission binding
+- sandbox worker task runner
+- controlled worker execution result
+- worker abort contract
+- worker rollback contract
+- worker execution telemetry stub
+- post-run audit proof
+- worker execution ledger
+- single-worker tool permission binding readiness bridge
+- no broad workforce animation
+- no external API calls
+- no shell command execution
+- no arbitrary code execution
+- no repo mutation
+- no deployment
 - deterministic fixture tests
-- proof-backed JSON output
-- baseline preservation
-- no live API calls
+
+## Required Validators
+python3 scripts/validate_station_chief_runtime_v2_0.py
+python3 scripts/validate_station_chief_runtime_v1_8.py
 - no full workforce animation (no worker animation)
 - no real worker hiring
 - no live worker routing
@@ -295,4 +299,4 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not deploy to external platforms
 
 ## Next Recommended Build Step
-Next recommended build step: build first controlled worker-agent execution release.
+Next recommended build step: build single-worker tool permission binding.
