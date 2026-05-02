@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v1.4.0. Locked 175-family baseline preserved. Department routing runtime preview added.
+Station Chief Runtime upgraded to v1.5.0. Locked 175-family baseline preserved. Multi-agent orchestration sandbox added.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -9,7 +9,7 @@ Project owner, system architect, and operating-doctrine author: Devin O’Rourke
 This attribution applies to the Agent Command Center Station Chief runtime skeleton. The locked 175-family baseline remains preserved.
 
 ## Purpose
-This report documents the first stable Station Chief Runtime foundation lock after the Devinization stack lock and its v1.4.0 enhancement for department routing runtime preview.
+This report documents the first stable Station Chief Runtime foundation lock after the Devinization stack lock and its v1.5.0 enhancement for multi-agent orchestration sandbox.
 
 ## Files Created / Modified
 10_runtime/station_chief_runtime.py
@@ -26,6 +26,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 10_runtime/station_chief_work_order_executor.py
 10_runtime/station_chief_worker_hiring_registry.py
 10_runtime/station_chief_department_routing.py
+10_runtime/station_chief_multi_agent_orchestration.py
 09_exports/station_chief_runtime_skeleton_report.md
 09_exports/station_chief_runtime_v0_2_report.md
 09_exports/station_chief_runtime_v0_3_report.md
@@ -40,6 +41,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 09_exports/station_chief_runtime_v1_2_report.md
 09_exports/station_chief_runtime_v1_3_report.md
 09_exports/station_chief_runtime_v1_4_report.md
+09_exports/station_chief_runtime_v1_5_report.md
 scripts/validate_station_chief_runtime_skeleton.py
 scripts/validate_station_chief_runtime_v0_2.py
 scripts/validate_station_chief_runtime_v0_3.py
@@ -54,6 +56,7 @@ scripts/validate_station_chief_runtime_v1_1.py
 scripts/validate_station_chief_runtime_v1_2.py
 scripts/validate_station_chief_runtime_v1_3.py
 scripts/validate_station_chief_runtime_v1_4.py
+scripts/validate_station_chief_runtime_v1_5.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -97,7 +100,7 @@ scripts/validate_station_chief_runtime_v1_4.py
 - stable release manifest
 - stable capability inventory
 - stable artifact contract
-- stable adapter boundary contract
+- stable adapter_boundary contract
 - stable safety doctrine lock
 - stable approval flow lock
 - stable known limitations record
@@ -137,7 +140,19 @@ scripts/validate_station_chief_runtime_v1_4.py
 - department routing ledger
 - department routing completion proof
 - department routing readiness summary
-- multi_agent_orchestration_readiness_bridge
+- multi-agent orchestration readiness bridge
+- orchestration topology schema
+- deterministic orchestration ID generation
+- orchestration node generation
+- multi-worker dry-run coordination map
+- task handoff simulation
+- inter-worker dependency graph
+- orchestration conflict detector
+- orchestration dry-run engine
+- orchestration ledger
+- orchestration completion proof
+- orchestration readiness summary
+- UI/operator-console readiness bridge
 - deterministic fixture tests
 - proof-backed JSON output
 - baseline preservation
@@ -146,6 +161,7 @@ scripts/validate_station_chief_runtime_v1_4.py
 - no real worker hiring
 - no live worker routing
 - no live worker assignment
+- no live orchestration
 
 ## Supported Command Types
 - verification
@@ -173,6 +189,7 @@ Tier 3 — Active Operation
 Tier 4 — Audit / Archive
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v1_5.py
 python3 scripts/validate_station_chief_runtime_v1_4.py
 python3 scripts/validate_station_chief_runtime_v1_3.py
 python3 scripts/validate_station_chief_runtime_v1_2.py
@@ -207,6 +224,10 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not treat approval ledgers as automatic execution permission
 - Does not treat the v1.0 release lock as automatic execution permission
 - Does not treat controlled execution profiles as automatic execution permission
+- Does not treat work order dry-runs as live execution permission
+- Does not treat worker registry previews as real hiring or live assignment
+- Does not treat department routing previews as live routing
+- Does not treat orchestration sandbox previews as live execution
 - Does not build UI yet
 - Does not connect live APIs yet
 - Does not authorize uncontrolled live execution
@@ -214,6 +235,7 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not execute live work orders
 - Does not assign live workers
 - Does not route live workers
+- Does not perform live orchestration
 
 ## Next Recommended Build Step
-Next recommended build step: build multi-agent orchestration sandbox.
+Next recommended build step: build UI/operator console schema.

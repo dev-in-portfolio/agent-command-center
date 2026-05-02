@@ -3,7 +3,7 @@ import hashlib
 import re
 from pathlib import Path
 
-DEPARTMENT_ROUTING_MODULE_VERSION = "1.4.0"
+DEPARTMENT_ROUTING_MODULE_VERSION = "1.5.0"
 DEPARTMENT_ROUTING_STATUS = "ROUTING_PREVIEW_ONLY"
 DEPARTMENT_ROUTING_PHASE = "Department Routing Runtime"
 
@@ -19,15 +19,15 @@ def normalize_route_label(label: str) -> str:
     normalized = re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
     return normalized or "route"
 
-def generate_route_id(command: str, route_label: str, index: int, runtime_version: str = "1.4.0") -> str:
+def generate_route_id(command: str, route_label: str, index: int, runtime_version: str = "1.5.0") -> str:
     normalized_label = normalize_route_label(route_label)
     hash_input = f"{runtime_version}:{command}:{route_label}:{index}"
     hash_chars = hashlib.sha256(hash_input.encode("utf-8")).hexdigest()[:12]
-    return f"route-v1-4-{normalized_label}-{index:03d}-{hash_chars}"
+    return f"route-v1-5-{normalized_label}-{index:03d}-{hash_chars}"
 
 def create_department_routing_schema() -> dict:
     return {
-        "department_routing_schema_version": "1.4.0",
+        "department_routing_schema_version": "1.5.0",
         "schema_status": "ROUTING_PREVIEW_ONLY",
         "required_fields": [
             "route_id",
@@ -148,7 +148,7 @@ def create_department_route_candidate(
     route_id = generate_route_id(command, worker_candidate.get("worker_role_title", "route"), index)
     
     return {
-        "department_route_candidate_version": "1.4.0",
+        "department_route_candidate_version": "1.5.0",
         "route_id": route_id,
         "route_title": f"Route {worker_candidate.get('worker_role_title')}",
         "route_type": "worker_to_department_preview",
@@ -232,7 +232,7 @@ def create_family_to_department_routing_map(route_candidates: list[dict]) -> dic
         by_family[fam].append(rid)
         
     return {
-        "family_to_department_routing_map_version": "1.4.0",
+        "family_to_department_routing_map_version": "1.5.0",
         "map_status": "ROUTING_PREVIEW_ONLY",
         "department_count": len(by_department),
         "family_count": len(by_family),
@@ -274,7 +274,7 @@ def create_worker_to_department_assignment_map(route_candidates: list[dict]) -> 
         })
         
     return {
-        "worker_to_department_assignment_map_version": "1.4.0",
+        "worker_to_department_assignment_map_version": "1.5.0",
         "assignment_status": "ROUTING_PREVIEW_ONLY",
         "worker_route_count": len(route_candidates),
         "assignments": assignments,
@@ -310,7 +310,7 @@ def detect_department_routing_conflicts(route_candidates: list[dict]) -> dict:
     status = "CLEAR" if conflict_count == 0 else "CONFLICTS_DETECTED"
     
     return {
-        "department_routing_conflict_detector_version": "1.4.0",
+        "department_routing_conflict_detector_version": "1.5.0",
         "conflict_status": status,
         "duplicate_route_ids": duplicates,
         "missing_target_department_route_ids": missing_target,
@@ -346,7 +346,7 @@ def dry_run_department_routing(route_candidates: list[dict], conflict_detector: 
             path = ["ROUTE_CANDIDATE_CREATED", "ROUTE_PREVIEW_READY", "ROUTE_PLANNED", "ROUTE_RECORDED"]
             
         results.append({
-            "department_routing_dry_run_result_version": "1.4.0",
+            "department_routing_dry_run_result_version": "1.5.0",
             "route_id": rid,
             "worker_id": wid,
             "target_department": rc["target_department"],
@@ -389,7 +389,7 @@ def create_department_routing_ledger(route_candidates: list[dict], dry_run_resul
         })
         
     return {
-        "department_routing_ledger_version": "1.4.0",
+        "department_routing_ledger_version": "1.5.0",
         "ledger_status": "ROUTING_PREVIEW_ONLY",
         "route_count": len(route_candidates),
         "dry_run_pass_count": pass_count,
@@ -414,7 +414,7 @@ def create_department_routing_completion_proof(route_candidate: dict, dry_run_re
     digest = sha256_digest(proof_data)
     
     return {
-        "department_routing_completion_proof_version": "1.4.0",
+        "department_routing_completion_proof_version": "1.5.0",
         "route_id": route_candidate["route_id"],
         "worker_id": route_candidate["source_worker_id"],
         "proof_status": status,
@@ -458,7 +458,7 @@ def create_department_routing_readiness_summary(
     )
     
     return {
-        "department_routing_readiness_summary_version": "1.4.0",
+        "department_routing_readiness_summary_version": "1.5.0",
         "routing_status": "ROUTING_PREVIEW_ONLY",
         "route_count": rc_count,
         "dry_run_pass_count": pass_count,
@@ -481,7 +481,7 @@ def create_multi_agent_orchestration_readiness_bridge(
     readiness_summary: dict
 ) -> dict:
     return {
-        "multi_agent_orchestration_readiness_bridge_version": "1.4.0",
+        "multi_agent_orchestration_readiness_bridge_version": "1.5.0",
         "current_layer": "Department Routing Runtime",
         "next_layer": "Multi-Agent Orchestration Sandbox",
         "ready_for_multi_agent_orchestration_sandbox": readiness_summary["ready_for_multi_agent_orchestration_sandbox"],
@@ -522,7 +522,7 @@ def create_department_routing_bundle(result: dict) -> dict:
     bridge = create_multi_agent_orchestration_readiness_bridge(result, candidates, summary)
     
     return {
-        "department_routing_bundle_version": "1.4.0",
+        "department_routing_bundle_version": "1.5.0",
         "routing_status": DEPARTMENT_ROUTING_STATUS,
         "department_routing_schema": schema,
         "department_route_candidates": candidates,

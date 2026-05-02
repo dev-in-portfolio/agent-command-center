@@ -63,6 +63,10 @@ from station_chief_department_routing import (
     create_department_routing_bundle,
     create_department_routing_schema,
 )
+from station_chief_multi_agent_orchestration import (
+    create_multi_agent_orchestration_bundle,
+    create_orchestration_topology_schema,
+)
 from station_chief_execution_profiles import (
     create_dry_run_bundle,
     create_execution_readiness_score,
@@ -72,7 +76,7 @@ from station_chief_execution_profiles import (
     select_execution_profile,
 )
 
-STATION_CHIEF_RUNTIME_VERSION = "1.4.0"
+STATION_CHIEF_RUNTIME_VERSION = "1.5.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -278,7 +282,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}:{run_label}:{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v1-4-{normalized}-{digest[:12]}"
+    return f"station-chief-v1-5-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -389,7 +393,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "1.4.0",
+            "registry_version": "1.5.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -406,7 +410,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "1.4.0"
+    registry["registry_version"] = "1.5.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -415,7 +419,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "1.4.0",
+        "index_version": "1.5.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -469,7 +473,7 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
     adapter_result = run_noop_adapter(execution_plan)
     return {
         "station_chief_runtime_version": STATION_CHIEF_RUNTIME_VERSION,
-        "runtime_status": "department_routing_preview",
+        "runtime_status": "multi_agent_orchestration_sandbox",
         "release_status": "STABLE_LOCKED",
         "run_capabilities": {
             "persistent_run_logs": True,
@@ -675,9 +679,15 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "department_routing_does_not_route_live_workers": True,
             "department_routing_does_not_hire_workers": True,
             "department_routing_does_not_animate_workforce": True,
-            "multi_agent_orchestration_sandbox_not_yet_active": True,
+            "multi_agent_orchestration_available": True,
+            "multi_agent_orchestration_sandbox_only": True,
+            "multi_agent_orchestration_does_not_animate_workers": True,
+            "multi_agent_orchestration_does_not_hire_workers": True,
+            "multi_agent_orchestration_does_not_route_live_workers": True,
+            "multi_agent_orchestration_does_not_perform_live_orchestration": True,
+            "ui_operator_console_schema_not_yet_active": True,
         },
-        "next_step": "Next step: build multi-agent orchestration sandbox.",
+        "next_step": "Next step: build UI/operator console schema.",
     }
 
 
@@ -732,9 +742,9 @@ def write_approval_ledger(result: dict, output_dir: str | Path, run_label: str =
     ]
     
     manifest = {
-        "approval_ledger_manifest_version": "1.4.0",
+        "approval_ledger_manifest_version": "1.5.0",
         "run_id": run_id,
-        "runtime_version": "1.4.0",
+        "runtime_version": "1.5.0",
         "files_written": files_written,
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -803,9 +813,9 @@ def write_controlled_execution(result: dict, output_dir: str | Path, run_label: 
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "controlled_execution_manifest_version": "1.4.0",
+        "controlled_execution_manifest_version": "1.5.0",
         "run_id": run_id,
-        "runtime_version": "1.4.0",
+        "runtime_version": "1.5.0",
         "files_written": files_written + ["controlled_execution_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -813,7 +823,7 @@ def write_controlled_execution(result: dict, output_dir: str | Path, run_label: 
         "real_worker_hiring_performed": False,
         "execution_authorized": False,
         "status": "PROFILE_EXPANSION_ONLY",
-        "note": "Controlled execution v1.4.0 expands execution profiles only. It does not execute live actions or hire workers."
+        "note": "Controlled execution v1.5.0 expands execution profiles only. It does not execute live actions or hire workers."
     }
     _write_json(record_dir / "controlled_execution_manifest.json", manifest)
     files_written.append("controlled_execution_manifest.json")
@@ -868,9 +878,9 @@ def write_work_order_executor(result: dict, output_dir: str | Path, run_label: s
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "work_order_executor_manifest_version": "1.4.0",
+        "work_order_executor_manifest_version": "1.5.0",
         "run_id": run_id,
-        "runtime_version": "1.4.0",
+        "runtime_version": "1.5.0",
         "files_written": files_written + ["work_order_executor_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -879,7 +889,7 @@ def write_work_order_executor(result: dict, output_dir: str | Path, run_label: s
         "repo_files_modified": False,
         "execution_authorized": False,
         "status": "SKELETON_DRY_RUN_ONLY",
-        "note": "Work Order Executor v1.4.0 creates dry-run skeleton artifacts only. It does not execute live actions, modify repo files, hire workers, or animate the workforce."
+        "note": "Work Order Executor v1.5.0 creates dry-run skeleton artifacts only. It does not execute live actions, modify repo files, hire workers, or animate the workforce."
     }
     _write_json(record_dir / "work_order_executor_manifest.json", manifest)
     files_written.append("work_order_executor_manifest.json")
@@ -934,9 +944,9 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "worker_hiring_registry_manifest_version": "1.4.0",
+        "worker_hiring_registry_manifest_version": "1.5.0",
         "run_id": run_id,
-        "runtime_version": "1.4.0",
+        "runtime_version": "1.5.0",
         "files_written": files_written + ["worker_hiring_registry_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -944,7 +954,7 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
         "real_worker_hiring_performed": False,
         "execution_authorized": False,
         "status": "REGISTRY_PREVIEW_ONLY",
-        "note": "Worker Hiring Registry v1.4.0 creates preview registry artifacts only. It does not hire workers, animate the workforce, execute live actions, or modify repo files."
+        "note": "Worker Hiring Registry v1.5.0 creates preview registry artifacts only. It does not hire workers, animate the workforce, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "worker_hiring_registry_manifest.json", manifest)
     files_written.append("worker_hiring_registry_manifest.json")
@@ -1003,9 +1013,9 @@ def write_department_routing(result: dict, output_dir: str | Path, run_label: st
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "department_routing_manifest_version": "1.4.0",
+        "department_routing_manifest_version": "1.5.0",
         "run_id": run_id,
-        "runtime_version": "1.4.0",
+        "runtime_version": "1.5.0",
         "files_written": files_written + ["department_routing_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1014,7 +1024,7 @@ def write_department_routing(result: dict, output_dir: str | Path, run_label: st
         "live_worker_routing_performed": False,
         "execution_authorized": False,
         "status": "ROUTING_PREVIEW_ONLY",
-        "note": "Department Routing Runtime v1.4.0 creates preview routing artifacts only. It does not route live workers, hire workers, animate the workforce, execute live actions, or modify repo files."
+        "note": "Department Routing Runtime v1.5.0 creates preview routing artifacts only. It does not route live workers, hire workers, animate the workforce, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "department_routing_manifest.json", manifest)
     files_written.append("department_routing_manifest.json")
@@ -1022,6 +1032,79 @@ def write_department_routing(result: dict, output_dir: str | Path, run_label: st
     return {
         "run_id": run_id,
         "department_routing_dir": str(record_dir),
+        "files_written": files_written
+    }
+
+
+def attach_multi_agent_orchestration(result: dict) -> dict:
+    if result.get("department_routing_bundle") is None:
+        result = attach_department_routing(result)
+        
+    bundle = create_multi_agent_orchestration_bundle(result)
+    
+    result["multi_agent_orchestration_bundle"] = bundle
+    result["orchestration_topology_schema"] = bundle["orchestration_topology_schema"]
+    result["orchestration_nodes"] = bundle["orchestration_nodes"]
+    result["multi_worker_coordination_map"] = bundle["multi_worker_coordination_map"]
+    result["task_handoff_simulation"] = bundle["task_handoff_simulation"]
+    result["inter_worker_dependency_graph"] = bundle["inter_worker_dependency_graph"]
+    result["orchestration_conflict_detector"] = bundle["orchestration_conflict_detector"]
+    result["orchestration_dry_run_results"] = bundle["orchestration_dry_run_results"]
+    result["orchestration_ledger"] = bundle["orchestration_ledger"]
+    result["orchestration_completion_proofs"] = bundle["orchestration_completion_proofs"]
+    result["orchestration_readiness_summary"] = bundle["orchestration_readiness_summary"]
+    result["ui_operator_console_readiness_bridge"] = bundle["ui_operator_console_readiness_bridge"]
+    
+    return result
+
+def write_multi_agent_orchestration(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
+    if "multi_agent_orchestration_bundle" not in result:
+        raise ValueError("Missing multi_agent_orchestration_bundle in result")
+        
+    run_id = generate_run_id(result.get("command", "empty"), run_label)
+    record_dir = Path(output_dir) / run_id
+    record_dir.mkdir(parents=True, exist_ok=True)
+    
+    payloads = {
+        "multi_agent_orchestration_bundle.json": result["multi_agent_orchestration_bundle"],
+        "orchestration_topology_schema.json": result["orchestration_topology_schema"],
+        "orchestration_nodes.json": result["orchestration_nodes"],
+        "multi_worker_coordination_map.json": result["multi_worker_coordination_map"],
+        "task_handoff_simulation.json": result["task_handoff_simulation"],
+        "inter_worker_dependency_graph.json": result["inter_worker_dependency_graph"],
+        "orchestration_conflict_detector.json": result["orchestration_conflict_detector"],
+        "orchestration_dry_run_results.json": result["orchestration_dry_run_results"],
+        "orchestration_ledger.json": result["orchestration_ledger"],
+        "orchestration_completion_proofs.json": result["orchestration_completion_proofs"],
+        "orchestration_readiness_summary.json": result["orchestration_readiness_summary"],
+        "ui_operator_console_readiness_bridge.json": result["ui_operator_console_readiness_bridge"]
+    }
+    
+    files_written = list(payloads.keys())
+    for filename, payload in payloads.items():
+        _write_json(record_dir / filename, payload)
+        
+    manifest = {
+        "multi_agent_orchestration_manifest_version": "1.5.0",
+        "run_id": run_id,
+        "runtime_version": "1.5.0",
+        "files_written": files_written + ["multi_agent_orchestration_manifest.json"],
+        "baseline_preserved": True,
+        "external_actions_taken": False,
+        "live_worker_agents_activated": False,
+        "real_worker_hiring_performed": False,
+        "live_worker_routing_performed": False,
+        "live_orchestration_performed": False,
+        "execution_authorized": False,
+        "status": "ORCHESTRATION_SANDBOX_ONLY",
+        "note": "Multi-Agent Orchestration Sandbox v1.5.0 creates sandbox orchestration artifacts only. It does not animate workers, hire workers, route live workers, execute live actions, perform live orchestration, or modify repo files."
+    }
+    _write_json(record_dir / "multi_agent_orchestration_manifest.json", manifest)
+    files_written.append("multi_agent_orchestration_manifest.json")
+    
+    return {
+        "run_id": run_id,
+        "multi_agent_orchestration_dir": str(record_dir),
         "files_written": files_written
     }
 
@@ -1145,12 +1228,25 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "worker_registry_ledger": result.get("worker_registry_ledger"),
         "worker_hiring_preview_records": result.get("worker_hiring_preview_records"),
         "worker_hiring_readiness_summary": result.get("worker_hiring_readiness_summary"),
-        "department_routing_readiness_bridge": result.get("department_routing_readiness_bridge"),
+        "department_routing_readiness_summary": result.get("department_routing_readiness_summary"),
+        "multi_agent_orchestration_readiness_bridge": result.get("multi_agent_orchestration_readiness_bridge"),
+        "multi_agent_orchestration_bundle": result.get("multi_agent_orchestration_bundle"),
+        "orchestration_topology_schema": result.get("orchestration_topology_schema"),
+        "orchestration_nodes": result.get("orchestration_nodes"),
+        "multi_worker_coordination_map": result.get("multi_worker_coordination_map"),
+        "task_handoff_simulation": result.get("task_handoff_simulation"),
+        "inter_worker_dependency_graph": result.get("inter_worker_dependency_graph"),
+        "orchestration_conflict_detector": result.get("orchestration_conflict_detector"),
+        "orchestration_dry_run_results": result.get("orchestration_dry_run_results"),
+        "orchestration_ledger": result.get("orchestration_ledger"),
+        "orchestration_completion_proofs": result.get("orchestration_completion_proofs"),
+        "orchestration_readiness_summary": result.get("orchestration_readiness_summary"),
+        "ui_operator_console_readiness_bridge": result.get("ui_operator_console_readiness_bridge"),
         "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v1_4_artifacts",
+            "artifact_type": "station_chief_runtime_v1_5_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -1235,6 +1331,18 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "department_routing_completion_proofs.json",
                 "department_routing_readiness_summary.json",
                 "multi_agent_orchestration_readiness_bridge.json",
+                "multi_agent_orchestration_bundle.json",
+                "orchestration_topology_schema.json",
+                "orchestration_nodes.json",
+                "multi_worker_coordination_map.json",
+                "task_handoff_simulation.json",
+                "inter_worker_dependency_graph.json",
+                "orchestration_conflict_detector.json",
+                "orchestration_dry_run_results.json",
+                "orchestration_ledger.json",
+                "orchestration_completion_proofs.json",
+                "orchestration_readiness_summary.json",
+                "ui_operator_console_readiness_bridge.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -1308,6 +1416,17 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "department_routing_completion_proof": True,
             "department_routing_readiness_summary": True,
             "multi_agent_orchestration_readiness_bridge": True,
+            "orchestration_topology_schema": True,
+            "orchestration_node_generation": True,
+            "multi_worker_coordination_map": True,
+            "task_handoff_simulation": True,
+            "inter_worker_dependency_graph": True,
+            "orchestration_conflict_detector": True,
+            "orchestration_dry_run_engine": True,
+            "orchestration_ledger": True,
+            "orchestration_completion_proof": True,
+            "orchestration_readiness_summary": True,
+            "ui_operator_console_readiness_bridge": True,
             "signed_approval_record_does_not_execute_patch": True,
             "approval_ledger_does_not_execute_patch": True,
             "release_lock_does_not_execute_patch": True,
@@ -1325,6 +1444,11 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "department_routing_does_not_route_live_workers": True,
             "department_routing_does_not_hire_workers": True,
             "department_routing_does_not_animate_workforce": True,
+            "multi_agent_orchestration_sandbox_only": True,
+            "multi_agent_orchestration_does_not_animate_workers": True,
+            "multi_agent_orchestration_does_not_hire_workers": True,
+            "multi_agent_orchestration_does_not_route_live_workers": True,
+            "multi_agent_orchestration_does_not_perform_live_orchestration": True,
         },
     }
 
@@ -1433,6 +1557,18 @@ def write_runtime_artifacts(
         "department_routing_completion_proofs.json": artifacts.get("department_routing_completion_proofs"),
         "department_routing_readiness_summary.json": artifacts.get("department_routing_readiness_summary"),
         "multi_agent_orchestration_readiness_bridge.json": artifacts.get("multi_agent_orchestration_readiness_bridge"),
+        "multi_agent_orchestration_bundle.json": artifacts.get("multi_agent_orchestration_bundle"),
+        "orchestration_topology_schema.json": artifacts.get("orchestration_topology_schema"),
+        "orchestration_nodes.json": artifacts.get("orchestration_nodes"),
+        "multi_worker_coordination_map.json": artifacts.get("multi_worker_coordination_map"),
+        "task_handoff_simulation.json": artifacts.get("task_handoff_simulation"),
+        "inter_worker_dependency_graph.json": artifacts.get("inter_worker_dependency_graph"),
+        "orchestration_conflict_detector.json": artifacts.get("orchestration_conflict_detector"),
+        "orchestration_dry_run_results.json": artifacts.get("orchestration_dry_run_results"),
+        "orchestration_ledger.json": artifacts.get("orchestration_ledger"),
+        "orchestration_completion_proofs.json": artifacts.get("orchestration_completion_proofs"),
+        "orchestration_readiness_summary.json": artifacts.get("orchestration_readiness_summary"),
+        "ui_operator_console_readiness_bridge.json": artifacts.get("ui_operator_console_readiness_bridge"),
         "runtime_index_entry.json": artifacts["runtime_index_entry"],
         "manifest.json": artifacts["manifest"],
         "full_result.json": result,
@@ -1643,7 +1779,7 @@ def write_dry_run_bundle(
         "execution_readiness_score.json": result.get("execution_readiness_score"),
         "repo_patch_preview.diff": dry_run_bundle.get("repo_patch_preview") or "",
         "dry_run_manifest.json": {
-            "dry_run_bundle_version": "1.4.0",
+            "dry_run_bundle_version": "1.5.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -1699,7 +1835,7 @@ def write_approval_handoff(
         "dry_run_bundle_comparison.json": packet.get("comparison"),
         "patch_preview.diff": (packet.get("dry_run_bundle") or {}).get("repo_patch_preview") or "",
         "approval_handoff_manifest.json": {
-            "approval_handoff_version": "1.4.0",
+            "approval_handoff_version": "1.5.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -1794,7 +1930,7 @@ def write_approval_record(
 
     files_written = []
     approval_record_manifest = {
-        "approval_record_manifest_version": "1.4.0",
+        "approval_record_manifest_version": "1.5.0",
         "run_id": run_id,
         "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
         "files_written": [
@@ -1878,10 +2014,10 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--execute-repo-patch", action="store_true", help="Execute a scoped repo patch if the gate approves")
     parser.add_argument("--execution-profile", type=str, help="Requested execution profile for dry-run behavior")
     parser.add_argument("--dry-run-bundle", action="store_true", help="Attach a dry-run bundle to the printed result")
-    parser.add_argument("--release-lock", action="store_true", help="Attach v1.4.0 stable release lock artifacts")
-    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v1.4.0 release manifest as JSON")
-    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v1.4.0 stable release lock artifacts to DIR")
-    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v1.4.0 stable release manifest JSON file")
+    parser.add_argument("--release-lock", action="store_true", help="Attach v1.5.0 stable release lock artifacts")
+    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v1.5.0 release manifest as JSON")
+    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v1.5.0 stable release lock artifacts to DIR")
+    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v1.5.0 stable release manifest JSON file")
     parser.add_argument("--list-controlled-execution-profiles", action="store_true", help="Print controlled execution profile catalog as JSON")
     parser.add_argument("--controlled-execution", action="store_true", help="Attach controlled execution bundle to the printed result")
     parser.add_argument("--controlled-execution-profile", type=str, metavar="PROFILE_ID", help="Choose a controlled execution profile")
@@ -1896,6 +2032,9 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--department-routing-schema", action="store_true", help="Print the department routing schema as JSON")
     parser.add_argument("--department-routing", action="store_true", help="Attach department routing bundle to the printed result")
     parser.add_argument("--write-department-routing", metavar="DIR", help="Write department routing artifacts into the provided directory")
+    parser.add_argument("--orchestration-schema", action="store_true", help="Print the multi-agent orchestration topology schema as JSON")
+    parser.add_argument("--multi-agent-orchestration", action="store_true", help="Attach multi-agent orchestration bundle to the printed result")
+    parser.add_argument("--write-multi-agent-orchestration", metavar="DIR", help="Write multi-agent orchestration artifacts into the provided directory")
     return parser
 
 
@@ -1948,6 +2087,10 @@ def main() -> None:
 
     if args.department_routing_schema:
         print(json.dumps(create_department_routing_schema(), indent=2, ensure_ascii=False))
+        return
+
+    if args.orchestration_schema:
+        print(json.dumps(create_orchestration_topology_schema(), indent=2, ensure_ascii=False))
         return
 
     if args.list_controlled_execution_profiles:
@@ -2122,6 +2265,9 @@ def main() -> None:
     if args.department_routing or args.write_department_routing:
         result = attach_department_routing(result)
 
+    if args.multi_agent_orchestration or args.write_multi_agent_orchestration:
+        result = attach_multi_agent_orchestration(result)
+
     artifact_summary = None
     if args.write_artifacts:
         artifact_summary = write_runtime_artifacts(
@@ -2204,6 +2350,11 @@ def main() -> None:
         department_routing_summary = write_department_routing(result, args.write_department_routing, run_label=args.run_label)
         result = dict(result)
         result["department_routing_write_summary"] = department_routing_summary
+
+    if args.write_multi_agent_orchestration:
+        multi_agent_orchestration_summary = write_multi_agent_orchestration(result, args.write_multi_agent_orchestration, run_label=args.run_label)
+        result = dict(result)
+        result["multi_agent_orchestration_write_summary"] = multi_agent_orchestration_summary
 
     if args.write_output:
         Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
