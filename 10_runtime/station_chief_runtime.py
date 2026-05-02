@@ -40,6 +40,11 @@ from station_chief_approval_records import (
     create_signed_approval_record,
     verify_signed_approval_record,
 )
+from station_chief_release_lock import (
+    create_release_lock_bundle,
+    create_stable_release_manifest,
+    verify_stable_release_manifest,
+)
 from station_chief_execution_profiles import (
     create_dry_run_bundle,
     create_execution_readiness_score,
@@ -49,7 +54,7 @@ from station_chief_execution_profiles import (
     select_execution_profile,
 )
 
-STATION_CHIEF_RUNTIME_VERSION = "0.9.0"
+STATION_CHIEF_RUNTIME_VERSION = "1.0.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -255,7 +260,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}:{run_label}:{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v0-9-{normalized}-{digest[:12]}"
+    return f"station-chief-v1-0-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -366,7 +371,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "0.9.0",
+            "registry_version": "1.0.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -383,7 +388,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "0.9.0"
+    registry["registry_version"] = "1.0.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -392,7 +397,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "0.9.0",
+        "index_version": "1.0.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -446,7 +451,8 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
     adapter_result = run_noop_adapter(execution_plan)
     return {
         "station_chief_runtime_version": STATION_CHIEF_RUNTIME_VERSION,
-        "runtime_status": "deterministic_demo_ready",
+        "runtime_status": "stable_release_locked",
+        "release_status": "STABLE_LOCKED",
         "run_capabilities": {
             "persistent_run_logs": True,
             "command_brief_artifacts": True,
@@ -482,6 +488,16 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "signed_approval_comparison": True,
             "approval_history_lookup": True,
             "approval_duplicate_detection": True,
+            "stable_runtime_contract": True,
+            "stable_release_manifest": True,
+            "stable_capability_inventory": True,
+            "stable_artifact_contract": True,
+            "stable_adapter_boundary_contract": True,
+            "stable_safety_doctrine_lock": True,
+            "stable_approval_flow_lock": True,
+            "stable_known_limitations_record": True,
+            "stable_next_phase_handoff": True,
+            "stable_release_readiness_summary": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -512,6 +528,26 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
         "signed_approval_record": None,
         "approval_record_verification": None,
         "approval_record_audit_manifest": None,
+        "approval_record_sources": None,
+        "approval_ledger_bundle": None,
+        "approval_ledger_index": None,
+        "approval_ledger_verification": None,
+        "approval_status_summary": None,
+        "duplicate_approval_signals": None,
+        "approval_ledger_lookup": None,
+        "approval_record_comparison": None,
+        "release_lock_bundle": None,
+        "stable_release_manifest": None,
+        "stable_release_verification": None,
+        "stable_runtime_contract": None,
+        "stable_capability_inventory": None,
+        "stable_artifact_contract": None,
+        "stable_adapter_boundary_contract": None,
+        "stable_safety_doctrine_lock": None,
+        "stable_approval_flow_lock": None,
+        "known_limitations": None,
+        "next_phase_handoff": None,
+        "release_readiness_summary": None,
         "evidence": {
             "baseline_preserved": True,
             "external_actions_taken": False,
@@ -526,8 +562,12 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "signed_approval_record_available": True,
             "signed_approval_record_does_not_execute_patch": True,
             "approval_ledger_does_not_execute_patch": True,
+            "stable_release_locked": True,
+            "release_manifest_available": True,
+            "release_lock_does_not_execute_patch": True,
+            "v1_0_stable_foundation_complete": True,
         },
-        "next_step": "Next step: complete Station Chief Runtime v1.0 stable release lock.",
+        "next_step": "Next step: begin controlled execution engine and worker hiring layer.",
     }
 
 
@@ -582,9 +622,9 @@ def write_approval_ledger(result: dict, output_dir: str | Path, run_label: str =
     ]
     
     manifest = {
-        "approval_ledger_manifest_version": "0.9.0",
+        "approval_ledger_manifest_version": "1.0.0",
         "run_id": run_id,
-        "runtime_version": "0.9.0",
+        "runtime_version": "1.0.0",
         "files_written": files_written,
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -597,6 +637,71 @@ def write_approval_ledger(result: dict, output_dir: str | Path, run_label: str =
     return {
         "run_id": run_id,
         "approval_ledger_dir": str(record_dir),
+        "files_written": files_written
+    }
+
+
+def attach_release_lock(result: dict) -> dict:
+    bundle = create_release_lock_bundle()
+    result["release_lock_bundle"] = bundle
+    result["stable_release_manifest"] = bundle["stable_release_manifest"]
+    result["stable_release_verification"] = bundle["stable_release_verification"]
+    result["stable_runtime_contract"] = bundle["stable_runtime_contract"]
+    result["stable_capability_inventory"] = bundle["stable_capability_inventory"]
+    result["stable_artifact_contract"] = bundle["stable_artifact_contract"]
+    result["stable_adapter_boundary_contract"] = bundle["stable_adapter_boundary_contract"]
+    result["stable_safety_doctrine_lock"] = bundle["stable_safety_doctrine_lock"]
+    result["stable_approval_flow_lock"] = bundle["stable_approval_flow_lock"]
+    result["known_limitations"] = bundle["known_limitations"]
+    result["next_phase_handoff"] = bundle["next_phase_handoff"]
+    result["release_readiness_summary"] = bundle["release_readiness_summary"]
+    return result
+
+def write_release_lock(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
+    if "release_lock_bundle" not in result:
+        raise ValueError("Missing release_lock_bundle in result")
+        
+    run_id = generate_run_id(result.get("command", "empty"), run_label)
+    record_dir = Path(output_dir) / run_id
+    record_dir.mkdir(parents=True, exist_ok=True)
+    
+    payloads = {
+        "release_lock_bundle.json": result["release_lock_bundle"],
+        "stable_release_manifest.json": result["stable_release_manifest"],
+        "stable_release_verification.json": result["stable_release_verification"],
+        "stable_runtime_contract.json": result["stable_runtime_contract"],
+        "stable_capability_inventory.json": result["stable_capability_inventory"],
+        "stable_artifact_contract.json": result["stable_artifact_contract"],
+        "stable_adapter_boundary_contract.json": result["stable_adapter_boundary_contract"],
+        "stable_safety_doctrine_lock.json": result["stable_safety_doctrine_lock"],
+        "stable_approval_flow_lock.json": result["stable_approval_flow_lock"],
+        "known_limitations.json": result["known_limitations"],
+        "next_phase_handoff.json": result["next_phase_handoff"],
+        "release_readiness_summary.json": result["release_readiness_summary"]
+    }
+    
+    files_written = list(payloads.keys())
+    for filename, payload in payloads.items():
+        _write_json(record_dir / filename, payload)
+        
+    manifest = {
+        "release_lock_manifest_version": "1.0.0",
+        "run_id": run_id,
+        "runtime_version": "1.0.0",
+        "files_written": files_written + ["release_lock_manifest.json"],
+        "baseline_preserved": True,
+        "external_actions_taken": False,
+        "live_worker_agents_activated": False,
+        "execution_authorized": False,
+        "release_status": "STABLE_LOCKED",
+        "note": "Station Chief Runtime v1.0.0 stable release lock does not execute repo patches by itself."
+    }
+    _write_json(record_dir / "release_lock_manifest.json", manifest)
+    files_written.append("release_lock_manifest.json")
+    
+    return {
+        "run_id": run_id,
+        "release_lock_dir": str(record_dir),
         "files_written": files_written
     }
 
@@ -682,11 +787,23 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "duplicate_approval_signals": result.get("duplicate_approval_signals"),
         "approval_ledger_lookup": result.get("approval_ledger_lookup"),
         "approval_record_comparison": result.get("approval_record_comparison"),
+        "release_lock_bundle": result.get("release_lock_bundle"),
+        "stable_release_manifest": result.get("stable_release_manifest"),
+        "stable_release_verification": result.get("stable_release_verification"),
+        "stable_runtime_contract": result.get("stable_runtime_contract"),
+        "stable_capability_inventory": result.get("stable_capability_inventory"),
+        "stable_artifact_contract": result.get("stable_artifact_contract"),
+        "stable_adapter_boundary_contract": result.get("stable_adapter_boundary_contract"),
+        "stable_safety_doctrine_lock": result.get("stable_safety_doctrine_lock"),
+        "stable_approval_flow_lock": result.get("stable_approval_flow_lock"),
+        "known_limitations": result.get("known_limitations"),
+        "next_phase_handoff": result.get("next_phase_handoff"),
+        "release_readiness_summary": result.get("release_readiness_summary"),
         "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v0_9_artifacts",
+            "artifact_type": "station_chief_runtime_v1_0_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -721,6 +838,18 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "duplicate_approval_signals.json",
                 "approval_ledger_lookup.json",
                 "approval_record_comparison.json",
+                "release_lock_bundle.json",
+                "stable_release_manifest.json",
+                "stable_release_verification.json",
+                "stable_runtime_contract.json",
+                "stable_capability_inventory.json",
+                "stable_artifact_contract.json",
+                "stable_adapter_boundary_contract.json",
+                "stable_safety_doctrine_lock.json",
+                "stable_approval_flow_lock.json",
+                "known_limitations.json",
+                "next_phase_handoff.json",
+                "release_readiness_summary.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -751,8 +880,20 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "signed_approval_comparison": True,
             "approval_history_lookup": True,
             "approval_duplicate_detection": True,
+            "stable_release_locked": True,
+            "stable_runtime_contract": True,
+            "stable_release_manifest": True,
+            "stable_capability_inventory": True,
+            "stable_artifact_contract": True,
+            "stable_adapter_boundary_contract": True,
+            "stable_safety_doctrine_lock": True,
+            "stable_approval_flow_lock": True,
+            "stable_known_limitations_record": True,
+            "stable_next_phase_handoff": True,
+            "stable_release_readiness_summary": True,
             "signed_approval_record_does_not_execute_patch": True,
             "approval_ledger_does_not_execute_patch": True,
+            "release_lock_does_not_execute_patch": True,
         },
     }
 
@@ -811,6 +952,18 @@ def write_runtime_artifacts(
         "duplicate_approval_signals.json": artifacts.get("duplicate_approval_signals"),
         "approval_ledger_lookup.json": artifacts.get("approval_ledger_lookup"),
         "approval_record_comparison.json": artifacts.get("approval_record_comparison"),
+        "release_lock_bundle.json": artifacts.get("release_lock_bundle"),
+        "stable_release_manifest.json": artifacts.get("stable_release_manifest"),
+        "stable_release_verification.json": artifacts.get("stable_release_verification"),
+        "stable_runtime_contract.json": artifacts.get("stable_runtime_contract"),
+        "stable_capability_inventory.json": artifacts.get("stable_capability_inventory"),
+        "stable_artifact_contract.json": artifacts.get("stable_artifact_contract"),
+        "stable_adapter_boundary_contract.json": artifacts.get("stable_adapter_boundary_contract"),
+        "stable_safety_doctrine_lock.json": artifacts.get("stable_safety_doctrine_lock"),
+        "stable_approval_flow_lock.json": artifacts.get("stable_approval_flow_lock"),
+        "known_limitations.json": artifacts.get("known_limitations"),
+        "next_phase_handoff.json": artifacts.get("next_phase_handoff"),
+        "release_readiness_summary.json": artifacts.get("release_readiness_summary"),
         "runtime_index_entry.json": artifacts["runtime_index_entry"],
         "manifest.json": artifacts["manifest"],
         "full_result.json": result,
@@ -1021,7 +1174,7 @@ def write_dry_run_bundle(
         "execution_readiness_score.json": result.get("execution_readiness_score"),
         "repo_patch_preview.diff": dry_run_bundle.get("repo_patch_preview") or "",
         "dry_run_manifest.json": {
-            "dry_run_bundle_version": "0.9.0",
+            "dry_run_bundle_version": "1.0.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -1077,7 +1230,7 @@ def write_approval_handoff(
         "dry_run_bundle_comparison.json": packet.get("comparison"),
         "patch_preview.diff": (packet.get("dry_run_bundle") or {}).get("repo_patch_preview") or "",
         "approval_handoff_manifest.json": {
-            "approval_handoff_version": "0.9.0",
+            "approval_handoff_version": "1.0.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -1172,7 +1325,7 @@ def write_approval_record(
 
     files_written = []
     approval_record_manifest = {
-        "approval_record_manifest_version": "0.9.0",
+        "approval_record_manifest_version": "1.0.0",
         "run_id": run_id,
         "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
         "files_written": [
@@ -1256,6 +1409,10 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--execute-repo-patch", action="store_true", help="Execute a scoped repo patch if the gate approves")
     parser.add_argument("--execution-profile", type=str, help="Requested execution profile for dry-run behavior")
     parser.add_argument("--dry-run-bundle", action="store_true", help="Attach a dry-run bundle to the printed result")
+    parser.add_argument("--release-lock", action="store_true", help="Attach v1.0.0 stable release lock artifacts")
+    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v1.0.0 release manifest as JSON")
+    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v1.0.0 stable release lock artifacts to DIR")
+    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v1.0.0 stable release manifest JSON file")
     return parser
 
 
@@ -1296,6 +1453,17 @@ def main() -> None:
         if "approval_ledger_index" in ledger:
             ledger = ledger["approval_ledger_index"]
         print(json.dumps(verify_approval_ledger_index(ledger), indent=2, ensure_ascii=False))
+        return
+
+    if args.verify_release_manifest:
+        manifest = load_json_file(args.verify_release_manifest)
+        if "stable_release_manifest" in manifest:
+            manifest = manifest["stable_release_manifest"]
+        print(json.dumps(verify_stable_release_manifest(manifest), indent=2, ensure_ascii=False))
+        return
+
+    if args.stable_release_manifest:
+        print(json.dumps(create_stable_release_manifest(), indent=2, ensure_ascii=False))
         return
 
     if args.approval_review_ui_schema:
@@ -1436,6 +1604,9 @@ def main() -> None:
             lookup_digest=args.lookup_approval_digest
         )
 
+    if args.release_lock or args.write_release_lock:
+        result = attach_release_lock(result)
+
     artifact_summary = None
     if args.write_artifacts:
         artifact_summary = write_runtime_artifacts(
@@ -1493,6 +1664,11 @@ def main() -> None:
         ledger_summary = write_approval_ledger(result, args.write_approval_ledger, run_label=args.run_label)
         result = dict(result)
         result["approval_ledger_write_summary"] = ledger_summary
+
+    if args.write_release_lock:
+        release_lock_summary = write_release_lock(result, args.write_release_lock, run_label=args.run_label)
+        result = dict(result)
+        result["release_lock_write_summary"] = release_lock_summary
 
     if args.write_output:
         Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")

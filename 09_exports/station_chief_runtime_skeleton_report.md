@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v0.9.0. Locked 175-family baseline preserved.
+Station Chief Runtime upgraded to v1.0.0. Locked 175-family baseline preserved. Stable runtime foundation locked.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -9,7 +9,7 @@ Project owner, system architect, and operating-doctrine author: Devin O’Rourke
 This attribution applies to the Agent Command Center Station Chief runtime skeleton. The locked 175-family baseline remains preserved.
 
 ## Purpose
-This report documents the first runnable Station Chief runtime skeleton after the Devinization stack lock and its v0.9.0 enhancement for approval ledger indexing and signed approval comparison.
+This report documents the first stable Station Chief Runtime foundation lock after the Devinization stack lock and the v0.1 through v0.9 controlled runtime buildout.
 
 ## Files Created / Modified
 10_runtime/station_chief_runtime.py
@@ -21,6 +21,7 @@ This report documents the first runnable Station Chief runtime skeleton after th
 10_runtime/station_chief_approval_handoff.py
 10_runtime/station_chief_approval_records.py
 10_runtime/station_chief_approval_ledger.py
+10_runtime/station_chief_release_lock.py
 09_exports/station_chief_runtime_skeleton_report.md
 09_exports/station_chief_runtime_v0_2_report.md
 09_exports/station_chief_runtime_v0_3_report.md
@@ -30,6 +31,7 @@ This report documents the first runnable Station Chief runtime skeleton after th
 09_exports/station_chief_runtime_v0_7_report.md
 09_exports/station_chief_runtime_v0_8_report.md
 09_exports/station_chief_runtime_v0_9_report.md
+09_exports/station_chief_runtime_v1_0_report.md
 scripts/validate_station_chief_runtime_skeleton.py
 scripts/validate_station_chief_runtime_v0_2.py
 scripts/validate_station_chief_runtime_v0_3.py
@@ -39,6 +41,7 @@ scripts/validate_station_chief_runtime_v0_6.py
 scripts/validate_station_chief_runtime_v0_7.py
 scripts/validate_station_chief_runtime_v0_8.py
 scripts/validate_station_chief_runtime_v0_9.py
+scripts/validate_station_chief_runtime_v1_0.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -78,6 +81,15 @@ scripts/validate_station_chief_runtime_v0_9.py
 - signed approval comparison
 - approval history lookup
 - duplicate approval detection
+- stable runtime contract
+- stable release manifest
+- stable capability inventory
+- stable artifact contract
+- stable adapter boundary contract
+- stable safety doctrine lock
+- stable approval flow lock
+- stable known limitations record
+- stable next-phase handoff
 - deterministic fixture tests
 - proof-backed JSON output
 - baseline preservation
@@ -110,6 +122,7 @@ Tier 3 — Active Operation
 Tier 4 — Audit / Archive
 
 ## Required Validators
+python3 scripts/validate_station_chief_runtime_v1_0.py
 python3 scripts/validate_station_chief_runtime_v0_9.py
 python3 scripts/validate_station_chief_runtime_v0_8.py
 python3 scripts/validate_station_chief_runtime_v0_7.py
@@ -137,9 +150,10 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not execute uncontrolled repo work orders
 - Does not treat signed approval records as automatic execution permission
 - Does not treat approval ledgers as automatic execution permission
+- Does not treat the v1.0 release lock as automatic execution permission
 - Does not build UI yet
 - Does not connect live APIs yet
 - Does not authorize uncontrolled live execution
 
 ## Next Recommended Build Step
-Next recommended build step: complete Station Chief Runtime v1.0 stable release lock.
+Next recommended build step: begin controlled execution engine and worker hiring layer.
