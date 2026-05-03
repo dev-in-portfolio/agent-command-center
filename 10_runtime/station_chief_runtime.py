@@ -89,6 +89,11 @@ from station_chief_tool_permission_binding import (
     create_tool_permission_binding_bundle,
     create_tool_permission_binding_schema,
 )
+from station_chief_live_execution_telemetry_abort import (
+    LIVE_EXECUTION_TELEMETRY_ABORT_APPROVAL_TOKEN,
+    create_live_execution_telemetry_abort_bundle,
+    create_live_execution_telemetry_abort_schema,
+)
 from station_chief_execution_profiles import (
     create_dry_run_bundle,
     create_execution_readiness_score,
@@ -98,7 +103,7 @@ from station_chief_execution_profiles import (
     select_execution_profile,
 )
 
-STATION_CHIEF_RUNTIME_VERSION = "2.1.0"
+STATION_CHIEF_RUNTIME_VERSION = "2.2.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -304,7 +309,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}:{run_label}:{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v2-1-{normalized}-{digest[:12]}"
+    return f"station-chief-v2-2-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -415,7 +420,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "2.1.0",
+            "registry_version": "2.2.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -432,7 +437,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "2.1.0"
+    registry["registry_version"] = "2.2.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -441,7 +446,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "2.1.0",
+        "index_version": "2.2.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -495,7 +500,7 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
     adapter_result = run_noop_adapter(execution_plan)
     return {
         "station_chief_runtime_version": STATION_CHIEF_RUNTIME_VERSION,
-        "runtime_status": "single_worker_tool_permission_binding",
+        "runtime_status": "live_execution_telemetry_abort_controls",
         "release_status": "STABLE_LOCKED",
         "run_capabilities": {
             "persistent_run_logs": True,
@@ -630,6 +635,19 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "post_run_audit_proof": True,
             "worker_execution_ledger": True,
             "single_worker_tool_permission_binding_readiness_bridge": True,
+            "live_execution_telemetry_abort_schema": True,
+            "telemetry_event_schema": True,
+            "execution_state_model": True,
+            "telemetry_approval_gate": True,
+            "heartbeat_stub": True,
+            "abort_signal_contract": True,
+            "timeout_contract": True,
+            "partial_result_capture": True,
+            "failed_run_quarantine_contract": True,
+            "post_abort_audit_proof": True,
+            "telemetry_ledger": True,
+            "telemetry_readiness_summary": True,
+            "post_run_audit_expansion_readiness_bridge": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -842,9 +860,16 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "tool_permission_binding_does_not_call_external_apis": True,
             "tool_permission_binding_does_not_run_shell_commands": True,
             "tool_permission_binding_does_not_modify_repo_files": True,
-            "live_execution_telemetry_abort_controls_not_yet_active": True,
+            "live_execution_telemetry_abort_available": True,
+            "single_worker_telemetry_abort_controls_only": True,
+            "telemetry_abort_controls_require_token": True,
+            "telemetry_abort_does_not_send_external_telemetry": True,
+            "telemetry_abort_does_not_terminate_processes": True,
+            "telemetry_abort_does_not_run_shell_commands": True,
+            "telemetry_abort_does_not_modify_repo_files": True,
+            "post_run_audit_proof_expansion_not_yet_active": True,
         },
-        "next_step": "Next step: build live execution telemetry and abort controls.",
+        "next_step": "Next step: build post-run audit proof expansion.",
     }
 
 
@@ -899,9 +924,9 @@ def write_approval_ledger(result: dict, output_dir: str | Path, run_label: str =
     ]
     
     manifest = {
-        "approval_ledger_manifest_version": "2.1.0",
+        "approval_ledger_manifest_version": "2.2.0",
         "run_id": run_id,
-        "runtime_version": "2.1.0",
+        "runtime_version": "2.2.0",
         "files_written": files_written,
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -970,9 +995,9 @@ def write_controlled_execution(result: dict, output_dir: str | Path, run_label: 
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "controlled_execution_manifest_version": "2.1.0",
+        "controlled_execution_manifest_version": "2.2.0",
         "run_id": run_id,
-        "runtime_version": "2.1.0",
+        "runtime_version": "2.2.0",
         "files_written": files_written + ["controlled_execution_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -980,7 +1005,7 @@ def write_controlled_execution(result: dict, output_dir: str | Path, run_label: 
         "real_worker_hiring_performed": False,
         "execution_authorized": False,
         "status": "PROFILE_EXPANSION_ONLY",
-        "note": "Controlled execution v2.1.0 expands execution profiles only. It does not execute live actions or hire workers."
+        "note": "Controlled execution v2.2.0 expands execution profiles only. It does not execute live actions or hire workers."
     }
     _write_json(record_dir / "controlled_execution_manifest.json", manifest)
     files_written.append("controlled_execution_manifest.json")
@@ -1035,9 +1060,9 @@ def write_work_order_executor(result: dict, output_dir: str | Path, run_label: s
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "work_order_executor_manifest_version": "2.1.0",
+        "work_order_executor_manifest_version": "2.2.0",
         "run_id": run_id,
-        "runtime_version": "2.1.0",
+        "runtime_version": "2.2.0",
         "files_written": files_written + ["work_order_executor_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1046,7 +1071,7 @@ def write_work_order_executor(result: dict, output_dir: str | Path, run_label: s
         "repo_files_modified": False,
         "execution_authorized": False,
         "status": "SKELETON_DRY_RUN_ONLY",
-        "note": "Work Order Executor v2.1.0 creates dry-run skeleton artifacts only. It does not execute live actions, modify repo files, hire workers, or animate the workforce."
+        "note": "Work Order Executor v2.2.0 creates dry-run skeleton artifacts only. It does not execute live actions, modify repo files, hire workers, or animate the workforce."
     }
     _write_json(record_dir / "work_order_executor_manifest.json", manifest)
     files_written.append("work_order_executor_manifest.json")
@@ -1101,9 +1126,9 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "worker_hiring_registry_manifest_version": "2.1.0",
+        "worker_hiring_registry_manifest_version": "2.2.0",
         "run_id": run_id,
-        "runtime_version": "2.1.0",
+        "runtime_version": "2.2.0",
         "files_written": files_written + ["worker_hiring_registry_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1111,7 +1136,7 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
         "real_worker_hiring_performed": False,
         "execution_authorized": False,
         "status": "REGISTRY_PREVIEW_ONLY",
-        "note": "Worker Hiring Registry v2.1.0 creates preview registry artifacts only. It does not hire workers, animate the workforce, execute live actions, or modify repo files."
+        "note": "Worker Hiring Registry v2.2.0 creates preview registry artifacts only. It does not hire workers, animate the workforce, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "worker_hiring_registry_manifest.json", manifest)
     files_written.append("worker_hiring_registry_manifest.json")
@@ -1170,9 +1195,9 @@ def write_department_routing(result: dict, output_dir: str | Path, run_label: st
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "department_routing_manifest_version": "2.1.0",
+        "department_routing_manifest_version": "2.2.0",
         "run_id": run_id,
-        "runtime_version": "2.1.0",
+        "runtime_version": "2.2.0",
         "files_written": files_written + ["department_routing_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1181,7 +1206,7 @@ def write_department_routing(result: dict, output_dir: str | Path, run_label: st
         "live_worker_routing_performed": False,
         "execution_authorized": False,
         "status": "ROUTING_PREVIEW_ONLY",
-        "note": "Department Routing Runtime v2.1.0 creates preview routing artifacts only. It does not route live workers, hire workers, animate the workforce, execute live actions, or modify repo files."
+        "note": "Department Routing Runtime v2.2.0 creates preview routing artifacts only. It does not route live workers, hire workers, animate the workforce, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "department_routing_manifest.json", manifest)
     files_written.append("department_routing_manifest.json")
@@ -1242,9 +1267,9 @@ def write_multi_agent_orchestration(result: dict, output_dir: str | Path, run_la
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "multi_agent_orchestration_manifest_version": "2.1.0",
+        "multi_agent_orchestration_manifest_version": "2.2.0",
         "run_id": run_id,
-        "runtime_version": "2.1.0",
+        "runtime_version": "2.2.0",
         "files_written": files_written + ["multi_agent_orchestration_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1254,7 +1279,7 @@ def write_multi_agent_orchestration(result: dict, output_dir: str | Path, run_la
         "live_orchestration_performed": False,
         "execution_authorized": False,
         "status": "ORCHESTRATION_SANDBOX_ONLY",
-        "note": "Multi-Agent Orchestration Sandbox v2.1.0 creates sandbox orchestration artifacts only. It does not animate workers, hire workers, route live workers, execute live actions, perform live orchestration, or modify repo files."
+        "note": "Multi-Agent Orchestration Sandbox v2.2.0 creates sandbox orchestration artifacts only. It does not animate workers, hire workers, route live workers, execute live actions, perform live orchestration, or modify repo files."
     }
     _write_json(record_dir / "multi_agent_orchestration_manifest.json", manifest)
     files_written.append("multi_agent_orchestration_manifest.json")
@@ -1323,9 +1348,9 @@ def write_operator_console(result: dict, output_dir: str | Path, run_label: str 
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "operator_console_manifest_version": "2.1.0",
+        "operator_console_manifest_version": "2.2.0",
         "run_id": run_id,
-        "runtime_version": "2.1.0",
+        "runtime_version": "2.2.0",
         "files_written": files_written + ["operator_console_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1336,7 +1361,7 @@ def write_operator_console(result: dict, output_dir: str | Path, run_label: str 
         "live_ui_displayed": False,
         "execution_authorized": False,
         "status": "SCHEMA_ONLY",
-        "note": "UI / Operator Console Schema v2.1.0 creates schema and review artifacts only. It does not display a live UI, authorize execution, connect APIs, animate workers, hire workers, route live workers, perform live orchestration, execute live actions, or modify repo files."
+        "note": "UI / Operator Console Schema v2.2.0 creates schema and review artifacts only. It does not display a live UI, authorize execution, connect APIs, animate workers, hire workers, route live workers, perform live orchestration, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "operator_console_manifest.json", manifest)
     files_written.append("operator_console_manifest.json")
@@ -1416,9 +1441,9 @@ def write_github_patch_hardening(result: dict, output_dir: str | Path, run_label
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "github_patch_hardening_manifest_version": "2.1.0",
+        "github_patch_hardening_manifest_version": "2.2.0",
         "run_id": run_id,
-        "runtime_version": "2.1.0",
+        "runtime_version": "2.2.0",
         "files_written": files_written + ["github_patch_hardening_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1426,7 +1451,7 @@ def write_github_patch_hardening(result: dict, output_dir: str | Path, run_label
         "github_api_called": False,
         "execution_authorized": False,
         "status": "PATCH_HARDENING_CONTRACT_ONLY",
-        "note": "GitHub Patch Application Hardening v2.1.0 creates patch hardening contracts and review artifacts only. It does not apply patches, call GitHub APIs, push commits, authorize execution, execute live actions, or modify repo files."
+        "note": "GitHub Patch Application Hardening v2.2.0 creates patch hardening contracts and review artifacts only. It does not apply patches, call GitHub APIs, push commits, authorize execution, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "github_patch_hardening_manifest.json", manifest)
     files_written.append("github_patch_hardening_manifest.json")
@@ -1483,9 +1508,9 @@ def write_deployment_packaging(result: dict, output_dir: str | Path, run_label: 
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "deployment_packaging_manifest_version": "2.1.0",
+        "deployment_packaging_manifest_version": "2.2.0",
         "run_id": run_id,
-        "runtime_version": "2.1.0",
+        "runtime_version": "2.2.0",
         "files_written": files_written + ["deployment_packaging_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1494,7 +1519,7 @@ def write_deployment_packaging(result: dict, output_dir: str | Path, run_label: 
         "repo_patch_applied": False,
         "execution_authorized": False,
         "status": "PACKAGING_BRIDGE_ONLY",
-        "note": "Deployment / Portfolio Packaging Bridge v2.1.0 creates packaging, portfolio handoff, release-note, and readiness artifacts only. It does not execute deployment, call hosting APIs, mutate external services, authorize execution, execute live actions, or modify repo files."
+        "note": "Deployment / Portfolio Packaging Bridge v2.2.0 creates packaging, portfolio handoff, release-note, and readiness artifacts only. It does not execute deployment, call hosting APIs, mutate external services, authorize execution, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "deployment_packaging_manifest.json", manifest)
     files_written.append("deployment_packaging_manifest.json")
@@ -1569,9 +1594,9 @@ def write_controlled_worker_execution(result: dict, output_dir: str | Path, run_
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "controlled_worker_execution_manifest_version": "2.1.0",
+        "controlled_worker_execution_manifest_version": "2.2.0",
         "run_id": run_id,
-        "runtime_version": "2.1.0",
+        "runtime_version": "2.2.0",
         "files_written": files_written + ["controlled_worker_execution_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1586,7 +1611,7 @@ def write_controlled_worker_execution(result: dict, output_dir: str | Path, run_
         "deployment_performed": False,
         "execution_authorized": False,
         "status": "SINGLE_WORKER_SANDBOX_EXECUTION_ONLY",
-        "note": "First Controlled Worker-Agent Execution v2.1.0 allows only a single deterministic local sandbox worker task when explicitly approved. It does not call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration."
+        "note": "First Controlled Worker-Agent Execution v2.2.0 allows only a single deterministic local sandbox worker task when explicitly approved. It does not call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration."
     }
     _write_json(record_dir / "controlled_worker_execution_manifest.json", manifest)
     files_written.append("controlled_worker_execution_manifest.json")
@@ -1672,9 +1697,9 @@ def write_tool_permission_binding(result: dict, output_dir: str | Path, run_labe
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "tool_permission_binding_manifest_version": "2.1.0",
+        "tool_permission_binding_manifest_version": "2.2.0",
         "run_id": run_id,
-        "runtime_version": "2.1.0",
+        "runtime_version": "2.2.0",
         "files_written": files_written + ["tool_permission_binding_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1689,7 +1714,7 @@ def write_tool_permission_binding(result: dict, output_dir: str | Path, run_labe
         "deployment_performed": False,
         "execution_authorized": False,
         "status": "SINGLE_WORKER_TOOL_PERMISSION_BINDING_ONLY",
-        "note": "Single-Worker Tool Permission Binding v2.1.0 creates per-tool permission registry, token binding, dry-run invocation contracts, output validation, failure handling, revocation, audit proof, and ledger artifacts only. It does not invoke external tools, call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration."
+        "note": "Single-Worker Tool Permission Binding v2.2.0 creates per-tool permission registry, token binding, dry-run invocation contracts, output validation, failure handling, revocation, audit proof, and ledger artifacts only. It does not invoke external tools, call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration."
     }
     _write_json(record_dir / "tool_permission_binding_manifest.json", manifest)
     files_written.append("tool_permission_binding_manifest.json")
@@ -1697,6 +1722,108 @@ def write_tool_permission_binding(result: dict, output_dir: str | Path, run_labe
     return {
         "run_id": run_id,
         "tool_permission_binding_dir": str(record_dir),
+        "files_written": files_written
+    }
+
+
+def attach_live_execution_telemetry_abort(
+    result: dict,
+    worker_id: str | None = None,
+    confirmation_token: str | None = None,
+    abort_reason: str | None = None,
+    failure_reason: str | None = None,
+    timeout_limit_steps: int = 5,
+    observed_steps: int = 0,
+    partial_payload: dict | None = None
+) -> dict:
+    if result.get("tool_permission_binding_bundle") is None:
+        result = attach_tool_permission_binding(result)
+        
+    bundle = create_live_execution_telemetry_abort_bundle(
+        result,
+        worker_id=worker_id,
+        confirmation_token=confirmation_token,
+        abort_reason=abort_reason,
+        failure_reason=failure_reason,
+        timeout_limit_steps=timeout_limit_steps,
+        observed_steps=observed_steps,
+        partial_payload=partial_payload
+    )
+    
+    result["live_execution_telemetry_abort_bundle"] = bundle
+    result["live_execution_telemetry_abort_schema"] = bundle["live_execution_telemetry_abort_schema"]
+    result["telemetry_event_schema"] = bundle["telemetry_event_schema"]
+    result["execution_state_model"] = bundle["execution_state_model"]
+    result["telemetry_approval_gate"] = bundle["telemetry_approval_gate"]
+    result["heartbeat_stub"] = bundle["heartbeat_stub"]
+    result["abort_signal_contract"] = bundle["abort_signal_contract"]
+    result["timeout_contract"] = bundle["timeout_contract"]
+    result["partial_result_capture"] = bundle["partial_result_capture"]
+    result["failed_run_quarantine_contract"] = bundle["failed_run_quarantine_contract"]
+    result["post_abort_audit_proof"] = bundle["post_abort_audit_proof"]
+    result["telemetry_ledger"] = bundle["telemetry_ledger"]
+    result["telemetry_readiness_summary"] = bundle["telemetry_readiness_summary"]
+    result["post_run_audit_expansion_readiness_bridge"] = bundle["post_run_audit_expansion_readiness_bridge"]
+    
+    return result
+
+def write_live_execution_telemetry_abort(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
+    if "live_execution_telemetry_abort_bundle" not in result:
+        raise ValueError("Missing live_execution_telemetry_abort_bundle in result")
+        
+    run_id = generate_run_id(result.get("command", "empty"), run_label)
+    record_dir = Path(output_dir) / run_id
+    record_dir.mkdir(parents=True, exist_ok=True)
+    
+    payloads = {
+        "live_execution_telemetry_abort_bundle.json": result["live_execution_telemetry_abort_bundle"],
+        "live_execution_telemetry_abort_schema.json": result["live_execution_telemetry_abort_schema"],
+        "telemetry_event_schema.json": result["telemetry_event_schema"],
+        "execution_state_model.json": result["execution_state_model"],
+        "telemetry_approval_gate.json": result["telemetry_approval_gate"],
+        "heartbeat_stub.json": result["heartbeat_stub"],
+        "abort_signal_contract.json": result["abort_signal_contract"],
+        "timeout_contract.json": result["timeout_contract"],
+        "partial_result_capture.json": result["partial_result_capture"],
+        "failed_run_quarantine_contract.json": result["failed_run_quarantine_contract"],
+        "post_abort_audit_proof.json": result["post_abort_audit_proof"],
+        "telemetry_ledger.json": result["telemetry_ledger"],
+        "telemetry_readiness_summary.json": result["telemetry_readiness_summary"],
+        "post_run_audit_expansion_readiness_bridge.json": result["post_run_audit_expansion_readiness_bridge"]
+    }
+    
+    files_written = list(payloads.keys())
+    for filename, payload in payloads.items():
+        _write_json(record_dir / filename, payload)
+        
+    manifest = {
+        "live_execution_telemetry_abort_manifest_version": "2.2.0",
+        "run_id": run_id,
+        "runtime_version": "2.2.0",
+        "files_written": files_written + ["live_execution_telemetry_abort_manifest.json"],
+        "baseline_preserved": True,
+        "external_actions_taken": False,
+        "telemetry_events_emitted": False,
+        "external_telemetry_sent": False,
+        "abort_signal_executed": False,
+        "processes_terminated": False,
+        "repo_files_modified": False,
+        "broad_worker_activation_performed": False,
+        "real_worker_hiring_performed": False,
+        "live_worker_routing_performed": False,
+        "live_orchestration_performed": False,
+        "hosting_api_called": False,
+        "deployment_performed": False,
+        "execution_authorized": False,
+        "status": "SINGLE_WORKER_TELEMETRY_ABORT_CONTROLS_ONLY",
+        "note": "Live Execution Telemetry and Abort Controls v2.2.0 creates local telemetry, abort, timeout, partial-result, quarantine, post-abort audit, and ledger artifacts only. It does not send external telemetry, terminate processes, call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration."
+    }
+    _write_json(record_dir / "live_execution_telemetry_abort_manifest.json", manifest)
+    files_written.append("live_execution_telemetry_abort_manifest.json")
+    
+    return {
+        "run_id": run_id,
+        "live_execution_telemetry_abort_dir": str(record_dir),
         "files_written": files_written
     }
 
@@ -1897,11 +2024,25 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "controlled_worker_execution_result": result.get("controlled_worker_execution_result"),
         "post_run_audit_proof": result.get("post_run_audit_proof"),
         "worker_execution_ledger": result.get("worker_execution_ledger"),
+        "live_execution_telemetry_abort_bundle": result.get("live_execution_telemetry_abort_bundle"),
+        "live_execution_telemetry_abort_schema": result.get("live_execution_telemetry_abort_schema"),
+        "telemetry_event_schema": result.get("telemetry_event_schema"),
+        "execution_state_model": result.get("execution_state_model"),
+        "telemetry_approval_gate": result.get("telemetry_approval_gate"),
+        "heartbeat_stub": result.get("heartbeat_stub"),
+        "abort_signal_contract": result.get("abort_signal_contract"),
+        "timeout_contract": result.get("timeout_contract"),
+        "partial_result_capture": result.get("partial_result_capture"),
+        "failed_run_quarantine_contract": result.get("failed_run_quarantine_contract"),
+        "post_abort_audit_proof": result.get("post_abort_audit_proof"),
+        "telemetry_ledger": result.get("telemetry_ledger"),
+        "telemetry_readiness_summary": result.get("telemetry_readiness_summary"),
+        "post_run_audit_expansion_readiness_bridge": result.get("post_run_audit_expansion_readiness_bridge"),
         "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v2_1_artifacts",
+            "artifact_type": "station_chief_runtime_v2_2_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -2062,6 +2203,20 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "tool_permission_ledger.json",
                 "tool_permission_readiness_summary.json",
                 "live_execution_telemetry_abort_readiness_bridge.json",
+                "live_execution_telemetry_abort_bundle.json",
+                "live_execution_telemetry_abort_schema.json",
+                "telemetry_event_schema.json",
+                "execution_state_model.json",
+                "telemetry_approval_gate.json",
+                "heartbeat_stub.json",
+                "abort_signal_contract.json",
+                "timeout_contract.json",
+                "partial_result_capture.json",
+                "failed_run_quarantine_contract.json",
+                "post_abort_audit_proof.json",
+                "telemetry_ledger.json",
+                "telemetry_readiness_summary.json",
+                "post_run_audit_expansion_readiness_bridge.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -2201,6 +2356,27 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "controlled_worker_execution_does_not_run_shell_commands": True,
             "controlled_worker_execution_does_not_modify_repo_files": True,
             "controlled_worker_execution_does_not_animate_broad_workforce": True,
+            "live_execution_telemetry_abort_available": True,
+            "single_worker_telemetry_abort_controls_only": True,
+            "telemetry_abort_controls_require_token": True,
+            "telemetry_abort_does_not_send_external_telemetry": True,
+            "telemetry_abort_does_not_terminate_processes": True,
+            "telemetry_abort_does_not_run_shell_commands": True,
+            "telemetry_abort_does_not_modify_repo_files": True,
+            "post_run_audit_proof_expansion_not_yet_active": True,
+            "live_execution_telemetry_abort_schema": True,
+            "telemetry_event_schema": True,
+            "execution_state_model": True,
+            "telemetry_approval_gate": True,
+            "heartbeat_stub": True,
+            "abort_signal_contract": True,
+            "timeout_contract": True,
+            "partial_result_capture": True,
+            "failed_run_quarantine_contract": True,
+            "post_abort_audit_proof": True,
+            "telemetry_ledger": True,
+            "telemetry_readiness_summary": True,
+            "post_run_audit_expansion_readiness_bridge": True,
             "tool_permission_binding_schema": True,
             "per_tool_permission_registry": True,
             "tool_permission_request_validation": True,
@@ -2420,6 +2596,20 @@ def write_runtime_artifacts(
         "post_run_audit_proof.json": artifacts.get("post_run_audit_proof"),
         "worker_execution_ledger.json": artifacts.get("worker_execution_ledger"),
         "live_execution_telemetry_abort_readiness_bridge.json": artifacts.get("live_execution_telemetry_abort_readiness_bridge"),
+        "live_execution_telemetry_abort_bundle.json": artifacts.get("live_execution_telemetry_abort_bundle"),
+        "live_execution_telemetry_abort_schema.json": artifacts.get("live_execution_telemetry_abort_schema"),
+        "telemetry_event_schema.json": artifacts.get("telemetry_event_schema"),
+        "execution_state_model.json": artifacts.get("execution_state_model"),
+        "telemetry_approval_gate.json": artifacts.get("telemetry_approval_gate"),
+        "heartbeat_stub.json": artifacts.get("heartbeat_stub"),
+        "abort_signal_contract.json": artifacts.get("abort_signal_contract"),
+        "timeout_contract.json": artifacts.get("timeout_contract"),
+        "partial_result_capture.json": artifacts.get("partial_result_capture"),
+        "failed_run_quarantine_contract.json": artifacts.get("failed_run_quarantine_contract"),
+        "post_abort_audit_proof.json": artifacts.get("post_abort_audit_proof"),
+        "telemetry_ledger.json": artifacts.get("telemetry_ledger"),
+        "telemetry_readiness_summary.json": artifacts.get("telemetry_readiness_summary"),
+        "post_run_audit_expansion_readiness_bridge.json": artifacts.get("post_run_audit_expansion_readiness_bridge"),
         "tool_permission_binding_bundle.json": artifacts.get("tool_permission_binding_bundle"),
         "tool_permission_binding_schema.json": artifacts.get("tool_permission_binding_schema"),
         "per_tool_permission_registry.json": artifacts.get("per_tool_permission_registry"),
@@ -2643,7 +2833,7 @@ def write_dry_run_bundle(
         "execution_readiness_score.json": result.get("execution_readiness_score"),
         "repo_patch_preview.diff": dry_run_bundle.get("repo_patch_preview") or "",
         "dry_run_manifest.json": {
-            "dry_run_bundle_version": "2.1.0",
+            "dry_run_bundle_version": "2.2.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -2699,7 +2889,7 @@ def write_approval_handoff(
         "dry_run_bundle_comparison.json": packet.get("comparison"),
         "patch_preview.diff": (packet.get("dry_run_bundle") or {}).get("repo_patch_preview") or "",
         "approval_handoff_manifest.json": {
-            "approval_handoff_version": "2.1.0",
+            "approval_handoff_version": "2.2.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -2794,7 +2984,7 @@ def write_approval_record(
 
     files_written = []
     approval_record_manifest = {
-        "approval_record_manifest_version": "2.1.0",
+        "approval_record_manifest_version": "2.2.0",
         "run_id": run_id,
         "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
         "files_written": [
@@ -2878,10 +3068,10 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--execute-repo-patch", action="store_true", help="Execute a scoped repo patch if the gate approves")
     parser.add_argument("--execution-profile", type=str, help="Requested execution profile for dry-run behavior")
     parser.add_argument("--dry-run-bundle", action="store_true", help="Attach a dry-run bundle to the printed result")
-    parser.add_argument("--release-lock", action="store_true", help="Attach v2.1.0 stable release lock artifacts")
-    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v2.1.0 release manifest as JSON")
-    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v2.1.0 stable release lock artifacts to DIR")
-    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v2.1.0 stable release manifest JSON file")
+    parser.add_argument("--release-lock", action="store_true", help="Attach v2.2.0 stable release lock artifacts")
+    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v2.2.0 release manifest as JSON")
+    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v2.2.0 stable release lock artifacts to DIR")
+    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v2.2.0 stable release manifest JSON file")
     parser.add_argument("--list-controlled-execution-profiles", action="store_true", help="Print controlled execution profile catalog as JSON")
     parser.add_argument("--controlled-execution", action="store_true", help="Attach controlled execution bundle to the printed result")
     parser.add_argument("--controlled-execution-profile", type=str, metavar="PROFILE_ID", help="Choose a controlled execution profile")
@@ -2914,6 +3104,16 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--tool-permission-schema", action="store_true", help="Print the tool permission binding schema as JSON")
     parser.add_argument("--tool-permission-binding", action="store_true", help="Attach tool permission binding bundle to the printed result")
     parser.add_argument("--write-tool-permission-binding", metavar="DIR", help="Write tool permission binding artifacts into the provided directory")
+    parser.add_argument("--telemetry-abort-schema", action="store_true", help="Print the live telemetry and abort controls schema as JSON")
+    parser.add_argument("--live-telemetry-abort", action="store_true", help="Attach live telemetry and abort bundle to the printed result")
+    parser.add_argument("--write-live-telemetry-abort", metavar="DIR", help="Write live telemetry and abort artifacts into the provided directory")
+    parser.add_argument("--telemetry-worker-id", type=str, help="Worker ID for live telemetry")
+    parser.add_argument("--telemetry-confirm-token", type=str, help="Confirmation token for live telemetry approval")
+    parser.add_argument("--telemetry-abort-reason", type=str, help="Reason for live telemetry abort")
+    parser.add_argument("--telemetry-failure-reason", type=str, help="Reason for live telemetry failure")
+    parser.add_argument("--telemetry-timeout-limit-steps", type=int, default=5, help="Timeout limit in steps for live telemetry")
+    parser.add_argument("--telemetry-observed-steps", type=int, default=0, help="Observed steps for live telemetry")
+    parser.add_argument("--telemetry-partial-payload-json", type=str, help="JSON payload for partial result capture")
     parser.add_argument("--tool-permission-worker-id", type=str, help="Worker ID for tool permission binding")
     parser.add_argument("--tool-permission-request", action="append", default=[], help="Request a tool permission for the sandbox worker")
     parser.add_argument("--tool-permission-token", action="append", default=[], help="Provide a tool-specific approval token (PERMISSION_ID=TOKEN)")
@@ -3005,6 +3205,10 @@ def main() -> None:
 
     if args.tool_permission_schema:
         print(json.dumps(create_tool_permission_binding_schema(), indent=2, ensure_ascii=False))
+        return
+
+    if args.telemetry_abort_schema:
+        print(json.dumps(create_live_execution_telemetry_abort_schema(), indent=2, ensure_ascii=False))
         return
 
     if args.list_controlled_execution_profiles:
@@ -3239,6 +3443,25 @@ def main() -> None:
             tool_outputs=tool_outputs
         )
 
+    if args.live_telemetry_abort or args.write_live_telemetry_abort:
+        telemetry_payload = None
+        if args.telemetry_partial_payload_json:
+            try:
+                telemetry_payload = json.loads(args.telemetry_partial_payload_json)
+            except json.JSONDecodeError:
+                pass
+                
+        result = attach_live_execution_telemetry_abort(
+            result,
+            worker_id=args.telemetry_worker_id,
+            confirmation_token=args.telemetry_confirm_token,
+            abort_reason=args.telemetry_abort_reason,
+            failure_reason=args.telemetry_failure_reason,
+            timeout_limit_steps=args.telemetry_timeout_limit_steps,
+            observed_steps=args.telemetry_observed_steps,
+            partial_payload=telemetry_payload
+        )
+
     artifact_summary = None
     if args.write_artifacts:
         artifact_summary = write_runtime_artifacts(
@@ -3351,6 +3574,11 @@ def main() -> None:
         tool_permission_binding_summary = write_tool_permission_binding(result, args.write_tool_permission_binding, run_label=args.run_label)
         result = dict(result)
         result["tool_permission_binding_write_summary"] = tool_permission_binding_summary
+
+    if args.write_live_telemetry_abort:
+        live_telemetry_abort_summary = write_live_execution_telemetry_abort(result, args.write_live_telemetry_abort, run_label=args.run_label)
+        result = dict(result)
+        result["live_execution_telemetry_abort_write_summary"] = live_telemetry_abort_summary
 
     if args.write_output:
         Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")

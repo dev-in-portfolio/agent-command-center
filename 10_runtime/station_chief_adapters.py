@@ -4,7 +4,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-ADAPTER_MODULE_VERSION = "2.1.0"
+ADAPTER_MODULE_VERSION = "2.2.0"
 
 YES_I_APPROVE_SANDBOX_FILE_WRITE = "YES_I_APPROVE_SANDBOX_FILE_WRITE"
 YES_I_APPROVE_SCOPED_REPO_PATCH = "YES_I_APPROVE_SCOPED_REPO_PATCH"
@@ -15,6 +15,9 @@ YES_I_APPROVE_TOOL_SANDBOX_NOOP = "YES_I_APPROVE_TOOL_SANDBOX_NOOP"
 YES_I_APPROVE_TOOL_DETERMINISTIC_SUMMARY = "YES_I_APPROVE_TOOL_DETERMINISTIC_SUMMARY"
 YES_I_APPROVE_TOOL_RUNTIME_STATE_READ = "YES_I_APPROVE_TOOL_RUNTIME_STATE_READ"
 YES_I_APPROVE_TOOL_LOCAL_JSON_ARTIFACT_WRITE = "YES_I_APPROVE_TOOL_LOCAL_JSON_ARTIFACT_WRITE"
+
+# Telemetry and abort approval token
+YES_I_APPROVE_SINGLE_WORKER_TELEMETRY_ABORT_CONTROLS = "YES_I_APPROVE_SINGLE_WORKER_TELEMETRY_ABORT_CONTROLS"
 
 SAFE_SANDBOX_PATH = "SAFE_SANDBOX_PATH"
 SAFE_REPO_PATCH_PATH = "SAFE_REPO_PATCH_PATH"
@@ -31,6 +34,7 @@ SUPPORTED_ADAPTERS = {
         "worker_animation": False,
         "supports_controlled_worker_execution": True,
         "supports_tool_permission_binding": True,
+        "supports_live_execution_telemetry_abort_controls": True,
         "description": "Safely simulates execution boundaries without performing live work.",
     },
     "sandbox_file_write": {
@@ -79,6 +83,12 @@ SUPPORTED_ADAPTERS = {
         "tool_permission_binding_requires_specific_tokens": True,
         "supports_tool_permission_binding": False,
         "tool_permission_binding_requires_separate_gate": True,
+        "supports_live_execution_telemetry_abort_controls": False,
+        "telemetry_abort_controls_require_specific_token": True,
+        "telemetry_abort_requires_separate_gate": True,
+        "external_telemetry_allowed": False,
+        "process_termination_allowed": False,
+        "background_monitoring_allowed": False,
         "broad_tool_access_allowed": False,
         "external_tool_invocations_allowed": False,
         "broad_worker_activation_allowed": False,
