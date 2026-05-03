@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v2.4.0. Locked 175-family baseline preserved. Multi-worker sandbox coordination added.
+Station Chief Runtime upgraded to v2.5.0. Locked 175-family baseline preserved. Controlled external tool adapter preview added.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -9,7 +9,7 @@ Project owner, system architect, and operating-doctrine author: Devin O’Rourke
 This attribution applies to the Agent Command Center Station Chief runtime skeleton. The locked 175-family baseline remains preserved.
 
 ## Purpose
-This report documents the Station Chief runtime v2.4.0 upgrade to multi-worker sandbox coordination while preserving the locked 175-family baseline and the post-run audit proof expansion layer.
+This report documents the Station Chief runtime v2.5.0 upgrade to controlled external tool adapter preview while preserving the locked 175-family baseline, the post-run audit proof expansion layer, and the multi-worker sandbox coordination layer.
 
 ## Files Created / Modified
 10_runtime/station_chief_runtime.py
@@ -33,6 +33,7 @@ This report documents the Station Chief runtime v2.4.0 upgrade to multi-worker s
 10_runtime/station_chief_live_execution_telemetry_abort.py
 10_runtime/station_chief_post_run_audit_expansion.py
 10_runtime/station_chief_multi_worker_sandbox_coordination.py
+10_runtime/station_chief_controlled_external_tool_adapter_preview.py
 09_exports/station_chief_runtime_skeleton_report.md
 09_exports/station_chief_runtime_v0_2_report.md
 09_exports/station_chief_runtime_v0_3_report.md
@@ -55,6 +56,7 @@ This report documents the Station Chief runtime v2.4.0 upgrade to multi-worker s
 09_exports/station_chief_runtime_v2_1_report.md
 09_exports/station_chief_runtime_v2_2_report.md
 09_exports/station_chief_runtime_v2_3_report.md
+09_exports/station_chief_runtime_v2_4_report.md
 scripts/validate_station_chief_runtime_skeleton.py
 scripts/validate_station_chief_runtime_v0_2.py
 scripts/validate_station_chief_runtime_v0_3.py
@@ -78,6 +80,7 @@ scripts/validate_station_chief_runtime_v2_1.py
 scripts/validate_station_chief_runtime_v2_2.py
 scripts/validate_station_chief_runtime_v2_3.py
 scripts/validate_station_chief_runtime_v2_4.py
+scripts/validate_station_chief_runtime_v2_5.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -130,7 +133,7 @@ scripts/validate_station_chief_runtime_v2_4.py
 - controlled execution profile selection
 - execution permission matrix
 - execution mode contract
-- blocked-action ledger
+- blocked action ledger
 - controlled execution preflight contract
 - controlled execution readiness summary
 - work order executor readiness bridge
@@ -147,8 +150,8 @@ scripts/validate_station_chief_runtime_v2_4.py
 - worker candidate generation from work orders
 - worker registry status lifecycle
 - worker assignment planning
-- worker registry ledger
 - worker hiring preview records
+- worker registry ledger
 - worker hiring readiness summary
 - department routing readiness bridge
 - department routing schema
@@ -199,18 +202,23 @@ scripts/validate_station_chief_runtime_v2_4.py
 - human approval chain binding
 - patch execution readiness scoring
 - patch hardening audit bundle
-- live execution telemetry and abort schema
-- telemetry event schema
-- single-worker execution state model
-- telemetry approval gate
-- heartbeat stub
-- abort signal contract
-- timeout contract
-- partial-result capture
-- failed-run quarantine contract
-- post-abort audit proof
-- telemetry ledger
-- telemetry readiness summary
+- deployment packaging bridge
+- deployment artifact schema
+- deployment portfolio packaging manifest
+- runtime export bundle
+- release notes generator
+- deployment safety contract
+- deployment readiness proof
+- packaging audit bundle
+- first controlled worker execution readiness bridge
+- controlled worker execution schema
+- worker execution gate
+- tool permission binding
+- sandbox worker task
+- controlled worker execution result
+- worker abort contract
+- worker rollback contract
+- worker execution telemetry stub
 - post-run audit proof expansion readiness bridge
 - post-run audit expansion schema
 - expanded audit evidence schema
@@ -236,6 +244,18 @@ scripts/validate_station_chief_runtime_v2_4.py
 - coordination audit proof
 - coordination readiness summary
 - controlled external tool adapter preview readiness bridge
+- controlled external tool adapter preview schema
+- external tool adapter preview approval gate
+- external tool dry-run adapter registry
+- per-tool external permission gate
+- external request preview contract
+- external response validation schema
+- external response validation preview result
+- external tool abort contract
+- external tool audit proof
+- external tool preview ledger
+- external tool preview readiness summary
+- permissioned external API dry-run preview readiness bridge
 - no broad workforce animation
 - no real worker hiring
 - no worker process starts
@@ -248,7 +268,7 @@ scripts/validate_station_chief_runtime_v2_4.py
 - no deployment
 
 ## Required Validator
-python3 scripts/validate_station_chief_runtime_v2_4.py
+python3 scripts/validate_station_chief_runtime_v2_5.py
 
 ## Next Recommended Step
-Next recommended build step: build controlled external tool adapter preview.
+Next recommended build step: build permissioned external API dry-run preview.

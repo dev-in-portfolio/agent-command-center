@@ -104,6 +104,11 @@ from station_chief_multi_worker_sandbox_coordination import (
     create_multi_worker_sandbox_coordination_bundle,
     create_multi_worker_sandbox_coordination_schema,
 )
+from station_chief_controlled_external_tool_adapter_preview import (
+    CONTROLLED_EXTERNAL_TOOL_ADAPTER_PREVIEW_APPROVAL_TOKEN,
+    create_controlled_external_tool_adapter_preview_bundle,
+    create_controlled_external_tool_adapter_preview_schema,
+)
 from station_chief_execution_profiles import (
     create_dry_run_bundle,
     create_execution_readiness_score,
@@ -113,7 +118,7 @@ from station_chief_execution_profiles import (
     select_execution_profile,
 )
 
-STATION_CHIEF_RUNTIME_VERSION = "2.4.0"
+STATION_CHIEF_RUNTIME_VERSION = "2.5.0"
 
 EXPECTED_OVERLAYS = [
     {
@@ -319,7 +324,7 @@ def normalize_command_for_id(command: str) -> str:
 def generate_run_id(command: str, run_label: str = "station-chief-runtime") -> str:
     normalized = normalize_command_for_id(command)
     digest = hashlib.sha256(f"{STATION_CHIEF_RUNTIME_VERSION}:{run_label}:{command}".encode("utf-8")).hexdigest()
-    return f"station-chief-v2-4-{normalized}-{digest[:12]}"
+    return f"station-chief-v2-5-{normalized}-{digest[:12]}"
 
 
 def classify_command(command: str) -> str:
@@ -430,7 +435,7 @@ def load_registry(registry_dir: str | Path) -> dict:
     registry_path = Path(registry_dir) / "run_registry.json"
     if not registry_path.exists():
         return {
-            "registry_version": "2.4.0",
+            "registry_version": "2.5.0",
             "runtime_name": "Station Chief Runtime",
             "runs": [],
         }
@@ -447,7 +452,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
     registry = load_registry(registry_dir)
     runs = [run for run in registry.get("runs", []) if run.get("run_id") != index_entry.get("run_id")]
     runs.append(index_entry)
-    registry["registry_version"] = "2.4.0"
+    registry["registry_version"] = "2.5.0"
     registry["runtime_name"] = "Station Chief Runtime"
     registry["runs"] = runs
     save_registry(registry_dir, registry)
@@ -456,7 +461,7 @@ def update_registry(registry_dir: str | Path, index_entry: dict) -> dict:
 
 def write_runtime_index(registry_dir: str | Path, registry: dict) -> dict:
     index = {
-        "index_version": "2.4.0",
+        "index_version": "2.5.0",
         "runtime_name": "Station Chief Runtime",
         "run_count": len(registry.get("runs", [])),
         "runs": registry.get("runs", []),
@@ -510,7 +515,7 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
     adapter_result = run_noop_adapter(execution_plan)
     return {
         "station_chief_runtime_version": STATION_CHIEF_RUNTIME_VERSION,
-        "runtime_status": "multi_worker_sandbox_coordination",
+        "runtime_status": "controlled_external_tool_adapter_preview",
         "release_status": "STABLE_LOCKED",
         "run_capabilities": {
             "persistent_run_logs": True,
@@ -682,6 +687,18 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "coordination_audit_proof": True,
             "coordination_readiness_summary": True,
             "controlled_external_tool_adapter_preview_readiness_bridge": True,
+            "controlled_external_tool_adapter_preview_schema": True,
+            "external_tool_adapter_preview_approval_gate": True,
+            "external_tool_dry_run_adapter_registry": True,
+            "per_tool_external_permission_gate": True,
+            "external_request_preview_contract": True,
+            "external_response_validation_schema": True,
+            "external_response_validation_preview_result": True,
+            "external_tool_abort_contract": True,
+            "external_tool_audit_proof": True,
+            "external_tool_preview_ledger": True,
+            "external_tool_preview_readiness_summary": True,
+            "permissioned_external_api_dry_run_preview_readiness_bridge": True,
         },
         "command": command,
         "command_type": brief["command_type"],
@@ -919,8 +936,17 @@ def run_station_chief(command: str, adapter_name: str = "noop") -> dict[str, Any
             "multi_worker_sandbox_coordination_does_not_perform_live_orchestration": True,
             "multi_worker_sandbox_coordination_does_not_modify_repo_files": True,
             "controlled_external_tool_adapter_preview_not_yet_active": True,
+            "controlled_external_tool_adapter_preview_available": True,
+            "controlled_external_tool_adapter_preview_only": True,
+            "controlled_external_tool_adapter_preview_requires_token": True,
+            "controlled_external_tool_adapter_preview_does_not_invoke_external_tools": True,
+            "controlled_external_tool_adapter_preview_does_not_call_live_apis": True,
+            "controlled_external_tool_adapter_preview_does_not_use_network_access": True,
+            "controlled_external_tool_adapter_preview_does_not_open_sockets": True,
+            "controlled_external_tool_adapter_preview_does_not_modify_repo_files": True,
+            "permissioned_external_api_dry_run_preview_not_yet_active": True,
         },
-        "next_step": "Next step: build controlled external tool adapter preview.",
+        "next_step": "Next step: build permissioned external API dry-run preview.",
     }
 
 
@@ -975,9 +1001,9 @@ def write_approval_ledger(result: dict, output_dir: str | Path, run_label: str =
     ]
     
     manifest = {
-        "approval_ledger_manifest_version": "2.4.0",
+        "approval_ledger_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written,
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1046,9 +1072,9 @@ def write_controlled_execution(result: dict, output_dir: str | Path, run_label: 
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "controlled_execution_manifest_version": "2.4.0",
+        "controlled_execution_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["controlled_execution_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1056,7 +1082,7 @@ def write_controlled_execution(result: dict, output_dir: str | Path, run_label: 
         "real_worker_hiring_performed": False,
         "execution_authorized": False,
         "status": "PROFILE_EXPANSION_ONLY",
-        "note": "Controlled execution v2.4.0 expands execution profiles only. It does not execute live actions or hire workers."
+        "note": "Controlled execution v2.5.0 expands execution profiles only. It does not execute live actions or hire workers."
     }
     _write_json(record_dir / "controlled_execution_manifest.json", manifest)
     files_written.append("controlled_execution_manifest.json")
@@ -1111,9 +1137,9 @@ def write_work_order_executor(result: dict, output_dir: str | Path, run_label: s
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "work_order_executor_manifest_version": "2.4.0",
+        "work_order_executor_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["work_order_executor_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1122,7 +1148,7 @@ def write_work_order_executor(result: dict, output_dir: str | Path, run_label: s
         "repo_files_modified": False,
         "execution_authorized": False,
         "status": "SKELETON_DRY_RUN_ONLY",
-        "note": "Work Order Executor v2.4.0 creates dry-run skeleton artifacts only. It does not execute live actions, modify repo files, hire workers, or animate the workforce."
+        "note": "Work Order Executor v2.5.0 creates dry-run skeleton artifacts only. It does not execute live actions, modify repo files, hire workers, or animate the workforce."
     }
     _write_json(record_dir / "work_order_executor_manifest.json", manifest)
     files_written.append("work_order_executor_manifest.json")
@@ -1177,9 +1203,9 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "worker_hiring_registry_manifest_version": "2.4.0",
+        "worker_hiring_registry_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["worker_hiring_registry_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1187,7 +1213,7 @@ def write_worker_hiring_registry(result: dict, output_dir: str | Path, run_label
         "real_worker_hiring_performed": False,
         "execution_authorized": False,
         "status": "REGISTRY_PREVIEW_ONLY",
-        "note": "Worker Hiring Registry v2.4.0 creates preview registry artifacts only. It does not hire workers, animate the workforce, execute live actions, or modify repo files."
+        "note": "Worker Hiring Registry v2.5.0 creates preview registry artifacts only. It does not hire workers, animate the workforce, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "worker_hiring_registry_manifest.json", manifest)
     files_written.append("worker_hiring_registry_manifest.json")
@@ -1246,9 +1272,9 @@ def write_department_routing(result: dict, output_dir: str | Path, run_label: st
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "department_routing_manifest_version": "2.4.0",
+        "department_routing_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["department_routing_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1257,7 +1283,7 @@ def write_department_routing(result: dict, output_dir: str | Path, run_label: st
         "live_worker_routing_performed": False,
         "execution_authorized": False,
         "status": "ROUTING_PREVIEW_ONLY",
-        "note": "Department Routing Runtime v2.4.0 creates preview routing artifacts only. It does not route live workers, hire workers, animate the workforce, execute live actions, or modify repo files."
+        "note": "Department Routing Runtime v2.5.0 creates preview routing artifacts only. It does not route live workers, hire workers, animate the workforce, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "department_routing_manifest.json", manifest)
     files_written.append("department_routing_manifest.json")
@@ -1318,9 +1344,9 @@ def write_multi_agent_orchestration(result: dict, output_dir: str | Path, run_la
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "multi_agent_orchestration_manifest_version": "2.4.0",
+        "multi_agent_orchestration_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["multi_agent_orchestration_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1330,7 +1356,7 @@ def write_multi_agent_orchestration(result: dict, output_dir: str | Path, run_la
         "live_orchestration_performed": False,
         "execution_authorized": False,
         "status": "ORCHESTRATION_SANDBOX_ONLY",
-        "note": "Multi-Agent Orchestration Sandbox v2.4.0 creates sandbox orchestration artifacts only. It does not animate workers, hire workers, route live workers, execute live actions, perform live orchestration, or modify repo files."
+        "note": "Multi-Agent Orchestration Sandbox v2.5.0 creates sandbox orchestration artifacts only. It does not animate workers, hire workers, route live workers, execute live actions, perform live orchestration, or modify repo files."
     }
     _write_json(record_dir / "multi_agent_orchestration_manifest.json", manifest)
     files_written.append("multi_agent_orchestration_manifest.json")
@@ -1399,9 +1425,9 @@ def write_operator_console(result: dict, output_dir: str | Path, run_label: str 
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "operator_console_manifest_version": "2.4.0",
+        "operator_console_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["operator_console_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1412,7 +1438,7 @@ def write_operator_console(result: dict, output_dir: str | Path, run_label: str 
         "live_ui_displayed": False,
         "execution_authorized": False,
         "status": "SCHEMA_ONLY",
-        "note": "UI / Operator Console Schema v2.4.0 creates schema and review artifacts only. It does not display a live UI, authorize execution, connect APIs, animate workers, hire workers, route live workers, perform live orchestration, execute live actions, or modify repo files."
+        "note": "UI / Operator Console Schema v2.5.0 creates schema and review artifacts only. It does not display a live UI, authorize execution, connect APIs, animate workers, hire workers, route live workers, perform live orchestration, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "operator_console_manifest.json", manifest)
     files_written.append("operator_console_manifest.json")
@@ -1492,9 +1518,9 @@ def write_github_patch_hardening(result: dict, output_dir: str | Path, run_label
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "github_patch_hardening_manifest_version": "2.4.0",
+        "github_patch_hardening_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["github_patch_hardening_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1502,7 +1528,7 @@ def write_github_patch_hardening(result: dict, output_dir: str | Path, run_label
         "github_api_called": False,
         "execution_authorized": False,
         "status": "PATCH_HARDENING_CONTRACT_ONLY",
-        "note": "GitHub Patch Application Hardening v2.4.0 creates patch hardening contracts and review artifacts only. It does not apply patches, call GitHub APIs, push commits, authorize execution, execute live actions, or modify repo files."
+        "note": "GitHub Patch Application Hardening v2.5.0 creates patch hardening contracts and review artifacts only. It does not apply patches, call GitHub APIs, push commits, authorize execution, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "github_patch_hardening_manifest.json", manifest)
     files_written.append("github_patch_hardening_manifest.json")
@@ -1559,9 +1585,9 @@ def write_deployment_packaging(result: dict, output_dir: str | Path, run_label: 
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "deployment_packaging_manifest_version": "2.4.0",
+        "deployment_packaging_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["deployment_packaging_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1570,7 +1596,7 @@ def write_deployment_packaging(result: dict, output_dir: str | Path, run_label: 
         "repo_patch_applied": False,
         "execution_authorized": False,
         "status": "PACKAGING_BRIDGE_ONLY",
-        "note": "Deployment / Portfolio Packaging Bridge v2.4.0 creates packaging, portfolio handoff, release-note, and readiness artifacts only. It does not execute deployment, call hosting APIs, mutate external services, authorize execution, execute live actions, or modify repo files."
+        "note": "Deployment / Portfolio Packaging Bridge v2.5.0 creates packaging, portfolio handoff, release-note, and readiness artifacts only. It does not execute deployment, call hosting APIs, mutate external services, authorize execution, execute live actions, or modify repo files."
     }
     _write_json(record_dir / "deployment_packaging_manifest.json", manifest)
     files_written.append("deployment_packaging_manifest.json")
@@ -1645,9 +1671,9 @@ def write_controlled_worker_execution(result: dict, output_dir: str | Path, run_
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "controlled_worker_execution_manifest_version": "2.4.0",
+        "controlled_worker_execution_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["controlled_worker_execution_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1662,7 +1688,7 @@ def write_controlled_worker_execution(result: dict, output_dir: str | Path, run_
         "deployment_performed": False,
         "execution_authorized": False,
         "status": "SINGLE_WORKER_SANDBOX_EXECUTION_ONLY",
-        "note": "First Controlled Worker-Agent Execution v2.4.0 allows only a single deterministic local sandbox worker task when explicitly approved. It does not call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration."
+        "note": "First Controlled Worker-Agent Execution v2.5.0 allows only a single deterministic local sandbox worker task when explicitly approved. It does not call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration."
     }
     _write_json(record_dir / "controlled_worker_execution_manifest.json", manifest)
     files_written.append("controlled_worker_execution_manifest.json")
@@ -1748,9 +1774,9 @@ def write_tool_permission_binding(result: dict, output_dir: str | Path, run_labe
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "tool_permission_binding_manifest_version": "2.4.0",
+        "tool_permission_binding_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["tool_permission_binding_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1765,7 +1791,7 @@ def write_tool_permission_binding(result: dict, output_dir: str | Path, run_labe
         "deployment_performed": False,
         "execution_authorized": False,
         "status": "SINGLE_WORKER_TOOL_PERMISSION_BINDING_ONLY",
-        "note": "Single-Worker Tool Permission Binding v2.4.0 creates per-tool permission registry, token binding, dry-run invocation contracts, output validation, failure handling, revocation, audit proof, and ledger artifacts only. It does not invoke external tools, call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration."
+        "note": "Single-Worker Tool Permission Binding v2.5.0 creates per-tool permission registry, token binding, dry-run invocation contracts, output validation, failure handling, revocation, audit proof, and ledger artifacts only. It does not invoke external tools, call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration."
     }
     _write_json(record_dir / "tool_permission_binding_manifest.json", manifest)
     files_written.append("tool_permission_binding_manifest.json")
@@ -1902,9 +1928,9 @@ def write_post_run_audit_expansion(
         _write_json(record_dir / filename, payload)
 
     manifest = {
-        "post_run_audit_expansion_manifest_version": "2.4.0",
+        "post_run_audit_expansion_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["post_run_audit_expansion_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -1919,7 +1945,7 @@ def write_post_run_audit_expansion(
         "deployment_performed": False,
         "execution_authorized": False,
         "status": "SINGLE_WORKER_POST_RUN_AUDIT_EXPANSION_ONLY",
-        "note": "Post-Run Audit Proof Expansion v2.4.0 creates local expanded audit proof, comparison, validator index, replay record, failure taxonomy, human review, integrity score, and ledger artifacts only. It does not perform actual replay, fetch external artifacts, call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration.",
+        "note": "Post-Run Audit Proof Expansion v2.5.0 creates local expanded audit proof, comparison, validator index, replay record, failure taxonomy, human review, integrity score, and ledger artifacts only. It does not perform actual replay, fetch external artifacts, call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration.",
     }
     _write_json(record_dir / "post_run_audit_expansion_manifest.json", manifest)
     files_written.append("post_run_audit_expansion_manifest.json")
@@ -2017,12 +2043,16 @@ def write_multi_worker_sandbox_coordination(
         _write_json(record_dir / filename, payload)
 
     manifest = {
-        "multi_worker_sandbox_coordination_manifest_version": "2.4.0",
+        "multi_worker_sandbox_coordination_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["multi_worker_sandbox_coordination_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
+        "external_tool_invoked": False,
+        "live_api_call_performed": False,
+        "network_access_performed": False,
+        "socket_opened": False,
         "real_workers_hired": False,
         "worker_processes_started": False,
         "handoffs_executed": False,
@@ -2034,7 +2064,7 @@ def write_multi_worker_sandbox_coordination(
         "deployment_performed": False,
         "execution_authorized": False,
         "status": "MULTI_WORKER_SANDBOX_COORDINATION_PREVIEW_ONLY",
-        "note": "Multi-Worker Sandbox Coordination v2.4.0 creates local sandbox roster, coordination graph, handoff contracts, dry-run ledgers, conflict detection, abort/quarantine contracts, audit proofs, and readiness bridge artifacts only. It does not hire real workers, start worker processes, perform live routing, perform live orchestration, call APIs, run shell commands, modify repo files, deploy, or animate broad workforce.",
+        "note": "Multi-Worker Sandbox Coordination v2.5.0 creates local sandbox roster, coordination graph, handoff contracts, dry-run ledgers, conflict detection, abort/quarantine contracts, audit proofs, and readiness bridge artifacts only. It does not hire real workers, start worker processes, perform live routing, perform live orchestration, call APIs, run shell commands, modify repo files, deploy, or animate broad workforce.",
     }
     _write_json(record_dir / "multi_worker_sandbox_coordination_manifest.json", manifest)
     files_written.append("multi_worker_sandbox_coordination_manifest.json")
@@ -2044,7 +2074,133 @@ def write_multi_worker_sandbox_coordination(
         "files_written": files_written,
     }
 
-def write_live_execution_telemetry_abort(result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
+def attach_controlled_external_tool_adapter_preview(
+    result: dict,
+    tool_label: str | None = None,
+    tool_id: str | None = None,
+    confirmation_token: str | None = None,
+    requested_tools: list[str] | None = None,
+    requested_external_action: str | None = None,
+    request_label: str | None = None,
+    request_payload: dict | None = None,
+    response_preview: dict | None = None,
+    abort_reason: str | None = None,
+) -> dict:
+    updated = dict(result)
+    if updated.get("post_run_audit_expansion_bundle") is None:
+        updated = attach_post_run_audit_expansion(updated)
+    if updated.get("multi_worker_sandbox_coordination_bundle") is None:
+        updated = attach_multi_worker_sandbox_coordination(updated)
+    bundle = create_controlled_external_tool_adapter_preview_bundle(
+        updated,
+        command=updated.get("command"),
+        tool_label=tool_label,
+        tool_id=tool_id,
+        confirmation_token=confirmation_token,
+        requested_tools=requested_tools,
+        requested_external_action=requested_external_action,
+        request_label=request_label,
+        request_payload=request_payload,
+        response_preview=response_preview,
+        abort_reason=abort_reason,
+    )
+    updated["controlled_external_tool_adapter_preview_bundle"] = bundle
+    updated["controlled_external_tool_adapter_preview_schema"] = bundle["controlled_external_tool_adapter_preview_schema"]
+    updated["external_tool_adapter_preview_approval_gate"] = bundle["external_tool_adapter_preview_approval_gate"]
+    updated["external_tool_dry_run_adapter_registry"] = bundle["external_tool_dry_run_adapter_registry"]
+    updated["per_tool_external_permission_gate"] = bundle["per_tool_external_permission_gate"]
+    updated["external_request_preview_contract"] = bundle["external_request_preview_contract"]
+    updated["external_response_validation_schema"] = bundle["external_response_validation_schema"]
+    updated["external_response_validation_preview_result"] = bundle["external_response_validation_preview_result"]
+    updated["external_tool_abort_contract"] = bundle["external_tool_abort_contract"]
+    updated["external_tool_audit_proof"] = bundle["external_tool_audit_proof"]
+    updated["external_tool_preview_ledger"] = bundle["external_tool_preview_ledger"]
+    updated["external_tool_preview_readiness_summary"] = bundle["external_tool_preview_readiness_summary"]
+    updated["permissioned_external_api_dry_run_preview_readiness_bridge"] = bundle[
+        "permissioned_external_api_dry_run_preview_readiness_bridge"
+    ]
+    updated["external_actions_taken"] = bundle["external_actions_taken"]
+    updated["external_tool_invoked"] = bundle["external_tool_invoked"]
+    updated["live_api_call_performed"] = bundle["live_api_call_performed"]
+    updated["network_access_performed"] = bundle["network_access_performed"]
+    updated["socket_opened"] = bundle["socket_opened"]
+    updated["repo_files_modified"] = bundle["repo_files_modified"]
+    updated["broad_worker_activation_performed"] = bundle["broad_worker_activation_performed"]
+    updated["real_workers_hired"] = bundle["real_workers_hired"]
+    updated["worker_processes_started"] = bundle["worker_processes_started"]
+    updated["live_worker_routing_performed"] = bundle["live_worker_routing_performed"]
+    updated["live_orchestration_performed"] = bundle["live_orchestration_performed"]
+    updated["hosting_api_called"] = bundle["hosting_api_called"]
+    updated["deployment_performed"] = bundle["deployment_performed"]
+    updated["execution_authorized"] = bundle["execution_authorized"]
+    return updated
+
+
+def write_controlled_external_tool_adapter_preview(
+    result: dict,
+    output_dir: str | Path,
+    run_label: str = "station-chief-runtime",
+) -> dict:
+    if "controlled_external_tool_adapter_preview_bundle" not in result:
+        raise ValueError("Missing controlled_external_tool_adapter_preview_bundle in result")
+
+    run_id = generate_run_id(result.get("command", "empty"), run_label)
+    record_dir = Path(output_dir) / run_id
+    record_dir.mkdir(parents=True, exist_ok=True)
+
+    payloads = {
+        "controlled_external_tool_adapter_preview_bundle.json": result["controlled_external_tool_adapter_preview_bundle"],
+        "controlled_external_tool_adapter_preview_schema.json": result["controlled_external_tool_adapter_preview_schema"],
+        "external_tool_adapter_preview_approval_gate.json": result["external_tool_adapter_preview_approval_gate"],
+        "external_tool_dry_run_adapter_registry.json": result["external_tool_dry_run_adapter_registry"],
+        "per_tool_external_permission_gate.json": result["per_tool_external_permission_gate"],
+        "external_request_preview_contract.json": result["external_request_preview_contract"],
+        "external_response_validation_schema.json": result["external_response_validation_schema"],
+        "external_response_validation_preview_result.json": result["external_response_validation_preview_result"],
+        "external_tool_abort_contract.json": result["external_tool_abort_contract"],
+        "external_tool_audit_proof.json": result["external_tool_audit_proof"],
+        "external_tool_preview_ledger.json": result["external_tool_preview_ledger"],
+        "external_tool_preview_readiness_summary.json": result["external_tool_preview_readiness_summary"],
+        "permissioned_external_api_dry_run_preview_readiness_bridge.json": result["permissioned_external_api_dry_run_preview_readiness_bridge"],
+    }
+    files_written = list(payloads.keys())
+    for filename, payload in payloads.items():
+        _write_json(record_dir / filename, payload)
+
+    manifest = {
+        "controlled_external_tool_adapter_preview_manifest_version": "2.5.0",
+        "run_id": run_id,
+        "runtime_version": "2.5.0",
+        "files_written": files_written + ["controlled_external_tool_adapter_preview_manifest.json"],
+        "baseline_preserved": True,
+        "external_actions_taken": False,
+        "external_tool_invoked": False,
+        "live_api_call_performed": False,
+        "network_access_performed": False,
+        "socket_opened": False,
+        "repo_files_modified": False,
+        "broad_worker_activation_performed": False,
+        "real_workers_hired": False,
+        "worker_processes_started": False,
+        "live_worker_routing_performed": False,
+        "live_orchestration_performed": False,
+        "hosting_api_called": False,
+        "deployment_performed": False,
+        "execution_authorized": False,
+        "status": "CONTROLLED_EXTERNAL_TOOL_ADAPTER_PREVIEW_ONLY",
+        "note": "Controlled External Tool Adapter Preview v2.5.0 creates local external tool adapter preview, request contract, response validation, abort, audit, ledger, and readiness bridge artifacts only. It does not invoke external tools, call live APIs, perform network access, open sockets, run shell commands, modify repo files, deploy, hire real workers, start worker processes, route live workers, perform live orchestration, or animate broad workforce.",
+    }
+    _write_json(record_dir / "controlled_external_tool_adapter_preview_manifest.json", manifest)
+    files_written.append("controlled_external_tool_adapter_preview_manifest.json")
+    return {
+        "run_id": run_id,
+        "controlled_external_tool_adapter_preview_dir": str(record_dir),
+        "files_written": files_written,
+    }
+
+
+def write_live_execution_telemetry_abort(
+result: dict, output_dir: str | Path, run_label: str = "station-chief-runtime") -> dict:
     if "live_execution_telemetry_abort_bundle" not in result:
         raise ValueError("Missing live_execution_telemetry_abort_bundle in result")
         
@@ -2074,9 +2230,9 @@ def write_live_execution_telemetry_abort(result: dict, output_dir: str | Path, r
         _write_json(record_dir / filename, payload)
         
     manifest = {
-        "live_execution_telemetry_abort_manifest_version": "2.4.0",
+        "live_execution_telemetry_abort_manifest_version": "2.5.0",
         "run_id": run_id,
-        "runtime_version": "2.4.0",
+        "runtime_version": "2.5.0",
         "files_written": files_written + ["live_execution_telemetry_abort_manifest.json"],
         "baseline_preserved": True,
         "external_actions_taken": False,
@@ -2093,7 +2249,7 @@ def write_live_execution_telemetry_abort(result: dict, output_dir: str | Path, r
         "deployment_performed": False,
         "execution_authorized": False,
         "status": "SINGLE_WORKER_TELEMETRY_ABORT_CONTROLS_ONLY",
-        "note": "Live Execution Telemetry and Abort Controls v2.4.0 creates local telemetry, abort, timeout, partial-result, quarantine, post-abort audit, and ledger artifacts only. It does not send external telemetry, terminate processes, call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration."
+        "note": "Live Execution Telemetry and Abort Controls v2.5.0 creates local telemetry, abort, timeout, partial-result, quarantine, post-abort audit, and ledger artifacts only. It does not send external telemetry, terminate processes, call APIs, run shell commands, modify repo files, deploy, animate broad workforce, hire real workers, route live workers, or perform live orchestration."
     }
     _write_json(record_dir / "live_execution_telemetry_abort_manifest.json", manifest)
     files_written.append("live_execution_telemetry_abort_manifest.json")
@@ -2327,25 +2483,52 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
         "audit_integrity_score": result.get("audit_integrity_score"),
         "audit_evidence_ledger": result.get("audit_evidence_ledger"),
         "audit_expansion_readiness_summary": result.get("audit_expansion_readiness_summary"),
-        "multi_worker_sandbox_coordination_readiness_bridge": result.get("multi_worker_sandbox_coordination_readiness_bridge"),
-        "multi_worker_sandbox_coordination_bundle": result.get("multi_worker_sandbox_coordination_bundle"),
-        "multi_worker_sandbox_coordination_schema": result.get("multi_worker_sandbox_coordination_schema"),
-        "multi_worker_coordination_approval_gate": result.get("multi_worker_coordination_approval_gate"),
-        "sandbox_worker_roster": result.get("sandbox_worker_roster"),
-        "worker_coordination_graph": result.get("worker_coordination_graph"),
-        "inter_worker_handoff_contract": result.get("inter_worker_handoff_contract"),
-        "multi_worker_dry_run_ledger": result.get("multi_worker_dry_run_ledger"),
-        "coordination_conflict_detector": result.get("coordination_conflict_detector"),
-        "coordination_abort_contract": result.get("coordination_abort_contract"),
-        "coordination_quarantine_contract": result.get("coordination_quarantine_contract"),
-        "coordination_audit_proof": result.get("coordination_audit_proof"),
-        "coordination_readiness_summary": result.get("coordination_readiness_summary"),
-        "controlled_external_tool_adapter_preview_readiness_bridge": result.get("controlled_external_tool_adapter_preview_readiness_bridge"),
+        "multi_worker_sandbox_coordination_readiness_bridge": True,
+        "multi_worker_sandbox_coordination_bundle": True,
+        "multi_worker_sandbox_coordination_schema": True,
+        "multi_worker_coordination_approval_gate": True,
+        "sandbox_worker_roster": True,
+        "worker_coordination_graph": True,
+        "inter_worker_handoff_contract": True,
+        "multi_worker_dry_run_ledger": True,
+        "coordination_conflict_detector": True,
+        "coordination_abort_contract": True,
+        "coordination_quarantine_contract": True,
+        "coordination_audit_proof": True,
+        "coordination_readiness_summary": True,
+        "external_actions_taken": False,
+        "broad_worker_activation_performed": False,
+        "real_workers_hired": False,
+        "worker_processes_started": False,
+        "live_worker_routing_performed": False,
+        "live_orchestration_performed": False,
+        "external_tool_invoked": False,
+        "live_api_call_performed": False,
+        "network_access_performed": False,
+        "socket_opened": False,
+        "repo_files_modified": False,
+        "hosting_api_called": False,
+        "deployment_performed": False,
+        "execution_authorized": False,
+        "controlled_external_tool_adapter_preview_readiness_bridge": True,
+        "controlled_external_tool_adapter_preview_bundle": True,
+        "controlled_external_tool_adapter_preview_schema": True,
+        "external_tool_adapter_preview_approval_gate": True,
+        "external_tool_dry_run_adapter_registry": True,
+        "per_tool_external_permission_gate": True,
+        "external_request_preview_contract": True,
+        "external_response_validation_schema": True,
+        "external_response_validation_preview_result": True,
+        "external_tool_abort_contract": True,
+        "external_tool_audit_proof": True,
+        "external_tool_preview_ledger": True,
+        "external_tool_preview_readiness_summary": True,
+        "permissioned_external_api_dry_run_preview_readiness_bridge": True,
         "runtime_index_entry": runtime_index_entry,
         "manifest": {
             "run_id": run_id,
             "runtime_version": result["station_chief_runtime_version"],
-            "artifact_type": "station_chief_runtime_v2_4_artifacts",
+            "artifact_type": "station_chief_runtime_v2_5_artifacts",
             "files_planned": [
                 "run_log.json",
                 "command_brief.json",
@@ -2546,6 +2729,19 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
                 "coordination_audit_proof.json",
                 "coordination_readiness_summary.json",
                 "controlled_external_tool_adapter_preview_readiness_bridge.json",
+                "controlled_external_tool_adapter_preview_bundle.json",
+                "controlled_external_tool_adapter_preview_schema.json",
+                "external_tool_adapter_preview_approval_gate.json",
+                "external_tool_dry_run_adapter_registry.json",
+                "per_tool_external_permission_gate.json",
+                "external_request_preview_contract.json",
+                "external_response_validation_schema.json",
+                "external_response_validation_preview_result.json",
+                "external_tool_abort_contract.json",
+                "external_tool_audit_proof.json",
+                "external_tool_preview_ledger.json",
+                "external_tool_preview_readiness_summary.json",
+                "permissioned_external_api_dry_run_preview_readiness_bridge.json",
                 "runtime_index_entry.json",
                 "manifest.json",
                 "full_result.json",
@@ -2785,6 +2981,31 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "coordination_audit_proof": True,
             "coordination_readiness_summary": True,
             "controlled_external_tool_adapter_preview_readiness_bridge": True,
+            "broad_worker_activation_performed": False,
+            "real_workers_hired": False,
+            "worker_processes_started": False,
+            "live_worker_routing_performed": False,
+            "live_orchestration_performed": False,
+            "external_tool_invoked": False,
+            "live_api_call_performed": False,
+            "network_access_performed": False,
+            "socket_opened": False,
+            "repo_files_modified": False,
+            "hosting_api_called": False,
+            "deployment_performed": False,
+            "execution_authorized": False,
+            "controlled_external_tool_adapter_preview_schema": True,
+            "external_tool_adapter_preview_approval_gate": True,
+            "external_tool_dry_run_adapter_registry": True,
+            "per_tool_external_permission_gate": True,
+            "external_request_preview_contract": True,
+            "external_response_validation_schema": True,
+            "external_response_validation_preview_result": True,
+            "external_tool_abort_contract": True,
+            "external_tool_audit_proof": True,
+            "external_tool_preview_ledger": True,
+            "external_tool_preview_readiness_summary": True,
+            "permissioned_external_api_dry_run_preview_readiness_bridge": True,
             "multi_worker_sandbox_coordination_preview_only": True,
             "multi_worker_sandbox_coordination_requires_token": True,
             "multi_worker_sandbox_coordination_does_not_hire_real_workers": True,
@@ -2792,6 +3013,14 @@ def build_runtime_artifacts(result: dict, run_id: str) -> dict:
             "multi_worker_sandbox_coordination_does_not_perform_live_routing": True,
             "multi_worker_sandbox_coordination_does_not_perform_live_orchestration": True,
             "multi_worker_sandbox_coordination_does_not_modify_repo_files": True,
+            "controlled_external_tool_adapter_preview_only": True,
+            "controlled_external_tool_adapter_preview_requires_token": True,
+            "controlled_external_tool_adapter_preview_does_not_invoke_external_tools": True,
+            "controlled_external_tool_adapter_preview_does_not_call_live_apis": True,
+            "controlled_external_tool_adapter_preview_does_not_use_network_access": True,
+            "controlled_external_tool_adapter_preview_does_not_open_sockets": True,
+            "controlled_external_tool_adapter_preview_does_not_modify_repo_files": True,
+            "permissioned_external_api_dry_run_preview_not_yet_active": True,
         },
     }
 
@@ -3002,6 +3231,19 @@ def write_runtime_artifacts(
         "coordination_audit_proof.json": artifacts.get("coordination_audit_proof"),
         "coordination_readiness_summary.json": artifacts.get("coordination_readiness_summary"),
         "controlled_external_tool_adapter_preview_readiness_bridge.json": artifacts.get("controlled_external_tool_adapter_preview_readiness_bridge"),
+        "controlled_external_tool_adapter_preview_bundle.json": artifacts.get("controlled_external_tool_adapter_preview_bundle"),
+        "controlled_external_tool_adapter_preview_schema.json": artifacts.get("controlled_external_tool_adapter_preview_schema"),
+        "external_tool_adapter_preview_approval_gate.json": artifacts.get("external_tool_adapter_preview_approval_gate"),
+        "external_tool_dry_run_adapter_registry.json": artifacts.get("external_tool_dry_run_adapter_registry"),
+        "per_tool_external_permission_gate.json": artifacts.get("per_tool_external_permission_gate"),
+        "external_request_preview_contract.json": artifacts.get("external_request_preview_contract"),
+        "external_response_validation_schema.json": artifacts.get("external_response_validation_schema"),
+        "external_response_validation_preview_result.json": artifacts.get("external_response_validation_preview_result"),
+        "external_tool_abort_contract.json": artifacts.get("external_tool_abort_contract"),
+        "external_tool_audit_proof.json": artifacts.get("external_tool_audit_proof"),
+        "external_tool_preview_ledger.json": artifacts.get("external_tool_preview_ledger"),
+        "external_tool_preview_readiness_summary.json": artifacts.get("external_tool_preview_readiness_summary"),
+        "permissioned_external_api_dry_run_preview_readiness_bridge.json": artifacts.get("permissioned_external_api_dry_run_preview_readiness_bridge"),
         "tool_permission_binding_bundle.json": artifacts.get("tool_permission_binding_bundle"),
         "tool_permission_binding_schema.json": artifacts.get("tool_permission_binding_schema"),
         "per_tool_permission_registry.json": artifacts.get("per_tool_permission_registry"),
@@ -3225,7 +3467,7 @@ def write_dry_run_bundle(
         "execution_readiness_score.json": result.get("execution_readiness_score"),
         "repo_patch_preview.diff": dry_run_bundle.get("repo_patch_preview") or "",
         "dry_run_manifest.json": {
-            "dry_run_bundle_version": "2.4.0",
+            "dry_run_bundle_version": "2.5.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -3281,7 +3523,7 @@ def write_approval_handoff(
         "dry_run_bundle_comparison.json": packet.get("comparison"),
         "patch_preview.diff": (packet.get("dry_run_bundle") or {}).get("repo_patch_preview") or "",
         "approval_handoff_manifest.json": {
-            "approval_handoff_version": "2.4.0",
+            "approval_handoff_version": "2.5.0",
             "run_id": run_id,
             "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
             "files_written": [
@@ -3376,7 +3618,7 @@ def write_approval_record(
 
     files_written = []
     approval_record_manifest = {
-        "approval_record_manifest_version": "2.4.0",
+        "approval_record_manifest_version": "2.5.0",
         "run_id": run_id,
         "runtime_version": STATION_CHIEF_RUNTIME_VERSION,
         "files_written": [
@@ -3460,10 +3702,10 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--execute-repo-patch", action="store_true", help="Execute a scoped repo patch if the gate approves")
     parser.add_argument("--execution-profile", type=str, help="Requested execution profile for dry-run behavior")
     parser.add_argument("--dry-run-bundle", action="store_true", help="Attach a dry-run bundle to the printed result")
-    parser.add_argument("--release-lock", action="store_true", help="Attach v2.4.0 stable release lock artifacts")
-    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v2.4.0 release manifest as JSON")
-    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v2.4.0 stable release lock artifacts to DIR")
-    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v2.4.0 stable release manifest JSON file")
+    parser.add_argument("--release-lock", action="store_true", help="Attach v2.5.0 stable release lock artifacts")
+    parser.add_argument("--stable-release-manifest", action="store_true", help="Print the stable v2.5.0 release manifest as JSON")
+    parser.add_argument("--write-release-lock", metavar="DIR", help="Write v2.5.0 stable release lock artifacts to DIR")
+    parser.add_argument("--verify-release-manifest", metavar="RELEASE_MANIFEST_JSON", help="Verify a v2.5.0 stable release manifest JSON file")
     parser.add_argument("--list-controlled-execution-profiles", action="store_true", help="Print controlled execution profile catalog as JSON")
     parser.add_argument("--controlled-execution", action="store_true", help="Attach controlled execution bundle to the printed result")
     parser.add_argument("--controlled-execution-profile", type=str, metavar="PROFILE_ID", help="Choose a controlled execution profile")
@@ -3519,6 +3761,18 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--multi-worker-shared-resource", action="append", default=[], help="Shared resource label for multi-worker sandbox coordination")
     parser.add_argument("--multi-worker-abort-reason", type=str, help="Abort reason for multi-worker sandbox coordination")
     parser.add_argument("--multi-worker-failure-reason", type=str, help="Failure reason for multi-worker sandbox coordination")
+    parser.add_argument("--external-tool-preview-schema", action="store_true", help="Print the controlled external tool adapter preview schema as JSON")
+    parser.add_argument("--controlled-external-tool-preview", action="store_true", help="Attach controlled external tool adapter preview bundle to the printed result")
+    parser.add_argument("--write-controlled-external-tool-preview", metavar="DIR", help="Write controlled external tool adapter preview artifacts into the provided directory")
+    parser.add_argument("--external-tool-label", type=str, default="station-chief-external-tool-preview", help="External tool label for controlled preview")
+    parser.add_argument("--external-tool-id", type=str, default="web_search_preview", help="External tool ID for controlled preview")
+    parser.add_argument("--external-tool-confirm-token", type=str, help="Confirmation token for controlled external tool adapter preview")
+    parser.add_argument("--external-tool-requested-tool", action="append", default=[], help="Requested preview tool label for controlled external tool adapter preview")
+    parser.add_argument("--external-tool-requested-action", type=str, default="preview_request_contract", help="Requested preview action for controlled external tool adapter preview")
+    parser.add_argument("--external-tool-request-label", type=str, help="Request label for controlled external tool adapter preview")
+    parser.add_argument("--external-tool-request-payload-json", type=str, help="JSON payload for controlled external tool adapter preview request")
+    parser.add_argument("--external-tool-response-preview-json", type=str, help="JSON response preview for controlled external tool adapter preview")
+    parser.add_argument("--external-tool-abort-reason", type=str, help="Abort reason for controlled external tool adapter preview")
     parser.add_argument("--telemetry-worker-id", type=str, help="Worker ID for live telemetry")
     parser.add_argument("--telemetry-confirm-token", type=str, help="Confirmation token for live telemetry approval")
     parser.add_argument("--telemetry-abort-reason", type=str, help="Reason for live telemetry abort")
@@ -3629,6 +3883,10 @@ def main() -> None:
 
     if args.multi_worker_coordination_schema:
         print(json.dumps(create_multi_worker_sandbox_coordination_schema(), indent=2, ensure_ascii=False))
+        return
+
+    if args.external_tool_preview_schema:
+        print(json.dumps(create_controlled_external_tool_adapter_preview_schema(), indent=2, ensure_ascii=False))
         return
 
     if args.list_controlled_execution_profiles:
@@ -3897,6 +4155,25 @@ def main() -> None:
             print(json.dumps({"post_run_audit_expansion_status": "ERROR", "error": f"Invalid --post-run-audit-after-json: {exc}"}, indent=2, ensure_ascii=False))
             return
 
+    external_tool_request_payload = None
+    external_tool_response_preview = None
+    if args.external_tool_request_payload_json is not None:
+        try:
+            external_tool_request_payload = json.loads(args.external_tool_request_payload_json)
+            if not isinstance(external_tool_request_payload, dict):
+                raise ValueError("payload must be a JSON object")
+        except (json.JSONDecodeError, ValueError) as exc:
+            print(json.dumps({"controlled_external_tool_adapter_preview_status": "ERROR", "error": f"Invalid --external-tool-request-payload-json: {exc}"}, indent=2, ensure_ascii=False))
+            return
+    if args.external_tool_response_preview_json is not None:
+        try:
+            external_tool_response_preview = json.loads(args.external_tool_response_preview_json)
+            if not isinstance(external_tool_response_preview, dict):
+                raise ValueError("response preview must be a JSON object")
+        except (json.JSONDecodeError, ValueError) as exc:
+            print(json.dumps({"controlled_external_tool_adapter_preview_status": "ERROR", "error": f"Invalid --external-tool-response-preview-json: {exc}"}, indent=2, ensure_ascii=False))
+            return
+
     if args.post_run_audit_expansion or args.write_post_run_audit_expansion:
         result = attach_post_run_audit_expansion(
             result,
@@ -3919,6 +4196,22 @@ def main() -> None:
             requested_shared_resources=args.multi_worker_shared_resource,
             abort_reason=args.multi_worker_abort_reason,
             failure_reason=args.multi_worker_failure_reason,
+        )
+
+    if args.controlled_external_tool_preview or args.write_controlled_external_tool_preview:
+        if "multi_worker_sandbox_coordination_bundle" not in result or result["multi_worker_sandbox_coordination_bundle"] is None:
+            result = attach_multi_worker_sandbox_coordination(result)
+        result = attach_controlled_external_tool_adapter_preview(
+            result,
+            tool_label=args.external_tool_label,
+            tool_id=args.external_tool_id,
+            confirmation_token=args.external_tool_confirm_token,
+            requested_tools=args.external_tool_requested_tool,
+            requested_external_action=args.external_tool_requested_action,
+            request_label=args.external_tool_request_label,
+            request_payload=external_tool_request_payload,
+            response_preview=external_tool_response_preview,
+            abort_reason=args.external_tool_abort_reason,
         )
 
     artifact_summary = None
@@ -4080,6 +4373,31 @@ def main() -> None:
         )
         result = dict(result)
         result["multi_worker_sandbox_coordination_write_summary"] = multi_worker_sandbox_coordination_summary
+
+    controlled_external_tool_adapter_preview_summary = None
+    if args.write_controlled_external_tool_preview:
+        if "controlled_external_tool_adapter_preview_bundle" not in result or result["controlled_external_tool_adapter_preview_bundle"] is None:
+            if "multi_worker_sandbox_coordination_bundle" not in result or result["multi_worker_sandbox_coordination_bundle"] is None:
+                result = attach_multi_worker_sandbox_coordination(result)
+            result = attach_controlled_external_tool_adapter_preview(
+                result,
+                tool_label=args.external_tool_label,
+                tool_id=args.external_tool_id,
+                confirmation_token=args.external_tool_confirm_token,
+                requested_tools=args.external_tool_requested_tool,
+                requested_external_action=args.external_tool_requested_action,
+                request_label=args.external_tool_request_label,
+                request_payload=external_tool_request_payload,
+                response_preview=external_tool_response_preview,
+                abort_reason=args.external_tool_abort_reason,
+            )
+        controlled_external_tool_adapter_preview_summary = write_controlled_external_tool_adapter_preview(
+            result,
+            args.write_controlled_external_tool_preview,
+            run_label=args.run_label,
+        )
+        result = dict(result)
+        result["controlled_external_tool_adapter_preview_write_summary"] = controlled_external_tool_adapter_preview_summary
 
     if args.write_output:
         Path(args.write_output).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")

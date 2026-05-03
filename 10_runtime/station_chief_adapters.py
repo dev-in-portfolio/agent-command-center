@@ -4,7 +4,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-ADAPTER_MODULE_VERSION = "2.4.0"
+ADAPTER_MODULE_VERSION = "2.5.0"
 
 YES_I_APPROVE_SANDBOX_FILE_WRITE = "YES_I_APPROVE_SANDBOX_FILE_WRITE"
 YES_I_APPROVE_SCOPED_REPO_PATCH = "YES_I_APPROVE_SCOPED_REPO_PATCH"
@@ -20,6 +20,7 @@ YES_I_APPROVE_TOOL_LOCAL_JSON_ARTIFACT_WRITE = "YES_I_APPROVE_TOOL_LOCAL_JSON_AR
 YES_I_APPROVE_SINGLE_WORKER_TELEMETRY_ABORT_CONTROLS = "YES_I_APPROVE_SINGLE_WORKER_TELEMETRY_ABORT_CONTROLS"
 YES_I_APPROVE_POST_RUN_AUDIT_PROOF_EXPANSION = "YES_I_APPROVE_POST_RUN_AUDIT_PROOF_EXPANSION"
 YES_I_APPROVE_MULTI_WORKER_SANDBOX_COORDINATION = "YES_I_APPROVE_MULTI_WORKER_SANDBOX_COORDINATION"
+YES_I_APPROVE_CONTROLLED_EXTERNAL_TOOL_ADAPTER_PREVIEW = "YES_I_APPROVE_CONTROLLED_EXTERNAL_TOOL_ADAPTER_PREVIEW"
 
 SAFE_SANDBOX_PATH = "SAFE_SANDBOX_PATH"
 SAFE_REPO_PATCH_PATH = "SAFE_REPO_PATCH_PATH"
@@ -44,6 +45,12 @@ SUPPORTED_ADAPTERS = {
         "audit_background_monitoring_allowed": False,
         "supports_multi_worker_sandbox_coordination": True,
         "multi_worker_sandbox_coordination_requires_specific_token": True,
+        "supports_controlled_external_tool_adapter_preview": True,
+        "controlled_external_tool_adapter_preview_requires_specific_token": True,
+        "external_tool_invocation_allowed": False,
+        "live_api_call_allowed": False,
+        "network_access_allowed": False,
+        "socket_access_allowed": False,
         "real_worker_hiring_allowed": False,
         "worker_process_start_allowed": False,
         "live_worker_routing_allowed": False,
@@ -100,6 +107,8 @@ SUPPORTED_ADAPTERS = {
         "post_run_audit_expansion_requires_separate_gate": True,
         "supports_multi_worker_sandbox_coordination": False,
         "multi_worker_sandbox_coordination_requires_separate_gate": True,
+        "supports_controlled_external_tool_adapter_preview": False,
+        "controlled_external_tool_adapter_preview_requires_separate_gate": True,
         "supports_live_execution_telemetry_abort_controls": False,
         "telemetry_abort_controls_require_specific_token": True,
         "telemetry_abort_requires_separate_gate": True,
@@ -125,6 +134,12 @@ def list_adapters() -> dict:
         "audit_background_monitoring_allowed": False,
         "supports_multi_worker_sandbox_coordination": True,
         "multi_worker_sandbox_coordination_requires_specific_token": True,
+        "supports_controlled_external_tool_adapter_preview": True,
+        "controlled_external_tool_adapter_preview_requires_specific_token": True,
+        "external_tool_invocation_allowed": False,
+        "live_api_call_allowed": False,
+        "network_access_allowed": False,
+        "socket_access_allowed": False,
         "real_worker_hiring_allowed": False,
         "worker_process_start_allowed": False,
         "live_worker_routing_allowed": False,
