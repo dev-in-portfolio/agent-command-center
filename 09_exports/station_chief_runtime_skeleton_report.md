@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v2.2.0. Locked 175-family baseline preserved. Live execution telemetry and abort controls added.
+Station Chief Runtime upgraded to v2.3.0. Locked 175-family baseline preserved. Post-run audit proof expansion added.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -204,9 +204,23 @@ scripts/validate_station_chief_runtime_v2_2.py
 - telemetry ledger
 - telemetry readiness summary
 - post-run audit proof expansion readiness bridge
+- post-run audit expansion schema
+- expanded audit evidence schema
+- post-run audit approval gate
+- before/after run comparison proof
+- validator-backed audit artifact index
+- audit replay record
+- failure-class taxonomy
+- human review packet
+- audit integrity score
+- audit evidence ledger
+- audit expansion readiness summary
+- multi-worker sandbox coordination readiness bridge
 - no broad workforce animation
 - no external API calls
 - no external telemetry
+- no external artifact fetching
+- no actual replay execution
 - no process termination
 - no shell command execution
 - no arbitrary code execution
@@ -219,6 +233,7 @@ python3 scripts/validate_station_chief_runtime_v2_2.py
 python3 scripts/validate_station_chief_runtime_v2_1.py
 python3 scripts/validate_station_chief_runtime_v2_0.py
 python3 scripts/validate_station_chief_runtime_v1_8.py
+python3 scripts/validate_station_chief_runtime_v2_3.py
 - no full workforce animation (no worker animation)
 - no real worker hiring
 - no live worker routing
@@ -308,4 +323,4 @@ python3 scripts/validate_full_expansion_completion.py
 - Does not deploy to external platforms
 
 ## Next Recommended Build Step
-Next recommended build step: build post-run audit proof expansion.
+Next recommended build step: build multi-worker sandbox coordination.
