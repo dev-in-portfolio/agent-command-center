@@ -4,7 +4,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-ADAPTER_MODULE_VERSION = "2.3.0"
+ADAPTER_MODULE_VERSION = "2.4.0"
 
 YES_I_APPROVE_SANDBOX_FILE_WRITE = "YES_I_APPROVE_SANDBOX_FILE_WRITE"
 YES_I_APPROVE_SCOPED_REPO_PATCH = "YES_I_APPROVE_SCOPED_REPO_PATCH"
@@ -19,6 +19,7 @@ YES_I_APPROVE_TOOL_LOCAL_JSON_ARTIFACT_WRITE = "YES_I_APPROVE_TOOL_LOCAL_JSON_AR
 # Telemetry and abort approval token
 YES_I_APPROVE_SINGLE_WORKER_TELEMETRY_ABORT_CONTROLS = "YES_I_APPROVE_SINGLE_WORKER_TELEMETRY_ABORT_CONTROLS"
 YES_I_APPROVE_POST_RUN_AUDIT_PROOF_EXPANSION = "YES_I_APPROVE_POST_RUN_AUDIT_PROOF_EXPANSION"
+YES_I_APPROVE_MULTI_WORKER_SANDBOX_COORDINATION = "YES_I_APPROVE_MULTI_WORKER_SANDBOX_COORDINATION"
 
 SAFE_SANDBOX_PATH = "SAFE_SANDBOX_PATH"
 SAFE_REPO_PATCH_PATH = "SAFE_REPO_PATCH_PATH"
@@ -41,6 +42,12 @@ SUPPORTED_ADAPTERS = {
         "actual_replay_execution_allowed": False,
         "external_artifact_fetch_allowed": False,
         "audit_background_monitoring_allowed": False,
+        "supports_multi_worker_sandbox_coordination": True,
+        "multi_worker_sandbox_coordination_requires_specific_token": True,
+        "real_worker_hiring_allowed": False,
+        "worker_process_start_allowed": False,
+        "live_worker_routing_allowed": False,
+        "live_orchestration_allowed": False,
         "description": "Safely simulates execution boundaries without performing live work.",
     },
     "sandbox_file_write": {
@@ -91,6 +98,8 @@ SUPPORTED_ADAPTERS = {
         "tool_permission_binding_requires_separate_gate": True,
         "supports_post_run_audit_expansion": False,
         "post_run_audit_expansion_requires_separate_gate": True,
+        "supports_multi_worker_sandbox_coordination": False,
+        "multi_worker_sandbox_coordination_requires_separate_gate": True,
         "supports_live_execution_telemetry_abort_controls": False,
         "telemetry_abort_controls_require_specific_token": True,
         "telemetry_abort_requires_separate_gate": True,
@@ -109,6 +118,17 @@ SUPPORTED_ADAPTERS = {
 def list_adapters() -> dict:
     return {
         "adapter_module_version": ADAPTER_MODULE_VERSION,
+        "supports_post_run_audit_expansion": True,
+        "post_run_audit_expansion_requires_specific_token": True,
+        "actual_replay_execution_allowed": False,
+        "external_artifact_fetch_allowed": False,
+        "audit_background_monitoring_allowed": False,
+        "supports_multi_worker_sandbox_coordination": True,
+        "multi_worker_sandbox_coordination_requires_specific_token": True,
+        "real_worker_hiring_allowed": False,
+        "worker_process_start_allowed": False,
+        "live_worker_routing_allowed": False,
+        "live_orchestration_allowed": False,
         "supported_adapters": SUPPORTED_ADAPTERS,
     }
 

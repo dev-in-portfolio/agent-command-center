@@ -1,7 +1,7 @@
 # Station Chief Runtime Skeleton Report
 
 ## Status
-Station Chief Runtime upgraded to v2.3.0. Locked 175-family baseline preserved. Post-run audit proof expansion added.
+Station Chief Runtime upgraded to v2.4.0. Locked 175-family baseline preserved. Multi-worker sandbox coordination added.
 
 ## Ownership / Attribution
 Project owner, system architect, and operating-doctrine author: Devin O’Rourke.
@@ -9,13 +9,11 @@ Project owner, system architect, and operating-doctrine author: Devin O’Rourke
 This attribution applies to the Agent Command Center Station Chief runtime skeleton. The locked 175-family baseline remains preserved.
 
 ## Purpose
-This report documents the first stable Station Chief Runtime foundation lock after the Devinization stack lock and its v1.5.0 enhancement for multi-agent orchestration sandbox.
+This report documents the Station Chief runtime v2.4.0 upgrade to multi-worker sandbox coordination while preserving the locked 175-family baseline and the post-run audit proof expansion layer.
 
 ## Files Created / Modified
 10_runtime/station_chief_runtime.py
-10_runtime/station_chief_demo_cases.json
 10_runtime/station_chief_runtime_readme.md
-10_runtime/station_chief_fixture_tests.py
 10_runtime/station_chief_adapters.py
 10_runtime/station_chief_execution_profiles.py
 10_runtime/station_chief_approval_handoff.py
@@ -27,7 +25,14 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 10_runtime/station_chief_worker_hiring_registry.py
 10_runtime/station_chief_department_routing.py
 10_runtime/station_chief_multi_agent_orchestration.py
+10_runtime/station_chief_operator_console.py
+10_runtime/station_chief_github_patch_hardening.py
+10_runtime/station_chief_deployment_packaging.py
+10_runtime/station_chief_controlled_worker_execution.py
+10_runtime/station_chief_tool_permission_binding.py
 10_runtime/station_chief_live_execution_telemetry_abort.py
+10_runtime/station_chief_post_run_audit_expansion.py
+10_runtime/station_chief_multi_worker_sandbox_coordination.py
 09_exports/station_chief_runtime_skeleton_report.md
 09_exports/station_chief_runtime_v0_2_report.md
 09_exports/station_chief_runtime_v0_3_report.md
@@ -49,6 +54,7 @@ This report documents the first stable Station Chief Runtime foundation lock aft
 09_exports/station_chief_runtime_v2_0_report.md
 09_exports/station_chief_runtime_v2_1_report.md
 09_exports/station_chief_runtime_v2_2_report.md
+09_exports/station_chief_runtime_v2_3_report.md
 scripts/validate_station_chief_runtime_skeleton.py
 scripts/validate_station_chief_runtime_v0_2.py
 scripts/validate_station_chief_runtime_v0_3.py
@@ -70,6 +76,8 @@ scripts/validate_station_chief_runtime_v1_8.py
 scripts/validate_station_chief_runtime_v2_0.py
 scripts/validate_station_chief_runtime_v2_1.py
 scripts/validate_station_chief_runtime_v2_2.py
+scripts/validate_station_chief_runtime_v2_3.py
+scripts/validate_station_chief_runtime_v2_4.py
 
 ## Runtime Capabilities
 - one-command intake
@@ -216,111 +224,31 @@ scripts/validate_station_chief_runtime_v2_2.py
 - audit evidence ledger
 - audit expansion readiness summary
 - multi-worker sandbox coordination readiness bridge
+- multi-worker sandbox coordination schema
+- multi-worker coordination approval gate
+- sandbox worker roster
+- worker coordination graph
+- inter-worker handoff contract
+- multi-worker dry-run ledger
+- coordination conflict detector
+- coordination abort contract
+- coordination quarantine contract
+- coordination audit proof
+- coordination readiness summary
+- controlled external tool adapter preview readiness bridge
 - no broad workforce animation
+- no real worker hiring
+- no worker process starts
 - no external API calls
-- no external telemetry
-- no external artifact fetching
-- no actual replay execution
-- no process termination
+- no live worker routing
+- no live orchestration
 - no shell command execution
 - no arbitrary code execution
 - no repo mutation
 - no deployment
-- deterministic fixture tests
 
-## Required Validators
-python3 scripts/validate_station_chief_runtime_v2_2.py
-python3 scripts/validate_station_chief_runtime_v2_1.py
-python3 scripts/validate_station_chief_runtime_v2_0.py
-python3 scripts/validate_station_chief_runtime_v1_8.py
-python3 scripts/validate_station_chief_runtime_v2_3.py
-- no full workforce animation (no worker animation)
-- no real worker hiring
-- no live worker routing
-- no live worker assignment
-- no live orchestration
-- no live UI rendering
+## Required Validator
+python3 scripts/validate_station_chief_runtime_v2_4.py
 
-## Supported Command Types
-- verification
-- remember_only
-- strict_execution
-- speed_racer
-- build
-- route
-- repair
-- governance
-- final_output
-- unknown
-
-## Execution Profiles
-- audit_only
-- dry_run_patch
-- sandbox_write
-- scoped_repo_patch
-
-## Activation Tiers
-Tier 0 — Passive Whole-Org Awareness
-Tier 1 — Council Scan
-Tier 2 — Command Brief
-Tier 3 — Active Operation
-Tier 4 — Audit / Archive
-
-## Required Validators
-python3 scripts/validate_station_chief_runtime_v1_8.py
-python3 scripts/validate_station_chief_runtime_v1_7.py
-python3 scripts/validate_station_chief_runtime_v1_6.py
-python3 scripts/validate_station_chief_runtime_v1_5.py
-python3 scripts/validate_station_chief_runtime_v1_4.py
-python3 scripts/validate_station_chief_runtime_v1_3.py
-python3 scripts/validate_station_chief_runtime_v1_2.py
-python3 scripts/validate_station_chief_runtime_v1_1.py
-python3 scripts/validate_station_chief_runtime_v1_0.py
-python3 scripts/validate_station_chief_runtime_v0_9.py
-python3 scripts/validate_station_chief_runtime_v0_8.py
-python3 scripts/validate_station_chief_runtime_v0_7.py
-python3 scripts/validate_station_chief_runtime_v0_6.py
-python3 scripts/validate_station_chief_runtime_v0_5.py
-python3 scripts/validate_station_chief_runtime_v0_4.py
-python3 scripts/validate_station_chief_runtime_v0_3.py
-python3 scripts/validate_station_chief_runtime_v0_2.py
-python3 scripts/validate_station_chief_runtime_skeleton.py
-python3 scripts/validate_devin_ownership_metadata.py
-python3 scripts/validate_final_devinization_stack_lock.py
-python3 scripts/validate_devinization_pack_007_agent_governance_identity_accountability.py
-python3 scripts/validate_devinization_pack_006_output_assembly_delivery_intelligence.py
-python3 scripts/validate_devinization_pack_005_quality_standards_human_review.py
-python3 scripts/validate_devinization_pack_004_execution_safety_tools_recovery.py
-python3 scripts/validate_devinization_pack_003_prompt_memory_context_architecture.py
-python3 scripts/validate_devinization_pack_002_runtime_routing_work_control.py
-python3 scripts/validate_devinization_pack_001_command_brain.py
-python3 scripts/validate_family_007_devinized_engineering_overload_pack.py
-python3 scripts/validate_full_expansion_completion.py
-
-## What This Does Not Do
-- Does not modify the 175-family baseline
-- Does not hire or animate worker agents yet
-- Does not execute uncontrolled repo work orders
-- Does not treat signed approval records as automatic execution permission
-- Does not treat approval ledgers as automatic execution permission
-- Does not treat the v1.0 release lock as automatic execution permission
-- Does not treat controlled execution profiles as automatic execution permission
-- Does not treat work order dry-runs as live execution permission
-- Does not treat worker registry previews as real hiring or live assignment
-- Does not treat department routing previews as live routing
-- Does not treat orchestration sandbox previews as live execution
-- Does not treat deployment packaging artifacts as live deployment permission
-- Does not build UI yet
-- Does not connect live APIs yet
-- Does not authorize uncontrolled live execution
-- Does not hire real worker agents yet
-- Does not execute live work orders
-- Does not assign live workers
-- Does not route live workers
-- Does not perform live orchestration
-- Does not render a live UI
-- Does not call hosting APIs
-- Does not deploy to external platforms
-
-## Next Recommended Build Step
-Next recommended build step: build multi-worker sandbox coordination.
+## Next Recommended Step
+Next recommended build step: build controlled external tool adapter preview.
